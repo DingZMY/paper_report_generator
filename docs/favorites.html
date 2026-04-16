@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>收藏夹 — Bio Digest</title>
+  <meta name="description" content="您收藏的系统/合成生物学论文">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #f0f4f8;
+      --surface:    #ffffff;
+      --surface2:   #f7f9fc;
+      --border:     #e2e8f0;
+      --text:       #1a202c;
+      --text-muted: #718096;
+      --text-light: #a0aec0;
+      --accent:     #5a67d8;
+      --fav-color:  #f6ad00;
+      --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+      --shadow:     0 4px 8px rgba(0,0,0,0.07);
+      --radius:     14px;
+      --transition: 0.18s ease;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0d1117;
+        --surface:    #161b22;
+        --surface2:   #1c2130;
+        --border:     #2d3748;
+        --text:       #e2e8f0;
+        --text-muted: #a0aec0;
+        --text-light: #718096;
+        --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+        --shadow:     0 4px 8px rgba(0,0,0,0.5);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+                   "PingFang SC", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.88rem;
+    }
+    .header-nav a { color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+    .header-nav a:hover { color: var(--accent); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero-icon { font-size: 2.8rem; display: block; margin-bottom: 14px; }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.92rem;
+      opacity: 0.88;
+      margin-bottom: 20px;
+    }
+    #hero-count {
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.4);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    /* ── Toolbar ─────────────────────────────────────────────────── */
+    .toolbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .clear-btn {
+      padding: 7px 18px;
+      border-radius: 8px;
+      border: 1px solid #e53e3e;
+      background: none;
+      color: #e53e3e;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+    }
+    .clear-btn:hover { background: #e53e3e; color: #fff; }
+
+    /* ── Grid ───────────────────────────────────────────────────── */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 24px 80px;
+    }
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────────── */
+    .paper-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      border-top: 4px solid var(--card-color, var(--accent));
+    }
+    .paper-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .journal-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      padding: 3px 9px;
+      border-radius: 5px;
+      letter-spacing: 0.02em;
+    }
+    .pub-date { font-size: 0.75rem; color: var(--text-light); margin-left: auto; }
+    .remove-fav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 3px 7px;
+      color: var(--fav-color);
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .remove-fav-btn:hover { background: #e53e3e; color: #fff; border-color: #e53e3e; }
+
+    .paper-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .paper-title a { color: var(--text); text-decoration: none; }
+    .paper-title a:hover { color: var(--accent); text-decoration: underline; }
+
+    .paper-authors {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Abstract tabs ───────────────────────────────────────────── */
+    .abstract-section { display: flex; flex-direction: column; gap: 0; }
+    .tab-bar { display: flex; gap: 4px; margin-bottom: 6px; }
+    .tab-btn {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-light);
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+    }
+    .tab-btn.active {
+      background: var(--card-color, var(--accent));
+      color: #fff;
+      border-color: transparent;
+    }
+    .abstract-text {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      display: none;
+      max-height: 140px;
+      overflow: hidden;
+      position: relative;
+    }
+    .abstract-text.active { display: block; }
+    .abstract-text::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 32px;
+      background: linear-gradient(transparent, var(--surface));
+      pointer-events: none;
+    }
+
+    /* ── Key findings ────────────────────────────────────────────── */
+    .key-findings { background: var(--surface2); border-radius: 8px; padding: 10px 12px; }
+    .findings-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--card-color, var(--accent));
+      margin-bottom: 6px;
+    }
+    .key-findings ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .key-findings li {
+      font-size: 0.79rem;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .key-findings li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-color, var(--accent));
+      font-size: 0.68rem;
+      top: 2px;
+    }
+
+    /* ── Card footer ─────────────────────────────────────────────── */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .doi-link {
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: gap var(--transition);
+    }
+    .doi-link:hover { gap: 7px; }
+    .week-back-link {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .week-back-link:hover { color: var(--accent); }
+
+    /* ── Empty state ─────────────────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--text-muted);
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      margin-top: 8px;
+    }
+    .empty-state .empty-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .empty-state h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+    .empty-state p { font-size: 0.9rem; line-height: 1.7; }
+    .empty-state a { color: var(--accent); }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 22px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 620px) {
+      .papers-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 14px 14px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">🧬 Bio Digest</a>
+    <nav class="header-nav">
+      <a href="index.html">← 所有期刊</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <span class="hero-icon">★</span>
+  <h1>收藏夹</h1>
+  <p class="hero-meta">您标星的论文都在这里</p>
+  <span id="hero-count">0 篇收藏</span>
+</div>
+
+<div class="toolbar" id="toolbar" style="display:none">
+  <button class="clear-btn" onclick="clearAll()">🗑 清空所有收藏</button>
+</div>
+
+<main class="main">
+  <div class="papers-grid" id="papers-grid"></div>
+  <div class="empty-state" id="empty-state" style="display:none">
+    <span class="empty-icon">☆</span>
+    <h3>暂无收藏</h3>
+    <p>
+      在每期<a href="index.html">周报</a>中点击论文卡片右上角的 ☆ 按钮即可收藏。<br>
+      收藏数据保存在本地浏览器中，不需要登录。
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>收藏数据存储于本地浏览器（localStorage），清除浏览器数据时将被删除。</p>
+  <p><a href="index.html">← 返回 Bio Digest 首页</a></p>
+</footer>
+
+<script>
+  const FAV_KEY = 'bio-digest-favorites';
+
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveFavs(favs) {
+    localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+  }
+
+  // ── Tab switching ────────────────────────────────────────────────
+  function switchTab(btn, showId, hideId) {
+    btn.closest('.abstract-section')
+       .querySelectorAll('.tab-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(showId).classList.add('active');
+    document.getElementById(hideId).classList.remove('active');
+  }
+
+  // ── Remove one favorite ──────────────────────────────────────────
+  function removeFav(pmid) {
+    const favs = getFavs();
+    delete favs[pmid];
+    saveFavs(favs);
+    renderFavs();
+  }
+
+  // ── Clear all ────────────────────────────────────────────────────
+  function clearAll() {
+    if (!confirm('确定要清空所有收藏吗？此操作不可撤销。')) return;
+    localStorage.removeItem(FAV_KEY);
+    renderFavs();
+  }
+
+  // ── Render ───────────────────────────────────────────────────────
+  function renderFavs() {
+    const favs   = getFavs();
+    const papers = Object.values(favs);
+    const grid   = document.getElementById('papers-grid');
+    const empty  = document.getElementById('empty-state');
+    const toolbar = document.getElementById('toolbar');
+    const heroCount = document.getElementById('hero-count');
+
+    heroCount.textContent = papers.length + ' 篇收藏';
+    grid.innerHTML = '';
+
+    if (papers.length === 0) {
+      empty.style.display  = '';
+      toolbar.style.display = 'none';
+      return;
+    }
+
+    empty.style.display  = 'none';
+    toolbar.style.display = '';
+
+    papers.forEach((p, idx) => {
+      const cardColor = p.journal_color || '#5a67d8';
+      const enId  = 'en-fav-'  + (p.pmid || idx);
+      const zhId  = 'zh-fav-'  + (p.pmid || idx);
+      const authorsText = Array.isArray(p.authors) ? p.authors.join(' · ') : (p.authors || '');
+      const abstract    = p.abstract    || '（暂无摘要）';
+      const abstractZh  = p.abstract_zh || '（暂无翻译）';
+      const weekUrl     = p.week ? ('reports/' + p.week + '.html') : '#';
+      const weekLabel   = p.week ? ('← ' + p.week + ' 周报') : '';
+
+      const findingsHtml = (p.key_findings && p.key_findings.length)
+        ? `<div class="key-findings">
+            <p class="findings-title">核心发现</p>
+            <ul>${p.key_findings.map(f => `<li>${_esc(f)}</li>`).join('')}</ul>
+           </div>`
+        : '';
+
+      const card = document.createElement('article');
+      card.className  = 'paper-card';
+      card.dataset.pmid = p.pmid || '';
+      card.style.cssText = `--card-color: ${cardColor}`;
+
+      card.innerHTML = `
+        <div class="card-header">
+          <span class="journal-badge" style="background:${cardColor}">${_esc(p.journal || '')}</span>
+          <span class="pub-date">${_esc(p.pub_date || '')}</span>
+          <button class="remove-fav-btn"
+                  onclick="removeFav('${_esc(p.pmid || '')}')"
+                  title="取消收藏">★</button>
+        </div>
+
+        <h2 class="paper-title">
+          <a href="${_esc(p.url || '#')}" target="_blank" rel="noopener noreferrer">${_esc(p.title || '')}</a>
+        </h2>
+
+        <p class="paper-authors">${_esc(authorsText)}</p>
+
+        <div class="abstract-section">
+          <div class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab(this,'${enId}','${zhId}')">EN</button>
+            <button class="tab-btn"        onclick="switchTab(this,'${zhId}','${enId}')">中文</button>
+          </div>
+          <div id="${enId}" class="abstract-text active">${_esc(abstract)}</div>
+          <div id="${zhId}" class="abstract-text">${_esc(abstractZh)}</div>
+        </div>
+
+        ${findingsHtml}
+
+        <div class="card-footer">
+          <a href="${_esc(p.url || '#')}" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+          ${weekLabel ? `<a href="${_esc(weekUrl)}" class="week-back-link">${_esc(weekLabel)}</a>` : ''}
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  // Simple HTML escaper to prevent XSS from stored data
+  function _esc(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  document.addEventListener('DOMContentLoaded', renderFavs);
+</script>
+</body>
+</html>
