@@ -4,8 +4,9 @@
 
 ## 功能特性
 
-- **自动采集**：PubMed E-utilities API，覆盖 12 个顶刊及子刊
-- **AI 翻译**：Moonshot Kimi 2.5，翻译摘要 + 提炼 3 条核心发现
+- **自动采集**：PubMed E-utilities API，覆盖 23 个顶刊及子刊
+- **精准筛选**：仅保留 Research Article，排除 Review / Editorial / Letter 等；负向过滤多组学文章
+- **AI 翻译**：Moonshot Kimi（`kimi-k2.5`），翻译摘要 + 提炼 3 条核心发现
 - **双语输出**：中英对照卡片式 HTML 报告 + Markdown 存档
 - **全自动运行**：GitHub Actions 每周一 06:00 UTC 自动触发，零人工干预
 - **增量处理**：已翻译论文不会重复调用 API
@@ -64,16 +65,27 @@ bio-digest/
 
 | 期刊族 | 期刊 |
 |---|---|
-| **Nature 系列** | Nature, Nat Biotechnol, Nat Chem Biol, Nat Methods, Nat Chem, Nat Struct Mol Biol, Nat Commun |
+| **Nature 系列** | Nature, Nat Biotechnol, Nat Chem Biol, Nat Methods, Nat Chem, Nat Commun, Nat Phys |
 | **Cell 系列** | Cell, Cell Syst, Cell Chem Biol |
 | **Science 系列** | Science, Sci Adv |
+| **系统/计算生物学** | Mol Syst Biol, PLoS Comput Biol, PLoS Biol, Elife |
+| **物理/生物物理** | Phys Rev Lett, Biophys J |
+| **核酸/合成生物学** | Nucleic Acids Res, ACS Synth Biol |
 
 ## 主题筛选
 
-同时匹配以下任一条件的论文才会被收录：
+### 正向匹配（满足任意一条即入选）
 
-- MeSH 词汇：`Synthetic Biology` 或 `Systems Biology`
-- 标题/摘要关键词：`synthetic biology` 或 `systems biology`
+- MeSH 词汇：`Synthetic Biology`、`Systems Biology`
+- 标题/摘要关键词：`synthetic biology`、`systems biology`、`gene circuit`、`genetic circuit`、`gene regulatory network`、`biological network`、`metabolic flux`、`metabolic engineering`、`mathematical model`、`computational model`、`stochastic gene expression`、`quantitative biology`、`theoretical biophysics`、`biophysical model`、`information theory`、`optogenetics`、`cell-free`、`CRISPR`、`genome editing`、`protein design`、`de novo protein`
+
+### 负向排除（含以下关键词的文章不收录）
+
+- `multi-omics`、`multiomics`、`single-cell RNA`、`scRNA-seq`、`snRNA-seq`、`whole exome sequencing`、`whole genome sequencing`、`epigenomics`、`metagenomics`、`spatial transcriptomics`
+
+### 文章类型限制
+
+仅收录 **Research Article**（`Journal Article`），自动排除 Review、Comment、Editorial、News、Letter。
 
 ## 运行时序
 
