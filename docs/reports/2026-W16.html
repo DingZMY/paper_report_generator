@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-W16 · 系统/合成生物学文献周报</title>
+  <meta name="description" content="本周系统生物学与合成生物学领域顶刊论文双语摘要汇总">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f0f4f8;
+      --surface:     #ffffff;
+      --surface2:    #f7f9fc;
+      --border:      #e2e8f0;
+      --text:        #1a202c;
+      --text-muted:  #718096;
+      --text-light:  #a0aec0;
+      --accent:      #5a67d8;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow:      0 4px 8px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-lg:   0 12px 20px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.06);
+      --radius:      12px;
+      --radius-sm:   7px;
+      --transition:  0.18s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0d1117;
+        --surface:    #161b22;
+        --surface2:   #1c2130;
+        --border:     #2d3748;
+        --text:       #e2e8f0;
+        --text-muted: #a0aec0;
+        --text-light: #718096;
+        --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+        --shadow:     0 4px 8px rgba(0,0,0,0.5);
+        --shadow-lg:  0 12px 20px rgba(0,0,0,0.6);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+                   "PingFang SC", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .site-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color var(--transition);
+    }
+    .header-nav a:hover { color: var(--text); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.88rem;
+      opacity: 0.82;
+      margin-bottom: 28px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat-num  { display: block; font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { display: block; font-size: 0.75rem; opacity: 0.8; margin-top: 4px; }
+
+    /* ── Filter bar ─────────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      position: sticky;
+      top: 58px;
+      z-index: 190;
+    }
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-label { font-size: 0.8rem; color: var(--text-muted); margin-right: 2px; }
+    .filter-btn {
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Main grid ──────────────────────────────────────────────── */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    .section-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────────── */
+    .paper-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-color, #9e9e9e);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .paper-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* card header row */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .journal-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .pub-date {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    /* title */
+    .paper-title {
+      font-size: 0.93rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .paper-title a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .paper-title a:hover { color: var(--accent); }
+
+    /* authors */
+    .paper-authors {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Abstract tabs ──────────────────────────────────────────── */
+    .abstract-section { flex: 1; }
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .tab-btn {
+      padding: 3px 11px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all var(--transition);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .abstract-text {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      display: none;
+      max-height: 152px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .abstract-text.active { display: block; }
+    .abstract-text::-webkit-scrollbar { width: 3px; }
+    .abstract-text::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    /* ── Key findings ───────────────────────────────────────────── */
+    .key-findings {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+    }
+    .findings-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+    }
+    .key-findings ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .key-findings li {
+      font-size: 0.81rem;
+      line-height: 1.55;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .key-findings li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-color, var(--accent));
+      font-size: 0.68rem;
+      top: 2px;
+    }
+
+    /* ── Card footer ────────────────────────────────────────────── */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .doi-link {
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: gap var(--transition);
+    }
+    .doi-link:hover { gap: 7px; }
+    .keywords-row { display: flex; gap: 4px; flex-wrap: wrap; }
+    .kw-tag {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-light);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Empty state ────────────────────────────────────────────── */
+    .no-papers {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 22px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .papers-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 16px 14px 48px; }
+      .stats-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">🧬 Bio Digest</a>
+    <nav class="header-nav">
+      <a href="../index.html">← 所有期刊</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">2026-W16</p>
+  <h1>系统 / 合成生物学<br>文献周报</h1>
+  <p class="hero-meta">
+    2026/04/09 &nbsp;~&nbsp; 2026/04/16
+    &nbsp;&nbsp;·&nbsp;&nbsp;生成于 2026-04-16 13:43 UTC
+  </p>
+  <div class="stats-row">
+    <div>
+      <span class="stat-num">7</span>
+      <span class="stat-label">篇论文</span>
+    </div>
+    <div>
+      <span class="stat-num">7</span>
+      <span class="stat-label">已翻译</span>
+    </div>
+    <div>
+      <span class="stat-num">4</span>
+      <span class="stat-label">期刊来源</span>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">筛选：</span>
+    <button class="filter-btn active" onclick="filterPapers('all', this)">全部 (7)</button>
+    
+    <button class="filter-btn" onclick="filterPapers('nature', this)">🌿 Nature 系列 (5)</button>
+    
+    
+    
+    <button class="filter-btn" onclick="filterPapers('science', this)">🟠 Science 系列 (2)</button>
+    
+  </div>
+</div>
+
+<main class="main">
+  
+  <div class="papers-grid" id="papers-grid">
+    
+    <article class="paper-card"
+             data-family="science"
+             style="--card-color: #F57C00">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Apr-17</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aeb0855" target="_blank" rel="noopener noreferrer">Multiomics profiling and experiments in preclinical models revealed RAD51-IN-1 as a synergistic potentiator of anlotinib sensitivity.</a>
+      </h2>
+
+      <p class="paper-authors">Meng Huangyang &middot; Chang Qianjing &middot; Zhang Yashuang &middot; Ren Jingjing &middot; Guo Hongyu &middot; Yu Liang &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41984951', 'zh-41984951')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41984951', 'en-41984951')">中文</button>
+        </div>
+        <div id="en-41984951" class="abstract-text active">Anlotinib has demonstrated preliminary efficacy as a first-line maintenance therapy for ovarian cancer. However, clinical responses vary widely. To investigate resistance mechanisms and explore rational combinations, pretreatment tumors from 18 patients in clinical trial NCT04807166 underwent whole-exome and RNA sequencing and stratified into sensitive and resistant groups based on progression-free survival. VEGFR-related mutations were enriched in sensitive tumors, whereas resistant tumors showed increased activity of DNA repair pathways and Notch signaling. In vitro screening identified strong synergy between anlotinib and the RAD51 inhibitor RAD51-IN-1, which outperformed the Notch inhibitor FLI-06 in resistant patient-derived organoids. Mechanistic studies revealed that RAD51 inhibition was associated with impaired HRR and increased sensitivity to anlotinib. In vivo, combined treatment with anlotinib and RAD51-IN-1 significantly reduced tumor burden without notable toxicity. These findings suggest that RAD51-mediated HRR may contribute to anlotinib resistance and support RAD51 inhibition as a promising approach to overcome therapeutic resistance in ovarian cancer.</div>
+        <div id="zh-41984951" class="abstract-text">安罗替尼（anlotinib）作为卵巢癌一线维持治疗已显示出初步疗效，但临床反应差异显著。为探究耐药机制并探索合理联合用药方案，本研究对临床试验NCT04807166中18例患者的治疗前肿瘤进行了全外显子组和RNA测序，并根据无进展生存期将其分为敏感组和耐药组。结果显示，VEGFR（血管内皮生长因子受体）相关突变在敏感肿瘤中富集，而耐药肿瘤中DNA修复通路和Notch信号活性增强。体外筛选发现安罗替尼与RAD51抑制剂RAD51-IN-1具有强协同作用，且在耐药的患者来源类器官（PDO）中效果优于Notch抑制剂FLI-06。机制研究表明，RAD51抑制通过损害同源重组修复（HRR）增强安罗替尼敏感性。体内实验显示，安罗替尼联合RAD51-IN-1治疗显著降低肿瘤负荷且无显著毒性。这些发现提示RAD51介导的HRR可能参与安罗替尼耐药，支持RAD51抑制作为克服卵巢癌治疗耐药的有前景策略。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>多组学分析揭示VEGFR突变富集于敏感肿瘤，而DNA修复通路和Notch信号激活与安罗替尼耐药相关</li>
+          
+          <li>体外筛选发现RAD51抑制剂RAD51-IN-1与安罗替尼具有强协同效应，在耐药患者来源类器官中优于Notch抑制剂</li>
+          
+          <li>RAD51抑制通过损害同源重组修复（HRR）增强安罗替尼敏感性，联合治疗在体内显著降低肿瘤负荷且无显著毒性</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aeb0855" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Indoles</span>
+          
+          <span class="kw-tag">Female</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             style="--card-color: #2E7D32">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #2E7D32">Nat Biotechnol</span>
+        <span class="pub-date">2026-Apr-15</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41587-026-03081-9" target="_blank" rel="noopener noreferrer">Artificial allosteric protein switches with machine-learning-designed receptors.</a>
+      </h2>
+
+      <p class="paper-authors">Guo Zhong &middot; Smutok Oleh &middot; Lee Gyu Rie &middot; Cui Zhenling &middot; Qianzhu Haocheng &middot; Kish Monika &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41986695', 'zh-41986695')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41986695', 'en-41986695')">中文</button>
+        </div>
+        <div id="en-41986695" class="abstract-text active">Protein allostery underlies most information and energy processing in biology and the development of artificial allosteric proteins is a key objective of synthetic biology and biotechnology. We show that machine-learning-engineered minimal ligand-binding domains act as efficient receptors in single-component allosteric switches, despite lacking global conformational change. Such colorimetric, luminescent and electrochemical biosensors of small molecules, peptides and proteins can be compiled into intramolecular YES and AND logic gates. Furthermore, we report fully synthetic allosteric switches composed of artificial receptor and reporter domains. Hydrogen/deuterium exchange mass spectrometry and 19F nuclear magnetic resonance analyses suggest that ligand binding reduces the conformation entropy of the system, increasing the catalytic activity of the reporter domain. The potential practical utility of this approach is demonstrated by engineering Escherichia coli cells with steroid-dependent antibiotic resistance and by developing bioelectronic devices capable of quantifying steroid hormones.</div>
+        <div id="zh-41986695" class="abstract-text">蛋白质变构是生物学中大多数信息与能量处理的基础，开发人工变构蛋白是合成生物学与生物技术的核心目标。本研究表明，机器学习工程化的最小配体结合域（LBDs）可作为高效受体构建单组分变构开关，尽管其缺乏全局构象变化。此类比色、发光和电化学生物传感器可检测小分子、肽与蛋白质，并能组装为分子内YES和AND逻辑门。此外，我们构建了由人工受体与报告域组成的全合成变构开关。氢/氘交换质谱（HDX-MS）和氟-19核磁共振（19F NMR）分析表明，配体结合通过降低系统构象熵来增强报告域的催化活性。该策略的实用价值通过构建类固醇依赖性抗生素抗性大肠杆菌及开发类固醇激素生物电子设备得到了验证。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>机器学习设计的极简配体结合域可作为高效受体，构建无需全局构象变化的单组分变构开关</li>
+          
+          <li>全合成变构开关通过配体结合降低构象熵，从而变构激活报告域的催化功能</li>
+          
+          <li>实现应用验证：构建类固醇依赖型抗生素抗性菌株及类固醇激素生物电子定量检测设备</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41587-026-03081-9" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             style="--card-color: #A5D6A7">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Apr-15</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-71364-5" target="_blank" rel="noopener noreferrer">Decoding immunotherapy response through computational modeling.</a>
+      </h2>
+
+      <p class="paper-authors">Li Bingrui &middot; Luo Ruihan &middot; Huang Kexin &middot; Liu Jiajia &middot; Zhao Weiling &middot; Zhou Xiaobo</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41986319', 'zh-41986319')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41986319', 'en-41986319')">中文</button>
+        </div>
+        <div id="en-41986319" class="abstract-text active">Immunotherapy has seen success in treating patients with cancer, but variable responses underscore the need for effective patient stratification and therapy planning. Computational tools integrating multi-omics, imaging and machine learning have advanced, yet reliable personalized predictions remain challenging. This review analyzes the field through four converging paradigms: classical machine learning, deep learning, graph and network modeling, and mechanistic systems biology. We examine the evolution from correlational features to representation learning, relational inference, and causal simulation of tumor-immune dynamics, highlighting the shift towards multi-modal fusion and interpretable, clinically deployable models. By providing an integrated review of these computational tools, we hope to bring the community closer to achieving precision immuno-oncology for personalized cancer treatments.</div>
+        <div id="zh-41986319" class="abstract-text">免疫治疗在癌症治疗中已取得显著成效，但患者反应的差异性凸显了对有效患者分层和治疗规划的迫切需求。尽管整合多组学（multi-omics）、影像学和机器学习的计算工具不断进步，可靠的个性化预测仍面临挑战。本综述通过四种融合范式分析该领域：经典机器学习、深度学习、图与网络建模，以及机制性系统生物学（mechanistic systems biology）。我们审视了从相关性特征分析向表征学习（representation learning）、关系推断（relational inference）以及肿瘤-免疫动力学因果模拟的演进，强调了向多模态融合（multi-modal fusion）及可解释、临床可部署模型转变的趋势。通过系统整合这些计算工具，本文旨在推动实现精准肿瘤免疫学（precision immuno-oncology）指导下的个性化癌症治疗。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>整合四大计算范式（机器学习、深度学习、图网络、机制系统生物学）解析肿瘤免疫治疗反应机制。</li>
+          
+          <li>实现从相关性特征挖掘向表征学习、关系推断及肿瘤-免疫动力学因果模拟的范式转变。</li>
+          
+          <li>构建多模态融合与可解释的临床部署模型，推动精准肿瘤免疫治疗个性化医疗实现。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-71364-5" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             style="--card-color: #A5D6A7">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Apr-11</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-71796-z" target="_blank" rel="noopener noreferrer">A synthetic angiotensin II/ACE2-based hormone shunt controlling experimental hypertension.</a>
+      </h2>
+
+      <p class="paper-authors">Unal Gokberk &middot; Mansouri Maysam &middot; Xie Yu-Qing &middot; Mueller Christian &middot; Charpin-El Hamri Ghislaine &middot; Fussenegger Martin</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41965354', 'zh-41965354')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41965354', 'en-41965354')">中文</button>
+        </div>
+        <div id="en-41965354" class="abstract-text active">Arterial hypertension is the leading preventable cause of various life-threatening medical conditions and comorbidities that affect over 1.3 billion adults, causing over 7.5 million annual deaths worldwide. Capitalizing on a synthetic biology-inspired engineering approach, we design a fully human, antihypertensive gene circuit called ARCH (autonomous regulator of chronic hypertension), which precisely monitors and efficiently controls angiotensin-dependent, renin-angiotensin system (RAS)-driven hypertension, in which angiotensin II (Ang-II) is persistently elevated, in a reversible, self-sufficient, and closed-loop manner. We utilize the ectopically expressed native type-1 angiotensin receptor (AT1R) to monitor the blood level of the hypertension biomarker Ang-II. We then rewire the AT1R activation during hypertension to a synthetic promoter to coordinate the expression of clinically licensed, secretion-engineered, soluble therapeutic angiotensin-converting enzyme 2 (stACE2), which degrades Ang-II and restores normotension. Implantation of microencapsulated ARCH-transgenic human cells into male hypertensive mice restores and maintains normal blood pressure.</div>
+        <div id="zh-41965354" class="abstract-text">动脉高血压是导致各种危及生命的疾病和合并症的主要可预防原因，影响超过13亿成年人，每年在全球造成超过750万人死亡。我们利用受合成生物学启发的工程方法，设计了一种完全人源的抗高血压基因回路ARCH（慢性高血压自主调节因子，autonomous regulator of chronic hypertension），它以可逆、自足和闭环的方式精确监测并有效控制血管紧张素依赖的、由肾素-血管紧张素系统（RAS）驱动的高血压（其中血管紧张素II（Ang-II）持续升高）。我们利用异位表达的天然1型血管紧张素受体（AT1R）来监测高血压生物标志物Ang-II的血液水平。然后，我们将高血压期间AT1R的激活重连至合成启动子，以协调表达经临床许可的分泌工程化可溶性血管紧张素转化酶2（stACE2），该酶降解Ang-II并恢复正常血压。将微囊化的ARCH转基因人细胞植入雄性高血压小鼠体内，可恢复并维持正常血压。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>开发了完全人源的抗高血压基因回路ARCH，实现可逆、自足、闭环的血压调控</li>
+          
+          <li>利用AT1R监测Ang-II水平，通过合成启动子驱动stACE2表达，构建激素分流系统</li>
+          
+          <li>微囊化ARCH细胞植入高血压小鼠可长期恢复并维持正常血压</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-71796-z" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             style="--card-color: #A5D6A7">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Apr-10</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-71346-7" target="_blank" rel="noopener noreferrer">Gallium in liquid state shows nuclease-mimicking activity.</a>
+      </h2>
+
+      <p class="paper-authors">Liu Li &middot; Zheng Jiewei &middot; Lu Xi &middot; Sarowar Chowdhury &middot; Wang Yuqin &middot; Smith Martin A &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41963312', 'zh-41963312')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41963312', 'en-41963312')">中文</button>
+        </div>
+        <div id="en-41963312" class="abstract-text active">Replicating biological systems using non-living materials, from the foundational molecular level to complex tissue structures, is central to abiotic mimicry. Enzymes play a vital role in these systems; however, replicating their enzymatic power with minimal components remains a key challenge. Here we show that gallium in the liquid state exhibits nuclease-like activity with preferred cleaving sites. The mechanism involves nucleotide-biased adsorption and hydroxyl radical-assisted phosphodiester hydrolysis. Compared with previously reported artificial metallonucleases, the liquid gallium uniquely integrates its oxide layer for substrate adsorption and its metallic core with electrons as a cleavage active center, forming a ligand- and cofactor-free artificial nuclease platform. Moreover, their activity is tunable through synthesis parameters and external stimuli, enabling programmable control with spatial or temporal precision. This work presents a minimalistic yet functional approach to enzyme mimicry, expanding the design space for abiotic enzymatic systems and offering potential opportunities in therapeutic applications, synthetic biology, and biomaterials.</div>
+        <div id="zh-41963312" class="abstract-text">利用非生命材料从基础分子层面到复杂组织结构复制生物系统，是非生命模拟（abiotic mimicry）的核心。酶在这些系统中发挥关键作用，然而以最少组分复制其催化能力仍是一项重大挑战。本研究表明，液态镓（gallium）表现出具有偏好性切割位点的类核酸酶（nuclease-like）活性。其机制涉及核苷酸偏向性吸附及羟基自由基辅助的磷酸二酯键水解。与以往报道的人工金属核酸酶（artificial metallonucleases）不同，液态镓独特地整合了其氧化层用于底物吸附，以及以电子为切割活性中心的金属核，形成了一个无需配体和辅因子的人工核酸酶平台。此外，其活性可通过合成参数和外部刺激进行调节，实现具有空间或时间精度的可编程控制。该工作为酶模拟提供了一种极简而功能化的策略，拓展了非生命酶系统的设计空间，并在治疗应用、合成生物学和生物材料领域展现出潜在机遇。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>液态镓表现出类核酸酶活性，可位点选择性切割核酸磷酸二酯键</li>
+          
+          <li>氧化层与金属核协同作用，构建无配体/辅因子的人工核酸酶平台</li>
+          
+          <li>活性可通过合成参数与外部刺激精准调控，实现时空可编程控制</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-71346-7" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             style="--card-color: #A5D6A7">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Apr-09</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-71366-3" target="_blank" rel="noopener noreferrer">Prolyl hydroxylase-dependent proteolysis enables the orthogonal hypoxia responses in plants.</a>
+      </h2>
+
+      <p class="paper-authors">Shukla Vinay &middot; Iacopino Sergio &middot; Carbonare Laura Dalle &middot; Del Chiaro Alessia &middot; He Yuming &middot; Tronca Mauricio Nicolàs &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41957032', 'zh-41957032')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41957032', 'en-41957032')">中文</button>
+        </div>
+        <div id="en-41957032" class="abstract-text active">Vascular plants and metazoans use selective proteolysis to control responses to hypoxia, although through distinct biochemical mechanisms. The reason for this divergence is puzzling, since the molecular components necessary for both strategies are conserved. To explore the alternative scenario where plants and animals respond to hypoxia through the same mechanisms, we engineer a three-components system aimed to target proteins for degradation in an oxygen dependent manner in Arabidopsis thaliana. When used to control transcription, the synthetic system partially restores hypoxia responsiveness in oxygen-insensitive mutants. Additionally, we demonstrate its potential to regulate growth under flood-induced hypoxia. Our work highlights the use of synthetic biology to reprogramme signalling pathways, providing insights into the evolution of oxygen sensing and offering tools for crop improvement under stress conditions.</div>
+        <div id="zh-41957032" class="abstract-text">维管植物和后生动物利用选择性蛋白水解调控低氧响应，尽管二者采用不同的生化机制。这种差异的原因令人困惑，因为两种策略所需的分子组分都是保守的。为探索植物和动物通过相同机制响应低氧的替代方案，我们设计了一个三组分系统，旨在以氧依赖方式在拟南芥（Arabidopsis thaliana）中靶向蛋白质进行降解。当用于控制转录时，该合成系统部分恢复了氧不敏感突变体中的低氧响应性。此外，我们证明了其在洪水诱导低氧下调控生长的潜力。我们的工作强调了利用合成生物学重新编程信号通路的应用，为氧感应的进化提供了见解，并为胁迫条件下的作物改良提供了工具。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>构建了基于脯氨酰羟化酶的三组分正交系统，实现植物氧依赖性蛋白降解调控。</li>
+          
+          <li>合成系统能够部分恢复氧不敏感突变体的低氧转录响应，验证了其功能有效性。</li>
+          
+          <li>该系统在洪水低氧胁迫下可调控植物生长，为作物抗逆改良提供了合成生物学工具。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-71366-3" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             style="--card-color: #E65100">
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #E65100">Science</span>
+        <span class="pub-date">2026-Apr-09</span>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/science.aee7892" target="_blank" rel="noopener noreferrer">The scope of biological possibility expandsOn the Future of Species Adrian Woolfson MIT Press, 2026. 480 pp.</a>
+      </h2>
+
+      <p class="paper-authors">Greenbaum Dov &middot; Gerstein Mark</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-41955382', 'zh-41955382')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-41955382', 'en-41955382')">中文</button>
+        </div>
+        <div id="en-41955382" class="abstract-text active">A synthetic biologist looks to the future, probing the promise and peril of "artificial biological intelligence".</div>
+        <div id="zh-41955382" class="abstract-text">一位合成生物学家展望未来，深入探讨“人工生物智能”（artificial biological intelligence）的前景与风险。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>提出人工生物智能有望突破自然进化限制，开创生命设计的新纪元。</li>
+          
+          <li>警示人工生物智能可能带来生态失衡与不可控进化的系统性风险。</li>
+          
+          <li>强调合成生物学发展需平衡技术创新与伦理安全框架的构建。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/science.aee7892" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Artificial Intelligence</span>
+          
+          <span class="kw-tag">Synthetic Biology</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+  </div>
+  
+</main>
+
+<footer class="site-footer">
+  <p>数据来源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed E-utilities</a>
+  &nbsp;·&nbsp; 翻译：<a href="https://platform.moonshot.cn" target="_blank">Moonshot Kimi 2.5</a>
+  &nbsp;·&nbsp; 自动生成于 2026-04-16 13:43 UTC</p>
+</footer>
+
+<script>
+  function switchTab(btn, showId, hideId) {
+    btn.closest('.abstract-section')
+       .querySelectorAll('.tab-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(showId).classList.add('active');
+    document.getElementById(hideId).classList.remove('active');
+  }
+
+  function filterPapers(family, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.paper-card').forEach(card => {
+      card.style.display =
+        (family === 'all' || card.dataset.family === family) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>

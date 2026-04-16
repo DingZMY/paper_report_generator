@@ -26,26 +26,74 @@ TOOL_EMAIL = "bio-digest@github.com"
 
 # 目标期刊（PubMed Journal Title Abbreviation [ta]）
 JOURNALS = [
-    "Science",
-    "Cell",
+    # Nature 系列
     "Nature",
     "Nat Biotechnol",
     "Nat Chem Biol",
     "Nat Methods",
     "Nat Chem",
-    "Nat Struct Mol Biol",
     "Nat Commun",
+    "Nat Phys",
+    # Cell 系列
+    "Cell",
     "Cell Syst",
     "Cell Chem Biol",
+    # Science 系列
+    "Science",
     "Sci Adv",
+    # 理论/定量生物学专刊
+    "Mol Syst Biol",        # Molecular Systems Biology
+    "PLoS Comput Biol",     # PLoS Computational Biology
+    "PLoS Biol",
+    "Elife",
+    # 物理/生物物理
+    "Phys Rev Lett",        # Physical Review Letters
+    "Biophys J",            # Biophysical Journal
+    # 核酸/基因工程
+    "Nucleic Acids Res",    # Nucleic Acids Research
+    "ACS Synth Biol",       # ACS Synthetic Biology
 ]
 
-# MeSH + 关键词组合查询（取并集）
-TOPIC_CLAUSE = (
+# ── 主题条款：聚焦系统/合成生物学 + 理论生物物理 ──────────────────────────────
+# 正向匹配：仅保留这些核心方向
+TOPIC_INCLUDE = (
     '"Synthetic Biology"[MeSH] OR "Systems Biology"[MeSH] '
     'OR "synthetic biology"[tiab] OR "systems biology"[tiab] '
-    'OR "synthetic biology"[tw] OR "systems biology"[tw]'
+    'OR "gene circuit"[tiab] OR "genetic circuit"[tiab] '
+    'OR "gene regulatory network"[tiab] OR "biological network"[tiab] '
+    'OR "metabolic flux"[tiab] OR "metabolic engineering"[tiab] '
+    'OR "mathematical model"[tiab] OR "computational model"[tiab] '
+    'OR "stochastic gene expression"[tiab] OR "noise in gene expression"[tiab] '
+    'OR "quantitative biology"[tiab] OR "theoretical biophysics"[tiab] '
+    'OR "information theory"[tiab] OR "biophysical model"[tiab] '
+    'OR "optogenetics"[tiab] OR "cell-free"[tiab] '
+    'OR "CRISPR"[tiab] OR "genome editing"[tiab] '
+    'OR "protein design"[tiab] OR "de novo protein"[tiab]'
 )
+# 负向排除：多组学、单细胞测序等非目标方向
+TOPIC_EXCLUDE = (
+    '"multi-omics"[tiab] OR "multiomics"[tiab] '
+    'OR "single-cell RNA"[tiab] OR "scRNA-seq"[tiab] OR "snRNA-seq"[tiab] '
+    'OR "whole exome"[tiab] OR "whole genome sequencing"[tiab] '
+    'OR "epigenomics"[tiab] OR "metagenomics"[tiab] '
+    'OR "spatial transcriptomics"[tiab]'
+)
+
+# 仅保留 Research Article（排除 Review、Comment、Editorial、News 等）
+ARTICLE_TYPE_CLAUSE = (
+    '"Journal Article"[pt] '
+    'NOT "Review"[pt] '
+    'NOT "Comment"[pt] '
+    'NOT "Editorial"[pt] '
+    'NOT "News"[pt] '
+    'NOT "Letter"[pt]'
+)
+
+# 不应被收录的 publication type（XML 解析时二次过滤）
+EXCLUDED_PUB_TYPES = {
+    "review", "comment", "editorial", "letter", "news", "retraction of publication",
+    "published erratum", "expression of concern",
+}
 
 REQUEST_DELAY = 0.4   # 无 API Key 时 3 req/s；有 Key 时可调低
 
@@ -56,7 +104,12 @@ def build_query(days_back: int = 7) -> tuple[str, str, str]:
     today = datetime.utcnow()
     start = today - timedelta(days=days_back)
     journal_clause = " OR ".join(f'"{j}"[ta]' for j in JOURNALS)
-    query = f"({journal_clause}) AND ({TOPIC_CLAUSE})"
+    query = (
+        f"({journal_clause})"
+        f" AND ({TOPIC_INCLUDE})"
+        f" NOT ({TOPIC_EXCLUDE})"
+        f" AND ({ARTICLE_TYPE_CLAUSE})"
+    )
     return query, start.strftime("%Y/%m/%d"), today.strftime("%Y/%m/%d")
 
 
@@ -179,6 +232,13 @@ def _parse_pubmed_xml(xml_text: str) -> list[dict]:
         else:
             p["pub_date"] = ""
 
+        # Publication types（用于二次过滤非 research article）
+        pub_types = [
+            _text(pt).lower()
+            for pt in article.findall(".//PublicationTypeList/PublicationType")
+        ]
+        p["pub_types"] = pub_types
+
         # MeSH 关键词（最多 10 个）
         keywords = [_text(k) for k in article.findall(".//MeshHeading/DescriptorName")]
         p["keywords"] = keywords[:10]
@@ -188,8 +248,14 @@ def _parse_pubmed_xml(xml_text: str) -> list[dict]:
         p["key_findings"] = None
         p["translated_at"] = None
 
-        if p["title"]:   # 过滤掉无标题的条目
-            papers.append(p)
+        # 过滤：无标题、无摘要、或属于排除类型的条目跳过
+        if not p["title"] or not p["abstract"]:
+            continue
+        if any(pt in EXCLUDED_PUB_TYPES for pt in pub_types):
+            print(f"  [过滤] 非 research article（{pub_types}）：{p['title'][:60]}")
+            continue
+
+        papers.append(p)
 
     return papers
 

@@ -26,7 +26,7 @@ from openai import OpenAI, APIError, RateLimitError
 
 KIMI_API_KEY = os.environ.get("KIMI_API_KEY", "")
 KIMI_BASE_URL = "https://api.moonshot.cn/v1"
-MODEL = "kimi-2.5"
+MODEL = "kimi-k2.5"
 
 REQUEST_DELAY = 1.2    # 每次请求后等待（秒），保守限速
 MAX_RETRIES = 3
@@ -60,21 +60,30 @@ def _make_client() -> OpenAI:
 
 
 def _extract_json(text: str) -> dict | None:
-    """从模型输出中健壮地提取 JSON 对象。"""
+    """从模型输出中健壮地提取 JSON 对象。
+
+    支持 kimi-k2.5 thinking 模型的 <think>...</think> 前缀输出。
+    """
+    if not text or not text.strip():
+        return None
+
+    # 去掉 <think>...</think> 思考块（thinking 模型特有）
+    text = re.sub(r"<think>[\s\S]*?</think>", "", text, flags=re.IGNORECASE).strip()
+
     # 直接解析
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
 
-    # 去掉 markdown 代码块
-    cleaned = re.sub(r"```(?:json)?", "", text).strip()
+    # 去掉 markdown 代码块标记
+    cleaned = re.sub(r"```(?:json)?", "", text).strip().rstrip("`").strip()
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         pass
 
-    # 用正则提取第一个 {...} 块
+    # 用正则提取最外层 {...} 块（贪婪匹配，取最长）
     match = re.search(r"\{[\s\S]*\}", text)
     if match:
         try:
@@ -104,10 +113,14 @@ def translate_paper(client: OpenAI, paper: dict) -> dict | None:
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": user_msg},
                 ],
-                temperature=0.3,
-                max_tokens=1200,
+                temperature=1,
+                max_tokens=2500,
             )
-            content = response.choices[0].message.content or ""
+            msg = response.choices[0].message
+            # kimi-k2.5 thinking 模型有时 content 为空，答案在 reasoning_content 中
+            content = msg.content or ""
+            if not content.strip():
+                content = getattr(msg, "reasoning_content", "") or ""
             result = _extract_json(content)
             if result and "abstract_zh" in result and "key_findings" in result:
                 return result
