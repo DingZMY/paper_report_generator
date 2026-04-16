@@ -1,0 +1,49 @@
+# 系统/合成生物学文献周报 {{ week }}
+
+> **时间范围**：{{ date_range.start }} ~ {{ date_range.end }}
+> **来源期刊**：Nature / Cell / Science 系列
+> **收录论文**：{{ total }} 篇（已翻译 {{ translated_count }} 篇）
+> **生成时间**：{{ generated_at }}
+
+---
+
+{% if not papers %}
+本周暂无符合条件的论文。
+
+{% else %}
+{% for paper in papers %}
+## {{ loop.index }}. {{ paper.title }}
+
+| 字段 | 内容 |
+|---|---|
+| **期刊** | {{ paper.journal }} |
+| **发表日期** | {{ paper.pub_date }} |
+| **作者** | {{ paper.authors | join(', ') }} |
+| **原文链接** | [查看原文]({{ paper.url }}) |
+{% if paper.doi %}| **DOI** | `{{ paper.doi }}` |{% endif %}
+
+### 摘要（英文）
+
+{{ paper.abstract or '（暂无摘要）' }}
+
+### 摘要（中文）
+
+{{ paper.abstract_zh or '（翻译处理中…）' }}
+
+{% if paper.key_findings %}
+### 核心发现
+
+{% for finding in paper.key_findings %}
+- {{ finding }}
+{% endfor %}
+{% endif %}
+{% if paper.keywords %}
+**关键词**：{{ paper.keywords | join(' · ') }}
+{% endif %}
+
+---
+
+{% endfor %}
+{% endif %}
+
+*由 [Bio Digest](https://github.com) 自动生成 &nbsp;·&nbsp; 数据来源：PubMed &nbsp;·&nbsp; 翻译：Moonshot Kimi 2.5*

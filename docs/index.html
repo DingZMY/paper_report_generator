@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Digest — 系统/合成生物学文献周报</title>
+  <meta name="description" content="每周自动采集 Nature/Cell/Science 系列顶刊中系统生物学与合成生物学论文，AI 翻译摘要，双语报告">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#f0f4f8;--surface:#ffffff;--surface2:#f7f9fc;--border:#e2e8f0;
+      --text:#1a202c;--text-muted:#718096;--text-light:#a0aec0;--accent:#5a67d8;
+      --shadow-sm:0 1px 3px rgba(0,0,0,0.08);--radius:12px;--transition:0.18s ease;
+    }
+    @media(prefers-color-scheme:dark){:root{--bg:#0d1117;--surface:#161b22;--surface2:#1c2130;--border:#2d3748;--text:#e2e8f0;--text-muted:#a0aec0;--text-light:#718096;--shadow-sm:0 1px 3px rgba(0,0,0,0.4);}}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","PingFang SC",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;min-height:100vh;}
+    .hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:64px 24px 52px;text-align:center;}
+    .hero-icon{font-size:3rem;display:block;margin-bottom:16px;}
+    .hero h1{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:12px;}
+    .hero-subtitle{font-size:1rem;opacity:.85;max-width:520px;margin:0 auto 28px;line-height:1.6;}
+    .badge-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .badge{display:inline-block;padding:5px 14px;border-radius:20px;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);font-size:.8rem;font-weight:600;}
+    .main{max-width:860px;margin:0 auto;padding:40px 20px 80px;}
+    .section-title{font-size:1.2rem;font-weight:800;margin-bottom:20px;}
+    .empty-state{text-align:center;padding:60px 24px;color:var(--text-muted);background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius);}
+    .empty-state p{margin-top:10px;font-size:.9rem;}
+    .site-footer{background:var(--surface);border-top:1px solid var(--border);padding:22px;text-align:center;font-size:.8rem;color:var(--text-muted);line-height:1.8;}
+    .site-footer a{color:var(--accent);text-decoration:none;}
+  </style>
+</head>
+<body>
+<div class="hero">
+  <span class="hero-icon">🧬</span>
+  <h1>Bio Digest</h1>
+  <p class="hero-subtitle">每周自动采集 Nature / Cell / Science 系列顶刊中<br>系统生物学与合成生物学最新论文，AI 翻译摘要，双语报告</p>
+  <div class="badge-row">
+    <span class="badge">PubMed E-utilities</span>
+    <span class="badge">Moonshot Kimi 2.5</span>
+    <span class="badge">每周一自动更新</span>
+  </div>
+</div>
+<main class="main">
+  <h2 class="section-title">历史周报</h2>
+  <div class="empty-state">
+    <div style="font-size:2.5rem">📭</div>
+    <p>暂无周报，请手动触发 GitHub Actions 工作流以生成第一期。</p>
+    <p style="margin-top:8px;font-size:.8rem;color:var(--text-light)">Actions → "1. Collect &amp; Translate Papers" → Run workflow</p>
+  </div>
+</main>
+<footer class="site-footer">
+  <p>数据来源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+  &nbsp;·&nbsp; 翻译：<a href="https://platform.moonshot.cn" target="_blank">Moonshot Kimi 2.5</a></p>
+</footer>
+</body>
+</html>

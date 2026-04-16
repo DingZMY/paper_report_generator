@@ -1,0 +1,56 @@
+name: "1. Collect & Translate Papers"
+
+on:
+  schedule:
+    # 每周一 06:00 UTC 自动触发
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: "向前追溯天数（默认 7）"
+        required: false
+        default: "7"
+
+permissions:
+  contents: write
+
+jobs:
+  collect-and-translate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # 使用 PAT 或 GITHUB_TOKEN 以便后续 push
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect papers from PubMed
+        run: python scripts/collect_papers.py
+        env:
+          PUBMED_API_KEY: ${{ secrets.PUBMED_API_KEY }}
+          DAYS_BACK: ${{ github.event.inputs.days_back || '7' }}
+
+      - name: Translate abstracts with Moonshot Kimi
+        run: python scripts/translate_papers.py
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+
+      - name: Commit and push data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # 仅当有变更时才提交
+          git diff --staged --quiet || \
+            git commit -m "data: collect papers $(date -u +'%Y-W%V') [skip ci]"
+          git push

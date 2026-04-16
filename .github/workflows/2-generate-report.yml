@@ -1,0 +1,68 @@
+name: "2. Generate Report & Deploy Pages"
+
+on:
+  # 在 Action #1 完成后自动触发
+  workflow_run:
+    workflows: ["1. Collect & Translate Papers"]
+    types: [completed]
+  # 也支持手动触发（用于本地调试后的手动发布）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 同时只允许一个部署任务运行，避免 Pages 竞态
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    # 手动触发时直接运行；由 workflow_run 触发时仅在上游成功时运行
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+
+    steps:
+      - name: Checkout repository (latest main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate HTML & Markdown reports
+        run: python scripts/generate_report.py
+
+      - name: Commit and push generated reports
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ reports/
+          git diff --staged --quiet || \
+            git commit -m "report: generate digest $(date -u +'%Y-W%V') [skip ci]"
+          git push
+
+      # ── GitHub Pages 部署 ──────────────────────────────────────
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
