@@ -156,6 +156,11 @@ _TITLE_EXCLUDE_SUBSTRINGS = [
     # 天然产物普查（biosynthetic survey 在 PubMed tiab 中无法被 NOT 精准捕获）
     "biocontrol fungi",
     "hypocrealean",
+    # 寄生虫生物学（与系统/计算生物学无关）
+    "Plasmodium falciparum",
+    "Plasmodium",
+    # CRISPR-Cas9 的结构/甲基化机制研究（偏生化/结构，非工程/系统方向）
+    "methylation-sensitive editing",
 ]
 
 
