@@ -55,9 +55,11 @@ JOURNALS = [
 ]
 
 # ── 主题条款：聚焦系统/合成生物学 + 理论生物物理 ──────────────────────────────
-# 正向匹配：偏物理/理论方向，兼容新颖方法开发类文章
+# 正向匹配：偏物理/理论方向，兼容 omics 方法开发类文章
+# 原则：关键词必须足够领域特异；过于通用的词（machine learning / algorithm /
+#       nonequilibrium 等）移至排除词或删去，避免引入材料、气候、电子等噪声。
 TOPIC_INCLUDE = (
-    # MeSH 主题词
+    # MeSH 主题词（领域特异性高）
     '"Synthetic Biology"[MeSH] OR "Systems Biology"[MeSH] '
     'OR "Biophysics"[MeSH] OR "Biophysical Phenomena"[MeSH] '
     # 系统 / 合成生物学
@@ -68,36 +70,51 @@ TOPIC_INCLUDE = (
     'OR "cell-free"[tiab] OR "optogenetics"[tiab] '
     'OR "CRISPR"[tiab] OR "genome editing"[tiab] '
     'OR "protein design"[tiab] OR "de novo protein"[tiab] '
-    # 理论 / 计算 / 物理
+    # 理论 / 计算 / 物理（生物领域特异的措辞）
     'OR "mathematical model"[tiab] OR "computational model"[tiab] '
     'OR "theoretical model"[tiab] OR "biophysical model"[tiab] '
     'OR "stochastic"[tiab] OR "noise in gene expression"[tiab] '
     'OR "quantitative biology"[tiab] OR "theoretical biophysics"[tiab] '
-    'OR "statistical mechanics"[tiab] OR "nonequilibrium"[tiab] '
+    'OR "statistical mechanics"[tiab] '
     'OR "information theory"[tiab] OR "mutual information"[tiab] '
-    'OR "entropy production"[tiab] OR "free energy"[tiab] '
+    'OR "entropy production"[tiab] '
+    'OR "free energy landscape"[tiab] OR "energy landscape"[tiab] '
     'OR "dynamical systems"[tiab] OR "bifurcation"[tiab] '
     'OR "reaction-diffusion"[tiab] OR "Turing pattern"[tiab] '
     'OR "active matter"[tiab] OR "living matter"[tiab] '
-    'OR "collective behavior"[tiab] OR "self-organization"[tiab] '
-    'OR "single-molecule"[tiab] OR "molecular motor"[tiab] '
+    'OR "self-organization"[tiab] '
+    # single-molecule: keep biophysics-specific phrasing, avoid sequencing/biochemistry
+    'OR "single-molecule imaging"[tiab] OR "single-molecule tracking"[tiab] '
+    'OR "single-molecule force"[tiab] OR "single-molecule kinetics"[tiab] '
+    'OR "molecular motor"[tiab] '
     'OR "force generation"[tiab] OR "mechanobiology"[tiab] '
-    # 方法开发（包含 omics 语境下的新方法）
-    'OR "method development"[tiab] OR "new method"[tiab] '
-    'OR "computational framework"[tiab] OR "algorithm"[tiab] '
-    'OR "deep learning"[tiab] OR "machine learning"[tiab] '
+    'OR "membrane tension"[tiab] OR "cytoskeletal dynamics"[tiab] '
 )
-# 负向排除：纯描述性 omics 普查、纯结构解析类文章
-# 注意：不再宽泛排除所有 omics，仅排除纯数据罗列型研究；
-#       保留含 "method" 或 "framework" 或 "algorithm" 的同主题文章（PubMed
-#       对 NOT 的处理是逻辑排除，因此此处排除词务必足够具体）
+# 负向排除：非生物物理领域 + 纯描述性 omics + 结构解析 + 临床
 TOPIC_EXCLUDE = (
+    # 非生物的凝聚态 / 材料科学
+    '"thermoelectric"[tiab] OR "solar cell"[tiab] OR "perovskite"[tiab] '
+    'OR "magnon"[tiab] OR "dichalcogenide"[tiab] '
+    'OR "memristor"[tiab] OR "Ising machine"[tiab] '
+    'OR "titanium alloy"[tiab] OR "metal alloy"[tiab] '
+    # 非生物的电子 / 计算硬件
+    'OR "CMOS"[tiab] OR "probabilistic computing"[tiab] '
+    'OR "random telegraph noise"[tiab] '
+    # 单分子磁体（区别于生物学单分子研究）
+    'OR "single-molecule magnet"[tiab] '
+    # 地球 / 气候科学
+    'OR "sea level"[tiab] OR "land subsidence"[tiab] '
+    'OR "surface albedo"[tiab] OR "climate model"[tiab] '
+    # 非生物工程 / 机器人
+    'OR "wearable robotics"[tiab] OR "wearable robot"[tiab] '
+    'OR "artificial tendon"[tiab] OR "artificial muscle"[tiab] '
+    # 其他非目标
+    'OR "asteroid"[tiab] OR "meteorite"[tiab] '
     # 纯结构解析（非理论/动力学）
-    '"cryo-EM structure"[tiab] OR "crystal structure"[tiab] '
+    'OR "cryo-EM structure"[tiab] OR "crystal structure"[tiab] '
     'OR "X-ray crystallography"[tiab] OR "structure determination"[tiab] '
     'OR "cryo-electron tomography"[tiab] '
-    # 纯描述性 omics 普查（不含方法开发信号词）——用 "landscape"/"atlas"/"profiling"
-    # 来识别描述性研究；方法开发类不在此排除
+    # 纯描述性 omics 普查
     'OR "transcriptomic landscape"[tiab] OR "genomic landscape"[tiab] '
     'OR "epigenomic landscape"[tiab] OR "proteomic landscape"[tiab] '
     'OR "single-cell atlas"[tiab] OR "cell atlas"[tiab] '
@@ -105,7 +122,16 @@ TOPIC_EXCLUDE = (
     'OR "metagenomics survey"[tiab] OR "metagenomic survey"[tiab] '
     # 非目标临床方向
     'OR "clinical trial"[tiab] OR "randomized controlled"[tiab] '
-    'OR "case report"[tiab] OR "cohort study"[tiab]'
+    'OR "case report"[tiab] OR "cohort study"[tiab] '
+    'OR "Mendelian randomization"[tiab] '
+    # 纯 omics 技术（非方法论文）
+    'OR "single-molecule sequencing"[tiab] '
+    # 天然产物普查
+    'OR "biosynthetic survey"[tiab] OR "secondary metabolite survey"[tiab] '
+    # 无机 / 化学模拟酶
+    'OR "nuclease-mimicking"[tiab] OR "enzyme-mimicking"[tiab] '
+    # 种群遗传学控制（基因驱动驱虫，非生物物理）
+    'OR "population suppression"[tiab] OR "gene drive"[tiab]'
 )
 
 # 仅保留 Research Article（排除 Review、Comment、Editorial、News 等）
@@ -117,6 +143,31 @@ ARTICLE_TYPE_CLAUSE = (
     'NOT "News"[pt] '
     'NOT "Letter"[pt]'
 )
+
+# ── Python 内容后过滤 ────────────────────────────────────────────────────────
+# 仅当 PubMed 查询因关键词共现无法精准排除时，在 Python 层级对标题做额外过滤。
+_TITLE_EXCLUDE_SUBSTRINGS = [
+    # 癌症/白血病临床应用（误由 single-molecule tracking 命中）
+    "leukemogenic",
+    "leukemia",
+    # 高血压药理（误匹配 synthetic biology 关键词）
+    "hypertension",
+    "angiotensin",
+    # 天然产物普查（biosynthetic survey 在 PubMed tiab 中无法被 NOT 精准捕获）
+    "biocontrol fungi",
+    "hypocrealean",
+]
+
+
+def _is_on_topic(paper: dict) -> bool:
+    """Python 层面的二次过滤：标题中含有排除子串则返回 False。"""
+    title_lower = paper.get("title", "").lower()
+    for substr in _TITLE_EXCLUDE_SUBSTRINGS:
+        if substr.lower() in title_lower:
+            print(f"  [后过滤] 命中排除规则（'{substr}'）：{paper['title'][:60]}")
+            return False
+    return True
+
 
 # 不应被收录的 publication type（XML 解析时二次过滤）
 EXCLUDED_PUB_TYPES = {
@@ -163,7 +214,8 @@ def esearch(query: str, mindate: str, maxdate: str, retmax: int = 200) -> list[s
         "mindate": mindate,
         "maxdate": maxdate,
     }
-    resp = requests.get(f"{EUTILS_BASE}/esearch.fcgi", params=params, timeout=30)
+    # Use POST to avoid 414 URI Too Long when the query is large
+    resp = requests.post(f"{EUTILS_BASE}/esearch.fcgi", data=params, timeout=30)
     resp.raise_for_status()
     data = resp.json()
     result = data.get("esearchresult", {})
@@ -282,6 +334,8 @@ def _parse_pubmed_xml(xml_text: str) -> list[dict]:
             continue
         if any(pt in EXCLUDED_PUB_TYPES for pt in pub_types):
             print(f"  [过滤] 非 research article（{pub_types}）：{p['title'][:60]}")
+            continue
+        if not _is_on_topic(p):
             continue
 
         papers.append(p)
