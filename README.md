@@ -76,12 +76,23 @@ bio-digest/
 
 ### 正向匹配（满足任意一条即入选）
 
-- MeSH 词汇：`Synthetic Biology`、`Systems Biology`
-- 标题/摘要关键词：`synthetic biology`、`systems biology`、`gene circuit`、`genetic circuit`、`gene regulatory network`、`biological network`、`metabolic flux`、`metabolic engineering`、`mathematical model`、`computational model`、`stochastic gene expression`、`quantitative biology`、`theoretical biophysics`、`biophysical model`、`information theory`、`optogenetics`、`cell-free`、`CRISPR`、`genome editing`、`protein design`、`de novo protein`
+**MeSH 主题词**：`Synthetic Biology`、`Systems Biology`、`Biophysics`、`Biophysical Phenomena`
 
-### 负向排除（含以下关键词的文章不收录）
+**系统 / 合成生物学**：`synthetic biology`、`systems biology`、`gene circuit`、`genetic circuit`、`gene regulatory network`、`biological network`、`metabolic flux`、`metabolic engineering`、`cell-free`、`optogenetics`、`CRISPR`、`genome editing`、`protein design`、`de novo protein`
 
-- `multi-omics`、`multiomics`、`single-cell RNA`、`scRNA-seq`、`snRNA-seq`、`whole exome sequencing`、`whole genome sequencing`、`epigenomics`、`metagenomics`、`spatial transcriptomics`
+**理论 / 计算 / 物理**：`mathematical model`、`computational model`、`theoretical model`、`biophysical model`、`stochastic`、`noise in gene expression`、`quantitative biology`、`theoretical biophysics`、`statistical mechanics`、`nonequilibrium`、`information theory`、`mutual information`、`entropy production`、`free energy`、`dynamical systems`、`bifurcation`、`reaction-diffusion`、`Turing pattern`、`active matter`、`living matter`、`collective behavior`、`self-organization`、`single-molecule`、`molecular motor`、`force generation`、`mechanobiology`
+
+**方法开发**：`method development`、`new method`、`computational framework`、`algorithm`、`deep learning`、`machine learning`（包含 omics 背景下的新颖方法论文）
+
+### 负向排除
+
+**纯结构解析**：`cryo-EM structure`、`crystal structure`、`X-ray crystallography`、`structure determination`、`cryo-electron tomography`
+
+**描述性 omics 普查**（不含方法开发）：`transcriptomic landscape`、`genomic landscape`、`epigenomic landscape`、`proteomic landscape`、`single-cell atlas`、`cell atlas`、`whole genome sequencing`、`whole exome`、`metagenomics survey`
+
+**非目标临床研究**：`clinical trial`、`randomized controlled`、`case report`、`cohort study`
+
+> **注意**：omics 方向的新颖**方法开发**文章（如新算法、新计算框架）不受以上排除影响，仍可通过正向关键词入选。
 
 ### 文章类型限制
 

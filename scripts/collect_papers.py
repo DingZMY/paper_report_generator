@@ -55,28 +55,57 @@ JOURNALS = [
 ]
 
 # ── 主题条款：聚焦系统/合成生物学 + 理论生物物理 ──────────────────────────────
-# 正向匹配：仅保留这些核心方向
+# 正向匹配：偏物理/理论方向，兼容新颖方法开发类文章
 TOPIC_INCLUDE = (
+    # MeSH 主题词
     '"Synthetic Biology"[MeSH] OR "Systems Biology"[MeSH] '
+    'OR "Biophysics"[MeSH] OR "Biophysical Phenomena"[MeSH] '
+    # 系统 / 合成生物学
     'OR "synthetic biology"[tiab] OR "systems biology"[tiab] '
     'OR "gene circuit"[tiab] OR "genetic circuit"[tiab] '
     'OR "gene regulatory network"[tiab] OR "biological network"[tiab] '
     'OR "metabolic flux"[tiab] OR "metabolic engineering"[tiab] '
-    'OR "mathematical model"[tiab] OR "computational model"[tiab] '
-    'OR "stochastic gene expression"[tiab] OR "noise in gene expression"[tiab] '
-    'OR "quantitative biology"[tiab] OR "theoretical biophysics"[tiab] '
-    'OR "information theory"[tiab] OR "biophysical model"[tiab] '
-    'OR "optogenetics"[tiab] OR "cell-free"[tiab] '
+    'OR "cell-free"[tiab] OR "optogenetics"[tiab] '
     'OR "CRISPR"[tiab] OR "genome editing"[tiab] '
-    'OR "protein design"[tiab] OR "de novo protein"[tiab]'
+    'OR "protein design"[tiab] OR "de novo protein"[tiab] '
+    # 理论 / 计算 / 物理
+    'OR "mathematical model"[tiab] OR "computational model"[tiab] '
+    'OR "theoretical model"[tiab] OR "biophysical model"[tiab] '
+    'OR "stochastic"[tiab] OR "noise in gene expression"[tiab] '
+    'OR "quantitative biology"[tiab] OR "theoretical biophysics"[tiab] '
+    'OR "statistical mechanics"[tiab] OR "nonequilibrium"[tiab] '
+    'OR "information theory"[tiab] OR "mutual information"[tiab] '
+    'OR "entropy production"[tiab] OR "free energy"[tiab] '
+    'OR "dynamical systems"[tiab] OR "bifurcation"[tiab] '
+    'OR "reaction-diffusion"[tiab] OR "Turing pattern"[tiab] '
+    'OR "active matter"[tiab] OR "living matter"[tiab] '
+    'OR "collective behavior"[tiab] OR "self-organization"[tiab] '
+    'OR "single-molecule"[tiab] OR "molecular motor"[tiab] '
+    'OR "force generation"[tiab] OR "mechanobiology"[tiab] '
+    # 方法开发（包含 omics 语境下的新方法）
+    'OR "method development"[tiab] OR "new method"[tiab] '
+    'OR "computational framework"[tiab] OR "algorithm"[tiab] '
+    'OR "deep learning"[tiab] OR "machine learning"[tiab] '
 )
-# 负向排除：多组学、单细胞测序等非目标方向
+# 负向排除：纯描述性 omics 普查、纯结构解析类文章
+# 注意：不再宽泛排除所有 omics，仅排除纯数据罗列型研究；
+#       保留含 "method" 或 "framework" 或 "algorithm" 的同主题文章（PubMed
+#       对 NOT 的处理是逻辑排除，因此此处排除词务必足够具体）
 TOPIC_EXCLUDE = (
-    '"multi-omics"[tiab] OR "multiomics"[tiab] '
-    'OR "single-cell RNA"[tiab] OR "scRNA-seq"[tiab] OR "snRNA-seq"[tiab] '
-    'OR "whole exome"[tiab] OR "whole genome sequencing"[tiab] '
-    'OR "epigenomics"[tiab] OR "metagenomics"[tiab] '
-    'OR "spatial transcriptomics"[tiab]'
+    # 纯结构解析（非理论/动力学）
+    '"cryo-EM structure"[tiab] OR "crystal structure"[tiab] '
+    'OR "X-ray crystallography"[tiab] OR "structure determination"[tiab] '
+    'OR "cryo-electron tomography"[tiab] '
+    # 纯描述性 omics 普查（不含方法开发信号词）——用 "landscape"/"atlas"/"profiling"
+    # 来识别描述性研究；方法开发类不在此排除
+    'OR "transcriptomic landscape"[tiab] OR "genomic landscape"[tiab] '
+    'OR "epigenomic landscape"[tiab] OR "proteomic landscape"[tiab] '
+    'OR "single-cell atlas"[tiab] OR "cell atlas"[tiab] '
+    'OR "whole genome sequencing"[tiab] OR "whole exome"[tiab] '
+    'OR "metagenomics survey"[tiab] OR "metagenomic survey"[tiab] '
+    # 非目标临床方向
+    'OR "clinical trial"[tiab] OR "randomized controlled"[tiab] '
+    'OR "case report"[tiab] OR "cohort study"[tiab]'
 )
 
 # 仅保留 Research Article（排除 Review、Comment、Editorial、News 等）
