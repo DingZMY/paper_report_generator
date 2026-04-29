@@ -1,12 +1,387 @@
 {
   "week": "2026-W18",
-  "generated_at": "2026-04-27T08:14:36.091524Z",
+  "generated_at": "2026-04-29T07:40:55.979361Z",
   "date_range": {
-    "start": "2026/04/20",
-    "end": "2026/04/27"
+    "start": "2026/04/22",
+    "end": "2026/04/29"
   },
-  "total": 49,
+  "total": 35,
   "papers": [
+    {
+      "pmid": "42050111",
+      "title": "Single-molecule localization and diffusivity microscopy reveals dynamic biomolecular organization in living cells.",
+      "journal": "Nat Methods",
+      "authors": [
+        "Wang Zuhui",
+        "Liu Yiwen",
+        "Wang Bo",
+        "Liu Xiangyu",
+        "Deng Wulan"
+      ],
+      "abstract": "Single-molecule tracking in living cells measures protein diffusivity but requires sparse imaging, limiting high-density mapping. Here we introduce single-molecule localization and diffusivity microscopy (SMLDM), a deep learning-based approach that accurately estimates single-molecule movement tracks and diffusion coefficients directly from single-frame snapshots, eliminating the need for trajectory linking. Implemented as mobility photoactivated localization microscopy (MPALM) with bright photoactivatable fluorophores and U-Net-based single-molecule segmentation, this method achieves a 50- to 300-fold increase in data density compared to conventional tracking-based approaches, generating high-density, spatially super-resolved maps of molecular diffusivity and organization in living human cells. We applied MPALM to diverse dynamic cellular processes, uncovering nucleosome clustering into low-mobility chromatin domains, pathway-biased μ-opioid receptor dynamic clustering, focal adhesion movement and nonuniform molecular diffusivity and microcondensate organization during early droplet coalescence. SMLDM provides a powerful tool for resolving biomolecular organization and dynamics at single-molecule resolution in live cells.",
+      "doi": "10.1038/s41592-026-03078-x",
+      "url": "https://doi.org/10.1038/s41592-026-03078-x",
+      "pub_date": "2026-Apr-28",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "活细胞中的单分子追踪可测量蛋白质扩散系数，但需要稀疏成像，限制了高密度图谱的构建。我们在此介绍单分子定位与扩散系数显微镜（SMLDM），一种基于深度学习的方法，可从单帧快照直接准确估算单分子运动轨迹和扩散系数，无需进行轨迹连接。通过使用明亮的光激活荧光团和基于U-Net的单分子分割，以移动性光激活定位显微镜（MPALM）形式实现，该方法相较传统追踪方法数据密度提高了50至300倍，可生成活人细胞中分子扩散系数和组织的高密度空间超分辨图谱。我们将MPALM应用于多种动态细胞过程，揭示了核小体聚集形成低迁移率染色质域、通路偏向性μ-阿片受体动态聚集、粘着斑运动和非均匀分子扩散，以及早期液滴融合过程中的微凝聚体组织。SMLDM为在活细胞中以单分子分辨率解析生物分子组织与动力学提供了强大工具。",
+      "key_findings": [
+        "SMLDM从单帧图像直接估算扩散系数并将数据密度提升50-300倍，无需轨迹连接。",
+        "发现活细胞中核小体聚集形成低迁移率染色质域。",
+        "揭示μ-阿片受体通路偏向性动态聚类及粘着斑非均匀分子扩散。"
+      ],
+      "translated_at": "2026-04-29T07:54:22.185883Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出基于深度学习的单帧扩散率成像新方法，大幅提升数据密度，无需轨迹连接，属全新实验与计算工具",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:41:23.694872Z"
+      }
+    },
+    {
+      "pmid": "42048389",
+      "title": "Bifurcation of neural firing patterns driven by potassium dynamics and neuron-electrode geometry during high-frequency stimulation.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Yuan Yue",
+        "Zhang Junyang",
+        "Wang Chen",
+        "Yan Hao",
+        "Zhang Ning",
+        "Zhang Kun",
+        "et al."
+      ],
+      "abstract": "High-frequency stimulation (HFS), the basis of deep brain stimulation, elicits diverse neuronal responses, yet the mechanisms remain unclear. Classical conduction block theories cite sodium channel inactivation and axonal failure but cannot explain the abrupt, reproducible firing transitions observed in vivo. Here, we combine single-unit recordings from rat CA1 neurons with a biophysically detailed multi-compartment model to examine how HFS shapes axonal excitability. The results show that neuronal responses are governed by two coupled factors: the electrode-axon geometry and peri-axonal extracellular potassium ([K⁺]o) dynamics. Small changes in either parameter reliably triggered bifurcation-like transitions between tonic, clustered, and low-rate regular firing. Conduction block preceded initiation failure with increasing electrode-axon distance, whereas elevated [K⁺]o shifted membranes between excitable and non-excitable states. This unified bifurcation framework extends the conduction block hypothesis, recasts axons as nonlinear elements, and provides mechanistic insights to optimize electrode placement, stimulation tuning, and closed-loop neuromodulation strategies.",
+      "doi": "10.1371/journal.pcbi.1014228",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014228",
+      "pub_date": "2026-Apr",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Rats",
+        "Models, Neurological",
+        "Potassium",
+        "Neurons",
+        "Action Potentials",
+        "Axons",
+        "Electric Stimulation",
+        "CA1 Region, Hippocampal",
+        "Electrodes"
+      ],
+      "abstract_zh": "高频刺激（HFS）是深部脑刺激的基础，可引发多样化的神经元反应，但其机制尚不清楚。经典的传导阻滞理论认为钠通道失活和轴突失效是原因，但无法解释在体内观察到的突然且可重复的放电转换。在此，我们将大鼠 CA1 神经元的单单位记录与生物物理详细的多室模型相结合，以研究 HFS 如何塑造轴突兴奋性。结果表明，神经元反应受两个耦合因素控制：电极-轴突几何形状和轴突周围细胞外钾离子（[K⁺]o）动态。任一参数的微小变化均可可靠地触发在紧张性、簇状和低速率规则放电之间的分岔样转换。随着电极-轴突距离的增加，传导阻滞先于起始失效出现，而升高的 [K⁺]o 使膜在可兴奋和非可兴奋状态之间切换。这一统一的分岔框架扩展了传导阻滞假说，将轴突重新定义为非线性元素，并为优化电极放置、刺激调谐和闭环神经调控策略提供了机制性见解。",
+      "key_findings": [
+        "电极-轴突几何与细胞外钾离子动态耦合控制高频刺激下神经元放电模式的分岔转换。",
+        "电极-轴突距离增加导致传导阻滞先于起始失效，而 [K⁺]o 升高使膜可兴奋性状态切换。",
+        "统一分岔框架将轴突视为非线性元素，为优化电极放置和刺激参数提供机制基础。"
+      ],
+      "translated_at": "2026-04-29T07:54:47.465667Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出耦合电极-轴突几何与钾动力学的分岔框架，可解释并预测高频刺激下放电模式转变，理论可迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:41:42.998664Z"
+      }
+    },
+    {
+      "pmid": "42047683",
+      "title": "Interrogating the structure and function of the human voltage-gated proton channel (hHv1) with a fluorescent noncanonical amino acid.",
+      "journal": "Elife",
+      "authors": [
+        "Carmona Emerson M",
+        "Zagotta William N",
+        "Gordon Sharona E"
+      ],
+      "abstract": "The human voltage-gated proton channel (hHv1) is a dimer of voltage-sensor domains (VSDs) containing highly selective proton permeation pathways in each monomer. In addition to voltage, hHv1 is regulated by other stimuli, including pH gradients, mechanical forces, and ligands, such as Zn2+. Aside from the VSDs, this membrane protein contains an N-terminal domain and a C-terminal coiled-coil domain (CC) formed between the monomers. To address the need for direct measurements of conformational rearrangements in hHv1, we developed a Förster resonance energy transfer (FRET) approach to measuring the conformational rearrangements in full-length hHv1 purified from E. coli. We used genetic code expansion (GCE) to generate a library of 14 full-length hHv1 constructs, each incorporating the fluorescent noncanonical amino acid acridon-2-ylalanine (Acd) at a different site throughout the various structural domains. Following the expression and purification of these hHv1-Acd proteins, we found that 12 sites yielded stable and functional proton-permeable channels. The fluorescence properties of Acd at each site showed small site-specific differences. Furthermore, we measured site-specific FRET efficiencies from tryptophan (Trp) and tyrosine (Tyr) to Acd in the hHv1-Acd proteins and found results consistent with correct folding in detergent micelles. Finally, the addition of Zn2+ produced reversible changes in FRET, with affected residues clustered on the intracellular side of the channel.",
+      "doi": "10.7554/eLife.110161",
+      "url": "https://doi.org/10.7554/eLife.110161",
+      "pub_date": "2026-Apr-28",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Ion Channels",
+        "Fluorescence Resonance Energy Transfer",
+        "Protein Conformation",
+        "Escherichia coli",
+        "Protons",
+        "Zinc",
+        "Amino Acids"
+      ],
+      "abstract_zh": "人类电压门控质子通道（hHv1）是电压传感器域（VSDs）的二聚体，每个单体含有高度选择性的质子通透途径。除电压外，hHv1还受到pH梯度、机械力及配体（如Zn2+）的调控。该膜蛋白除VSDs外，还包含N端结构域和单体间形成的C端卷曲螺旋结构域（CC）。为直接测量hHv1的构象重排，我们开发了一种基于福斯特共振能量转移（FRET）的方法，用于测量从大肠杆菌纯化的全长hHv1的构象变化。我们利用遗传密码扩展（GCE）技术构建了14种全长hHv1突变体文库，每种突变体在不同结构域位点掺入了荧光非天然氨基酸吖啶酮-2-基丙氨酸（Acd）。经表达和纯化，发现12个位点产生了稳定且有功能的质子通透通道。每个位点Acd的荧光特性显示出微小的位点特异性差异。我们还测量了hHv1-Acd蛋白中从色氨酸（Trp）和酪氨酸（Tyr）到Acd的位点特异性FRET效率，结果与去垢剂胶束中的正确折叠一致。最后，加入Zn2+引起了FRET的可逆变化，受影响的残基聚集在通道的胞内侧。",
+      "key_findings": [
+        "利用FRET与荧光非天然氨基酸Acd，实现了全长hHv1构象重排的直接测量。",
+        "构建14个位点特异性Acd突变体，其中12个保持功能并验证去垢剂胶束中正确折叠。",
+        "Zn2+引起FRET可逆变化，受影响残基位于通道胞内侧，揭示调控构象热点。"
+      ],
+      "translated_at": "2026-04-29T07:55:31.245977Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "建立了基于遗传密码扩展和FRET的通用策略，用于在纯化膜蛋白中定点引入荧光探针并检测构象变化，方法本身具有可迁移性。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:41:54.114429Z"
+      }
+    },
+    {
+      "pmid": "42049019",
+      "title": "Global genetic interaction network of a human cell maps conserved principles and informs functional interpretation of gene co-essentiality profiles.",
+      "journal": "Cell",
+      "authors": [
+        "Billmann Maximilian",
+        "Costanzo Michael",
+        "Zhang Xiang",
+        "Hassan Arshia Z",
+        "Rahman Mahfuzur",
+        "Brown Kevin R",
+        "et al."
+      ],
+      "abstract": "Deciphering how genes interact within human cells is essential for understanding their functional wiring and for developing targeted therapeutic strategies. In this study, we present a genome-scale map of genetic interactions in the human haploid cell line HAP1, based on CRISPR-based perturbation of ∼4 million gene pairs. The resulting network comprises ∼89,000 high-confidence gene-gene interactions, organizing genes into hierarchical modules corresponding to protein complexes and pathways, biological processes, and cellular compartments, mirroring principles observed in yeast and highlighting the functional architecture of a human cell. This large-scale genetic network complements the DepMap gene co-essentiality network by capturing unique functional information, uncovering roles of previously uncharacterized genes, and identifying molecular determinants of cancer-cell-line-specific genetic dependencies. This study presents a general data-driven strategy for systematically exploring the roles of genes and their functional connections in human cell lines.",
+      "doi": "10.1016/j.cell.2026.03.044",
+      "url": "https://doi.org/10.1016/j.cell.2026.03.044",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "解读人类细胞内基因如何相互作用，对于理解其功能连接以及开发靶向治疗策略至关重要。本研究中，我们展示了人类单倍体细胞系HAP1中基因组规模的遗传互作图谱，该图谱基于对约400万个基因对的CRISPR扰动。由此产生的网络包含约89,000个高置信度基因-基因互作，将基因组织成与蛋白质复合物和通路、生物过程及细胞区室相对应的层级模块，这反映了在酵母中观察到的原理，并突显了人类细胞的功能架构。这一大规模遗传网络通过捕获独特的功能信息，补充了DepMap基因共必需性网络，揭示了先前未表征基因的功能，并识别了癌细胞系特异性遗传依赖的分子决定因素。本研究提供了一种通用的数据驱动策略，用于系统探索人类细胞系中基因的作用及其功能连接。",
+      "key_findings": [
+        "绘制HAP1细胞约8.9万高置信遗传互作网络，层级模块对应蛋白复合物、通路与细胞区室。",
+        "网络捕获独特功能信息，揭示未表征基因角色及癌症细胞系特异性遗传依赖的分子决定因素。",
+        "建立通用数据驱动策略，系统探索人类细胞系基因功能及其功能连接。"
+      ],
+      "translated_at": "2026-04-29T07:56:14.745282Z"
+    },
+    {
+      "pmid": "42045226",
+      "title": "Proteome-wide prediction of the functional impact of missense variants with ProteoCast.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Abakarova Marina",
+        "Freiberger Maria Inés",
+        "Liehrmann Arnaud",
+        "Rera Michael",
+        "Laine Elodie"
+      ],
+      "abstract": "Dissecting the functional impact of genetic mutations is essential to advancing our understanding of genotype-phenotype relationships and identifying therapeutic targets. Despite progress in sequencing and genome editing technologies, proteome-wide mutation effect prediction remains challenging. Here we show that evolutionary information alone enables accurate prediction of mutation effects across entire proteomes. ProteoCast is a scalable and interpretable computational method that leverages protein sequence conservation to classify genetic variants and identify functionally important protein sites. We apply ProteoCast to the complete Drosophila melanogaster proteome (22,000 isoforms, 300 million mutations) and validate it against nearly 400,000 natural and experimental variants. It correctly classifies 85% of known lethal mutations as functionally impactful versus 13-18% of population variants. ProteoCast-guided genome editing experiments confirm these predictions. Moreover, ProteoCast successfully identifies functionally important protein modification sites and binding motifs. ProteoCast provides a publicly available resource and deployable pipeline for studying gene function and mutations in any organism.",
+      "doi": "10.1038/s41467-026-72140-1",
+      "url": "https://doi.org/10.1038/s41467-026-72140-1",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Drosophila melanogaster",
+        "Animals",
+        "Proteome",
+        "Mutation, Missense",
+        "Drosophila Proteins",
+        "Computational Biology",
+        "Gene Editing"
+      ],
+      "abstract_zh": "解析遗传突变的功能影响对于增进基因型-表型关系理解和识别治疗靶点至关重要。尽管测序和基因组编辑技术有所进步，但全蛋白质组范围的突变效应预测仍具挑战。本研究表明，仅凭进化信息即可在全蛋白质组中准确预测突变效应。ProteoCast 是一种可扩展、可解释的计算方法，利用蛋白质序列保守性对遗传变异进行分类并识别功能重要的蛋白质位点。我们将 ProteoCast 应用于完整的黑腹果蝇蛋白质组（22,000 种亚型，约 3 亿个突变），并用近 40 万个天然和实验变异进行验证。它正确将 85% 的已知致死突变归类为有功能影响，而群体变异仅 13–18%。ProteoCast 引导的基因组编辑实验证实了这些预测。此外，ProteoCast 成功识别了功能重要的蛋白质修饰位点和结合基序。ProteoCast 为任何生物体的基因功能和突变研究提供了公开可用的资源和可部署的分析流程。",
+      "key_findings": [
+        "ProteoCast 仅凭序列保守性即可在全蛋白质组范围准确预测突变功能影响。",
+        "ProteoCast 准确分类 85% 果蝇致死突变为功能性，显著高于群体变异的 13–18%。",
+        "ProteoCast 成功识别功能重要的蛋白质修饰位点和结合基序，并经实验验证。"
+      ],
+      "translated_at": "2026-04-29T07:57:10.897899Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出可解释、可扩展的进化信息驱动突变效应预测方法ProteoCast，适用于全蛋白质组，属新计算策略。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:43:14.179685Z"
+      }
+    },
+    {
+      "pmid": "42045209",
+      "title": "Nonergodicity and Simpson's paradox in neurocognitive dynamics of cognitive control.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Mistry Percy K",
+        "Branigan Nicholas K",
+        "Gao Zhiyao",
+        "Cai Weidong",
+        "Menon Vinod"
+      ],
+      "abstract": "Nonergodicity and Simpson's paradox present significant, yet underappreciated challenges in cognitive neuroscience. Leveraging brain imaging and behavioral data from over 4000 individuals and a Bayesian computational model of cognitive dynamics, we investigated brain-behavior relationships underlying cognitive control at both between-subjects and within-subjects levels. Strikingly, brain-behavior associations reversed across levels of analysis, revealing pervasive nonergodicity. Within-subjects analysis uncovered dissociated neural representations of reactive and proactive control and revealed that individuals who adaptively versus maladaptively regulated cognitive control exhibited distinct brain-behavior associations. Our findings demonstrate that between-subjects analyses can fundamentally mischaracterize within-individuals mechanisms, as group-level patterns not only disagreed with individual-level patterns but often reversed them. This work highlights the necessity of distinguishing between-subjects and within-subjects inferences in neuroscience, with implications for understanding cognitive mechanisms and designing personalized interventions.",
+      "doi": "10.1038/s41467-026-71404-0",
+      "url": "https://doi.org/10.1038/s41467-026-71404-0",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Cognition",
+        "Brain",
+        "Bayes Theorem",
+        "Male",
+        "Female",
+        "Adult",
+        "Magnetic Resonance Imaging",
+        "Young Adult",
+        "Cognitive Neuroscience"
+      ],
+      "abstract_zh": "非遍历性和辛普森悖论在认知神经科学中构成了重大但未得到充分认识的挑战。利用来自4000多名个体的脑成像和行为数据，以及认知动力学的贝叶斯计算模型，我们在被试间和被试内两个层面研究了认知控制背后的脑-行为关系。引人注目的是，脑-行为关联在不同分析层面上发生了逆转，揭示了普遍的非遍历性。被试内分析揭示了反应性控制和主动性控制的分离神经表征，并发现那些适应性与适应不良地调节认知控制的个体表现出不同的脑-行为关联。我们的发现表明，被试间分析可能从根本上错误描述个体内部机制，因为群体层面的模式不仅与个体层面的模式不一致，而且往往与之相反。这项研究强调了在神经科学中区分被试间推断和被试内推断的必要性，对于理解认知机制和设计个性化干预具有重要意义。",
+      "key_findings": [
+        "脑-行为关联在群体与个体层面发生逆转，揭示认知控制中普遍的非遍历性。",
+        "被试内分析分离了反应性与主动性控制的神经表征，且适应性与适应不良调控者展现出迥异的脑-行为关系。",
+        "群体层面推断会系统性错误描述个体内部认知机制，强调必须区分分析层面以理解机制和设计个性化干预。"
+      ],
+      "translated_at": "2026-04-29T07:57:34.739779Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "揭示组间与个体内分析因非遍历性产生反转，提出必须区分层级的新方法论要求",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:43:29.765736Z"
+      }
+    },
+    {
+      "pmid": "42044170",
+      "title": "Polyphosphate modulates the stress-responsive formation of functional RNA-protein condensates in bacteria and mammalian cells.",
+      "journal": "PLoS Biol",
+      "authors": [
+        "Guan Jian",
+        "Hurto Rebecca Lee",
+        "Rai Akash",
+        "Bhattrai Janakraj",
+        "Azaldegui Christopher A",
+        "Ortiz-Rodríguez Luis A",
+        "et al."
+      ],
+      "abstract": "Uncovering what drives select biomolecules to form phase-separated condensates in vivo and identifying their physiological significance are topics of fundamental importance. Here, we show that nitrogen-starved Escherichia coli produces long-chain polyphosphates, which scaffold the RNA chaperone Hfq into high molecular weight complexes, which eventually phase separate together with components of the RNA translation and processing machinery. The presence of polyphosphate within these condensates controls Hfq function by selectively stabilizing polyadenylated RNAs involved in transcription and protein translation and by promoting interactions with translation- and RNA-metabolism-associated proteins involved in de novo protein synthesis. Lack of polyphosphate significantly impairs condensate formation, increases cell death, and hinders recovery from N-starvation. In functional analogy, we demonstrate that polyP contributes specifically to the formation of Processing (P)-bodies in human cell lines, revealing that a single, highly conserved and ancestral polyanion serves as a modulator for functional phase-separated condensate formation across the tree of life.",
+      "doi": "10.1371/journal.pbio.3003775",
+      "url": "https://doi.org/10.1371/journal.pbio.3003775",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "揭示驱动特定生物分子在体内形成相分离凝聚物的因素及其生理意义是至关重要的问题。本研究发现，氮饥饿的大肠杆菌产生长链聚磷酸盐，作为RNA伴侣Hfq的支架，促使其形成高分子量复合物，并最终与RNA翻译和加工机器组分一起发生相分离。凝聚物中的聚磷酸盐通过选择性地稳定参与转录和蛋白质翻译的多聚腺苷酸化RNA，并促进与涉及全新蛋白质合成的翻译及RNA代谢相关蛋白的相互作用，来调控Hfq功能。缺乏聚磷酸盐会显著损害凝聚物形成，增加细胞死亡，并阻碍氮饥饿后的恢复。功能类比显示，聚磷酸盐特异地促进人细胞系中加工小体（P-body）的形成，揭示了一种单一、高度保守的祖先多聚阴离子充当跨生命树功能性相分离凝聚物形成的调节因子。",
+      "key_findings": [
+        "氮饥饿大肠杆菌产生的长链聚磷酸盐作为支架，诱导Hfq与翻译和RNA代谢组分发生相分离。",
+        "聚磷酸盐通过稳定多聚腺苷酸化RNA和招募翻译相关蛋白调控Hfq功能，缺失会损害恢复与存活。",
+        "人细胞中聚磷酸盐特异地促进P-body形成，表明其为跨生命树保守的相分离调控因子。"
+      ],
+      "translated_at": "2026-04-29T07:57:55.744193Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示了聚磷酸盐作为保守聚阴离子在相分离凝聚体形成中的调控作用，具有跨物种的机制普适性和演化启发性。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:44:09.127020Z"
+      }
+    },
+    {
+      "pmid": "42044154",
+      "title": "Diversity in emergent cell locomotion from the coupling cytosolic and cortical Marangoni flows with reaction-diffusion dynamics.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Ivšić Blaž",
+        "Vulić Dorijan",
+        "Weber Igor",
+        "Nowakowski Piotr",
+        "Smith Ana-Sunčana"
+      ],
+      "abstract": "Cell migration is a fundamental process underlying the survival and function of both unicellular and multicellular organisms. Crawling motility in eukaryotic cells arises from cyclic protrusion and retraction driven by the cytoskeleton, whose organization is regulated by reaction-diffusion (RD) dynamics of Rho GTPases between the cytosol and the cortex. These dynamics generate spatial membrane patterning and establish front-rear polarity through the coupling of biochemical signalling and mechanical feedback. We develop a cross-scale mean-field framework that integrates RD signalling with cytosolic and cortical hydrodynamics to capture the evolution of cell shapes and emergent cellular locomotion. Our model reproduces diverse experimentally observed shape and motility phenotypes with small parameter changes, indicating that these behaviours correspond to self-organized limit cycles. Phase-space analysis reveals that coupling to both cytosolic flow and spatially varying surface tension is essential to recover the full spectrum of motility modes, providing a theoretical foundation for understanding amoeboid migration.",
+      "doi": "10.1371/journal.pcbi.1014216",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014216",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "细胞迁移是单细胞和多细胞生物生存与功能的基础过程。真核细胞的爬行运动源于细胞骨架驱动的周期性突起与回缩，而细胞骨架的组织受到胞质与皮层之间Rho GTP酶反应-扩散（RD）动力学的调控。这些动力学通过生化信号与力学反馈的耦合，产生空间膜模式化并建立前-后极性。我们构建了一个跨尺度平均场框架，将RD信号与胞质及皮层流体动力学相结合，以捕捉细胞形态的演化和涌现的细胞运动。该模型仅需微小的参数变化便能重现实验中观察到的多种形态与运动表型，表明这些行为对应于自组织极限环。相空间分析揭示，同时耦合胞质流动和空间变化的表面张力对于恢复完整运动模式谱至关重要，为理解阿米巴样迁移提供了理论基础。",
+      "key_findings": [
+        "开发了整合反应-扩散信号与胞质及皮层流体动力学的跨尺度平均场框架。",
+        "模型通过微小参数变化重现多种运动与形态表型，揭示自组织极限环机制。",
+        "发现胞质流动和空间变化表面张力的耦合是重现完整运动模式谱的必要条件。"
+      ],
+      "translated_at": "2026-04-29T07:58:18.889879Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出跨尺度平均场框架，耦合反应扩散与流体动力学，捕捉细胞迁移的涌现行为，具有理论方法论价值",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:44:22.086582Z"
+      }
+    },
+    {
+      "pmid": "42044152",
+      "title": "STARCall integrates image stitching, alignment, and read calling to enable scalable analysis of in situ sequencing data.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Bradley Nicholas J",
+        "Pendyala Sriram",
+        "Partington Katie",
+        "Fowler Douglas M"
+      ],
+      "abstract": "Fluorescent in situ sequencing involves imaging-based sequencing by synthesis in intact cells or tissues to reveal target nucleotide sequences inside each cell. Often, the target sequences are barcodes that indicate a perturbation (e.g., CRISPR guide or genetic variant) delivered to the cell. However, processing in situ sequencing data presents a considerable challenge, requiring stitching and aligning tens of thousands of images with millions of cells, detecting small amplicon colonies across sequencing cycles, and calling reads. To address these challenges, we introduce STARCall: STitching, Alignment and Read Calling for in situ sequencing, a software package that analyzes raw in situ sequencing images to produce a genotype-to-phenotype mapping for each cell. STARCall improves upon previous solutions by combining stitching and alignment of images into a single step that minimizes both inter-cycle and intra-cycle alignment error. STARCall also improves detection and extraction of sequencing reads, incorporating filters and normalization to combat background fluorophore signal. We compare STARCall to other methods using a diverse set of images that include commonly encountered imaging problems such as variable intensity across channels and cycles and high levels of background. Specifically, this comprises ~250,000 images from a pooled screen of ~3,500 barcoded LMNA variants expressed in U2OS cells and ~1,200 barcoded PTEN variants in induced pluripotent stem cells (iPSC) and iPSC-derived neurons. Overall, STARCall aligned more than 50% of tiles with <1 pixel residual misalignment on all nine image sets, outperforming alternative packages by 14-35%. STARCall also yielded an 8-40% increase in genotyped cells due to improved filtering and normalization methods that address background fluorescence. STARCall can call tools like CellPose to segment cells and CellProfiler to compute cell features from the phenotyping images. STARcall is open-source and freely available, providing a robust solution for the analysis of in situ sequencing data.",
+      "doi": "10.1371/journal.pcbi.1013689",
+      "url": "https://doi.org/10.1371/journal.pcbi.1013689",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "荧光原位测序通过对完整细胞或组织进行基于成像的合成测序，揭示每个细胞内的靶核苷酸序列。这些靶序列通常是条形码，用于指示递送到细胞中的扰动（例如 CRISPR 引导序列或遗传变异）。然而，处理原位测序数据面临巨大挑战，需要拼接和对齐数以万计、包含数百万细胞的图像，跨测序周期检测小型扩增子集落，并识别读段。为解决这些问题，我们推出了 STARCall（原位测序的拼接、对齐与读段识别）软件包，它分析原始原位测序图像，为每个细胞生成基因型到表型的映射。STARCall 通过将图像拼接和对齐合并为单个步骤，最大限度减少了周期间和周期内的对齐误差，改进了先前的方法。STARCall 还改进了测序读段的检测与提取，引入滤波和归一化来抑制背景荧光。我们使用包含通道和周期间强度变化及高背景等常见问题的多样化图像集，将 STARCall 与其他方法进行了比较，具体包括约 250,000 张图像，来自在 U2OS 细胞中表达的约 3,500 个条形码 LMNA 变体，以及在诱导多能干细胞（iPSC）及其衍生神经元中表达的约 1,200 个条形码 PTEN 变体的混合筛选。在所有九个图像集上，STARCall 将超过 50% 的拼块对齐到残余偏差小于 1 像素，优于其他软件包 14–35%。得益于处理背景荧光的改进滤波和归一化方法，STARCall 使成功进行基因分型的细胞数提高了 8–40%。STARCall 可以调用 CellPose 进行细胞分割，调用 CellProfiler 从表型图像中计算细胞特征。STARCall 是开源且免费提供的，为原位测序数据分析提供了稳健的解决方案。",
+      "key_findings": [
+        "STARCall将图像拼接与对齐整合为单一步骤，大幅降低周期内和周期间的对齐误差。",
+        "通过优化的滤波与归一化方法抑制背景荧光，基因分型细胞数提升8–40%。",
+        "在九个图像集上，STARCall拼块对齐精度（<1像素残差）优于其他方法14–35%。"
+      ],
+      "translated_at": "2026-04-29T07:59:04.496423Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出一站式原位测序图像处理软件STARCall，通过单步拼接对齐和改进过滤显著提升分析性能，属于新工具与方法。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:44:31.497578Z"
+      }
+    },
+    {
+      "pmid": "42044149",
+      "title": "Systems biology analysis of vasodynamics in mouse cerebral arterioles during resting state and functional hyperemia.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Esfandi Hadi",
+        "Javidan Mahshad",
+        "McGregor Eric R",
+        "Anderson Rozalyn M",
+        "Pashaie Ramin"
+      ],
+      "abstract": "Cerebral hemodynamics is tightly regulated by arteriolar vasodynamics. In this study, a systems biology approach was employed to investigate how the interplay between passive, myogenic, neurogenic, and astrocytic responses shapes arteriolar vasodynamics in small rodents. A model of neurovascular coupling is proposed in which neurons inhibit and dampen the myogenic response to promote vasodilation during activation, and facilitate the myogenic response to promote rapid vasoconstriction immediately post-activation. In this model, inhibition of the myogenic response is mediated by the hyperpolarization of smooth muscle and endothelial cells. Dampening and facilitation of the response are mediated by neuronal production of nitric oxide and release of neuropeptide Y, respectively. We also introduce a model for gliovascular coupling, in which astrocytes periodically inhibit the myogenic response upon detecting an increase in myogenic activity through interactions between their endfeet and arterioles. Our simulations suggest that in the resting state, delays in myogenic autoregulation can intrinsically generate low-frequency (∼0.1 Hz) oscillations in vessel diameter (vasomotion), in the absence of extrinsic neurogenic or systemic rhythmic inputs. In the active state, these oscillations are disrupted by the neurogenic and astrocytic responses. The biophysical model of arteriolar vasodynamics presented in this study lays the foundation for quantitative analysis of cerebral hemodynamics for cerebrovascular health diagnostics and hemodynamic neuroimaging.",
+      "doi": "10.1371/journal.pcbi.1013113",
+      "url": "https://doi.org/10.1371/journal.pcbi.1013113",
+      "pub_date": "2026-Apr-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "脑血流动力学由小动脉血管动力学紧密调控。本研究采用系统生物学方法，探究被动、肌源性、神经源性和星形胶质细胞反应之间的相互作用如何塑造小啮齿动物的小动脉血管动力学。提出了一种神经血管耦合模型，其中神经元在激活期间抑制并减弱肌源性反应以促进血管舒张，并在激活后立即促进肌源性反应以实现快速血管收缩。该模型中，肌源性反应的抑制由平滑肌和内皮细胞的超极化介导，反应的减弱和促进分别由神经元产生的一氧化氮和释放神经肽Y介导。我们还引入了胶质血管耦合模型，其中星形胶质细胞通过其终足与小动脉的相互作用，在检测到肌源性活动增加时周期性抑制肌源性反应。我们的模拟表明，在静息状态下，肌源性自动调节的延迟可内在产生约0.1 Hz的低频血管直径振荡（血管运动），无需外源性神经或系统性节律输入。在活跃状态下，这些振荡被神经源性和星形胶质细胞反应打乱。本研究提出的小动脉血管动力学生物物理模型为脑血管健康诊断和血流动力学神经影像的定量分析奠定了基础。",
+      "key_findings": [
+        "提出神经血管耦合模型：神经元通过一氧化氮和神经肽Y分别减弱和促进肌源性反应，调控激活时的血管舒缩。",
+        "提出胶质血管耦合模型：星形胶质细胞通过终足感知肌源性活动增强并周期性抑制该反应。",
+        "模拟揭示静息状态下肌源性自动调节延迟可自发产生约0.1 Hz血管运动振荡，激活时被神经胶质反应打乱。"
+      ],
+      "translated_at": "2026-04-29T07:59:33.422334Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "提出神经/胶质血管耦合的新模型，解析肌源性自调节与振荡生成的整合机制，具有概念创新和可迁移的系统生物学框架潜力。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:44:46.218185Z"
+      }
+    },
     {
       "pmid": "42034621",
       "title": "Engineered conductive pili enable high-efficiency photosynthetic electron extraction in biophotovoltaics.",
@@ -31,7 +406,14 @@
         "该界面协同增强界面电荷转移与生物膜密度，使光电流密度提升4倍，金用量降低两个数量级",
         "AuNPs可从失活细胞转移至新鲜细胞实现再利用，为生物光伏系统长期稳定性提供潜在途径"
       ],
-      "translated_at": "2026-04-27T08:15:33.042541Z"
+      "translated_at": "2026-04-27T08:15:33.042541Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出遗传编码金结合肽靶向组装导电界面的通用策略，显著提升电子提取效率且可跨系统迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:44:58.073719Z"
+      }
     },
     {
       "pmid": "42034054",
@@ -57,7 +439,14 @@
         "预测逾4亿个酿酒酵母三基因相互作用，极大拓展定量遗传相互作用图谱",
         "整合蛋白质嵌入与不确定性估计，揭示细胞生长机制并作为跨条件遗传标记"
       ],
-      "translated_at": "2026-04-27T08:16:08.185682Z"
+      "translated_at": "2026-04-27T08:16:08.185682Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出基于自注意力超图神经网络预测高阶遗传交互的新方法，方法本身具有普适性，非单纯案例应用。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:45:05.471984Z"
+      }
     },
     {
       "pmid": "42034052",
@@ -86,7 +475,14 @@
         "在临床前模型中降低系统氨水平达10倍，恢复BCAA与谷氨酰胺平衡，改善焦虑与认知行为，疗效优于利福昔明。",
         "建立工程化共生菌作为模块化、响应性平台，实现宿主-微生物群代谢的多重调控，为肠-肝-脑轴疾病提供可编程治疗策略。"
       ],
-      "translated_at": "2026-04-27T08:16:30.597433Z"
+      "translated_at": "2026-04-27T08:16:30.597433Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出工程化共生菌的模块化平台，实现多代谢物调节，为肠道-肝脏-大脑轴紊乱提供可编程策略。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:45:23.016135Z"
+      }
     },
     {
       "pmid": "42032097",
@@ -115,7 +511,14 @@
         "trans-ATHtmA7的去丙二酰化活性促进ACP循环，确保模块内聚酮链高效转移",
         "揭示保守KS0-ACP结合模式及非延伸模块对中间体的严格识别，维持生物合成保真度"
       ],
-      "translated_at": "2026-04-27T08:16:59.670928Z"
+      "translated_at": "2026-04-27T08:16:59.670928Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示trans-AT PKS中不依赖缩合的非延伸模块内链转位新机制，概念新颖且可能普适适用于聚酮工程。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:45:33.325008Z"
+      }
     },
     {
       "pmid": "42032066",
@@ -144,7 +547,14 @@
         "消除了蓝光诱导的非期望光开关，实现了与光遗传学及双色成像的完全兼容",
         "在体外和体内均显示无毒性或聚集，支持从单光子到双光子的多种成像模态"
       ],
-      "translated_at": "2026-04-27T08:17:39.534487Z"
+      "translated_at": "2026-04-27T08:17:39.534487Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发新型红色钙传感器PinkyCaMP，基于mScarlet提升亮度与光稳定性，具备普适成像工具价值。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:45:44.421075Z"
+      }
     },
     {
       "pmid": "42031729",
@@ -173,36 +583,14 @@
         "发现KRAB-L3MBTL3融合蛋白可扩展靶向窗口并增强剂量受限条件下的基因沉默效率",
         "揭示DNA甲基化修饰因子通过特定组合分别驱动表观遗传记忆的长期抑制与激活"
       ],
-      "translated_at": "2026-04-27T08:18:22.491855Z"
-    },
-    {
-      "pmid": "42031713",
-      "title": "Intrinsic edge dislocations promote high-temperature strength and ductility in additively manufactured refractory high-entropy alloys.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Guo Chunhuan",
-        "Jiao Bo",
-        "Jiang Fengchun",
-        "Chen Wei",
-        "Wang Wenyuan",
-        "Zhang Cheng",
-        "et al."
-      ],
-      "abstract": "Refractory high-entropy alloys (RHEAs) hold promise for applications in extreme environments. However, conventional as-cast RHEAs are constrained by the trade-off between strength and ductility, necessitating time- and energy-intensive post-processing. Here, we propose a streamlined strategy to fabricate RHEAs via laser directed energy deposition (LDED) using elemental powder blends, eliminating the need for post heat treatments. The additively manufactured (AMed) Nb40Ta25Ti15Hf15Zr5 alloy, characterized by a high density of intrinsic edge dislocations introduced during the thermal cycling of the process, demonstrates a remarkable tensile strength of ~497.3 MPa and a uniform elongation of ~6.8 % at 1000 °C, representing a ~ 37.8% and ~61.9% increase, respectively, over its as-cast counterparts. It is found that the intrinsic edge dislocations generated during AM process significantly enhances the alloy's strain hardening capability at elevated temperatures. Simultaneously, the high density of edge dislocations effectively enhance material deformability through kink band formation and the stochastic nature of dislocation motion. This work presents a cost-effective pathway for the rapid fabrication of AMed RHEAs with an exceptional combination of high-temperature strength and ductility, paving the way for next-generation structural alloys in extreme environments.",
-      "doi": "10.1038/s41467-026-71995-8",
-      "url": "https://doi.org/10.1038/s41467-026-71995-8",
-      "pub_date": "2026-Apr-24",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "难熔高熵合金(RHEAs)在极端环境应用中具有广阔前景。然而，传统铸态RHEAs受限于强度与延展性的权衡，需要耗时耗能的后处理。本研究提出一种简化策略，通过激光定向能量沉积(LDED)利用元素粉末混合物直接制备RHEAs，无需后续热处理。增材制造(AM)的Nb40Ta25Ti15Hf15Zr5合金在工艺热循环过程中引入了高密度内在刃位错，在1000°C下展现出约497.3 MPa的拉伸强度和约6.8%的均匀延伸率，较铸态合金分别提升约37.8%和61.9%。研究发现，增材制造过程中产生的内在刃位错显著增强了合金在高温下的应变硬化能力。同时，高密度刃位错通过扭折带形成及位错运动的随机性有效提升了材料变形能力。本工作为快速制备兼具高温强度与延展性的增材制造RHEAs提供了一条经济高效的途径，为下一代极端环境结构合金的发展铺平了道路。",
-      "key_findings": [
-        "采用激光定向能量沉积工艺制备的Nb40Ta25Ti15Hf15Zr5合金在1000°C下展现出优异的高温强度和延展性，性能远超铸态合金",
-        "增材制造热循环过程中引入的高密度内在刃位错显著提升了合金在高温环境下的应变硬化能力",
-        "刃位错通过形成扭折带和随机位错运动机制有效增强了材料在高温条件下的变形能力"
-      ],
-      "translated_at": "2026-04-27T08:19:03.873474Z"
+      "translated_at": "2026-04-27T08:18:22.491855Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出高通量组合域筛选平台COMBINE，系统解析表观遗传域互作，可推广用于组合生物过程功能表征。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:45:56.795293Z"
+      }
     },
     {
       "pmid": "42030398",
@@ -237,7 +625,14 @@
         "通过甲烷依赖性生长筛选，鉴定出甲烷氧化关键必需基因及此前未识别的新候选基因。",
         "基于筛选结果优化硝酸盐矿物盐培养基，显著提高了甲烷氧化菌以甲烷为底物的生物量产率。"
       ],
-      "translated_at": "2026-04-27T08:19:46.017199Z"
+      "translated_at": "2026-04-27T08:19:46.017199Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "首次在甲烷氧化菌中建立CRISPRi全基因组筛选平台，提供了可迁移的功能基因组学新工具。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:46:27.402058Z"
+      }
     },
     {
       "pmid": "42030367",
@@ -260,7 +655,14 @@
         "创建基于网络文件夹的虚拟环境技术，支持跨多核、超算及互联网环境的生物物理模型高效并行模拟。",
         "开发开源软件pNMS，不仅能复现多环境实验与模拟结果，还可预测细胞组织方式和肌肉长度对群体行为的影响。"
       ],
-      "translated_at": "2026-04-27T08:20:33.595011Z"
+      "translated_at": "2026-04-27T08:20:33.595011Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出了逆建模驱动群体自动构建与跨平台并行仿真的新方法论及开源软件pNMS，具可迁移性。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:46:34.617351Z"
+      }
     },
     {
       "pmid": "42029006",
@@ -298,7 +700,14 @@
         "轴丝相关基因富集在斑马鱼和人类前庭毛细胞中保守，表明共享的分子架构。",
         "免疫染色验证运动纤毛标志物表达，活细胞成像显示自发运动，提示动纤毛是主动的力量产生元件。"
       ],
-      "translated_at": "2026-04-27T08:21:19.072256Z"
+      "translated_at": "2026-04-27T08:21:19.072256Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示前庭动纤毛兼具初级纤毛与运动纤毛的分子特征和自发运动能力，具有明显概念新意和演化启发。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:46:44.018320Z"
+      }
     },
     {
       "pmid": "42027138",
@@ -327,7 +736,14 @@
         "利用智能手机图像的荧光颜色差异，实现二元抗生素混合物的快速可视化定量区分。",
         "建立可现场部署的检测平台，能测定传统化学分析常忽略的生物可利用抗生素组分。"
       ],
-      "translated_at": "2026-04-27T08:22:02.971129Z"
+      "translated_at": "2026-04-27T08:22:02.971129Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出多色细菌传感器新平台，利用荧光颜色差异和智能手机成像同时定量两种抗生素的生物可利用部分，方法可迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:47:43.833139Z"
+      }
     },
     {
       "pmid": "42018619",
@@ -365,7 +781,14 @@
         "实现异质机械信号的选择性捕获、同步放大与降噪，具备场景自适应调控能力",
         "集成无线传输与定制算法，实现MDA精准解码，拓展健康监测与人机交互应用"
       ],
-      "translated_at": "2026-04-27T08:22:44.973716Z"
+      "translated_at": "2026-04-27T08:22:44.973716Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出仿生超材料界面解码机械皮肤活动的新框架，兼具信号选择放大与噪声抑制，方法可迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:47:53.660491Z"
+      }
     },
     {
       "pmid": "42018616",
@@ -405,7 +828,57 @@
         "证明Aqp8a.1响应机械刺激插入质膜介导细胞收缩，驱动心脏环化与瓣膜形成。",
         "揭示Piezo1通过膜转运和Notch1b转录抑制双重机制精确调控Aqp8a.1水平。"
       ],
-      "translated_at": "2026-04-27T08:23:29.129366Z"
+      "translated_at": "2026-04-27T08:23:29.129366Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示机械力通过细胞体积液压调控驱动器官形态发生的新原理，具有可迁移的概念洞察",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:48:06.743200Z"
+      }
+    },
+    {
+      "pmid": "42049231",
+      "title": "Automated linear DNA assembly of A. thaliana's chloroplast and mitochondrial genome.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Zhou Jianting",
+        "Wang Xuyan",
+        "Zhou Longfei",
+        "Zhang Haoran",
+        "Ye Sheng",
+        "Yuan Ying-Jin"
+      ],
+      "abstract": "Synthetic genomics is advancing from microbial toward multicellular organisms. However, current manual methods for DNA and genome assembly remain inadequate for the efficient, large-scale production of long DNA constructs. Here, we present Programmed DNA Assembly via Cas9 and Conjugative Transfer (PACT), a method that integrates a linear vector system, bacterial conjugation, and programmable Cas9-mediated cleavage to achieve highly efficient, iterative assembly of large DNA fragments. PACT enhances assembly efficiency by ~30-fold compared to conventional circular vector strategies, enabling one-step assembly of DNA up to 80 kb. We engineered four single guide-RNA-Marker donor cassettes to support iterative assembly workflows. PACT can utilize low-recombination Escherichia coli strains as hosts to efficiently assemble Arabidopsis thaliana mitochondrial genome with high repeat units. Integrated with an automated robotic platform, we developed an unattended, high-throughput pipeline (aPACT) toward large-scale parallel DNA assembly. Using aPACT, we successfully assembled three large DNA constructs: a 210 kb digital DNA, the designed chloroplast (120 kb) and mitochondrial (350 kb) genome of A. thaliana. This automated system offers a powerful tool for scalable assembly of large DNA molecules, accelerating synthetic genomics research toward complex multicellular organisms.",
+      "doi": "10.1093/nar/gkag380",
+      "url": "https://doi.org/10.1093/nar/gkag380",
+      "pub_date": "2026-Apr-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Arabidopsis",
+        "Genome, Mitochondrial",
+        "Genome, Chloroplast",
+        "Escherichia coli",
+        "Genome, Plant",
+        "Synthetic Biology",
+        "CRISPR-Cas Systems"
+      ],
+      "abstract_zh": "合成基因组学正从微生物向多细胞生物发展。然而，目前用于DNA和基因组组装的人工方法在高效、大规模生产长链DNA构建体方面仍显不足。本文提出了通过Cas9和接合转移实现的程序化DNA组装方法（PACT），该方法整合了线性载体系统、细菌接合和可编程的Cas9介导切割，实现了大片段DNA的高效迭代组装。与传统环状载体策略相比，PACT的组装效率提高了约30倍，可一步组装长达80 kb的DNA。我们设计了四种单向导RNA-标记供体盒以支持迭代组装流程。PACT可利用低重组大肠杆菌菌株作为宿主，高效组装含有大量重复单元的拟南芥线粒体基因组。集成自动化机器人平台后，我们开发了一套无需值守的高通量流程（aPACT），用于大规模并行DNA组装。利用aPACT，我们成功组装了三个大型DNA构建体：一个210 kb的数字DNA，以及设计合成的拟南芥叶绿体基因组（120 kb）和线粒体基因组（350 kb）。该自动化系统为大型DNA分子的规模化组装提供了有力工具，加速了面向复杂多细胞生物的合成基因组学研究。",
+      "key_findings": [
+        "开发出PACT方法，将组装效率较传统方法提升约30倍，实现80 kb DNA一步组装。",
+        "利用PACT成功组装出含大量重复的拟南芥线粒体基因组，展示了处理高重复序列的能力。",
+        "构建自动化aPACT流程，完成了210 kb数字DNA及拟南芥叶绿体和线粒体基因组的无人值守组装。"
+      ],
+      "translated_at": "2026-04-29T07:59:51.029287Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出结合Cas9切割与接合转移的PACT方法，实现高效迭代组装大片段DNA并自动化，方法创新显著。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:48:19.331347Z"
+      }
     },
     {
       "pmid": "42033229",
@@ -445,7 +918,14 @@
         "ZIC2在多能性退出时结合远端增强子增加染色质可及性，在神经诱导阶段选择性激活预激增强子以维持神经前体特性",
         "通过调控WNT信号防止神经元过早分化，ZIC2依次作为预激转录因子和增强子激活因子引导多能细胞向头-背侧神经前体分化"
       ],
-      "translated_at": "2026-04-27T08:24:20.656251Z"
+      "translated_at": "2026-04-27T08:24:20.656251Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示了ZIC2在神经诱导中的双重转录因子角色，提供了可迁移的TF时序作用机制洞察。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:48:53.438510Z"
+      }
     },
     {
       "pmid": "42026173",
@@ -474,7 +954,14 @@
         "建立自下而上框架，获得可定制化的人工光开关-蛋白结合物对，实现激酶信号、GPCR等多种细胞活动的精准光控",
         "通过调节光输入即可编程设定持续、可逆或可重复等多种调控模式"
       ],
-      "translated_at": "2026-04-27T08:26:17.703227Z"
+      "translated_at": "2026-04-27T08:26:17.703227Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出从头设计化学光遗传学工具的新范式，实现光开关分子与人工蛋白结合对的可编程调控。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:49:01.442779Z"
+      }
     },
     {
       "pmid": "42026131",
@@ -503,63 +990,14 @@
         "发现该系统在所有测试物种中均具功能，其中6种效率>20%，3种>40%，2种>90%",
         "通过改造recombitron架构、操纵子及菌株背景，可实现物种特异性的编辑效率优化"
       ],
-      "translated_at": "2026-04-27T08:27:15.319468Z"
-    },
-    {
-      "pmid": "42026043",
-      "title": "Spatiotemporal asymmetries on brain energy landscape uncover system entrapment related to depression severity.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Kilic B Ülgen",
-        "Jubeir Jenna",
-        "Balchandani Priti",
-        "Murrough James W",
-        "Morris Laurel S",
-        "Jacob Yael"
-      ],
-      "abstract": "Large-scale brain activity at rest is thought to wander among a discrete set of attractor-like functional configurations shaped by underlying structural connections, yet how state-transitions are perturbed in major depressive disorder remains unknown. Here, we integrate resting-state functional imaging and diffusion-weighted structural connectivity in individuals with and without major depressive disorder to identify stable, recurring whole-brain coactivation patterns. More frequent and shorter-lived visits to a prominent salience-dominated configuration are associated with anhedonia in depression. Moreover, reduced state transitions between visual-attentional and limbic-default mode configurations are associated with greater depressive symptom severity, indicative of cognitive rigidity, and reflected as a transition preference for energetically costly trajectories despite structurally facilitated alternatives. Our findings show that the alterations in dynamic properties, transition frequencies, and energetic asymmetries define an imbalanced state-transition landscape in which the depressed brain becomes trapped between source- and sink-like attractors, providing a mechanistic interpretation of aberrant state trajectories in depression.",
-      "doi": "10.1038/s41467-026-71961-4",
-      "url": "https://doi.org/10.1038/s41467-026-71961-4",
-      "pub_date": "2026-Apr-23",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "静息态大规模脑活动被认为在由潜在结构连接塑造的离散类吸引子功能构型间游走，但重度抑郁症（major depressive disorder, MDD）中状态转换如何受到扰动仍不清楚。本研究整合静息态功能成像与弥散加权结构连接，在患有和未患有重度抑郁症的个体中识别稳定且重复出现的全脑共激活模式。更频繁且短暂地访问以显著性网络（salience network）为主导的构型与抑郁症中的快感缺失（anhedonia）相关。此外，视觉-注意与边缘-默认模式构型间的状态转换减少与更严重的抑郁症状相关，表明认知僵化，并表现为尽管存在结构便利的替代路径，但仍偏好能量成本较高的轨迹。我们的发现表明，动态特性、转换频率和能量不对称性的改变定义了一个失衡的状态转换景观，其中抑郁大脑被困在源型和汇型吸引子（source- and sink-like attractors）之间，为抑郁症中异常状态轨迹提供了机制性解释。",
-      "key_findings": [
-        "抑郁症患者更频繁且短暂地访问显著性主导脑功能构型，与快感缺失症状密切相关",
-        "视觉-注意与边缘-默认模式网络间状态转换减少与症状严重程度相关，反映认知僵化特征",
-        "抑郁大脑在能量景观中陷入源-汇型吸引子间的俘获状态，表现为高能耗轨迹偏好"
-      ],
-      "translated_at": "2026-04-27T08:28:19.708513Z"
-    },
-    {
-      "pmid": "42025218",
-      "title": "Yeast MoClo Secretion and Surface Display Toolkit 2.0: Improvements and Applications for Analysis of protein-protein Interactions and Whole-Cell Biocatalysis.",
-      "journal": "ACS Synth Biol",
-      "authors": [
-        "Jurić Vanja",
-        "Erwin Leah G",
-        "O'Riordan Nicola M",
-        "Maher Eamonn",
-        "Holmes Justin D",
-        "Young Paul W"
-      ],
-      "abstract": "Saccharomyces cerevisiae is an invaluable model organism for both fundamental biological research and biotechnological applications including recombinant protein production as well as protein and metabolic engineering. We previously developed a modular cloning (MoClo) based toolkit for S. cerevisiae that facilitates rapid optimization of signal peptides and anchor proteins for efficient secretion and/or surface display of heterologous proteins of interest. Here we describe further improvements and applications of this MoClo yeast secretion and display (MoClo YSD) toolkit. New parts encoding anchor proteins based on N-terminal fusion to a truncated Aga1 and C-terminal fusion to Aga2, each with three possible epitope tag options, are described. We also added parts that facilitate high throughput detection of secreted proteins of interest through GFP fluorescence complementation and parts encoding \"secretion boosting\" yeast proteins, whose overexpression has previously been reported to enhance secretion of heterologous proteins. In addition, two surface display applications of the toolkit are showcased. We demonstrate that yeast surface display of an anti-GFP nanobody allows cost-effective evaluation of the interactions of GFP-tagged proteins of interest, either by flow cytometry or yeast-based coimmunoprecipitation. In addition, using yeast cells as whole-cell catalysts, we show that codisplay of the poly(ethylene terephthalate) (PET) degrading enzyme leaf-branch compost cutinase with hydrophobin1 enhances the breakdown of PET plastic, while triple codisplay of these proteins with MHETase causes complete conversion of the intermediary monohydroxy-ethyl-terephthalate (MHET) to terephthalic acid. The diverse applications described herein demonstrate the broad applications of the updated MoClo YSD toolkit 2.0 in both synthetic biology and other research fields.",
-      "doi": "10.1021/acssynbio.6c00085",
-      "url": "https://doi.org/10.1021/acssynbio.6c00085",
-      "pub_date": "2026-Apr-23",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "酿酒酵母是基础生物学研究和生物技术应用（包括重组蛋白生产以及蛋白和代谢工程）中极其宝贵的模式生物。我们此前开发了一种基于模块化克隆（MoClo）的酿酒酵母工具包，可促进信号肽和锚定蛋白的快速优化，以高效分泌和/或表面展示目标异源蛋白。本文描述了该MoClo酵母分泌与展示（MoClo YSD）工具包的进一步改进和应用。我们介绍了编码新型锚定蛋白的部件：基于N端与截短Aga1融合以及C端与Aga2融合的锚定蛋白，每种均提供三种可选的表位标签。我们还添加了可通过GFP荧光互补实现目标分泌蛋白高通量检测的部件，以及编码\"分泌增强\"酵母蛋白的部件——此前报道称过表达这些蛋白可增强异源蛋白分泌。此外，本文展示了该工具包在表面展示方面的两项应用。我们证明，酵母表面展示抗GFP纳米抗体可通过流式细胞术或基于酵母的免疫共沉淀，对GFP标记的目标蛋白相互作用进行成本效益评估。此外，以酵母细胞作为全细胞催化剂，我们展示了聚对苯二甲酸乙二醇酯（PET）降解酶——叶枝堆肥角质酶与疏水蛋白1的共展示可增强PET塑料的分解，而这两种蛋白与MHETase的三重共展示则可将中间产物单羟基乙基对苯二甲酸酯（MHET）完全转化为对苯二甲酸。本文所述的多样化应用展示了升级版MoClo YSD工具包2.0在合成生物学及其他研究领域的广泛应用前景。",
-      "key_findings": [
-        "开发新型锚定蛋白模块（N端截短Aga1/C端Aga2）及分泌增强元件，拓展工具包功能",
-        "建立基于抗GFP纳米抗体表面展示的低成本蛋白互作分析平台，支持流式细胞术与免疫共沉淀",
-        "构建多酶共展示全细胞催化剂，实现PET塑料高效降解及中间产物MHET完全转化为对苯二甲酸"
-      ],
-      "translated_at": "2026-04-27T08:29:26.993634Z"
+      "translated_at": "2026-04-27T08:27:15.319468Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "将retron重组工程扩展至跨门15种细菌，验证可移植性并提供物种适应性优化，是基因组编辑方法的普适性创新。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:49:12.877705Z"
+      }
     },
     {
       "pmid": "42024763",
@@ -599,7 +1037,14 @@
         "机械力通过降低组蛋白甲基化和染色质压缩影响增殖相关基因可及性",
         "Nesprin-2是感知机械负荷并介导心脏抗癌效应的关键机械传感器"
       ],
-      "translated_at": "2026-04-27T08:30:11.860516Z"
+      "translated_at": "2026-04-27T08:30:11.860516Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示机械负荷通过染色质重塑抑制心肌癌细胞增殖的新机制，概念新颖，启示机械刺激抗癌策略。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:49:52.620065Z"
+      }
     },
     {
       "pmid": "42020373",
@@ -639,7 +1084,14 @@
         "敲除TBL/R1导致β细胞丢失、多激素细胞出现及成熟度下降，引发进行性高血糖",
         "揭示TBL/R1通过PAX6-HDAC3网络直接调控胰岛素启动子，在人类模型中得到验证"
       ],
-      "translated_at": "2026-04-27T08:31:05.123720Z"
+      "translated_at": "2026-04-27T08:31:05.123720Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现TBL/R1通过PAX6-HDAC3网络协调基因激活与抑制的新调控逻辑，具有机制普遍性启发意义。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:50:33.133732Z"
+      }
     },
     {
       "pmid": "42025162",
@@ -665,7 +1117,14 @@
         "实验验证：少量化学神经元及中等反应速率即可实现多稳态、振荡与混沌等生物关键动态特征。",
         "技术实现：证实RNCRN可通过DNA链置换技术实验构建，为合成生物学提供可实施分子方案。"
       ],
-      "translated_at": "2026-04-27T08:31:44.209043Z"
+      "translated_at": "2026-04-27T08:31:44.209043Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出可近似任意动力学的循环化学神经网络框架，兼具理论可训练性与DNA链置换实验可行性，方法通用。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:50:41.823071Z"
+      }
     },
     {
       "pmid": "42020773",
@@ -694,36 +1153,14 @@
         "...",
         "..."
       ],
-      "translated_at": "2026-04-27T08:33:04.249199Z"
-    },
-    {
-      "pmid": "42020735",
-      "title": "A pro-carcinogenic bacterial toxin binds claudin-4 to cleave E-cadherin.",
-      "journal": "Nature",
-      "authors": [
-        "White Maxwell T",
-        "Wang Kang",
-        "Zhang Hailong",
-        "Eckhard Ulrich",
-        "Hullahalli Karthik",
-        "Chen Jason",
-        "et al."
-      ],
-      "abstract": "The human colon is colonized by trillions of bacteria that play substantial roles in human health and disease1. Epidemiological and experimental studies suggest that certain colonic bacteria can stimulate the development and progression of colorectal cancer2. One such bacterium, enterotoxigenic Bacteroides fragilis, drives colon tumour formation through the action of a single toxin, the B. fragilis toxin (BFT)3,4. BFT is a metalloprotease that binds to a colonic epithelial cell receptor and causes cleavage of the E-cadherin ectodomain, leading to epithelial barrier disruption, inflammation and increased cellular proliferation4-6. However, the identity of the BFT receptor is unknown and the molecular mechanism of BFT-initiated E-cadherin cleavage is not well understood. Here we identify claudin-4 as a BFT receptor through a genome-wide CRISPR screen and demonstrate that claudin-4 binding promotes BFT-mediated cleavage of cell surface E-cadherin. Our work both sheds light on BFT's mechanism of action and opens avenues for the development of anti-BFT therapies, which may prove useful for colorectal cancer prevention and treatment of acute enterotoxigenic B. fragilis infection.",
-      "doi": "10.1038/s41586-026-10375-0",
-      "url": "https://doi.org/10.1038/s41586-026-10375-0",
-      "pub_date": "2026-Apr-22",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "人体结肠定植着数万亿细菌，在人类健康和疾病中发挥重要作用。流行病学和实验研究表明，某些结肠细菌可促进结直肠癌的发生发展。其中，产肠毒素脆弱拟杆菌（enterotoxigenic Bacteroides fragilis）通过其单一毒素——脆弱拟杆菌毒素（BFT）驱动结肠肿瘤形成。BFT是一种金属蛋白酶，可结合结肠上皮细胞受体并导致E-钙粘蛋白（E-cadherin）胞外域切割，引起上皮屏障破坏、炎症和细胞增殖增加。然而，BFT受体身份未知，且BFT启动E-cadherin切割的分子机制尚不清楚。本研究通过全基因组CRISPR（成簇规律间隔短回文重复序列）筛选鉴定claudin-4为BFT受体，并证明claudin-4结合促进BFT介导的细胞表面E-cadherin切割。该工作不仅阐明了BFT的作用机制，也为开发抗BFT疗法开辟了新途径，可能对结直肠癌预防和急性产肠毒素脆弱拟杆菌感染治疗具有重要价值。",
-      "key_findings": [
-        "通过全基因组CRISPR筛选鉴定claudin-4是BFT毒素的受体蛋白",
-        "阐明claudin-4结合促进BFT介导细胞表面E-cadherin切割的分子机制",
-        "为结直肠癌预防和急性感染治疗提供抗BFT疗法开发新策略"
-      ],
-      "translated_at": "2026-04-27T08:33:59.874700Z"
+      "translated_at": "2026-04-27T08:33:04.249199Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出了可推广的多色抗原稳定化纳米抗体合成平台，实现背景自由、多色、功能成像等新能力。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:50:58.131370Z"
+      }
     },
     {
       "pmid": "42020444",
@@ -760,7 +1197,14 @@
         "ST6GALNAC1严格选择性催化MUC1的T13位点α-2-6唾液酸化，解释肿瘤sTn抗原上调机制",
         "建立体外一锅式合成生物学平台，系统解析酶空间定位与底物特异性对肿瘤糖基化的调控规律"
       ],
-      "translated_at": "2026-04-27T08:34:45.519490Z"
+      "translated_at": "2026-04-27T08:34:45.519490Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出体外模拟分叉糖基化通路的方法框架，结合动力学与计算模拟解码肿瘤相关糖基化机制，方法可迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:51:30.794895Z"
+      }
     },
     {
       "pmid": "42020421",
@@ -788,7 +1232,14 @@
         "机器学习模型识别出质粒编码蛋白结构域为预测拷贝数的关键决定因子",
         "大规模分析揭示生态位特异性PCN热点及抗生素耐药基因分布规律"
       ],
-      "translated_at": "2026-04-27T08:35:15.019072Z"
+      "translated_at": "2026-04-27T08:35:15.019072Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "整合理论与机器学习构建质粒拷贝数预测框架，揭示关键决定因子，方法可迁移至多种组学场景。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:51:39.424699Z"
+      }
     },
     {
       "pmid": "42018599",
@@ -815,7 +1266,14 @@
         "IFN产量在中等DIP比例时达到峰值，反映早期免疫激活与充分共感染之间的权衡关系",
         "少量长距离扩散即可介导病毒逃逸免疫控制，引发更强抗病毒反应但更早的病毒释放峰值"
       ],
-      "translated_at": "2026-04-27T08:35:43.314119Z"
+      "translated_at": "2026-04-27T08:35:43.314119Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了整合病毒-DIP-IFN的空间随机模型与交互平台，属于新模拟框架与工具，具有方法学创新和可迁移性。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:51:51.456569Z"
+      }
     },
     {
       "pmid": "42018576",
@@ -833,14 +1291,34 @@
       "abstract": "Computational models of macromolecules have many applications in biochemistry, but physical inaccuracies limit their utility. One class of models uses energy functions rooted in classical mechanics. The standard datasets used to train these models are limited in diversity, pointing to a need for new training data. Here, we sought to explore a new paradigm for training an energy function, where the Rosetta energy function was used to design de novo proteins. Experimental results on these designs were then used to identify failure modes of design, which were subsequently used as a \"guiding principle\" to retrain the energy function. Specifically, we examined a diverse set of de novo protein designs experimentally tested for their ability to stably fold, identifying unstable designs that were predicted to be stable by the Rosetta energy function. Using deep mutational scanning, we identified single amino-acid mutations that rescued the stability of these designs, providing insight into common failure modes of the energy function. We identified one key failure mode, involving steric clashing in protein cores. We identified similar overpacking when using Rosetta to refine high-resolution protein crystal structures, quantified the degree of overpacking, and refit a small set of energy-function parameters to better recapitulate native-like packing. Following fitting, we largely eliminated the failure mode in the refinement task, while retaining performance on other benchmarks, resulting in an updated version of the Rosetta energy function. This work shows how learning from protein designs can guide energy-function development.",
       "doi": "10.1371/journal.pcbi.1014215",
       "url": "https://doi.org/10.1371/journal.pcbi.1014215",
-      "pub_date": "2026-Apr-22",
+      "pub_date": "2026-Apr",
       "pub_types": [
         "journal article"
       ],
-      "keywords": [],
-      "abstract_zh": null,
-      "key_findings": null,
-      "translated_at": null
+      "keywords": [
+        "Proteins",
+        "Computational Biology",
+        "Models, Molecular",
+        "Protein Conformation",
+        "Thermodynamics",
+        "Protein Engineering",
+        "Protein Folding",
+        "Mutation"
+      ],
+      "abstract_zh": "生物大分子计算模型在生物化学中应用广泛，但物理不准确性限制其效用。一类模型采用基于经典力学的能量函数，其训练数据集多样性有限，亟需新的训练数据。本文探索了一种能量函数训练新范式：利用Rosetta能量函数设计从头蛋白质，并根据这些设计的实验结果识别设计失败模式，再以此作为“指导原则”重新训练能量函数。我们检测了一系列经实验验证折叠稳定性的从头设计蛋白，发现了一些被Rosetta预测为稳定却实际不稳定的设计。通过深度突变扫描，我们鉴定出恢复这些设计稳定性的单氨基酸突变，从而揭示能量函数的常见失败模式。我们发现一个关键失败模式为蛋白质核心内部的位阻冲突，并在使用Rosetta精修高分辨率晶体结构时观察到类似的过度堆积。我们量化了过度堆积程度，重新拟合了少数能量函数参数以更好重现天然堆积状态。拟合后，在精修任务中基本消除了该失败模式，同时保持了在其他基准测试上的性能，最终获得了Rosetta能量函数的更新版本。该工作展示了如何从蛋白质设计中学习，以指导能量函数开发。",
+      "key_findings": [
+        "提出以蛋白质设计实验反馈作为指导原则来重新训练能量函数的新范式。",
+        "发现Rosetta能量函数在蛋白质核心存在位阻冲突导致的过度堆积的常见失败模式。",
+        "通过重新拟合参数消除过度堆积，得到更新版能量函数，保持整体基准性能。"
+      ],
+      "translated_at": "2026-04-29T08:00:18.228006Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出利用蛋白设计实验反馈识别失败模式并迭代优化能量函数的新范式，方法论可迁移。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:52:01.380955Z"
+      }
     },
     {
       "pmid": "42017197",
@@ -875,667 +1353,84 @@
         "筛选鉴定txnipa、mmp14b和foxp1b为诱导脂肪细胞肥大性重塑的关键调控因子",
         "揭示Foxp1旁系同源基因功能分化：foxp1b主导适应性肥大反应，foxp1a调控空间分布模式"
       ],
-      "translated_at": "2026-04-27T08:40:40.028096Z"
-    },
-    {
-      "pmid": "42014728",
-      "title": "Designing soft materials through synthetic morphogenesis.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Bortnikov Evgeniy O",
-        "Paikar Arpita",
-        "Zhigileva Ekaterina A",
-        "Fomitskaya Polina",
-        "Ariel Noam",
-        "Diskin-Posner Yael",
-        "et al."
-      ],
-      "abstract": "While the principles of Turing-type morphogenesis are central to understanding biological pattern formation, their rational application for the design of synthetic materials remains a significant challenge. To address this gap, we rationally design stationary reaction-diffusion patterns using a chemical reaction network (CRN) of small organic molecules bearing thiol groups - a functional handle ubiquitous in materials chemistry. The CRN features autocatalysis coupled with both rapid direct inhibition and a negative feedback loop. We report the formation of dot, line, and net patterns obtained with the assistance of numerical modeling by adjusting reactant feed rates and concentrations. The use of disulfide-crosslinked polyacrylamide hydrogels enables the modulation of thiol diffusion and subsequent derivatization of the immobilized thiols with dyes, enzymes, and crosslinkers to produce soft materials. This entire process, from out-of-equilibrium self-organization to a patterned soft material, conceptually resembles the biological process that gives rise to skin patterns. Overall, this work establishes a pathway for applying Turing-type self-organization to the structuring of synthetic matter.",
-      "doi": "10.1038/s41467-026-71999-4",
-      "url": "https://doi.org/10.1038/s41467-026-71999-4",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "尽管图灵型形态发生（Turing-type morphogenesis）的原理是理解生物图案形成的核心，但将其理性应用于合成材料设计仍面临重大挑战。为填补这一空白，我们利用含巯基（thiol）的小分子构建化学反应网络（chemical reaction network, CRN），理性设计定态反应-扩散图案——巯基是材料化学中普遍存在的功能基团。该CRN具有自催化特性，并与快速直接抑制及负反馈回路相耦合。借助数值模拟，通过调节反应物进料速率和浓度，我们获得了点状、线状和网状图案。利用二硫键交联的聚丙烯酰胺水凝胶（disulfide-crosslinked polyacrylamide hydrogels）调控巯基扩散，并将固定化的巯基衍生化为染料、酶和交联剂，从而制备出软材料。从非平衡自组织到图案化软材料的整个过程，在概念上类似于产生皮肤图案的生物学过程。总之，本研究建立了将图灵型自组织应用于合成物质结构化的途径。",
-      "key_findings": [
-        "核心发现1：构建含巯基小分子的化学反应网络（CRN），耦合自催化与双重抑制机制，实现定态反应-扩散图案",
-        "核心发现2：通过调节反应物进料参数，在数值模拟辅助下可编程生成点、线、网状等多样定态图案",
-        "核心发现3：利用二硫键交联水凝胶固定图案并功能化，建立从非平衡自组织到图案化软材料的合成途径"
-      ],
-      "translated_at": "2026-04-27T08:41:08.005116Z"
-    },
-    {
-      "pmid": "42014430",
-      "title": "Toward sustainable food preservatives: high-level production of sorbic acid in engineered Saccharomyces cerevisiae.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Xiao Jianbin",
-        "Lin Wei",
-        "Chen Xingtong",
-        "Yu Haoyu",
-        "Chen Chao",
-        "Li Qin",
-        "et al."
-      ],
-      "abstract": "Sorbic acid (SA) and its salts are among the world's most widely used and safest food preservatives, yet their industrial production still relies on fossil fuel-derived feedstocks via chemical synthesis. Here, we report bioproduction of SA through microbial fermentation by decoding its biosynthetic pathway and metabolic engineering of Saccharomyces cerevisiae as a chassis. Here, we identify SA and its amide derivative sorbamide (SN) from Myrothecium sp. FJNU6, representing identification of SA from a microbial source. Genome sequencing and heterologous expression reveal the SA/SN biosynthetic gene cluster, comprising a highly reducing polyketide synthase (SoaA), a hydrolase (SoaB), and an amidotransferase (SoaC). To enable sustainable overproduction, we reconstitute and optimize the SoaA-SoaB pathway in S. cerevisiae through multilevel engineering, including dynamic promoter control, acetyl-CoA/malonyl-CoA pathway enhancement, peroxisomal compartmentalization, and two-stage fed-batch fermentation. These strategies collectively enable a production titer of 1.84 g/L SA in a 50 L bioreactor. This study uncovers a microbial biosynthetic pathway for SA/SN and establishes a microbial platform for SA production, providing a foundation for developing sustainable alternatives to fossil-based manufacturing.",
-      "doi": "10.1038/s41467-026-72163-8",
-      "url": "https://doi.org/10.1038/s41467-026-72163-8",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "山梨酸（SA）及其盐类是全球最广泛使用且最安全的食物防腐剂之一，但其工业生产仍依赖化石燃料衍生的原料通过化学合成实现。本研究通过解析SA生物合成途径并对酿酒酵母（Saccharomyces cerevisiae）进行代谢工程改造，实现了SA的微生物发酵生产。研究从拟帚霉属（Myrothecium sp.）FJNU6中鉴定出SA及其酰胺衍生物山梨酰胺（SN），首次发现微生物来源的SA。基因组测序和异源表达揭示了SA/SN生物合成基因簇，包含高还原型聚酮合酶（SoaA）、水解酶（SoaB）和酰胺转移酶（SoaC）。为实现可持续高产，研究通过多层次工程策略在酿酒酵母中重构并优化SoaA-SoaB途径，包括动态启动子调控、乙酰辅酶A/丙二酰辅酶A途径增强、过氧化物酶体区室化以及两阶段补料分批发酵。这些策略在50 L生物反应器中实现了1.84 g/L的SA产量。本研究揭示了SA/SN的微生物生物合成途径，建立了SA生产的微生物平台，为开发化石基制造的可持续替代方案奠定基础。",
-      "key_findings": [
-        "从拟帚霉属真菌中首次鉴定山梨酸生物合成基因簇及其聚酮合酶SoaA。",
-        "在酿酒酵母中重构SoaA-SoaB途径，50L发酵罐产量达1.84 g/L。",
-        "整合动态启动子调控、前体供应增强与过氧化物酶体区室化实现高效合成。"
-      ],
-      "translated_at": "2026-04-27T08:43:02.987439Z"
-    },
-    {
-      "pmid": "42013152",
-      "title": "Effects of sensorimotor delays and muscle force capacity limits on the performance of feedforward and feedback control in animals of different sizes.",
-      "journal": "PLoS Comput Biol",
-      "authors": [
-        "Mohamed Thangal Sayed Naseel",
-        "More Heather L",
-        "Remy C David",
-        "Donelan J Maxwell"
-      ],
-      "abstract": "Animals rely on feedforward and feedback control for perturbation responses. When comparing terrestrial mammals of different sizes, we generally find that several features that affect perturbation responses change-larger animals have longer sensorimotor time delays, heavier body segments, and proportionally weaker muscles. We used simple computational models to study how control of fast perturbation responses is constrained by two limitations-sensorimotor delays and muscle force capacity-as a function of animal size. We developed two tasks representing common perturbation response scenarios in animal locomotion: a distributed mass pendulum approximating swing limb repositioning (swing task), and an inverted pendulum approximating whole body posture recovery (posture task). First, we used a normalized feedback control system to show how feedback response times can either be limited by the force generation capacity of muscles (force-limited), or by sensorimotor delays which constrain the maximum feedback gains that can be used to produce stable responses (delay-limited). Next, we used more detailed scaled models which represent the full size range of terrestrial mammals and parameterized the sensorimotor delays, maximum muscle forces, and inertial properties using scaling relationships from literature. Across animal size and in both tasks, we found that feedback control was primarily delay-limited-the fastest responses used a fraction of the available muscle force capacity. We compared feedback control to the fastest feedforward control strategy, and found that feedforward control response times were about four times faster than feedback control in the smallest animals, and around two times faster in the largest animals. For rapid perturbation responses, feedback control appears ineffective for terrestrial mammals of all sizes, as our simulated fastest response times exceeded available movement times. Thus, feedforward control strategies-including anticipatory adjustments, ballistic motor programs, and exploitation of intrinsic musculoskeletal dynamics-may be essential for reacting quickly to sudden and large perturbations in terrestrial mammals.",
-      "doi": "10.1371/journal.pcbi.1012502",
-      "url": "https://doi.org/10.1371/journal.pcbi.1012502",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "动物依赖前馈和反馈控制应对扰动。比较不同体型陆生哺乳动物时发现，影响扰动响应的多个特征随体型变化——体型越大，感觉运动时间延迟越长、身体节段越重、肌肉相对越弱。本研究利用简单计算模型，探究快速扰动响应的控制如何受感觉运动延迟和肌肉力量容量这两种限制的约束。我们构建了两种任务模拟动物运动中的典型扰动响应场景：分布式质量摆模拟摆动肢体重定位（摆动任务），倒立摆模拟全身姿势恢复（姿势任务）。首先，通过标准化反馈控制系统证明，反馈响应时间或受肌肉力量生成容量限制（力量受限），或受感觉运动延迟限制——后者制约了产生稳定响应的最大反馈增益（延迟受限）。随后，使用涵盖陆生哺乳动物完整体型范围的详细缩放模型，根据文献中的缩放关系参数化感觉运动延迟、最大肌肉力量及惯性特性。结果显示，跨越所有体型和两种任务，反馈控制主要受延迟限制，最快响应仅利用部分肌肉力量容量。与最快前馈控制策略比较发现，前馈响应时间在小动物中比反馈控制快约4倍，在大动物中快约2倍。对于快速扰动响应，反馈控制对所有体型陆生哺乳动物均无效，因其模拟的最快响应时间超过了可用运动时间。因此，前馈控制策略——包括预期调整、弹道运动程序及利用内在肌肉骨骼动力学——对陆生哺乳动物快速应对突发大幅度扰动可能至关重要。",
-      "key_findings": [
-        "反馈控制主要受感觉运动延迟限制，最快响应仅利用部分可用肌肉力量容量",
-        "前馈控制响应速度显著快于反馈控制，小动物快4倍，大动物快约2倍",
-        "快速扰动下反馈控制对所有体型动物均无效，前馈控制策略至关重要"
-      ],
-      "translated_at": "2026-04-27T08:45:12.202500Z"
-    },
-    {
-      "pmid": "42012149",
-      "title": "Orderly mitosis shapes interphase genome architecture.",
-      "journal": "Elife",
-      "authors": [
-        "Guin Krishnendu",
-        "Keikhosravi Adib",
-        "Chari Raj",
-        "Pegoraro Gianluca",
-        "Misteli Tom"
-      ],
-      "abstract": "Genomes assume a complex 3D architecture in the interphase cell nucleus. Yet the molecular mechanisms that determine global genome architecture are only poorly understood. To identify mechanisms of higher-order genome organization, we performed high-throughput imaging-based CRISPR knockout screens targeting 1064 genes encoding nuclear proteins in multiple human cell lines. We assessed changes in the distribution of centromeres at single-cell resolution as surrogate markers for global genome organization. The screens revealed multiple major regulators of spatial distribution of centromeres, including components of the nucleolus, kinetochore, cohesins, condensins, and the nuclear pore complex. Alterations in centromere distribution required progression through the cell cycle and acute depletion of mitotic factors with distinct functions altered centromere distribution in the subsequent interphase. These results identify molecular determinants of spatial centromere organization, and they show that orderly progression through mitosis shapes interphase genome architecture.",
-      "doi": "10.7554/eLife.108410",
-      "url": "https://doi.org/10.7554/eLife.108410",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Humans",
-        "Mitosis",
-        "Interphase",
-        "Centromere",
-        "Genome, Human",
-        "Cell Line"
-      ],
-      "abstract_zh": "基因组在间期细胞核中呈现复杂的三维结构。然而，决定全局基因组结构的分子机制目前仍知之甚少。为鉴定高阶基因组组织的机制，我们在多种人类细胞系中开展了基于高通量成像的CRISPR敲除筛选，靶向1064个编码核蛋白的基因。我们以单细胞分辨率评估了着丝粒分布的变化，将其作为全局基因组组织的替代标志物。筛选发现了着丝粒空间分布的多个主要调控因子，包括核仁、动粒（kinetochore）、黏连蛋白（cohesins）、凝缩蛋白（condensins）和核孔复合体的组分。着丝粒分布的改变需要细胞周期进程，急性耗竭具有不同功能的有丝分裂因子会改变随后间期中的着丝粒分布。这些结果鉴定了着丝粒空间组织的分子决定因素，并表明有序的有丝分裂进程塑造了间期基因组结构。",
-      "key_findings": [
-        "通过CRISPR筛选鉴定了核仁、动粒、黏连蛋白等着丝粒空间分布的关键调控因子",
-        "有丝分裂因子的急性耗竭会导致随后间期着丝粒分布的显著改变",
-        "有序的有丝分裂进程是塑造间期基因组三维架构的重要机制"
-      ],
-      "translated_at": "2026-04-27T08:45:46.415368Z"
-    },
-    {
-      "pmid": "42012071",
-      "title": "Protein Scaffold-Driven Enzyme Colocalization Combined with Glucose Derepression in Candida tropicalis Enables High-Level 1,2,4-Butanetriol Production.",
-      "journal": "ACS Synth Biol",
-      "authors": [
-        "Wei Bo",
-        "Ma Xiaohan",
-        "Shen Wei",
-        "Yang Haiquan",
-        "Zhou Li",
-        "Xia Yuanyuan",
-        "et al."
-      ],
-      "abstract": "1,2,4-Butanetriol is a crucial fine chemical intermediate for energetic materials, high-value-added chemicals, and pharmaceuticals; however, its microbial biosynthesis pathway is often hindered by intermediate accumulation and imbalanced metabolic flux. To overcome these challenges, Candida tropicalis was employed as the chassis, and a synergistic strategy integrating protein scaffold-driven enzyme colocalization with key enzyme engineering was developed to optimize the pathway from xylose. Stage-specific repression of xylose dehydrogenase (XylB) confirmed the growth inhibition caused by xylonate. To alleviate substrate channeling limitations, a spatial colocalization strategy was employed by fusing the key enzymes XylB, xylonate dehydratase (XylD), and α-keto-acid decarboxylase (KdcA) with scaffold ligands and modulating the protein scaffold [GBD]x-[SH3]y-[PDZ]z domain ratio to an optimal 1:3:1, enabling their programmable assembly into a highly efficient multienzyme complex. Subsequently, deletion of mig1 enhanced the xylose utilization efficiency, while pathway efficiency was further optimized via synergistic enzyme engineering, which included overexpressing the ligand-fused XylD and KdcA mutants. This integrated approach raised the 1,2,4-butanetriol titer to 2.1 g/L in shake flasks and 11.18 g/L in a 5 L bioreactor. This study validates the effectiveness and broad application prospects of integrating spatial colocalization of metabolic pathways with metabolic engineering in enhancing the performance of complex metabolic pathways.",
-      "doi": "10.1021/acssynbio.6c00134",
-      "url": "https://doi.org/10.1021/acssynbio.6c00134",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "中文翻译",
-      "key_findings": [
-        "核心发现1（不超过50字）",
-        "核心发现2（不超过50字）",
-        "核心发现3（不超过50字）"
-      ],
-      "translated_at": "2026-04-27T08:46:51.134780Z"
-    },
-    {
-      "pmid": "41925281",
-      "title": "Astral architecture can enhance mechanical strength of cytoskeletal networks by modulating percolation thresholds.",
-      "journal": "Biophys J",
-      "authors": [
-        "Berg Brady",
-        "Allard Jun"
-      ],
-      "abstract": "A repeated pattern in cytoskeletal architecture is the aster, in which a number of F-actin filaments emerge star shaped from a central node. Aster-based structures occur in cytoplasmic actin, the early stages of the cytokinetic ring in yeast, and in the context of biomimetic materials engineering. In this work, we use computational simulation to show that there is an optimal number of filaments per aster that maximizes rigidity, even at a fixed density of F-actin. This nonlinear dependence holds for both the shear and extensional moduli. At physiological parameters, the maximum corresponds approximately to the same filaments per aster observed in recent super-resolution images of cortical F-actin. Furthermore, we find that increasing filaments per aster leads to dramatic increases in the sample-to-sample variability in network rigidity. We explain both effects using percolation theory, wherein the probability that a given network is productively connected exhibits a sharp dependence on parameters. The dependence of network rigidity on this nanoscale architectural feature may suggest a mechanism by which cells tune the physical properties of their actin networks locally and rapidly (since no new F-actin must be assembled) and may inform efforts to create adaptive synthetic metamaterials inspired by actin networks.",
-      "doi": "10.1016/j.bpj.2026.03.028",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.028",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Actins",
-        "Biomechanical Phenomena",
-        "Cytoskeleton",
-        "Actin Cytoskeleton",
-        "Mechanical Phenomena",
-        "Models, Biological"
-      ],
-      "abstract_zh": "细胞骨架结构中的一种重复模式是星状体（aster），其中多条F-肌动蛋白（F-actin）丝从中心节点呈星形发出。基于星状体的结构存在于细胞质肌动蛋白、酵母细胞分裂环的早期阶段以及仿生材料工程背景下。在本研究中，我们利用计算模拟证明，即使F-肌动蛋白密度固定，每个星状体仍存在最优丝束数可使刚性最大化。这种非线性依赖关系同时适用于剪切模量和延伸模量。在生理参数条件下，该最大值与近期超分辨率成像中观察到的皮质F-肌动蛋白每个星状体的丝束数大致相符。此外，我们发现增加每个星状体的丝束数会导致网络刚性样本间变异显著增大。我们利用渗流（percolation）理论解释这两种效应，其中给定网络有效连通的概率对参数表现出锐化依赖。网络刚性对这种纳米尺度结构特征的依赖性可能提示细胞通过局部快速调节（无需组装新的F-肌动蛋白）其肌动蛋白网络物理性质的机制，并可为创建受肌动蛋白网络启发的自适应合成超材料提供参考。",
-      "key_findings": [
-        "星状体结构存在最优丝束数使刚性最大化，该最优值与生理条件下皮质F-actin超分辨率观测结果相符",
-        "剪切模量和延伸模量均表现出对丝束数的非线性依赖，且不随F-actin密度固定而消失",
-        "增加丝束数会显著增大网络刚性的样本间变异，此现象可通过渗流理论中连通概率的锐化依赖解释"
-      ],
-      "translated_at": "2026-04-27T08:48:54.196732Z"
-    },
-    {
-      "pmid": "41863077",
-      "title": "Impact of red blood cell rigidity on in vivo flow dynamics and lingering in bifurcations.",
-      "journal": "Biophys J",
-      "authors": [
-        "Rashidi Yazdan",
-        "Maurer Felix",
-        "Wrublewsky Selina",
-        "Larhrissi Khadija",
-        "John Thomas",
-        "Gidley Frances B",
-        "et al."
-      ],
-      "abstract": "Bifurcations are a crucial part of the mammalian microvasculature, as they establish the interface between blood and tissue. The flexibility of red blood cells (RBCs), the main cellular constituent of blood, is believed to strongly impact their partitioning, quantitative in vivo measurements have so far been elusive. This study investigates the effect of cell rigidity on the lateral movement after arteriole bifurcations and lingering by comparing the movement of artificially rigidified RBCs with that of healthy RBCs in vivo. Lingering describes a recently highlighted phenomenon in which RBCs reside in the bifurcation between two branches before entering either one. Our results show that increased RBC rigidity reduces lingering and, contrary to expectations, leaves healthy RBCs with a lower speed than rigidified RBCs in some areas of the microcirculation. We conclude that rigid RBCs show a different flow behavior leading to reduced wall contact potentially altering endothelial signaling and nutrient delivery and show a different partitioning at bifurcations.",
-      "doi": "10.1016/j.bpj.2026.03.023",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.023",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Erythrocytes",
-        "Animals",
-        "Humans",
-        "Microcirculation"
-      ],
-      "abstract_zh": "分叉是哺乳动物微血管系统的关键组成部分，构成了血液与组织间的界面。红细胞（red blood cells, RBCs）作为血液的主要细胞成分，其柔韧性被认为强烈影响细胞在分叉处的分配，但定量体内测量迄今难以实现。本研究通过比较人工刚性化红细胞与健康红细胞在体内的运动，探讨细胞刚性对小动脉分叉后横向运动及滞留（lingering）现象的影响。滞留是指红细胞在进入任一分支前暂居于两分支间分叉区域的近期发现的现象。结果表明，红细胞刚性增加会减少滞留；与预期相反，在某些微循环区域，健康红细胞的速度反而低于刚性化红细胞。我们得出结论：刚性红细胞表现出不同的流动行为，导致血管壁接触减少（可能改变内皮信号传导和营养输送），并在分叉处呈现不同的分配模式。",
-      "key_findings": [
-        "红细胞刚性增加显著减少其在血管分叉处的滞留现象。",
-        "与预期相反，健康红细胞在部分微循环区域的速度低于刚性化红细胞。",
-        "刚性红细胞具有不同的流动行为和分配模式，可能改变内皮信号传导和营养输送。"
-      ],
-      "translated_at": "2026-04-27T08:49:19.902046Z"
-    },
-    {
-      "pmid": "41863074",
-      "title": "Protein-free membrane fusion: A refined view of the delicate fusogenic properties of calcium.",
-      "journal": "Biophys J",
-      "authors": [
-        "Accorsi Matilde",
-        "Ní Earchaí Rachel",
-        "Yandrapalli Naresh",
-        "Pramanik Shreya",
-        "Dimova Rumiana"
-      ],
-      "abstract": "In the late 20th century, calcium took on the identity of an independent fusogen, when it was found to induce fusion of anionic large unilamellar vesicles (LUVs), yet its ability to drive fusion in cell-sized membranes remains poorly understood. Here, we directly quantify calcium-mediated fusion of giant unilamellar vesicles (GUVs) using a microfluidic trapping platform combined with confocal microscopy, enabling simultaneous measurement of lipid mixing, content mixing, and fusion outcomes across hundreds of single vesicles. We systematically map fusion efficiency as a function of calcium concentration, membrane composition, and mechanically imposed tension. We find that calcium-induced fusion of GUVs in the absence of proteins is remarkably fickle and composition sensitive, as the vesicles need to be sufficiently unstable to allow the opening of the fusion pore, yet stable enough to prevent bursting and collapse. Negatively charged GUVs containing high fractions of DOPE exhibit the highest fusogenic responsiveness, whereas other compositions undergo extensive lipid mixing without pore formation. Increasing membrane tension can shift this balance and promote full fusion, revealing a narrow parameter space in which calcium acts as an effective protein-free fusogen for cell-sized membranes. These findings clarify long-standing discrepancies between LUV- and GUV-based calcium fusion assays and provide quantitative design rules for employing calcium as a fusogen in synthetic biology and membrane-reconstitution studies, where controlled membrane growth, vesicle-vesicle fusion, and module integration are central to building and sustaining artificial cells.",
-      "doi": "10.1016/j.bpj.2026.03.040",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.040",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Calcium",
-        "Membrane Fusion",
-        "Unilamellar Liposomes"
-      ],
-      "abstract_zh": "20世纪末，当发现钙离子可诱导阴离子大单层囊泡（large unilamellar vesicles, LUVs）融合时，钙被赋予了独立促融合剂（fusogen）的身份，但其驱动细胞尺度膜融合的能力仍知之甚少。本研究利用微流控捕获平台结合共聚焦显微镜，直接定量测定钙离子介导的巨型单层囊泡（giant unilamellar vesicles, GUVs）融合，实现了对数百个单囊泡的脂质混合、内容物混合及融合结局的同步测量。我们系统绘制了融合效率随钙离子浓度、膜组成及机械张力变化的图谱。研究发现，无蛋白质条件下钙离子诱导的 GUVs 融合具有显著的易变性和组成敏感性：囊泡需足够不稳定以允许融合孔开放，同时又需足够稳定以防止破裂和塌陷。含高比例 DOPE（二油酰磷脂酰乙醇胺）的负电荷 GUVs 表现出最强的促融合响应性，而其他组成仅发生广泛脂质混合而无孔形成。增加膜张力可改变这一平衡并促进完全融合，揭示了钙离子作为细胞尺度膜有效无蛋白质促融合剂的狭窄参数空间。这些发现澄清了基于 LUV 和 GUV 的钙融合测定之间长期存在的差异，并为在合成生物学和膜重组研究中应用钙作为促融合剂提供了定量设计规则——在这些研究中，受控膜生长、囊泡-囊泡融合及模块整合是构建和维持人工细胞的核心。",
-      "key_findings": [
-        "利用微流控平台定量测定钙离子介导的巨型单层囊泡（GUVs）融合效率，同步监测脂质混合、内容物混合及融合结局。",
-        "钙离子诱导的蛋白质无关融合高度敏感且依赖膜组成：高 DOPE 含量的负电荷囊泡最易形成融合孔，其他组成仅发生脂质混合。",
-        "增加膜张力可促进完全融合，揭示了钙离子作为有效无蛋白质促融合剂（fusogen）的狭窄参数空间及定量设计规则。"
-      ],
-      "translated_at": "2026-04-27T08:50:36.500018Z"
-    },
-    {
-      "pmid": "41863073",
-      "title": "Computational rheometry for modeling viscoelasticity and mechanical responses of biomolecular condensates.",
-      "journal": "Biophys J",
-      "authors": [
-        "Zhang Ruoyao",
-        "Mitra Gaurav",
-        "Ghosh Souradeep",
-        "Pappu Rohit V"
-      ],
-      "abstract": "Biomolecular condensates are viscoelastic materials that display composition-specific rheological properties and responses to mechanical forces. For condensates formed by intrinsically disordered proteins and multivalent nucleic acids, structures from coarse-grained simulations have been used in graph-based descriptions of internal, mesoscale structures to extract viscoelastic moduli using a generalized Rouse model. This model rests on the use of eigenvalues of graph Laplacians that are derived from computed, condensate-specific graphs. Here, we introduce the formalism of computational rheometry to enable mechanistic understanding of material properties by bridging the molecular and continuum scales. In computational rheometry, condensates are described as graphs, and each node in the graph is a Maxwell element coupled to a Stokes fluid, thus generating a network of Stokes-Maxwell elements. We describe the formalism and its adaptation to model mechanical responses of graphs derived from coarse-grained simulations of condensates. Using small amplitude oscillatory shear tests, we reproduce the full spectrum of frequency-dependent responses that have been reported for condensates probed using passive microrheology. Computational rheometry also allows for the simulation of different forms of creep tests. We adapt and deploy these creep tests, and the results are discussed in the context of recent experiments. Overall, our work establishes computational rheometry as a route to bridge disparate length and timescales to assess how molecular-scale interactions and dynamics give rise to viscoelastic responses on the mesoscale.",
-      "doi": "10.1016/j.bpj.2026.03.037",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.037",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Viscosity",
-        "Elasticity",
-        "Rheology",
-        "Biomolecular Condensates",
-        "Biomechanical Phenomena"
-      ],
-      "abstract_zh": "生物分子凝聚体是一类粘弹性材料，表现出组分特异性的流变学特性及对外部机械力的响应。对于由内在无序蛋白（intrinsically disordered proteins）和多价核酸形成的凝聚体，研究者们曾利用粗粒化模拟（coarse-grained simulations）得到的结构，通过基于图的介观内部结构描述，结合广义Rouse模型提取粘弹性模数。该模型依赖于从计算获得的凝聚体特异性图中导出图拉普拉斯（graph Laplacian）的特征值。本文引入了\"计算流变学\"（computational rheometry）的理论框架，通过桥接分子尺度与连续介质尺度，实现对材料特性的机制性理解。在计算流变学中，凝聚体被表征为网络图，其中每个节点代表一个与Stokes流体耦合的Maxwell单元，从而构建出Stokes-Maxwell单元网络。本文阐述了该理论框架及其在模拟粗粒化模拟所得凝聚体图的力学响应中的应用。通过小振幅振荡剪切测试，我们成功重现了被动微流变学（passive microrheology）探测报道的凝聚体频率依赖性响应全谱。计算流变学还可用于模拟不同形式的蠕变测试（creep tests）。我们调整并实施了这些蠕变测试，其结果在近期实验背景下进行了讨论。总体而言，本研究确立了计算流变学作为桥接不同长度与时间尺度的方法，用以评估分子尺度相互作用与动力学如何引发介观尺度的粘弹性响应。",
-      "key_findings": [
-        "建立了计算流变学框架，将凝聚体建模为Stokes-Maxwell单元网络，桥接分子与连续介质尺度",
-        "通过小振幅振荡剪切测试重现了凝聚体全频谱粘弹性响应，与被动微流变实验结果一致",
-        "实现了多种蠕变测试模拟，揭示分子相互作用如何产生介观尺度粘弹性响应的计算方法"
-      ],
-      "translated_at": "2026-04-27T08:51:24.910048Z"
-    },
-    {
-      "pmid": "41832602",
-      "title": "Disruption of nuclear-cytoskeletal connection impairs epithelial cell mechanosensing and collective migration.",
-      "journal": "Biophys J",
-      "authors": [
-        "Shaji Akash T",
-        "Pathak Amit"
-      ],
-      "abstract": "The linker of nucleoskeleton and cytoskeleton (LINC) complex mediates physical communication between the cytoskeleton to the nucleus, thereby influencing nuclear positioning, transcriptional responses, and cell migration. Although prior studies have examined LINC's role in single-cell migration, its impact on collective migration of epithelial cells on surfaces of varying stiffness remains unclear. Here, we disrupted LINC function in MCF10A mammary epithelial cells using an inducible dominant-negative SUN1 construct (SUN1L) that sequesters nesprins. We found that MCF10A mammary epithelial cells with SUN1L expression were slower than wild-type controls on collagen-coated polyacrylamide hydrogels of 0.1-, 5-, and 50-kPa stiffness. Although migration speed of both control and SUN1L cells increased on stiffer substrates, the SUN1L cells displayed lower stiffness sensitivity, indicating impaired mechanosensing after LINC disruption. LINC disruption also altered cell and tissue-scale mechanics: SUN1L cells were smaller, softer, and formed denser epithelial sheets. Alongside these physical changes, LINC-disrupted cells showed stronger cell-matrix adhesions and reduced actomyosin contractility. Cytoskeletal perturbations further revealed that SUN1L cells are less reliant on actomyosin activity for sustained migration. These findings highlight how nuclear-cytoskeletal decoupling triggers multiscale physical changes-cell softening, crowding, and altered adhesion dynamics-that collectively impair mechanosensitive migration. Given LINC's implication in laminopathies and cancer, our results provide new insight into how its dysfunction may influence disease progression and collective cell behavior.",
-      "doi": "10.1016/j.bpj.2026.03.030",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.030",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Humans",
-        "Cell Movement",
-        "Epithelial Cells",
-        "Cytoskeleton",
-        "Cell Nucleus",
-        "Mechanotransduction, Cellular",
-        "Cell Line",
-        "Actomyosin",
-        "Microtubule-Associated Proteins",
-        "Nuclear Proteins"
-      ],
-      "abstract_zh": "核骨架与细胞骨架连接物（LINC）复合物介导细胞骨架与细胞核之间的物理通讯，从而影响细胞核定位、转录反应和细胞迁移。尽管先前研究已探讨LINC在单细胞迁移中的作用，但其对上皮细胞在不同硬度表面上集体迁移的影响仍不清楚。本研究利用可诱导的显性负性SUN1构建体（SUN1L）隔离nesprins，从而破坏MCF10A乳腺上皮细胞中的LINC功能。结果发现，在涂覆胶原蛋白的0.1、5和50 kPa聚丙烯酰胺水凝胶上，表达SUN1L的MCF10A细胞比野生型对照组迁移更慢。虽然对照组和SUN1L细胞的迁移速度在较硬基质上均有所增加，但SUN1L细胞表现出较低的硬度敏感性，表明LINC破坏后机械感应受损。LINC破坏还改变了细胞和组织尺度的力学特性：SUN1L细胞更小、更软，并形成更致密的上皮片层。伴随这些物理变化，LINC破坏的细胞显示出更强的细胞-基质粘附和降低的肌动蛋白-肌球蛋白（actomyosin）收缩性。细胞骨架扰动进一步揭示SUN1L细胞对actomyosin活性的依赖性降低。这些发现强调了核-细胞骨架解耦如何触发多尺度物理变化——细胞软化、拥挤和粘附动力学改变——从而共同损害机械敏感性迁移。鉴于LINC与层蛋白病（laminopathies）和癌症的关联，本研究为其功能障碍如何影响疾病进展和集体细胞行为提供了新见解。",
-      "key_findings": [
-        "LINC复合物功能破坏显著降低乳腺上皮细胞在不同硬度基质上的迁移速度并削弱其机械敏感性。",
-        "核-细胞骨架解耦导致细胞软化、体积缩小、上皮片层致密化及细胞-基质粘附增强等多尺度物理改变。",
-        "LINC破坏降低细胞对肌动蛋白-肌球蛋白收缩力的依赖性，改变细胞迁移的力学调控机制。"
-      ],
-      "translated_at": "2026-04-27T08:51:59.136616Z"
-    },
-    {
-      "pmid": "41830170",
-      "title": "Domain interactions in neuronal nitric oxide synthase identified by time-resolved fluorescence.",
-      "journal": "Biophys J",
-      "authors": [
-        "Snyder Alexa A",
-        "McCoy Christian L",
-        "Gambill Alexandria K",
-        "Guadalupe Karina",
-        "Bailey Sheila K",
-        "Catlin Audrey E",
-        "et al."
-      ],
-      "abstract": "Nitric oxide synthase (NOS) catalyzes the formation of nitric oxide through the transfer of electrons from FAD to FMN in the reductase domain of the enzyme and then from FMN to a heme in the oxygenase domain of the partner enzyme in a homodimeric complex. The calcium-signaling protein calmodulin (CaM) binds to a CaM-binding domain located between the reductase and oxygenase domains to enable efficient NOS activity. Directed electron transfer in NOS occurs through the formation of conformational states of the enzyme that sequentially place electron donor and acceptor domains nearby, suggesting that the electron transfers are conformationally gated. We used fluorescence-labeled CaM and time-resolved fluorescence detection to reveal the presence of multiple conformational states of NOS. The efficiency of FRET from a fluorophore attached to CaM to the heme groups of the enzyme depends on the conformational state of the enzyme. Analysis of fluorescence decays for a series of site-directed mutants of NOS and CaM allowed us to assign fluorescence quenching states to conformational states of the enzyme. We used mutations expected to disrupt specific interactions between enzyme domains of NOS or between CaM and NOS, consistent with their known effects on enzyme kinetics. The results suggest the presence of a conformational state in which the FAD and FMN subdomains are in close proximity, one or more in which the FMN subdomain interacts with the oxygenase domain in the partner enzyme, and multiple conformation states in which CaM is in close proximity to one of the oxygenase domains. We suggest that CaM docking to the oxygenase domain facilitates the productive interaction of the FMN domain with the oxygenase domain in its dimeric partner. Such a conformation would enable electron transfer from FMN to the heme of the dimeric partner.",
-      "doi": "10.1016/j.bpj.2026.03.022",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.022",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Calmodulin",
-        "Nitric Oxide Synthase Type I",
-        "Protein Domains",
-        "Fluorescence Resonance Energy Transfer",
-        "Protein Binding",
-        "Time Factors",
-        "Animals",
-        "Models, Molecular"
-      ],
-      "abstract_zh": "神经元型一氧化氮合酶（NOS）通过还原酶域中FAD向FMN的电子传递，以及随后FMN向同源二聚体伙伴酶加氧酶域血红素的电子传递，催化一氧化氮生成。钙信号蛋白钙调蛋白（CaM）结合于还原酶域与加氧酶域之间的CaM结合域以激活NOS。NOS的定向电子传递通过形成使电子供受体域依次靠近的构象状态实现，表明该过程受构象门控。本研究利用荧光标记的CaM和时间分辨荧光检测，揭示了NOS存在多种构象状态。连接于CaM的荧光团向酶血红素基团的FRET（荧光共振能量转移）效率取决于酶的构象状态。通过对NOS和CaM定点突变体的荧光衰减分析，我们将荧光猝灭状态归因于特定构象状态。结果表明存在FAD与FMN亚域靠近的构象、FMN亚域与伙伴酶加氧酶域互作的构象，以及CaM与加氧酶域靠近的多种状态。CaM与加氧酶域的对接可促进FMN域与其二聚体伙伴的有效互作，从而实现从FMN向伙伴酶血红素的电子传递。",
-      "key_findings": [
-        "利用时间分辨荧光FRET技术揭示了神经元型一氧化氮合酶（nNOS）存在多种构象状态",
-        "鉴定出FAD-FMN亚域靠近及FMN与伙伴酶加氧酶域互作的特定功能构象",
-        "发现钙调蛋白（CaM）与加氧酶域对接可促进FMN域向二聚体伙伴血红素的电子传递"
-      ],
-      "translated_at": "2026-04-27T08:53:59.952391Z"
-    },
-    {
-      "pmid": "41830169",
-      "title": "Asymmetry-induced transient gel formation in fluid lipid membranes.",
-      "journal": "Biophys J",
-      "authors": [
-        "Pirhadi Emad",
-        "Yong Xin"
-      ],
-      "abstract": "Compositional asymmetry is a defining feature of cellular membranes, controlling permeability, protein activity, cholesterol dynamics, and shape remodeling. This asymmetry can create a stress imbalance, with the two leaflets experiencing opposing tensions, though direct experimental measurement of leaflet stress remains challenging. Such a stress imbalance can compress one leaflet and trigger a fluid-to-gel phase transition, which reduces membrane fluidity and markedly increases bending rigidity. These phenomena raise a key question of how membranes respond mechanically before crossing the transition threshold, a regime that remains relevant to biological functions. Here, we combine comprehensive all-atom and coarse-grained molecular dynamics simulations to examine how stress asymmetry modulates membrane structure and mechanics near the transition point. Using POPE and DLPC bilayers as model systems, we find that moderate asymmetry induces transient gel-like domains that continuously form and dissolve, amplifying undulations and lowering bilayer rigidity. Beyond the gelation threshold, the trend reverses and the bilayer stiffens, resulting in a nonmonotonic dependence of rigidity on asymmetry. Moreover, our results reveal distinct curvature preferences of fluid and gel phases. Extending this analysis to a multicomponent bacterial outer membrane, we demonstrate that stress asymmetry can trigger transient gel-like domain formation even in complex lipid mixtures. This provides a proof of principle that differential stress modulates membrane mechanics by inducing either softening or stiffening, complementing the effects of molecular composition. Our findings elucidate how cells might exploit the stress-curvature-phase coupling to tune membrane rigidity under near-physiological conditions.",
-      "doi": "10.1016/j.bpj.2026.03.025",
-      "url": "https://doi.org/10.1016/j.bpj.2026.03.025",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Gels",
-        "Lipid Bilayers",
-        "Molecular Dynamics Simulation",
-        "Membrane Fluidity",
-        "Phosphatidylcholines",
-        "Phosphatidylethanolamines",
-        "Cell Membrane"
-      ],
-      "abstract_zh": "组成不对称性是细胞膜的决定性特征，控制着膜渗透性、蛋白质活性、胆固醇动态及形状重塑。这种不对称性可产生应力失衡，使两个单层（leaflets）经历相反张力，尽管单层应力的直接实验测量仍具挑战性。这种应力失衡可压缩某一单层并触发流体-凝胶相变，从而降低膜流动性并显著增加弯曲刚性。这些现象引出一个关键问题：在跨越转变阈值之前膜如何机械响应，这一状态范围仍与生物功能密切相关。在此，我们结合全面的全原子（all-atom）和粗粒化（coarse-grained）分子动力学模拟，研究应力不对称如何调节接近转变点的膜结构和力学。以POPE和DLPC双层作为模型系统，我们发现适度不对称诱导瞬态凝胶样结构域持续形成和溶解，放大波动并降低双层刚性。超过凝胶化阈值后，趋势逆转且双层变硬，导致刚性对不对称性呈非单调依赖。此外，我们的结果揭示流体相和凝胶相具有不同的曲率偏好。将此分析扩展到多组分细菌外膜，我们证明应力不对称即使在复杂脂质混合物中也能触发瞬态凝胶样结构域形成。这为差异应力通过诱导软化或硬化来调节膜力学提供了原理验证，补充了分子组成的影响。我们的发现阐明了细胞如何利用应力-曲率-相耦合在近生理条件下调节膜刚性。",
-      "key_findings": [
-        "适度不对称诱导瞬态凝胶样结构域持续形成与溶解，降低膜弯曲刚性并放大波动",
-        "膜刚性随不对称性呈非单调依赖：超过凝胶化阈值后由软化转为硬化",
-        "在多组分细菌外膜中证实应力不对称可触发瞬态凝胶域，验证该机制的普适性"
-      ],
-      "translated_at": "2026-04-27T08:54:50.121625Z"
-    },
-    {
-      "pmid": "41755423",
-      "title": "Nonuniform filament turnover, contractility, and bundle formation in disordered actomyosin networks.",
-      "journal": "Biophys J",
-      "authors": [
-        "Tam Alexander K Y",
-        "Mogilner Alex",
-        "Oelz Dietmar B"
-      ],
-      "abstract": "We use mathematical modeling and simulation to investigate how filament turnover and mechanics influence contractility and bundle formation in disordered actomyosin networks. Using a two-dimensional agent-based model for an actomyosin network, we investigate four simplified models for filament turnover: uniform, biased, branching, and treadmilling. With no turnover, over time contractility decreases and bundle formation increases, and networks eventually form stationary patterns that cannot contract. Introducing turnover allows contractility to persist longer compared with the no-turnover scenario. Uniform turnover, where new filaments have random positions and orientations, disrupts bundle formation and enables persistent contractility. In biased turnover, branching, and treadmilling, the positions and orientations of new filaments depend on the existing network. These nonuniform turnover models increase bundle formation compared with uniform turnover, while still allowing long-term contractility. Branching at 70° disrupts bundle formation to enable prolonged contractility, whereas filament treadmilling disrupts the trade-off between bundle formation and contractility. Biased turnover places new filaments near existing ones, which promotes bundle formation but is less effective at maintaining contractility. Simulations showed that more bendable filaments accelerate bundle formation, while higher effective cross-linking friction enhances contractility. Our results suggest that cells can tune contractility and bundle formation in disordered actomyosin networks by varying actin turnover pathways.",
-      "doi": "10.1016/j.bpj.2026.02.032",
-      "url": "https://doi.org/10.1016/j.bpj.2026.02.032",
-      "pub_date": "2026-Apr-21",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Actomyosin",
-        "Models, Biological",
-        "Actin Cytoskeleton",
-        "Biomechanical Phenomena",
-        "Muscle Contraction"
-      ],
-      "abstract_zh": "我们利用数学建模与模拟研究了丝状体周转（filament turnover）及力学特性如何影响无序肌动蛋白-肌球蛋白（actomyosin）网络中的收缩性（contractility）与束形成（bundle formation）。通过建立二维基于智能体（agent-based）的肌动蛋白-肌球蛋白网络模型，我们探究了四种简化的丝状体周转模式：均匀周转、偏置周转、分支（branching）和踏车（treadmilling）。在无周转条件下，随着时间推移，网络收缩性降低而束形成增加，最终形成无法收缩的静止模式。引入周转机制可使收缩性较无周转情形维持更久。均匀周转（新丝状体具有随机位置和方向）破坏束形成并实现持续收缩。在偏置周转、分支和踏车模型中，新丝状体的位置和方向依赖于现有网络结构。这些非均匀周转模型较均匀周转增加束形成，同时仍允许长期收缩。70°分支破坏束形成以实现长期收缩，而丝状体踏车运动打破束形成与收缩性之间的权衡。偏置周转将新丝状体置于现有丝状体附近，促进束形成但在维持收缩性方面效果较差。模拟显示，更易弯曲的丝状体加速束形成，而更高的有效交联摩擦（cross-linking friction）增强收缩性。我们的结果表明，细胞可通过调节肌动蛋白周转途径来调控无序肌动蛋白-肌球蛋白网络中的收缩性与束形成。",
-      "key_findings": [
-        "非均匀周转模式在维持网络收缩性的同时促进束形成，打破束形成与收缩性的传统权衡。",
-        "70°分支通过破坏束形成延长收缩时间，踏车运动打破束形成与收缩性之间的权衡。",
-        "丝状体可弯曲性加速束形成，而交联摩擦增强收缩性，为细胞力学调控提供独立物理参数。"
-      ],
-      "translated_at": "2026-04-27T08:55:57.948525Z"
-    },
-    {
-      "pmid": "42013839",
-      "title": "Phased fragility and stability of non-genetic B cell states in the germinal center accelerate the genetic evolution of antibodies.",
-      "journal": "Cell Syst",
-      "authors": [
-        "Xiang Mark Y",
-        "Vaidehi Narayanan Haripriya",
-        "Kesarwani Vaibhava",
-        "Vanheusden Rohan",
-        "Wang Tiffany",
-        "Hoffmann Alexander"
-      ],
-      "abstract": "Vaccine responses depend on the Darwinian genetic evolution of B cells to generate high-affinity antibodies. However, B cells gain non-genetic heterogeneity while searching for antigen and T helper cells, but then their non-genetic cell states remain stable within proliferative clonal bursts. We explored the functional consequence of this dynamic control of non-genetic variability by developing a mathematical model, integrating a wealth of immunological knowledge. We discovered that variability in B cell fate decisions does not impair but instead accelerates affinity maturation by allowing high-affinity outliers to escape plasma cell differentiation and seed further rounds of Darwinian evolution. During clonal bursts, non-genetic cell state stability further promotes their amplification. The resulting model correctly predicts emergent vaccine response properties in mouse strains with altered B cell fate decision profiles. Our work reconciles classical B cell clonal selection theory with the experimentally observed non-genetic variability, and it provides an interpretable knowledge-based modeling framework to support personalized vaccination strategies.",
-      "doi": "10.1016/j.cels.2026.101590",
-      "url": "https://doi.org/10.1016/j.cels.2026.101590",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "疫苗反应依赖于B细胞的达尔文式遗传演化以产生高亲和力抗体。然而，B细胞在搜寻抗原和T辅助细胞（T helper cells）过程中获得非遗传异质性，但在增殖性克隆扩增（clonal bursts）期间其非遗传细胞状态保持稳定。我们通过整合大量免疫学知识构建数学模型，探索了这种非遗传变异性动态调控的功能意义。研究发现，B细胞命运决定的变异性非但不损害，反而通过允许高亲和力离群细胞（outliers）逃逸浆细胞分化并启动新一轮达尔文演化，从而加速亲和力成熟。在克隆扩增期间，非遗传细胞状态的稳定性进一步促进这些细胞的扩增。所得模型正确预测了B细胞命运决定特征改变的小鼠品系中涌现的疫苗反应特性。本研究调和了经典B细胞克隆选择理论与实验观察到的非遗传变异性，并为支持个性化疫苗策略提供了可解释的知识驱动建模框架。",
-      "key_findings": [
-        "B细胞命运决定的变异性非但不损害，反而通过允许高亲和力离群细胞逃逸浆细胞分化以启动新一轮达尔文演化，从而加速亲和力成熟",
-        "克隆扩增期间非遗传细胞状态的稳定性促进高亲和力离群细胞的进一步放大",
-        "该知识驱动的数学模型成功预测不同B细胞命运决定特征的小鼠品系中的疫苗反应特性，为个性化疫苗策略提供可解释框架"
-      ],
-      "translated_at": "2026-04-27T08:56:29.445096Z"
-    },
-    {
-      "pmid": "42013838",
-      "title": "Systematic discovery of pro- and anti-HIV host factors in primary human CD4+ T cells.",
-      "journal": "Cell",
-      "authors": [
-        "Rathore Ujjwal",
-        "Dugan Eli",
-        "Thornton Hunter",
-        "Kumar Vigneshwari Easwar",
-        "Dajani Rama",
-        "Burdick Ryan C",
-        "et al."
-      ],
-      "abstract": "Host factors that promote or restrict human immunodeficiency virus (HIV) infection in human CD4+ T cells have not been comprehensively identified. We employed orthogonal genome-wide CRISPR activation (CRISPRa) and CRISPR knockout screens in primary CD4+ T cells to discover pro- and anti-HIV host factors systematically. Secondary pooled screens and individual perturbations validated high-confidence hits and revealed diverse mechanisms of action. CRISPRa uncovered multiple potent antiviral factors, including PI16, PPID, SHISA3, and ITM2A. PI16 interacts with host factors involved in HIV fusion and inhibits viral entry, whereas PPID (Cyp40), a paralog of the proviral cyclophilin CypA, binds capsid and reduces nuclear import of the HIV core. Structural modeling, evolutionary analyses, and targeted mutagenesis revealed domains and residues required for PPID-mediated HIV restriction, including non-human primate ortholog substitutions that enhance antiviral activity. Together, these data define the functional HIV-host interaction landscape in primary human T cells and uncover new mechanisms modulating infection.",
-      "doi": "10.1016/j.cell.2026.03.046",
-      "url": "https://doi.org/10.1016/j.cell.2026.03.046",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "促进或限制人类免疫缺陷病毒（HIV）感染人类CD4+ T细胞的宿主因子尚未被全面鉴定。本研究利用正交全基因组CRISPR激活（CRISPRa）和CRISPR敲除筛选，在原代CD4+ T细胞中系统发现促HIV和抗HIV宿主因子。二次筛选和单独扰动验证高置信度靶点并揭示多种作用机制。CRISPRa发现多个强效抗病毒因子，包括PI16、PPID、SHISA3和ITM2A。PI16与参与HIV融合的宿主因子相互作用并抑制病毒进入，而PPID（Cyp40，促病毒亲环蛋白CypA的旁系同源物）结合衣壳并减少HIV核心核输入。结构建模、进化分析和靶向诱变揭示了PPID介导HIV限制所需的结构域和残基，包括增强抗病毒活性的非人灵长类直系同源替换。这些数据共同定义了原代人T细胞中的功能性HIV-宿主相互作用图谱，并揭示调控感染的新机制。",
-      "key_findings": [
-        "利用正交全基因组CRISPRa和CRISPR敲除筛选在原发性CD4+ T细胞中系统鉴定促/抗HIV宿主因子",
-        "发现PI16抑制病毒进入，PPID（Cyp40）结合衣壳并阻断HIV核心核输入",
-        "揭示PPID限制HIV的结构域、关键残基及非人灵长类增强型变异"
-      ],
-      "translated_at": "2026-04-27T08:57:02.552025Z"
-    },
-    {
-      "pmid": "42010284",
-      "title": "Photoactivatable CRISPR/Cas13d via upconversion nanoparticles for deep tissue RNA engineering and orthopedic therapy.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Zhao Jie",
-        "Zhang Jingyu",
-        "Gao Miaomiao",
-        "Miao Zukang",
-        "Zhang Yang",
-        "Guo Yue",
-        "et al."
-      ],
-      "abstract": "Spatiotemporal control of RNA therapeutics remains a fundamental challenge limiting clinical translation. Here, we develop a photoactivatable CRISPR/Cas13d (paCas13d) system that enables non-invasive, light-controlled RNA manipulation in deep tissues. Through structure-guided engineering, we identify optimal split sites within RfxCas13d and create light-switchable fragments using CRY2PHR/CIBN optogenetic dimerization. To overcome the limited tissue penetration of blue light, we engineer polyethylenimine-functionalized upconversion nanoparticles (UCNPs-PEI) that serve dual roles as gene carriers and photon transducers, converting tissue-penetrating near-infrared (NIR) to blue light. The UCNPs-PEI@paCas13d system achieves precise spatiotemporal control of RNA targeting within bone tissue in vivo. In a murine steroid-associated osteonecrosis model, NIR-activated paCas13d achieves robust TET3 knockdown, disrupting the TET3-5hmC-PTEN axis that drives glucocorticoid-induced osteocyte apoptosis. This targeted intervention prevents bone deterioration, with treated mice showing preserved trabecular architecture, enhanced bone volume, and favorable shifts in bone turnover markers, while maintaining systemic glucocorticoid efficacy. Our platform combines the programmability of CRISPR/Cas13d with non-invasive optical control, offering a versatile approach for treating diseases requiring localized RNA modulation while minimizing systemic effects.",
-      "doi": "10.1038/s41467-026-72181-6",
-      "url": "https://doi.org/10.1038/s41467-026-72181-6",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "时空控制RNA治疗药物仍是限制临床转化的根本性挑战。本研究开发了光激活CRISPR/Cas13d（paCas13d）系统，可在深部组织中实现无创光控RNA操控。通过结构引导工程，我们在RfxCas13d中确定了最佳分裂位点，并利用CRY2PHR/CIBN光遗传二聚化创建光开关片段。为克服蓝光组织穿透性差的限制，我们设计了聚乙烯亚胺功能化的上转换纳米颗粒（UCNPs-PEI），其兼具基因载体和光子转换器功能，可将具有组织穿透性的近红外光（NIR）转换为蓝光。UCNPs-PEI@paCas13d系统在活体骨组织中实现了RNA靶向的精准时空控制。在类固醇相关骨坏死小鼠模型中，NIR激活的paCas13d有效敲低TET3，阻断了驱动糖皮质激素诱导骨细胞凋亡的TET3-5hmC-PTEN轴。该靶向干预阻止了骨退化，治疗组小鼠显示出保留的骨小梁结构、增强的骨体积及骨转换标志物的有利转变，同时维持系统性糖皮质激素疗效。本研究平台结合CRISPR/Cas13d的可编程性与无创光学控制，为需要局部RNA调控且最小化全身效应的疾病治疗提供了通用策略。",
-      "key_findings": [
-        "开发光激活CRISPR/Cas13d系统，利用CRY2PHR/CIBN光遗传二聚化实现RNA靶向时空精准控制",
-        "设计上转换纳米颗粒(UCNPs-PEI)作为基因载体，将近红外光转换为蓝光以克服组织穿透限制",
-        "在骨坏死模型中实现TET3精准敲低，阻断TET3-5hmC-PTEN凋亡轴并恢复骨小梁结构与骨量"
-      ],
-      "translated_at": "2026-04-27T08:58:04.659293Z"
-    },
-    {
-      "pmid": "42009678",
-      "title": "Multi-omic mapping of Drosophila protein secretomes reveals tissue-specific origins and inter-organ trafficking.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Bosch Justin A",
-        "Beltran Pierre Michel Jean",
-        "Cavers Cooper",
-        "LaGraff James Thai",
-        "Melanson Randy",
-        "Singh Ankita",
-        "et al."
-      ],
-      "abstract": "Secreted proteins regulate many aspects of animal biology and are attractive targets for biomarkers and therapeutics. However, comprehensively identifying the \"secretome\", along with their tissues of origin, remains extremely challenging. To address this, we employed multiple 'omics methods to define a tissue-secretome map of 535 blood plasma proteins derived from specific cell-types and organs in Drosophila melanogaster. This map was enabled by methodological improvements including a collection of transgenic flies to label endogenous secreted proteins in 10 major tissue types, large-scale blood isolation, whole animal snRNA-seq, and 40 CRISPR knock-in strains. Using this map, we identify features of circulating proteins: most originate from specific tissues including unusual sources (e.g. glia), many are uncharacterized, and some are shed ectodomains of transmembrane proteins. In addition, in vivo experiments revealed circulating proteins with tissue-specific expression, as well as proteins that are deposited in a different tissue from where they are synthesized, suggesting potential inter-organ functions. Our secretome map will serve as a resource to investigate blood protein function, discover candidate tissue-tissue communication signals, and mine for homologues of human biomarkers.",
-      "doi": "10.1038/s41467-026-71763-8",
-      "url": "https://doi.org/10.1038/s41467-026-71763-8",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "分泌蛋白调控动物生物学的诸多方面，是极具吸引力的生物标志物和治疗靶点。然而，全面识别“分泌组”及其组织来源仍极具挑战性。为此，我们采用多种组学方法，绘制了黑腹果蝇（Drosophila melanogaster）535个血浆蛋白的组织-分泌组图谱，这些蛋白来源于特定细胞类型和器官。该图谱的建立得益于方法学改进，包括用于标记10种主要组织类型内源分泌蛋白的转基因果蝇品系集合、大规模血液分离、全动物单核RNA测序（snRNA-seq）以及40个CRISPR敲入品系。利用该图谱，我们鉴定了循环蛋白的特征：大多数源自特定组织，包括非常规来源（如胶质细胞）；许多尚未被表征；部分为跨膜蛋白脱落的胞外域。此外，体内实验揭示了具有组织特异性表达的循环蛋白，以及在其合成组织以外的组织中沉积的蛋白，提示潜在的器官间功能。我们的分泌组图谱将作为研究血液蛋白功能、发现候选组织-组织通讯信号以及挖掘人类生物标志物同源物的资源。",
-      "key_findings": [
-        "整合多组学方法绘制了535个血浆蛋白的果蝇组织-分泌组图谱，涵盖10种主要组织类型的特异性来源",
-        "揭示多数循环蛋白源自特定组织（包括胶质细胞等非常规来源），部分为跨膜蛋白脱落的胞外域",
-        "通过体内实验发现蛋白存在器官间转运现象，即某些蛋白在合成组织以外的部位沉积，提示潜在的器官间通讯功能"
-      ],
-      "translated_at": "2026-04-27T08:59:49.728454Z"
-    },
-    {
-      "pmid": "42009671",
-      "title": "SPNS2 exports sphingosine-1-phosphate and imports glucose.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Weigel Cynthia",
-        "Hossen Md Lokman",
-        "Brown Ryan D R",
-        "Senkal Can E",
-        "Green Christopher D",
-        "Newton Jason",
-        "et al."
-      ],
-      "abstract": "Spinster homolog 2 (SPNS2) exports the bioactive sphingolipid metabolite sphingosine-1-phosphate (S1P) out of cells to regulate processes important for health and diseases. However, the molecular mechanism underlying SPNS2 transport functions and its precise physiological roles are not fully understood. Here, through a series of complementary approaches in mice, cellular assays, and particularly with in vitro cell-free binding and transport assays, we show that SPNS2 has antiporter-like activity, transporting S1P out of cells and glucose in. We demonstrate that SPNS2 directly binds glucose and transports it and identify key amino acid residues of SPNS2 involved in glucose engagement and import. Our data reveal that S1P, which enters from the cytosolic side of SPNS2 facilitates conformational changes, enabling extracellular glucose to move inward through the central cavity. Thus, we identify a mechanism that dynamically contributes to glucose homeostasis in response to metabolic and sphingolipid cues with clinical and pathophysiological implications.",
-      "doi": "10.1038/s41467-026-71659-7",
-      "url": "https://doi.org/10.1038/s41467-026-71659-7",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "Spinster同源蛋白2（SPNS2）将具有生物活性的鞘脂代谢物鞘氨醇-1-磷酸（S1P）输出细胞，以调控与健康和疾病相关的重要生理过程。然而，SPNS2转运功能的分子机制及其精确的生理作用尚未完全阐明。本研究通过小鼠模型、细胞实验以及特别是体外无细胞结合与转运实验等一系列互补方法，证明SPNS2具有反向转运蛋白（antiporter）样活性，可将S1P输出细胞并输入葡萄糖。我们证实SPNS2直接结合并转运葡萄糖，并鉴定了SPNS2中参与葡萄糖结合和导入的关键氨基酸残基。研究数据表明，从SPNS2细胞质侧进入的S1P促进构象变化，使细胞外葡萄糖能够通过中央腔向内移动。因此，我们揭示了一种动态响应代谢和鞘脂信号、参与葡萄糖稳态调控的机制，具有临床和病理生理学意义。",
-      "key_findings": [
-        "揭示SPNS2作为反向转运蛋白同时输出S1P并输入葡萄糖的双重功能",
-        "鉴定SPNS2参与葡萄糖结合与转运的关键氨基酸残基",
-        "阐明S1P结合诱导构象变化促进葡萄糖跨膜转运的分子机制"
-      ],
-      "translated_at": "2026-04-27T09:00:36.031011Z"
-    },
-    {
-      "pmid": "42009663",
-      "title": "Disruption of the SAGA CORE triggers collateral degradation of KAT2A.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Batty Paul",
-        "Beneder Hannah",
-        "Schätz Caroline",
-        "Onea Gabriel",
-        "Zaczek Maciej",
-        "Kutschat Ana P",
-        "et al."
-      ],
-      "abstract": "The Spt-Ada-Gcn5 acetyltransferase (SAGA) complex regulates gene expression through histone acetylation at promoters, mediated by its histone acetyl transferase (HAT), KAT2A. While SAGA structure and function are well characterised, mechanisms controlling the stability of individual subunits, including KAT2A, remain unclear. Here, using a fluorescence-based KAT2A stability reporter, we systematically dissect the molecular dependencies controlling KAT2A protein abundance, and identify the non-enzymatic SAGA CORE module subunits-TADA1, TAF5L, and TAF6L- as necessary for KAT2A stability. Loss of these subunits disrupts SAGA complex integrity, leading to non-chromatin-bound KAT2A that is degraded by the proteasome and consequent reduced H3K9 acetylation. Proteomic profiling reveals progressive loss of components from the CORE and HAT modules upon acute SAGA CORE disruption, indicating that an intact CORE is required for the stability of numerous SAGA components. Finally, a focused CRISPR screen of ubiquitin-proteasome system genes identifies the E3 ligase UBR5, a known regulator of orphan protein degradation, and the deubiquitinase OTUD5, as regulators of KAT2A degradation when the SAGA CORE is perturbed. Together, these findings reveal a dependency of KAT2A protein stability on SAGA CORE integrity and define an orphan quality control mechanism targeting unassembled KAT2A, revealing a potential vulnerability in SAGA-driven malignancies.",
-      "doi": "10.1038/s41467-026-71613-7",
-      "url": "https://doi.org/10.1038/s41467-026-71613-7",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Histone Acetyltransferases",
-        "Humans",
-        "Proteolysis",
-        "Proteasome Endopeptidase Complex",
-        "Acetylation",
-        "Histones",
-        "Ubiquitin-Protein Ligases",
-        "HEK293 Cells",
-        "Proteomics",
-        "Trans-Activators"
-      ],
-      "abstract_zh": "Spt-Ada-Gcn5乙酰转移酶（SAGA）复合体通过其组蛋白乙酰转移酶（HAT）KAT2A介导的启动子组蛋白乙酰化来调控基因表达。尽管SAGA的结构和功能已被充分阐明，但调控各亚基（包括KAT2A）稳定性的机制仍不清楚。本研究利用基于荧光的KAT2A稳定性报告系统，系统解析了调控KAT2A蛋白丰度的分子依赖性，发现非酶促的SAGA CORE模块亚基——TADA1、TAF5L和TAF6L——对KAT2A的稳定性至关重要。这些亚基的缺失会破坏SAGA复合体完整性，导致KAT2A脱离染色质并被蛋白酶体降解，进而降低H3K9乙酰化水平。蛋白质组学分析显示，急性破坏SAGA CORE会导致CORE和HAT模块组分逐步丢失，表明完整的CORE对众多SAGA组分的稳定性是必需的。最后，针对泛素-蛋白酶体系统基因的CRISPR筛选鉴定出E3连接酶UBR5（已知孤儿蛋白降解调控因子）和去泛素化酶OTUD5，在SAGA CORE受损时调控KAT2A的降解。这些发现共同揭示了KAT2A蛋白稳定性依赖于SAGA CORE的完整性，并定义了针对未组装KAT2A的孤儿蛋白质量控制机制，为SAGA驱动的恶性肿瘤提供了潜在的治疗靶点。",
-      "key_findings": [
-        "非酶促SAGA CORE亚基TADA1、TAF5L和TAF6L是维持KAT2A稳定性的关键因子",
-        "CORE模块破坏导致SAGA复合体完整性丧失及游离KAT2A的蛋白酶体降解",
-        "E3连接酶UBR5与去泛素化酶OTUD5协同调控孤儿KAT2A的降解过程"
-      ],
-      "translated_at": "2026-04-27T09:01:56.091457Z"
-    },
-    {
-      "pmid": "42008579",
-      "title": "A standardized workflow for kinetic metabolic model curation and dissemination.",
-      "journal": "PLoS Comput Biol",
-      "authors": [
-        "Cook Margaret",
-        "Anastasakis Stella",
-        "Heydarabadipour Adel",
-        "Shin Janis",
-        "Burbano Diego Alba",
-        "Carothers James M",
-        "et al."
-      ],
-      "abstract": "Kinetic metabolic models provide invaluable insights into cellular metabolism, supporting applications in synthetic biology, metabolic engineering, and systems biology. However, reproducibility and utility of these models hinge on clear and rigorous documentation, standardized annotation, and accessible visualization. This paper presents a workflow for building, annotating, visualizing, and sharing kinetic metabolic models. Our method integrates community standards and open-source tools to ensure reproducibility, interoperability, and user accessibility. This procedure enables researchers to produce reusable and well-documented kinetic models, advancing their role as powerful tools in metabolic research.",
-      "doi": "10.1371/journal.pcbi.1014227",
-      "url": "https://doi.org/10.1371/journal.pcbi.1014227",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "动力学代谢模型为细胞代谢提供了宝贵的见解，支持合成生物学、代谢工程和系统生物学等领域的应用。然而，这些模型的可重复性和实用性依赖于清晰严谨的文档记录、标准化的注释以及可及的可视化。本文提出了一个用于构建、注释、可视化和共享动力学代谢模型的标准化流程。该方法整合社区标准与开源工具，确保可重复性、互操作性和用户可及性。该流程使研究人员能够产出可重用且文档完善的动力学模型，推动其成为代谢研究中的有力工具。",
-      "key_findings": [
-        "建立了涵盖构建、注释、可视化及共享的动力学代谢模型标准化整理流程。",
-        "整合社区标准与开源工具，系统性地保障模型的可重复性与互操作性。",
-        "显著提升了动力学代谢模型的可重用性与文档质量，强化其在代谢研究中的应用价值。"
-      ],
-      "translated_at": "2026-04-27T09:02:38.902141Z"
-    },
-    {
-      "pmid": "42007972",
-      "title": "How individual vigor shapes human-human physical interaction.",
-      "journal": "Elife",
-      "authors": [
-        "Verdel Dorian",
-        "Berret Bastien",
-        "Burdet Etienne"
-      ],
-      "abstract": "The speed of voluntary movements varies systematically, with some individuals moving consistently faster than others across different actions. These variations, conceptualized as vigor, reflect a time-effort-accuracy tradeoff in motor planning. How do two mechanically coupled partners with different individual vigors collaborate, e.g. to move a table together? Here, we show that such dyads coordinate goal-directed movements with minimal interaction force, exhibiting a dyadic vigor with similar characteristics as individual vigor. The emerging dyadic motor plan is strongly influenced by the slower partner, whose vigor predicts dyadic vigor, with effects lasting beyond practice. Computational modeling with stochastic optimal control reveals the critical role of partners' movement timing uncertainty and vigor in shaping coordination, allowing us to predict dyadic movements from individual behavior across diverse conditions. These findings shed light on the mechanisms underlying human collaboration and may be used in applications ranging from physical training and rehabilitation to collaborative robotics for manufacturing.",
-      "doi": "10.7554/eLife.109781",
-      "url": "https://doi.org/10.7554/eLife.109781",
-      "pub_date": "2026-Apr-20",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Humans",
-        "Male",
-        "Female",
-        "Adult",
-        "Movement",
-        "Young Adult",
-        "Psychomotor Performance",
-        "Interpersonal Relations",
-        "Cooperative Behavior"
-      ],
-      "abstract_zh": "自主运动的速度存在系统性差异，某些个体在不同动作中始终比他人更快。这些被概念化为活力（vigor）的变异反映了运动规划中的时间-努力-准确性权衡。两个具有不同个体活力的机械耦合伙伴如何协作，例如共同移动桌子？本研究表明，此类二人组以最小交互力协调目标导向动作，表现出具有个体活力相似特征的二元活力（dyadic vigor）。涌现的二元运动计划受较慢伙伴的强烈影响，其活力可预测二元活力，且该效应持续超越练习阶段。基于随机最优控制（stochastic optimal control）的计算建模揭示了伙伴动作时间不确定性与活力在塑造协调中的关键作用，使我们能够跨多种条件从个体行为预测二元动作。这些发现阐明了人类协作的潜在机制，可应用于物理训练、康复及制造业协作机器人等领域。",
-      "key_findings": [
-        "机械耦合的二人组以最小交互力协调目标导向动作，涌现的二元活力具有个体活力相似特征",
-        "较慢伙伴的活力主导二元运动计划形成，其预测效应持久存在且不因练习而减弱",
-        "随机最优控制模型揭示伙伴动作时间不确定性与活力对协调的塑造机制，实现跨条件预测"
-      ],
-      "translated_at": "2026-04-27T09:03:34.382863Z"
+      "translated_at": "2026-04-27T08:40:40.028096Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了可定量的体内CRISPR成像平台，结合图像表型分析和广义加性模型，可普适用于形态筛选。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T07:52:20.448901Z"
+      }
     }
   ],
-  "translated_count": 48
+  "pre_llm_filter_total": 44,
+  "llm_filtered_out": 9,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filtered_at": "2026-04-29T07:52:21.661253Z",
+  "filtered_out_papers": [
+    {
+      "pmid": "42049740",
+      "title": "Uromodulin p.His36Tyr promotes macrophage pyroptosis via App-Cd74 signaling to drive renal inflammation in ADTKD.",
+      "journal": "Nat Commun",
+      "bucket": "mechanism_case",
+      "reason": "特定疾病的致病机制研究，虽揭示新通路但缺乏可推广的方法学创新"
+    },
+    {
+      "pmid": "42048483",
+      "title": "Metabolic Engineering of Bacillus subtilis for High-Level Production of Salidroside from Potato Starch.",
+      "journal": "ACS Synth Biol",
+      "bucket": "application_case",
+      "reason": "纯应用导向的代谢工程案例，针对特定产物红景天苷进行菌株优化，方法无普适创新。"
+    },
+    {
+      "pmid": "42046433",
+      "title": "Engineering Pseudomonas putida for the Production of 2,3-Butanediol Isomers and Acetoin.",
+      "journal": "ACS Synth Biol",
+      "bucket": "application_case",
+      "reason": "纯代谢工程菌株构建与发酵优化，无新方法或可迁移机制创新"
+    },
+    {
+      "pmid": "42045196",
+      "title": "Targeting insulo-frontal pathway to reduce stress-evoked cognitive rigidity.",
+      "journal": "Nat Commun",
+      "bucket": "descriptive_study",
+      "reason": "特定神经回路机制研究，缺乏可迁移的系统生物学方法或建模框架，不符合方法论精选方向。"
+    },
+    {
+      "pmid": "42044361",
+      "title": "Comparative Evaluation of Engineered Bacteria and Yeast for Oral Delivery of CRISPR/Cas9 Systems in Colon Cancer Therapy.",
+      "journal": "ACS Synth Biol",
+      "bucket": "application_case",
+      "reason": "针对特定癌症靶基因的微生物递送平台比较，属于典型应用案例，缺乏普适性方法学创新。"
+    },
+    {
+      "pmid": "42031713",
+      "title": "Intrinsic edge dislocations promote high-temperature strength and ductility in additively manufactured refractory high-entropy alloys.",
+      "journal": "Nat Commun",
+      "bucket": "application_case",
+      "reason": "纯特定合金体系（Nb40Ta25Ti15Hf15Zr5）的增材制造与性能优化，缺乏可迁移的新方法或普适机制洞见。"
+    },
+    {
+      "pmid": "42026043",
+      "title": "Spatiotemporal asymmetries on brain energy landscape uncover system entrapment related to depression severity.",
+      "journal": "Nat Commun",
+      "bucket": "mechanism_case",
+      "reason": "主要价值在于抑郁症特异的脑状态转换异常发现，缺乏可迁移的计算方法或分析框架创新。"
+    },
+    {
+      "pmid": "42025218",
+      "title": "Yeast MoClo Secretion and Surface Display Toolkit 2.0: Improvements and Applications for Analysis of protein-protein Interactions and Whole-Cell Biocatalysis.",
+      "journal": "ACS Synth Biol",
+      "bucket": "incremental_tooling",
+      "reason": "对已有MoClo分泌展示工具包的增量改进和常规应用展示，未带来新的方法学能力或框架突破。"
+    },
+    {
+      "pmid": "42020735",
+      "title": "A pro-carcinogenic bacterial toxin binds claudin-4 to cleave E-cadherin.",
+      "journal": "Nature",
+      "bucket": "descriptive_study",
+      "reason": "应用现有CRISPR筛选鉴定受体并阐述特定毒素机制，属于具体分子案例，缺乏可迁移的方法学创新。"
+    }
+  ],
+  "translated_count": 12
 }

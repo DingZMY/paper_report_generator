@@ -1,14 +1,15 @@
 # 🧬 Bio Digest — 系统/合成生物学文献周报
 
-全自动文献整理系统，每周从 Nature / Cell / Science 系列期刊收集系统生物学与合成生物学论文，通过 Moonshot Kimi AI 翻译摘要并提炼核心发现，自动生成中英双语 HTML + Markdown 报告并部署至 GitHub Pages。
+全自动文献整理系统，每周从 Nature / Cell / Science 系列期刊收集系统生物学与合成生物学论文，先用 DeepSeek v4-pro 做语义精筛，再完成摘要翻译与核心发现提炼，最终自动生成中英双语 HTML + Markdown 报告并部署至 GitHub Pages。
 
 ## 功能特性
 
 - **自动采集**：PubMed E-utilities API，覆盖 23 个顶刊及子刊
 - **精准筛选**：仅保留 Research Article，排除 Review / Editorial / Letter 等；负向过滤多组学文章
-- **AI 翻译**：Moonshot Kimi（`kimi-k2.5`），翻译摘要 + 提炼 3 条核心发现
+- **LLM 精筛**：DeepSeek v4-pro 二次判断论文是否偏方法论，剔除纯应用型案例和无方法创新的描述性研究
+- **AI 翻译**：DeepSeek v4-pro，翻译摘要 + 提炼 3 条核心发现
 - **双语输出**：中英对照卡片式 HTML 报告 + Markdown 存档
-- **全自动运行**：GitHub Actions 每周一 06:00 UTC 自动触发，零人工干预
+- **全自动运行**：GitHub Actions 每周一 00:00 UTC 自动触发（北京时间 08:00），零人工干预
 - **增量处理**：已翻译论文不会重复调用 API
 
 ## 快速开始
@@ -23,16 +24,20 @@
 
 | Secret 名 | 说明 | 获取地址 |
 |---|---|---|
-| `KIMI_API_KEY` | Moonshot Kimi API Key（必须） | [platform.moonshot.cn](https://platform.moonshot.cn) |
+| `DEEPSEEK_API_KEY` | DeepSeek API Key（必须） | [platform.deepseek.com](https://platform.deepseek.com) |
 | `PUBMED_API_KEY` | NCBI API Key（可选，速率 3→10 req/s） | [NCBI 账号中心](https://www.ncbi.nlm.nih.gov/account/) |
 
 ### 3. 开启 GitHub Pages
 
-进入 **Settings → Pages**，Source 选择 **Deploy from a branch**，Branch 选 `main`，目录选 `/docs`，点击 Save。
+进入 **Settings → Pages**，Build and deployment 的 Source 选择 **GitHub Actions**。
 
-### 4. 触发首次运行
+### 4. 确认 Actions 写权限
 
-进入 **Actions → "1. Collect & Translate Papers" → Run workflow** 手动触发。
+进入 **Settings → Actions → General → Workflow permissions**，选择 **Read and write permissions**。
+
+### 5. 触发首次运行
+
+进入 **Actions → "1. Collect, Filter & Translate Papers" → Run workflow** 手动触发。
 
 报告将在约 5-10 分钟后出现在 `https://<你的用户名>.github.io/<仓库名>/`。
 
@@ -43,11 +48,13 @@
 ```
 bio-digest/
 ├── .github/workflows/
-│   ├── 1-collect-papers.yml   # Action #1：采集 + 翻译，每周一自动运行
+│   ├── 1-collect-papers.yml   # Action #1：采集 + 筛选 + 翻译，每周一自动运行
 │   └── 2-generate-report.yml  # Action #2：生成报告 + 部署 Pages
 ├── scripts/
 │   ├── collect_papers.py      # PubMed E-utilities 采集客户端
-│   ├── translate_papers.py    # Moonshot Kimi API 翻译客户端
+│   ├── filter_papers.py       # DeepSeek 语义筛选客户端
+│   ├── deepseek_utils.py      # DeepSeek 共享配置与 JSON 解析
+│   ├── translate_papers.py    # DeepSeek API 翻译客户端
 │   └── generate_report.py     # Jinja2 报告渲染器
 ├── templates/
 │   ├── report.html.j2         # 卡片式双语 HTML 模板
@@ -94,6 +101,20 @@ bio-digest/
 
 > **注意**：omics 方向的新颖**方法开发**文章（如新算法、新计算框架）不受以上排除影响，仍可通过正向关键词入选。
 
+## LLM 二次筛选
+
+在 PubMed 关键词过滤之后，系统会再调用一次 DeepSeek v4-pro，对每篇论文做语义判断：
+
+- **优先保留**：新方法、新框架、新工具、新建模范式、新实验平台、可迁移的机制洞察
+- **酌情保留**：有明显概念新意、机制新意或演化启发性的 case study
+- **倾向剔除**：
+        - 纯应用导向的代谢工程、产物优化、特定酶或特定通路案例
+        - 仅套用现成 omics / CRISPR / 机器学习工具、但方法本身无创新的研究
+        - 主要价值局限于具体疾病、菌株、细胞系或材料体系，缺乏方法论迁移性
+        - 主要是局部性能改良、没有带来新方法学能力的增量工具优化
+
+筛除结果会写回每周 JSON 数据文件，包含保留/剔除决定和简短理由，便于回查。
+
 ### 文章类型限制
 
 仅收录 **Research Article**（`Journal Article`），自动排除 Review、Comment、Editorial、News、Letter。
@@ -101,10 +122,10 @@ bio-digest/
 ## 运行时序
 
 ```
-每周一 06:00 UTC
+每周一 00:00 UTC（北京时间 08:00）
         │
         ▼
-[Action #1] collect_papers.py → translate_papers.py → git push data/
+[Action #1] collect_papers.py → filter_papers.py → translate_papers.py → git push data/
         │
         ▼ (workflow_run 触发)
 [Action #2] generate_report.py → git push docs/ reports/
@@ -120,11 +141,12 @@ GitHub Pages 自动更新
 pip install -r requirements.txt
 
 # 设置环境变量
-export KIMI_API_KEY="your_key_here"
+export DEEPSEEK_API_KEY="your_key_here"
 export PUBMED_API_KEY="your_key_here"  # 可选
 
 # 按顺序运行
 python scripts/collect_papers.py
+python scripts/filter_papers.py
 python scripts/translate_papers.py
 python scripts/generate_report.py
 

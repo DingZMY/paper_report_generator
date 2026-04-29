@@ -3,7 +3,7 @@ name: "2. Generate Report & Deploy Pages"
 on:
   # 在 Action #1 完成后自动触发
   workflow_run:
-    workflows: ["1. Collect & Translate Papers"]
+    workflows: ["1. Collect, Filter & Translate Papers"]
     types: [completed]
   # 也支持手动触发（用于本地调试后的手动发布）
   workflow_dispatch:
