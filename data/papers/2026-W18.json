@@ -1,11 +1,11 @@
 {
   "week": "2026-W18",
-  "generated_at": "2026-04-29T07:40:55.979361Z",
+  "generated_at": "2026-04-29T08:59:11.249642Z",
   "date_range": {
     "start": "2026/04/22",
     "end": "2026/04/29"
   },
-  "total": 35,
+  "total": 33,
   "papers": [
     {
       "pmid": "42050111",
@@ -36,9 +36,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出基于深度学习的单帧扩散率成像新方法，大幅提升数据密度，无需轨迹连接，属全新实验与计算工具",
+        "reason": "提出SMLDM/MPALM，利用深度学习从单帧快照直接估计扩散系数，无需轨迹链接，实现高密度超分辨扩散成像，属全新方法框架",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:41:23.694872Z"
+        "filtered_at": "2026-04-29T08:59:36.364972Z"
       }
     },
     {
@@ -83,9 +83,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "framework",
-        "reason": "提出耦合电极-轴突几何与钾动力学的分岔框架，可解释并预测高频刺激下放电模式转变，理论可迁移。",
+        "reason": "提出轴突放电模式分岔的统一框架，结合理论与实验，具可迁移机制洞察。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:41:42.998664Z"
+        "filtered_at": "2026-04-29T08:59:53.914900Z"
       }
     },
     {
@@ -124,9 +124,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "建立了基于遗传密码扩展和FRET的通用策略，用于在纯化膜蛋白中定点引入荧光探针并检测构象变化，方法本身具有可迁移性。",
+        "reason": "利用遗传密码扩展和荧光非天然氨基酸建立FRET方法，直接测量全长hHv1构象变化，方法可迁移至其他膜蛋白。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:41:54.114429Z"
+        "filtered_at": "2026-04-29T09:00:05.499453Z"
       }
     },
     {
@@ -156,7 +156,14 @@
         "网络捕获独特功能信息，揭示未表征基因角色及癌症细胞系特异性遗传依赖的分子决定因素。",
         "建立通用数据驱动策略，系统探索人类细胞系基因功能及其功能连接。"
       ],
-      "translated_at": "2026-04-29T07:56:14.745282Z"
+      "translated_at": "2026-04-29T07:56:14.745282Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "构建人类细胞全局遗传互作网络，提供普适的数据驱动策略以映射功能模块并解释遗传依赖性。",
+        "model": "deepseek-v4-pro",
+        "filtered_at": "2026-04-29T09:00:42.409250Z"
+      }
     },
     {
       "pmid": "42045226",
@@ -195,9 +202,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出可解释、可扩展的进化信息驱动突变效应预测方法ProteoCast，适用于全蛋白质组，属新计算策略。",
+        "reason": "提出基于进化信息的可扩展全蛋白质组突变功能预测方法，提供公开资源与可部署流程，具普适性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:43:14.179685Z"
+        "filtered_at": "2026-04-29T09:01:00.950610Z"
       }
     },
     {
@@ -239,46 +246,10 @@
       "translated_at": "2026-04-29T07:57:34.739779Z",
       "llm_filter": {
         "decision": "keep",
-        "bucket": "method",
-        "reason": "揭示组间与个体内分析因非遍历性产生反转，提出必须区分层级的新方法论要求",
+        "bucket": "framework",
+        "reason": "揭示神经认知数据中的非遍历性和辛普森悖论，强调个体内推断的必要性，具有跨领域方法论意义。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:43:29.765736Z"
-      }
-    },
-    {
-      "pmid": "42044170",
-      "title": "Polyphosphate modulates the stress-responsive formation of functional RNA-protein condensates in bacteria and mammalian cells.",
-      "journal": "PLoS Biol",
-      "authors": [
-        "Guan Jian",
-        "Hurto Rebecca Lee",
-        "Rai Akash",
-        "Bhattrai Janakraj",
-        "Azaldegui Christopher A",
-        "Ortiz-Rodríguez Luis A",
-        "et al."
-      ],
-      "abstract": "Uncovering what drives select biomolecules to form phase-separated condensates in vivo and identifying their physiological significance are topics of fundamental importance. Here, we show that nitrogen-starved Escherichia coli produces long-chain polyphosphates, which scaffold the RNA chaperone Hfq into high molecular weight complexes, which eventually phase separate together with components of the RNA translation and processing machinery. The presence of polyphosphate within these condensates controls Hfq function by selectively stabilizing polyadenylated RNAs involved in transcription and protein translation and by promoting interactions with translation- and RNA-metabolism-associated proteins involved in de novo protein synthesis. Lack of polyphosphate significantly impairs condensate formation, increases cell death, and hinders recovery from N-starvation. In functional analogy, we demonstrate that polyP contributes specifically to the formation of Processing (P)-bodies in human cell lines, revealing that a single, highly conserved and ancestral polyanion serves as a modulator for functional phase-separated condensate formation across the tree of life.",
-      "doi": "10.1371/journal.pbio.3003775",
-      "url": "https://doi.org/10.1371/journal.pbio.3003775",
-      "pub_date": "2026-Apr-27",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [],
-      "abstract_zh": "揭示驱动特定生物分子在体内形成相分离凝聚物的因素及其生理意义是至关重要的问题。本研究发现，氮饥饿的大肠杆菌产生长链聚磷酸盐，作为RNA伴侣Hfq的支架，促使其形成高分子量复合物，并最终与RNA翻译和加工机器组分一起发生相分离。凝聚物中的聚磷酸盐通过选择性地稳定参与转录和蛋白质翻译的多聚腺苷酸化RNA，并促进与涉及全新蛋白质合成的翻译及RNA代谢相关蛋白的相互作用，来调控Hfq功能。缺乏聚磷酸盐会显著损害凝聚物形成，增加细胞死亡，并阻碍氮饥饿后的恢复。功能类比显示，聚磷酸盐特异地促进人细胞系中加工小体（P-body）的形成，揭示了一种单一、高度保守的祖先多聚阴离子充当跨生命树功能性相分离凝聚物形成的调节因子。",
-      "key_findings": [
-        "氮饥饿大肠杆菌产生的长链聚磷酸盐作为支架，诱导Hfq与翻译和RNA代谢组分发生相分离。",
-        "聚磷酸盐通过稳定多聚腺苷酸化RNA和招募翻译相关蛋白调控Hfq功能，缺失会损害恢复与存活。",
-        "人细胞中聚磷酸盐特异地促进P-body形成，表明其为跨生命树保守的相分离调控因子。"
-      ],
-      "translated_at": "2026-04-29T07:57:55.744193Z",
-      "llm_filter": {
-        "decision": "keep",
-        "bucket": "mechanism_case",
-        "reason": "揭示了聚磷酸盐作为保守聚阴离子在相分离凝聚体形成中的调控作用，具有跨物种的机制普适性和演化启发性。",
-        "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:44:09.127020Z"
+        "filtered_at": "2026-04-29T09:01:19.746706Z"
       }
     },
     {
@@ -310,9 +281,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "framework",
-        "reason": "提出跨尺度平均场框架，耦合反应扩散与流体动力学，捕捉细胞迁移的涌现行为，具有理论方法论价值",
+        "reason": "提出耦合反应扩散与流体动力学的新跨尺度平均场框架，可普适地阐释细胞迁移模态，具明确的方法学可迁移性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:44:22.086582Z"
+        "filtered_at": "2026-04-29T09:02:15.001943Z"
       }
     },
     {
@@ -343,9 +314,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出一站式原位测序图像处理软件STARCall，通过单步拼接对齐和改进过滤显著提升分析性能，属于新工具与方法。",
+        "reason": "开发了将图像拼接、对齐和读码整合于一体的原位测序分析软件，显著提升可扩展性与准确性，属新方法工具。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:44:31.497578Z"
+        "filtered_at": "2026-04-29T09:02:29.275063Z"
       }
     },
     {
@@ -376,10 +347,10 @@
       "translated_at": "2026-04-29T07:59:33.422334Z",
       "llm_filter": {
         "decision": "keep",
-        "bucket": "mechanism_case",
-        "reason": "提出神经/胶质血管耦合的新模型，解析肌源性自调节与振荡生成的整合机制，具有概念创新和可迁移的系统生物学框架潜力。",
+        "bucket": "framework",
+        "reason": "提出神经血管与胶质血管耦合的新生物物理模型，系统解析血管动力学机制，可为定量分析奠基，具方法学新建模范式。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:44:46.218185Z"
+        "filtered_at": "2026-04-29T09:02:44.069911Z"
       }
     },
     {
@@ -410,9 +381,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出遗传编码金结合肽靶向组装导电界面的通用策略，显著提升电子提取效率且可跨系统迁移。",
+        "reason": "提出基因编码肽引导纳米颗粒在活细胞菌毛上靶向组装的新策略，创建精准导电界面，方法具普适性和可迁移性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:44:58.073719Z"
+        "filtered_at": "2026-04-29T09:02:56.223471Z"
       }
     },
     {
@@ -443,9 +414,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出基于自注意力超图神经网络预测高阶遗传交互的新方法，方法本身具有普适性，非单纯案例应用。",
+        "reason": "开发了基于自注意力超图神经网络的Dango方法，预测高阶遗传相互作用，提供可迁移的计算新框架。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:45:05.471984Z"
+        "filtered_at": "2026-04-29T09:03:02.706670Z"
       }
     },
     {
@@ -479,9 +450,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "framework",
-        "reason": "提出工程化共生菌的模块化平台，实现多代谢物调节，为肠道-肝脏-大脑轴紊乱提供可编程策略。",
+        "reason": "提出工程化共生菌作为模块化、可编程平台，用于多代谢物调节宿主-微生物代谢，具有普适方法论价值。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:45:23.016135Z"
+        "filtered_at": "2026-04-29T09:03:19.487745Z"
       }
     },
     {
@@ -515,9 +486,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "mechanism_case",
-        "reason": "揭示trans-AT PKS中不依赖缩合的非延伸模块内链转位新机制，概念新颖且可能普适适用于聚酮工程。",
+        "reason": "发现trans-AT PKS中不依赖缩合的模块内转位新机制，保守结合模式具普遍性，为聚酮工程提供新思路。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:45:33.325008Z"
+        "filtered_at": "2026-04-29T09:03:36.975866Z"
       }
     },
     {
@@ -551,9 +522,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "开发新型红色钙传感器PinkyCaMP，基于mScarlet提升亮度与光稳定性，具备普适成像工具价值。",
+        "reason": "开发了基于mScarlet的新型钙传感器，显著提升亮度、光稳定性及信噪比，并实现与光遗传学多路复用，属方法学突破。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:45:44.421075Z"
+        "filtered_at": "2026-04-29T09:03:45.598707Z"
       }
     },
     {
@@ -587,9 +558,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出高通量组合域筛选平台COMBINE，系统解析表观遗传域互作，可推广用于组合生物过程功能表征。",
+        "reason": "开发了COMBINE高通量组合筛选平台，系统解析表观遗传域配对，提供新方法论和普适框架",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:45:56.795293Z"
+        "filtered_at": "2026-04-29T09:03:56.575841Z"
       }
     },
     {
@@ -629,9 +600,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "首次在甲烷氧化菌中建立CRISPRi全基因组筛选平台，提供了可迁移的功能基因组学新工具。",
+        "reason": "开发了针对甲烷氧化菌的CRISPRi全基因组功能筛选平台与sgRNA文库，方法可迁移至其他非模式菌。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:46:27.402058Z"
+        "filtered_at": "2026-04-29T09:04:23.884987Z"
       }
     },
     {
@@ -659,9 +630,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出了逆建模驱动群体自动构建与跨平台并行仿真的新方法论及开源软件pNMS，具可迁移性。",
+        "reason": "提出自动化群体构建与并行模拟的新方法及开源软件pNMS，方法论通用可迁移，属于新工具和框架。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:46:34.617351Z"
+        "filtered_at": "2026-04-29T09:04:44.905782Z"
       }
     },
     {
@@ -704,9 +675,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "mechanism_case",
-        "reason": "揭示前庭动纤毛兼具初级纤毛与运动纤毛的分子特征和自发运动能力，具有明显概念新意和演化启发。",
+        "reason": "揭示前庭动纤毛兼具初级与运动纤毛分子特征并自发运动，提供新的细胞层级机制洞察，具有一定可迁移性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:46:44.018320Z"
+        "filtered_at": "2026-04-29T09:05:01.869613Z"
       }
     },
     {
@@ -740,9 +711,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出多色细菌传感器新平台，利用荧光颜色差异和智能手机成像同时定量两种抗生素的生物可利用部分，方法可迁移。",
+        "reason": "构建了可同时检测多种抗生素的多彩细菌传感器，实现了混合物现场视觉定量，属于新颖的方法学平台。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:47:43.833139Z"
+        "filtered_at": "2026-04-29T09:05:22.335373Z"
       }
     },
     {
@@ -785,9 +756,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出仿生超材料界面解码机械皮肤活动的新框架，兼具信号选择放大与噪声抑制，方法可迁移。",
+        "reason": "提出仿生超材料界面与机械皮肤活动概念，构建了能普适迁移的新型传感与解码范式。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:47:53.660491Z"
+        "filtered_at": "2026-04-29T09:05:37.139495Z"
       }
     },
     {
@@ -832,9 +803,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "mechanism_case",
-        "reason": "揭示机械力通过细胞体积液压调控驱动器官形态发生的新原理，具有可迁移的概念洞察",
+        "reason": "揭示Piezo1-钙调蛋白-水通道协同调控细胞体积的机械水力机制，对器官形态发生有普适启发，概念新。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:48:06.743200Z"
+        "filtered_at": "2026-04-29T09:05:47.677102Z"
       }
     },
     {
@@ -875,9 +846,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出结合Cas9切割与接合转移的PACT方法，实现高效迭代组装大片段DNA并自动化，方法创新显著。",
+        "reason": "提出基于Cas9与接合转移的自动化长片段DNA组装新方法PACT/aPACT，并成功组装拟南芥细胞器基因组，方法论普适性强。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:48:19.331347Z"
+        "filtered_at": "2026-04-29T09:05:54.722186Z"
       }
     },
     {
@@ -922,9 +893,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "mechanism_case",
-        "reason": "揭示了ZIC2在神经诱导中的双重转录因子角色，提供了可迁移的TF时序作用机制洞察。",
+        "reason": "揭示ZIC2在神经诱导中从染色质priming到增强子激活的双重机制，具普适意义。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:48:53.438510Z"
+        "filtered_at": "2026-04-29T09:06:06.686831Z"
       }
     },
     {
@@ -958,9 +929,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出从头设计化学光遗传学工具的新范式，实现光开关分子与人工蛋白结合对的可编程调控。",
+        "reason": "提出从头设计可定制光开关并定向进化人工结合蛋白的通用框架，方法学创新且可广泛迁移。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:49:01.442779Z"
+        "filtered_at": "2026-04-29T09:06:15.696978Z"
       }
     },
     {
@@ -994,9 +965,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "将retron重组工程扩展至跨门15种细菌，验证可移植性并提供物种适应性优化，是基因组编辑方法的普适性创新。",
+        "reason": "将基于retron的基因组编辑工具系统拓展至3个门15种细菌，验证跨物种通用性并提出物种特异性适配策略，方法迁移价值高。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:49:12.877705Z"
+        "filtered_at": "2026-04-29T09:06:33.637172Z"
       }
     },
     {
@@ -1041,56 +1012,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "mechanism_case",
-        "reason": "揭示机械负荷通过染色质重塑抑制心肌癌细胞增殖的新机制，概念新颖，启示机械刺激抗癌策略。",
+        "reason": "揭示机械负荷通过染色质压缩抑制癌细胞增殖的新机制，提出普适性机械刺激抗癌策略，概念新意强。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:49:52.620065Z"
-      }
-    },
-    {
-      "pmid": "42020373",
-      "title": "TBL1X/TBL1XR1 govern β-cell identity through a PAX6-containing gene regulatory network.",
-      "journal": "Nat Commun",
-      "authors": [
-        "Walth-Hummel Alina A",
-        "Jouffe Celine",
-        "Weber Peter",
-        "Motzler Karsten",
-        "Geppert Julia",
-        "Sterr Michael",
-        "et al."
-      ],
-      "abstract": "A main mechanism of β-cell dysfunction in diabetes is loss of identity, controlled by transcription factors that induce identity gene expression and disallowed gene repression. How transcription factors facilitate simultaneous expression and repression is not fully understood, representing a knowledge gap in diabetes research. We identify the transcriptional co-factors transducin β-like 1 x-linked (TBL1X) and its homolog TBL1X-related (TBL1XR1, together TBL/R1) as crucial regulators of β-cell identity and determinants of diabetes development and progression. β-cell specific TBL/R1 knockout in mice leads to progressive hypoinsulinemia and hyperglycemia. scRNA-sequencing reveals loss of β-cells, emergence of polyhormonal cells, and reduced β-cell maturity upon TBL/R1 knockout. Interactome screens and chromatin immunoprecipitation show TBL/R1 directly regulate insulin promoter activity through a PAX6-HDAC3 gene regulatory network, evident also in human models. TBL/R1 associates with diabetes in humans, thus our study uncovers an additional regulatory layer maintaining β-cell identity crucial for diabetes development and progression.",
-      "doi": "10.1038/s41467-026-72077-5",
-      "url": "https://doi.org/10.1038/s41467-026-72077-5",
-      "pub_date": "2026-Apr-23",
-      "pub_types": [
-        "journal article"
-      ],
-      "keywords": [
-        "Insulin-Secreting Cells",
-        "Animals",
-        "Mice",
-        "Mice, Knockout",
-        "PAX6 Transcription Factor",
-        "Gene Regulatory Networks",
-        "Humans",
-        "Histone Deacetylases",
-        "Insulin",
-        "Receptors, Cytoplasmic and Nuclear"
-      ],
-      "abstract_zh": "糖尿病中β细胞功能障碍的主要机制是身份丧失，该过程由诱导身份基因表达并抑制disallowed基因的转录因子所调控。转录因子如何同时促进表达与抑制仍是糖尿病研究中的知识空白。本研究鉴定出转录辅因子转导素β样蛋白1 X连锁(TBL1X)及其同源物TBL1X相关蛋白(TBL1XR1，合称TBL/R1)是维持β细胞身份及决定糖尿病发生发展的关键因子。小鼠β细胞特异性敲除TBL/R1导致进行性低胰岛素血症和高血糖。单细胞RNA测序(scRNA-seq)显示敲除后出现β细胞丢失、多激素细胞涌现及成熟度下降。互作组筛选和染色质免疫共沉淀(ChIP)证实TBL/R1通过PAX6-HDAC3基因调控网络直接调控胰岛素启动子活性，且该机制在人类模型中得到验证。鉴于TBL/R1与人类糖尿病相关，本研究揭示了维持β细胞身份的关键调控新层级。",
-      "key_findings": [
-        "鉴定TBL1X/TBL1XR1为维持β细胞身份的关键转录辅因子，决定糖尿病发生发展",
-        "敲除TBL/R1导致β细胞丢失、多激素细胞出现及成熟度下降，引发进行性高血糖",
-        "揭示TBL/R1通过PAX6-HDAC3网络直接调控胰岛素启动子，在人类模型中得到验证"
-      ],
-      "translated_at": "2026-04-27T08:31:05.123720Z",
-      "llm_filter": {
-        "decision": "keep",
-        "bucket": "mechanism_case",
-        "reason": "发现TBL/R1通过PAX6-HDAC3网络协调基因激活与抑制的新调控逻辑，具有机制普遍性启发意义。",
-        "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:50:33.133732Z"
+        "filtered_at": "2026-04-29T09:07:05.310547Z"
       }
     },
     {
@@ -1121,9 +1045,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出可近似任意动力学的循环化学神经网络框架，兼具理论可训练性与DNA链置换实验可行性，方法通用。",
+        "reason": "提出可训练化学神经元网络以近似任意动力学的新方法，具有合成生物学通用方法论价值",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:50:41.823071Z"
+        "filtered_at": "2026-04-29T09:07:51.201361Z"
       }
     },
     {
@@ -1157,9 +1081,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出了可推广的多色抗原稳定化纳米抗体合成平台，实现背景自由、多色、功能成像等新能力。",
+        "reason": "提出了一种可推广的合成多色抗原稳定化荧光纳米抗体平台，方法学创新突出，可普适于多种成像和功能研究。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:50:58.131370Z"
+        "filtered_at": "2026-04-29T09:07:57.245209Z"
       }
     },
     {
@@ -1201,9 +1125,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "提出体外模拟分叉糖基化通路的方法框架，结合动力学与计算模拟解码肿瘤相关糖基化机制，方法可迁移。",
+        "reason": "开发体外一锅法结合动力学模拟的新方法，解析高尔基体糖基化空间与动力学，具有普适的方法学迁移性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:51:30.794895Z"
+        "filtered_at": "2026-04-29T09:08:20.911595Z"
       }
     },
     {
@@ -1236,9 +1160,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "framework",
-        "reason": "整合理论与机器学习构建质粒拷贝数预测框架，揭示关键决定因子，方法可迁移至多种组学场景。",
+        "reason": "整合理论与机器学习，提出了质粒拷贝数决定因素的新框架，具可迁移方法学价值。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:51:39.424699Z"
+        "filtered_at": "2026-04-29T09:08:52.519581Z"
       }
     },
     {
@@ -1270,9 +1194,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "开发了整合病毒-DIP-IFN的空间随机模型与交互平台，属于新模拟框架与工具，具有方法学创新和可迁移性。",
+        "reason": "开发空间显式随机模型整合DIP与IFN动态，揭示斑块形态和逃逸机制，并提供交互平台，具有方法论新意。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:51:51.456569Z"
+        "filtered_at": "2026-04-29T09:09:55.121094Z"
       }
     },
     {
@@ -1315,9 +1239,9 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "framework",
-        "reason": "提出利用蛋白设计实验反馈识别失败模式并迭代优化能量函数的新范式，方法论可迁移。",
+        "reason": "提出用实验设计反馈指导能量函数开发的新范式，解决通用力场过包装问题，具方法论可迁移性。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:52:01.380955Z"
+        "filtered_at": "2026-04-29T09:10:06.159511Z"
       }
     },
     {
@@ -1357,80 +1281,94 @@
       "llm_filter": {
         "decision": "keep",
         "bucket": "method",
-        "reason": "开发了可定量的体内CRISPR成像平台，结合图像表型分析和广义加性模型，可普适用于形态筛选。",
+        "reason": "开发了可量化的体内CRISPR-成像筛选平台及形态学建模管线，方法普适，非单一应用案例。",
         "model": "deepseek-v4-pro",
-        "filtered_at": "2026-04-29T07:52:20.448901Z"
+        "filtered_at": "2026-04-29T09:10:13.368922Z"
       }
     }
   ],
   "pre_llm_filter_total": 44,
-  "llm_filtered_out": 9,
+  "llm_filtered_out": 11,
   "llm_filter_model": "deepseek-v4-pro",
-  "llm_filtered_at": "2026-04-29T07:52:21.661253Z",
+  "llm_filtered_at": "2026-04-29T09:10:14.569060Z",
   "filtered_out_papers": [
     {
       "pmid": "42049740",
       "title": "Uromodulin p.His36Tyr promotes macrophage pyroptosis via App-Cd74 signaling to drive renal inflammation in ADTKD.",
       "journal": "Nat Commun",
       "bucket": "mechanism_case",
-      "reason": "特定疾病的致病机制研究，虽揭示新通路但缺乏可推广的方法学创新"
+      "reason": "该研究聚焦于特定疾病突变机制和药物测试，无系统性或方法论创新，属常规机制研究。"
     },
     {
       "pmid": "42048483",
       "title": "Metabolic Engineering of Bacillus subtilis for High-Level Production of Salidroside from Potato Starch.",
       "journal": "ACS Synth Biol",
       "bucket": "application_case",
-      "reason": "纯应用导向的代谢工程案例，针对特定产物红景天苷进行菌株优化，方法无普适创新。"
+      "reason": "典型的代谢工程高产案例，仅组合已有策略优化特定产物合成，无新方法或可迁移机制创新。"
     },
     {
       "pmid": "42046433",
       "title": "Engineering Pseudomonas putida for the Production of 2,3-Butanediol Isomers and Acetoin.",
       "journal": "ACS Synth Biol",
       "bucket": "application_case",
-      "reason": "纯代谢工程菌株构建与发酵优化，无新方法或可迁移机制创新"
+      "reason": "将已知的budABC操纵子导入新宿主优化产物产量，属纯应用代谢工程，无方法学创新。"
     },
     {
       "pmid": "42045196",
       "title": "Targeting insulo-frontal pathway to reduce stress-evoked cognitive rigidity.",
       "journal": "Nat Commun",
-      "bucket": "descriptive_study",
-      "reason": "特定神经回路机制研究，缺乏可迁移的系统生物学方法或建模框架，不符合方法论精选方向。"
+      "bucket": "mechanism_case",
+      "reason": "该研究是特定神经回路的机制探索，未提出可迁移的新方法或框架，不适合偏方法论的周报。"
     },
     {
       "pmid": "42044361",
       "title": "Comparative Evaluation of Engineered Bacteria and Yeast for Oral Delivery of CRISPR/Cas9 Systems in Colon Cancer Therapy.",
       "journal": "ACS Synth Biol",
       "bucket": "application_case",
-      "reason": "针对特定癌症靶基因的微生物递送平台比较，属于典型应用案例，缺乏普适性方法学创新。"
+      "reason": "纯应用导向的口服CRISPR递送平台，针对特定靶点ART1和结肠癌，无新方法或框架贡献。"
+    },
+    {
+      "pmid": "42044170",
+      "title": "Polyphosphate modulates the stress-responsive formation of functional RNA-protein condensates in bacteria and mammalian cells.",
+      "journal": "PLoS Biol",
+      "bucket": "descriptive_study",
+      "reason": "描述polyP调控相分离的保守机制，未提出新方法或普适建模策略，仅为具体系统发现。"
     },
     {
       "pmid": "42031713",
       "title": "Intrinsic edge dislocations promote high-temperature strength and ductility in additively manufactured refractory high-entropy alloys.",
       "journal": "Nat Commun",
       "bucket": "application_case",
-      "reason": "纯特定合金体系（Nb40Ta25Ti15Hf15Zr5）的增材制造与性能优化，缺乏可迁移的新方法或普适机制洞见。"
+      "reason": "纯材料加工案例，聚焦特定高熵合金增材制造工艺，缺乏系统生物学方法论创新。"
     },
     {
       "pmid": "42026043",
       "title": "Spatiotemporal asymmetries on brain energy landscape uncover system entrapment related to depression severity.",
       "journal": "Nat Commun",
-      "bucket": "mechanism_case",
-      "reason": "主要价值在于抑郁症特异的脑状态转换异常发现，缺乏可迁移的计算方法或分析框架创新。"
+      "bucket": "application_case",
+      "reason": "将能量景观与状态转换分析应用于抑郁症数据，属疾病机制案例，缺乏可迁移的方法学创新。"
     },
     {
       "pmid": "42025218",
       "title": "Yeast MoClo Secretion and Surface Display Toolkit 2.0: Improvements and Applications for Analysis of protein-protein Interactions and Whole-Cell Biocatalysis.",
       "journal": "ACS Synth Biol",
       "bucket": "incremental_tooling",
-      "reason": "对已有MoClo分泌展示工具包的增量改进和常规应用展示，未带来新的方法学能力或框架突破。"
+      "reason": "在已有MoClo YSD工具包基础上增加部分部件和应用示例，属局部改进而非新方法学能力或范式。"
+    },
+    {
+      "pmid": "42020373",
+      "title": "TBL1X/TBL1XR1 govern β-cell identity through a PAX6-containing gene regulatory network.",
+      "journal": "Nat Commun",
+      "bucket": "mechanism_case",
+      "reason": "基于现有技术的β细胞身份机制研究，缺乏可迁移的方法框架，属特定疾病和细胞类型的经验性发现。"
     },
     {
       "pmid": "42020735",
       "title": "A pro-carcinogenic bacterial toxin binds claudin-4 to cleave E-cadherin.",
       "journal": "Nature",
       "bucket": "descriptive_study",
-      "reason": "应用现有CRISPR筛选鉴定受体并阐述特定毒素机制，属于具体分子案例，缺乏可迁移的方法学创新。"
+      "reason": "应用常规CRISPR筛选发现特定毒素受体，属于具体机制的描述性研究，无方法论创新。"
     }
   ],
-  "translated_count": 12
+  "translated_count": 0
 }
