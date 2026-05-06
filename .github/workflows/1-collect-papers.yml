@@ -44,6 +44,7 @@ jobs:
         run: python scripts/filter_papers.py
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          FILTER_POLICY_CONFIG: configs/filter_policy.json
 
       - name: Translate abstracts with DeepSeek
         run: python scripts/translate_papers.py

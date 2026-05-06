@@ -363,6 +363,7 @@
   <p><a href="index.html">← 返回 Bio Digest 首页</a></p>
 </footer>
 
+<script src="assets/feedback.js"></script>
 <script>
   const FAV_KEY = 'bio-digest-favorites';
 
@@ -372,6 +373,14 @@
   }
   function saveFavs(favs) {
     localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+  }
+
+  function trackFeedback(signal, action, paper, metadata) {
+    if (!window.BioDigestFeedback) return;
+    window.BioDigestFeedback.track(signal, action, paper, {
+      sourcePage: 'favorites',
+      metadata: metadata || {},
+    });
   }
 
   // ── Tab switching ────────────────────────────────────────────────
@@ -387,15 +396,21 @@
   // ── Remove one favorite ──────────────────────────────────────────
   function removeFav(pmid) {
     const favs = getFavs();
+    const paper = favs[pmid] || { pmid: pmid };
     delete favs[pmid];
     saveFavs(favs);
+    trackFeedback('favorite', 'remove', paper, { page: 'favorites' });
     renderFavs();
   }
 
   // ── Clear all ────────────────────────────────────────────────────
   function clearAll() {
     if (!confirm('确定要清空所有收藏吗？此操作不可撤销。')) return;
+    const papers = Object.values(getFavs());
     localStorage.removeItem(FAV_KEY);
+    papers.forEach(paper => {
+      trackFeedback('favorite', 'remove', paper, { page: 'favorites', bulk: true });
+    });
     renderFavs();
   }
 
@@ -487,7 +502,12 @@
       .replace(/'/g, '&#39;');
   }
 
-  document.addEventListener('DOMContentLoaded', renderFavs);
+  document.addEventListener('DOMContentLoaded', function() {
+    renderFavs();
+    if (window.BioDigestFeedback) {
+      void window.BioDigestFeedback.flushQueue();
+    }
+  });
 </script>
 </body>
 </html>

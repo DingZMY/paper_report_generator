@@ -1,0 +1,7 @@
+{
+  "policy_version": "2026-05-06",
+  "active_prompt_version": "v1",
+  "prompt_path": "configs/filter_prompts/v1.txt",
+  "evaluation_snapshot_id": null,
+  "notes": "Initial versioned filter policy extracted from the previously hardcoded prompt."
+}

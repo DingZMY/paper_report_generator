@@ -3,15 +3,19 @@ import os
 import re
 import sys
 
-from openai import OpenAI
-
 
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 MODEL = "deepseek-v4-pro"
 
 
-def make_client() -> OpenAI:
+def make_client():
+    try:
+        from openai import OpenAI
+    except ModuleNotFoundError:
+        print("[错误] 当前 Python 环境未安装 openai 依赖。", file=sys.stderr)
+        sys.exit(1)
+
     if not DEEPSEEK_API_KEY:
         print("[错误] 未设置 DEEPSEEK_API_KEY 环境变量。", file=sys.stderr)
         sys.exit(1)
