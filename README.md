@@ -2,13 +2,17 @@
 
 全自动文献整理系统，每周从 Nature / Cell / Science 系列期刊收集系统生物学与合成生物学论文，先用 DeepSeek v4-pro 做语义精筛，再完成摘要翻译与核心发现提炼，最终自动生成中英双语 HTML + Markdown 报告并部署至 GitHub Pages。
 
+当前版本已加入一套**反馈驱动筛选演化的基础设施**：筛选 prompt 版本化、前端收藏/归档反馈上报、反馈事件聚合快照。自动 prompt 晋升与回滚还在后续实现中。
+
 ## 功能特性
 
 - **自动采集**：PubMed E-utilities API，覆盖 23 个顶刊及子刊
 - **精准筛选**：仅保留 Research Article，排除 Review / Editorial / Letter 等；负向过滤多组学文章
 - **LLM 精筛**：DeepSeek v4-pro 二次判断论文是否偏方法论，剔除纯应用型案例和无方法创新的描述性研究
+- **策略版本化**：筛选 prompt 已从代码中抽离为配置文件，可记录 `policy_version` 与 `prompt_version`
 - **AI 翻译**：DeepSeek v4-pro，翻译摘要 + 提炼 3 条核心发现
 - **双语输出**：中英对照卡片式 HTML 报告 + Markdown 存档
+- **反馈采集基础**：周报页的收藏 / 归档行为可异步上报到轻量反馈服务，并聚合为稳定 JSON 快照
 - **全自动运行**：GitHub Actions 每周一 00:00 UTC 自动触发（北京时间 08:00），零人工干预
 - **增量处理**：已翻译论文不会重复调用 API
 
@@ -50,18 +54,29 @@ bio-digest/
 ├── .github/workflows/
 │   ├── 1-collect-papers.yml   # Action #1：采集 + 筛选 + 翻译，每周一自动运行
 │   └── 2-generate-report.yml  # Action #2：生成报告 + 部署 Pages
+├── configs/
+│   ├── filter_policy.json     # 当前激活的筛选策略与 prompt 版本
+│   └── filter_prompts/
+│       └── v1.txt            # 当前筛选 prompt 文本
 ├── scripts/
 │   ├── collect_papers.py      # PubMed E-utilities 采集客户端
-│   ├── filter_papers.py       # DeepSeek 语义筛选客户端
+│   ├── filter_papers.py       # DeepSeek 语义筛选客户端（支持策略配置）
 │   ├── deepseek_utils.py      # DeepSeek 共享配置与 JSON 解析
 │   ├── translate_papers.py    # DeepSeek API 翻译客户端
-│   └── generate_report.py     # Jinja2 报告渲染器
+│   ├── generate_report.py     # Jinja2 报告渲染器
+│   ├── feedback_server.py     # 轻量反馈接收服务（JSONL）
+│   └── aggregate_feedback.py  # 反馈事件聚合为稳定快照
 ├── templates/
 │   ├── report.html.j2         # 卡片式双语 HTML 模板
 │   ├── report.md.j2           # Markdown 模板
 │   └── index.html.j2          # GitHub Pages 首页模板
 ├── data/papers/               # 每周 JSON 数据存档（含翻译结果）
+├── data/feedback/
+│   ├── events/                # 原始反馈事件（JSONL）
+│   └── aggregated/            # 聚合反馈快照
 ├── docs/                      # GitHub Pages 输出根目录
+│   ├── assets/feedback.js     # 前端反馈上报客户端
+│   ├── favorites.html         # 收藏页
 │   ├── index.html             # 自动维护的报告列表首页
 │   └── reports/               # 每周 HTML 报告
 ├── reports/                   # Markdown 版本存档
@@ -115,6 +130,14 @@ bio-digest/
 
 筛除结果会写回每周 JSON 数据文件，包含保留/剔除决定和简短理由，便于回查。
 
+### 策略版本化（实验基础已实现）
+
+- 当前筛选策略由 `configs/filter_policy.json` 指向激活 prompt 文件，而不是硬编码在 `filter_papers.py` 中
+- `filter_papers.py` 会把 `prompt_version`、`policy_version`、`evaluation_snapshot_id` 写入 `llm_filter` 元数据
+- 可使用 `python scripts/filter_papers.py --print-policy` 检查当前生效策略，而不调用 LLM API
+
+这部分已经落地，后续会在此基础上继续实现自动候选 prompt 生成、离线评估和自动晋升。
+
 ### 文章类型限制
 
 仅收录 **Research Article**（`Journal Article`），自动排除 Review、Comment、Editorial、News、Letter。
@@ -134,6 +157,31 @@ bio-digest/
 GitHub Pages 自动更新
 ```
 
+## 反馈闭环基础（实验中）
+
+当前已经实现反馈闭环的基础设施，但还**没有**接入正式的自动 prompt 晋升流程。
+
+``` 
+用户浏览周报 / 收藏页
+        │
+        ├─ 收藏 / 取消收藏 → docs/assets/feedback.js
+        └─ 归档 / 取消归档 → docs/assets/feedback.js
+                              │
+                              ▼
+                    scripts/feedback_server.py
+                              │
+                              ▼
+                 data/feedback/events/*.jsonl
+                              │
+                              ▼
+                 scripts/aggregate_feedback.py
+                              │
+                              ▼
+             data/feedback/aggregated/latest.json
+```
+
+这一步的目标是先把用户行为沉淀为可审计、可回放的标签快照，为后续筛选 prompt 的自动评估与演化打基础。
+
 ## 本地调试
 
 ```bash
@@ -150,9 +198,24 @@ python scripts/filter_papers.py
 python scripts/translate_papers.py
 python scripts/generate_report.py
 
+# 查看当前筛选策略（不调用 API）
+python scripts/filter_papers.py --print-policy
+
 # 预览 HTML（需要 Python 3）
 cd docs && python -m http.server 8080
 ```
+
+### 本地反馈服务（实验）
+
+```bash
+# 启动反馈服务
+python scripts/feedback_server.py --host 127.0.0.1 --port 8787
+
+# 聚合反馈事件为稳定快照
+python scripts/aggregate_feedback.py
+```
+
+默认情况下，本地打开周报页时，`docs/assets/feedback.js` 会优先把反馈发送到 `http://127.0.0.1:8787/api/feedback/events`。
 
 ## License
 
