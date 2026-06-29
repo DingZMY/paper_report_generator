@@ -1,0 +1,1740 @@
+{
+  "week": "2026-W27",
+  "generated_at": "2026-06-29T00:29:45.926622Z",
+  "date_range": {
+    "start": "2026/06/22",
+    "end": "2026/06/29"
+  },
+  "total": 39,
+  "papers": [
+    {
+      "pmid": "42364991",
+      "title": "Active-learning-guided optimization of cell-free systems for genome-wide transcriptomic profiling reveals progressive layers of regulation.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Wagner Léa",
+        "Hoang An",
+        "Rue Olivier",
+        "Delumeau Olivier",
+        "Loux Valentin",
+        "Derache Gabin",
+        "et al."
+      ],
+      "abstract": "Understanding genome regulation is limited by the complexity of molecular interactions in living cells. Cell-free systems provide a simplified platform for studying gene expression, but low mRNA levels have prevented RNA-seq. To address this, we develop an active learning workflow combining Bayesian optimization with automated high-throughput experimentation to systematically explore over 1.6 million buffer compositions, experimentally testing 653. We identify a \"mRNA-optimized\" buffer (20-fold increase in mRNA yield) and a \"trade-off\" buffer (13-fold increase while maintaining protein production). Using direct RNA-seq, we profile the T7 phage transcriptome in cell-free systems and compare it with a purified T7-RNAP transcription system and phage-infected bacteria. This comparative analysis reveals distinct regulatory layers: the T7-RNAP system captures promoter-strength hierarchies but lacks RNA degradation, whereas cell-free systems provide an accurate estimation of in vivo expression and reveal mRNA maturation sites. This work establishes cell-free transcriptomics as a controlled approach to study genome regulation.",
+      "doi": "10.1038/s41467-026-74559-y",
+      "url": "https://doi.org/10.1038/s41467-026-74559-y",
+      "pub_date": "2026-Jun-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "理解基因组调控受限于活细胞中分子相互作用的复杂性。无细胞系统为研究基因表达提供了简化平台，但低mRNA水平阻碍了RNA-seq分析。为此，我们开发了一种主动学习工作流程，将贝叶斯优化与自动化高通量实验相结合，系统探索了超过160万种缓冲液组合，并实验测试了653种。我们鉴定出一种“mRNA优化”缓冲液（mRNA产量提高20倍）和一种“权衡”缓冲液（提高13倍同时维持蛋白质生产）。利用直接RNA-seq，我们描绘了无细胞系统中T7噬菌体的转录组，并将其与纯化T7-RNAP转录系统及噬菌体感染的细菌进行比较。该比较分析揭示了不同的调控层次：T7-RNAP系统捕获了启动子强度层级但缺乏RNA降解，而无细胞系统则提供了对体内表达的准确估计并揭示mRNA成熟位点。这项工作确立了无细胞转录组学作为研究基因组调控的受控方法。",
+      "key_findings": [
+        "开发主动学习工作流优化无细胞缓冲液，mRNA产量最高提升20倍。",
+        "比较分析表明T7-RNAP系统缺少RNA降解，无细胞系统可准确估计体内表达并识别mRNA成熟位点。",
+        "建立无细胞转录组学方法，为研究基因组调控提供可控平台并揭示渐进式调控层。"
+      ],
+      "translated_at": "2026-06-29T00:37:08.858633Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了主动学习优化无细胞体系的新方法，首次实现细胞外全转录组 RNA-seq，建立了可控的基因调控研究平台。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:29:51.709747Z"
+      }
+    },
+    {
+      "pmid": "42364984",
+      "title": "Prediction error correlates in the striosome-dopamine circuit emerge from information gain.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Beck Dirk W",
+        "Friedman Alexander"
+      ],
+      "abstract": "The striosome compartments in the striatum gate cortical inputs to dopamine neurons, which then feed back to the striosomes and surrounding matrix. This loop underlies decision-making, learning, and movement. Dopamine signals strongly correlate with reward prediction errors (RPEs) in certain tasks. However, many dopaminergic responses, such as to high costs, novelty, aversive stimuli, and real-time movement guidance, do not align with RPE. Separately, information theory explains how dopamine responds to uncertainty and encodes when rewards are expected to occur. Here, we show that apparent RPE correlations arise mathematically from the information gain of the policy of actions (policy-IG). Policy-IG quantifies how much newly arriving information changes choice. In simple reward tasks, policy-IG reduces to classic RPEs, but it also predicts dopamine responses to aversive events, nonlinear reward scaling, novelty, movement, state valuation, and moment-by-moment decision control. Thus, RPE could be a special case of this more general function. We show that policy-IG is mathematically related to a range of information-centric, Bayesian, active inference, and casual association models, allowing those models to formally incorporate the experimental RPE literature in their support. Simulating impaired policy-IG replicates basal ganglia disorder features, suggesting policy-IG as a target for therapies.",
+      "doi": "10.1038/s41467-026-73994-1",
+      "url": "https://doi.org/10.1038/s41467-026-73994-1",
+      "pub_date": "2026-Jun-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "纹状体中的小体区室筛选传向多巴胺神经元的皮层输入，这些神经元再反馈至小体和周围的基质。这一环路支持决策、学习与运动。在某些任务中，多巴胺信号与奖励预测误差（RPE）强相关。然而，许多多巴胺反应，如对高代价、新颖性、厌恶刺激和实时运动引导的反应，并不符合RPE。另一方面，信息论解释了多巴胺如何对不确定性做出反应并编码奖励预期发生的时间。在此，我们证明表观上的RPE相关在数学上源于行动策略的信息增益（policy-IG）。Policy-IG量化了新到达的信息在多大程度上改变选择。在简单奖励任务中，policy-IG退化为经典RPE，但它还能预测对厌恶事件、非线性奖励度量、新颖性、运动、状态估值和即时决策控制的多巴胺反应。因此，RPE可能是这一更一般函数的特例。我们展示了policy-IG与一系列以信息为中心的模型、贝叶斯模型、主动推理模型和因果关联模型在数学上相关，从而允许这些模型正式纳入实验RPE文献的支持。通过模拟受损的policy-IG，重现了基底神经节障碍的特征，提示policy-IG可作为治疗靶点。",
+      "key_findings": [
+        "策略信息增益（policy-IG）在数学上可推导出奖励预测误差，将RPE统一为特例。",
+        "Policy-IG能解释多巴胺对厌恶事件、新颖性及运动等非RPE的反应。",
+        "模拟policy-IG受损可复现基底神经节疾病特征，提示其作为治疗靶点。"
+      ],
+      "translated_at": "2026-06-29T00:37:20.013681Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出策略信息增益统一解释多巴胺多种响应，将RPE归为特例，属新理论框架，具广泛迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:29:55.769783Z"
+      }
+    },
+    {
+      "pmid": "42364977",
+      "title": "No cloning of quantum ensembles.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Du Zhenyu",
+        "Cheng Siyuan",
+        "Zhao Qi",
+        "Ma Xiongfeng",
+        "Yuan Xiao"
+      ],
+      "abstract": "Modern quantum physics now enables control of quantum systems at the level of individual trajectories, opening a new frontier that links quantum information theory, quantum many-body physics, and quantum thermodynamics, and uncovers novel non-equilibrium phenomena such as deep thermalization and measurement-induced entanglement. However, a central challenge remains: their characterization relies on measuring nonlinear properties of individual quantum states, a task tantamount to fine-grained cloning of a quantum ensemble. Here, the fundamental laws governing the cloning of quantum ensembles are investigated. First, a general no-cloning theorem for arbitrary ensembles is established from an information-theoretic perspective, even assuming multiple copies of the ensemble's purification. It is then shown that this barrier can be unexpectedly circumvented for physical ensembles generated by finite-time evolutions. Nevertheless, these tasks are proven to remain computationally intractable, even when the full circuit description of state preparation is known. This stands in sharp contrast to the conventional no-cloning theorem, which relies on the state being unknown. Together, these results establish new fundamental principles of quantum mechanics, reveal intrinsic trade-offs among sample complexity, computational complexity, and quantum measurements, and highlight the necessity of problem-specific strategies for probing measurement-induced quantum phenomena.",
+      "doi": "10.1038/s41467-026-74924-x",
+      "url": "https://doi.org/10.1038/s41467-026-74924-x",
+      "pub_date": "2026-Jun-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "现代量子物理现能对量子系统进行单条轨迹水平的控制，开辟了连接量子信息论、量子多体物理与量子热力学的新前沿，并揭示了深度热化、测量诱导纠缠等非平衡现象。然而核心挑战在于：这些现象的表征依赖于测量单个量子态的非线性性质，该任务等同于对量子系综的细粒度克隆。本文研究了支配量子系综克隆的基本规律。首先，从信息论角度建立了任意系综的通用不可克隆定理，即便假定拥有系综纯化的多个副本。随后表明，对于有限时间演化所生成的物理系综，这一障碍可被意外规避。尽管如此，这些任务被证明在计算上仍然难解，即使已知态制备的完整电路描述。这与依赖“量子态未知”的传统不可克隆定理形成鲜明对比。这些结果共同确立了量子力学的新基本原理，揭示了样本复杂度、计算复杂度与量子测量之间的内在权衡，并凸显了针对特定问题设计策略以探测测量诱导量子现象的必要性。",
+      "key_findings": [
+        "从信息论视角建立了任意量子系综的通用不可克隆定理，即使提供系综纯化的多份拷贝。",
+        "发现有限时间演化生成的物理系综能意外地绕过该不可克隆限制。",
+        "即便已知完整态制备电路，克隆任务仍计算难解，揭示样本、计算与测量间的复杂性权衡。"
+      ],
+      "translated_at": "2026-06-29T00:37:34.614473Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "建立量子系综不可克隆定理与计算不可行性，提出新量子力学基本原理与方法论权衡，非应用案例。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:00.256648Z"
+      }
+    },
+    {
+      "pmid": "42362556",
+      "title": "Broadband Radiative Heat Transfer Suppression via Dispersion-Engineered Metasurfaces.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Jing Lin",
+        "He Mingze",
+        "Mann Sander A",
+        "Plocher Kevin",
+        "Holdman Gregory R",
+        "Onyszczak Mike",
+        "et al."
+      ],
+      "abstract": "Suppressing radiative heat transfer using metallic reflectors fails where electrical conduction or material incompatibility are prohibitive, whereas non-metallic alternatives that rely on conventional thermophotonic approaches face fundamental performance-bandwidth trade-offs, bounded by the Bode-Fano limit. Here, we redefine the strategy for broadband radiative suppression by leveraging complementary dispersion engineering in a dielectric metasurface pair. Using stochastic gradient descent (SGD) optimization, we co-design aperiodic distributed Bragg reflector (DBR) pairs with deliberately misaligned passbands across the broad thermal band of interest, enabling effective broadband thermal decoupling within a small thickness and fabrication budget, beyond the limits of conventional approaches. Experimental validation reveals that our optimized 7-layered (7-L) metasurface pair reduces radiative heat exchange significantly compared to fused silica benchmarks, as confirmed through both angle-resolved emissivity measurements (82% reduction) and direct radiometric power quantification (62.5% reduction). Importantly, our compact system exhibits strong robustness against design and fabrication tolerance and operational temperature drift (320-500 K). This work establishes a generalizable framework for bandwidth-unconstrained thermal radiation engineering, with applications in energy-efficient systems, thermal insulation and thermal management. By circumventing the need for metallic components, our approach opens new possibilities for controlling radiative heat transfer in an all-dielectric ultrathin platform.",
+      "doi": "10.1038/s41467-026-74805-3",
+      "url": "https://doi.org/10.1038/s41467-026-74805-3",
+      "pub_date": "2026-Jun-27",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "使用金属反射器抑制辐射传热在导电性或材料不相容性受限时失效，而依赖传统热光子方法的非金属替代方案则面临基本的性能-带宽权衡，受 Bode-Fano 极限约束。在此，我们通过利用介电超表面对中的互补色散工程，重新定义了宽带辐射抑制策略。采用随机梯度下降（SGD）优化，我们协同设计了非周期分布式布拉格反射器（DBR）对，在感兴趣的宽热波段内故意错位通带，从而在较小的厚度和制造预算内实现有效的宽带热解耦，超越了传统方法的极限。实验验证表明，与熔融石英基准相比，我们优化的 7 层（7-L）超表面对显著降低了辐射热交换，这通过角分辨发射率测量（降低 82%）和直接辐射功率量化（降低 62.5%）得以证实。重要的是，我们的紧凑系统对设计和制造公差以及工作温度漂移（320-500 K）表现出强大的鲁棒性。这项工作为不受带宽约束的热辐射工程建立了一个可推广的框架，可应用于节能系统、热绝缘和热管理。通过避免使用金属组件，我们的方法在全介电超薄平台上为控制辐射传热开辟了新的可能性。",
+      "key_findings": [
+        "提出基于介电超表面的互补色散工程策略，用错位通带DBR对实现宽带热解耦，突破传统性能-带宽极限。",
+        "实验证实7层超表面对使辐射热交换大幅下降，发射率降82%，辐射功率降62.5%，且对公差和温度漂移鲁棒。",
+        "建立全介电超薄平台宽带热辐射调控框架，无需金属组件，拓展了节能与热管理应用的新路径。"
+      ],
+      "translated_at": "2026-06-29T00:37:46.808259Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出基于色散互补和SGD优化的介电超表面对设计新方法，突破传统性能-带宽极限，形成可推广的无金属宽带热抑制框架",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:06.147129Z"
+      }
+    },
+    {
+      "pmid": "42362581",
+      "title": "Potential role of a CRISPR-Cas-activated toxin-antitoxin system in bacterial immunity.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Chen Jiyun",
+        "Huang Linglong",
+        "Chen Hong",
+        "Li Xueyan",
+        "Lin Xiaofeng",
+        "Guo Chenmin",
+        "et al."
+      ],
+      "abstract": "CRISPR-Cas and toxin-antitoxin systems can serve as antiviral defense mechanisms in prokaryotes. In typical toxin-antitoxin systems, toxin activation can limit phage propagation by inducing growth arrest or reduced cellular fitness, while the antitoxin neutralizes toxin activity. Here, we study potential functional synergy between a CRISPR-Cas13a system and a type II toxin-antitoxin module (HicAB) from a Leptotrichia bacterium, when heterologously expressed in E. coli, as well as in biochemical and structural analyses. We show that the antitoxin HicB exhibits toxic properties, and Cas13a directly activates HicB, triggering growth inhibition and conferring protection against bacteriophages. Structural analyses reveal that Cas13a binding promotes the spatial proximity of HicB tetramers, likely enabling its activation. The toxin HicA competitively binds to HicB, thereby inhibiting Cas13a-mediated HicB activation. Importantly, both CRISPR RNA and HicB independently suppress HicA toxicity. Structural evidence indicates that CRISPR RNA forms a hetero-tetradecameric complex with HicAB, occluding HicA's active site and neutralizing its toxic function. Thus, our findings indicate functional synergy between distinct bacterial immune strategies.",
+      "doi": "10.1038/s41467-026-74930-z",
+      "url": "https://doi.org/10.1038/s41467-026-74930-z",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "CRISPR-Cas和毒素-抗毒素系统均可作为原核生物的抗病毒防御机制。在典型的毒素-抗毒素系统中，毒素激活能通过诱导生长停滞或降低细胞适应性来限制噬菌体增殖，而抗毒素则中和毒素活性。本研究通过在大肠杆菌中异源表达、生物化学和结构分析，探讨了来自纤毛菌属细菌的CRISPR-Cas13a系统与II型毒素-抗毒素模块HicAB之间的潜在功能协同。我们证实抗毒素HicB具有毒性，Cas13a直接激活HicB，触发生长抑制并赋予对噬菌体的保护作用。结构分析揭示，Cas13a结合促进了HicB四聚体的空间邻近，可能使其激活。毒素HicA与HicB竞争性结合，从而抑制Cas13a介导的HicB激活。重要的是，CRISPR RNA和HicB均能独立抑制HicA的毒性。结构证据表明，CRISPR RNA与HicAB形成异十四聚体复合物，封闭HicA的活性位点，从而中和其毒性功能。因此，我们的发现揭示了不同细菌免疫策略之间的功能协同。",
+      "key_findings": [
+        "Cas13a直接激活抗毒素HicB，诱导生长抑制并赋予噬菌体抗性，揭示CRISPR与毒素-抗毒素系统的协同免疫。",
+        "Cas13a结合促进HicB四聚体空间邻近以激活，而HicA通过竞争结合HicB抑制该激活过程。",
+        "CRISPR RNA与HicAB形成异十四聚体复合物，封闭HicA活性位点，独立抑制其毒性。"
+      ],
+      "translated_at": "2026-06-29T00:37:55.230472Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示了CRISPR-Cas13a与毒素-抗毒素系统间新的功能协同与结构机制，具有概念新意。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:15.602286Z"
+      }
+    },
+    {
+      "pmid": "42362575",
+      "title": "Experience-dependent modulation of collective behavior in larval zebrafish.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Harpaz Roy",
+        "Phillips-Batra Morgan",
+        "Goel Ronan",
+        "Bind Marie-Abèle",
+        "Fishman Mark C",
+        "Engert Florian"
+      ],
+      "abstract": "Complex group behavior can emerge from simple inter-individual interactions, yet how prior social experience shapes these interactions remains unclear. Using naturalistic and virtual-reality experiments, we varied prior social experience by exposing zebrafish larvae to high or low group densities, then measured its effects on future social interactions and group structure. We find that inter-individual distances decrease after exposure to high population densities and increase after exposure to low densities. These adaptations develop gradually over tens of minutes and remain stable for hours. Mechanistically, larvae estimate group density from the frequency of neighbor-evoked retinal looming events and couple interaction strength to that estimate. A time-varying computational model incorporating previous visual-social experiences accurately describes our observations. Our findings show that inter-individual interactions are not static, but continuously evolve with social experience and environmental demands, establishing larval zebrafish as a model for studying the neurobiological mechanisms of experience-dependent modulation of collective behavior.",
+      "doi": "10.1038/s41467-026-74872-6",
+      "url": "https://doi.org/10.1038/s41467-026-74872-6",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "复杂的群体行为可以从简单的个体间相互作用中产生，但先前的社交经验如何塑造这些相互作用仍不清楚。通过自然主义实验和虚拟现实实验，我们通过将斑马鱼幼体暴露于高密度或低密度群体中来改变其先前的社交经验，然后测量其对未来社交互动和群体结构的影响。我们发现，暴露于高群体密度后，个体间距离减小，而暴露于低密度后，个体间距离增大。这些适应在数十分钟内逐渐发展，并能在数小时内保持稳定。在机制上，幼体通过由邻居诱发的视网膜逼近事件的频率来估计群体密度，并将互动强度与这一估计值耦合。一个包含先前视觉-社交经验的时间变化计算模型能准确描述我们的观察结果。我们的发现表明，个体间相互作用并非一成不变，而是随着社交经验和环境需求不断演化，从而确立了斑马鱼幼体作为研究经验依赖性集体行为调制的神经生物学机制的模式生物。",
+      "key_findings": [
+        "暴露于高/低群体密度分别导致幼鱼个体间距稳定地减小/增大，且变化在数十分钟内形成并维持数小时。",
+        "幼鱼利用相邻个体引发的视网膜逼近事件的频率来估算群体密度，并据此动态调整互动强度。",
+        "基于先前视觉-社交经验的时变计算模型可精确重现观测结果，表明个体间互动随经验持续演化。"
+      ],
+      "translated_at": "2026-06-29T00:38:01.734652Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "提出基于视觉looming频率的密度估计机制与时间可变计算模型，揭示社会经验调节集体行为的普适性原理，方法学潜力强。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:23.478581Z"
+      }
+    },
+    {
+      "pmid": "42361799",
+      "title": "Deciphering protein mutation-phenotype linkages from CRISPR-based tiling mutagenesis screens.",
+      "journal": "Cell Syst",
+      "authors": [
+        "He Wei",
+        "Huang Jen-Wei",
+        "Wang Yalong",
+        "Hayward Samuel B",
+        "Leuzzi Giuseppe",
+        "Fu Rongjie",
+        "et al."
+      ],
+      "abstract": "CRISPR-based high-throughput mutagenesis screens enable systematic mapping of mutations to phenotypes, yet deciphering mutation-phenotype links remains challenging. Here, we present ProTiler-Mut, a versatile computational framework that leverages tiling mutagenesis screens, which introduce variants across entire protein sequences, to analyze mutation effects at the levels of residues, substructures, and protein-protein interactions (PPIs). Applying ProTiler-Mut to multi-condition base-editing (BE) screens targeting DNA damage response proteins and T cell regulators, we define a separation-of-function (SoF) category beyond the conventional loss-of-function (LoF) and gain-of-function (GoF) classes, where SoF mutations show the strongest enrichment for ClinVar-annotated pathogenic variants. ProTiler-Mut also identifies candidate substructures that enable functional inference of unscreened pathogenic mutations and prioritizes candidate phenotype-associated PPIs potentially disrupted by functional variants. Using ProTiler-Mut, in cells with elevated programmed cell death 1 (PD-1) expression, we identify pathogenic GoF mutations that constitute a substructure that may disrupt mitogen-activated protein kinase (MAPK)1-RSK1 interactions and lead to MAPK activation. Finally, we show that ProTiler-Mut is applicable across different mutagenesis screening platforms. A record of this paper's transparent peer review process is included in the supplemental information.",
+      "doi": "10.1016/j.cels.2026.101651",
+      "url": "https://doi.org/10.1016/j.cels.2026.101651",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "基于CRISPR的高通量诱变筛选可系统绘制突变-表型关联图谱，然而解译突变-表型联系仍具挑战。本文提出ProTiler-Mut，一个通用计算框架，利用在完整蛋白质序列上引入变异的铺瓦诱变筛选，在残基、亚结构及蛋白质互作（PPIs）层面解析突变效应。将ProTiler-Mut应用于靶向DNA损伤应答蛋白和T细胞调节因子的多条件碱基编辑（BE）筛选，我们在常规功能丧失（LoF）和功能获得（GoF）类别外定义了功能分离（SoF）类别，其中SoF突变在ClinVar注释的致病性变异中富集最强。ProTiler-Mut还能识别候选亚结构，以推断未筛选致病性突变的功能，并优先发现可能被功能性变异破坏的候选表型相关PPIs。利用ProTiler-Mut，在程序性细胞死亡蛋白1（PD-1）高表达细胞中，我们鉴定出致病性GoF突变，它们构成一个可能破坏丝裂原活化蛋白激酶（MAPK）1-RSK1相互作用并导致MAPK活化的亚结构。最后，我们展示了ProTiler-Mut适用于不同诱变筛选平台。",
+      "key_findings": [
+        "提出ProTiler-Mut框架，实现从残基、亚结构到蛋白互作层面的突变效应系统分析，并定义功能分离(SoF)突变类别，其致病性变异富集度最高。",
+        "ProTiler-Mut可识别候选亚结构来推断未筛选致病突变的功能，并优先发现与表型相关的可被功能性变异破坏的蛋白互作。",
+        "在PD-1高表达细胞中，利用ProTiler-Mut发现致病性GoF突变构成亚结构，可能破坏MAPK1-RSK1互作而激活MAPK，且该框架具跨平台适用性。"
+      ],
+      "translated_at": "2026-06-29T00:38:14.239791Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出了分析CRISPR平铺诱变筛选的新计算框架ProTiler-Mut，引入SoF突变类别，可迁移用于多种平台和蛋白系统。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:37.322438Z"
+      }
+    },
+    {
+      "pmid": "42361161",
+      "title": "Hydrostatic pressure reduces the mechanosensitivity of cell migration.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Akinpelu Ayuba",
+        "Weaver Abby",
+        "Hemmati Farnaz",
+        "Coker Ethan",
+        "Amiri Farshad",
+        "Stylianou Chrystalla",
+        "et al."
+      ],
+      "abstract": "Cells sense and respond to diverse physical cues as they migrate toward distant sites. While much is known about the roles of cellular molecules in the regulation of mechanosensitivity, our understanding of how extracellular cues influence this property remains limited. Here, we show that prolonged exposure to elevated, yet (patho)physiologically relevant, extracellular hydrostatic pressure decreases migration sensitivity to substrate stiffness, fluid viscosity, fluid forces, and hydraulic resistance. Reduced mechanosensitivity can persist for days after the high-pressure cue is removed, indicating that cells retain a memory of hydrostatic pressure. Mechanistically, high pressure down-regulates the Rho/MRTF/SRF pathway, activating a myosin II-independent mechanosensing mechanism that shifts the maximum cell speed toward stiffer substrates, as predicted mathematically and demonstrated experimentally. Stiffer substrates increase migration of preconditioned cells by strengthening focal adhesions and redistributing them to the cell periphery to support Arp2/3-dependent lamellipodia extension. Collectively, hydrostatic pressure reprograms the mechanosensing machinery to drive lasting effects on cell mechanosensitivity.",
+      "doi": "10.1126/sciadv.aed0981",
+      "url": "https://doi.org/10.1126/sciadv.aed0981",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Cell Movement",
+        "Hydrostatic Pressure",
+        "Mechanotransduction, Cellular",
+        "Animals",
+        "Focal Adhesions",
+        "Pseudopodia",
+        "Humans",
+        "Myosin Type II",
+        "Signal Transduction"
+      ],
+      "abstract_zh": "细胞在向远处迁移的过程中感知并响应多种物理信号。尽管细胞分子在调控机械敏感性中的作用已有较多了解，但对细胞外信号如何影响这一特性的认识仍然有限。本研究发现，长时间暴露于升高的、但处于（病理）生理相关范围内的细胞外静水压力，会降低细胞迁移对基质刚度、流体粘度、流体力和水阻力的敏感性。这种降低的机械敏感性在高压信号移除后可持续数天，表明细胞保留了对静水压力的记忆。机制上，高压下调 Rho/MRTF/SRF 通路，激活一种不依赖肌球蛋白 II 的机械感知机制，该机制使最大细胞迁移速度向更硬的基质方向偏移，这一现象得到了数学预测和实验验证。更硬的基质通过加强黏着斑并将其重新分布至细胞周边，以支持 Arp2/3 依赖的片状伪足延伸，从而促进预处理细胞的迁移。综上所述，静水压力通过重编程机械感知装置，对细胞机械敏感性产生持久影响。",
+      "key_findings": [
+        "静水压力降低细胞迁移对基质刚度、流体粘度、流体力和水阻力等多种物理信号的敏感性，且该效应可持续数天。",
+        "高压通过下调 Rho/MRTF/SRF 通路，激活不依赖肌球蛋白 II 的机械感知机制，使最佳迁移速度向更硬基质偏移。",
+        "更硬的基质通过增强并重分布黏着斑至细胞周边，促进 Arp2/3 依赖的片状伪足延伸，从而增加预处理细胞的迁移。"
+      ],
+      "translated_at": "2026-06-29T00:39:18.037281Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示了静水压通过Rho/MRTF/SRF通路重编程细胞机械敏感性的新机制，提出myosin II非依赖模式，具概念与机制新意。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:30:55.105108Z"
+      }
+    },
+    {
+      "pmid": "42361121",
+      "title": "Quantitative anatomy and biophysical modeling of ascending neuromodulatory systems in the developing rat neocortex.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Colangelo Cristina",
+        "Muñoz Alberto",
+        "Antonietti Alberto",
+        "Sood Vishal",
+        "Antón-Fernández Alejandro",
+        "Herttuainen Joni",
+        "et al."
+      ],
+      "abstract": "The hindlimb representation in the somatosensory cortex of two-week old Wistar rats has been a valuable model system for dissecting the microcircuitry of neurons and their synaptic connections. In this study, we present a comprehensive experimental dataset quantifying the fiber length per cortical volume and the density of varicosities for cholinergic, catecholaminergic, and serotonergic neuromodulatory systems within the cortical neuropil using immunocytochemical staining and stereological techniques, along with a methodological framework for generating biophysically detailed computational models from these data. Acquired data were integrated into a biophysically detailed computational model of the somatosensory cortex to explore the anatomical organization and functional implications of neuromodulatory innervation. We found that neuromodulatory innervation, although sparse, substantially impacts network activity. Network simulations support the hypothesis that acetylcholine suppresses slow oscillations and promotes the desynchronization of cortical networks, consistent with the extensive findings in existing literature. Additionally, the temporal properties of acetylcholine modulation are consistent with synaptic rather than volume release. Furthermore, we found that the release of dopamine and serotonin in sensory cortices induces network desynchronization by inhibiting delta oscillations and that serotonin also initiates the emergence of theta oscillations, pointing to previously unexplored aspects of their function in governing cortical network activity. The experimental data and the biophysical computational model are available as an open-access community resource.",
+      "doi": "10.1371/journal.pcbi.1014460",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014460",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "两周龄Wistar大鼠体感皮层后肢代表区是解析神经元微环路及其突触连接的重要模型。本研究提供了综合实验数据集，利用免疫细胞化学染色和体视学方法，定量了皮层神经毡内胆碱能、儿茶酚胺能和血清素能神经调节系统的单位皮层体积纤维长度与膨体密度，并提出了从这些数据生成生物物理详细计算模型的方法学框架。获取的数据被整合至体感皮层的生物物理详细计算模型中，以探究神经调节神经支配的解剖组织及其功能意义。我们发现，神经调节神经支配虽稀疏，却对网络活动产生显著影响。网络模拟支持乙酰胆碱抑制慢振荡并促进皮层网络去同步化的假说，与大量现有文献一致。此外，乙酰胆碱调节的时间特性支持突触释放而非容积传递。我们还发现，感觉皮层中多巴胺的释放通过抑制δ振荡诱导网络去同步化，血清素同样抑制δ振荡，并启动θ振荡的出现，揭示了它们在调控皮层网络活动中此前未被探索的功能方面。实验数据和生物物理计算模型已作为开放获取的社区资源提供。",
+      "key_findings": [
+        "稀疏的神经调节神经支配显著影响皮层网络活动，支持乙酰胆碱抑制慢振荡并促进去同步化。",
+        "乙酰胆碱的时间调节特性符合突触释放机制，而非传统的容积传递模式。",
+        "多巴胺和血清素通过抑制δ振荡诱导去同步化，且血清素独自诱发θ振荡，揭示其调控皮层节律的新功能。"
+      ],
+      "translated_at": "2026-06-29T00:39:26.942934Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出了从实验定量解剖数据生成生物物理详细计算模型的方法学框架，并开源模型与数据，具有可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:31:01.645261Z"
+      }
+    },
+    {
+      "pmid": "42359495",
+      "title": "Deciphering interferon functions in avian influenza using receptor knockout models in the natural host.",
+      "journal": "Elife",
+      "authors": [
+        "Alhussien Mohanned Naif",
+        "Vikkula Hanna Kaisa",
+        "Klinger Romina",
+        "Zenner Christian",
+        "Früh Simon P",
+        "Negi Rashi",
+        "et al."
+      ],
+      "abstract": "The rapid cross-species transmission of highly pathogenic avian influenza presents a significant zoonotic threat. Elucidating the avian interferon (IFN) system, the primary antiviral defense in chickens, is critical for controlling the virus at its source and preventing its spillover into humans and other species. We engineered type I (IFN-α/β) and type III (IFN-λ) IFN receptor knockout chickens to dissect the role of IFNs in viral infections. Results revealed that type I IFN predominantly modulates innate immune cell populations, T cell subsets, and their contribution to antibody production following immunization under physiological conditions. In ovo and in vivo challenge experiments utilizing diverse influenza A virus strains demonstrated strain-specific roles of both IFN-α/β and IFN-λ in orchestrating viral pathogenesis, immunological responses, and tissue-tropism effects. Notably, type I IFN was particularly crucial in the initial defense mechanisms against H3N1 avian influenza A virus infection. These novel models offer unprecedented insights into avian IFN biology within the context of avian influenza, which is essential for developing more effective strategies to prevent and control this public health challenge.",
+      "doi": "10.7554/eLife.107855",
+      "url": "https://doi.org/10.7554/eLife.107855",
+      "pub_date": "2026-Jun-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Chickens",
+        "Influenza in Birds",
+        "Receptors, Interferon",
+        "Interferons",
+        "Influenza A virus",
+        "Immunity, Innate",
+        "Gene Knockout Techniques"
+      ],
+      "abstract_zh": "高致病性禽流感的快速跨物种传播构成重大人畜共患威胁。阐明鸡体内主要抗病毒防御机制——禽类干扰素（IFN）系统，对于从源头控制病毒并防止其向人类和其他物种溢出至关重要。我们构建了I型（IFN-α/β）和III型（IFN-λ）干扰素受体敲除鸡模型，以剖析干扰素在病毒感染中的作用。结果显示，在生理条件下，I型干扰素主要调控先天免疫细胞群、T细胞亚群及其在免疫后抗体产生中的贡献。利用多种甲型流感病毒株进行的胚内和体内攻毒实验表明，IFN-α/β和IFN-λ在协调病毒致病性、免疫应答和组织嗜性效应方面具有毒株特异性作用。值得注意的是，I型干扰素在抵御H3N1禽流感病毒感染的初始防御机制中尤为关键。这些新型模型为在禽流感背景下理解禽类干扰素生物学提供了前所未有的见解，这对制定更有效的策略以预防和控制这一公共卫生挑战至关重要。",
+      "key_findings": [
+        "I型干扰素在生理条件下主要调控鸡先天免疫细胞、T细胞亚群及抗体产生。",
+        "不同禽流感病毒株感染中，I型与III型干扰素在致病性、免疫应答和组织嗜性上呈现毒株特异性分工。",
+        "I型干扰素在H3N1禽流感病毒感染的早期防御中发挥不可或缺的关键作用。"
+      ],
+      "translated_at": "2026-06-29T00:39:33.171622Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "构建干扰素受体敲除鸡模型，在天然宿主中系统解析IFN功能，提供可迁移的新实验平台和机制洞察",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:31:16.915890Z"
+      }
+    },
+    {
+      "pmid": "42350398",
+      "title": "Hippocampo-neocortical interaction as compressive retrieval-augmented generation.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Spens Eleanor",
+        "Burgess Neil"
+      ],
+      "abstract": "Many aspects of learning, memory, and problem solving involve interplay between episodic (hippocampal) and semantic (neocortical) systems, but the neural mechanisms supporting this are unclear. We present a computational model in which sequential experiences are encoded in hippocampus in compressed form and replayed to train a neocortical generative network. This network captures the gist of specific episodes and extracts statistical patterns that generalise to new situations, enabling efficient reconstruction of the past and prediction of the future. The two systems interact during encoding, recall and problem solving, with the hippocampus retrieving relevant episodic information into working memory as a basis for generation using the 'general knowledge' of the neocortical network. We simulate this interaction as 'retrieval-augmented generation', with the addition of mechanisms to compress episodic memories into hippocampus and to consolidate them into neocortex. The model explains changes to memories over time, including schema-based distortions, and shows how episodic and semantic memory contribute to problem solving.",
+      "doi": "10.1038/s41467-026-74357-6",
+      "url": "https://doi.org/10.1038/s41467-026-74357-6",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "学习、记忆和问题解决的许多方面涉及情景（海马体）与语义（新皮质）系统之间的相互作用，但支撑这一过程的神经机制尚不明确。我们提出一个计算模型，其中序列经验以压缩形式编码于海马体，并通过回放训练新皮质生成网络。该网络捕捉特定事件的主旨，并提取可泛化至新情境的统计模式，从而高效重建过去并预测未来。两个系统在编码、回忆和问题解决期间交互：海马体将相关情景信息检索到工作记忆，作为基于新皮质网络“通用知识”进行生成的基础。我们将这一交互模拟为“检索增强生成”，并加入将情景记忆压缩到海马体以及将其巩固到新皮质的机制。该模型解释了记忆随时间的变化（包括基于图式的扭曲），并展示了情景记忆与语义记忆如何协同参与问题解决。",
+      "key_findings": [
+        "提出计算模型：海马体压缩编码经验并回放，训练新皮质生成网络提取泛化统计模式。",
+        "模拟压缩、巩固与检索增强生成，解释记忆的图式扭曲等时间依赖性变化。",
+        "揭示情景与语义记忆通过检索增强生成交互，协同支持面向未来的预测与问题解决。"
+      ],
+      "translated_at": "2026-06-29T00:39:43.969483Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出了海马-新皮层交互的压缩检索增强生成计算框架，具方法学新意与机制洞察，可迁移至其他记忆与推理研究。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:31:31.621216Z"
+      }
+    },
+    {
+      "pmid": "42349384",
+      "title": "A disinhibitory basal forebrain-to-cortex projection supports sustained attention.",
+      "journal": "Cell",
+      "authors": [
+        "Li Shu-Jing",
+        "Hangya Balazs",
+        "Gupta Unmukt",
+        "Singh Harjot",
+        "Fischer Kyle B",
+        "Sturgill James Fitzhugh",
+        "et al."
+      ],
+      "abstract": "The ability to maintain focus wavers over time, impacting performance, yet the neural circuits governing fluctuations in sustained attention remain unclear. The basal forebrain is integral to attention by modulating cortical activity, but recent evidence challenges the role of its signature cholinergic neurons in sustaining attention. Here, we demonstrate that another cortex-projecting basal forebrain cell type, parvalbumin-expressing (BF-PV) inhibitory neurons, mediates sustained attention. In mice performing an attention-demanding task, BF-PV activity predicts trial-by-trial fluctuations in attentional performance metrics-reaction time and accuracy. Bidirectional optogenetic manipulations confirm causality: activation enhances, and inhibition impairs, attention. BF-PV neurons also respond to motivationally salient events-predictive cues, outcomes, and surprises-regardless of valence. A computational model bridges these observations and demonstrates how this signal guides attention allocation. Mechanistically, BF-PV neurons target cortical PV+ interneurons, producing disinhibitory cortical amplification to improve detection sensitivity. These findings reveal a disinhibitory BF-to-cortex projection that regulates cortical gain based on motivational salience, thereby promoting sustained attention.",
+      "doi": "10.1016/j.cell.2026.05.046",
+      "url": "https://doi.org/10.1016/j.cell.2026.05.046",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Attention",
+        "Basal Forebrain",
+        "Mice",
+        "Parvalbumins",
+        "Male",
+        "Optogenetics",
+        "Mice, Inbred C57BL",
+        "Interneurons",
+        "Female"
+      ],
+      "abstract_zh": "维持注意力的能力会随时间波动，影响任务表现，但调控持续性注意力波动的神经回路尚不明确。基底前脑通过调节皮层活动在注意力中起重要作用，但近期研究对其标志性的胆碱能神经元在维持注意力中的作用提出了质疑。本研究发现，另一种投射至皮层的基底前脑细胞类型——表达小清蛋白的（BF-PV）抑制性神经元——介导了持续性注意力。在小鼠执行需要注意力的任务时，BF-PV神经元的活动可预测每次试验中注意力表现指标（反应时间和正确率）的波动。双向光遗传学操控证实了因果关系：激活可增强注意力，而抑制则损害注意力。BF-PV神经元还对具有动机显著性的刺激（如预测线索、结果和意外事件）作出反应，无论其效价如何。我们建立了一个计算模型来整合这些观察结果，并展示了这一信号如何指导注意力分配。从机制上看，BF-PV神经元靶向皮层中的PV+中间神经元，通过去抑制性皮层放大来提高检测灵敏度。这些发现揭示了一条从基底前脑到皮层的去抑制投射通路，该通路根据动机显著性调节皮层增益，从而促进持续性注意力。",
+      "key_findings": [
+        "基底前脑PV+抑制性神经元（而非胆碱能神经元）驱动持续性注意。",
+        "BF-PV活性预测注意表现波动，双向操控证实其因果作用。",
+        "BF-PV通过去抑制皮层PV+中间神经元放大增益，增强检测灵敏度。"
+      ],
+      "translated_at": "2026-06-29T00:39:56.658357Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现基底前脑PV神经元通过去抑制放大皮层增益的新回路机制，具可迁移的注意力调控概念启发。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:31:54.474673Z"
+      }
+    },
+    {
+      "pmid": "42345289",
+      "title": "Controlling the synchronization and symmetry breaking of coupled bacterial pili on active biofilm carpets.",
+      "journal": "Elife",
+      "authors": [
+        "Altın Baha",
+        "Günay Enes Talha",
+        "Yaman İlker Yusuf",
+        "Ünlü Alp",
+        "Gediz Yiğithan",
+        "Gedik Neslihan",
+        "et al."
+      ],
+      "abstract": "In the low Reynolds number regime, active biological systems utilize nonreciprocal cyclic activities to achieve motility, as seen in the spinning of bacterial flagella and the beating of cilia. Coupling among these active mechanical components leads to synchronization and emergence of metachronal waves. Here, we report that biofilms of Pseudomonas nitroreducens form active carpet-like surfaces textured with diverse topological defects, generating Mexican-wave-like collective behavior in which bacteria periodically lift up. On these active surfaces, non-reciprocally coupled extension and retraction activities of bacterial pili drive these collective oscillations. Surprisingly, this collective behavior exhibits left-right asymmetry across the biofilm driving unidirectionally propagating waves. We discover that this directionality is primarily governed by an aging-related frequency gradient across the biofilm. Leveraging these insights, we further demonstrate the ability to control the collective dynamics of these waves, including symmetry breaking, transitions from spiral waves into target and propagating plane waves by manipulating the elastic properties of biofilms. Overall, our findings illuminate the fundamental role of nonreciprocally interacting active components in regulating synchronization, collective dynamics, and symmetry-breaking phenomena in biological systems.",
+      "doi": "10.7554/eLife.107609",
+      "url": "https://doi.org/10.7554/eLife.107609",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Biofilms",
+        "Fimbriae, Bacterial",
+        "Pseudomonas"
+      ],
+      "abstract_zh": "在低雷诺数体系中，活性生物系统利用非互易的周期活动实现运动，如细菌鞭毛的旋转和纤毛的摆动。这些活性机械组分之间的耦合导致同步化和异时波的涌现。本文报道，硝基还原假单胞菌生物膜形成布满多种拓扑缺陷的活性地毯状表面，产生墨西哥人浪式的集体行为，细菌在其中周期性抬升。在这些活性表面上，细菌菌毛的非互易耦合伸展与收缩活动驱动了这些集体振荡。令人惊讶的是，这种集体行为在生物膜上表现出左右不对称性，驱动单向传播的波。我们发现，此方向性主要由横跨生物膜的衰老相关频率梯度所决定。基于这些认识，我们进一步展示通过调控生物膜的弹性特性，能够控制这些波的集体动力学，包括对称性破缺、螺旋波向靶波及传播平面波的转变。总之，我们的发现阐明了非互易相互作用活性组分在调控生物系统中同步化、集体动力学和对称性破缺现象中的基础性作用。",
+      "key_findings": [
+        "硝基还原假单胞菌生物膜形成活性地毯表面，细菌周期性抬升产生墨西哥人浪式集体振荡。",
+        "菌毛的非互易伸展-收缩活动驱动振荡，并导致左右不对称的单向传播波。",
+        "不对称性源于衰老相关的频率梯度，通过改变生物膜弹性可操控波型转变。"
+      ],
+      "translated_at": "2026-06-29T00:40:07.614012Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示了非互惠耦合与频率梯度驱动集体振荡和对称破缺的新机制，具有跨系统启发性，非纯应用导向。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:32:07.974914Z"
+      }
+    },
+    {
+      "pmid": "42343824",
+      "title": "Genome-Scale Community Models for Designing Efficient Lignocellulolytic Bacterial Consortia Using Bovine Rumen Microbes.",
+      "journal": "ACS Synth Biol",
+      "authors": [
+        "Mondal Suman",
+        "Ghosh Amit"
+      ],
+      "abstract": "Bovine rumen microbial communities play an important role in degrading lignocellulosic biomass and generating value-added products through synergistic metabolic activity. Hence, examining this microbial community may offer valuable insights into enhancing lignocellulose degradation and biofuel production machinery. However, microbial diversity with varying metabolic interactions within the bovine rumen community niche poses a challenge to designing mutualistic consortia. A comprehensive understanding of microbial interactions, growth compatibility, and metabolic synergy is crucial for the development of mutualistic synthetic consortia. Here, we have used six bovine rumen microbial strains to evaluate interspecies interactions, pairwise growth compatibility, and coculture-based lignocellulose degradation activities. Flux-based parameters, such as pairwise metabolic assistance (PMA) and growth support index (PGSI), were employed to investigate the coculture-based growth and metabolic synergies. The pairwise in silico assessments helped to predict 11 compatible microbial communities, which were subsequently validated by experimentally grown coculture systems. The enzymatic synergism (DES) of some experimentally grown pairs showed a higher correlation with the model-derived PMA, demonstrating the consistency of the overall prediction. The highest degree of enzymatic synergism has been achieved through the pairwise coculture of Butyrivibrio fibrisolvens and Selenomonas ruminantium, resulting in a 41% increase in the endoglucanase activity. Further investigation of three-membered communities showed that a combination of B. fibrisolvens, S. ruminantium, and Ruminococcus albus exhibited synergistic activity across all lignocellulosic substrates, suggesting the strong metabolic interplay between compatible species. Therefore, the in silico assessment of microbial interactions helped to identify suitable combinations with increased lignocellulolytic activity. The community-model-based study can provide a framework for designing synthetic microbial consortia with potential applications in biofuel production, enzymatic degradation, and other biotechnological studies.",
+      "doi": "10.1021/acssynbio.6c00072",
+      "url": "https://doi.org/10.1021/acssynbio.6c00072",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "牛瘤胃微生物群落通过协同代谢在降解木质纤维素生物质和产生增值产物中发挥重要作用。本研究使用六种牛瘤胃微生物菌株，评估种间相互作用、配对生长兼容性及共培养下的木质纤维素降解活性。采用基于通量的配对代谢辅助（PMA）和生长支持指数（PGSI）参数，通过计算机模拟预测出11个兼容微生物群落，并经实验共培养验证。部分实验配对的酶协同作用（DES）与模型预测的PMA高度相关。溶纤维丁酸弧菌（Butyrivibrio fibrisolvens）与反刍月形单胞菌（Selenomonas ruminantium）的共培养实现了最高酶协同，内切葡聚糖酶活性提高41%。三成员群落（溶纤维丁酸弧菌、反刍月形单胞菌和白色瘤胃球菌Ruminococcus albus）在所有木质纤维素底物上均表现协同活性，表明兼容物种间存在强烈代谢互作。该基于群落模型的研究为设计用于生物燃料生产和酶降解等应用的合成微生物群落提供了框架。",
+      "key_findings": [
+        "基于PMA和PGSI参数的计算机模拟预测了11个相容瘤胃微生物群落，实验结果与预测高度一致。",
+        "溶纤维丁酸弧菌与反刍月形单胞菌共培养达最高酶协同，内切葡聚糖酶活性提升41%。",
+        "三种菌（溶纤维丁酸弧菌、反刍月形单胞菌、白色瘤胃球菌）组合在所有木质纤维素底物上均表现协同降解活性。"
+      ],
+      "translated_at": "2026-06-29T00:40:21.226834Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出利用基因组尺度群落模型和通量指标预测微生物对兼容性的设计框架，经实验验证，具有方法学新意和可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:32:17.455615Z"
+      }
+    },
+    {
+      "pmid": "42143019",
+      "title": "Cell-autonomous control of CAR signaling and receptor shedding via ADAM17-mediated proteolysis.",
+      "journal": "Cell",
+      "authors": [
+        "Bjelajac Jeremy R",
+        "Cañellas-Socias Adrià",
+        "Nehra Preeti",
+        "Reynolds Kevin",
+        "Malipatlolla Meena",
+        "Martinez Velez Naiara",
+        "et al."
+      ],
+      "abstract": "We sought to endow T cell autonomous regulation of cell surface protein expression by exploiting the conditional proteolytic activity of ADAM17 following T cell activation. Screening of canonical ADAM17 substrates yielded a minimal 15-aa CD62L-derived motif that confers rapid and reversible cleavage of a receptor following T cell activation-termed activation-induced release (AIR). Embedding AIR into tonic-signaling CARs reduced basal CAR expression proportional to the degree of tonic signaling induced, curtailing exhaustion and improving antitumor potency. In non-tonic signaling CARs, AIR decreased activation-induced cell death and enhanced T cell expansion after stimulation. AIR's modularity supports higher-order logic-gating; AIR-regulated peptide masks enable antigen-dependent unmasking of an EGFR-targeting CAR. Finally, CRISPR knockin of AIR into endogenous FAS or TGFBR2 endowed them with activation-induced shedding, which enhanced tumor clearance while preserving signaling in non-activating conditions. AIR is a compact switch that provides fast, autonomous regulation of surface proteins for next-generation cell therapies.",
+      "doi": "10.1016/j.cell.2026.04.037",
+      "url": "https://doi.org/10.1016/j.cell.2026.04.037",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "ADAM17 Protein",
+        "Humans",
+        "Proteolysis",
+        "Signal Transduction",
+        "Animals",
+        "T-Lymphocytes",
+        "Lymphocyte Activation",
+        "Receptors, Chimeric Antigen",
+        "Mice",
+        "Receptors, Antigen, T-Cell"
+      ],
+      "abstract_zh": "我们试图通过利用T细胞活化后ADAM17的条件性蛋白水解活性，赋予T细胞对表面蛋白表达的自主调控能力。对经典ADAM17底物的筛选得到一个来自CD62L的最小15氨基酸基序，该基序能在T细胞活化后介导受体的快速、可逆切割——称为激活诱导释放（AIR）。将AIR嵌入紧张性信号CAR中，可根据所诱导的紧张性信号程度成比例地降低基础CAR表达，从而减缓耗竭并增强抗肿瘤效力。在非紧张性信号CAR中，AIR减少了激活诱导的细胞死亡，并促进刺激后的T细胞扩增。AIR的模块化特性支持高阶逻辑门控；AIR调节的肽掩蔽可实现抗原依赖的、针对EGFR靶向CAR的去掩蔽。最后，通过CRISPR将AIR敲入内源性FAS或TGFBR2，赋予其激活诱导的胞外域脱落能力，从而增强肿瘤清除，同时在非活化条件下保留信号传导。AIR是一种紧凑型开关，可为下一代细胞疗法提供快速、自主的表面蛋白调控。",
+      "key_findings": [
+        "鉴定出ADAM17的最小底物基序AIR（15 aa），可在T细胞激活后快速、可逆地切割靶受体。",
+        "将AIR嵌入CAR能按紧张性信号强度降低基础表达，缓解耗竭，提升抗肿瘤效果；在非紧张性CAR中可减少激活诱导死亡并促进扩增。",
+        "AIR模块化设计实现抗原依赖肽掩蔽的逻辑门控CAR，并可通过CRISPR敲入内源FAS/TGFBR2，实现活化选择性脱落以增强肿瘤清除。"
+      ],
+      "translated_at": "2026-06-29T00:40:32.880599Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出一种通用的、细胞自主的蛋白水解调控开关 (AIR)，可模块化设计，为新一代细胞疗法提供新范式。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:32:22.919291Z"
+      }
+    },
+    {
+      "pmid": "42127893",
+      "title": "D-SPIN constructs regulatory network models from scRNA-seq that reveal organizing principles of perturbation response.",
+      "journal": "Cell",
+      "authors": [
+        "Jiang Jialong",
+        "Chen Sisi",
+        "Tsou Tiffany",
+        "McGinnis Christopher S",
+        "Khazaei Tahmineh",
+        "Zhu Qin",
+        "et al."
+      ],
+      "abstract": "Gene regulatory networks modulate the expression of the genome in response to signals and environmental conditions. Reconstructions of such networks can reveal the control principles cells use to maintain homeostasis and execute cell-state transitions. Here, we introduce a computational framework, dimension-scalable single-cell perturbation integration network (D-SPIN), that infers mechanistically interpretable and generative models of gene regulatory networks from single-cell mRNA-seq datasets collected across thousands of perturbation conditions. The models explain how perturbations modulate cell-state proportions by reconfiguring underlying regulatory interactions. Using large Perturb-seq and drug response datasets, D-SPIN models reveal key regulators of cell fate decisions and the coordination of distant cellular pathways in response to gene knockdowns and drug treatments, elucidate how combinations of immunomodulatory drugs induce combinatorial cell states through additive recruitment of gene expression programs, and simulate shifts in immune cell population structures across unobserved drug dosage combinations. D-SPIN provides a computational framework for revealing principles of cellular information processing and physiological control.",
+      "doi": "10.1016/j.cell.2026.04.028",
+      "url": "https://doi.org/10.1016/j.cell.2026.04.028",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Gene Regulatory Networks",
+        "Single-Cell Gene Expression Analysis",
+        "Single-Cell Analysis",
+        "Humans",
+        "RNA-Seq",
+        "Animals",
+        "Sequence Analysis, RNA"
+      ],
+      "abstract_zh": "基因调控网络通过响应信号和环境条件来调节基因组表达。此类网络的重构可揭示细胞维持稳态和执行状态转换的控制原理。本文介绍一个计算框架——维度可扩展的单细胞扰动整合网络（D-SPIN），它利用在数千种扰动条件下收集的单细胞mRNA-seq数据集，推断出机制可解释且具有生成能力的基因调控网络模型。这些模型通过重构底层调控相互作用来解释扰动如何调节细胞状态比例。利用大规模Perturb-seq和药物反应数据集，D-SPIN模型揭示了细胞命运决定的关键调控因子，以及响应基因敲低和药物治疗时远端细胞通路的协调机制，阐明了免疫调节药物组合如何通过基因表达程序的叠加募集来诱导组合细胞状态，并模拟了未观测药物剂量组合下免疫细胞群体结构的转变。D-SPIN为揭示细胞信息处理和生理控制原理提供了一个计算框架。",
+      "key_findings": [
+        "开发D-SPIN框架，可从大规模扰动单细胞数据中构建机制可解释的基因调控网络生成模型。",
+        "发现基因敲低和药物处理通过重构调控互作协调远端通路，调控细胞命运决定。",
+        "揭示免疫调节药物组合通过加性招募基因表达程序产生组合细胞状态。"
+      ],
+      "translated_at": "2026-06-29T00:40:38.866491Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出D-SPIN计算框架，从大规模扰动单细胞数据推断机制性基因调控网络，具有方法学创新和普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:32:27.348236Z"
+      }
+    },
+    {
+      "pmid": "42127892",
+      "title": "Galvanin (TMEM154) is an electric-field sensor for directed cell migration.",
+      "journal": "Cell",
+      "authors": [
+        "Belliveau Nathan M",
+        "Footer Matthew J",
+        "Platenkamp Amy",
+        "Rodriguez Celeste",
+        "Kim Heonsu",
+        "Prinz Christopher K",
+        "et al."
+      ],
+      "abstract": "Directed migration of immune and epithelial cells is critical for rapid responses to tissue injury or infection. Endogenous electric fields, generated by disruption of the transepithelial potential across the skin, are thought to guide cells to wound sites. However, how single cells detect these electrical cues remains unclear. We identified Galvanin (TMEM154), a poorly characterized single-pass transmembrane protein, as required for electric-field-guided migration of rapidly moving cells. Expression of Galvanin is sufficient to confer electric-field-guided migration on otherwise non-responsive epithelial cells. Upon electric-field exposure, Galvanin rapidly relocalizes to the anodal side of cells, and in human neutrophils, relocalization is immediately followed by changes in spatial patterns of cellular protrusion and retraction. These data suggest Galvanin acts as a direct sensor of the electric field, transducing spatial information about a cell's electrical environment to the intracellular migratory apparatus to support directed cell migration.",
+      "doi": "10.1016/j.cell.2026.04.026",
+      "url": "https://doi.org/10.1016/j.cell.2026.04.026",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Cell Movement",
+        "Membrane Proteins",
+        "Neutrophils",
+        "Epithelial Cells",
+        "Animals",
+        "Electricity"
+      ],
+      "abstract_zh": "免疫细胞和上皮细胞的定向迁移对于快速响应组织损伤或感染至关重要。由跨上皮电位破坏产生的内源性电场被认为能引导细胞至伤口部位。然而，单个细胞如何检测这些电信号仍不清楚。我们鉴定出 Galvanin (TMEM154)，一种功能未充分表征的单次跨膜蛋白，是快速移动细胞电场引导迁移所必需的。Galvanin 的表达足以赋予原本无响应的上皮细胞电场引导迁移的能力。在电场暴露下，Galvanin 迅速重新定位到细胞的阳极侧，在人中性粒细胞中，这种重新定位后紧接着是细胞突起和回缩空间模式的变化。这些数据表明 Galvanin 作为电场的直接传感器，将细胞电环境的空间信息传递给细胞内的迁移装置，以支持定向细胞迁移。",
+      "key_findings": [
+        "鉴定出 Galvanin (TMEM154) 是电场引导细胞迁移所必需的单次跨膜蛋白。",
+        "Galvanin 的表达足以使非响应性上皮细胞获得电场引导的定向迁移能力。",
+        "Galvanin 在电场下快速重新定位到阳极侧，引发细胞突起与回缩的空间模式变化，证明其作为直接电场传感器。"
+      ],
+      "translated_at": "2026-06-29T00:40:47.224699Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现 Galvanin 作为直接电场传感器的新机制，具有概念新意和潜在的普适迁移价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:32:32.175607Z"
+      }
+    },
+    {
+      "pmid": "42105761",
+      "title": "Genetic basis of phytoalexin-mediated chemical defense in plants.",
+      "journal": "Cell",
+      "authors": [
+        "Wang Zhanli",
+        "Han Lu",
+        "Gao Lei",
+        "Zhang Liyun",
+        "Xie Yan",
+        "Liu Hanwu",
+        "et al."
+      ],
+      "abstract": "Phytoalexins are core components of plant chemical defense against pathogens. However, the genetic basis and regulatory mechanisms governing their biosynthesis remain preliminary. Debneyol is a well-defined, broad-spectrum fungicidal phytoalexin. Here, we elucidate its biosynthetic pathway, key regulators, and activity against multiple pathogens. We show that debneyol is synthesized from farnesyl pyrophosphate (FPP) through three steps catalyzed by 5-epi-aristolochene synthase (EAS), 5-epi-aristolochene epoxidase (EAE), and epoxide hydrolase-1 (EH1). MCD1 (miR1919-targeted cell death-factor-1) interacts with EAS and EAE, enhancing their association and EAE activity and promoting debneyol biosynthesis. Increased MCD1 expression confers plant resistance not only against fungal but also viral and bacterial pathogens. Our work reveals a complete plant phytoalexin-based chemical defense machinery, opening avenues for engineering broad-spectrum plant resistance and industrial-scale debneyol production via synthetic biology.",
+      "doi": "10.1016/j.cell.2026.04.021",
+      "url": "https://doi.org/10.1016/j.cell.2026.04.021",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Phytoalexins",
+        "Sesquiterpenes",
+        "Arabidopsis",
+        "Plant Diseases",
+        "Polyisoprenyl Phosphates",
+        "Arabidopsis Proteins",
+        "Disease Resistance",
+        "Alkyl and Aryl Transferases"
+      ],
+      "abstract_zh": "植物抗毒素是植物化学防御病原体的核心组分。然而，其生物合成的遗传基础和调控机制仍处于初步阶段。Debneyol是一种明确且具有广谱杀菌活性的植物抗毒素。在此，我们阐明了其生物合成途径、关键调控因子及抗多种病原体的活性。我们证明debneyol由法尼基焦磷酸（FPP）通过三步催化反应合成，依次由5-表-马兜铃烯合酶（EAS）、5-表-马兜铃烯环氧化酶（EAE）和环氧化物水解酶-1（EH1）催化。MCD1（miR1919靶向的细胞死亡因子-1）与EAS和EAE相互作用，增强它们的结合及EAE活性，从而促进debneyol生物合成。MCD1表达升高不仅赋予植物对真菌病原体的抗性，还赋予对病毒和细菌病原体的抗性。我们的工作揭示了一套完整的基于植物抗毒素的化学防御机制，为通过合成生物学途径工程化培育广谱抗病植物及工业化生产debneyol开辟了新方向。",
+      "key_findings": [
+        "阐明了debneyol从FPP经EAS、EAE、EH1三步酶促反应的完整生物合成途径。",
+        "发现MCD1蛋白通过增强EAS-EAE互作与EAE活性来正调控debneyol的合成。",
+        "证明MCD1介导的debneyol积累可赋予植物对真菌、病毒和细菌的广谱抗性。"
+      ],
+      "translated_at": "2026-06-29T00:40:54.329544Z"
+    },
+    {
+      "pmid": "42034052",
+      "title": "Engineered commensals for metabolic modulation of the gut-liver-brain axis.",
+      "journal": "Cell",
+      "authors": [
+        "Aggarwal Nikhil",
+        "Shen Haosheng",
+        "Lee Li Ting",
+        "Zhou Lei",
+        "Zhu Meng Tong",
+        "Koh Xiu Qi",
+        "et al."
+      ],
+      "abstract": "The gut-liver-brain axis is central to metabolic and neurological homeostasis and is mediated by host- and microbiota-derived metabolites. Disruptions in this axis contribute to complex disorders, underscoring the need for targeted, multi-metabolite interventions. Here, we engineered commensal Lactobacillus plantarum WCFS1 strains to specifically modulate metabolites dysregulated in hepatic encephalopathy (HE), a disorder driven by hyperammonemia and amino acid imbalance. One strain couples ammonia assimilation with branched-chain amino acid (BCAA) biosynthesis, whereas the other enhances L-glutamine utilization to suppress ammonia generation. In two preclinical HE models, these strains reduced systemic ammonia by up to 10-fold, restored BCAA and L-glutamine balance, and improved anxiety-like and cognitive behaviors. Notably, they outperformed rifaximin, a clinically used HE therapy, while preserving gut microbiota diversity. These findings establish engineered commensals as a modular, responsive platform for multi-metabolite modulation of host-microbiota metabolism, offering a programmable strategy to restore metabolic homeostasis in disorders of the gut-liver-brain axis.",
+      "doi": "10.1016/j.cell.2026.03.048",
+      "url": "https://doi.org/10.1016/j.cell.2026.03.048",
+      "pub_date": "2026-Jun-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Liver",
+        "Brain",
+        "Amino Acids, Branched-Chain",
+        "Hepatic Encephalopathy",
+        "Lactiplantibacillus plantarum",
+        "Ammonia",
+        "Gastrointestinal Microbiome",
+        "Mice",
+        "Glutamine"
+      ],
+      "abstract_zh": "肠-肝-脑轴对代谢和神经稳态至关重要，并由宿主与微生物群来源的代谢物介导。该轴的失调参与复杂疾病的发生，凸显了针对性、多代谢物干预的必要性。本研究工程改造了共生菌植物乳杆菌WCFS1，以特异性调节肝性脑病（HE）中失调的代谢物——该疾病由高氨血症和氨基酸失衡驱动。一株菌将氨同化与支链氨基酸（BCAA）生物合成偶联，另一株则增强L-谷氨酰胺利用以抑制氨生成。在两种临床前HE模型中，这些工程菌使全身血氨水平降低达10倍，恢复BCAA和L-谷氨酰胺平衡，并改善焦虑样和认知行为。尤其值得注意的是，它们的效果优于临床HE治疗药物利福昔明，同时保持了肠道微生物群多样性。这些发现将工程共生菌确立为一种用于宿主-微生物群代谢的多代谢物调节的模块化、响应性平台，为恢复肠-肝-脑轴疾病中的代谢稳态提供了可编程策略。",
+      "key_findings": [
+        "工程植物乳杆菌通过偶联氨同化与BCAA合成或增强谷氨酰胺利用，针对性调节肝性脑病相关代谢物。",
+        "在动物模型中，工程菌降低全身血氨达10倍，恢复氨基酸平衡，并改善焦虑和认知行为。",
+        "工程菌疗效优于临床药物利福昔明，且能保留肠道菌群多样性，展示出模块化代谢调节潜力。"
+      ],
+      "translated_at": "2026-06-29T00:41:04.113149Z"
+    },
+    {
+      "pmid": "42342668",
+      "title": "Structural mechanism of SAM-AMP and SAM-AMP2 synthesis by the type III-D2 CRISPR effector complex.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Mitsuda Yoshihisa",
+        "Sugaya Maki",
+        "Ishikawa Junichiro",
+        "Nagahata Naoto",
+        "Okazaki Sae",
+        "Hiraizumi Masahiro",
+        "et al."
+      ],
+      "abstract": "The type III-D2 CRISPR-Cas system comprises multiple Cas subunits and a CRISPR RNA, and is likely an evolutionary intermediate between the well-studied type III-A and III-E systems. Here we show that the type III-D2 complex synthesizes two distinct second messengers, SAM-AMP and SAM-AMP2, from S-adenosylmethionine (SAM) and ATP in response to target RNA recognition. We determined cryo-electron microscopy structures of the type III-D2 effector complex in different functional states, providing mechanistic insights into target RNA cleavage and second messenger synthesis. The structures reveal how SAM and ATP are recognized by the Cas10 subunit within the effector complex. Furthermore, our biological data suggest that both SAM-AMP and SAM-AMP2 act on the CorA ancillary effector, inducing growth arrest of infected bacterial cells and thereby conferring immunity. Thus, our study establishes the type III-D2 system as a unique anti-phage defense mechanism that employs both SAM-AMP and SAM-AMP2 as second messengers, expanding the repertoire of second messenger strategies in bacterial defense systems and highlighting the remarkable functional diversity of CRISPR-Cas systems.",
+      "doi": "10.1038/s41467-026-74422-0",
+      "url": "https://doi.org/10.1038/s41467-026-74422-0",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "CRISPR-Cas Systems",
+        "Cryoelectron Microscopy",
+        "S-Adenosylmethionine",
+        "CRISPR-Associated Proteins",
+        "Escherichia coli",
+        "Adenosine Triphosphate",
+        "Escherichia coli Proteins"
+      ],
+      "abstract_zh": "III-D2型CRISPR-Cas系统包含多个Cas亚基和一条CRISPR RNA，很可能是研究较为透彻的III-A型与III-E型系统之间的进化中间体。本研究表明，III-D2型复合物在识别靶标RNA后，利用S-腺苷甲硫氨酸（SAM）和ATP合成两种不同的第二信使SAM-AMP和SAM-AMP2。我们解析了III-D2型效应复合物在不同功能状态下的冷冻电镜结构，为靶标RNA切割和第二信使合成提供了机制见解。这些结构揭示了Cas10亚基如何识别SAM和ATP。此外，我们的生物学数据表明，SAM-AMP和SAM-AMP2均作用于辅助效应因子CorA，诱导受感染细菌细胞生长停滞，从而赋予免疫力。因此，本研究确立了III-D2型系统是一种独特的抗噬菌体防御机制，它同时利用SAM-AMP和SAM-AMP2作为第二信使，扩展了细菌防御系统中第二信使策略的库，并凸显了CRISPR-Cas系统显著的功能多样性。",
+      "key_findings": [
+        "III-D2复合物在识别靶RNA后合成SAM-AMP和SAM-AMP2两种第二信使。",
+        "冷冻电镜结构揭示Cas10亚基识别SAM和ATP，驱动第二信使合成。",
+        "SAM-AMP和SAM-AMP2通过CorA效应因子诱导细菌生长停滞，抵御噬菌体。"
+      ],
+      "translated_at": "2026-06-29T00:41:15.370128Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示III-D2系统合成SAM-AMP/SAM-AMP2两种新第二信使的独特机制，概念新意和进化启发性强",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:33:35.717810Z"
+      }
+    },
+    {
+      "pmid": "42342651",
+      "title": "Diffusive memristors in the edge of chaos.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Kim Seung Ju",
+        "Wang Tong",
+        "Zhao Ruoyu",
+        "Rossetti Davide",
+        "Xu Yichun",
+        "Zhao Jian",
+        "et al."
+      ],
+      "abstract": "Biological nervous systems are theorized to operate in the edge of chaos (EOC), a stable and locally active regime enabling energy-efficient information processing. Electronic implementations of such behavior have mainly relied on electrothermal phase transitions, which are power-intensive and unlike biological dynamics. Diffusive memristors, by contrast, harness ionic drift and diffusion resembling biological dynamics, yet their potential for EOC operation has remained unexplored. Here, we experimentally demonstrate ionically moderated EOC behavior in diffusive memristors. At the hundred-nanoampere level, the device exhibits sharp negative differential resistance (NDR) enhanced by a Ridley entropy production minimization transition, noise amplification and spontaneous oscillatory dynamics consistent with operation near the EOC. These emergent behaviors arise from coupled ionic transport, filament evolution and circuit dynamics, as confirmed by compact modeling. This system achieves power efficiency over three orders of magnitude greater than electrothermal EOC devices, introducing low-power neuromorphic elements that emulate brain-like dynamics through nanoionics.",
+      "doi": "10.1038/s41467-026-74640-6",
+      "url": "https://doi.org/10.1038/s41467-026-74640-6",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "生物神经系统被理论认为运作在混沌边缘（EOC），一种稳定且局部活跃的状态，能实现节能信息处理。此类行为的电子实现主要依赖电热相变，其功耗大且与生物动态不相似。相比之下，扩散型忆阻器利用离子漂移和扩散，类似于生物动态，但其在EOC运行的潜力尚未被探索。在此，我们实验展示了扩散型忆阻器中离子调节的EOC行为。在百纳安电流水平下，该器件展现出尖锐的负微分电阻（NDR），此NDR因Ridley熵产生最小化转变而增强，同时呈现噪声放大和自发振荡动态，与在EOC附近运行一致。这些涌现行为源于耦合的离子输运、导电细丝演化和电路动态，经紧凑模型确认。该系统的功率效率比电热EOC器件高出三个数量级以上，引入了利用纳米离子学模拟脑样动态的低功耗神经形态元件。",
+      "key_findings": [
+        "实验证明扩散型忆阻器在百纳安电流下表现出离子调节的混沌边缘行为。",
+        "器件展现尖锐负微分电阻、噪声放大和自发振荡，符合混沌边缘特征。",
+        "该器件功率效率比电热混沌边缘器件高三个数量级以上，实现低功耗神经形态。"
+      ],
+      "translated_at": "2026-06-29T00:41:34.094753Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "首次实验展示基于离子扩散忆阻器的混沌边缘操作，功耗比电热方法低三个数量级，为类脑动态提供了低功耗新硬件方法。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:01.175194Z"
+      }
+    },
+    {
+      "pmid": "42341034",
+      "title": "The transcriptional gradient in negative-strand RNA viruses suggests a common RNA transcription mechanism.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "King Connor R",
+        "Berezin Casey-Tyler",
+        "Munsky Brian",
+        "Peccoud Jean"
+      ],
+      "abstract": "Nonsegmented negative-strand RNA viruses (NNSV) are a diverse class of medically relevant viruses which display a conserved attenuation gradient in the transcription of their genomes. This gradient has been traditionally explained by the Stop-Start model which attributes attenuation to polymerase behavior at gene junctions. In this article, we evaluate an alternative explanation where the gradient arises from polymerase dynamics during transcription. We introduce the RNA Polymerase Association Mechanism (RAM) model, a coarse-grained stochastic framework that describes transcription using two parameters related to polymerase processivity and the ability of the polymerase to backtrack. The RAM model accurately reproduces transcriptional gradients across diverse NNSVs as well as in gene-shuffled VSV variants. Additionally, the inferred polymerase processivity appears correlated to the length of the viral genomes suggesting a conserved constraint on transcription across these viruses. While the RAM model does not account for all known molecular features of NNSV transcription, it provides a parsimonious and predictive framework for relating genome architecture and transcription. These results support the view that, in tandem with the traditional junction-centric mechanisms governing transcription, nonspecific attenuation mechanisms contribute to the NNSV transcriptional gradient and warrant closer inspection in future studies which could lead to better rational genome design in viral studies and biomedical applications.",
+      "doi": "10.1371/journal.pcbi.1014441",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014441",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "不分节段的负链RNA病毒（NNSV）是一类具有医学重要性的多样病毒，在其基因组转录中显示出保守的衰减梯度。传统上，这一梯度由停止-启动模型解释，该模型将衰减归因于基因连接处的聚合酶行为。本文中，我们评估了另一种解释，即梯度源于转录过程中聚合酶的动力学。我们引入了RNA聚合酶结合机制（RAM）模型，这是一个粗粒化随机框架，使用与聚合酶持续合成能力和回溯能力相关的两个参数来描述转录。RAM模型能准确重现多种NNSV的转录梯度，以及基因重排的水泡性口炎病毒变体的梯度。此外，推断出的聚合酶持续合成能力似乎与病毒基因组长度相关，提示这些病毒在转录上存在保守的约束。虽然RAM模型并未涵盖NNSV转录的所有已知分子特征，但它为关联基因组架构与转录提供了一个简约且具有预测性的框架。这些结果支持以下观点：与传统以连接处为中心的转录调控机制协同作用，非特异性衰减机制也贡献于NNSV的转录梯度，应在未来研究中得到更仔细的研究，这可能有助于在病毒研究和生物医学应用中实现更合理的基因组设计。",
+      "key_findings": [
+        "提出RNA聚合酶结合机制模型，以聚合酶持续合成与回溯参数准确重现转录梯度。",
+        "模型适用于多种负链RNA病毒及基因重排变体，聚合酶持续合成能力与基因组长度相关。",
+        "揭示非特异性衰减机制协同传统模型贡献转录梯度，提供基因组设计预测框架。"
+      ],
+      "translated_at": "2026-06-29T00:42:14.496651Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出新的粗粒度随机框架(RAM)解释负链RNA病毒转录梯度，参数少且具预测性，属方法论贡献。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:05.198537Z"
+      }
+    },
+    {
+      "pmid": "42341031",
+      "title": "A new cancer progression model: From synthetic tumors to real data and back.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Volpatto Daniela",
+        "Contaldo Sandro Gepiro",
+        "Pernice Simone",
+        "Beccuti Marco",
+        "Cordero Francesca",
+        "Sirovich Roberta"
+      ],
+      "abstract": "Intratumor heterogeneity (ITH) arises from the combined effects of genetic alterations, clonal interactions, and environmental constraints, and plays a central role in therapeutic resistance and disease progression. While ITH has been extensively documented in empirical tumor data, the scientific debate regarding the biological mechanisms underlying this heterogeneity remains complex, highlighting the need for cancer evolution models that are sufficiently flexible and sophisticated to reproduce the observed behaviors and to give insights on the unobserved ones. Here, we present a stochastic modelling framework for tumor evolution that integrates genotypic inheritance with phenotype driven functional traits and resource mediated competition. Mutational events are associated with functional capabilities such as altered proliferation, increased mutation rates, limit evasion potential or enhanced control over shared resources, allowing multiple genotypes to converge on similar phenotypes. The model explicitly tracks subclonal lineages while incorporating environmental constraints that modulate growth and competition. The framework is defined through a mathematically rigorous construction and is accompanied by an efficient simulation algorithm. To facilitate exploration and reproducibility, we provide an open-source graphical user interface that allows users to configure model parameters, run simulations, and inspect clonal genealogies and population dynamics without requiring direct interaction with the underlying code. Using this model, we illustrate how ecological feedbacks can shape clonal dynamics over time, supporting an interpretation in which early tumor growth is dominated by stochastic expansion, while later evolution increasingly reflects selection for traits that alleviate environmental constraints. Rather than constituting a new evolutionary paradigm, this behaviour demonstrates how well-documented biological patterns can emerge naturally from a unified stochastic and ecological description. Overall, our approach offers a flexible and extensible platform for investigating how chance, functional traits, and environmental interactions jointly govern tumor heterogeneity.",
+      "doi": "10.1371/journal.pcbi.1013991",
+      "url": "https://doi.org/10.1371/journal.pcbi.1013991",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "肿瘤内异质性源于遗传改变、克隆相互作用和环境约束的共同效应，在治疗耐药和疾病进展中起核心作用。尽管异质性在肿瘤实证数据中已被广泛记录，但其背后的生物学机制仍存在复杂争议，这凸显了对足够灵活且精细的癌症演化模型的需求，以重现已观察到的行为并洞察未观察到的行为。本文提出了一个肿瘤演化的随机建模框架，该框架整合了基因型遗传、表型驱动的功能性状以及资源介导的竞争。突变事件与功能能力关联，如增殖改变、突变率增加、界限逃避潜力或对共享资源的增强控制，允许多种基因型收敛于相似表型。模型明确追溯亚克隆谱系，同时纳入调控生长与竞争的环境约束。该框架通过严格的数学构建定义，并配有高效的模拟算法。为便于探索和重现性，我们提供了一个开源图形用户界面，用户可直接配置模型参数、运行模拟并查看克隆谱系和群体动态，无需接触底层代码。利用该模型，我们展示了生态反馈如何随时间塑造克隆动力学，这一过程支持如下解释：早期肿瘤生长以随机扩张为主，而后期演化则日益反映出对缓解环境约束性状的选择。这一行为并非构成新的进化范式，而是表明在统一的随机与生态描述下，已有充分记录的生物学模式可以自然涌现。总体而言，我们的方法为研究偶然性、功能性状和环境交互如何共同调控肿瘤异质性提供了一个灵活且可扩展的平台。",
+      "key_findings": [
+        "构建了整合基因型遗传、表型功能性状与资源竞争的统一随机肿瘤演化模型。",
+        "揭示生态反馈驱动克隆动力学转变：早期随机扩张占优，后期选择压力凸显。",
+        "提供开源图形界面工具，成为探究偶然性、功能与环境交互调控异质性的可扩展平台。"
+      ],
+      "translated_at": "2026-06-29T00:42:24.331840Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出整合基因型、表型与生态竞争的随机肿瘤演化建模框架，并配开源GUI，具有方法学普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:09.517444Z"
+      }
+    },
+    {
+      "pmid": "42339803",
+      "title": "Developing a Minimal and Cost-Effective Cell-Free Biomanufacturing System Using an In Vitro Fluorescent Assay.",
+      "journal": "ACS Synth Biol",
+      "authors": [
+        "Kritharis Athanasios",
+        "Dhingra Arshaan",
+        "Tamer Melih",
+        "Yadav Vikramaditya G"
+      ],
+      "abstract": "Cell-free protein synthesis (CFPS) has the potential to reduce the cost of biologics manufacturing through simplified lysates, high-throughput workflows, and streamlined downstream purification; however, high reagent costs and inconsistent product yields remain significant barriers to industrial adoption. A key limitation is the lack of cost-effective, high-throughput methods to monitor metabolite dynamics during the CFPS optimization. To address this challenge, we developed a fluorescent assay that enables the real-time monitoring of transcription, translation, and key metabolite pools. The fluorescent assay was used to identify and address technical challenges and produce insights that were subsequently used to engineer a minimal CFPS platform that costs nearly 97.5% less than commercial systems but still attains comparable protein yields. More broadly, our work introduces a generalizable framework for interrogating and engineering CFPS systems through the real-time observation of transcription and metabolism.",
+      "doi": "10.1021/acssynbio.5c00903",
+      "url": "https://doi.org/10.1021/acssynbio.5c00903",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "无细胞蛋白质合成（CFPS）通过简化裂解物、高通量工作流程和精简下游纯化，有望降低生物制剂制造成本，但高试剂成本与不稳定的产量仍是产业化的主要障碍。关键瓶颈在于缺乏经济高效的高通量方法，以在 CFPS 优化过程中监测代谢物动态。为解决这一挑战，我们开发了一种荧光检测法，能够实时监测转录、翻译及关键代谢物池。该检测法被用于识别和解决技术难题，并产生见解，随后以此构建了一个最小化的 CFPS 平台，其成本比商品化系统低近 97.5%，但蛋白产量相当。更广泛地，我们的工作引入了一种通用框架，通过实时观察转录和代谢来探究和工程化 CFPS 系统。",
+      "key_findings": [
+        "开发了可实时同步监测无细胞体系中转录、翻译与代谢物动态的荧光检测法。",
+        "利用该检测法构建成本降低97.5%、产量相当的最小化无细胞合成平台。",
+        "建立了通过实时观察转录和代谢来工程化无细胞蛋白质合成系统的通用框架。"
+      ],
+      "translated_at": "2026-06-29T00:42:31.441918Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了可实时监测CFPS转录翻译与代谢的荧光检测法，并提出通用化工程框架，不是单纯应用案例",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:15.304913Z"
+      }
+    },
+    {
+      "pmid": "42339614",
+      "title": "Engineering an Extremely Hybrid PKS for Adipic Acid Production.",
+      "journal": "ACS Synth Biol",
+      "authors": [
+        "Klass Sarah H",
+        "Wang Zilong",
+        "Lanclos Nathan",
+        "Wesselkamper Mia",
+        "Li Chenyi",
+        "Baerwald Justin",
+        "et al."
+      ],
+      "abstract": "Polyketide synthases (PKSs) are modular enzymes with exceptional potential as biocatalysts for producing non-native compounds. Here, we report the first PKS-based pathway for adipic acid (AA), an industrial monomer for nylon production, by engineering one of the most extensively hybridized PKS systems to date. Using a retrobiosynthetic approach, we identified EtnB, a succinyl-CoA-loading module that uniquely retains the terminal carboxyl group, enabling access to dicarboxylic polyketide products, rarely produced by canonical PKSs. EtnB was coupled to a fully reducing extension module through an engineered communication linker, which improved ACP-KS interactions, enhanced titers, and demonstrated selective succinyl-CoA loading in vivo. This construct integrates genes from five organisms─with domains from seven PKS modules joined across six non-natural junctions─and functions in both Escherichia coli and Pseudomonas putida. Additional engineering that included AT domain exchanges, optimization of extender unit supply, and host strain metabolic rewiring further increased AA production. Together, this work demonstrates that highly chimeric PKSs can be rendered functional through rational design, expands the PKS toolkit with a carboxyl-retaining loading module, and establishes a versatile platform for engineering diacids and other noncanonical products through PKS pathways.",
+      "doi": "10.1021/acssynbio.5c00972",
+      "url": "https://doi.org/10.1021/acssynbio.5c00972",
+      "pub_date": "2026-Jun-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "聚酮合酶（PKSs）是模块化酶，作为生产非天然化合物的生物催化剂具有非凡潜力。本文报道了首个基于PKS的己二酸（AA）合成途径，己二酸是尼龙生产的工业单体，通过工程化迄今最广泛杂合化的一种PKS系统实现。利用逆生物合成方法，我们鉴定出EtnB，一种独特保留末端羧基的琥珀酰-CoA加载模块，从而能够获得典型PKS很少产生的二羧酸聚酮产物。通过工程化的通讯连接子将EtnB与完全还原的延伸模块偶联，改善了ACP-KS相互作用，提高了效价，并在体内展示了选择性琥珀酰-CoA加载。该构建体整合了来自5种生物的基因——来自7个PKS模块的结构域通过6个非天然连接点连接在一起——并在大肠杆菌和恶臭假单胞菌中均能发挥功能。额外的工程化包括AT结构域交换、延伸单元供应优化和宿主菌株代谢重连，进一步提高了AA的产量。总之，这项工作证明高度嵌合的PKS可以通过理性设计实现功能，用保留羧基的加载模块扩展了PKS工具箱，并建立了一个通用平台，通过PKS途径工程化生产二酸和其他非经典产物。",
+      "key_findings": [
+        "首次构建PKS基己二酸途径，利用保留羧基的琥珀酰-CoA加载模块EtnB，获得二羧酸产物。",
+        "多物种基因与非天然连接有效整合，通讯连接子改善ACP-KS互作，在两种宿主中功能表达。",
+        "通过AT交换、延伸单元优化及代谢重连提升产量，展示高度嵌合PKS的理性设计可行性。"
+      ],
+      "translated_at": "2026-06-29T00:42:44.569456Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "开发了极度杂交的PKS平台，建立二酸类化合物的新型生物合成路线，拓展了PKS方法论工具箱与模块化设计原则。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:20.746603Z"
+      }
+    },
+    {
+      "pmid": "42337238",
+      "title": "Jumbo circular extrachromosomal elements of methane-oxidizing archaea with variably extensive metabolic and defense gene repertoires.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Shi Ling-Dong",
+        "Kolody Bethany C",
+        "Wang Shuai",
+        "Valentin-Alvarado Luis E",
+        "Lei Shufei",
+        "Sachdeva Rohan",
+        "et al."
+      ],
+      "abstract": "Archaeal extrachromosomal elements (ECEs) are arguably the least well understood of all genetic elements, and few have >200 kbp (jumbo) genomes. Here, we report circular, jumbo ECEs with genomes of up to 535 kbp in length that associate with anaerobic methane-oxidizing Methanoperedens archaea. Notably, a 409-kbp genome related to jumbo ECEs is integrated into a subset of the ~4.2 Mbp Methanoperedens chromosomes at the tRNA-Asp genes. This represents the largest integrative element in Archaea and supports the jumbo ECE-host association. Multiple genome alignments and phylogenetic analyses suggest that the large ECE sizes developed by extensive DNA acquisition from Methanoperedens. The newly identified ECEs encode, and in some cases express, metabolic genes such as tetrahydromethanopterin S-methyltransferase exclusively involved in methane metabolism, and genes for nitrogen and sulfur compound transformations. Also encoded are defense systems, some of which are absent in hosts, such as hybrid Type I/Type III-A CRISPR-Cas systems. In contrast to viruses and plasmids, they have host-like replication machinery and occur at stable copy ratios of 1.44 ± 0.24:1 to the host. Overall, our results reveal a spectrum of jumbo ECEs of Methanoperedens, ranging from plasmid-like to minichromosome-like.",
+      "doi": "10.1038/s41467-026-74423-z",
+      "url": "https://doi.org/10.1038/s41467-026-74423-z",
+      "pub_date": "2026-Jun-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "古菌的染色体外元件（ECEs）可能是所有遗传元件中了解最少的，且极少有基因组超过200千碱基对（kbp）的巨型元件。本文报道了与厌氧甲烷氧化古菌 Methanoperedens 相关的环状巨型 ECEs，其基因组长度可达535 kbp。值得注意的是，一个与巨型 ECEs 相关的409 kbp基因组整合到部分约4.2 Mbp的 Methanoperedens 染色体的 tRNA-Asp 基因位点处，这代表了古菌中最大的整合元件，并支持了巨型 ECE 与宿主的紧密关联。多重基因组比对和系统发育分析表明，这些大型 ECE 的尺寸是通过从 Methanoperedens 获取大量DNA演化而来。新鉴定的 ECEs 编码并在某些情况下表达了代谢基因，如仅参与甲烷代谢的四氢甲烷蝶呤 S-甲基转移酶，以及参与氮和硫化合物转化的基因。还编码了宿主中缺失的防御系统，例如 I型/III-A型杂合 CRISPR-Cas 系统。与病毒和质粒不同，它们具有类似宿主的复制机器，且与宿主的拷贝数比例稳定在1.44±0.24:1。总之，我们的结果揭示了 Methanoperedens 的巨型 ECEs 谱系，涵盖从质粒样到微型染色体样的多种形式。",
+      "key_findings": [
+        "在厌氧甲烷氧化古菌中发现长达535 kbp的环状巨型ECEs，为已知最大古菌ECEs。",
+        "一个409 kbp ECE整合于宿主染色体tRNA-Asp位点，是古菌最大整合元件，确证二者关联。",
+        "ECEs通过宿主DNA获取扩展，编码甲烷代谢、氮硫转化基因和新型CRISPR-Cas防御系统。",
+        "ECEs具有类宿主复制机制且拷贝数稳定，呈现从质粒样到微型染色体样的连续谱系。"
+      ],
+      "translated_at": "2026-06-29T00:43:02.532573Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现古菌巨型染色体外元件，揭示质粒到微型染色体的过渡谱系，对遗传元件演化与分类有广适概念启发。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:39.064041Z"
+      }
+    },
+    {
+      "pmid": "42335897",
+      "title": "High-throughput machine learning-aided antibody discovery for cell surface antigens.",
+      "journal": "Cell Syst",
+      "authors": [
+        "Kothiwal Deepash",
+        "Kollasch Aaron W",
+        "Anuganti Murali",
+        "Hollmer Nicholas",
+        "Ghosh Anita",
+        "Zhang Roushu",
+        "et al."
+      ],
+      "abstract": "Machine learning (ML) has the potential to revolutionize antibody design and selection, but its success depends on access to well-curated datasets of antibody-antigen interactions. We developed a synthetic Fab yeast display library optimized for seamless integration with ML processes, focusing on sequence diversity within the complementary determining region heavy chain CDRH3 loop. The library incorporates key sequence features derived from human B cell repertoires captured in a compact antigen recognition module (ARM) format. Built with the VH1-69 heavy chain and four light chains, the library was evaluated against ten human and murine cell surface antigens, including programmed cell death ligand 1 (PD-L1), T cell immunoreceptor with immunoglobulin and immunoreceptor tyrosine-based inhibitory motif domains (TIGIT), and roundabout guidance receptor 1 (ROBO1). This approach yielded hundreds of antibodies with robust biophysical properties, some of which were validated by flow cytometry and immunohistochemistry. Furthermore, ML analysis identified additional antibodies for ROBO2 and PD-L2 from the aggregate sequencing data. The publicly available dataset establishes an ML-compatible framework designed to accelerate and streamline antibody discovery and development. A record of this paper's transparent peer review process is included in the supplemental information.",
+      "doi": "10.1016/j.cels.2026.101645",
+      "url": "https://doi.org/10.1016/j.cels.2026.101645",
+      "pub_date": "2026-Jun-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "机器学习有可能彻底改变抗体的设计和筛选，但其成功依赖于精心整理的抗体-抗原相互作用数据集。我们开发了一个合成的Fab酵母展示文库，该文库针对与机器学习流程的无缝整合进行了优化，重点关注互补决定区重链CDRH3环的序列多样性。该文库整合了源自人类B细胞库的关键序列特征，并以紧凑的抗原识别模块(ARM)形式封装。利用VH1-69重链和四条轻链构建的文库，针对十种人和鼠细胞表面抗原进行了评估，包括程序性细胞死亡配体1(PD-L1)、含免疫球蛋白和免疫受体酪氨酸抑制基序结构域的T细胞免疫受体(TIGIT)以及roundabout引导受体1(ROBO1)。该方法产生了数百种具有稳健生物物理特性的抗体，其中部分抗体已通过流式细胞术和免疫组织化学验证。此外，机器学习分析从聚合测序数据中识别出针对ROBO2和PD-L2的额外抗体。该公开数据集建立了一个与机器学习兼容的框架，旨在加速和简化抗体的发现与开发。本文透明的同行评审过程记录见补充信息。",
+      "key_findings": [
+        "构建了机器学习优化的合成Fab酵母展示文库，整合人B细胞CDRH3序列特征，实现高通量抗体筛选。",
+        "针对10种细胞表面抗原筛选，获得数百个高生物物理性能抗体，经流式细胞术和免疫组化验证。",
+        "利用机器学习分析测序数据，额外识别出ROBO2和PD-L2抗体，拓展了可用抗体库。"
+      ],
+      "translated_at": "2026-06-29T00:43:14.606987Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "开发了ML兼容的合成抗体库与ARM格式，实现高通量抗体发现，具有可迁移框架价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:46.502390Z"
+      }
+    },
+    {
+      "pmid": "42335895",
+      "title": "Integrated control of redox and energy metabolism by the membrane-bound and soluble transhydrogenases of Pseudomonas putida across metabolic regimes.",
+      "journal": "Cell Syst",
+      "authors": [
+        "Partipilo Michele",
+        "Favoino Giusi",
+        "Puiggené Òscar",
+        "Rocha Catarina",
+        "Meiners Carina",
+        "Gurdo Nicolás",
+        "et al."
+      ],
+      "abstract": "Redox homeostasis underpins microbial physiology and stress adaptation, yet the extent to which transhydrogenases contribute to these processes remains largely unexplored in most organisms. In this study, we reveal how Pseudomonas putida integrates two distinct transhydrogenases (membrane-bound PntAB and soluble SthA) into a flexible and reversible redox-balancing system supporting metabolic robustness across diverse conditions. Single deletions of either enzyme had minimal fitness impacts, whereas the double-mutant ΔpntAB ΔsthA exhibited growth defects, disrupted energy charge, and redox imbalance. Specifically, SthA proved essential for growth on acetate via a transcriptional regulator linked to glyoxylate metabolism. Notably, the activity of both transhydrogenases enabled cellular tolerance to formate by channeling the reducing equivalents released from the one-carbon (C1)-compound oxidation toward NAD⁺ regeneration. These findings delineate transhydrogenases as dynamic regulators of redox metabolism and energy conservation. Furthermore, this work positions P. putida as a prime host for redox-intensive applications and informs design principles for C1-based metabolic engineering. A record of this paper's transparent peer review process is included in the supplemental information.",
+      "doi": "10.1016/j.cels.2026.101646",
+      "url": "https://doi.org/10.1016/j.cels.2026.101646",
+      "pub_date": "2026-Jun-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "氧化还原稳态是微生物生理和胁迫适应的基础，但转氢酶在这些过程中的贡献程度在大多数生物中仍未充分探索。本研究揭示了恶臭假单胞菌如何将两种不同的转氢酶（膜结合的PntAB和可溶的SthA）整合成一个灵活、可逆的氧化还原平衡系统，在不同条件下支持代谢稳健性。单独缺失任一酶对适应性影响极小，而双突变体ΔpntAB ΔsthA表现出生长缺陷、能量电荷紊乱和氧化还原失衡。具体而言，SthA通过一个与乙醛酸代谢相关的转录调节因子，对乙酸上的生长至关重要。值得注意的是，两种转氢酶的活性通过将一碳（C1）化合物氧化释放的还原当量导向NAD⁺再生，使细胞能够耐受甲酸。这些发现描述了转氢酶作为氧化还原代谢和能量守恒的动态调节者。此外，这项工作将恶臭假单胞菌定位为氧化还原密集型应用的主要宿主，并为基于C1的代谢工程提供了设计原则。本文的透明同行评审过程记录包含在补充信息中。",
+      "key_findings": [
+        "恶臭假单胞菌通过膜结合PntAB和可溶性SthA构建灵活可逆的氧化还原平衡系统。",
+        "双敲除ΔpntAB ΔsthA导致生长缺陷与氧化还原失衡，SthA对乙酸盐利用必需。",
+        "两种转氢酶将甲酸氧化产生的还原当量导向NAD⁺再生，赋予细胞甲酸耐受性。"
+      ],
+      "translated_at": "2026-06-29T00:43:26.683718Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示两种转氢酶协同的灵活氧化还原平衡机制，具新机制洞察，可指导C1代谢工程等氧化还原密集应用。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:34:55.752524Z"
+      }
+    },
+    {
+      "pmid": "42335450",
+      "title": "A Novel Framework for Gene Regulatory Network Inference Integrating Bidirectional Mamba and Dual Contrastive Learning.",
+      "journal": "ACS Synth Biol",
+      "authors": [
+        "Zhang Kan",
+        "Lin Mugang",
+        "Zhu Lingzhi",
+        "Wang Yunhui"
+      ],
+      "abstract": "Reconstructing gene regulatory networks (GRNs) with directionality and regulatory types is an important challenge in computational biology. Existing methods often struggle to effectively capture complex topological structures in highly skewed GRNs due to imbalances between local and global information and to the collapse of representation dimensionality. To address these challenges, we propose BMGRN, a unified framework that reconstructs directional and GRNs with regulation types by integrating bidirectional state space modeling with dual contrastive representation learning. Drawing inspiration from sequence modeling, BMGRN employs an enhanced bidirectional Mamba2 architecture to capture long-range dependencies and asymmetric regulatory interactions between genes efficiently. This design enables global information propagation while maintaining directional specificity. Furthermore, a dual contrastive learning mechanism is introduced to alleviate oversmoothing and dimensional collapse, enforcing representation uniformity and discriminability in low-connectivity scenarios. By coupling these representations with a KAN-based convolutional predictor, BMGRN adaptively learns nonlinear dependencies and regulatory modes, thereby improving its modeling capacity for the GRN inference. Experiments on multiple benchmark data sets show that BMGRN attains superior performance, demonstrating great potential for large-scale GRN inference. The code is available at https://github.com/KanZh/BMGRN.",
+      "doi": "10.1021/acssynbio.6c00112",
+      "url": "https://doi.org/10.1021/acssynbio.6c00112",
+      "pub_date": "2026-Jun-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "重建具有方向性和调控类型的基因调控网络（GRN）是计算生物学中的重要挑战。现有方法往往因局部与全局信息失衡及表征维度坍缩，难以高效捕获高度偏斜GRN中的复杂拓扑结构。为此，我们提出BMGRN，这是一个通过整合双向状态空间建模与双重对比表征学习来重建定向GRN及调控类型的统一框架。受序列建模启发，BMGRN采用增强的双向Mamba2架构，高效捕获基因间的长程依赖和不对称调控互作，在保持方向特异性的同时实现全局信息传播。同时引入双重对比学习机制，缓解过度平滑和维度坍缩，在低连接度场景下强制表征的均匀性与判别力。结合基于KAN的卷积预测器，BMGRN可自适应学习非线性依赖与调控模式，增强GRN推理的建模能力。在多个基准数据集上，BMGRN取得卓越性能，展现出大规模GRN推理的巨大潜力。代码见https://github.com/KanZh/BMGRN。",
+      "key_findings": [
+        "BMGRN框架融合双向Mamba2与双重对比学习，首次实现定向及调控类型的统一GRN重建。",
+        "双重对比学习机制有效抑制表征过平滑与维度坍缩，显著提升低连接度网络中的判别能力。",
+        "在多个基准数据集上取得领先性能，验证了其在大规模基因调控网络推断中的巨大潜力。"
+      ],
+      "translated_at": "2026-06-29T00:43:38.689849Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出整合双向Mamba2与双重对比学习的GRN推断新框架，方法创新且可迁移，非简单应用。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:00.708901Z"
+      }
+    },
+    {
+      "pmid": "42333535",
+      "title": "SNIPSNP: precision design of CRISPR/Cas9 knock-in reagents for variant correction and disease modeling.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Labun Kornel",
+        "Rio Oline",
+        "Dahal-Koirala Shiva",
+        "Komisarczuk Anna Zofia",
+        "Valen Eivind",
+        "Haapaniemi Emma"
+      ],
+      "abstract": "We present SNIPSNP (crisprtools.org/snipsnp), a comprehensive bioinformatics pipeline for designing experiments for CRISPR-induced homology-directed repair (HDR). The tool addresses the critical challenge of Cas9 re-cleavage by simplifying the selection of \"blocking\" silent variants that are effective at inhibiting RNP binding upon donor-templated editing. SNIPSNP handles complex edits, including indels, and uses multi-objective optimization to balance editing efficiency with biological safety. From user-defined wild-type and desired HDR alleles, the pipeline identifies candidate guides, annotating them with integrated efficiency scores and genome-wide off-target assessments. Uniquely, SNIPSNP evaluates guide binding against the post-edit genome to determine whether the therapeutic variant alone disrupts repeated Cas9 recognition. When necessary, it introduces synonymous blocking variants, prioritizing PAM and seed regions to minimize re-cleavage probability and editing of the wild-type (WT) allele when editing heterozygous variants. All candidate modifications undergo safety profiling and prioritization of known benign variants from dbSNP. We experimentally validated SNIPSNP and benchmarked it on pathogenic inborn error of immunity variants in primary patient T-cells. Across loci, SNIPSNP-designed templates outperform standard \"correction-only\" strategies, demonstrating enhanced precision editing, and reduced re-cleavage, establishing SNIPSNP as a robust platform for genome editing and disease modeling.",
+      "doi": "10.1093/nar/gkag409",
+      "url": "https://doi.org/10.1093/nar/gkag409",
+      "pub_date": "2026-Jun-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "我们推出了SNIPSNP（crisprtools.org/snipsnp），一个用于设计CRISPR诱导的同源定向修复（HDR）实验的综合生物信息学流程。该工具通过简化选择在供体模板编辑后能有效抑制RNP结合的“阻断性”沉默变异，解决了Cas9重切割的关键挑战。SNIPSNP能处理包括插入缺失在内的复杂编辑，并利用多目标优化平衡编辑效率与生物安全性。基于用户定义的野生型和目标HDR等位基因，该流程识别候选向导，并将其标注综合效率评分和全基因组脱靶评估。其独特之处在于，SNIPSNP评估向导与编辑后基因组的结合，以判断治疗性变异本身是否足以破坏Cas9的反复识别。当需要时，它会引入同义阻断变异，优先考虑PAM和种子区域，以最大程度降低重切割概率，并在编辑杂合变异时减少对野生型等位基因的编辑。所有候选修饰均经过安全性分析，并优先选用dbSNP中已知的良性变异。我们在患者的原代T细胞中对致病性先天性免疫缺陷变异进行了实验验证和基准测试。在各基因座中，SNIPSNP设计的模板均优于标准的“仅纠正”策略，展现出更高的精确编辑效率和更低的重切割率，使SNIPSNP成为基因组编辑和疾病建模的强大平台。",
+      "key_findings": [
+        "开发了SNIPSNP流程，通过设计有效阻断性沉默变异解决Cas9重切割难题。",
+        "该工具整合多目标优化，评估编辑后基因组结合，优先PAM和种子区变异以减少再切割和野生型编辑。",
+        "在患者T细胞中实验证实，SNIPSNP设计的模板优于传统纠正策略，实现高精度编辑和低重切割。"
+      ],
+      "translated_at": "2026-06-29T00:43:54.693753Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出系统化设计HDR突变的计算管线，通过同义阻断变异规避重复切割，方法具普适迁移价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:16.504331Z"
+      }
+    },
+    {
+      "pmid": "42331836",
+      "title": "Probing the limits of genetic recoding using multi-omics-guided evolution.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Nyerges Akos",
+        "Chiappino-Pepe Anush",
+        "Budnik Bogdan",
+        "Baas-Thomas Maximilien",
+        "Rhuby Elissa",
+        "Flynn Regan",
+        "et al."
+      ],
+      "abstract": "Engineering the genetic code-by reassigning multiple of the 64 natural codons-enables making organisms resistant to all viruses, preventing genetic information exchange, and allowing the biosynthesis of genetically encoded unnatural polymers. However, synonymous codon replacement-recoding-is frequently lethal, and how recoding impacts fitness remains poorly explored. Here, we explore these effects using genome synthesis, directed evolution, and genome-transcriptome-translatome-proteome co-profiling on multiple synthetic Escherichia coli genomes. We construct six partially recoded E. coli strains bearing up to 45.8% of a synthetic genome with a deleterious 57-codon genetic code. As our analyses revealed widespread defects-including unassigned codons in Syn61 and Syn57-we apply multi-omics to revise our genome design and mitigate defects. Using multi-omics, we show that recoding induces transcriptional and translational changes leading to fitness defects under hundreds of conditions. Finally, we develop a multi-omics-guided evolution strategy that rapidly restores fitness, enabling genome synthesis with radical changes.",
+      "doi": "10.1038/s41467-026-74300-9",
+      "url": "https://doi.org/10.1038/s41467-026-74300-9",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Codon",
+        "Directed Molecular Evolution",
+        "Escherichia coli",
+        "Evolution, Molecular",
+        "Genetic Code",
+        "Genetic Fitness",
+        "Genome, Bacterial",
+        "Multiomics",
+        "Protein Biosynthesis",
+        "Transcriptome"
+      ],
+      "abstract_zh": "通过对64个天然密码子中的多个进行重新分配来改造遗传密码，可以使生物体抵抗所有病毒、阻止遗传信息交换，并允许生物合成遗传编码的非天然聚合物。然而，同义密码子替换（重编码）常常是致死的，其对适应性的影响仍未被充分探索。本研究利用基因组合成、定向进化以及基因组-转录组-翻译组-蛋白质组联合分析，在多个合成大肠杆菌基因组上探索这些效应。我们构建了六株部分重编码的大肠杆菌菌株，这些菌株携带高达45.8%的合成基因组，并采用有害的57密码子遗传密码。由于分析揭示了广泛的缺陷——包括Syn61和Syn57中未分配的密码子——我们应用多组学修正基因组设计并缓解缺陷。通过多组学，我们证明重编码会诱导转录和翻译变化，进而在数百种条件下导致适应性缺陷。最后，我们开发了一种多组学引导的进化策略，能够快速恢复适应性，从而实现了具有根本性改变的基因组合成。",
+      "key_findings": [
+        "重编码诱导转录与翻译变化，导致数百种条件下的适应性缺陷。",
+        "多组学分析揭示未分配密码子等缺陷，并指导基因组设计修正以缓解缺陷。",
+        "开发多组学引导的进化策略，快速恢复适应性，实现彻底的基因组重编码。"
+      ],
+      "translated_at": "2026-06-29T00:44:06.877312Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了多组学引导的进化策略，系统性解决基因组重编码的适应性缺陷，方法具有普适迁移潜力。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:28.914689Z"
+      }
+    },
+    {
+      "pmid": "42331809",
+      "title": "Hierarchical interplay between H3K27ac and H3K4me3 in transcriptional regulation.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Zhou Chenwei",
+        "Dong Chanjuan",
+        "Zhao Weiye",
+        "Liang Fu-Sen"
+      ],
+      "abstract": "H3K27ac and H3K4me3 are enriched at transcriptional start sites and have been implicated in transcription. However, how these marks concertedly regulate transcription is not fully understood. Here, we develop a dual chemically inducible CRISPR/dCas9-based epigenome editing system that enables independent, temporal and transcription stage-specific modulation of H3K27ac and H3K4me3 at a specific gene locus. Stage-specific removal of H3K4me3 impairs RNA polymerase II recruitment, increases promoter-proximal pausing, reduces productive elongation, and accelerates mRNA decay via increased m⁶A deposition. Losing both H3K27ac and H3K4me3 rapidly abolishes transcriptional activity, while preserving H3K4me3 without H3K27ac can partially sustain transcription. These findings reveal a functional hierarchy and interdependence between H3K27ac and H3K4me3 in different transcription stages at the tested gene loci. This versatile tool will contribute to the functional dissection of the temporal dynamics of chromatin modifications in gene regulation.",
+      "doi": "10.1038/s41467-026-74693-7",
+      "url": "https://doi.org/10.1038/s41467-026-74693-7",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "H3K27ac 和 H3K4me3 在转录起始位点富集并与转录相关，但两者如何协同调控转录尚不完全清楚。我们开发了一种双化学诱导 CRISPR/dCas9 表观基因组编辑系统，可在特定位点独立、时序和转录阶段特异性地调节 H3K27ac 与 H3K4me3。阶段特异性去除 H3K4me3 会损害 RNA 聚合酶 II 的招募，增加启动子近端暂停，降低有效延伸，并通过增加 m⁶A 修饰加速 mRNA 降解。同时丧失两种修饰会迅速消除转录活性，而保留 H3K4me3 但缺失 H3K27ac 仍可部分维持转录。这些发现揭示了测试基因位点上 H3K27ac 与 H3K4me3 在不同转录阶段的功能层级与相互依赖性。该通用工具将有助于功能解析基因调控中染色质修饰的时间动态。",
+      "key_findings": [
+        "开发了双化学诱导 CRISPR/dCas9 系统，实现位点特异、时序和阶段独立的两种组蛋白修饰调控。",
+        "H3K4me3 的阶段性去除同时损害 Pol II 招募、暂停释放、延伸效率和 mRNA 稳定性。",
+        "H3K4me3 对转录维持更为关键，H3K27ac 缺失仅部分削弱，两者皆失则转录迅速终止。"
+      ],
+      "translated_at": "2026-06-29T00:44:16.195875Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了双重化学诱导的CRISPR-dCas9表观编辑系统，可独立时序调控两种组蛋白修饰，为剖析染色质动态功能提供新工具和机制洞见。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:35.114170Z"
+      }
+    },
+    {
+      "pmid": "42330089",
+      "title": "Towards modeling phage therapy.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "de Boer Rob J",
+        "Schooley Robert",
+        "Perelson Alan S"
+      ],
+      "abstract": "Patients infected with life-threatening multi-drug resistant (MDR) bacteria have been treated with cocktails of bacteriophages. This is a complicated form of personalized medicine as the phages given to a patient have to be selected beforehand on the basis of their lytic capacity of the infecting bacteria. Because bacteria rapidly become resistant, the evolution of resistance to a diverse cocktail of phages is a complicated dynamical process, during which competing bacterial strains replace one another by accumulating several resistance mechanisms, each of which may involve a fitness cost. As a consequence, it is typically not known why a particular phage therapy succeeded or failed, and how one can optimize the composition of the cocktails to maximize the rate of success. To improve upon this, we extend an existing in vivo-calibrated mouse model into a novel mathematical model for the human situation, and include multiple phages infecting multiple bacterial strains, differing in their resistance to each of the phages. We adjust several parameter estimates of the bacterial model to the human situation, and use the model to describe a successful case of phage therapy involving several cocktails, each containing several phages. In the model, treatment success crucially depended on pretreatment resistance levels, and on the diversity and the timing of the cocktails. Once an appropriate cocktail is found, it is less important to further optimize the infection rates of the phages. Resistant bacterial strains expand rapidly when sensitive strains decline, and the higher the infectivity of the phages, the faster resistant strains expand. Because resistance evolves rapidly, it is best to provide a diverse set of phages right from the start of therapy, i.e., to hit hard and early, and create a high genetic barrier to bacterial resistance.",
+      "doi": "10.1371/journal.pcbi.1014408",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014408",
+      "pub_date": "2026-Jun",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Phage Therapy",
+        "Humans",
+        "Animals",
+        "Models, Biological",
+        "Mice",
+        "Bacteriophages",
+        "Bacterial Infections",
+        "Computational Biology",
+        "Drug Resistance, Multiple, Bacterial",
+        "Bacteria"
+      ],
+      "abstract_zh": "感染危及生命的多药耐药（MDR）细菌的患者已接受噬菌体鸡尾酒疗法。这是一种复杂的个性化医疗形式，因为给予患者的噬菌体必须根据其对感染细菌的裂解能力预先选择。由于细菌迅速产生耐药性，对多样化噬菌体鸡尾酒的耐药性进化是一个复杂的动态过程，在此过程中竞争性菌株通过积累多种耐药机制相互取代，每种机制都可能涉及适合度代价。因此，通常不清楚特定噬菌体疗法成败的原因，以及如何优化鸡尾酒组成以最大化成功率。为改进这一点，我们将已有的体内校准小鼠模型扩展为适用于人体情况的新数学模型，纳入多种噬菌体感染多种耐药性各异的细菌菌株。我们将细菌模型的若干参数估计调整至人体情境，并用该模型描述了一个涉及多种鸡尾酒、每种包含多种噬菌体的成功治疗案例。模型显示，治疗成功关键取决于治疗前的耐药水平以及鸡尾酒的多样性和给药时机。一旦找到合适的鸡尾酒，进一步优化噬菌体感染率便不那么重要。当敏感菌株减少时，耐药菌株迅速扩张，且噬菌体的感染力越高，耐药菌株扩张越快。由于耐药性进化迅速，最好在治疗伊始即提供多样化的噬菌体组合，即及早重拳出击，为细菌耐药性创建高遗传屏障。",
+      "key_findings": [
+        "建立了包含多噬菌体和多菌株的人体噬菌体疗法数学模型，并成功模拟了一例多重鸡尾酒治疗案例。",
+        "治疗成功关键取决于治疗前的耐药水平、噬菌体鸡尾酒的多样性及其给药时机。",
+        "在敏感菌株减少时耐药菌株迅速扩张，噬菌体感染力越强扩张越快，因此需及早使用多样噬菌体构建高遗传屏障。"
+      ],
+      "translated_at": "2026-06-29T00:44:38.713871Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "将鼠模型扩展为多噬菌体-多菌株进化动态的人类数学模型，提出普适治疗原则，具有方法创新和可迁移机理。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:45.171264Z"
+      }
+    },
+    {
+      "pmid": "42330080",
+      "title": "Integrative modelling of innate immune response dynamics during virus infection.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Boddepalli Ramya",
+        "Chhajera Harsh",
+        "Roya Rahul"
+      ],
+      "abstract": "Positive-sense RNA viruses that constitute a large class of human pathogens employ various strategies to suppress and evade host immune defenses. Understanding the dynamic interaction between the viral life cycle and immune signaling is crucial to designing effective antiviral strategies. Although significant progress has been made, quantitative models that can accurately capture the intricate interactions and the intertwined dynamics during viral infection of cells remain missing. In this study, we develop a comprehensive mathematical model that integrates the intracellular viral life cycle with key cellular innate immune pathways, including RIG-I-mediated detection and JAK-STAT signaling. The model provides mechanistic insights into long-standing observations, capturing both virus-specific dynamics and innate immune response, and the key components driving their coupled dynamics. For example, a comparison of viruses shows how the Japanese Encephalitis virus undergoes a dramatic reduction in viral load in cells, due to its rapid replication that robustly activates the RIG-I pathway, in contrast to the poor immune control of Hepatitis C virus. More importantly, our model demonstrates how virus-host interactions exhibit a sharp transition boundary behavior, where minor differences in immune strength or viral suppression capacity can determine whether infections resolve or persist. We propose that ISG mRNA translation and viral replication predominantly dictate these bimodal infection outcomes. Additionally, the model not only recapitulates IFN desensitization but also identifies the molecular players involved. We demonstrate how our model's ability to capture IFN dynamics allows us to predict optimal timing and dosing strategies for interferon-based prophylactic therapies. Together, our approach reveals fundamental features that govern the delicate balance between the establishment of infection and immune control in RNA virus infections.",
+      "doi": "10.1371/journal.pcbi.1014395",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014395",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "正链RNA病毒是一大类人类病原体，它们采用多种策略来抑制和逃逸宿主免疫防御。理解病毒生命周期与免疫信号之间的动态相互作用对于设计有效的抗病毒策略至关重要。尽管已取得显著进展，但能够准确捕捉病毒感染细胞过程中复杂互作和交织动态的定量模型仍然欠缺。在本研究中，我们建立了一个综合数学模型，将细胞内病毒生命周期与关键的细胞先天免疫通路（包括RIG-I介导的检测和JAK-STAT信号）相整合。该模型为长期存在的观察结果提供了机制性见解，同时捕捉了病毒特异性动态和先天免疫响应及其耦合动态的关键驱动因素。例如，通过病毒比较显示，日本脑炎病毒因其快速复制强烈激活RIG-I通路，导致细胞内病毒载量急剧下降，而丙型肝炎病毒则免疫控制较差。更重要的是，我们的模型展示了病毒-宿主相互作用如何表现出尖锐的转变边界行为，即免疫强度或病毒抑制能力的微小差异可决定感染消退还是持续。我们提出ISG mRNA翻译和病毒复制是主导这些双模式感染结局的主要因素。此外，模型不仅重现了干扰素脱敏现象，还鉴定了涉及的分子参与者。我们展示了如何利用模型捕捉干扰素动态的能力来预测基于干扰素的预防性治疗的最佳时机和剂量策略。总之，我们的方法揭示了支配RNA病毒感染中感染建立与免疫控制之间微妙平衡的基本特征。",
+      "key_findings": [
+        "整合病毒生命周期与RIG-I/JAK-STAT通路的数学模型，定量揭示了病毒复制与先天免疫的耦合动态。",
+        "发现免疫强度与病毒抑制的微小差异导致感染转归结为消除或持续的尖锐边界行为，主要由ISG翻译和病毒复制主导。",
+        "模型重现IFN脱敏并识别关键分子，可预测干扰素预防治疗的最佳时机与剂量。"
+      ],
+      "translated_at": "2026-06-29T00:44:47.200998Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "开发了整合病毒生命周期与先天免疫信号通路的数学模型，揭示了感染结果的过渡边界行为，方法具有普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:35:52.905873Z"
+      }
+    },
+    {
+      "pmid": "42330035",
+      "title": "Adhesion and polarity-driven morphogenesis: Mechanisms and constraints in tissue formation.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Nakamura Yoshiyuki T",
+        "Furusawa Chikara",
+        "Kaneko Kunihiko"
+      ],
+      "abstract": "Embryonic development in multicellular organisms exhibits diverse morphogenetic patterns, which can generally be categorized into fundamental types such as monolayer and multilayer spheres, as well as cell masses. Furthermore, we identify two distinct processes for the formation of spherical structures. These basic patterns are thought to be governed by the microscopic properties of intercellular adhesion. However, the specific mechanisms linking the microscopic factors to the emergence of distinct macroscopic morphogenetic patterns remain poorly understood. In this study, we explore how different morphogenetic patterns arise by employing a computational model that incorporates intercellular adhesion and polarity. Our results demonstrate that all fundamental morphogenetic patterns can be generated through the interplay of two key parameters: the polarity strength of the cell and the regulation of polarity via mechanical signals. Furthermore, analytical considerations reveal key mechanisms underlying the formation of these patterns. These findings highlight the critical role of physical constraints in morphogenesis and suggest potential applications to the design of artificial tissues and organoids.",
+      "doi": "10.1371/journal.pcbi.1013939",
+      "url": "https://doi.org/10.1371/journal.pcbi.1013939",
+      "pub_date": "2026-Jun",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Cell Polarity",
+        "Morphogenesis",
+        "Cell Adhesion",
+        "Models, Biological",
+        "Animals",
+        "Computer Simulation",
+        "Computational Biology"
+      ],
+      "abstract_zh": "多细胞生物的胚胎发育展现出多样的形态发生模式，通常可归为单层球、多层球以及细胞团等基本类型，我们还识别出球形结构形成的两种不同过程。这些基本模式被认为受细胞间黏附的微观特性调控，但微观因素如何导致不同宏观形态发生模式的具体机制仍不清楚。本研究通过整合细胞间黏附与极性的计算模型，探究不同形态发生模式如何产生。结果表明，所有基本形态发生模式均可通过两个关键参数的相互作用生成：细胞极性强度以及由力学信号对极性的调控。此外，解析分析揭示了这些模式形成的关键机制。这些发现凸显了物理约束在形态发生中的关键作用，并暗示了在人工组织与类器官设计中的潜在应用。",
+      "key_findings": [
+        "两类参数（细胞极性强度与力学信号对极性的调控）的相互作用足以产生所有基础形态发生模式。",
+        "通过解析方法阐明了不同形态发生模式（如单层球、多层球、细胞团）形成的核心机制。",
+        "物理约束在组织形态建成中起决定性作用，并为人工组织与类器官设计提供理论指导。"
+      ],
+      "translated_at": "2026-06-29T00:44:53.928475Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "开发了结合细胞黏附和极性的通用计算模型，揭示形态发生的普适物理约束，方法论可迁移至类器官与人工组织设计。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:36:02.026457Z"
+      }
+    },
+    {
+      "pmid": "42328792",
+      "title": "RepliSage: a stochastic graph-based framework for 3D chromatin modeling across the cell cycle.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Korsak Sevastianos",
+        "Banecki Krzysztof H",
+        "Agarwal Abhishek",
+        "Borkowska Joanna",
+        "Górski Piotr J",
+        "Chai Haoxi",
+        "et al."
+      ],
+      "abstract": "Understanding chromatin dynamics across the cell cycle is crucial, as the structural transitions of chromosomes are fundamental to processes including transcriptional regulation, DNA replication, and faithful chromosome segregation. Although chromatin undergoes extensive reorganization throughout the cell cycle, no existing biophysical model describes its transitions from G1 through S and G2 to the completion of mitosis. To address this limitation, we present RepliSage, a multi-scale framework that integrates three fundamental processes shaping chromatin architecture: DNA replication, loop extrusion, and compartmentalization. In our model, replication forks are modeled as dynamic barriers that interact with loop extrusion factors, altering chromatin architecture during S phase. The framework integrates three complementary components: (i) replication fork progression simulated from single-cell replication timing data, (ii) Monte Carlo modeling of loop extrusion and epigenetic state transitions, and (iii) 3D reconstruction in OpenMM. Unlike previous approaches, RepliSage captures chromatin dynamics across the full cell cycle. In G1, random loop extrusion dominates; during S phase, replication forks interact with extrusion factors; and in mitosis, condensins drive long-range loop formation, facilitating chromosome segregation and polymer compaction. Chromatin is represented as a dynamic graph whose node states and connectivity evolve continuously over time. By tuning parameters across phases, RepliSage reproduces known structural transitions and provides a mechanistic platform to investigate how replication stress perturbs genome organization. The model was extensively validated using both publicly available and proprietary datasets. To our knowledge, this is the first framework to dynamically couple DNA replication, loop extrusion, and compartmentalization throughout the entire cell cycle.",
+      "doi": "10.1093/nar/gkag618",
+      "url": "https://doi.org/10.1093/nar/gkag618",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Chromatin",
+        "DNA Replication",
+        "Cell Cycle",
+        "Stochastic Processes",
+        "Mitosis",
+        "Monte Carlo Method",
+        "Humans",
+        "Adenosine Triphosphatases",
+        "DNA-Binding Proteins",
+        "Multiprotein Complexes"
+      ],
+      "abstract_zh": "理解整个细胞周期中的染色质动力学至关重要，因为染色体的结构转变是转录调控、DNA复制和忠实染色体分离等过程的基础。尽管染色质在整个细胞周期中经历广泛重组，但现有的生物物理模型都无法描述从G1期经S期、G2期到有丝分裂完成的转变。为解决这一局限，我们提出了RepliSage，一个整合了塑造染色质架构的三个基本过程——DNA复制、环挤出和区室化——的多尺度框架。在我们的模型中，复制叉被建模为与环挤出因子相互作用的动态屏障，从而在S期改变染色质结构。该框架整合了三个互补组件：(i) 基于单细胞复制时序数据模拟的复制叉进程，(ii) 环挤出和表观遗传状态转变的蒙特卡罗建模，以及 (iii) 在OpenMM中进行的3D重建。与以往方法不同，RepliSage捕捉了整个细胞周期中的染色质动力学：在G1期，随机环挤出占主导；在S期，复制叉与挤出因子相互作用；在有丝分裂期，凝缩蛋白驱动长程环形成，促进染色体分离和聚合物压缩。染色质被表示为一个动态图，其节点状态和连接性随时间持续演化。通过跨阶段调节参数，RepliSage重现了已知的结构转变，并提供了一个机理平台来研究复制压力如何扰乱基因组组织。该模型使用公开和自有数据集进行了广泛验证。据我们所知，这是首个在整个细胞周期中动态耦合DNA复制、环挤出和区室化的框架。",
+      "key_findings": [
+        "提出RepliSage框架，首次实现全细胞周期中DNA复制、环挤出与区室化的动态耦合建模。",
+        "将复制叉建模为动态屏障，揭示了S期复制叉与环挤出因子相互作用改变染色质结构的机制。",
+        "模型成功重现G1、S期和有丝分裂期的染色质结构转变，并可探究复制压力对基因组组织的影响。"
+      ],
+      "translated_at": "2026-06-29T00:45:00.916679Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出首个耦合DNA复制、环挤出和区室化模拟全细胞周期3D染色质动态的随机图框架，具有新方法范式与可迁移机制洞察",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:36:06.145355Z"
+      }
+    },
+    {
+      "pmid": "42328791",
+      "title": "Prime editing-mediated microhomology enables efficient replacement of large DNA.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Xie Yuyang",
+        "Li Pan",
+        "He Zhiyong",
+        "Huang Honglin",
+        "Wu Dingzhou",
+        "Ma Zhao",
+        "et al."
+      ],
+      "abstract": "Precise and efficient replacement of large genomic DNA segments without inducing double-strand breaks (DSBs) remains a central challenge in genome engineering. Traditional homologous recombination relies on DSBs and long homologous arms, yet it remains inefficient, while recombinase or integrase systems suffer from residual sequences at integration sites. Prime editing (PE), limited by the processivity of reverse transcriptase, struggles to integrate large fragments (>100 bp). To address this challenge, we introduce Prime Editing-Microhomology-Enabled Replacement (PREMIER), a DSB-free platform by installing single-stranded microhomology arms at donor and genomic junctions via PE. In cell lines, PREMIER achieved a mean efficiency of 63.4% (median 65.2%) in diverse target sites, with peak efficiencies reaching 85.9%, exceeding homology-directed repair by 10-20-fold and reducing off-target integrations by over 100-fold compared to nonhomologous end joining. It bypasses the need for long homology arms, simplifies donor preparation, achieves targeted replacement of sequences up to 10.3 kb. In vivo, PREMIER integrates a 6.2-kb oncogene cassette into the mouse liver. Additionally, PREMIER replaces murine Trp53 with human TP53 CDS, generating functional humanized mice. Altogether, PREMIER provides a precise, high-efficiency, and DSB-free strategy for large-scale genome rewriting, offering a powerful tool for complex modeling and therapeutic genome editing.",
+      "doi": "10.1093/nar/gkag626",
+      "url": "https://doi.org/10.1093/nar/gkag626",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Animals",
+        "Recombinational DNA Repair",
+        "Mice",
+        "DNA",
+        "Genetic Engineering",
+        "Tumor Suppressor Protein p53",
+        "DNA Breaks, Double-Stranded",
+        "Cell Line"
+      ],
+      "abstract_zh": "精准高效地替换大片段基因组DNA而不引发双链断裂（DSB）仍是基因组工程的核心挑战。传统同源重组依赖DSB和长同源臂但效率低下，而重组酶或整合酶系统会在整合位点残留序列。先导编辑（PE）受逆转录酶持续合成能力限制，难以整合大于100 bp的片段。为应对这一挑战，我们开发了先导编辑-微同源介导的置换（PREMIER）——一种无DSB的平台，通过PE在供体与基因组连接处安装单链微同源臂。在细胞系中，PREMIER在多种靶位点实现了63.4%的平均效率（中位数65.2%），峰值效率达85.9%，比同源定向修复高10至20倍，且与非同源末端连接相比脱靶整合减少逾100倍。该策略无需长同源臂，简化了供体制备，能靶向替换长达10.3 kb的序列。在体内，PREMIER将6.2 kb的癌基因表达盒整合至小鼠肝脏；并实现了小鼠Trp53替换为人TP53编码序列，产生功能性人源化小鼠。总而言之，PREMIER为大规模基因组重写提供了一种精准、高效且无DSB的策略，为复杂模型建立与治疗性基因组编辑提供了强大工具。",
+      "key_findings": [
+        "提出PREMIER平台，通过先导编辑安装微同源臂，实现无需双链断裂的大片段DNA精准置换。",
+        "细胞实验中置换效率中位数达65.2%，峰值85.9%，较同源修复提升10-20倍，脱靶整合锐减百倍以上。",
+        "体内实现6.2 kb癌基因表达盒的肝脏整合及Trp53人源化替换，证实其在复杂建模与治疗的潜力。"
+      ],
+      "translated_at": "2026-06-29T00:45:24.062680Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出基于先导编辑的微同源末端连接新方法PREMIER，实现无DSB的高效大片段DNA替换，方法创新且可普适迁移。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:36:09.732513Z"
+      }
+    },
+    {
+      "pmid": "42328786",
+      "title": "Structure basis for single-strand nucleic acid targeting by IscB and variants.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Xu Chengtao",
+        "Yang Qi",
+        "Niu Xiaolin",
+        "Ke Ailong"
+      ],
+      "abstract": "Transposon-encoded IscB was defined as the evolutionary ancestor of CRISPR-Cas9. This compact RNA-guided endonuclease has since been engineered for genome-editing applications. We previously repurposed IscB and related Cas9s as efficient RNA editors by removing their double-stranded DNA (dsDNA) recognition module, the target-adjacent motif (TAM)/protospacer adjacent motif-interacting domain. Here, we report four cryo-electron microscopy structures of IscB, with or without TAM-interaction domain (TID), in complex with single-stranded nucleic acid (ssNA) targets. Structures reveal that, regardless of TID presence, IscB engages ssNA using the same mechanism. IscB initially facilitates formation of a 10-nt seed duplex with ssNA; further base-pairing is blocked by an alternatively positioned HNH nuclease that acts as a roadblock. In this intermediate state, neither HNH nor RuvC is competent for target cleavage. Only upon full duplex formation is the HNH roadblock dislodged by the duplex extension between guide RNA and ssNA. HNH and RuvC nuclease active sites become exposed as the result. A similar set of conformational rearrangements likely governs IscB activity during dsDNA target interrogation. Guided by the structural and mechanistic insights, we introduced mutations to either improve ssNA binding or ease HNH dislodging. Both approaches improved the RNA-targeting efficiency of IscB in vitro and in human cells.",
+      "doi": "10.1093/nar/gkag607",
+      "url": "https://doi.org/10.1093/nar/gkag607",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "DNA, Single-Stranded",
+        "Cryoelectron Microscopy",
+        "CRISPR-Cas Systems",
+        "RNA, Guide, CRISPR-Cas Systems",
+        "Gene Editing",
+        "Models, Molecular",
+        "Nucleic Acid Conformation",
+        "Humans"
+      ],
+      "abstract_zh": "转座子编码的IscB被定义为CRISPR-Cas9的进化祖先。这种紧凑的RNA引导核酸内切酶已被改造用于基因组编辑应用。我们此前通过去除其双链DNA（dsDNA）识别模块——靶标邻近基序（TAM）/原型间隔子邻近基序相互作用结构域（TID），将IscB及相关Cas9改造成高效的RNA编辑器。本文报道了IscB在有无TID情况下与单链核酸（ssNA）靶标复合物的四个冷冻电镜结构。结构揭示，无论TID存在与否，IscB均采用相同机制与ssNA结合。IscB首先促进与ssNA形成10核苷酸的种子双链；进一步碱基配对被一个替代定位的HNH核酸酶阻断，该核酸酶充当路障。在此中间态，HNH和RuvC均不具备靶标切割能力。只有当引导RNA与ssNA之间的双链延伸完全形成时，HNH路障才被推开，HNH和RuvC核酸酶活性位点随之暴露。类似的一系列构象重排可能也在dsDNA靶标识别过程中控制IscB活性。基于结构和机制洞见，我们引入了突变以改善ssNA结合或促进HNH移开。两种方法均在体外和人类细胞中提高了IscB的RNA靶向效率。",
+      "key_findings": [
+        "冷冻电镜结构揭示IscB通过形成种子双链及HNH路障机制结合单链核酸，构象重排驱动切割激活。",
+        "IscB在有无TID时均采用相同单链核酸靶向机制，该机制同样适用于双链DNA靶标识别。",
+        "基于结构的突变通过增强ssNA结合或解除HNH阻断，提升了IscB在细胞内外的RNA编辑效率。"
+      ],
+      "translated_at": "2026-06-29T00:45:37.429008Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示IscB靶向单链核酸的构象重排机制，并基于结构设计突变提升RNA编辑效率，提供可迁移的工程原理。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:36:16.900369Z"
+      }
+    },
+    {
+      "pmid": "42325211",
+      "title": "Exploration of precision coregulator TR-FRET identifies diverse signatures for LXR ligands relevant to discovery of nonlipogenic ABCA1 inducers.",
+      "journal": "Elife",
+      "authors": [
+        "Laham Megan S",
+        "Ackerman-Berrier Martha S",
+        "Alam Fahmida",
+        "Turner Sarah",
+        "Velma Ganga Reddy",
+        "Penton Christopher",
+        "et al."
+      ],
+      "abstract": "APOE4, the major genetic risk factor for Alzheimer's disease (AD), and ATP-binding cassette-A1 (ABCA1), required for lipidation of APOE are gene products of the liver X receptor (LXR) receptor. LXR agonists have been validated in animal models as therapeutics for AD, atherosclerosis, and many other diseases. Clinical progress has been thwarted by unwanted hepatic lipogenesis. Structurally diverse LXR ligands were profiled in coregulator TR-FRET (CRT) assays analyzing ligand-induced coactivator recruitment, coactivator selectivity, corepressor dissociation, and LXR isoform selectivity. A multiplex CRT assay was developed to measure synchronous ligand-induced displacement of corepressor by coactivator. Potency for coactivator recruitment to LXRβ correlated with induction of ABCA1 in human astrocytoma cells. Correlation with lipogenic activation of sterol response element (SRE) in hepatocarcinoma cells, was more complex. CRT response was diverse revealing ligands with theoretical full agonist, partial agonist, antagonist, inverse agonist, and other signatures within the same chemical series, suggesting the scope for precision CRT to guide nonlipogenic LXR agonist design.",
+      "doi": "10.7554/eLife.109146",
+      "url": "https://doi.org/10.7554/eLife.109146",
+      "pub_date": "2026-Jun-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Liver X Receptors",
+        "Humans",
+        "ATP Binding Cassette Transporter 1",
+        "Ligands",
+        "Fluorescence Resonance Energy Transfer"
+      ],
+      "abstract_zh": "APOE4是阿尔茨海默病的主要遗传风险因子，ABCA1是APOE脂化所必需，二者均为肝X受体（LXR）的基因产物。LXR激动剂已在动物模型中证实对AD等疾病有效，但肝脏脂肪生成阻碍了临床应用。通过辅调节因子TR-FRET（CRT）分析对结构多样的LXR配体进行表征，检测共激活因子招募、选择性、辅抑制因子解离及亚型选择性，并建立多重CRT法同步监测配体诱导的辅抑制因子置换。LXRβ共激活因子招募效能与人星形细胞瘤细胞ABCA1诱导相关，而肝癌细胞甾醇应答元件（SRE）的脂肪生成激活相关性较复杂。CRT响应多样，同一化学系列可呈现完全激动剂、部分激动剂、拮抗剂、反向激动剂等特征，提示精准CRT可指导非脂肪生成性LXR激动剂的设计。",
+      "key_findings": [
+        "开发多重CRT分析法，可同步检测配体诱导的辅抑制因子被共激活因子置换。",
+        "LXRβ共激活因子招募效能与ABCA1诱导相关，但与SRE脂肪生成激活的相关性复杂，揭示配体特征多样。",
+        "同一化学系列呈现激动剂、拮抗剂等多样药理学特征，精准CRT可指导非脂肪生成性LXR激动剂设计。"
+      ],
+      "translated_at": "2026-06-29T00:45:47.192219Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了同步检测辅抑制因子/辅激活因子置换的多重TR-FRET新方法，系统性揭示配体功能特征，可迁移至其他核受体研究。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-06-29T00:36:32.690237Z"
+      }
+    }
+  ],
+  "pre_llm_filter_total": 51,
+  "llm_filtered_out": 12,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filter_prompt_version": "v1",
+  "llm_filter_policy_version": "2026-05-06",
+  "llm_filter_evaluation_snapshot_id": null,
+  "llm_filter_policy_config": "configs/filter_policy.json",
+  "llm_filtered_at": "2026-06-29T00:36:33.890357Z",
+  "filtered_out_papers": [
+    {
+      "pmid": "42363010",
+      "title": "Slowing the spread of treatment failure to artemisinin-based combination therapies in Uganda.",
+      "journal": "Nat Commun",
+      "bucket": "application_case",
+      "reason": "使用现有个体基疟疾传播模型对乌干达具体策略进行比较，无新方法学贡献，属于应用建模案例。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42362483",
+      "title": "Rapid and Continuous Directed Evolution in Vibrio natriegens Utilizing an In Vivo Hypermutation System.",
+      "journal": "ACS Synth Biol",
+      "bucket": "incremental_tooling",
+      "reason": "将已有的MutaT7系统移植到V. natriegens，无方法学创新，仅为利用底盘生长速度的移植性应用。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42361171",
+      "title": "PMVK drives hepatocarcinogenesis via SP1 phosphorylation-mediated lipid metabolic reprogramming.",
+      "journal": "Sci Adv",
+      "bucket": "mechanism_case",
+      "reason": "阐明PMVK-SP1肝癌代谢重编程机制，属特定疾病分子机制研究，无普适方法创新。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42350792",
+      "title": "Base editing reveals an essential role for NANOG in human embryogenesis.",
+      "journal": "Nature",
+      "bucket": "application_case",
+      "reason": "应用已有碱基编辑工具研究特定基因功能，方法无创新，属于纯应用导向的发育生物学案例研究。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42350400",
+      "title": "Force-moment mechanics of wiggling in connector insertion.",
+      "journal": "Nat Commun",
+      "bucket": "other",
+      "reason": "非生物学领域，属机械力学与装配工程，不符周报方向",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42350396",
+      "title": "Glioma-intrinsic MAPK/ERK signaling promotes immunotherapy efficacy through T cell infiltration and interferon responses.",
+      "journal": "Nat Commun",
+      "bucket": "mechanism_case",
+      "reason": "利用现有体内CRISPR筛选在胶质瘤模型中揭示MAPK/ERK功能，属于特定疾病机制的案例研究，未提出新方法或可迁移的方法论创新。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42350383",
+      "title": "Dynamic roughening of cities driven by multiplicative noise.",
+      "journal": "Nat Commun",
+      "bucket": "other",
+      "reason": "研究城市增长统计物理模型，不属系统生物学、合成生物学或理论生物学范畴",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42350360",
+      "title": "Optimizing reversible solid oxide cell technology for long-term energy storage in Europe's decarbonized frameworks.",
+      "journal": "Nat Commun",
+      "bucket": "application_case",
+      "reason": "纯应用导向的rSOC技术经济分析，针对特定欧洲场景，无新方法或普适框架。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42348678",
+      "title": "Impact heating and the hidden Hadean.",
+      "journal": "Science",
+      "bucket": "descriptive_study",
+      "reason": "该研究属地球科学，应用已有随机模型解释冥古宙地壳演化，无新方法论，且不属本刊关注的系统/合成/理论生物学方向。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42342656",
+      "title": "Site-controlled quantum dot arrays edge-coupled to integrated silicon nitride waveguides and devices.",
+      "journal": "Nat Commun",
+      "bucket": "other",
+      "reason": "论文属于量子光子学与集成光学领域，与系统生物学、合成生物学或理论生物学无关。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42334452",
+      "title": "Patient-specific midbrain organoids with CRISPR correction recapitulate neuronopathic Gaucher disease phenotypes and enable evaluation of novel therapies.",
+      "journal": "Elife",
+      "bucket": "application_case",
+      "reason": "利用已有类器官和CRISPR技术构建疾病模型并测试疗法，属现成工具在特定疾病上的应用，无方法创新。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42332882",
+      "title": "VEGFR2 dimerization kinetics on the cell surface determined by microscopy and mathematical modeling.",
+      "journal": "Biophys J",
+      "bucket": "application_case",
+      "reason": "应用先前发表的建模方法于VEGFR2二聚化，无新方法论贡献，属特定系统参数测量。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    }
+  ],
+  "translated_count": 39
+}
