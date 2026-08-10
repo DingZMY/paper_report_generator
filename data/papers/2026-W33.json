@@ -1,0 +1,862 @@
+{
+  "week": "2026-W33",
+  "generated_at": "2026-08-10T00:55:41.563412Z",
+  "date_range": {
+    "start": "2026/08/03",
+    "end": "2026/08/10"
+  },
+  "total": 18,
+  "papers": [
+    {
+      "pmid": "42568186",
+      "title": "An energy-based mathematical model of actin-driven protrusions in eukaryotic chemotaxis.",
+      "journal": "Biophys J",
+      "authors": [
+        "Johnson Samuel W S",
+        "Parsons Maddy",
+        "Baker Ruth E",
+        "Maini Philip K"
+      ],
+      "abstract": "In eukaryotic cell chemotaxis, many cells extend and retract transient actin-driven protrusions at their membrane that facilitate both the detection of external chemical gradients and directional movement via cell-matrix coupling and traction. Although extensive experimental work has detailed how cellular protrusions and morphology vary under different environmental conditions, the mechanistic principles linking protrusive activity to these factors remain poorly understood. Here, we model the extension of actin-based protrusions in chemotaxis as an optimisation problem, wherein cells balance the detection of chemical gradients with the energetic cost of protrusion formation. Our model, built on the assumption of maximal energetic efficiency during migration, provides a framework that qualitatively reproduces experimentally observed patterns of protrusive activity across a range of biological systems and environmental conditions, suggesting that energetic efficiency may underpin the morphology and chemotactic behaviour of motile eukaryotic cells. Additionally, we leverage the model to generate novel predictions regarding cellular responses to other, experimentally untested environmental perturbations, providing testable hypotheses for future experimental work that may be used to validate and refine the model presented here.",
+      "doi": "10.1016/j.bpj.2026.08.001",
+      "url": "https://doi.org/10.1016/j.bpj.2026.08.001",
+      "pub_date": "2026-Aug-07",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "在真核细胞的趋化过程中，许多细胞会在细胞膜处延伸和回缩瞬时的肌动蛋白驱动的突起，这些突起通过细胞-基质耦合和牵引作用促进对外部化学梯度的探测以及定向运动。尽管大量的实验工作详细描述了细胞突起和形态在不同环境条件下如何变化，但将突生活动与这些因素联系起来的机理原则仍不清楚。在此，我们将趋化过程中基于肌动蛋白的突起延伸建模为一个优化问题，其中细胞在探测化学梯度与突起形成的能量代价之间取得平衡。我们的模型建立在迁移过程中能量效率最大化的假设之上，提供了一个框架，能够定性重现一系列生物系统和环境条件下实验观察到的突生活动模式，表明能量效率可能支撑着运动性真核细胞的形态和趋化行为。此外，我们利用该模型对细胞在其他尚未经实验测试的环境扰动下的响应产生了新的预测，为未来的实验工作提供了可检验的假设，这些工作可用于验证和完善本文提出的模型。",
+      "key_findings": [
+        "将肌动蛋白突起延伸建模为优化问题，在探测化学梯度与突起能量成本间权衡。",
+        "基于迁移中能量效率最大化假设的模型能定性重现不同环境下的突生活动模式。",
+        "模型预测了细胞对未测试环境扰动的响应，为后续实验提供可检验的假设。"
+      ],
+      "translated_at": "2026-08-10T00:58:52.704001Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出基于能量效率的趋化突起优化模型，从第一性原理解释形态与行为，是可迁移的理论框架。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:55:46.894517Z"
+      }
+    },
+    {
+      "pmid": "42566539",
+      "title": "Higher-order trade-offs in hypergraph community detection.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Li Jiaze",
+        "Schaub Michael T",
+        "Peel Leto"
+      ],
+      "abstract": "Extending community detection from pairwise networks to hypergraphs introduces fundamental theoretical challenges. Hypergraphs exhibit structural heterogeneity with no direct graph analog: Hyperedges of varying orders can connect nodes across communities in diverse configurations. Crucially, this means that any hypergraph community detection algorithm must make a choice regarding which order or balance of hyperedges it prefers to maintain or split during partitioning. We address these challenges by developing a unified framework for community detection in nonuniform hypergraphs under the hypergraph stochastic block model. We introduce a general signal-to-noise ratio that enables a quantitative analysis of trade-offs unique to higher-order networks, such as which hypergedges we choose to split across communities and how we choose to split them. Building on this framework, we derive a Bethe Hessian operator for nonuniform hypergraphs that provides efficient spectral clustering with principled model selection. We characterize the resulting spectral detectability threshold and compare it to belief propagation limits, showing the methods coincide for uniform hypergraphs but diverge in nonuniform settings. Synthetic experiments confirm our analytical predictions and reveal systematic biases toward preserving higher-order and balanced shape hyperedges. Application to empirical data demonstrates the practical relevance of these higher-order detectability trade-offs in real-world systems.",
+      "doi": "10.1126/sciadv.aef2184",
+      "url": "https://doi.org/10.1126/sciadv.aef2184",
+      "pub_date": "2026-Aug-07",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "将社区检测从成对网络扩展到超图引入了根本性的理论挑战。超图展现出没有直接图类比的结构异质性：不同阶的超边可以以多样的配置连接跨社区的节点。至关重要的是，这意味着任何超图社区检测算法都必须做出选择，即在划分过程中倾向于维持或分割哪个阶数或何种平衡的超边。我们通过开发一个在超图随机块模型下非均匀超图社区检测的统一框架来应对这些挑战。我们引入了一个通用的信噪比，能够定量分析高阶网络特有的权衡，例如我们选择将哪些超边分割到不同社区，以及如何分割它们。基于此框架，我们为非均匀超图导出了Bethe Hessian算子，该算子提供了具有原则性模型选择的高效谱聚类方法。我们刻画了由此产生的谱可检测性阈值，并将其与置信传播极限进行比较，表明这些方法在均匀超图中一致，但在非均匀设置下存在分歧。合成实验证实了我们的分析预测，并揭示了对保留高阶和平衡形状超边的系统性偏差。在实证数据上的应用证明了这些高阶可检测性权衡在现实世界系统中的实际相关性。",
+      "key_findings": [
+        "提出了非均匀超图社区检测的统一框架，引入通用信噪比量化不同阶超边划分时的权衡。",
+        "为非均匀超图推导出Bethe Hessian算子，实现原则性模型选择的高效谱聚类，并刻画了可检测性阈值。",
+        "发现谱方法与置信传播在非均匀超图上存在分歧，并揭示方法偏向于保留高阶和平衡形状的超边。"
+      ],
+      "translated_at": "2026-08-10T00:59:01.200249Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出非均匀超图社区检测的统一框架与新谱方法，揭示高阶网络特有的可检测性权衡，具有普适方法论价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:55:52.361147Z"
+      }
+    },
+    {
+      "pmid": "42555737",
+      "title": "Early fate diversification of radial glial progenitors during corticogenesis.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Varela-Martínez Irene",
+        "Villalba Ana",
+        "García-Marqués Jorge",
+        "Aguilera Alfonso",
+        "Castro Diogo S",
+        "Hippenmeyer Simon",
+        "et al."
+      ],
+      "abstract": "Radial glial progenitors (RGPs) generate all projection neurons (PNs) in the cerebral cortex through incompletely understood processes. We combined Mosaic Analysis with Double Markers at embryonic stages (E)12.5 and E13.5 with early postnatal callosal tracing to dissect RGP lineage progression. We find that multipotent RGPs generate all extra-telencephalic (ET) and intra-telencephalic (IT) PNs via parallel sublineages that emerge simultaneously at neurogenesis onset. ET-PN production progresses exclusively via small, self-consuming lineages; IT-PN lineages feature RGPs generating large translaminar outputs. The early emergence of IT-PN-fated RGPs, coinciding with a switch to direct neurogenesis, contributes to the stereotyped population-level progression of the multipotent lineage. We also identify POU3F transcription factors as candidate regulators of IT-PN fate via noncanonical mitotic chromatin binding. The results support a model whereby IT- and ET-PNs arise from an early bifurcation and parallel specification within the multipotent RGP lineage.",
+      "doi": "10.1126/sciadv.adw5487",
+      "url": "https://doi.org/10.1126/sciadv.adw5487",
+      "pub_date": "2026-Aug-07",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Neurogenesis",
+        "Cell Lineage",
+        "Ependymoglial Cells",
+        "Cerebral Cortex",
+        "Mice",
+        "Neurons",
+        "Cell Differentiation",
+        "Neural Stem Cells",
+        "Neuroglia"
+      ],
+      "abstract_zh": "径向胶质祖细胞（RGPs）通过不完全清楚的机制产生大脑皮层中的所有投射神经元（PNs）。我们结合了胚胎期（E）12.5和E13.5的双标记嵌合分析与出生后早期胼胝体追踪，以剖析RGP谱系进展。我们发现多能RGPs通过平行亚谱系同时产生所有端脑外（ET）和端脑内（IT）投射神经元，这些亚谱系在神经发生起始时同时出现。ET-PN的产生仅通过小的、自我消耗的谱系进行；IT-PN谱系则具有产生大的跨层输出的RGPs。IT-PN命运决定的RGPs的早期出现，与向直接神经发生的转变相吻合，有助于多能谱系在群体水平上的定型进展。我们还发现POU3F转录因子通过非经典的丝分裂染色质结合，可能是IT-PN命运的候选调节因子。这些结果支持一个模型，即IT-和ET-PNs源于多能RGP谱系内的早期分叉和平行特化。",
+      "key_findings": [
+        "多能RGPs在神经发生起始时即通过平行亚谱系同时产生端脑外和端脑内投射神经元。",
+        "端脑外神经元谱系小且自我消耗，端脑内神经元由产生跨层输出的大谱系RGPs生成。",
+        "IT命运RGP的早期出现与直接神经发生转变一致，POU3F转录因子可能调控该命运。"
+      ],
+      "translated_at": "2026-08-10T00:59:14.140785Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示径向胶质祖细胞早期平行亚谱系分叉的新模型，概念新颖且对发育谱系规范具普适性机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:56:01.795864Z"
+      }
+    },
+    {
+      "pmid": "42563385",
+      "title": "Recovering membrane interaction kinetics of single molecules from 3D tracking data.",
+      "journal": "Biophys J",
+      "authors": [
+        "Lundin Erik",
+        "Volkov Ivan L",
+        "Johansson Magnus"
+      ],
+      "abstract": "Interactions between cytosolic biomolecules and the bacterial inner membrane are fundamental to many cellular processes, yet directly measuring their binding kinetics in living cells remains challenging. Conventional two-dimensional single-molecule tracking analyses can be insufficient, particularly when membrane association does not markedly alter the diffusion rate. Here, we present a method to recover membrane interaction kinetics from three-dimensional single-molecule trajectories in rod-shaped bacteria. Using simulated 3D tracking data, we identify membrane-associated motion by quantifying how well short trajectory segments follow the circular curvature of the cell membrane. The resulting measure is further analyzed using a hidden Markov modeling framework, enabling robust discrimination between cytosolic and membrane-bound states and capturing the dynamics of state transitions without requiring diffusion-rate changes or direct colocalization with membrane markers. This work establishes a general framework for extracting membrane interaction kinetics from 3D single-molecule tracking data in live bacteria, and highlights the value of realistic microscopy simulations for quantitative interpretation and systematic bias assessment.",
+      "doi": "10.1016/j.bpj.2026.07.029",
+      "url": "https://doi.org/10.1016/j.bpj.2026.07.029",
+      "pub_date": "2026-Aug-06",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "胞质生物分子与细菌内膜之间的相互作用是许多细胞过程的基础，但在活细胞中直接测量其结合动力学仍颇具挑战。传统的二维单分子追踪分析可能存在不足，尤其是当膜结合未显著改变扩散速率时。本文提出一种从杆状细菌的三维单分子轨迹中恢复膜相互作用动力学的方法。通过模拟的三维追踪数据，我们通过量化短轨迹段沿细胞膜圆形曲率的吻合程度来识别膜相关运动。所得度量进一步利用隐马尔可夫模型框架分析，从而能够稳健区分胞质与膜结合状态，并捕获状态转换的动态过程，无需依赖扩散速率变化或与膜标记物的直接共定位。这项工作为从活细菌三维单分子追踪数据中提取膜相互作用动力学建立了一个通用框架，并彰显了逼真显微模拟对定量解释和系统偏差评估的价值。",
+      "key_findings": [
+        "提出通过量化短轨迹段与细胞膜圆形曲率的吻合程度，从模拟三维单分子追踪数据中识别膜相关运动的方法。",
+        "利用隐马尔可夫模型分析该度量，无需依赖扩散速率变化或膜标记，即可稳健区分胞质与膜结合状态并捕获转换动态。",
+        "构建了从活菌三维单分子追踪数据中提取膜相互作用动力学的通用框架，并证明了显微模拟对定量与偏差评估的价值。"
+      ],
+      "translated_at": "2026-08-10T00:59:46.877808Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出从3D单分子轨迹中恢复膜结合动力学的新方法，利用曲率特征和隐马尔可夫模型，不依赖扩散速率变化，具有普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:56:08.942679Z"
+      }
+    },
+    {
+      "pmid": "42561074",
+      "title": "Generative design of bacteriophages with genome language models.",
+      "journal": "Science",
+      "authors": [
+        "King Samuel H",
+        "Driscoll Claudia L",
+        "Li David B",
+        "Guo Daniel",
+        "Merchant Aditi T",
+        "Brixi Garyk",
+        "et al."
+      ],
+      "abstract": "Many important biological functions arise not from single genes but from complex interactions encoded by entire genomes. We report the first generative design of complete bacteriophage genomes using genome language models. We generated viable bacteriophages with target host tropism, using the phage ΦX174 as our design template. Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions. Cryo-electron microscopy confirmed that a generated phage utilizes an evolutionarily distant DNA packaging protein in its capsid. A cocktail of generated phages rapidly overcomes ΦX174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence-generated phage therapies against rapidly evolving bacterial pathogens. This work provides a blueprint for the design of diverse synthetic bacteriophages and useful biological systems at the genome scale.",
+      "doi": "10.1126/science.aec2657",
+      "url": "https://doi.org/10.1126/science.aec2657",
+      "pub_date": "2026-Aug-06",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Bacteriophage phi X 174",
+        "Capsid",
+        "Capsid Proteins",
+        "Cryoelectron Microscopy",
+        "Escherichia coli",
+        "Generative Artificial Intelligence",
+        "Genome, Viral",
+        "Large Language Models",
+        "Phage Therapy",
+        "Synthetic Biology"
+      ],
+      "abstract_zh": "许多重要的生物功能并非源于单个基因，而是由整个基因组编码的复杂相互作用产生。我们首次报道了利用基因组语言模型对完整噬菌体基因组进行生成式设计。以噬菌体ΦX174为设计模板，我们生成了具有目标宿主嗜性的活噬菌体。实验测试获得了在实验室条件下具有不同适应度谱的16个噬菌体。冷冻电镜证实，一种生成的噬菌体在其衣壳中使用了一种进化上关系遥远的DNA包装蛋白。生成的噬菌体混合物能迅速克服对ΦX174耐药的大肠杆菌菌株，展示了人工智能生成的噬菌体疗法对抗快速进化细菌病原体的路径。这项工作为基因组规模的多样化合成噬菌体及有用生物系统的设计提供了蓝图。",
+      "key_findings": [
+        "首次运用基因组语言模型实现完整噬菌体基因组的生成式设计，并成功获得活噬菌体。",
+        "生成噬菌体不仅具备目标宿主嗜性，还装配了进化上远源的DNA包装蛋白，显示设计灵活性。",
+        "AI生成的噬菌体混合物可快速克服细菌耐药性，验证了合成噬菌体疗法的可行性。"
+      ],
+      "translated_at": "2026-08-10T00:59:57.443743Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出用基因组语言模型生成完整噬菌体基因组的生成式设计框架，方法学具有普适性，可迁移至其他生物系统。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:56:12.905499Z"
+      }
+    },
+    {
+      "pmid": "42562830",
+      "title": "Biomechanics-informed inertial tracking achieves the accuracy of marker-based kinematics.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Phan Vu",
+        "Li Zhixiong",
+        "Meinders Evy",
+        "Gale Tom",
+        "Anderst William",
+        "Ng-Thow-Hing Julian",
+        "et al."
+      ],
+      "abstract": "Inertial measurement units (IMUs) could transform human movement science by enabling motion tracking outside the laboratory. Yet, their accuracy is perceived as inferior to that of marker-based systems. Here, we introduce IMoveLab, a method that integrates biomechanical priors into state-estimation filters, harnessing coupling across degrees of freedom and the spring-like behavior of muscle-tendon units for recursive state correction. We found that modern state-estimation filters match the accuracy of marker-based knee tracking when evaluated against biplane radiography, the gold standard for skeletal motion. IMoveLab further improves accuracy and achieves drift-free lower-extremity kinematics in long-duration trials, whereas alternative approaches do not. Movement scientists have been anticipating the leap out of the laboratory with cautious optimism. With methods and evidence that support more confident adoption of IMUs, this leap seems less like an aspiration and more like the first line of a new chapter written in the environments where human movement unfolds.",
+      "doi": "10.1038/s41467-026-75981-y",
+      "url": "https://doi.org/10.1038/s41467-026-75981-y",
+      "pub_date": "2026-Aug-05",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Biomechanical Phenomena",
+        "Motion Capture",
+        "Movement",
+        "Knee Joint",
+        "Muscle, Skeletal",
+        "Algorithms"
+      ],
+      "abstract_zh": "惯性测量单元（IMU）有望通过实现实验室外的运动追踪来变革人体运动科学，但其精度被认为不及基于标记的系统。本研究提出 IMoveLab 方法，将生物力学先验信息融入状态估计滤波器，利用自由度间的耦合和肌肉肌腱单元的弹簧式特性进行递归状态校正。我们发现，采用现代状态估计滤波器，以双平面放射摄影（骨运动金标准）为参照，其膝关节追踪精度可与标记系统媲美。IMoveLab 进一步提升了精度，并在长时间试验中实现了无漂移的下肢运动学测量，而其他方法则无法做到。运动科学家对此抱有审慎乐观的期待。随着支持更自信采用 IMU 的方法和证据的出现，这一跨越已不仅是愿景，更像是在人类运动真实发生的环境中写下的新篇章的序言。",
+      "key_findings": [
+        "IMoveLab 通过融合生物力学先验与状态滤波，使 IMU 膝关节追踪精度达到标记式金标准水平。",
+        "该方法借助自由度耦合和肌肉肌腱弹簧特性实现递归校正，有效消除长时间测量中的漂移。",
+        "研究证明先进的状态估计滤波可将 IMU 精度提升至可与标记系统媲美，支持户外运动学研究。"
+      ],
+      "translated_at": "2026-08-10T01:00:05.682488Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出将生物力学先验融入状态估计滤波器的新方法IMoveLab，实现无漂移动力学追踪，极具方法迁移价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:56:35.435554Z"
+      }
+    },
+    {
+      "pmid": "42557325",
+      "title": "Antigen presentation by CD40+MHC-II+ astrocytes promotes CNS autoimmunity.",
+      "journal": "Nature",
+      "authors": [
+        "Lee Joon-Hyuk",
+        "Li Zhaorong",
+        "Soto Joselyn S",
+        "Kim Ah-Ram",
+        "Illouz Tomer",
+        "Polonio Carolina M",
+        "et al."
+      ],
+      "abstract": "Astrocytes contribute to the pathology of multiple neurological disorders, including the T cell-driven autoimmune disease of the central nervous system (CNS) multiple sclerosis and its mouse model, experimental autoimmune encephalomyelitis1. However, little is known about functional interactions between astrocytes and CD4+ T cells. Here using rabies barcode interaction detection followed by sequencing2, in combination with single-cell RNA sequencing, in vitro co-culture systems and cell-specific in vivo CRISPR-Cas9-based genetic perturbation studies, we established that astrocytes expressing CD40 and MHC-II promote CNS T cell autoimmunity. We harnessed universal labelling immune partnerships by SorTagging intercellular contacts3 to analyse astrocyte-interacting CD4+ T cells, finding that direct astrocyte-CD4+ T cell interactions enhance pathogenic T helper 17 cell responses in experimental autoimmune encephalomyelitis. In addition, we studied the effect of these interactions on astrocytes. Using in vivo subproteomic approaches4 and AlphaFold-Multimer predictions5, we established that CD40 activation in astrocytes by CD40L expressed by CD4+ T cells induces the accumulation of PLIN4-positive lipid droplets, which provide acetyl-CoA to promote p65 acetylation-dependent NF-κB activation and antigen presentation. Finally, we detected CD40+MHC-II+LD+ astrocytes in multiple sclerosis samples by single-nucleus RNA sequencing and immunohistochemistry. In summary, these studies define a previously unrecognized mechanism by which astrocytes promote CNS autoimmunity.",
+      "doi": "10.1038/s41586-026-10860-6",
+      "url": "https://doi.org/10.1038/s41586-026-10860-6",
+      "pub_date": "2026-Aug-05",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "星形胶质细胞参与多种神经系统疾病的病理过程，包括T细胞驱动的中枢神经系统自身免疫病多发性硬化及其小鼠模型实验性自身免疫性脑脊髓炎。然而，星形胶质细胞与CD4+ T细胞之间的功能性相互作用知之甚少。本研究通过狂犬病毒条形码相互作用检测并测序技术、单细胞RNA测序、体外共培养系统以及体内基于CRISPR-Cas9的细胞特异性遗传扰动研究，证实表达CD40和MHC-II的星形胶质细胞能够促进中枢神经系统T细胞自身免疫。我们利用SorTagging标记细胞间互作的通用免疫配对方法，分析了与星形胶质细胞相互作用的CD4+ T细胞，发现直接接触增强了实验性自身免疫性脑脊髓炎中致病的辅助性T细胞17反应。此外，我们研究了这些相互作用对星形胶质细胞的影响。通过体内亚蛋白质组学方法和AlphaFold-Multimer预测，我们确定CD4+ T细胞表面的CD40L激活星形胶质细胞上的CD40，诱导PLIN4阳性的脂滴积累，这些脂滴提供乙酰辅酶A，促进p65乙酰化依赖的NF-κB活化和抗原呈递。最后，我们通过单核RNA测序和免疫组织化学在多发性硬化样本中检测到CD40+MHC-II+脂滴阳性的星形胶质细胞。总之，这些研究揭示了一种前所未有的星形胶质细胞促进中枢神经系统自身免疫的机制。",
+      "key_findings": [
+        "星形胶质细胞通过CD40和MHC-II直接与CD4+ T细胞互作，增强致病性Th17反应，促进中枢神经系统自身免疫。",
+        "CD4+ T细胞的CD40L激活星形胶质细胞CD40，诱导PLIN4脂滴积累，通过乙酰辅酶A促进p65乙酰化，增强NF-κB活化和抗原呈递。",
+        "在多发性硬化患者中枢神经系统中证实存在CD40阳性、MHC-II阳性且脂滴阳性的星形胶质细胞。"
+      ],
+      "translated_at": "2026-08-10T01:01:38.844209Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示星形胶质细胞通过CD40-MHC-II与T细胞互作、脂滴代谢调控抗原呈递的新机制，具有可迁移的免疫调控概念。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:56:55.583463Z"
+      }
+    },
+    {
+      "pmid": "42554312",
+      "title": "Apparent cooperativity between human CMV virions introduces errors in conventional methods of calculating multiplicity of infection.",
+      "journal": "Elife",
+      "authors": [
+        "Peterson Christopher",
+        "Miller Joshua",
+        "Ryckman Brent",
+        "Ganusov Vitaly V"
+      ],
+      "abstract": "Whether infection of cells by individual virions occurs randomly, or if there is some form(s) of competition or cooperativity between individual virions, remains largely unknown for most virus-cell associations. Here, we studied cooperativity/competition for three different strains of human cytomegalovirus (HCMV) on two different cell types (fibroblasts and epithelial cells). By titrating viral inocula concentrations in small steps over several orders of magnitude, and by using flow cytometry to precisely measure the frequency of infected cells, we found that for most virus-cell associations, the frequency of cell infection increases faster than linear with an increasing inoculum concentration, indicating cooperativity between individual infecting virions. Mathematical modeling suggests that this apparent cooperativity cannot be explained by heterogeneity in either the infectivity of the individual virions or the resistance of individual cells to infection, or by simple aggregation/clumping of viral particles. Stochastic simulations of two additional alternative models that allow for (1) reduction in cell resistance to infection when exposed to multiple virions, or (2) compensation in infectivity of poorly infectious virions when coinfecting cells with more infectious virions, resulted in apparent viral cooperativity. Analysis of other published datasets suggests the presence of apparent viral cooperativity for HIV and vaccinia virus, infecting CRFK or HeLa cells, respectively, but not for tobacco mosaic virus forming plaques on plant leaves. We thus (1) propose a methodology to rigorously evaluate apparent cooperativity of viruses infecting target cells, and (2) demonstrate that knowing the degree of virus cooperativity for any given virus-cell combination is important for an accurate quantification of multiplicity of infection.",
+      "doi": "10.7554/eLife.108921",
+      "url": "https://doi.org/10.7554/eLife.108921",
+      "pub_date": "2026-Aug-05",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Cytomegalovirus",
+        "Virion",
+        "Epithelial Cells",
+        "Fibroblasts",
+        "Cell Line",
+        "Cytomegalovirus Infections",
+        "Models, Theoretical",
+        "Flow Cytometry",
+        "Models, Biological"
+      ],
+      "abstract_zh": "单个病毒粒子感染细胞是随机发生，还是存在竞争或协作，对于大多数病毒-细胞关联仍属未知。本研究以三种人类巨细胞病毒（HCMV）株在成纤维细胞和上皮细胞上探究协作/竞争。通过逐步滴定接种物浓度并借助流式细胞术精确测量感染率，我们发现多数组合的感染频率随接种浓度增加而超线性增长，表明单个感染性病毒粒子间存在协作。数学模型显示，这种表观协作无法用粒子感染性异质性、细胞抵抗力异质性或病毒聚集来解释。两种随机模拟模型（细胞接触多病毒粒子时抵抗力降低；低感染力粒子与高感染力粒子共感染时补偿其感染性）均重现了表观协作。对其他数据集的分析揭示HIV和痘苗病毒存在表观协作，而烟草花叶病毒则无。因此，我们提出一种评估病毒表观协作的严格方法，并证明了解病毒-细胞组合的协作程度对于精确量化感染复数至关重要。",
+      "key_findings": [
+        "建立了评估病毒表观协作的方法，发现多数HCMV组合呈现超线性感染（存在协作）。",
+        "数学模型和模拟表明表观协作源于细胞抵抗力降低或病毒粒子间感染性互补，而非异质性或聚集。",
+        "发现HIV和痘苗病毒也存在表观协作，而烟草花叶病毒则无，强调协作度对准确计算MOI的重要性。"
+      ],
+      "translated_at": "2026-08-10T01:01:55.321955Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出结合流式滴定与数学建模的病毒协同性评估方法，揭示MOI计算误差，可迁移至多种病毒系统。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:57:18.175818Z"
+      }
+    },
+    {
+      "pmid": "42554034",
+      "title": "Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data.",
+      "journal": "Elife",
+      "authors": [
+        "Buccino Alessio Paolo",
+        "Sridhar Arjun",
+        "Feng David",
+        "Svoboda Karel",
+        "Siegle Joshua H"
+      ],
+      "abstract": "The scale of in vivo electrophysiology has expanded in recent years, with simultaneous recordings across thousands of electrodes now becoming routine. These advances have enabled a wide range of discoveries, but they also impose substantial computational demands. Spike sorting, the procedure that extracts spikes from extracellular voltage measurements, remains a major bottleneck: a dataset collected in a few hours can take days to spike sort on a single machine, and the field lacks rigorous validation of the many spike sorting algorithms and preprocessing steps that are in use. Advancing the speed and accuracy of spike sorting is essential to fully realize the potential of large-scale electrophysiology. Here, we present an end-to-end spike sorting pipeline that leverages parallelization to scale to large datasets. The same workflow can run reproducibly on individual workstations, high-performance computing clusters, or cloud environments, with computing resources tailored to each processing step to reduce costs and execution times. In addition, we introduce a benchmarking pipeline, also optimized for parallel processing, that enables systematic comparison of multiple sorting pipelines. Using this framework, we show that Kilosort4, a widely used spike sorting algorithm, outperforms Kilosort2.5. We also show that 7× lossy compression, which substantially reduces the cost of data storage, has minimal impact on spike sorting performance. Together, these pipelines address the urgent need for scalable and transparent spike sorting of electrophysiology data, preparing the field for the coming flood of multi-thousand-channel experiments.",
+      "doi": "10.7554/eLife.110170",
+      "url": "https://doi.org/10.7554/eLife.110170",
+      "pub_date": "2026-Aug-05",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Algorithms",
+        "Electrophysiology",
+        "Animals",
+        "Action Potentials",
+        "Electrophysiological Phenomena",
+        "Reproducibility of Results",
+        "Software"
+      ],
+      "abstract_zh": "近年来，体内电生理学的规模不断扩大，同时记录数千个电极已成为常规。这些进展推动了众多发现，但也带来了巨大的计算需求。从细胞外电压测量中提取锋电位的锋电位分类（spike sorting）仍是主要瓶颈：数小时收集的数据集在单台机器上可能需要数天才能完成分类，且该领域缺乏对众多使用中的锋电位分类算法和预处理步骤的严格验证。提高锋电位分类的速度和准确性对于充分实现大规模电生理学的潜力至关重要。本文提出了一种端到端的锋电位分类流程，利用并行化扩展到大规模数据集。同一工作流可在个人工作站、高性能计算集群或云环境中可重复运行，并为每个处理步骤定制计算资源以降低成本和缩短执行时间。此外，我们引入了一个同样针对并行处理优化的基准测试流程，可系统性地比较多种分类管道。使用该框架，我们发现广泛使用的锋电位分类算法Kilosort4优于Kilosort2.5。我们还发现，7倍有损压缩对锋电位分类性能影响极小，却能大幅降低数据存储成本。这些流程共同解决了电生理数据可扩展且透明的锋电位分类的迫切需求，为该领域应对即将涌现的数千通道实验做好准备。",
+      "key_findings": [
+        "开发了可并行扩展、环境可重复的端到端锋电位分类管道，适配大规模电生理数据。",
+        "基准测试管道揭示了Kilosort4算法在锋电位分类性能上显著优于Kilosort2.5。",
+        "7倍有损压缩对锋电位分类准确度影响甚微，可大幅减少数据存储开支。"
+      ],
+      "translated_at": "2026-08-10T01:02:06.741322Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出了可并行化、跨平台运行的大规模电生理spike sorting端到端流程及基准测试框架，属于新计算方法工具。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:57:28.295671Z"
+      }
+    },
+    {
+      "pmid": "42550854",
+      "title": "A fast numerical integration scheme for clonal expansion processes on graphs.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Paterson Chay",
+        "Gao Miaomiao",
+        "Hellier Joshua",
+        "Luebeck Georg",
+        "Wedge David C",
+        "Bozic Ivana"
+      ],
+      "abstract": "Compound birth-death processes are widely used to model the age-incidence curves of many cancers. There are efficient schemes for directly computing the relevant probability distributions in the context of linear multi-stage clonal expansion (MSCE) models. However, these schemes have not been generalised to models on arbitrary graphs, forcing the use of either full stochastic simulations or mean-field approximations, which can become inaccurate at late times or old ages. Here, we present a numerical integration scheme for directly computing survival probabilities of a first-order birth-death process on an arbitrary directed graph, without the use of stochastic simulations. As a concrete application, we show that this new numerical method can be used to infer the parameters of an example graphical model from simulated data.",
+      "doi": "10.1371/journal.pcbi.1012784",
+      "url": "https://doi.org/10.1371/journal.pcbi.1012784",
+      "pub_date": "2026-Aug",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Computer Simulation",
+        "Models, Biological",
+        "Stochastic Processes",
+        "Humans",
+        "Computational Biology",
+        "Algorithms",
+        "Neoplasms"
+      ],
+      "abstract_zh": "复合生灭过程被广泛用于模拟多种癌症的年龄-发病率曲线。在线性多阶段克隆扩增（MSCE）模型中，已有高效方案可直接计算相关概率分布。然而，这些方案尚未推广到任意图模型，迫使研究者使用全随机模拟或平均场近似，后者在高龄或晚期可能会变得不准确。本文提出一种数值积分方案，可在任意有向图上直接计算一阶生灭过程的生存概率，无需随机模拟。作为具体应用，我们展示了该新数值方法可用于从模拟数据推断示例图模型的参数。",
+      "key_findings": [
+        "提出一种可在任意有向图上直接计算一阶生灭过程生存概率的数值积分方案，避免随机模拟。",
+        "该方案打破了现有方法仅适用于线性多阶段克隆扩增模型的限制，可推广至任意图结构。",
+        "通过模拟数据验证，新方法能有效推断图模型中的参数，为癌症建模提供更准确的计算工具。"
+      ],
+      "translated_at": "2026-08-10T01:02:13.515076Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出图上克隆扩增过程的快速数值积分方法，替代随机模拟，具有普适性和方法论创新。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:57:37.569317Z"
+      }
+    },
+    {
+      "pmid": "42550597",
+      "title": "Methylation clocks fail to generalize across genetically admixed individuals.",
+      "journal": "Elife",
+      "authors": [
+        "Cruz-Gonzalez Sebastián",
+        "Okpala Ogechukwu",
+        "Gu Esther",
+        "Gomez Lissette",
+        "Mews Makaela",
+        "Vance Jeffery M",
+        "et al."
+      ],
+      "abstract": "Epigenetic aging clocks based on DNA methylation patterns across the genome have emerged as a potential biomarker for risk of age-related diseases, like Alzheimer's disease (AD), and environmental and social stressors. However, methylation clocks have not been comprehensively validated in genetically diverse individuals. Here, we evaluate a set of first-, second-, and third-generation methylation clocks in 621 AD patients and matched controls from African American, Hispanic, and White cohorts. The clocks are less accurate at predicting age in genetically admixed cohorts compared to the White cohort, especially for those with substantial African ancestry. This decreased accuracy holds in >2500 individuals of European and African ancestry from three additional datasets. The clocks also fail to consistently identify age acceleration in admixed AD cases compared to controls. To explore potential causes for the lack of generalization of the clocks, we intersected clock CpGs with methylation, germline genetic variants, and methylation QTL (meQTL) data from global populations. We find differential methylation between African and European ancestry individuals is common for clock CpGs. Genetic variants rarely disrupt clock CpGs between populations, but a substantial fraction of clock CpGs have meQTL with significantly higher frequencies in African genetic ancestries. Our results demonstrate that methylation clocks often fail to predict age and AD risk when applied across populations and suggest avenues for improving their portability by considering differences in genetic and epigenetic patterns across human populations.",
+      "doi": "10.7554/eLife.105343",
+      "url": "https://doi.org/10.7554/eLife.105343",
+      "pub_date": "2026-Aug-04",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Female",
+        "Humans",
+        "Aging",
+        "Alzheimer Disease",
+        "Black or African American",
+        "CpG Islands",
+        "DNA Methylation",
+        "Epigenesis, Genetic",
+        "Quantitative Trait Loci",
+        "Hispanic or Latino"
+      ],
+      "abstract_zh": "基于全基因组DNA甲基化模式的表观遗传时钟已成为年龄相关疾病（如阿尔茨海默病，AD）以及环境和社会压力风险的潜在生物标志物。然而，甲基化时钟尚未在遗传多样性个体中得到全面验证。本研究在621名AD患者及匹配对照中，评估了第一、二、三代甲基化时钟，队列包括非裔美国人、西班牙裔和白人。与白人队列相比，时钟在遗传混合队列中预测年龄的准确性较低，尤其是在具有大量非洲血统的个体中。这种准确性下降在来自三个额外数据集的超过2500名欧洲和非洲血统个体中依然存在。时钟也未能一致地识别混合AD病例与对照组的年龄加速。为探索时钟缺乏通用性的原因，我们将时钟CpG位点与全球人群的甲基化、种系遗传变异和甲基化数量性状位点（meQTL）数据交叉比对。发现非洲与欧洲血统个体间的时钟CpG差异甲基化普遍存在。遗传变异很少在不同人群间破坏时钟CpG，但有相当一部分时钟CpG具有在非洲遗传血统中频率显著更高的meQTL。我们的结果表明，甲基化时钟在跨人群应用时往往无法准确预测年龄和AD风险，并提出了通过考虑不同人群间遗传和表观遗传模式差异来改善其可移植性的途径。",
+      "key_findings": [
+        "甲基化时钟在遗传混合人群中年龄预测准确性显著下降，尤以非洲血统为甚。",
+        "时钟无法一致检测混合人群AD患者的表观遗传年龄加速。",
+        "时钟CpG的差异甲基化和高频非洲血统meQTL是导致通用性差的原因，为改进提供了方向。"
+      ],
+      "translated_at": "2026-08-10T01:02:26.281622Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示甲基化时钟在不同人群泛化失败的遗传与表观遗传机制，为构建可移植时钟提供方向，有明确的方法学启示。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:57:46.742659Z"
+      }
+    },
+    {
+      "pmid": "42387863",
+      "title": "Quantifying the peripheral surface information entropy from conformational ensembles of globular protein-peptide complexes.",
+      "journal": "Biophys J",
+      "authors": [
+        "Grear Tyler J",
+        "Jacobs Donald J"
+      ],
+      "abstract": "Predicting favorable protein-peptide binding events remains a central challenge in biophysics, with continued uncertainty surrounding how nonlocal effects shape the global energy landscape. Here, we introduce peripheral surface information entropy, SΨ, a quantitative measure of the statistical variability in apolar and charged non-interacting surface (NIS) proportions across conformational ensembles. Within the Gibbs free-energy relation ΔG = ΔH - TΔS, SΨ is proposed as a computationally tractable entropic proxy rather than a direct thermodynamic observable or stand-alone estimator of binding affinity. Using energy-directed molecular docking via HADDOCK3 and explicit-solvent molecular dynamics simulations, it is demonstrated that favorable binding partners exhibit emergent, low-entropy N-states (discrete macrostates in NIS state space) indicative of preferential apolar/charged surface configurations. Across dozens of peptides and multiple receptor systems (WW, PDZ, and MDM2 domains), dominant N-states persisted under varied docking parameters and initial conditions. A meta-ensemble of 657 complexes from 36 experiments over 15 years confirmed the presence of dominant NIS modes independent of in silico methodology, suggesting an evolutionary selection pressure toward specific NIS fingerprints. These findings establish SΨ as a thermoinformatic descriptor that encodes favorable binding constraints into unique statistical signatures of the NIS.",
+      "doi": "10.1016/j.bpj.2026.06.036",
+      "url": "https://doi.org/10.1016/j.bpj.2026.06.036",
+      "pub_date": "2026-Aug-04",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Entropy",
+        "Peptides",
+        "Molecular Dynamics Simulation",
+        "Protein Binding",
+        "Protein Conformation",
+        "Molecular Docking Simulation",
+        "Proteins",
+        "Surface Properties"
+      ],
+      "abstract_zh": "预测有利的蛋白质-肽结合事件仍是生物物理学的核心挑战，非局域效应如何塑造全局能量景观尚不确定。本文引入外围表面信息熵 SΨ，一种定量测量构象系综中非极性和带电非相互作用表面（NIS）比例统计变异性的指标。在吉布斯自由能关系 ΔG = ΔH - TΔS 框架下，SΨ 被提出作为计算上可处理的熵代理，而非直接的热力学可观测量或结合亲和力的独立估计量。通过 HADDOCK3 能量导向分子对接和显式溶剂分子动力学模拟，证明有利的结合伙伴会涌现出低熵 N 态（NIS 状态空间中的离散宏观态），反映出优先的非极性/带电表面配置。在多个受体系统（WW、PDZ 和 MDM2 结构域）和数十种肽中，主导 N 态在不同的对接参数和初始条件下持续存在。对 15 年来 36 项实验的 657 个复合物进行元系综分析，证实了独立于计算机模拟方法的主导 NIS 模式，提示进化选择压力倾向于特定的 NIS 指纹。这些发现将 SΨ 确立为一种热信息学描述符，能将有利的结合约束编码为 NIS 的独特统计特征。",
+      "key_findings": [
+        "引入 SΨ 作为 NIS 比例变异性度量，充当吉布斯自由能中熵项的计算代理。",
+        "有利结合伴侣涌现低熵 N 态，反映优先的非极性/带电表面配置，并具对接参数稳健性。",
+        "元系综分析揭示主导 NIS 模式独立于模拟方法，提示进化选择对特定 NIS 指纹的压力。"
+      ],
+      "translated_at": "2026-08-10T01:02:37.320876Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出外周表面信息熵SΨ这一新的计算熵代理，可跨系统表征结合偏好，具有普适迁移性，属于新方法。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:01.835793Z"
+      }
+    },
+    {
+      "pmid": "42322048",
+      "title": "Conformational gating of an active-site loop governs phenolic and aromatic amine substrate selectivity in fungal laccase.",
+      "journal": "Biophys J",
+      "authors": [
+        "Biswas Anushka",
+        "Singh Deepshikha",
+        "Datta Bhaskar",
+        "Radhakrishna Mithun"
+      ],
+      "abstract": "Laccases oxidize a broad range of aromatic compounds, yet how conformational dynamics regulate substrate recognition and functional specificity remains incompletely understood. Here, we investigate the molecular determinants of substrate-class selectivity in a fungal laccase by combining long-timescale molecular dynamics simulations, Markov state modeling, transition path analysis, free-energy calculations, and isothermal titration calorimetry. Using representative phenolic and aromatic amine substrates, we show that access to the T1 Cu center is governed by a flexible active-site loop that differentially modulates binding pathways. Phenolic ligands require opening of this loop to achieve sterically accessible binding configurations and proceed through multiple metastable intermediates consistent with a coupled conformational selection-induced-fit mechanism. In contrast, aromatic amines access the active site without loop rearrangement through a pathway dominated by conformational selection. In silico rigidification of the loop selectively disrupts phenolic binding while preserving amine binding, supporting a mechanistic bifurcation encoded by protein dynamics. Protonation states further modulate binding energetics, consistent with isothermal titration calorimetry measurements showing differential affinities among phenolic isomers under acidic conditions. Together, these findings establish conformational gating as a structural mechanism that links protein dynamics to substrate-class-dependent recognition in laccase and provide molecular insight into how flexible active-site elements regulate functional specificity in oxidoreductases.",
+      "doi": "10.1016/j.bpj.2026.06.021",
+      "url": "https://doi.org/10.1016/j.bpj.2026.06.021",
+      "pub_date": "2026-Aug-04",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Laccase",
+        "Substrate Specificity",
+        "Catalytic Domain",
+        "Amines",
+        "Molecular Dynamics Simulation",
+        "Phenols",
+        "Protein Conformation"
+      ],
+      "abstract_zh": "漆酶氧化多种芳香族化合物，但构象动力学如何调控底物识别和功能特异性仍不完全清楚。在此，我们结合长时间尺度分子动力学模拟、马尔可夫状态模型、转换路径分析、自由能计算和等温滴定量热法，研究了一株真菌漆酶中底物类别选择性的分子决定因素。利用代表性的酚类和芳香胺底物，我们表明T1铜中心的进入由一个柔性的活性位点环控制，该环以不同方式调节结合途径。酚类配体需要该环打开才能达到空间上可接近的结合构型，并通过多个亚稳态中间体进行，这与耦合的构象选择-诱导契合机制一致。相反，芳香胺无需环重排便可通过以构象选择为主的途径进入活性位点。通过计算模拟使环刚性化可选择性地破坏酚类结合而保留胺结合，支持由蛋白质动态编码的机制分歧。质子化状态进一步调节结合能量学，与等温滴定量热法测量结果一致，显示酸性条件下酚类异构体之间的亲和力差异。总之，这些发现确立了构象门控是连接蛋白质动态与漆酶中底物类别依赖性识别的结构机制，并为柔性活性位点元件如何调控氧化还原酶的功能特异性提供了分子见解。",
+      "key_findings": [
+        "活性位点环的构象动态通过不同机制控制酚类与芳香胺底物的结合路径。",
+        "酚类结合需环打开并经多步构象选择-诱导契合，芳香胺结合则无需环重排。",
+        "环刚性化选择性阻断酚类结合，质子化状态调节亲和力，体现蛋白动力学编码的功能分歧。"
+      ],
+      "translated_at": "2026-08-10T01:02:50.113878Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示活性位点环构象门控区分底物类别的普适机制，可迁移至其他氧化还原酶的底物选择性调控。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:06.946438Z"
+      }
+    },
+    {
+      "pmid": "42547851",
+      "title": "Deciphering global transcriptional dynamics coordinated by gene-gene regulatory interactions using single-cell data.",
+      "journal": "Mol Syst Biol",
+      "authors": [
+        "Zhou Liying",
+        "Luo Songhao",
+        "Huang Zhiwei",
+        "Zhang Zhenquan",
+        "Wang Zihao",
+        "Zhang Jiajun"
+      ],
+      "abstract": "Transcription is an inherently dynamic and stochastic process that often occurs in bursts, governed by gene-gene regulatory interactions and thereby driving cell-to-cell heterogeneity. However, a genome-wide, mechanistic understanding of how regulatory networks globally shape transcriptional bursting dynamics remains lacking. Here, we present BurstLink, an interpretable and tractable statistical-mechanistic framework that simultaneously infers coupled regulatory interactions and transcriptional bursting kinetics at the genome-wide scale from single-cell data. BurstLink introduces reweighted mutual information to quantify regulatory strength as network edge weights, while jointly inferring regulatory directionality and interaction type for each gene pair within a unified mechanistic model of transcriptional bursting. Applied to mouse embryonic fibroblasts data, BurstLink reveals several genome-wide regulatory mechanisms on transcriptional bursting: downstream target genes exhibit higher burst frequency and gene-expression variability than upstream transcription factor genes; stronger transcription factor binding affinity is associated with lower burst frequency and higher burst size of target genes. Notably, positive regulation primarily enhances the burst frequency and gene-expression variability in target genes, in contrast to negative regulation. In summary, BurstLink deciphers multiple general principles of global transcriptional dynamics, providing novel biological insights into cell fate decisions.",
+      "doi": "10.1038/s44320-026-00235-4",
+      "url": "https://doi.org/10.1038/s44320-026-00235-4",
+      "pub_date": "2026-Aug-03",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "转录是一个固有动态和随机的过程，常以爆发形式发生，受基因间调控互作支配，从而驱动细胞间异质性。然而，对调控网络如何在基因组范围内全局塑造转录爆发动力学的机制性理解仍然缺乏。在此，我们提出BurstLink，一个可解释且易于处理的统计-机制框架，能够从单细胞数据中同时推断全基因组范围内的耦合调控相互作用和转录爆发动力学。BurstLink引入重加权互信息来量化调控强度作为网络边权重，同时在统一的转录爆发机制模型内联合推断每个基因对的调控方向性和相互作用类型。应用于小鼠胚胎成纤维细胞数据，BurstLink揭示了几个关于转录爆发的全基因组调控机制：下游靶基因比上游转录因子基因表现出更高的爆发频率和基因表达变异性；更强的转录因子结合亲和力与靶基因更低的爆发频率和更高的爆发大小相关。值得注意的是，正向调控主要提高靶基因的爆发频率和基因表达变异性，与负向调控相反。总之，BurstLink解码了全局转录动力学的多个普遍原理，为细胞命运决定提供了新的生物学见解。",
+      "key_findings": [
+        "下游靶基因比上游转录因子基因表现出更高的爆发频率和基因表达变异性。",
+        "转录因子结合亲和力越强，靶基因爆发频率越低、爆发大小越高。",
+        "正向调控主要增强靶基因的爆发频率和表达变异性，负向调控则相反。"
+      ],
+      "translated_at": "2026-08-10T01:03:01.089796Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出了整合调控网络与转录爆发动力学推断的新框架BurstLink，具有全基因组可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:11.440595Z"
+      }
+    },
+    {
+      "pmid": "42547503",
+      "title": "Mechanism underlying the high regulatory performance of the doxycycline riboswitch G12.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Hoetzel J",
+        "Walbrun A",
+        "Schäfer M",
+        "Wang T",
+        "Jørgensen A G",
+        "Becker O",
+        "et al."
+      ],
+      "abstract": "Synthetic riboswitches provide protein-independent, modular control of gene expression, yet selecting aptamers that reliably couple ligand binding to regulatory switching remains challenging. Here, we identify and mechanistically characterise G12, a doxycycline-binding aptamer with remarkably high regulatory performance in yeast and human cells. We provide evidence that RNA Capture-SELEX efficiently enriches aptamers with ligand-responsive conformational switching. We compared conventional SELEX and RNA Capture-SELEX using the same starting library followed by NGS analysis and in vivo screening, which led to the identification of G12. G12 binds doxycycline with low-nanomolar affinity and strict discrimination against close derivatives, thus enabling high-dynamic-range riboswitch control of translation in yeast and splicing in human cells. Single-molecule force spectroscopy with optical tweezers revealed that doxycycline stabilises a folding intermediate independent of the closing stem P1, which primarily acts as a scaffold for correct aptamer folding. Mutational analysis and chemical probing identified tertiary contacts between loops L2 and L3 in this intermediate state. Stopped-flow fluorescence spectroscopy further supported a two-step binding mechanism consistent with efficient regulatory switching. Together, these findings deepen our understanding of regulatory aptamer selection and function and expand the synthetic biology toolbox with a high-performance doxycycline-responsive riboswitch.",
+      "doi": "10.1038/s41467-026-76256-2",
+      "url": "https://doi.org/10.1038/s41467-026-76256-2",
+      "pub_date": "2026-Aug-03",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Riboswitch",
+        "Doxycycline",
+        "Aptamers, Nucleotide",
+        "SELEX Aptamer Technique",
+        "Humans",
+        "Nucleic Acid Conformation",
+        "Saccharomyces cerevisiae",
+        "Base Sequence",
+        "Ligands"
+      ],
+      "abstract_zh": "合成核糖开关能够不依赖蛋白质模块化地控制基因表达，但选择可可靠耦合配体结合与调控切换的适体仍具挑战。本研究鉴定并机制性地解析了G12——一种在酵母和人细胞中表现出卓越调控性能的强力霉素结合适体。我们证明RNA捕获-SELEX能够有效富集具有配体响应构象切换的适体。利用相同起始文库比较常规SELEX与RNA捕获-SELEX，结合NGS分析和体内筛选，最终鉴定了G12。G12以低纳摩尔亲和力结合强力霉素，并严格区分相近衍生物，从而在酵母翻译过程和人类细胞剪接事件中实现高动态范围的核糖开关控制。光镊单分子力谱揭示强力霉素稳定了一个不依赖于闭合茎P1的折叠中间体，P1主要作为适体正确折叠的支架。突变分析和化学探测鉴定出该中间状态中环L2与L3之间的三级接触。停流荧光光谱进一步支持了两步结合机制，该机制与高效调控切换相吻合。这些发现加深了我们对调控适体筛选与功能的理解，并为合成生物学工具箱增添了一个高性能的强力霉素响应核糖开关。",
+      "key_findings": [
+        "鉴定出强力霉素适体G12，其具有纳摩尔亲和力和高配体区分度，在酵母翻译和人细胞剪接中实现高动态范围调控。",
+        "单分子力谱与化学探测揭示G12通过稳定独立于P1的折叠中间体、形成L2-L3三级接触，遵循两步结合机制实现高效构象切换。",
+        "RNA Capture-SELEX能有效富集配体响应性构象切换适体，优于常规SELEX，为高性能核糖开关的筛选提供了新策略。"
+      ],
+      "translated_at": "2026-08-10T01:03:13.612731Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "比较SELEX与RNA Capture-SELEX并证明后者能高效富集配体响应构象切换的适体，结合单分子力谱等新实验策略阐明机制，具有明确方法学意义。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:20.953474Z"
+      }
+    },
+    {
+      "pmid": "42546066",
+      "title": "Cell-specific Cahn-Hilliard models predict condensed fates of the chromosomal passenger complex.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Groves Sarah M",
+        "Lu Min-Jhe",
+        "Alvarez-Yela Astrid Catalina",
+        "Gerardo-Ramírez Monserrat",
+        "Stukenberg P Todd",
+        "Lowengrub John S",
+        "et al."
+      ],
+      "abstract": "Biomolecular condensates create dynamic subcellular compartments that alter systems-level properties of the networks surrounding them. Standard reaction-diffusion models of systems biology cannot define where these compartments emerge nor track how they evolve. One alternative physicochemical model of soluble and condensed states in space and time is the Cahn-Hilliard equation, which specifies a diffuse interface between the two phases. Customized numerical approaches required to solve this equation are absent from computing environments often used for systems biology, however, and the equation's interfacial energy coefficient lacks empirical constraints. Here, using two complementary numerical strategies, we built stable, self-consistent Cahn-Hilliard solvers in three common systems-biology programming languages. The algorithms simulated the complete time evolution of condensed droplets as they dissolved or persisted, relating critical equilibrium droplet size to the Cahn-Hilliard interfacial energy coefficient. We applied this universal relationship to the chromosomal passenger complex, a multi-protein assembly that reportedly condenses on mitotic chromosomes. The fully constrained Cahn-Hilliard simulations predicted spatiotemporal dewetting and coarsening behaviors that matched experiments in cell types with different interfacial energy coefficients. Together, these results suggest how initially variegated recruitment yields robust localization of the chromosomal passenger complex to the inner centromere by the end of prometaphase. More generally, the Cahn-Hilliard equation tests whether condensate dynamics behave as a simple phase-separated liquid, and its numerical solutions advance generalized modeling of biomolecular systems.",
+      "doi": "10.1371/journal.pcbi.1014568",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014568",
+      "pub_date": "2026-Aug",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Models, Biological",
+        "Algorithms",
+        "Computer Simulation",
+        "Computational Biology",
+        "Systems Biology",
+        "Chromosomes",
+        "Mitosis"
+      ],
+      "abstract_zh": "生物分子凝聚体形成动态的亚细胞区室，改变其周围网络的系统级特性。系统生物学标准的反应-扩散模型无法界定这些区室的产生，也不能追踪其演变。一种描述可溶态与凝聚态时空变化的物理化学替代模型是 Cahn-Hilliard 方程，该方程规定了两相之间存在一个扩散界面。然而，系统生物学常用计算环境中缺乏求解该方程所需的定制数值方法，且方程中的界面能系数缺乏经验约束。在此，我们运用两种互补的数值策略，在三种常见的系统生物学编程语言中构建了稳定、自洽的 Cahn-Hilliard 求解器。这些算法模拟了凝聚液滴溶解或持续存在的完整时间演化过程，将临界平衡液滴尺寸与 Cahn-Hilliard 界面能系数关联起来。我们将这一普适关系应用于染色体乘客复合体（chromosomal passenger complex），该多蛋白组装体据报道在有丝分裂染色体上发生凝聚。完全约束的 Cahn-Hilliard 模拟预测了时空去润湿和粗化行为，与具有不同界面能系数的细胞类型中的实验结果相吻合。这些结果共同表明，最初斑驳不均的招募如何在前中期结束时使染色体乘客复合体稳健地定位于内着丝粒。更广泛而言，Cahn-Hilliard 方程可用于检验凝聚体动力学是否表现为简单相分离液体，其数值解则推进了生物分子系统的广义建模。",
+      "key_findings": [
+        "在三种系统生物学语言中构建了稳定自洽的 Cahn-Hilliard 求解器。",
+        "建立了界面能系数与临界平衡液滴尺寸的定量关系，可预测凝聚体命运。",
+        "对染色体乘客复合体的模拟揭示了去润湿和粗化行为，阐明其内着丝粒稳健定位机制。"
+      ],
+      "translated_at": "2026-08-10T01:03:24.466573Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了三种语言下的Cahn-Hilliard求解器，结合实验约束预测凝聚体动力学，提供了可迁移的建模新方法。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:26.053661Z"
+      }
+    },
+    {
+      "pmid": "42546042",
+      "title": "Accounting for the long-distance transmission route: An epidemiological model of airborne disease transmission in hospitals.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Gaufrès Olivier",
+        "Leclerc Quentin J",
+        "Derdevet Julien",
+        "Shirreff George",
+        "Kernéis Solen",
+        "Opatowski Lulla",
+        "et al."
+      ],
+      "abstract": "Nosocomial transmission of respiratory infections poses a major threat to patient safety, while also affecting healthcare workers' (HCW) health, generating substantial costs for hospitals. These infections spread through both close-proximity interactions at short distances, and via aerosols that remain suspended in the air, enabling long-range transmission within a room when a susceptible individual is at a distance from an infectious individual. The relative contribution of each transmission route is pathogen-dependent. However, models distinguishing them remain scarce, limiting the design of effective intervention strategies. Here, we propose a novel agent-based stochastic model of respiratory pathogen transmission in a hospital ward that integrates both transmission routes together with contact patterns and individual movements. After informing our model with real close-proximity interaction data collected in two French intensive care units, we simulate a range of combinations of short- and long-range transmission levels to investigate their differences. Selecting parameter values that keep overall ward transmission intensity stable across combinations, the model is used to further evaluate the impact of intervention strategies on incidence risk. We find that the predominance of one route over another has little effect on overall outbreak dynamics, though the impact on individuals varies markedly. Patients are mostly at risk of short-range transmission from HCWs, while HCWs are mostly affected by whichever route is predominant. This directly influences intervention effectiveness. Universal masking emerges as the most effective strategy, reducing both transmission routes. Its stringency can be relaxed with limited loss of effectiveness when combined with ventilation in relevant rooms. Importantly, interventions targeting HCWs, notably ventilation in rooms not accessible to patients, indirectly reduces incidence in patients, with a stronger effect when coupled with relaxed masking interventions. Finally, intervention ranking remains robust across parameter values, as confirmed by a sensitivity analysis. This new model highlights the importance of explicitly considering physical mechanisms of transmission, and the need for interventions that remain effective irrespective of pathogen characteristics and ward organization.",
+      "doi": "10.1371/journal.pcbi.1014564",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014564",
+      "pub_date": "2026-Aug-03",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "呼吸系统感染的院内传播对患者安全构成重大威胁，同时影响医护人员健康，给医院带来巨大成本。这些感染既通过近距离接触传播，也通过悬浮气溶胶实现室内远距离传播，当易感者与感染者相距较远时。每种传播途径的相对贡献取决于病原体，但区分两者的模型稀缺，限制了有效干预策略的设计。本文提出一个新颖的基于主体的随机模型，整合两种传播途径、接触模式与个人移动，并利用两个法国重症监护室的真实近距离互动数据建模。通过模拟短距离与远距离传播水平的多种组合，在保持整体传播强度稳定的参数下评估干预策略对发病风险的影响。研究发现，一种途径的主导性对整体疫情动态影响不大，但个体影响差异显著：患者主要面临来自医护人员的短距离传播风险，而医护人员主要受主导途径影响。普遍戴口罩是最有效的策略，可同时减少两种传播途径；结合特定房间通风时，可适度放宽口罩严格性而效果损失有限。针对医护人员的干预，如患者不可进入房间的通风，可间接降低患者发病率，与宽松口罩策略协同效应更强。敏感性分析证实干预排序在不同参数值下保持稳健。该模型凸显了明确考虑传播物理机制的重要性，并指出需要不受病原体特征和病房组织影响的普适干预措施。",
+      "key_findings": [
+        "患者主要承受来自医护人员的短距离传播风险，而医护人员风险取决于主导传播途径，不同途径对个体影响差异显著。",
+        "普遍戴口罩是减少两种传播途径的最有效单一策略，结合通风可适度放宽口罩要求而效果损失有限。",
+        "针对医护人员的空间通风等干预可间接降低患者发病率，与口罩策略协同作用更强，且干预效果排序对不同参数稳健。"
+      ],
+      "translated_at": "2026-08-10T01:03:36.790801Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出整合近距离与远距离气溶胶传播的新型主体建模框架，可区分传播路径并评估干预策略，具有方法普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:32.374212Z"
+      }
+    },
+    {
+      "pmid": "42546041",
+      "title": "Real-time GPU-accelerated coupled cardiac system: Integrating bidirectional interactions between living optogenetic monolayers and computational simulations.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Valibeigi Younes",
+        "Kaboudian Abouzar",
+        "Fenton Flavio",
+        "Bub Gil"
+      ],
+      "abstract": "OBJECTIVE: Reentrant arrhythmias are life-threatening cardiac events that are difficult to study due to limited experimental control over the complex circuit dynamics. We present a real-time coupled cardiac system that allows in real-time dynamic manipulation of reentrant pathways in vitro using physiologically relevant simulations. METHODS: We designed a closed-feedback loop system that couples a cultured cardiac monolayer with a two-dimensional computational simulation of cardiac tissue. The simulation, based on GPU-accelerated models (e.g., cellular automata), predicts wave propagation in real-time using the Abubu.js library. Optical mapping captures monolayer activation patterns, and simulation outputs are converted into light-based stimulation via optogenetics, using LEDs and microcontrollers to depolarize cardiac tissue. RESULTS: Our platform is capable of accurately detecting and responding to electrical waves in real-time, enabling interactive modulation of reentrant circuits. The system replaces traditional fixed-delay stimulation protocols with computationally guided interventions, better mimicking physiological conduction dynamics. CONCLUSION: This coupled system provides a novel and responsive method to study reentrant arrhythmias. Its integration of optical stimulation, real-time modeling, and tissue feedback enables the construction of user-defined reentry pathways and dynamic interaction with reentrant circuit behavior. SIGNIFICANCE: By merging computational and biological systems, this work introduces a versatile experimental framework for investigating arrhythmias. Built from inexpensive and accessible components, it lowers technical and financial barriers, increasing accessibility across a broad range of researchers and research environments. The platform may inform future control and anti-arrhythmic strategies and pave the way for personalized cardiac electrophysiology studies.",
+      "doi": "10.1371/journal.pcbi.1014590",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014590",
+      "pub_date": "2026-Aug",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Optogenetics",
+        "Computer Simulation",
+        "Animals",
+        "Models, Cardiovascular",
+        "Heart",
+        "Humans",
+        "Arrhythmias, Cardiac",
+        "Myocytes, Cardiac",
+        "Computational Biology"
+      ],
+      "abstract_zh": "目的：折返性心律失常是危及生命的心脏事件，由于对复杂环路动力学的实验控制有限而难以研究。我们提出一种实时耦合心脏系统，可利用生理相关的仿真对体外折返通路进行实时动态调控。方法：我们设计了一个闭环反馈系统，将培养的心肌单层细胞与心脏组织的二维计算仿真耦合。该仿真基于GPU加速模型（如细胞自动机），使用Abubu.js库实时预测波传播。光学标测捕获单层细胞激活模式，仿真输出通过光遗传学转化为基于光的刺激，使用LED和微控制器使心脏组织去极化。结果：我们的平台能够准确检测并实时响应电波，实现折返环路的交互式调控。该系统用计算引导的干预取代了传统的固定延迟刺激方案，更好地模拟了生理传导动力学。结论：这一耦合系统为研究折返性心律失常提供了一种新颖且响应式的方法。它整合了光刺激、实时建模和组织反馈，能够构建用户定义的折返通路，并与折返环路行为进行动态交互。意义：通过融合计算系统与生物系统，本工作引入了一个多功能实验框架来研究心律失常。该系统由廉价易得的组件搭建，降低了技术和资金门槛，提高了广大研究人员和研究环境的可及性。该平台可能为未来的控制和抗心律失常策略提供参考，并为个性化心脏电生理学研究铺平道路。",
+      "key_findings": [
+        "平台实时检测并响应电波，可交互调控折返环路。",
+        "用计算引导的干预取代固定延迟刺激，更准确模拟生理传导。",
+        "整合光刺激、实时建模与组织反馈，可构建用户定义的折返通路。"
+      ],
+      "translated_at": "2026-08-10T01:03:45.830792Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出实时闭环耦合光遗传学单层与GPU加速心脏模拟的新实验平台，可普适用于心律失常研究，方法学创新性强。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-10T00:58:37.252484Z"
+      }
+    }
+  ],
+  "pre_llm_filter_total": 24,
+  "llm_filtered_out": 6,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filter_prompt_version": "v1",
+  "llm_filter_policy_version": "2026-05-06",
+  "llm_filter_evaluation_snapshot_id": null,
+  "llm_filter_policy_config": "configs/filter_policy.json",
+  "llm_filtered_at": "2026-08-10T00:58:38.452634Z",
+  "filtered_out_papers": [
+    {
+      "pmid": "42560972",
+      "title": "Stochastic modeling of long-legged ant A. gracilipes locomotion in laboratory experiments.",
+      "journal": "PLoS Comput Biol",
+      "bucket": "application_case",
+      "reason": "仅将已有随机模型组合应用于特定蚂蚁运动行为，缺乏新的方法学贡献。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42559947",
+      "title": "LRRK2 regulates synaptic function through modulation of actin cytoskeletal dynamics.",
+      "journal": "Elife",
+      "bucket": "application_case",
+      "reason": "聚焦LRRK2在PD突触机制中的特定应用，无新方法或可迁移方法论，属于常规疾病机制研究。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42557320",
+      "title": "A tumour-derived organoid biobank maps cancer gene dependencies.",
+      "journal": "Nature",
+      "bucket": "application_case",
+      "reason": "利用现有类器官培养和CRISPR筛选技术构建资源图谱，无新方法学或框架性贡献，属应用案例。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42557315",
+      "title": "A dependency map enhanced with next-generation 3D cancer models.",
+      "journal": "Nature",
+      "bucket": "descriptive_study",
+      "reason": "仅用成熟CRISPR与组学技术生成数据集并扩展DepMap，无方法学创新，属描述性资源研究。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42552318",
+      "title": "Multi-omics integration unravels four molecular subgroups of corticotroph pituitary neuroendocrine tumours with distinct clinicopathological features.",
+      "journal": "Nat Commun",
+      "bucket": "descriptive_study",
+      "reason": "主要基于多组学对特定肿瘤进行分子分型，无新方法学或普适框架，属疾病描述性研究。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "42550587",
+      "title": "Thalamo-accumbal circuit adaptations following extended oxycodone abstinence.",
+      "journal": "Elife",
+      "bucket": "descriptive_study",
+      "reason": "特定药物戒断后特定脑区突触可塑性的经验性电生理研究，缺乏可迁移的新方法或机制框架。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    }
+  ],
+  "translated_count": 18
+}
