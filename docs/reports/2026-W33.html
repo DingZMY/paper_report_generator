@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-W33 · 系统/合成生物学文献周报</title>
+  <meta name="description" content="本周系统生物学与合成生物学领域顶刊论文双语摘要汇总">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f0f4f8;
+      --surface:     #ffffff;
+      --surface2:    #f7f9fc;
+      --border:      #e2e8f0;
+      --text:        #1a202c;
+      --text-muted:  #718096;
+      --text-light:  #a0aec0;
+      --accent:      #5a67d8;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow:      0 4px 8px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-lg:   0 12px 20px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.06);
+      --radius:      12px;
+      --radius-sm:   7px;
+      --transition:  0.18s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0d1117;
+        --surface:    #161b22;
+        --surface2:   #1c2130;
+        --border:     #2d3748;
+        --text:       #e2e8f0;
+        --text-muted: #a0aec0;
+        --text-light: #718096;
+        --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+        --shadow:     0 4px 8px rgba(0,0,0,0.5);
+        --shadow-lg:  0 12px 20px rgba(0,0,0,0.6);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+                   "PingFang SC", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .site-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color var(--transition);
+    }
+    .header-nav a:hover { color: var(--text); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.88rem;
+      opacity: 0.82;
+      margin-bottom: 28px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat-num  { display: block; font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { display: block; font-size: 0.75rem; opacity: 0.8; margin-top: 4px; }
+
+    /* ── Filter bar ─────────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      position: sticky;
+      top: 58px;
+      z-index: 190;
+    }
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-label { font-size: 0.8rem; color: var(--text-muted); margin-right: 2px; }
+    .filter-btn {
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Main grid ──────────────────────────────────────────────── */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    .section-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────────── */
+    .paper-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-color, #9e9e9e);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .paper-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* card header row */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .journal-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .pub-date {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    /* title */
+    .paper-title {
+      font-size: 0.93rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .paper-title a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .paper-title a:hover { color: var(--accent); }
+
+    /* authors */
+    .paper-authors {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Abstract tabs ──────────────────────────────────────────── */
+    .abstract-section { flex: 1; }
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .tab-btn {
+      padding: 3px 11px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all var(--transition);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .abstract-text {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      display: none;
+      max-height: 152px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .abstract-text.active { display: block; }
+    .abstract-text::-webkit-scrollbar { width: 3px; }
+    .abstract-text::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    /* ── Key findings ───────────────────────────────────────────── */
+    .key-findings {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+    }
+    .findings-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+    }
+    .key-findings ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .key-findings li {
+      font-size: 0.81rem;
+      line-height: 1.55;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .key-findings li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-color, var(--accent));
+      font-size: 0.68rem;
+      top: 2px;
+    }
+
+    /* ── Card footer ────────────────────────────────────────────── */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .doi-link {
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: gap var(--transition);
+    }
+    .doi-link:hover { gap: 7px; }
+    .keywords-row { display: flex; gap: 4px; flex-wrap: wrap; }
+    .kw-tag {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-light);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Favorite button ─────────────────────────────────────────── */
+    .fav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .fav-btn:hover { color: #f6ad00; border-color: #f6ad00; transform: scale(1.15); }
+    .fav-btn.favorited { color: #f6ad00; border-color: #f6ad00; background: rgba(246,173,0,0.08); }
+
+    /* ── Dislike button ────────────────────────────────────────────── */
+    .dislike-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .dislike-btn:hover { color: #e53e3e; border-color: #e53e3e; transform: scale(1.15); }
+    .dislike-btn.disliked { color: #e53e3e; border-color: #e53e3e; background: rgba(229,62,62,0.08); }
+
+    /* ── Smooth archive animation ──────────────────────────────────────── */
+    .paper-card.archived-hidden {
+      opacity: 0 !important;
+      transform: scale(0.92) !important;
+      animation: archive-out 0.35s ease forwards;
+    }
+    .paper-card.archived-restoring {
+      animation: archive-in 0.35s ease forwards;
+    }
+
+    @keyframes archive-out {
+      to { opacity: 0; transform: scale(0.92); }
+    }
+    @keyframes archive-in {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── Archive section ───────────────────────────────────────────── */
+    .archive-section {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 2px dashed var(--border);
+      display: flex;
+      justify-content: center;
+    }
+    .archive-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .archive-toggle:hover {
+      background: var(--surface2);
+      color: var(--text);
+    }
+    .archive-toggle .count {
+      background: var(--text-light);
+      color: #fff;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+    }
+    /* Archived appearance when visible (archive filter / archive view) */
+    .paper-card.archived-visible {
+      border-style: dashed;
+      border-color: var(--text-light);
+      opacity: 0.75;
+    }
+    .paper-card.archived-visible:hover {
+      opacity: 1;
+    }
+    .archived-badge {
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #e53e3e;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Restore button ──────────────────────────────────────────────── */
+    .restore-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      color: var(--text-muted);
+      transition: all var(--transition);
+      flex-shrink: 0;
+      margin-left: 6px;
+    }
+    .restore-btn:hover {
+      color: #38a169;
+      border-color: #38a169;
+      background: rgba(56,161,105,0.06);
+    }
+
+    /* ── View switch bar ─────────────────────────────────────────────── */
+    .view-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 6px 0 14px;
+    }
+    .view-btn {
+      padding: 5px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .view-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Empty state ────────────────────────────────────────────── */
+    .no-papers {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 22px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .papers-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 16px 14px 48px; }
+      .stats-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">🧬 Bio Digest</a>
+    <nav class="header-nav" style="display:flex;align-items:center;gap:18px;">
+      <a href="../favorites.html" style="display:flex;align-items:center;gap:4px;">
+        ★ 收藏夹&nbsp;(<span id="fav-nav-count">0</span>)
+      </a>
+      <span style="display:flex;align-items:center;gap:4px;color:var(--text-muted);font-size:0.88rem;">
+        📦 已归档&nbsp;(<span id="archive-nav-count">0</span>)
+      </span>
+      <a href="../index.html">← 所有期刊</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">2026-W33</p>
+  <h1>系统 / 合成生物学<br>文献周报</h1>
+  <p class="hero-meta">
+    2026/08/03 &nbsp;~&nbsp; 2026/08/10
+    &nbsp;&nbsp;·&nbsp;&nbsp;生成于 2026-08-10 01:04 UTC
+  </p>
+  <div class="stats-row">
+    <div>
+      <span class="stat-num">18</span>
+      <span class="stat-label">篇论文</span>
+    </div>
+    <div>
+      <span class="stat-num">18</span>
+      <span class="stat-label">已翻译</span>
+    </div>
+    <div>
+      <span class="stat-num">8</span>
+      <span class="stat-label">期刊来源</span>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">筛选：</span>
+    <button class="filter-btn active" data-filter="all" onclick="filterPapers('all', this)">全部 (18)</button>
+    
+    <button class="filter-btn" data-filter="nature" onclick="filterPapers('nature', this)">🌿 Nature 系列 (3)</button>
+    
+    
+    
+    <button class="filter-btn" data-filter="science" onclick="filterPapers('science', this)">🟠 Science 系列 (3)</button>
+    
+    <button class="filter-btn" data-filter="fav" id="fav-filter-btn" onclick="filterPapers('fav', this)">★ 已收藏 (<span id="fav-filter-count">0</span>)</button>
+    <button class="filter-btn" data-filter="archive" id="archive-filter-btn" onclick="filterPapers('archive', this)">✕ 已归档 (<span id="archive-filter-count">0</span>)</button>
+  </div>
+</div>
+
+<main class="main">
+  
+  <div class="papers-grid" id="papers-grid">
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42568186"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "In eukaryotic cell chemotaxis, many cells extend and retract transient actin-driven protrusions at their membrane that facilitate both the detection of external chemical gradients and directional movement via cell-matrix coupling and traction. Although extensive experimental work has detailed how cellular protrusions and morphology vary under different environmental conditions, the mechanistic principles linking protrusive activity to these factors remain poorly understood. Here, we model the extension of actin-based protrusions in chemotaxis as an optimisation problem, wherein cells balance the detection of chemical gradients with the energetic cost of protrusion formation. Our model, built on the assumption of maximal energetic efficiency during migration, provides a framework that qualitatively reproduces experimentally observed patterns of protrusive activity across a range of biological systems and environmental conditions, suggesting that energetic efficiency may underpin the morphology and chemotactic behaviour of motile eukaryotic cells. Additionally, we leverage the model to generate novel predictions regarding cellular responses to other, experimentally untested environmental perturbations, providing testable hypotheses for future experimental work that may be used to validate and refine the model presented here.", "abstract_zh": "\u5728\u771f\u6838\u7ec6\u80de\u7684\u8d8b\u5316\u8fc7\u7a0b\u4e2d\uff0c\u8bb8\u591a\u7ec6\u80de\u4f1a\u5728\u7ec6\u80de\u819c\u5904\u5ef6\u4f38\u548c\u56de\u7f29\u77ac\u65f6\u7684\u808c\u52a8\u86cb\u767d\u9a71\u52a8\u7684\u7a81\u8d77\uff0c\u8fd9\u4e9b\u7a81\u8d77\u901a\u8fc7\u7ec6\u80de-\u57fa\u8d28\u8026\u5408\u548c\u7275\u5f15\u4f5c\u7528\u4fc3\u8fdb\u5bf9\u5916\u90e8\u5316\u5b66\u68af\u5ea6\u7684\u63a2\u6d4b\u4ee5\u53ca\u5b9a\u5411\u8fd0\u52a8\u3002\u5c3d\u7ba1\u5927\u91cf\u7684\u5b9e\u9a8c\u5de5\u4f5c\u8be6\u7ec6\u63cf\u8ff0\u4e86\u7ec6\u80de\u7a81\u8d77\u548c\u5f62\u6001\u5728\u4e0d\u540c\u73af\u5883\u6761\u4ef6\u4e0b\u5982\u4f55\u53d8\u5316\uff0c\u4f46\u5c06\u7a81\u751f\u6d3b\u52a8\u4e0e\u8fd9\u4e9b\u56e0\u7d20\u8054\u7cfb\u8d77\u6765\u7684\u673a\u7406\u539f\u5219\u4ecd\u4e0d\u6e05\u695a\u3002\u5728\u6b64\uff0c\u6211\u4eec\u5c06\u8d8b\u5316\u8fc7\u7a0b\u4e2d\u57fa\u4e8e\u808c\u52a8\u86cb\u767d\u7684\u7a81\u8d77\u5ef6\u4f38\u5efa\u6a21\u4e3a\u4e00\u4e2a\u4f18\u5316\u95ee\u9898\uff0c\u5176\u4e2d\u7ec6\u80de\u5728\u63a2\u6d4b\u5316\u5b66\u68af\u5ea6\u4e0e\u7a81\u8d77\u5f62\u6210\u7684\u80fd\u91cf\u4ee3\u4ef7\u4e4b\u95f4\u53d6\u5f97\u5e73\u8861\u3002\u6211\u4eec\u7684\u6a21\u578b\u5efa\u7acb\u5728\u8fc1\u79fb\u8fc7\u7a0b\u4e2d\u80fd\u91cf\u6548\u7387\u6700\u5927\u5316\u7684\u5047\u8bbe\u4e4b\u4e0a\uff0c\u63d0\u4f9b\u4e86\u4e00\u4e2a\u6846\u67b6\uff0c\u80fd\u591f\u5b9a\u6027\u91cd\u73b0\u4e00\u7cfb\u5217\u751f\u7269\u7cfb\u7edf\u548c\u73af\u5883\u6761\u4ef6\u4e0b\u5b9e\u9a8c\u89c2\u5bdf\u5230\u7684\u7a81\u751f\u6d3b\u52a8\u6a21\u5f0f\uff0c\u8868\u660e\u80fd\u91cf\u6548\u7387\u53ef\u80fd\u652f\u6491\u7740\u8fd0\u52a8\u6027\u771f\u6838\u7ec6\u80de\u7684\u5f62\u6001\u548c\u8d8b\u5316\u884c\u4e3a\u3002\u6b64\u5916\uff0c\u6211\u4eec\u5229\u7528\u8be5\u6a21\u578b\u5bf9\u7ec6\u80de\u5728\u5176\u4ed6\u5c1a\u672a\u7ecf\u5b9e\u9a8c\u6d4b\u8bd5\u7684\u73af\u5883\u6270\u52a8\u4e0b\u7684\u54cd\u5e94\u4ea7\u751f\u4e86\u65b0\u7684\u9884\u6d4b\uff0c\u4e3a\u672a\u6765\u7684\u5b9e\u9a8c\u5de5\u4f5c\u63d0\u4f9b\u4e86\u53ef\u68c0\u9a8c\u7684\u5047\u8bbe\uff0c\u8fd9\u4e9b\u5de5\u4f5c\u53ef\u7528\u4e8e\u9a8c\u8bc1\u548c\u5b8c\u5584\u672c\u6587\u63d0\u51fa\u7684\u6a21\u578b\u3002", "authors": ["Johnson Samuel W S", "Parsons Maddy", "Baker Ruth E", "Maini Philip K"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u5c06\u808c\u52a8\u86cb\u767d\u7a81\u8d77\u5ef6\u4f38\u5efa\u6a21\u4e3a\u4f18\u5316\u95ee\u9898\uff0c\u5728\u63a2\u6d4b\u5316\u5b66\u68af\u5ea6\u4e0e\u7a81\u8d77\u80fd\u91cf\u6210\u672c\u95f4\u6743\u8861\u3002", "\u57fa\u4e8e\u8fc1\u79fb\u4e2d\u80fd\u91cf\u6548\u7387\u6700\u5927\u5316\u5047\u8bbe\u7684\u6a21\u578b\u80fd\u5b9a\u6027\u91cd\u73b0\u4e0d\u540c\u73af\u5883\u4e0b\u7684\u7a81\u751f\u6d3b\u52a8\u6a21\u5f0f\u3002", "\u6a21\u578b\u9884\u6d4b\u4e86\u7ec6\u80de\u5bf9\u672a\u6d4b\u8bd5\u73af\u5883\u6270\u52a8\u7684\u54cd\u5e94\uff0c\u4e3a\u540e\u7eed\u5b9e\u9a8c\u63d0\u4f9b\u53ef\u68c0\u9a8c\u7684\u5047\u8bbe\u3002"], "pmid": "42568186", "pub_date": "2026-Aug-07", "title": "An energy-based mathematical model of actin-driven protrusions in eukaryotic chemotaxis.", "url": "https://doi.org/10.1016/j.bpj.2026.08.001", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Aug-07</span>
+        <button class="fav-btn"
+                data-pmid="42568186"
+                onclick="toggleFavorite('42568186', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42568186"
+                onclick="toggleDislike('42568186', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.08.001" target="_blank" rel="noopener noreferrer">An energy-based mathematical model of actin-driven protrusions in eukaryotic chemotaxis.</a>
+      </h2>
+
+      <p class="paper-authors">Johnson Samuel W S &middot; Parsons Maddy &middot; Baker Ruth E &middot; Maini Philip K</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42568186', 'zh-42568186')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42568186', 'en-42568186')">中文</button>
+        </div>
+        <div id="en-42568186" class="abstract-text active">In eukaryotic cell chemotaxis, many cells extend and retract transient actin-driven protrusions at their membrane that facilitate both the detection of external chemical gradients and directional movement via cell-matrix coupling and traction. Although extensive experimental work has detailed how cellular protrusions and morphology vary under different environmental conditions, the mechanistic principles linking protrusive activity to these factors remain poorly understood. Here, we model the extension of actin-based protrusions in chemotaxis as an optimisation problem, wherein cells balance the detection of chemical gradients with the energetic cost of protrusion formation. Our model, built on the assumption of maximal energetic efficiency during migration, provides a framework that qualitatively reproduces experimentally observed patterns of protrusive activity across a range of biological systems and environmental conditions, suggesting that energetic efficiency may underpin the morphology and chemotactic behaviour of motile eukaryotic cells. Additionally, we leverage the model to generate novel predictions regarding cellular responses to other, experimentally untested environmental perturbations, providing testable hypotheses for future experimental work that may be used to validate and refine the model presented here.</div>
+        <div id="zh-42568186" class="abstract-text">在真核细胞的趋化过程中，许多细胞会在细胞膜处延伸和回缩瞬时的肌动蛋白驱动的突起，这些突起通过细胞-基质耦合和牵引作用促进对外部化学梯度的探测以及定向运动。尽管大量的实验工作详细描述了细胞突起和形态在不同环境条件下如何变化，但将突生活动与这些因素联系起来的机理原则仍不清楚。在此，我们将趋化过程中基于肌动蛋白的突起延伸建模为一个优化问题，其中细胞在探测化学梯度与突起形成的能量代价之间取得平衡。我们的模型建立在迁移过程中能量效率最大化的假设之上，提供了一个框架，能够定性重现一系列生物系统和环境条件下实验观察到的突生活动模式，表明能量效率可能支撑着运动性真核细胞的形态和趋化行为。此外，我们利用该模型对细胞在其他尚未经实验测试的环境扰动下的响应产生了新的预测，为未来的实验工作提供了可检验的假设，这些工作可用于验证和完善本文提出的模型。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>将肌动蛋白突起延伸建模为优化问题，在探测化学梯度与突起能量成本间权衡。</li>
+          
+          <li>基于迁移中能量效率最大化假设的模型能定性重现不同环境下的突生活动模式。</li>
+          
+          <li>模型预测了细胞对未测试环境扰动的响应，为后续实验提供可检验的假设。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.08.001" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42566539"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Extending community detection from pairwise networks to hypergraphs introduces fundamental theoretical challenges. Hypergraphs exhibit structural heterogeneity with no direct graph analog: Hyperedges of varying orders can connect nodes across communities in diverse configurations. Crucially, this means that any hypergraph community detection algorithm must make a choice regarding which order or balance of hyperedges it prefers to maintain or split during partitioning. We address these challenges by developing a unified framework for community detection in nonuniform hypergraphs under the hypergraph stochastic block model. We introduce a general signal-to-noise ratio that enables a quantitative analysis of trade-offs unique to higher-order networks, such as which hypergedges we choose to split across communities and how we choose to split them. Building on this framework, we derive a Bethe Hessian operator for nonuniform hypergraphs that provides efficient spectral clustering with principled model selection. We characterize the resulting spectral detectability threshold and compare it to belief propagation limits, showing the methods coincide for uniform hypergraphs but diverge in nonuniform settings. Synthetic experiments confirm our analytical predictions and reveal systematic biases toward preserving higher-order and balanced shape hyperedges. Application to empirical data demonstrates the practical relevance of these higher-order detectability trade-offs in real-world systems.", "abstract_zh": "\u5c06\u793e\u533a\u68c0\u6d4b\u4ece\u6210\u5bf9\u7f51\u7edc\u6269\u5c55\u5230\u8d85\u56fe\u5f15\u5165\u4e86\u6839\u672c\u6027\u7684\u7406\u8bba\u6311\u6218\u3002\u8d85\u56fe\u5c55\u73b0\u51fa\u6ca1\u6709\u76f4\u63a5\u56fe\u7c7b\u6bd4\u7684\u7ed3\u6784\u5f02\u8d28\u6027\uff1a\u4e0d\u540c\u9636\u7684\u8d85\u8fb9\u53ef\u4ee5\u4ee5\u591a\u6837\u7684\u914d\u7f6e\u8fde\u63a5\u8de8\u793e\u533a\u7684\u8282\u70b9\u3002\u81f3\u5173\u91cd\u8981\u7684\u662f\uff0c\u8fd9\u610f\u5473\u7740\u4efb\u4f55\u8d85\u56fe\u793e\u533a\u68c0\u6d4b\u7b97\u6cd5\u90fd\u5fc5\u987b\u505a\u51fa\u9009\u62e9\uff0c\u5373\u5728\u5212\u5206\u8fc7\u7a0b\u4e2d\u503e\u5411\u4e8e\u7ef4\u6301\u6216\u5206\u5272\u54ea\u4e2a\u9636\u6570\u6216\u4f55\u79cd\u5e73\u8861\u7684\u8d85\u8fb9\u3002\u6211\u4eec\u901a\u8fc7\u5f00\u53d1\u4e00\u4e2a\u5728\u8d85\u56fe\u968f\u673a\u5757\u6a21\u578b\u4e0b\u975e\u5747\u5300\u8d85\u56fe\u793e\u533a\u68c0\u6d4b\u7684\u7edf\u4e00\u6846\u67b6\u6765\u5e94\u5bf9\u8fd9\u4e9b\u6311\u6218\u3002\u6211\u4eec\u5f15\u5165\u4e86\u4e00\u4e2a\u901a\u7528\u7684\u4fe1\u566a\u6bd4\uff0c\u80fd\u591f\u5b9a\u91cf\u5206\u6790\u9ad8\u9636\u7f51\u7edc\u7279\u6709\u7684\u6743\u8861\uff0c\u4f8b\u5982\u6211\u4eec\u9009\u62e9\u5c06\u54ea\u4e9b\u8d85\u8fb9\u5206\u5272\u5230\u4e0d\u540c\u793e\u533a\uff0c\u4ee5\u53ca\u5982\u4f55\u5206\u5272\u5b83\u4eec\u3002\u57fa\u4e8e\u6b64\u6846\u67b6\uff0c\u6211\u4eec\u4e3a\u975e\u5747\u5300\u8d85\u56fe\u5bfc\u51fa\u4e86Bethe Hessian\u7b97\u5b50\uff0c\u8be5\u7b97\u5b50\u63d0\u4f9b\u4e86\u5177\u6709\u539f\u5219\u6027\u6a21\u578b\u9009\u62e9\u7684\u9ad8\u6548\u8c31\u805a\u7c7b\u65b9\u6cd5\u3002\u6211\u4eec\u523b\u753b\u4e86\u7531\u6b64\u4ea7\u751f\u7684\u8c31\u53ef\u68c0\u6d4b\u6027\u9608\u503c\uff0c\u5e76\u5c06\u5176\u4e0e\u7f6e\u4fe1\u4f20\u64ad\u6781\u9650\u8fdb\u884c\u6bd4\u8f83\uff0c\u8868\u660e\u8fd9\u4e9b\u65b9\u6cd5\u5728\u5747\u5300\u8d85\u56fe\u4e2d\u4e00\u81f4\uff0c\u4f46\u5728\u975e\u5747\u5300\u8bbe\u7f6e\u4e0b\u5b58\u5728\u5206\u6b67\u3002\u5408\u6210\u5b9e\u9a8c\u8bc1\u5b9e\u4e86\u6211\u4eec\u7684\u5206\u6790\u9884\u6d4b\uff0c\u5e76\u63ed\u793a\u4e86\u5bf9\u4fdd\u7559\u9ad8\u9636\u548c\u5e73\u8861\u5f62\u72b6\u8d85\u8fb9\u7684\u7cfb\u7edf\u6027\u504f\u5dee\u3002\u5728\u5b9e\u8bc1\u6570\u636e\u4e0a\u7684\u5e94\u7528\u8bc1\u660e\u4e86\u8fd9\u4e9b\u9ad8\u9636\u53ef\u68c0\u6d4b\u6027\u6743\u8861\u5728\u73b0\u5b9e\u4e16\u754c\u7cfb\u7edf\u4e2d\u7684\u5b9e\u9645\u76f8\u5173\u6027\u3002", "authors": ["Li Jiaze", "Schaub Michael T", "Peel Leto"], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["\u63d0\u51fa\u4e86\u975e\u5747\u5300\u8d85\u56fe\u793e\u533a\u68c0\u6d4b\u7684\u7edf\u4e00\u6846\u67b6\uff0c\u5f15\u5165\u901a\u7528\u4fe1\u566a\u6bd4\u91cf\u5316\u4e0d\u540c\u9636\u8d85\u8fb9\u5212\u5206\u65f6\u7684\u6743\u8861\u3002", "\u4e3a\u975e\u5747\u5300\u8d85\u56fe\u63a8\u5bfc\u51faBethe Hessian\u7b97\u5b50\uff0c\u5b9e\u73b0\u539f\u5219\u6027\u6a21\u578b\u9009\u62e9\u7684\u9ad8\u6548\u8c31\u805a\u7c7b\uff0c\u5e76\u523b\u753b\u4e86\u53ef\u68c0\u6d4b\u6027\u9608\u503c\u3002", "\u53d1\u73b0\u8c31\u65b9\u6cd5\u4e0e\u7f6e\u4fe1\u4f20\u64ad\u5728\u975e\u5747\u5300\u8d85\u56fe\u4e0a\u5b58\u5728\u5206\u6b67\uff0c\u5e76\u63ed\u793a\u65b9\u6cd5\u504f\u5411\u4e8e\u4fdd\u7559\u9ad8\u9636\u548c\u5e73\u8861\u5f62\u72b6\u7684\u8d85\u8fb9\u3002"], "pmid": "42566539", "pub_date": "2026-Aug-07", "title": "Higher-order trade-offs in hypergraph community detection.", "url": "https://doi.org/10.1126/sciadv.aef2184", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Aug-07</span>
+        <button class="fav-btn"
+                data-pmid="42566539"
+                onclick="toggleFavorite('42566539', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42566539"
+                onclick="toggleDislike('42566539', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aef2184" target="_blank" rel="noopener noreferrer">Higher-order trade-offs in hypergraph community detection.</a>
+      </h2>
+
+      <p class="paper-authors">Li Jiaze &middot; Schaub Michael T &middot; Peel Leto</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42566539', 'zh-42566539')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42566539', 'en-42566539')">中文</button>
+        </div>
+        <div id="en-42566539" class="abstract-text active">Extending community detection from pairwise networks to hypergraphs introduces fundamental theoretical challenges. Hypergraphs exhibit structural heterogeneity with no direct graph analog: Hyperedges of varying orders can connect nodes across communities in diverse configurations. Crucially, this means that any hypergraph community detection algorithm must make a choice regarding which order or balance of hyperedges it prefers to maintain or split during partitioning. We address these challenges by developing a unified framework for community detection in nonuniform hypergraphs under the hypergraph stochastic block model. We introduce a general signal-to-noise ratio that enables a quantitative analysis of trade-offs unique to higher-order networks, such as which hypergedges we choose to split across communities and how we choose to split them. Building on this framework, we derive a Bethe Hessian operator for nonuniform hypergraphs that provides efficient spectral clustering with principled model selection. We characterize the resulting spectral detectability threshold and compare it to belief propagation limits, showing the methods coincide for uniform hypergraphs but diverge in nonuniform settings. Synthetic experiments confirm our analytical predictions and reveal systematic biases toward preserving higher-order and balanced shape hyperedges. Application to empirical data demonstrates the practical relevance of these higher-order detectability trade-offs in real-world systems.</div>
+        <div id="zh-42566539" class="abstract-text">将社区检测从成对网络扩展到超图引入了根本性的理论挑战。超图展现出没有直接图类比的结构异质性：不同阶的超边可以以多样的配置连接跨社区的节点。至关重要的是，这意味着任何超图社区检测算法都必须做出选择，即在划分过程中倾向于维持或分割哪个阶数或何种平衡的超边。我们通过开发一个在超图随机块模型下非均匀超图社区检测的统一框架来应对这些挑战。我们引入了一个通用的信噪比，能够定量分析高阶网络特有的权衡，例如我们选择将哪些超边分割到不同社区，以及如何分割它们。基于此框架，我们为非均匀超图导出了Bethe Hessian算子，该算子提供了具有原则性模型选择的高效谱聚类方法。我们刻画了由此产生的谱可检测性阈值，并将其与置信传播极限进行比较，表明这些方法在均匀超图中一致，但在非均匀设置下存在分歧。合成实验证实了我们的分析预测，并揭示了对保留高阶和平衡形状超边的系统性偏差。在实证数据上的应用证明了这些高阶可检测性权衡在现实世界系统中的实际相关性。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>提出了非均匀超图社区检测的统一框架，引入通用信噪比量化不同阶超边划分时的权衡。</li>
+          
+          <li>为非均匀超图推导出Bethe Hessian算子，实现原则性模型选择的高效谱聚类，并刻画了可检测性阈值。</li>
+          
+          <li>发现谱方法与置信传播在非均匀超图上存在分歧，并揭示方法偏向于保留高阶和平衡形状的超边。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aef2184" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42555737"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Radial glial progenitors (RGPs) generate all projection neurons (PNs) in the cerebral cortex through incompletely understood processes. We combined Mosaic Analysis with Double Markers at embryonic stages (E)12.5 and E13.5 with early postnatal callosal tracing to dissect RGP lineage progression. We find that multipotent RGPs generate all extra-telencephalic (ET) and intra-telencephalic (IT) PNs via parallel sublineages that emerge simultaneously at neurogenesis onset. ET-PN production progresses exclusively via small, self-consuming lineages; IT-PN lineages feature RGPs generating large translaminar outputs. The early emergence of IT-PN-fated RGPs, coinciding with a switch to direct neurogenesis, contributes to the stereotyped population-level progression of the multipotent lineage. We also identify POU3F transcription factors as candidate regulators of IT-PN fate via noncanonical mitotic chromatin binding. The results support a model whereby IT- and ET-PNs arise from an early bifurcation and parallel specification within the multipotent RGP lineage.", "abstract_zh": "\u5f84\u5411\u80f6\u8d28\u7956\u7ec6\u80de\uff08RGPs\uff09\u901a\u8fc7\u4e0d\u5b8c\u5168\u6e05\u695a\u7684\u673a\u5236\u4ea7\u751f\u5927\u8111\u76ae\u5c42\u4e2d\u7684\u6240\u6709\u6295\u5c04\u795e\u7ecf\u5143\uff08PNs\uff09\u3002\u6211\u4eec\u7ed3\u5408\u4e86\u80da\u80ce\u671f\uff08E\uff0912.5\u548cE13.5\u7684\u53cc\u6807\u8bb0\u5d4c\u5408\u5206\u6790\u4e0e\u51fa\u751f\u540e\u65e9\u671f\u80fc\u80dd\u4f53\u8ffd\u8e2a\uff0c\u4ee5\u5256\u6790RGP\u8c31\u7cfb\u8fdb\u5c55\u3002\u6211\u4eec\u53d1\u73b0\u591a\u80fdRGPs\u901a\u8fc7\u5e73\u884c\u4e9a\u8c31\u7cfb\u540c\u65f6\u4ea7\u751f\u6240\u6709\u7aef\u8111\u5916\uff08ET\uff09\u548c\u7aef\u8111\u5185\uff08IT\uff09\u6295\u5c04\u795e\u7ecf\u5143\uff0c\u8fd9\u4e9b\u4e9a\u8c31\u7cfb\u5728\u795e\u7ecf\u53d1\u751f\u8d77\u59cb\u65f6\u540c\u65f6\u51fa\u73b0\u3002ET-PN\u7684\u4ea7\u751f\u4ec5\u901a\u8fc7\u5c0f\u7684\u3001\u81ea\u6211\u6d88\u8017\u7684\u8c31\u7cfb\u8fdb\u884c\uff1bIT-PN\u8c31\u7cfb\u5219\u5177\u6709\u4ea7\u751f\u5927\u7684\u8de8\u5c42\u8f93\u51fa\u7684RGPs\u3002IT-PN\u547d\u8fd0\u51b3\u5b9a\u7684RGPs\u7684\u65e9\u671f\u51fa\u73b0\uff0c\u4e0e\u5411\u76f4\u63a5\u795e\u7ecf\u53d1\u751f\u7684\u8f6c\u53d8\u76f8\u543b\u5408\uff0c\u6709\u52a9\u4e8e\u591a\u80fd\u8c31\u7cfb\u5728\u7fa4\u4f53\u6c34\u5e73\u4e0a\u7684\u5b9a\u578b\u8fdb\u5c55\u3002\u6211\u4eec\u8fd8\u53d1\u73b0POU3F\u8f6c\u5f55\u56e0\u5b50\u901a\u8fc7\u975e\u7ecf\u5178\u7684\u4e1d\u5206\u88c2\u67d3\u8272\u8d28\u7ed3\u5408\uff0c\u53ef\u80fd\u662fIT-PN\u547d\u8fd0\u7684\u5019\u9009\u8c03\u8282\u56e0\u5b50\u3002\u8fd9\u4e9b\u7ed3\u679c\u652f\u6301\u4e00\u4e2a\u6a21\u578b\uff0c\u5373IT-\u548cET-PNs\u6e90\u4e8e\u591a\u80fdRGP\u8c31\u7cfb\u5185\u7684\u65e9\u671f\u5206\u53c9\u548c\u5e73\u884c\u7279\u5316\u3002", "authors": ["Varela-Mart\u00ednez Irene", "Villalba Ana", "Garc\u00eda-Marqu\u00e9s Jorge", "Aguilera Alfonso", "Castro Diogo S", "Hippenmeyer Simon", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["\u591a\u80fdRGPs\u5728\u795e\u7ecf\u53d1\u751f\u8d77\u59cb\u65f6\u5373\u901a\u8fc7\u5e73\u884c\u4e9a\u8c31\u7cfb\u540c\u65f6\u4ea7\u751f\u7aef\u8111\u5916\u548c\u7aef\u8111\u5185\u6295\u5c04\u795e\u7ecf\u5143\u3002", "\u7aef\u8111\u5916\u795e\u7ecf\u5143\u8c31\u7cfb\u5c0f\u4e14\u81ea\u6211\u6d88\u8017\uff0c\u7aef\u8111\u5185\u795e\u7ecf\u5143\u7531\u4ea7\u751f\u8de8\u5c42\u8f93\u51fa\u7684\u5927\u8c31\u7cfbRGPs\u751f\u6210\u3002", "IT\u547d\u8fd0RGP\u7684\u65e9\u671f\u51fa\u73b0\u4e0e\u76f4\u63a5\u795e\u7ecf\u53d1\u751f\u8f6c\u53d8\u4e00\u81f4\uff0cPOU3F\u8f6c\u5f55\u56e0\u5b50\u53ef\u80fd\u8c03\u63a7\u8be5\u547d\u8fd0\u3002"], "pmid": "42555737", "pub_date": "2026-Aug-07", "title": "Early fate diversification of radial glial progenitors during corticogenesis.", "url": "https://doi.org/10.1126/sciadv.adw5487", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Aug-07</span>
+        <button class="fav-btn"
+                data-pmid="42555737"
+                onclick="toggleFavorite('42555737', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42555737"
+                onclick="toggleDislike('42555737', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.adw5487" target="_blank" rel="noopener noreferrer">Early fate diversification of radial glial progenitors during corticogenesis.</a>
+      </h2>
+
+      <p class="paper-authors">Varela-Martínez Irene &middot; Villalba Ana &middot; García-Marqués Jorge &middot; Aguilera Alfonso &middot; Castro Diogo S &middot; Hippenmeyer Simon &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42555737', 'zh-42555737')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42555737', 'en-42555737')">中文</button>
+        </div>
+        <div id="en-42555737" class="abstract-text active">Radial glial progenitors (RGPs) generate all projection neurons (PNs) in the cerebral cortex through incompletely understood processes. We combined Mosaic Analysis with Double Markers at embryonic stages (E)12.5 and E13.5 with early postnatal callosal tracing to dissect RGP lineage progression. We find that multipotent RGPs generate all extra-telencephalic (ET) and intra-telencephalic (IT) PNs via parallel sublineages that emerge simultaneously at neurogenesis onset. ET-PN production progresses exclusively via small, self-consuming lineages; IT-PN lineages feature RGPs generating large translaminar outputs. The early emergence of IT-PN-fated RGPs, coinciding with a switch to direct neurogenesis, contributes to the stereotyped population-level progression of the multipotent lineage. We also identify POU3F transcription factors as candidate regulators of IT-PN fate via noncanonical mitotic chromatin binding. The results support a model whereby IT- and ET-PNs arise from an early bifurcation and parallel specification within the multipotent RGP lineage.</div>
+        <div id="zh-42555737" class="abstract-text">径向胶质祖细胞（RGPs）通过不完全清楚的机制产生大脑皮层中的所有投射神经元（PNs）。我们结合了胚胎期（E）12.5和E13.5的双标记嵌合分析与出生后早期胼胝体追踪，以剖析RGP谱系进展。我们发现多能RGPs通过平行亚谱系同时产生所有端脑外（ET）和端脑内（IT）投射神经元，这些亚谱系在神经发生起始时同时出现。ET-PN的产生仅通过小的、自我消耗的谱系进行；IT-PN谱系则具有产生大的跨层输出的RGPs。IT-PN命运决定的RGPs的早期出现，与向直接神经发生的转变相吻合，有助于多能谱系在群体水平上的定型进展。我们还发现POU3F转录因子通过非经典的丝分裂染色质结合，可能是IT-PN命运的候选调节因子。这些结果支持一个模型，即IT-和ET-PNs源于多能RGP谱系内的早期分叉和平行特化。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>多能RGPs在神经发生起始时即通过平行亚谱系同时产生端脑外和端脑内投射神经元。</li>
+          
+          <li>端脑外神经元谱系小且自我消耗，端脑内神经元由产生跨层输出的大谱系RGPs生成。</li>
+          
+          <li>IT命运RGP的早期出现与直接神经发生转变一致，POU3F转录因子可能调控该命运。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.adw5487" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Neurogenesis</span>
+          
+          <span class="kw-tag">Cell Lineage</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42563385"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Interactions between cytosolic biomolecules and the bacterial inner membrane are fundamental to many cellular processes, yet directly measuring their binding kinetics in living cells remains challenging. Conventional two-dimensional single-molecule tracking analyses can be insufficient, particularly when membrane association does not markedly alter the diffusion rate. Here, we present a method to recover membrane interaction kinetics from three-dimensional single-molecule trajectories in rod-shaped bacteria. Using simulated 3D tracking data, we identify membrane-associated motion by quantifying how well short trajectory segments follow the circular curvature of the cell membrane. The resulting measure is further analyzed using a hidden Markov modeling framework, enabling robust discrimination between cytosolic and membrane-bound states and capturing the dynamics of state transitions without requiring diffusion-rate changes or direct colocalization with membrane markers. This work establishes a general framework for extracting membrane interaction kinetics from 3D single-molecule tracking data in live bacteria, and highlights the value of realistic microscopy simulations for quantitative interpretation and systematic bias assessment.", "abstract_zh": "\u80de\u8d28\u751f\u7269\u5206\u5b50\u4e0e\u7ec6\u83cc\u5185\u819c\u4e4b\u95f4\u7684\u76f8\u4e92\u4f5c\u7528\u662f\u8bb8\u591a\u7ec6\u80de\u8fc7\u7a0b\u7684\u57fa\u7840\uff0c\u4f46\u5728\u6d3b\u7ec6\u80de\u4e2d\u76f4\u63a5\u6d4b\u91cf\u5176\u7ed3\u5408\u52a8\u529b\u5b66\u4ecd\u9887\u5177\u6311\u6218\u3002\u4f20\u7edf\u7684\u4e8c\u7ef4\u5355\u5206\u5b50\u8ffd\u8e2a\u5206\u6790\u53ef\u80fd\u5b58\u5728\u4e0d\u8db3\uff0c\u5c24\u5176\u662f\u5f53\u819c\u7ed3\u5408\u672a\u663e\u8457\u6539\u53d8\u6269\u6563\u901f\u7387\u65f6\u3002\u672c\u6587\u63d0\u51fa\u4e00\u79cd\u4ece\u6746\u72b6\u7ec6\u83cc\u7684\u4e09\u7ef4\u5355\u5206\u5b50\u8f68\u8ff9\u4e2d\u6062\u590d\u819c\u76f8\u4e92\u4f5c\u7528\u52a8\u529b\u5b66\u7684\u65b9\u6cd5\u3002\u901a\u8fc7\u6a21\u62df\u7684\u4e09\u7ef4\u8ffd\u8e2a\u6570\u636e\uff0c\u6211\u4eec\u901a\u8fc7\u91cf\u5316\u77ed\u8f68\u8ff9\u6bb5\u6cbf\u7ec6\u80de\u819c\u5706\u5f62\u66f2\u7387\u7684\u543b\u5408\u7a0b\u5ea6\u6765\u8bc6\u522b\u819c\u76f8\u5173\u8fd0\u52a8\u3002\u6240\u5f97\u5ea6\u91cf\u8fdb\u4e00\u6b65\u5229\u7528\u9690\u9a6c\u5c14\u53ef\u592b\u6a21\u578b\u6846\u67b6\u5206\u6790\uff0c\u4ece\u800c\u80fd\u591f\u7a33\u5065\u533a\u5206\u80de\u8d28\u4e0e\u819c\u7ed3\u5408\u72b6\u6001\uff0c\u5e76\u6355\u83b7\u72b6\u6001\u8f6c\u6362\u7684\u52a8\u6001\u8fc7\u7a0b\uff0c\u65e0\u9700\u4f9d\u8d56\u6269\u6563\u901f\u7387\u53d8\u5316\u6216\u4e0e\u819c\u6807\u8bb0\u7269\u7684\u76f4\u63a5\u5171\u5b9a\u4f4d\u3002\u8fd9\u9879\u5de5\u4f5c\u4e3a\u4ece\u6d3b\u7ec6\u83cc\u4e09\u7ef4\u5355\u5206\u5b50\u8ffd\u8e2a\u6570\u636e\u4e2d\u63d0\u53d6\u819c\u76f8\u4e92\u4f5c\u7528\u52a8\u529b\u5b66\u5efa\u7acb\u4e86\u4e00\u4e2a\u901a\u7528\u6846\u67b6\uff0c\u5e76\u5f70\u663e\u4e86\u903c\u771f\u663e\u5fae\u6a21\u62df\u5bf9\u5b9a\u91cf\u89e3\u91ca\u548c\u7cfb\u7edf\u504f\u5dee\u8bc4\u4f30\u7684\u4ef7\u503c\u3002", "authors": ["Lundin Erik", "Volkov Ivan L", "Johansson Magnus"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u63d0\u51fa\u901a\u8fc7\u91cf\u5316\u77ed\u8f68\u8ff9\u6bb5\u4e0e\u7ec6\u80de\u819c\u5706\u5f62\u66f2\u7387\u7684\u543b\u5408\u7a0b\u5ea6\uff0c\u4ece\u6a21\u62df\u4e09\u7ef4\u5355\u5206\u5b50\u8ffd\u8e2a\u6570\u636e\u4e2d\u8bc6\u522b\u819c\u76f8\u5173\u8fd0\u52a8\u7684\u65b9\u6cd5\u3002", "\u5229\u7528\u9690\u9a6c\u5c14\u53ef\u592b\u6a21\u578b\u5206\u6790\u8be5\u5ea6\u91cf\uff0c\u65e0\u9700\u4f9d\u8d56\u6269\u6563\u901f\u7387\u53d8\u5316\u6216\u819c\u6807\u8bb0\uff0c\u5373\u53ef\u7a33\u5065\u533a\u5206\u80de\u8d28\u4e0e\u819c\u7ed3\u5408\u72b6\u6001\u5e76\u6355\u83b7\u8f6c\u6362\u52a8\u6001\u3002", "\u6784\u5efa\u4e86\u4ece\u6d3b\u83cc\u4e09\u7ef4\u5355\u5206\u5b50\u8ffd\u8e2a\u6570\u636e\u4e2d\u63d0\u53d6\u819c\u76f8\u4e92\u4f5c\u7528\u52a8\u529b\u5b66\u7684\u901a\u7528\u6846\u67b6\uff0c\u5e76\u8bc1\u660e\u4e86\u663e\u5fae\u6a21\u62df\u5bf9\u5b9a\u91cf\u4e0e\u504f\u5dee\u8bc4\u4f30\u7684\u4ef7\u503c\u3002"], "pmid": "42563385", "pub_date": "2026-Aug-06", "title": "Recovering membrane interaction kinetics of single molecules from 3D tracking data.", "url": "https://doi.org/10.1016/j.bpj.2026.07.029", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Aug-06</span>
+        <button class="fav-btn"
+                data-pmid="42563385"
+                onclick="toggleFavorite('42563385', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42563385"
+                onclick="toggleDislike('42563385', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.07.029" target="_blank" rel="noopener noreferrer">Recovering membrane interaction kinetics of single molecules from 3D tracking data.</a>
+      </h2>
+
+      <p class="paper-authors">Lundin Erik &middot; Volkov Ivan L &middot; Johansson Magnus</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42563385', 'zh-42563385')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42563385', 'en-42563385')">中文</button>
+        </div>
+        <div id="en-42563385" class="abstract-text active">Interactions between cytosolic biomolecules and the bacterial inner membrane are fundamental to many cellular processes, yet directly measuring their binding kinetics in living cells remains challenging. Conventional two-dimensional single-molecule tracking analyses can be insufficient, particularly when membrane association does not markedly alter the diffusion rate. Here, we present a method to recover membrane interaction kinetics from three-dimensional single-molecule trajectories in rod-shaped bacteria. Using simulated 3D tracking data, we identify membrane-associated motion by quantifying how well short trajectory segments follow the circular curvature of the cell membrane. The resulting measure is further analyzed using a hidden Markov modeling framework, enabling robust discrimination between cytosolic and membrane-bound states and capturing the dynamics of state transitions without requiring diffusion-rate changes or direct colocalization with membrane markers. This work establishes a general framework for extracting membrane interaction kinetics from 3D single-molecule tracking data in live bacteria, and highlights the value of realistic microscopy simulations for quantitative interpretation and systematic bias assessment.</div>
+        <div id="zh-42563385" class="abstract-text">胞质生物分子与细菌内膜之间的相互作用是许多细胞过程的基础，但在活细胞中直接测量其结合动力学仍颇具挑战。传统的二维单分子追踪分析可能存在不足，尤其是当膜结合未显著改变扩散速率时。本文提出一种从杆状细菌的三维单分子轨迹中恢复膜相互作用动力学的方法。通过模拟的三维追踪数据，我们通过量化短轨迹段沿细胞膜圆形曲率的吻合程度来识别膜相关运动。所得度量进一步利用隐马尔可夫模型框架分析，从而能够稳健区分胞质与膜结合状态，并捕获状态转换的动态过程，无需依赖扩散速率变化或与膜标记物的直接共定位。这项工作为从活细菌三维单分子追踪数据中提取膜相互作用动力学建立了一个通用框架，并彰显了逼真显微模拟对定量解释和系统偏差评估的价值。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>提出通过量化短轨迹段与细胞膜圆形曲率的吻合程度，从模拟三维单分子追踪数据中识别膜相关运动的方法。</li>
+          
+          <li>利用隐马尔可夫模型分析该度量，无需依赖扩散速率变化或膜标记，即可稳健区分胞质与膜结合状态并捕获转换动态。</li>
+          
+          <li>构建了从活菌三维单分子追踪数据中提取膜相互作用动力学的通用框架，并证明了显微模拟对定量与偏差评估的价值。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.07.029" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42561074"
+             style="--card-color: #E65100">
+      <script class="paper-data" type="application/json">{"abstract": "Many important biological functions arise not from single genes but from complex interactions encoded by entire genomes. We report the first generative design of complete bacteriophage genomes using genome language models. We generated viable bacteriophages with target host tropism, using the phage \u03a6X174 as our design template. Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions. Cryo-electron microscopy confirmed that a generated phage utilizes an evolutionarily distant DNA packaging protein in its capsid. A cocktail of generated phages rapidly overcomes \u03a6X174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence-generated phage therapies against rapidly evolving bacterial pathogens. This work provides a blueprint for the design of diverse synthetic bacteriophages and useful biological systems at the genome scale.", "abstract_zh": "\u8bb8\u591a\u91cd\u8981\u7684\u751f\u7269\u529f\u80fd\u5e76\u975e\u6e90\u4e8e\u5355\u4e2a\u57fa\u56e0\uff0c\u800c\u662f\u7531\u6574\u4e2a\u57fa\u56e0\u7ec4\u7f16\u7801\u7684\u590d\u6742\u76f8\u4e92\u4f5c\u7528\u4ea7\u751f\u3002\u6211\u4eec\u9996\u6b21\u62a5\u9053\u4e86\u5229\u7528\u57fa\u56e0\u7ec4\u8bed\u8a00\u6a21\u578b\u5bf9\u5b8c\u6574\u566c\u83cc\u4f53\u57fa\u56e0\u7ec4\u8fdb\u884c\u751f\u6210\u5f0f\u8bbe\u8ba1\u3002\u4ee5\u566c\u83cc\u4f53\u03a6X174\u4e3a\u8bbe\u8ba1\u6a21\u677f\uff0c\u6211\u4eec\u751f\u6210\u4e86\u5177\u6709\u76ee\u6807\u5bbf\u4e3b\u55dc\u6027\u7684\u6d3b\u566c\u83cc\u4f53\u3002\u5b9e\u9a8c\u6d4b\u8bd5\u83b7\u5f97\u4e86\u5728\u5b9e\u9a8c\u5ba4\u6761\u4ef6\u4e0b\u5177\u6709\u4e0d\u540c\u9002\u5e94\u5ea6\u8c31\u768416\u4e2a\u566c\u83cc\u4f53\u3002\u51b7\u51bb\u7535\u955c\u8bc1\u5b9e\uff0c\u4e00\u79cd\u751f\u6210\u7684\u566c\u83cc\u4f53\u5728\u5176\u8863\u58f3\u4e2d\u4f7f\u7528\u4e86\u4e00\u79cd\u8fdb\u5316\u4e0a\u5173\u7cfb\u9065\u8fdc\u7684DNA\u5305\u88c5\u86cb\u767d\u3002\u751f\u6210\u7684\u566c\u83cc\u4f53\u6df7\u5408\u7269\u80fd\u8fc5\u901f\u514b\u670d\u5bf9\u03a6X174\u8010\u836f\u7684\u5927\u80a0\u6746\u83cc\u83cc\u682a\uff0c\u5c55\u793a\u4e86\u4eba\u5de5\u667a\u80fd\u751f\u6210\u7684\u566c\u83cc\u4f53\u7597\u6cd5\u5bf9\u6297\u5feb\u901f\u8fdb\u5316\u7ec6\u83cc\u75c5\u539f\u4f53\u7684\u8def\u5f84\u3002\u8fd9\u9879\u5de5\u4f5c\u4e3a\u57fa\u56e0\u7ec4\u89c4\u6a21\u7684\u591a\u6837\u5316\u5408\u6210\u566c\u83cc\u4f53\u53ca\u6709\u7528\u751f\u7269\u7cfb\u7edf\u7684\u8bbe\u8ba1\u63d0\u4f9b\u4e86\u84dd\u56fe\u3002", "authors": ["King Samuel H", "Driscoll Claudia L", "Li David B", "Guo Daniel", "Merchant Aditi T", "Brixi Garyk", "et al."], "journal": "Science", "journal_color": "#E65100", "key_findings": ["\u9996\u6b21\u8fd0\u7528\u57fa\u56e0\u7ec4\u8bed\u8a00\u6a21\u578b\u5b9e\u73b0\u5b8c\u6574\u566c\u83cc\u4f53\u57fa\u56e0\u7ec4\u7684\u751f\u6210\u5f0f\u8bbe\u8ba1\uff0c\u5e76\u6210\u529f\u83b7\u5f97\u6d3b\u566c\u83cc\u4f53\u3002", "\u751f\u6210\u566c\u83cc\u4f53\u4e0d\u4ec5\u5177\u5907\u76ee\u6807\u5bbf\u4e3b\u55dc\u6027\uff0c\u8fd8\u88c5\u914d\u4e86\u8fdb\u5316\u4e0a\u8fdc\u6e90\u7684DNA\u5305\u88c5\u86cb\u767d\uff0c\u663e\u793a\u8bbe\u8ba1\u7075\u6d3b\u6027\u3002", "AI\u751f\u6210\u7684\u566c\u83cc\u4f53\u6df7\u5408\u7269\u53ef\u5feb\u901f\u514b\u670d\u7ec6\u83cc\u8010\u836f\u6027\uff0c\u9a8c\u8bc1\u4e86\u5408\u6210\u566c\u83cc\u4f53\u7597\u6cd5\u7684\u53ef\u884c\u6027\u3002"], "pmid": "42561074", "pub_date": "2026-Aug-06", "title": "Generative design of bacteriophages with genome language models.", "url": "https://doi.org/10.1126/science.aec2657", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #E65100">Science</span>
+        <span class="pub-date">2026-Aug-06</span>
+        <button class="fav-btn"
+                data-pmid="42561074"
+                onclick="toggleFavorite('42561074', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42561074"
+                onclick="toggleDislike('42561074', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/science.aec2657" target="_blank" rel="noopener noreferrer">Generative design of bacteriophages with genome language models.</a>
+      </h2>
+
+      <p class="paper-authors">King Samuel H &middot; Driscoll Claudia L &middot; Li David B &middot; Guo Daniel &middot; Merchant Aditi T &middot; Brixi Garyk &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42561074', 'zh-42561074')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42561074', 'en-42561074')">中文</button>
+        </div>
+        <div id="en-42561074" class="abstract-text active">Many important biological functions arise not from single genes but from complex interactions encoded by entire genomes. We report the first generative design of complete bacteriophage genomes using genome language models. We generated viable bacteriophages with target host tropism, using the phage ΦX174 as our design template. Experimental testing yielded 16 phages with diverse fitness profiles in laboratory conditions. Cryo-electron microscopy confirmed that a generated phage utilizes an evolutionarily distant DNA packaging protein in its capsid. A cocktail of generated phages rapidly overcomes ΦX174-resistant Escherichia coli strains, demonstrating a path toward artificial intelligence-generated phage therapies against rapidly evolving bacterial pathogens. This work provides a blueprint for the design of diverse synthetic bacteriophages and useful biological systems at the genome scale.</div>
+        <div id="zh-42561074" class="abstract-text">许多重要的生物功能并非源于单个基因，而是由整个基因组编码的复杂相互作用产生。我们首次报道了利用基因组语言模型对完整噬菌体基因组进行生成式设计。以噬菌体ΦX174为设计模板，我们生成了具有目标宿主嗜性的活噬菌体。实验测试获得了在实验室条件下具有不同适应度谱的16个噬菌体。冷冻电镜证实，一种生成的噬菌体在其衣壳中使用了一种进化上关系遥远的DNA包装蛋白。生成的噬菌体混合物能迅速克服对ΦX174耐药的大肠杆菌菌株，展示了人工智能生成的噬菌体疗法对抗快速进化细菌病原体的路径。这项工作为基因组规模的多样化合成噬菌体及有用生物系统的设计提供了蓝图。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>首次运用基因组语言模型实现完整噬菌体基因组的生成式设计，并成功获得活噬菌体。</li>
+          
+          <li>生成噬菌体不仅具备目标宿主嗜性，还装配了进化上远源的DNA包装蛋白，显示设计灵活性。</li>
+          
+          <li>AI生成的噬菌体混合物可快速克服细菌耐药性，验证了合成噬菌体疗法的可行性。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/science.aec2657" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Bacteriophage phi X 174</span>
+          
+          <span class="kw-tag">Capsid</span>
+          
+          <span class="kw-tag">Capsid Proteins</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42562830"
+             style="--card-color: #A5D6A7">
+      <script class="paper-data" type="application/json">{"abstract": "Inertial measurement units (IMUs) could transform human movement science by enabling motion tracking outside the laboratory. Yet, their accuracy is perceived as inferior to that of marker-based systems. Here, we introduce IMoveLab, a method that integrates biomechanical priors into state-estimation filters, harnessing coupling across degrees of freedom and the spring-like behavior of muscle-tendon units for recursive state correction. We found that modern state-estimation filters match the accuracy of marker-based knee tracking when evaluated against biplane radiography, the gold standard for skeletal motion. IMoveLab further improves accuracy and achieves drift-free lower-extremity kinematics in long-duration trials, whereas alternative approaches do not. Movement scientists have been anticipating the leap out of the laboratory with cautious optimism. With methods and evidence that support more confident adoption of IMUs, this leap seems less like an aspiration and more like the first line of a new chapter written in the environments where human movement unfolds.", "abstract_zh": "\u60ef\u6027\u6d4b\u91cf\u5355\u5143\uff08IMU\uff09\u6709\u671b\u901a\u8fc7\u5b9e\u73b0\u5b9e\u9a8c\u5ba4\u5916\u7684\u8fd0\u52a8\u8ffd\u8e2a\u6765\u53d8\u9769\u4eba\u4f53\u8fd0\u52a8\u79d1\u5b66\uff0c\u4f46\u5176\u7cbe\u5ea6\u88ab\u8ba4\u4e3a\u4e0d\u53ca\u57fa\u4e8e\u6807\u8bb0\u7684\u7cfb\u7edf\u3002\u672c\u7814\u7a76\u63d0\u51fa IMoveLab \u65b9\u6cd5\uff0c\u5c06\u751f\u7269\u529b\u5b66\u5148\u9a8c\u4fe1\u606f\u878d\u5165\u72b6\u6001\u4f30\u8ba1\u6ee4\u6ce2\u5668\uff0c\u5229\u7528\u81ea\u7531\u5ea6\u95f4\u7684\u8026\u5408\u548c\u808c\u8089\u808c\u8171\u5355\u5143\u7684\u5f39\u7c27\u5f0f\u7279\u6027\u8fdb\u884c\u9012\u5f52\u72b6\u6001\u6821\u6b63\u3002\u6211\u4eec\u53d1\u73b0\uff0c\u91c7\u7528\u73b0\u4ee3\u72b6\u6001\u4f30\u8ba1\u6ee4\u6ce2\u5668\uff0c\u4ee5\u53cc\u5e73\u9762\u653e\u5c04\u6444\u5f71\uff08\u9aa8\u8fd0\u52a8\u91d1\u6807\u51c6\uff09\u4e3a\u53c2\u7167\uff0c\u5176\u819d\u5173\u8282\u8ffd\u8e2a\u7cbe\u5ea6\u53ef\u4e0e\u6807\u8bb0\u7cfb\u7edf\u5ab2\u7f8e\u3002IMoveLab \u8fdb\u4e00\u6b65\u63d0\u5347\u4e86\u7cbe\u5ea6\uff0c\u5e76\u5728\u957f\u65f6\u95f4\u8bd5\u9a8c\u4e2d\u5b9e\u73b0\u4e86\u65e0\u6f02\u79fb\u7684\u4e0b\u80a2\u8fd0\u52a8\u5b66\u6d4b\u91cf\uff0c\u800c\u5176\u4ed6\u65b9\u6cd5\u5219\u65e0\u6cd5\u505a\u5230\u3002\u8fd0\u52a8\u79d1\u5b66\u5bb6\u5bf9\u6b64\u62b1\u6709\u5ba1\u614e\u4e50\u89c2\u7684\u671f\u5f85\u3002\u968f\u7740\u652f\u6301\u66f4\u81ea\u4fe1\u91c7\u7528 IMU \u7684\u65b9\u6cd5\u548c\u8bc1\u636e\u7684\u51fa\u73b0\uff0c\u8fd9\u4e00\u8de8\u8d8a\u5df2\u4e0d\u4ec5\u662f\u613f\u666f\uff0c\u66f4\u50cf\u662f\u5728\u4eba\u7c7b\u8fd0\u52a8\u771f\u5b9e\u53d1\u751f\u7684\u73af\u5883\u4e2d\u5199\u4e0b\u7684\u65b0\u7bc7\u7ae0\u7684\u5e8f\u8a00\u3002", "authors": ["Phan Vu", "Li Zhixiong", "Meinders Evy", "Gale Tom", "Anderst William", "Ng-Thow-Hing Julian", "et al."], "journal": "Nat Commun", "journal_color": "#A5D6A7", "key_findings": ["IMoveLab \u901a\u8fc7\u878d\u5408\u751f\u7269\u529b\u5b66\u5148\u9a8c\u4e0e\u72b6\u6001\u6ee4\u6ce2\uff0c\u4f7f IMU \u819d\u5173\u8282\u8ffd\u8e2a\u7cbe\u5ea6\u8fbe\u5230\u6807\u8bb0\u5f0f\u91d1\u6807\u51c6\u6c34\u5e73\u3002", "\u8be5\u65b9\u6cd5\u501f\u52a9\u81ea\u7531\u5ea6\u8026\u5408\u548c\u808c\u8089\u808c\u8171\u5f39\u7c27\u7279\u6027\u5b9e\u73b0\u9012\u5f52\u6821\u6b63\uff0c\u6709\u6548\u6d88\u9664\u957f\u65f6\u95f4\u6d4b\u91cf\u4e2d\u7684\u6f02\u79fb\u3002", "\u7814\u7a76\u8bc1\u660e\u5148\u8fdb\u7684\u72b6\u6001\u4f30\u8ba1\u6ee4\u6ce2\u53ef\u5c06 IMU \u7cbe\u5ea6\u63d0\u5347\u81f3\u53ef\u4e0e\u6807\u8bb0\u7cfb\u7edf\u5ab2\u7f8e\uff0c\u652f\u6301\u6237\u5916\u8fd0\u52a8\u5b66\u7814\u7a76\u3002"], "pmid": "42562830", "pub_date": "2026-Aug-05", "title": "Biomechanics-informed inertial tracking achieves the accuracy of marker-based kinematics.", "url": "https://doi.org/10.1038/s41467-026-75981-y", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Aug-05</span>
+        <button class="fav-btn"
+                data-pmid="42562830"
+                onclick="toggleFavorite('42562830', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42562830"
+                onclick="toggleDislike('42562830', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-75981-y" target="_blank" rel="noopener noreferrer">Biomechanics-informed inertial tracking achieves the accuracy of marker-based kinematics.</a>
+      </h2>
+
+      <p class="paper-authors">Phan Vu &middot; Li Zhixiong &middot; Meinders Evy &middot; Gale Tom &middot; Anderst William &middot; Ng-Thow-Hing Julian &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42562830', 'zh-42562830')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42562830', 'en-42562830')">中文</button>
+        </div>
+        <div id="en-42562830" class="abstract-text active">Inertial measurement units (IMUs) could transform human movement science by enabling motion tracking outside the laboratory. Yet, their accuracy is perceived as inferior to that of marker-based systems. Here, we introduce IMoveLab, a method that integrates biomechanical priors into state-estimation filters, harnessing coupling across degrees of freedom and the spring-like behavior of muscle-tendon units for recursive state correction. We found that modern state-estimation filters match the accuracy of marker-based knee tracking when evaluated against biplane radiography, the gold standard for skeletal motion. IMoveLab further improves accuracy and achieves drift-free lower-extremity kinematics in long-duration trials, whereas alternative approaches do not. Movement scientists have been anticipating the leap out of the laboratory with cautious optimism. With methods and evidence that support more confident adoption of IMUs, this leap seems less like an aspiration and more like the first line of a new chapter written in the environments where human movement unfolds.</div>
+        <div id="zh-42562830" class="abstract-text">惯性测量单元（IMU）有望通过实现实验室外的运动追踪来变革人体运动科学，但其精度被认为不及基于标记的系统。本研究提出 IMoveLab 方法，将生物力学先验信息融入状态估计滤波器，利用自由度间的耦合和肌肉肌腱单元的弹簧式特性进行递归状态校正。我们发现，采用现代状态估计滤波器，以双平面放射摄影（骨运动金标准）为参照，其膝关节追踪精度可与标记系统媲美。IMoveLab 进一步提升了精度，并在长时间试验中实现了无漂移的下肢运动学测量，而其他方法则无法做到。运动科学家对此抱有审慎乐观的期待。随着支持更自信采用 IMU 的方法和证据的出现，这一跨越已不仅是愿景，更像是在人类运动真实发生的环境中写下的新篇章的序言。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>IMoveLab 通过融合生物力学先验与状态滤波，使 IMU 膝关节追踪精度达到标记式金标准水平。</li>
+          
+          <li>该方法借助自由度耦合和肌肉肌腱弹簧特性实现递归校正，有效消除长时间测量中的漂移。</li>
+          
+          <li>研究证明先进的状态估计滤波可将 IMU 精度提升至可与标记系统媲美，支持户外运动学研究。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-75981-y" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Biomechanical Phenomena</span>
+          
+          <span class="kw-tag">Motion Capture</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42557325"
+             style="--card-color: #1B5E20">
+      <script class="paper-data" type="application/json">{"abstract": "Astrocytes contribute to the pathology of multiple neurological disorders, including the T cell-driven autoimmune disease of the central nervous system (CNS) multiple sclerosis and its mouse model, experimental autoimmune encephalomyelitis1. However, little is known about functional interactions between astrocytes and CD4+ T cells. Here using rabies barcode interaction detection followed by sequencing2, in combination with single-cell RNA sequencing, in vitro co-culture systems and cell-specific in vivo CRISPR-Cas9-based genetic perturbation studies, we established that astrocytes expressing CD40 and MHC-II promote CNS T cell autoimmunity. We harnessed universal labelling immune partnerships by SorTagging intercellular contacts3 to analyse astrocyte-interacting CD4+ T cells, finding that direct astrocyte-CD4+ T cell interactions enhance pathogenic T helper 17 cell responses in experimental autoimmune encephalomyelitis. In addition, we studied the effect of these interactions on astrocytes. Using in vivo subproteomic approaches4 and AlphaFold-Multimer predictions5, we established that CD40 activation in astrocytes by CD40L expressed by CD4+ T cells induces the accumulation of PLIN4-positive lipid droplets, which provide acetyl-CoA to promote p65 acetylation-dependent NF-\u03baB activation and antigen presentation. Finally, we detected CD40+MHC-II+LD+ astrocytes in multiple sclerosis samples by single-nucleus RNA sequencing and immunohistochemistry. In summary, these studies define a previously unrecognized mechanism by which astrocytes promote CNS autoimmunity.", "abstract_zh": "\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u53c2\u4e0e\u591a\u79cd\u795e\u7ecf\u7cfb\u7edf\u75be\u75c5\u7684\u75c5\u7406\u8fc7\u7a0b\uff0c\u5305\u62ecT\u7ec6\u80de\u9a71\u52a8\u7684\u4e2d\u67a2\u795e\u7ecf\u7cfb\u7edf\u81ea\u8eab\u514d\u75ab\u75c5\u591a\u53d1\u6027\u786c\u5316\u53ca\u5176\u5c0f\u9f20\u6a21\u578b\u5b9e\u9a8c\u6027\u81ea\u8eab\u514d\u75ab\u6027\u8111\u810a\u9ad3\u708e\u3002\u7136\u800c\uff0c\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u4e0eCD4+ T\u7ec6\u80de\u4e4b\u95f4\u7684\u529f\u80fd\u6027\u76f8\u4e92\u4f5c\u7528\u77e5\u4e4b\u751a\u5c11\u3002\u672c\u7814\u7a76\u901a\u8fc7\u72c2\u72ac\u75c5\u6bd2\u6761\u5f62\u7801\u76f8\u4e92\u4f5c\u7528\u68c0\u6d4b\u5e76\u6d4b\u5e8f\u6280\u672f\u3001\u5355\u7ec6\u80deRNA\u6d4b\u5e8f\u3001\u4f53\u5916\u5171\u57f9\u517b\u7cfb\u7edf\u4ee5\u53ca\u4f53\u5185\u57fa\u4e8eCRISPR-Cas9\u7684\u7ec6\u80de\u7279\u5f02\u6027\u9057\u4f20\u6270\u52a8\u7814\u7a76\uff0c\u8bc1\u5b9e\u8868\u8fbeCD40\u548cMHC-II\u7684\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u80fd\u591f\u4fc3\u8fdb\u4e2d\u67a2\u795e\u7ecf\u7cfb\u7edfT\u7ec6\u80de\u81ea\u8eab\u514d\u75ab\u3002\u6211\u4eec\u5229\u7528SorTagging\u6807\u8bb0\u7ec6\u80de\u95f4\u4e92\u4f5c\u7684\u901a\u7528\u514d\u75ab\u914d\u5bf9\u65b9\u6cd5\uff0c\u5206\u6790\u4e86\u4e0e\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u76f8\u4e92\u4f5c\u7528\u7684CD4+ T\u7ec6\u80de\uff0c\u53d1\u73b0\u76f4\u63a5\u63a5\u89e6\u589e\u5f3a\u4e86\u5b9e\u9a8c\u6027\u81ea\u8eab\u514d\u75ab\u6027\u8111\u810a\u9ad3\u708e\u4e2d\u81f4\u75c5\u7684\u8f85\u52a9\u6027T\u7ec6\u80de17\u53cd\u5e94\u3002\u6b64\u5916\uff0c\u6211\u4eec\u7814\u7a76\u4e86\u8fd9\u4e9b\u76f8\u4e92\u4f5c\u7528\u5bf9\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u7684\u5f71\u54cd\u3002\u901a\u8fc7\u4f53\u5185\u4e9a\u86cb\u767d\u8d28\u7ec4\u5b66\u65b9\u6cd5\u548cAlphaFold-Multimer\u9884\u6d4b\uff0c\u6211\u4eec\u786e\u5b9aCD4+ T\u7ec6\u80de\u8868\u9762\u7684CD40L\u6fc0\u6d3b\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u4e0a\u7684CD40\uff0c\u8bf1\u5bfcPLIN4\u9633\u6027\u7684\u8102\u6ef4\u79ef\u7d2f\uff0c\u8fd9\u4e9b\u8102\u6ef4\u63d0\u4f9b\u4e59\u9170\u8f85\u9176A\uff0c\u4fc3\u8fdbp65\u4e59\u9170\u5316\u4f9d\u8d56\u7684NF-\u03baB\u6d3b\u5316\u548c\u6297\u539f\u5448\u9012\u3002\u6700\u540e\uff0c\u6211\u4eec\u901a\u8fc7\u5355\u6838RNA\u6d4b\u5e8f\u548c\u514d\u75ab\u7ec4\u7ec7\u5316\u5b66\u5728\u591a\u53d1\u6027\u786c\u5316\u6837\u672c\u4e2d\u68c0\u6d4b\u5230CD40+MHC-II+\u8102\u6ef4\u9633\u6027\u7684\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u3002\u603b\u4e4b\uff0c\u8fd9\u4e9b\u7814\u7a76\u63ed\u793a\u4e86\u4e00\u79cd\u524d\u6240\u672a\u6709\u7684\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u4fc3\u8fdb\u4e2d\u67a2\u795e\u7ecf\u7cfb\u7edf\u81ea\u8eab\u514d\u75ab\u7684\u673a\u5236\u3002", "authors": ["Lee Joon-Hyuk", "Li Zhaorong", "Soto Joselyn S", "Kim Ah-Ram", "Illouz Tomer", "Polonio Carolina M", "et al."], "journal": "Nature", "journal_color": "#1B5E20", "key_findings": ["\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u901a\u8fc7CD40\u548cMHC-II\u76f4\u63a5\u4e0eCD4+ T\u7ec6\u80de\u4e92\u4f5c\uff0c\u589e\u5f3a\u81f4\u75c5\u6027Th17\u53cd\u5e94\uff0c\u4fc3\u8fdb\u4e2d\u67a2\u795e\u7ecf\u7cfb\u7edf\u81ea\u8eab\u514d\u75ab\u3002", "CD4+ T\u7ec6\u80de\u7684CD40L\u6fc0\u6d3b\u661f\u5f62\u80f6\u8d28\u7ec6\u80deCD40\uff0c\u8bf1\u5bfcPLIN4\u8102\u6ef4\u79ef\u7d2f\uff0c\u901a\u8fc7\u4e59\u9170\u8f85\u9176A\u4fc3\u8fdbp65\u4e59\u9170\u5316\uff0c\u589e\u5f3aNF-\u03baB\u6d3b\u5316\u548c\u6297\u539f\u5448\u9012\u3002", "\u5728\u591a\u53d1\u6027\u786c\u5316\u60a3\u8005\u4e2d\u67a2\u795e\u7ecf\u7cfb\u7edf\u4e2d\u8bc1\u5b9e\u5b58\u5728CD40\u9633\u6027\u3001MHC-II\u9633\u6027\u4e14\u8102\u6ef4\u9633\u6027\u7684\u661f\u5f62\u80f6\u8d28\u7ec6\u80de\u3002"], "pmid": "42557325", "pub_date": "2026-Aug-05", "title": "Antigen presentation by CD40+MHC-II+ astrocytes promotes CNS autoimmunity.", "url": "https://doi.org/10.1038/s41586-026-10860-6", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #1B5E20">Nature</span>
+        <span class="pub-date">2026-Aug-05</span>
+        <button class="fav-btn"
+                data-pmid="42557325"
+                onclick="toggleFavorite('42557325', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42557325"
+                onclick="toggleDislike('42557325', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41586-026-10860-6" target="_blank" rel="noopener noreferrer">Antigen presentation by CD40+MHC-II+ astrocytes promotes CNS autoimmunity.</a>
+      </h2>
+
+      <p class="paper-authors">Lee Joon-Hyuk &middot; Li Zhaorong &middot; Soto Joselyn S &middot; Kim Ah-Ram &middot; Illouz Tomer &middot; Polonio Carolina M &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42557325', 'zh-42557325')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42557325', 'en-42557325')">中文</button>
+        </div>
+        <div id="en-42557325" class="abstract-text active">Astrocytes contribute to the pathology of multiple neurological disorders, including the T cell-driven autoimmune disease of the central nervous system (CNS) multiple sclerosis and its mouse model, experimental autoimmune encephalomyelitis1. However, little is known about functional interactions between astrocytes and CD4+ T cells. Here using rabies barcode interaction detection followed by sequencing2, in combination with single-cell RNA sequencing, in vitro co-culture systems and cell-specific in vivo CRISPR-Cas9-based genetic perturbation studies, we established that astrocytes expressing CD40 and MHC-II promote CNS T cell autoimmunity. We harnessed universal labelling immune partnerships by SorTagging intercellular contacts3 to analyse astrocyte-interacting CD4+ T cells, finding that direct astrocyte-CD4+ T cell interactions enhance pathogenic T helper 17 cell responses in experimental autoimmune encephalomyelitis. In addition, we studied the effect of these interactions on astrocytes. Using in vivo subproteomic approaches4 and AlphaFold-Multimer predictions5, we established that CD40 activation in astrocytes by CD40L expressed by CD4+ T cells induces the accumulation of PLIN4-positive lipid droplets, which provide acetyl-CoA to promote p65 acetylation-dependent NF-κB activation and antigen presentation. Finally, we detected CD40+MHC-II+LD+ astrocytes in multiple sclerosis samples by single-nucleus RNA sequencing and immunohistochemistry. In summary, these studies define a previously unrecognized mechanism by which astrocytes promote CNS autoimmunity.</div>
+        <div id="zh-42557325" class="abstract-text">星形胶质细胞参与多种神经系统疾病的病理过程，包括T细胞驱动的中枢神经系统自身免疫病多发性硬化及其小鼠模型实验性自身免疫性脑脊髓炎。然而，星形胶质细胞与CD4+ T细胞之间的功能性相互作用知之甚少。本研究通过狂犬病毒条形码相互作用检测并测序技术、单细胞RNA测序、体外共培养系统以及体内基于CRISPR-Cas9的细胞特异性遗传扰动研究，证实表达CD40和MHC-II的星形胶质细胞能够促进中枢神经系统T细胞自身免疫。我们利用SorTagging标记细胞间互作的通用免疫配对方法，分析了与星形胶质细胞相互作用的CD4+ T细胞，发现直接接触增强了实验性自身免疫性脑脊髓炎中致病的辅助性T细胞17反应。此外，我们研究了这些相互作用对星形胶质细胞的影响。通过体内亚蛋白质组学方法和AlphaFold-Multimer预测，我们确定CD4+ T细胞表面的CD40L激活星形胶质细胞上的CD40，诱导PLIN4阳性的脂滴积累，这些脂滴提供乙酰辅酶A，促进p65乙酰化依赖的NF-κB活化和抗原呈递。最后，我们通过单核RNA测序和免疫组织化学在多发性硬化样本中检测到CD40+MHC-II+脂滴阳性的星形胶质细胞。总之，这些研究揭示了一种前所未有的星形胶质细胞促进中枢神经系统自身免疫的机制。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>星形胶质细胞通过CD40和MHC-II直接与CD4+ T细胞互作，增强致病性Th17反应，促进中枢神经系统自身免疫。</li>
+          
+          <li>CD4+ T细胞的CD40L激活星形胶质细胞CD40，诱导PLIN4脂滴积累，通过乙酰辅酶A促进p65乙酰化，增强NF-κB活化和抗原呈递。</li>
+          
+          <li>在多发性硬化患者中枢神经系统中证实存在CD40阳性、MHC-II阳性且脂滴阳性的星形胶质细胞。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41586-026-10860-6" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42554312"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Whether infection of cells by individual virions occurs randomly, or if there is some form(s) of competition or cooperativity between individual virions, remains largely unknown for most virus-cell associations. Here, we studied cooperativity/competition for three different strains of human cytomegalovirus (HCMV) on two different cell types (fibroblasts and epithelial cells). By titrating viral inocula concentrations in small steps over several orders of magnitude, and by using flow cytometry to precisely measure the frequency of infected cells, we found that for most virus-cell associations, the frequency of cell infection increases faster than linear with an increasing inoculum concentration, indicating cooperativity between individual infecting virions. Mathematical modeling suggests that this apparent cooperativity cannot be explained by heterogeneity in either the infectivity of the individual virions or the resistance of individual cells to infection, or by simple aggregation/clumping of viral particles. Stochastic simulations of two additional alternative models that allow for (1) reduction in cell resistance to infection when exposed to multiple virions, or (2) compensation in infectivity of poorly infectious virions when coinfecting cells with more infectious virions, resulted in apparent viral cooperativity. Analysis of other published datasets suggests the presence of apparent viral cooperativity for HIV and vaccinia virus, infecting CRFK or HeLa cells, respectively, but not for tobacco mosaic virus forming plaques on plant leaves. We thus (1) propose a methodology to rigorously evaluate apparent cooperativity of viruses infecting target cells, and (2) demonstrate that knowing the degree of virus cooperativity for any given virus-cell combination is important for an accurate quantification of multiplicity of infection.", "abstract_zh": "\u5355\u4e2a\u75c5\u6bd2\u7c92\u5b50\u611f\u67d3\u7ec6\u80de\u662f\u968f\u673a\u53d1\u751f\uff0c\u8fd8\u662f\u5b58\u5728\u7ade\u4e89\u6216\u534f\u4f5c\uff0c\u5bf9\u4e8e\u5927\u591a\u6570\u75c5\u6bd2-\u7ec6\u80de\u5173\u8054\u4ecd\u5c5e\u672a\u77e5\u3002\u672c\u7814\u7a76\u4ee5\u4e09\u79cd\u4eba\u7c7b\u5de8\u7ec6\u80de\u75c5\u6bd2\uff08HCMV\uff09\u682a\u5728\u6210\u7ea4\u7ef4\u7ec6\u80de\u548c\u4e0a\u76ae\u7ec6\u80de\u4e0a\u63a2\u7a76\u534f\u4f5c/\u7ade\u4e89\u3002\u901a\u8fc7\u9010\u6b65\u6ef4\u5b9a\u63a5\u79cd\u7269\u6d53\u5ea6\u5e76\u501f\u52a9\u6d41\u5f0f\u7ec6\u80de\u672f\u7cbe\u786e\u6d4b\u91cf\u611f\u67d3\u7387\uff0c\u6211\u4eec\u53d1\u73b0\u591a\u6570\u7ec4\u5408\u7684\u611f\u67d3\u9891\u7387\u968f\u63a5\u79cd\u6d53\u5ea6\u589e\u52a0\u800c\u8d85\u7ebf\u6027\u589e\u957f\uff0c\u8868\u660e\u5355\u4e2a\u611f\u67d3\u6027\u75c5\u6bd2\u7c92\u5b50\u95f4\u5b58\u5728\u534f\u4f5c\u3002\u6570\u5b66\u6a21\u578b\u663e\u793a\uff0c\u8fd9\u79cd\u8868\u89c2\u534f\u4f5c\u65e0\u6cd5\u7528\u7c92\u5b50\u611f\u67d3\u6027\u5f02\u8d28\u6027\u3001\u7ec6\u80de\u62b5\u6297\u529b\u5f02\u8d28\u6027\u6216\u75c5\u6bd2\u805a\u96c6\u6765\u89e3\u91ca\u3002\u4e24\u79cd\u968f\u673a\u6a21\u62df\u6a21\u578b\uff08\u7ec6\u80de\u63a5\u89e6\u591a\u75c5\u6bd2\u7c92\u5b50\u65f6\u62b5\u6297\u529b\u964d\u4f4e\uff1b\u4f4e\u611f\u67d3\u529b\u7c92\u5b50\u4e0e\u9ad8\u611f\u67d3\u529b\u7c92\u5b50\u5171\u611f\u67d3\u65f6\u8865\u507f\u5176\u611f\u67d3\u6027\uff09\u5747\u91cd\u73b0\u4e86\u8868\u89c2\u534f\u4f5c\u3002\u5bf9\u5176\u4ed6\u6570\u636e\u96c6\u7684\u5206\u6790\u63ed\u793aHIV\u548c\u75d8\u82d7\u75c5\u6bd2\u5b58\u5728\u8868\u89c2\u534f\u4f5c\uff0c\u800c\u70df\u8349\u82b1\u53f6\u75c5\u6bd2\u5219\u65e0\u3002\u56e0\u6b64\uff0c\u6211\u4eec\u63d0\u51fa\u4e00\u79cd\u8bc4\u4f30\u75c5\u6bd2\u8868\u89c2\u534f\u4f5c\u7684\u4e25\u683c\u65b9\u6cd5\uff0c\u5e76\u8bc1\u660e\u4e86\u89e3\u75c5\u6bd2-\u7ec6\u80de\u7ec4\u5408\u7684\u534f\u4f5c\u7a0b\u5ea6\u5bf9\u4e8e\u7cbe\u786e\u91cf\u5316\u611f\u67d3\u590d\u6570\u81f3\u5173\u91cd\u8981\u3002", "authors": ["Peterson Christopher", "Miller Joshua", "Ryckman Brent", "Ganusov Vitaly V"], "journal": "Elife", "journal_color": "#607D8B", "key_findings": ["\u5efa\u7acb\u4e86\u8bc4\u4f30\u75c5\u6bd2\u8868\u89c2\u534f\u4f5c\u7684\u65b9\u6cd5\uff0c\u53d1\u73b0\u591a\u6570HCMV\u7ec4\u5408\u5448\u73b0\u8d85\u7ebf\u6027\u611f\u67d3\uff08\u5b58\u5728\u534f\u4f5c\uff09\u3002", "\u6570\u5b66\u6a21\u578b\u548c\u6a21\u62df\u8868\u660e\u8868\u89c2\u534f\u4f5c\u6e90\u4e8e\u7ec6\u80de\u62b5\u6297\u529b\u964d\u4f4e\u6216\u75c5\u6bd2\u7c92\u5b50\u95f4\u611f\u67d3\u6027\u4e92\u8865\uff0c\u800c\u975e\u5f02\u8d28\u6027\u6216\u805a\u96c6\u3002", "\u53d1\u73b0HIV\u548c\u75d8\u82d7\u75c5\u6bd2\u4e5f\u5b58\u5728\u8868\u89c2\u534f\u4f5c\uff0c\u800c\u70df\u8349\u82b1\u53f6\u75c5\u6bd2\u5219\u65e0\uff0c\u5f3a\u8c03\u534f\u4f5c\u5ea6\u5bf9\u51c6\u786e\u8ba1\u7b97MOI\u7684\u91cd\u8981\u6027\u3002"], "pmid": "42554312", "pub_date": "2026-Aug-05", "title": "Apparent cooperativity between human CMV virions introduces errors in conventional methods of calculating multiplicity of infection.", "url": "https://doi.org/10.7554/eLife.108921", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Aug-05</span>
+        <button class="fav-btn"
+                data-pmid="42554312"
+                onclick="toggleFavorite('42554312', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42554312"
+                onclick="toggleDislike('42554312', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.108921" target="_blank" rel="noopener noreferrer">Apparent cooperativity between human CMV virions introduces errors in conventional methods of calculating multiplicity of infection.</a>
+      </h2>
+
+      <p class="paper-authors">Peterson Christopher &middot; Miller Joshua &middot; Ryckman Brent &middot; Ganusov Vitaly V</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42554312', 'zh-42554312')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42554312', 'en-42554312')">中文</button>
+        </div>
+        <div id="en-42554312" class="abstract-text active">Whether infection of cells by individual virions occurs randomly, or if there is some form(s) of competition or cooperativity between individual virions, remains largely unknown for most virus-cell associations. Here, we studied cooperativity/competition for three different strains of human cytomegalovirus (HCMV) on two different cell types (fibroblasts and epithelial cells). By titrating viral inocula concentrations in small steps over several orders of magnitude, and by using flow cytometry to precisely measure the frequency of infected cells, we found that for most virus-cell associations, the frequency of cell infection increases faster than linear with an increasing inoculum concentration, indicating cooperativity between individual infecting virions. Mathematical modeling suggests that this apparent cooperativity cannot be explained by heterogeneity in either the infectivity of the individual virions or the resistance of individual cells to infection, or by simple aggregation/clumping of viral particles. Stochastic simulations of two additional alternative models that allow for (1) reduction in cell resistance to infection when exposed to multiple virions, or (2) compensation in infectivity of poorly infectious virions when coinfecting cells with more infectious virions, resulted in apparent viral cooperativity. Analysis of other published datasets suggests the presence of apparent viral cooperativity for HIV and vaccinia virus, infecting CRFK or HeLa cells, respectively, but not for tobacco mosaic virus forming plaques on plant leaves. We thus (1) propose a methodology to rigorously evaluate apparent cooperativity of viruses infecting target cells, and (2) demonstrate that knowing the degree of virus cooperativity for any given virus-cell combination is important for an accurate quantification of multiplicity of infection.</div>
+        <div id="zh-42554312" class="abstract-text">单个病毒粒子感染细胞是随机发生，还是存在竞争或协作，对于大多数病毒-细胞关联仍属未知。本研究以三种人类巨细胞病毒（HCMV）株在成纤维细胞和上皮细胞上探究协作/竞争。通过逐步滴定接种物浓度并借助流式细胞术精确测量感染率，我们发现多数组合的感染频率随接种浓度增加而超线性增长，表明单个感染性病毒粒子间存在协作。数学模型显示，这种表观协作无法用粒子感染性异质性、细胞抵抗力异质性或病毒聚集来解释。两种随机模拟模型（细胞接触多病毒粒子时抵抗力降低；低感染力粒子与高感染力粒子共感染时补偿其感染性）均重现了表观协作。对其他数据集的分析揭示HIV和痘苗病毒存在表观协作，而烟草花叶病毒则无。因此，我们提出一种评估病毒表观协作的严格方法，并证明了解病毒-细胞组合的协作程度对于精确量化感染复数至关重要。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>建立了评估病毒表观协作的方法，发现多数HCMV组合呈现超线性感染（存在协作）。</li>
+          
+          <li>数学模型和模拟表明表观协作源于细胞抵抗力降低或病毒粒子间感染性互补，而非异质性或聚集。</li>
+          
+          <li>发现HIV和痘苗病毒也存在表观协作，而烟草花叶病毒则无，强调协作度对准确计算MOI的重要性。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.108921" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Cytomegalovirus</span>
+          
+          <span class="kw-tag">Virion</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42554034"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "The scale of in vivo electrophysiology has expanded in recent years, with simultaneous recordings across thousands of electrodes now becoming routine. These advances have enabled a wide range of discoveries, but they also impose substantial computational demands. Spike sorting, the procedure that extracts spikes from extracellular voltage measurements, remains a major bottleneck: a dataset collected in a few hours can take days to spike sort on a single machine, and the field lacks rigorous validation of the many spike sorting algorithms and preprocessing steps that are in use. Advancing the speed and accuracy of spike sorting is essential to fully realize the potential of large-scale electrophysiology. Here, we present an end-to-end spike sorting pipeline that leverages parallelization to scale to large datasets. The same workflow can run reproducibly on individual workstations, high-performance computing clusters, or cloud environments, with computing resources tailored to each processing step to reduce costs and execution times. In addition, we introduce a benchmarking pipeline, also optimized for parallel processing, that enables systematic comparison of multiple sorting pipelines. Using this framework, we show that Kilosort4, a widely used spike sorting algorithm, outperforms Kilosort2.5. We also show that 7\u00d7 lossy compression, which substantially reduces the cost of data storage, has minimal impact on spike sorting performance. Together, these pipelines address the urgent need for scalable and transparent spike sorting of electrophysiology data, preparing the field for the coming flood of multi-thousand-channel experiments.", "abstract_zh": "\u8fd1\u5e74\u6765\uff0c\u4f53\u5185\u7535\u751f\u7406\u5b66\u7684\u89c4\u6a21\u4e0d\u65ad\u6269\u5927\uff0c\u540c\u65f6\u8bb0\u5f55\u6570\u5343\u4e2a\u7535\u6781\u5df2\u6210\u4e3a\u5e38\u89c4\u3002\u8fd9\u4e9b\u8fdb\u5c55\u63a8\u52a8\u4e86\u4f17\u591a\u53d1\u73b0\uff0c\u4f46\u4e5f\u5e26\u6765\u4e86\u5de8\u5927\u7684\u8ba1\u7b97\u9700\u6c42\u3002\u4ece\u7ec6\u80de\u5916\u7535\u538b\u6d4b\u91cf\u4e2d\u63d0\u53d6\u950b\u7535\u4f4d\u7684\u950b\u7535\u4f4d\u5206\u7c7b\uff08spike sorting\uff09\u4ecd\u662f\u4e3b\u8981\u74f6\u9888\uff1a\u6570\u5c0f\u65f6\u6536\u96c6\u7684\u6570\u636e\u96c6\u5728\u5355\u53f0\u673a\u5668\u4e0a\u53ef\u80fd\u9700\u8981\u6570\u5929\u624d\u80fd\u5b8c\u6210\u5206\u7c7b\uff0c\u4e14\u8be5\u9886\u57df\u7f3a\u4e4f\u5bf9\u4f17\u591a\u4f7f\u7528\u4e2d\u7684\u950b\u7535\u4f4d\u5206\u7c7b\u7b97\u6cd5\u548c\u9884\u5904\u7406\u6b65\u9aa4\u7684\u4e25\u683c\u9a8c\u8bc1\u3002\u63d0\u9ad8\u950b\u7535\u4f4d\u5206\u7c7b\u7684\u901f\u5ea6\u548c\u51c6\u786e\u6027\u5bf9\u4e8e\u5145\u5206\u5b9e\u73b0\u5927\u89c4\u6a21\u7535\u751f\u7406\u5b66\u7684\u6f5c\u529b\u81f3\u5173\u91cd\u8981\u3002\u672c\u6587\u63d0\u51fa\u4e86\u4e00\u79cd\u7aef\u5230\u7aef\u7684\u950b\u7535\u4f4d\u5206\u7c7b\u6d41\u7a0b\uff0c\u5229\u7528\u5e76\u884c\u5316\u6269\u5c55\u5230\u5927\u89c4\u6a21\u6570\u636e\u96c6\u3002\u540c\u4e00\u5de5\u4f5c\u6d41\u53ef\u5728\u4e2a\u4eba\u5de5\u4f5c\u7ad9\u3001\u9ad8\u6027\u80fd\u8ba1\u7b97\u96c6\u7fa4\u6216\u4e91\u73af\u5883\u4e2d\u53ef\u91cd\u590d\u8fd0\u884c\uff0c\u5e76\u4e3a\u6bcf\u4e2a\u5904\u7406\u6b65\u9aa4\u5b9a\u5236\u8ba1\u7b97\u8d44\u6e90\u4ee5\u964d\u4f4e\u6210\u672c\u548c\u7f29\u77ed\u6267\u884c\u65f6\u95f4\u3002\u6b64\u5916\uff0c\u6211\u4eec\u5f15\u5165\u4e86\u4e00\u4e2a\u540c\u6837\u9488\u5bf9\u5e76\u884c\u5904\u7406\u4f18\u5316\u7684\u57fa\u51c6\u6d4b\u8bd5\u6d41\u7a0b\uff0c\u53ef\u7cfb\u7edf\u6027\u5730\u6bd4\u8f83\u591a\u79cd\u5206\u7c7b\u7ba1\u9053\u3002\u4f7f\u7528\u8be5\u6846\u67b6\uff0c\u6211\u4eec\u53d1\u73b0\u5e7f\u6cdb\u4f7f\u7528\u7684\u950b\u7535\u4f4d\u5206\u7c7b\u7b97\u6cd5Kilosort4\u4f18\u4e8eKilosort2.5\u3002\u6211\u4eec\u8fd8\u53d1\u73b0\uff0c7\u500d\u6709\u635f\u538b\u7f29\u5bf9\u950b\u7535\u4f4d\u5206\u7c7b\u6027\u80fd\u5f71\u54cd\u6781\u5c0f\uff0c\u5374\u80fd\u5927\u5e45\u964d\u4f4e\u6570\u636e\u5b58\u50a8\u6210\u672c\u3002\u8fd9\u4e9b\u6d41\u7a0b\u5171\u540c\u89e3\u51b3\u4e86\u7535\u751f\u7406\u6570\u636e\u53ef\u6269\u5c55\u4e14\u900f\u660e\u7684\u950b\u7535\u4f4d\u5206\u7c7b\u7684\u8feb\u5207\u9700\u6c42\uff0c\u4e3a\u8be5\u9886\u57df\u5e94\u5bf9\u5373\u5c06\u6d8c\u73b0\u7684\u6570\u5343\u901a\u9053\u5b9e\u9a8c\u505a\u597d\u51c6\u5907\u3002", "authors": ["Buccino Alessio Paolo", "Sridhar Arjun", "Feng David", "Svoboda Karel", "Siegle Joshua H"], "journal": "Elife", "journal_color": "#607D8B", "key_findings": ["\u5f00\u53d1\u4e86\u53ef\u5e76\u884c\u6269\u5c55\u3001\u73af\u5883\u53ef\u91cd\u590d\u7684\u7aef\u5230\u7aef\u950b\u7535\u4f4d\u5206\u7c7b\u7ba1\u9053\uff0c\u9002\u914d\u5927\u89c4\u6a21\u7535\u751f\u7406\u6570\u636e\u3002", "\u57fa\u51c6\u6d4b\u8bd5\u7ba1\u9053\u63ed\u793a\u4e86Kilosort4\u7b97\u6cd5\u5728\u950b\u7535\u4f4d\u5206\u7c7b\u6027\u80fd\u4e0a\u663e\u8457\u4f18\u4e8eKilosort2.5\u3002", "7\u500d\u6709\u635f\u538b\u7f29\u5bf9\u950b\u7535\u4f4d\u5206\u7c7b\u51c6\u786e\u5ea6\u5f71\u54cd\u751a\u5fae\uff0c\u53ef\u5927\u5e45\u51cf\u5c11\u6570\u636e\u5b58\u50a8\u5f00\u652f\u3002"], "pmid": "42554034", "pub_date": "2026-Aug-05", "title": "Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data.", "url": "https://doi.org/10.7554/eLife.110170", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Aug-05</span>
+        <button class="fav-btn"
+                data-pmid="42554034"
+                onclick="toggleFavorite('42554034', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42554034"
+                onclick="toggleDislike('42554034', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.110170" target="_blank" rel="noopener noreferrer">Efficient and reproducible pipelines for spike sorting large-scale electrophysiology data.</a>
+      </h2>
+
+      <p class="paper-authors">Buccino Alessio Paolo &middot; Sridhar Arjun &middot; Feng David &middot; Svoboda Karel &middot; Siegle Joshua H</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42554034', 'zh-42554034')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42554034', 'en-42554034')">中文</button>
+        </div>
+        <div id="en-42554034" class="abstract-text active">The scale of in vivo electrophysiology has expanded in recent years, with simultaneous recordings across thousands of electrodes now becoming routine. These advances have enabled a wide range of discoveries, but they also impose substantial computational demands. Spike sorting, the procedure that extracts spikes from extracellular voltage measurements, remains a major bottleneck: a dataset collected in a few hours can take days to spike sort on a single machine, and the field lacks rigorous validation of the many spike sorting algorithms and preprocessing steps that are in use. Advancing the speed and accuracy of spike sorting is essential to fully realize the potential of large-scale electrophysiology. Here, we present an end-to-end spike sorting pipeline that leverages parallelization to scale to large datasets. The same workflow can run reproducibly on individual workstations, high-performance computing clusters, or cloud environments, with computing resources tailored to each processing step to reduce costs and execution times. In addition, we introduce a benchmarking pipeline, also optimized for parallel processing, that enables systematic comparison of multiple sorting pipelines. Using this framework, we show that Kilosort4, a widely used spike sorting algorithm, outperforms Kilosort2.5. We also show that 7× lossy compression, which substantially reduces the cost of data storage, has minimal impact on spike sorting performance. Together, these pipelines address the urgent need for scalable and transparent spike sorting of electrophysiology data, preparing the field for the coming flood of multi-thousand-channel experiments.</div>
+        <div id="zh-42554034" class="abstract-text">近年来，体内电生理学的规模不断扩大，同时记录数千个电极已成为常规。这些进展推动了众多发现，但也带来了巨大的计算需求。从细胞外电压测量中提取锋电位的锋电位分类（spike sorting）仍是主要瓶颈：数小时收集的数据集在单台机器上可能需要数天才能完成分类，且该领域缺乏对众多使用中的锋电位分类算法和预处理步骤的严格验证。提高锋电位分类的速度和准确性对于充分实现大规模电生理学的潜力至关重要。本文提出了一种端到端的锋电位分类流程，利用并行化扩展到大规模数据集。同一工作流可在个人工作站、高性能计算集群或云环境中可重复运行，并为每个处理步骤定制计算资源以降低成本和缩短执行时间。此外，我们引入了一个同样针对并行处理优化的基准测试流程，可系统性地比较多种分类管道。使用该框架，我们发现广泛使用的锋电位分类算法Kilosort4优于Kilosort2.5。我们还发现，7倍有损压缩对锋电位分类性能影响极小，却能大幅降低数据存储成本。这些流程共同解决了电生理数据可扩展且透明的锋电位分类的迫切需求，为该领域应对即将涌现的数千通道实验做好准备。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>开发了可并行扩展、环境可重复的端到端锋电位分类管道，适配大规模电生理数据。</li>
+          
+          <li>基准测试管道揭示了Kilosort4算法在锋电位分类性能上显著优于Kilosort2.5。</li>
+          
+          <li>7倍有损压缩对锋电位分类准确度影响甚微，可大幅减少数据存储开支。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.110170" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Algorithms</span>
+          
+          <span class="kw-tag">Electrophysiology</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42550854"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Compound birth-death processes are widely used to model the age-incidence curves of many cancers. There are efficient schemes for directly computing the relevant probability distributions in the context of linear multi-stage clonal expansion (MSCE) models. However, these schemes have not been generalised to models on arbitrary graphs, forcing the use of either full stochastic simulations or mean-field approximations, which can become inaccurate at late times or old ages. Here, we present a numerical integration scheme for directly computing survival probabilities of a first-order birth-death process on an arbitrary directed graph, without the use of stochastic simulations. As a concrete application, we show that this new numerical method can be used to infer the parameters of an example graphical model from simulated data.", "abstract_zh": "\u590d\u5408\u751f\u706d\u8fc7\u7a0b\u88ab\u5e7f\u6cdb\u7528\u4e8e\u6a21\u62df\u591a\u79cd\u764c\u75c7\u7684\u5e74\u9f84-\u53d1\u75c5\u7387\u66f2\u7ebf\u3002\u5728\u7ebf\u6027\u591a\u9636\u6bb5\u514b\u9686\u6269\u589e\uff08MSCE\uff09\u6a21\u578b\u4e2d\uff0c\u5df2\u6709\u9ad8\u6548\u65b9\u6848\u53ef\u76f4\u63a5\u8ba1\u7b97\u76f8\u5173\u6982\u7387\u5206\u5e03\u3002\u7136\u800c\uff0c\u8fd9\u4e9b\u65b9\u6848\u5c1a\u672a\u63a8\u5e7f\u5230\u4efb\u610f\u56fe\u6a21\u578b\uff0c\u8feb\u4f7f\u7814\u7a76\u8005\u4f7f\u7528\u5168\u968f\u673a\u6a21\u62df\u6216\u5e73\u5747\u573a\u8fd1\u4f3c\uff0c\u540e\u8005\u5728\u9ad8\u9f84\u6216\u665a\u671f\u53ef\u80fd\u4f1a\u53d8\u5f97\u4e0d\u51c6\u786e\u3002\u672c\u6587\u63d0\u51fa\u4e00\u79cd\u6570\u503c\u79ef\u5206\u65b9\u6848\uff0c\u53ef\u5728\u4efb\u610f\u6709\u5411\u56fe\u4e0a\u76f4\u63a5\u8ba1\u7b97\u4e00\u9636\u751f\u706d\u8fc7\u7a0b\u7684\u751f\u5b58\u6982\u7387\uff0c\u65e0\u9700\u968f\u673a\u6a21\u62df\u3002\u4f5c\u4e3a\u5177\u4f53\u5e94\u7528\uff0c\u6211\u4eec\u5c55\u793a\u4e86\u8be5\u65b0\u6570\u503c\u65b9\u6cd5\u53ef\u7528\u4e8e\u4ece\u6a21\u62df\u6570\u636e\u63a8\u65ad\u793a\u4f8b\u56fe\u6a21\u578b\u7684\u53c2\u6570\u3002", "authors": ["Paterson Chay", "Gao Miaomiao", "Hellier Joshua", "Luebeck Georg", "Wedge David C", "Bozic Ivana"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": ["\u63d0\u51fa\u4e00\u79cd\u53ef\u5728\u4efb\u610f\u6709\u5411\u56fe\u4e0a\u76f4\u63a5\u8ba1\u7b97\u4e00\u9636\u751f\u706d\u8fc7\u7a0b\u751f\u5b58\u6982\u7387\u7684\u6570\u503c\u79ef\u5206\u65b9\u6848\uff0c\u907f\u514d\u968f\u673a\u6a21\u62df\u3002", "\u8be5\u65b9\u6848\u6253\u7834\u4e86\u73b0\u6709\u65b9\u6cd5\u4ec5\u9002\u7528\u4e8e\u7ebf\u6027\u591a\u9636\u6bb5\u514b\u9686\u6269\u589e\u6a21\u578b\u7684\u9650\u5236\uff0c\u53ef\u63a8\u5e7f\u81f3\u4efb\u610f\u56fe\u7ed3\u6784\u3002", "\u901a\u8fc7\u6a21\u62df\u6570\u636e\u9a8c\u8bc1\uff0c\u65b0\u65b9\u6cd5\u80fd\u6709\u6548\u63a8\u65ad\u56fe\u6a21\u578b\u4e2d\u7684\u53c2\u6570\uff0c\u4e3a\u764c\u75c7\u5efa\u6a21\u63d0\u4f9b\u66f4\u51c6\u786e\u7684\u8ba1\u7b97\u5de5\u5177\u3002"], "pmid": "42550854", "pub_date": "2026-Aug", "title": "A fast numerical integration scheme for clonal expansion processes on graphs.", "url": "https://doi.org/10.1371/journal.pcbi.1012784", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Aug</span>
+        <button class="fav-btn"
+                data-pmid="42550854"
+                onclick="toggleFavorite('42550854', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42550854"
+                onclick="toggleDislike('42550854', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1012784" target="_blank" rel="noopener noreferrer">A fast numerical integration scheme for clonal expansion processes on graphs.</a>
+      </h2>
+
+      <p class="paper-authors">Paterson Chay &middot; Gao Miaomiao &middot; Hellier Joshua &middot; Luebeck Georg &middot; Wedge David C &middot; Bozic Ivana</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42550854', 'zh-42550854')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42550854', 'en-42550854')">中文</button>
+        </div>
+        <div id="en-42550854" class="abstract-text active">Compound birth-death processes are widely used to model the age-incidence curves of many cancers. There are efficient schemes for directly computing the relevant probability distributions in the context of linear multi-stage clonal expansion (MSCE) models. However, these schemes have not been generalised to models on arbitrary graphs, forcing the use of either full stochastic simulations or mean-field approximations, which can become inaccurate at late times or old ages. Here, we present a numerical integration scheme for directly computing survival probabilities of a first-order birth-death process on an arbitrary directed graph, without the use of stochastic simulations. As a concrete application, we show that this new numerical method can be used to infer the parameters of an example graphical model from simulated data.</div>
+        <div id="zh-42550854" class="abstract-text">复合生灭过程被广泛用于模拟多种癌症的年龄-发病率曲线。在线性多阶段克隆扩增（MSCE）模型中，已有高效方案可直接计算相关概率分布。然而，这些方案尚未推广到任意图模型，迫使研究者使用全随机模拟或平均场近似，后者在高龄或晚期可能会变得不准确。本文提出一种数值积分方案，可在任意有向图上直接计算一阶生灭过程的生存概率，无需随机模拟。作为具体应用，我们展示了该新数值方法可用于从模拟数据推断示例图模型的参数。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>提出一种可在任意有向图上直接计算一阶生灭过程生存概率的数值积分方案，避免随机模拟。</li>
+          
+          <li>该方案打破了现有方法仅适用于线性多阶段克隆扩增模型的限制，可推广至任意图结构。</li>
+          
+          <li>通过模拟数据验证，新方法能有效推断图模型中的参数，为癌症建模提供更准确的计算工具。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1012784" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Computer Simulation</span>
+          
+          <span class="kw-tag">Models, Biological</span>
+          
+          <span class="kw-tag">Stochastic Processes</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42550597"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Epigenetic aging clocks based on DNA methylation patterns across the genome have emerged as a potential biomarker for risk of age-related diseases, like Alzheimer\u0027s disease (AD), and environmental and social stressors. However, methylation clocks have not been comprehensively validated in genetically diverse individuals. Here, we evaluate a set of first-, second-, and third-generation methylation clocks in 621 AD patients and matched controls from African American, Hispanic, and White cohorts. The clocks are less accurate at predicting age in genetically admixed cohorts compared to the White cohort, especially for those with substantial African ancestry. This decreased accuracy holds in \u003e2500 individuals of European and African ancestry from three additional datasets. The clocks also fail to consistently identify age acceleration in admixed AD cases compared to controls. To explore potential causes for the lack of generalization of the clocks, we intersected clock CpGs with methylation, germline genetic variants, and methylation QTL (meQTL) data from global populations. We find differential methylation between African and European ancestry individuals is common for clock CpGs. Genetic variants rarely disrupt clock CpGs between populations, but a substantial fraction of clock CpGs have meQTL with significantly higher frequencies in African genetic ancestries. Our results demonstrate that methylation clocks often fail to predict age and AD risk when applied across populations and suggest avenues for improving their portability by considering differences in genetic and epigenetic patterns across human populations.", "abstract_zh": "\u57fa\u4e8e\u5168\u57fa\u56e0\u7ec4DNA\u7532\u57fa\u5316\u6a21\u5f0f\u7684\u8868\u89c2\u9057\u4f20\u65f6\u949f\u5df2\u6210\u4e3a\u5e74\u9f84\u76f8\u5173\u75be\u75c5\uff08\u5982\u963f\u5c14\u8328\u6d77\u9ed8\u75c5\uff0cAD\uff09\u4ee5\u53ca\u73af\u5883\u548c\u793e\u4f1a\u538b\u529b\u98ce\u9669\u7684\u6f5c\u5728\u751f\u7269\u6807\u5fd7\u7269\u3002\u7136\u800c\uff0c\u7532\u57fa\u5316\u65f6\u949f\u5c1a\u672a\u5728\u9057\u4f20\u591a\u6837\u6027\u4e2a\u4f53\u4e2d\u5f97\u5230\u5168\u9762\u9a8c\u8bc1\u3002\u672c\u7814\u7a76\u5728621\u540dAD\u60a3\u8005\u53ca\u5339\u914d\u5bf9\u7167\u4e2d\uff0c\u8bc4\u4f30\u4e86\u7b2c\u4e00\u3001\u4e8c\u3001\u4e09\u4ee3\u7532\u57fa\u5316\u65f6\u949f\uff0c\u961f\u5217\u5305\u62ec\u975e\u88d4\u7f8e\u56fd\u4eba\u3001\u897f\u73ed\u7259\u88d4\u548c\u767d\u4eba\u3002\u4e0e\u767d\u4eba\u961f\u5217\u76f8\u6bd4\uff0c\u65f6\u949f\u5728\u9057\u4f20\u6df7\u5408\u961f\u5217\u4e2d\u9884\u6d4b\u5e74\u9f84\u7684\u51c6\u786e\u6027\u8f83\u4f4e\uff0c\u5c24\u5176\u662f\u5728\u5177\u6709\u5927\u91cf\u975e\u6d32\u8840\u7edf\u7684\u4e2a\u4f53\u4e2d\u3002\u8fd9\u79cd\u51c6\u786e\u6027\u4e0b\u964d\u5728\u6765\u81ea\u4e09\u4e2a\u989d\u5916\u6570\u636e\u96c6\u7684\u8d85\u8fc72500\u540d\u6b27\u6d32\u548c\u975e\u6d32\u8840\u7edf\u4e2a\u4f53\u4e2d\u4f9d\u7136\u5b58\u5728\u3002\u65f6\u949f\u4e5f\u672a\u80fd\u4e00\u81f4\u5730\u8bc6\u522b\u6df7\u5408AD\u75c5\u4f8b\u4e0e\u5bf9\u7167\u7ec4\u7684\u5e74\u9f84\u52a0\u901f\u3002\u4e3a\u63a2\u7d22\u65f6\u949f\u7f3a\u4e4f\u901a\u7528\u6027\u7684\u539f\u56e0\uff0c\u6211\u4eec\u5c06\u65f6\u949fCpG\u4f4d\u70b9\u4e0e\u5168\u7403\u4eba\u7fa4\u7684\u7532\u57fa\u5316\u3001\u79cd\u7cfb\u9057\u4f20\u53d8\u5f02\u548c\u7532\u57fa\u5316\u6570\u91cf\u6027\u72b6\u4f4d\u70b9\uff08meQTL\uff09\u6570\u636e\u4ea4\u53c9\u6bd4\u5bf9\u3002\u53d1\u73b0\u975e\u6d32\u4e0e\u6b27\u6d32\u8840\u7edf\u4e2a\u4f53\u95f4\u7684\u65f6\u949fCpG\u5dee\u5f02\u7532\u57fa\u5316\u666e\u904d\u5b58\u5728\u3002\u9057\u4f20\u53d8\u5f02\u5f88\u5c11\u5728\u4e0d\u540c\u4eba\u7fa4\u95f4\u7834\u574f\u65f6\u949fCpG\uff0c\u4f46\u6709\u76f8\u5f53\u4e00\u90e8\u5206\u65f6\u949fCpG\u5177\u6709\u5728\u975e\u6d32\u9057\u4f20\u8840\u7edf\u4e2d\u9891\u7387\u663e\u8457\u66f4\u9ad8\u7684meQTL\u3002\u6211\u4eec\u7684\u7ed3\u679c\u8868\u660e\uff0c\u7532\u57fa\u5316\u65f6\u949f\u5728\u8de8\u4eba\u7fa4\u5e94\u7528\u65f6\u5f80\u5f80\u65e0\u6cd5\u51c6\u786e\u9884\u6d4b\u5e74\u9f84\u548cAD\u98ce\u9669\uff0c\u5e76\u63d0\u51fa\u4e86\u901a\u8fc7\u8003\u8651\u4e0d\u540c\u4eba\u7fa4\u95f4\u9057\u4f20\u548c\u8868\u89c2\u9057\u4f20\u6a21\u5f0f\u5dee\u5f02\u6765\u6539\u5584\u5176\u53ef\u79fb\u690d\u6027\u7684\u9014\u5f84\u3002", "authors": ["Cruz-Gonzalez Sebasti\u00e1n", "Okpala Ogechukwu", "Gu Esther", "Gomez Lissette", "Mews Makaela", "Vance Jeffery M", "et al."], "journal": "Elife", "journal_color": "#607D8B", "key_findings": ["\u7532\u57fa\u5316\u65f6\u949f\u5728\u9057\u4f20\u6df7\u5408\u4eba\u7fa4\u4e2d\u5e74\u9f84\u9884\u6d4b\u51c6\u786e\u6027\u663e\u8457\u4e0b\u964d\uff0c\u5c24\u4ee5\u975e\u6d32\u8840\u7edf\u4e3a\u751a\u3002", "\u65f6\u949f\u65e0\u6cd5\u4e00\u81f4\u68c0\u6d4b\u6df7\u5408\u4eba\u7fa4AD\u60a3\u8005\u7684\u8868\u89c2\u9057\u4f20\u5e74\u9f84\u52a0\u901f\u3002", "\u65f6\u949fCpG\u7684\u5dee\u5f02\u7532\u57fa\u5316\u548c\u9ad8\u9891\u975e\u6d32\u8840\u7edfmeQTL\u662f\u5bfc\u81f4\u901a\u7528\u6027\u5dee\u7684\u539f\u56e0\uff0c\u4e3a\u6539\u8fdb\u63d0\u4f9b\u4e86\u65b9\u5411\u3002"], "pmid": "42550597", "pub_date": "2026-Aug-04", "title": "Methylation clocks fail to generalize across genetically admixed individuals.", "url": "https://doi.org/10.7554/eLife.105343", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Aug-04</span>
+        <button class="fav-btn"
+                data-pmid="42550597"
+                onclick="toggleFavorite('42550597', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42550597"
+                onclick="toggleDislike('42550597', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.105343" target="_blank" rel="noopener noreferrer">Methylation clocks fail to generalize across genetically admixed individuals.</a>
+      </h2>
+
+      <p class="paper-authors">Cruz-Gonzalez Sebastián &middot; Okpala Ogechukwu &middot; Gu Esther &middot; Gomez Lissette &middot; Mews Makaela &middot; Vance Jeffery M &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42550597', 'zh-42550597')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42550597', 'en-42550597')">中文</button>
+        </div>
+        <div id="en-42550597" class="abstract-text active">Epigenetic aging clocks based on DNA methylation patterns across the genome have emerged as a potential biomarker for risk of age-related diseases, like Alzheimer's disease (AD), and environmental and social stressors. However, methylation clocks have not been comprehensively validated in genetically diverse individuals. Here, we evaluate a set of first-, second-, and third-generation methylation clocks in 621 AD patients and matched controls from African American, Hispanic, and White cohorts. The clocks are less accurate at predicting age in genetically admixed cohorts compared to the White cohort, especially for those with substantial African ancestry. This decreased accuracy holds in >2500 individuals of European and African ancestry from three additional datasets. The clocks also fail to consistently identify age acceleration in admixed AD cases compared to controls. To explore potential causes for the lack of generalization of the clocks, we intersected clock CpGs with methylation, germline genetic variants, and methylation QTL (meQTL) data from global populations. We find differential methylation between African and European ancestry individuals is common for clock CpGs. Genetic variants rarely disrupt clock CpGs between populations, but a substantial fraction of clock CpGs have meQTL with significantly higher frequencies in African genetic ancestries. Our results demonstrate that methylation clocks often fail to predict age and AD risk when applied across populations and suggest avenues for improving their portability by considering differences in genetic and epigenetic patterns across human populations.</div>
+        <div id="zh-42550597" class="abstract-text">基于全基因组DNA甲基化模式的表观遗传时钟已成为年龄相关疾病（如阿尔茨海默病，AD）以及环境和社会压力风险的潜在生物标志物。然而，甲基化时钟尚未在遗传多样性个体中得到全面验证。本研究在621名AD患者及匹配对照中，评估了第一、二、三代甲基化时钟，队列包括非裔美国人、西班牙裔和白人。与白人队列相比，时钟在遗传混合队列中预测年龄的准确性较低，尤其是在具有大量非洲血统的个体中。这种准确性下降在来自三个额外数据集的超过2500名欧洲和非洲血统个体中依然存在。时钟也未能一致地识别混合AD病例与对照组的年龄加速。为探索时钟缺乏通用性的原因，我们将时钟CpG位点与全球人群的甲基化、种系遗传变异和甲基化数量性状位点（meQTL）数据交叉比对。发现非洲与欧洲血统个体间的时钟CpG差异甲基化普遍存在。遗传变异很少在不同人群间破坏时钟CpG，但有相当一部分时钟CpG具有在非洲遗传血统中频率显著更高的meQTL。我们的结果表明，甲基化时钟在跨人群应用时往往无法准确预测年龄和AD风险，并提出了通过考虑不同人群间遗传和表观遗传模式差异来改善其可移植性的途径。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>甲基化时钟在遗传混合人群中年龄预测准确性显著下降，尤以非洲血统为甚。</li>
+          
+          <li>时钟无法一致检测混合人群AD患者的表观遗传年龄加速。</li>
+          
+          <li>时钟CpG的差异甲基化和高频非洲血统meQTL是导致通用性差的原因，为改进提供了方向。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.105343" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Female</span>
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Aging</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42387863"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Predicting favorable protein-peptide binding events remains a central challenge in biophysics, with continued uncertainty surrounding how nonlocal effects shape the global energy landscape. Here, we introduce peripheral surface information entropy, S\u03a8, a quantitative measure of the statistical variability in apolar and charged non-interacting surface (NIS) proportions across conformational ensembles. Within the Gibbs free-energy relation \u0394G = \u0394H - T\u0394S, S\u03a8 is proposed as a computationally tractable entropic proxy rather than a direct thermodynamic observable or stand-alone estimator of binding affinity. Using energy-directed molecular docking via HADDOCK3 and explicit-solvent molecular dynamics simulations, it is demonstrated that favorable binding partners exhibit emergent, low-entropy N-states (discrete macrostates in NIS state space) indicative of preferential apolar/charged surface configurations. Across dozens of peptides and multiple receptor systems (WW, PDZ, and MDM2 domains), dominant N-states persisted under varied docking parameters and initial conditions. A meta-ensemble of 657 complexes from 36 experiments over 15 years confirmed the presence of dominant NIS modes independent of in silico methodology, suggesting an evolutionary selection pressure toward specific NIS fingerprints. These findings establish S\u03a8 as a thermoinformatic descriptor that encodes favorable binding constraints into unique statistical signatures of the NIS.", "abstract_zh": "\u9884\u6d4b\u6709\u5229\u7684\u86cb\u767d\u8d28-\u80bd\u7ed3\u5408\u4e8b\u4ef6\u4ecd\u662f\u751f\u7269\u7269\u7406\u5b66\u7684\u6838\u5fc3\u6311\u6218\uff0c\u975e\u5c40\u57df\u6548\u5e94\u5982\u4f55\u5851\u9020\u5168\u5c40\u80fd\u91cf\u666f\u89c2\u5c1a\u4e0d\u786e\u5b9a\u3002\u672c\u6587\u5f15\u5165\u5916\u56f4\u8868\u9762\u4fe1\u606f\u71b5 S\u03a8\uff0c\u4e00\u79cd\u5b9a\u91cf\u6d4b\u91cf\u6784\u8c61\u7cfb\u7efc\u4e2d\u975e\u6781\u6027\u548c\u5e26\u7535\u975e\u76f8\u4e92\u4f5c\u7528\u8868\u9762\uff08NIS\uff09\u6bd4\u4f8b\u7edf\u8ba1\u53d8\u5f02\u6027\u7684\u6307\u6807\u3002\u5728\u5409\u5e03\u65af\u81ea\u7531\u80fd\u5173\u7cfb \u0394G = \u0394H - T\u0394S \u6846\u67b6\u4e0b\uff0cS\u03a8 \u88ab\u63d0\u51fa\u4f5c\u4e3a\u8ba1\u7b97\u4e0a\u53ef\u5904\u7406\u7684\u71b5\u4ee3\u7406\uff0c\u800c\u975e\u76f4\u63a5\u7684\u70ed\u529b\u5b66\u53ef\u89c2\u6d4b\u91cf\u6216\u7ed3\u5408\u4eb2\u548c\u529b\u7684\u72ec\u7acb\u4f30\u8ba1\u91cf\u3002\u901a\u8fc7 HADDOCK3 \u80fd\u91cf\u5bfc\u5411\u5206\u5b50\u5bf9\u63a5\u548c\u663e\u5f0f\u6eb6\u5242\u5206\u5b50\u52a8\u529b\u5b66\u6a21\u62df\uff0c\u8bc1\u660e\u6709\u5229\u7684\u7ed3\u5408\u4f19\u4f34\u4f1a\u6d8c\u73b0\u51fa\u4f4e\u71b5 N \u6001\uff08NIS \u72b6\u6001\u7a7a\u95f4\u4e2d\u7684\u79bb\u6563\u5b8f\u89c2\u6001\uff09\uff0c\u53cd\u6620\u51fa\u4f18\u5148\u7684\u975e\u6781\u6027/\u5e26\u7535\u8868\u9762\u914d\u7f6e\u3002\u5728\u591a\u4e2a\u53d7\u4f53\u7cfb\u7edf\uff08WW\u3001PDZ \u548c MDM2 \u7ed3\u6784\u57df\uff09\u548c\u6570\u5341\u79cd\u80bd\u4e2d\uff0c\u4e3b\u5bfc N \u6001\u5728\u4e0d\u540c\u7684\u5bf9\u63a5\u53c2\u6570\u548c\u521d\u59cb\u6761\u4ef6\u4e0b\u6301\u7eed\u5b58\u5728\u3002\u5bf9 15 \u5e74\u6765 36 \u9879\u5b9e\u9a8c\u7684 657 \u4e2a\u590d\u5408\u7269\u8fdb\u884c\u5143\u7cfb\u7efc\u5206\u6790\uff0c\u8bc1\u5b9e\u4e86\u72ec\u7acb\u4e8e\u8ba1\u7b97\u673a\u6a21\u62df\u65b9\u6cd5\u7684\u4e3b\u5bfc NIS \u6a21\u5f0f\uff0c\u63d0\u793a\u8fdb\u5316\u9009\u62e9\u538b\u529b\u503e\u5411\u4e8e\u7279\u5b9a\u7684 NIS \u6307\u7eb9\u3002\u8fd9\u4e9b\u53d1\u73b0\u5c06 S\u03a8 \u786e\u7acb\u4e3a\u4e00\u79cd\u70ed\u4fe1\u606f\u5b66\u63cf\u8ff0\u7b26\uff0c\u80fd\u5c06\u6709\u5229\u7684\u7ed3\u5408\u7ea6\u675f\u7f16\u7801\u4e3a NIS \u7684\u72ec\u7279\u7edf\u8ba1\u7279\u5f81\u3002", "authors": ["Grear Tyler J", "Jacobs Donald J"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u5f15\u5165 S\u03a8 \u4f5c\u4e3a NIS \u6bd4\u4f8b\u53d8\u5f02\u6027\u5ea6\u91cf\uff0c\u5145\u5f53\u5409\u5e03\u65af\u81ea\u7531\u80fd\u4e2d\u71b5\u9879\u7684\u8ba1\u7b97\u4ee3\u7406\u3002", "\u6709\u5229\u7ed3\u5408\u4f34\u4fa3\u6d8c\u73b0\u4f4e\u71b5 N \u6001\uff0c\u53cd\u6620\u4f18\u5148\u7684\u975e\u6781\u6027/\u5e26\u7535\u8868\u9762\u914d\u7f6e\uff0c\u5e76\u5177\u5bf9\u63a5\u53c2\u6570\u7a33\u5065\u6027\u3002", "\u5143\u7cfb\u7efc\u5206\u6790\u63ed\u793a\u4e3b\u5bfc NIS \u6a21\u5f0f\u72ec\u7acb\u4e8e\u6a21\u62df\u65b9\u6cd5\uff0c\u63d0\u793a\u8fdb\u5316\u9009\u62e9\u5bf9\u7279\u5b9a NIS \u6307\u7eb9\u7684\u538b\u529b\u3002"], "pmid": "42387863", "pub_date": "2026-Aug-04", "title": "Quantifying the peripheral surface information entropy from conformational ensembles of globular protein-peptide complexes.", "url": "https://doi.org/10.1016/j.bpj.2026.06.036", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Aug-04</span>
+        <button class="fav-btn"
+                data-pmid="42387863"
+                onclick="toggleFavorite('42387863', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42387863"
+                onclick="toggleDislike('42387863', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.06.036" target="_blank" rel="noopener noreferrer">Quantifying the peripheral surface information entropy from conformational ensembles of globular protein-peptide complexes.</a>
+      </h2>
+
+      <p class="paper-authors">Grear Tyler J &middot; Jacobs Donald J</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42387863', 'zh-42387863')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42387863', 'en-42387863')">中文</button>
+        </div>
+        <div id="en-42387863" class="abstract-text active">Predicting favorable protein-peptide binding events remains a central challenge in biophysics, with continued uncertainty surrounding how nonlocal effects shape the global energy landscape. Here, we introduce peripheral surface information entropy, SΨ, a quantitative measure of the statistical variability in apolar and charged non-interacting surface (NIS) proportions across conformational ensembles. Within the Gibbs free-energy relation ΔG = ΔH - TΔS, SΨ is proposed as a computationally tractable entropic proxy rather than a direct thermodynamic observable or stand-alone estimator of binding affinity. Using energy-directed molecular docking via HADDOCK3 and explicit-solvent molecular dynamics simulations, it is demonstrated that favorable binding partners exhibit emergent, low-entropy N-states (discrete macrostates in NIS state space) indicative of preferential apolar/charged surface configurations. Across dozens of peptides and multiple receptor systems (WW, PDZ, and MDM2 domains), dominant N-states persisted under varied docking parameters and initial conditions. A meta-ensemble of 657 complexes from 36 experiments over 15 years confirmed the presence of dominant NIS modes independent of in silico methodology, suggesting an evolutionary selection pressure toward specific NIS fingerprints. These findings establish SΨ as a thermoinformatic descriptor that encodes favorable binding constraints into unique statistical signatures of the NIS.</div>
+        <div id="zh-42387863" class="abstract-text">预测有利的蛋白质-肽结合事件仍是生物物理学的核心挑战，非局域效应如何塑造全局能量景观尚不确定。本文引入外围表面信息熵 SΨ，一种定量测量构象系综中非极性和带电非相互作用表面（NIS）比例统计变异性的指标。在吉布斯自由能关系 ΔG = ΔH - TΔS 框架下，SΨ 被提出作为计算上可处理的熵代理，而非直接的热力学可观测量或结合亲和力的独立估计量。通过 HADDOCK3 能量导向分子对接和显式溶剂分子动力学模拟，证明有利的结合伙伴会涌现出低熵 N 态（NIS 状态空间中的离散宏观态），反映出优先的非极性/带电表面配置。在多个受体系统（WW、PDZ 和 MDM2 结构域）和数十种肽中，主导 N 态在不同的对接参数和初始条件下持续存在。对 15 年来 36 项实验的 657 个复合物进行元系综分析，证实了独立于计算机模拟方法的主导 NIS 模式，提示进化选择压力倾向于特定的 NIS 指纹。这些发现将 SΨ 确立为一种热信息学描述符，能将有利的结合约束编码为 NIS 的独特统计特征。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>引入 SΨ 作为 NIS 比例变异性度量，充当吉布斯自由能中熵项的计算代理。</li>
+          
+          <li>有利结合伴侣涌现低熵 N 态，反映优先的非极性/带电表面配置，并具对接参数稳健性。</li>
+          
+          <li>元系综分析揭示主导 NIS 模式独立于模拟方法，提示进化选择对特定 NIS 指纹的压力。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.06.036" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Entropy</span>
+          
+          <span class="kw-tag">Peptides</span>
+          
+          <span class="kw-tag">Molecular Dynamics Simulation</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42322048"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Laccases oxidize a broad range of aromatic compounds, yet how conformational dynamics regulate substrate recognition and functional specificity remains incompletely understood. Here, we investigate the molecular determinants of substrate-class selectivity in a fungal laccase by combining long-timescale molecular dynamics simulations, Markov state modeling, transition path analysis, free-energy calculations, and isothermal titration calorimetry. Using representative phenolic and aromatic amine substrates, we show that access to the T1 Cu center is governed by a flexible active-site loop that differentially modulates binding pathways. Phenolic ligands require opening of this loop to achieve sterically accessible binding configurations and proceed through multiple metastable intermediates consistent with a coupled conformational selection-induced-fit mechanism. In contrast, aromatic amines access the active site without loop rearrangement through a pathway dominated by conformational selection. In silico rigidification of the loop selectively disrupts phenolic binding while preserving amine binding, supporting a mechanistic bifurcation encoded by protein dynamics. Protonation states further modulate binding energetics, consistent with isothermal titration calorimetry measurements showing differential affinities among phenolic isomers under acidic conditions. Together, these findings establish conformational gating as a structural mechanism that links protein dynamics to substrate-class-dependent recognition in laccase and provide molecular insight into how flexible active-site elements regulate functional specificity in oxidoreductases.", "abstract_zh": "\u6f06\u9176\u6c27\u5316\u591a\u79cd\u82b3\u9999\u65cf\u5316\u5408\u7269\uff0c\u4f46\u6784\u8c61\u52a8\u529b\u5b66\u5982\u4f55\u8c03\u63a7\u5e95\u7269\u8bc6\u522b\u548c\u529f\u80fd\u7279\u5f02\u6027\u4ecd\u4e0d\u5b8c\u5168\u6e05\u695a\u3002\u5728\u6b64\uff0c\u6211\u4eec\u7ed3\u5408\u957f\u65f6\u95f4\u5c3a\u5ea6\u5206\u5b50\u52a8\u529b\u5b66\u6a21\u62df\u3001\u9a6c\u5c14\u53ef\u592b\u72b6\u6001\u6a21\u578b\u3001\u8f6c\u6362\u8def\u5f84\u5206\u6790\u3001\u81ea\u7531\u80fd\u8ba1\u7b97\u548c\u7b49\u6e29\u6ef4\u5b9a\u91cf\u70ed\u6cd5\uff0c\u7814\u7a76\u4e86\u4e00\u682a\u771f\u83cc\u6f06\u9176\u4e2d\u5e95\u7269\u7c7b\u522b\u9009\u62e9\u6027\u7684\u5206\u5b50\u51b3\u5b9a\u56e0\u7d20\u3002\u5229\u7528\u4ee3\u8868\u6027\u7684\u915a\u7c7b\u548c\u82b3\u9999\u80fa\u5e95\u7269\uff0c\u6211\u4eec\u8868\u660eT1\u94dc\u4e2d\u5fc3\u7684\u8fdb\u5165\u7531\u4e00\u4e2a\u67d4\u6027\u7684\u6d3b\u6027\u4f4d\u70b9\u73af\u63a7\u5236\uff0c\u8be5\u73af\u4ee5\u4e0d\u540c\u65b9\u5f0f\u8c03\u8282\u7ed3\u5408\u9014\u5f84\u3002\u915a\u7c7b\u914d\u4f53\u9700\u8981\u8be5\u73af\u6253\u5f00\u624d\u80fd\u8fbe\u5230\u7a7a\u95f4\u4e0a\u53ef\u63a5\u8fd1\u7684\u7ed3\u5408\u6784\u578b\uff0c\u5e76\u901a\u8fc7\u591a\u4e2a\u4e9a\u7a33\u6001\u4e2d\u95f4\u4f53\u8fdb\u884c\uff0c\u8fd9\u4e0e\u8026\u5408\u7684\u6784\u8c61\u9009\u62e9-\u8bf1\u5bfc\u5951\u5408\u673a\u5236\u4e00\u81f4\u3002\u76f8\u53cd\uff0c\u82b3\u9999\u80fa\u65e0\u9700\u73af\u91cd\u6392\u4fbf\u53ef\u901a\u8fc7\u4ee5\u6784\u8c61\u9009\u62e9\u4e3a\u4e3b\u7684\u9014\u5f84\u8fdb\u5165\u6d3b\u6027\u4f4d\u70b9\u3002\u901a\u8fc7\u8ba1\u7b97\u6a21\u62df\u4f7f\u73af\u521a\u6027\u5316\u53ef\u9009\u62e9\u6027\u5730\u7834\u574f\u915a\u7c7b\u7ed3\u5408\u800c\u4fdd\u7559\u80fa\u7ed3\u5408\uff0c\u652f\u6301\u7531\u86cb\u767d\u8d28\u52a8\u6001\u7f16\u7801\u7684\u673a\u5236\u5206\u6b67\u3002\u8d28\u5b50\u5316\u72b6\u6001\u8fdb\u4e00\u6b65\u8c03\u8282\u7ed3\u5408\u80fd\u91cf\u5b66\uff0c\u4e0e\u7b49\u6e29\u6ef4\u5b9a\u91cf\u70ed\u6cd5\u6d4b\u91cf\u7ed3\u679c\u4e00\u81f4\uff0c\u663e\u793a\u9178\u6027\u6761\u4ef6\u4e0b\u915a\u7c7b\u5f02\u6784\u4f53\u4e4b\u95f4\u7684\u4eb2\u548c\u529b\u5dee\u5f02\u3002\u603b\u4e4b\uff0c\u8fd9\u4e9b\u53d1\u73b0\u786e\u7acb\u4e86\u6784\u8c61\u95e8\u63a7\u662f\u8fde\u63a5\u86cb\u767d\u8d28\u52a8\u6001\u4e0e\u6f06\u9176\u4e2d\u5e95\u7269\u7c7b\u522b\u4f9d\u8d56\u6027\u8bc6\u522b\u7684\u7ed3\u6784\u673a\u5236\uff0c\u5e76\u4e3a\u67d4\u6027\u6d3b\u6027\u4f4d\u70b9\u5143\u4ef6\u5982\u4f55\u8c03\u63a7\u6c27\u5316\u8fd8\u539f\u9176\u7684\u529f\u80fd\u7279\u5f02\u6027\u63d0\u4f9b\u4e86\u5206\u5b50\u89c1\u89e3\u3002", "authors": ["Biswas Anushka", "Singh Deepshikha", "Datta Bhaskar", "Radhakrishna Mithun"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u6d3b\u6027\u4f4d\u70b9\u73af\u7684\u6784\u8c61\u52a8\u6001\u901a\u8fc7\u4e0d\u540c\u673a\u5236\u63a7\u5236\u915a\u7c7b\u4e0e\u82b3\u9999\u80fa\u5e95\u7269\u7684\u7ed3\u5408\u8def\u5f84\u3002", "\u915a\u7c7b\u7ed3\u5408\u9700\u73af\u6253\u5f00\u5e76\u7ecf\u591a\u6b65\u6784\u8c61\u9009\u62e9-\u8bf1\u5bfc\u5951\u5408\uff0c\u82b3\u9999\u80fa\u7ed3\u5408\u5219\u65e0\u9700\u73af\u91cd\u6392\u3002", "\u73af\u521a\u6027\u5316\u9009\u62e9\u6027\u963b\u65ad\u915a\u7c7b\u7ed3\u5408\uff0c\u8d28\u5b50\u5316\u72b6\u6001\u8c03\u8282\u4eb2\u548c\u529b\uff0c\u4f53\u73b0\u86cb\u767d\u52a8\u529b\u5b66\u7f16\u7801\u7684\u529f\u80fd\u5206\u6b67\u3002"], "pmid": "42322048", "pub_date": "2026-Aug-04", "title": "Conformational gating of an active-site loop governs phenolic and aromatic amine substrate selectivity in fungal laccase.", "url": "https://doi.org/10.1016/j.bpj.2026.06.021", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Aug-04</span>
+        <button class="fav-btn"
+                data-pmid="42322048"
+                onclick="toggleFavorite('42322048', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42322048"
+                onclick="toggleDislike('42322048', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.06.021" target="_blank" rel="noopener noreferrer">Conformational gating of an active-site loop governs phenolic and aromatic amine substrate selectivity in fungal laccase.</a>
+      </h2>
+
+      <p class="paper-authors">Biswas Anushka &middot; Singh Deepshikha &middot; Datta Bhaskar &middot; Radhakrishna Mithun</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42322048', 'zh-42322048')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42322048', 'en-42322048')">中文</button>
+        </div>
+        <div id="en-42322048" class="abstract-text active">Laccases oxidize a broad range of aromatic compounds, yet how conformational dynamics regulate substrate recognition and functional specificity remains incompletely understood. Here, we investigate the molecular determinants of substrate-class selectivity in a fungal laccase by combining long-timescale molecular dynamics simulations, Markov state modeling, transition path analysis, free-energy calculations, and isothermal titration calorimetry. Using representative phenolic and aromatic amine substrates, we show that access to the T1 Cu center is governed by a flexible active-site loop that differentially modulates binding pathways. Phenolic ligands require opening of this loop to achieve sterically accessible binding configurations and proceed through multiple metastable intermediates consistent with a coupled conformational selection-induced-fit mechanism. In contrast, aromatic amines access the active site without loop rearrangement through a pathway dominated by conformational selection. In silico rigidification of the loop selectively disrupts phenolic binding while preserving amine binding, supporting a mechanistic bifurcation encoded by protein dynamics. Protonation states further modulate binding energetics, consistent with isothermal titration calorimetry measurements showing differential affinities among phenolic isomers under acidic conditions. Together, these findings establish conformational gating as a structural mechanism that links protein dynamics to substrate-class-dependent recognition in laccase and provide molecular insight into how flexible active-site elements regulate functional specificity in oxidoreductases.</div>
+        <div id="zh-42322048" class="abstract-text">漆酶氧化多种芳香族化合物，但构象动力学如何调控底物识别和功能特异性仍不完全清楚。在此，我们结合长时间尺度分子动力学模拟、马尔可夫状态模型、转换路径分析、自由能计算和等温滴定量热法，研究了一株真菌漆酶中底物类别选择性的分子决定因素。利用代表性的酚类和芳香胺底物，我们表明T1铜中心的进入由一个柔性的活性位点环控制，该环以不同方式调节结合途径。酚类配体需要该环打开才能达到空间上可接近的结合构型，并通过多个亚稳态中间体进行，这与耦合的构象选择-诱导契合机制一致。相反，芳香胺无需环重排便可通过以构象选择为主的途径进入活性位点。通过计算模拟使环刚性化可选择性地破坏酚类结合而保留胺结合，支持由蛋白质动态编码的机制分歧。质子化状态进一步调节结合能量学，与等温滴定量热法测量结果一致，显示酸性条件下酚类异构体之间的亲和力差异。总之，这些发现确立了构象门控是连接蛋白质动态与漆酶中底物类别依赖性识别的结构机制，并为柔性活性位点元件如何调控氧化还原酶的功能特异性提供了分子见解。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>活性位点环的构象动态通过不同机制控制酚类与芳香胺底物的结合路径。</li>
+          
+          <li>酚类结合需环打开并经多步构象选择-诱导契合，芳香胺结合则无需环重排。</li>
+          
+          <li>环刚性化选择性阻断酚类结合，质子化状态调节亲和力，体现蛋白动力学编码的功能分歧。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.06.021" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Laccase</span>
+          
+          <span class="kw-tag">Substrate Specificity</span>
+          
+          <span class="kw-tag">Catalytic Domain</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42547851"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Transcription is an inherently dynamic and stochastic process that often occurs in bursts, governed by gene-gene regulatory interactions and thereby driving cell-to-cell heterogeneity. However, a genome-wide, mechanistic understanding of how regulatory networks globally shape transcriptional bursting dynamics remains lacking. Here, we present BurstLink, an interpretable and tractable statistical-mechanistic framework that simultaneously infers coupled regulatory interactions and transcriptional bursting kinetics at the genome-wide scale from single-cell data. BurstLink introduces reweighted mutual information to quantify regulatory strength as network edge weights, while jointly inferring regulatory directionality and interaction type for each gene pair within a unified mechanistic model of transcriptional bursting. Applied to mouse embryonic fibroblasts data, BurstLink reveals several genome-wide regulatory mechanisms on transcriptional bursting: downstream target genes exhibit higher burst frequency and gene-expression variability than upstream transcription factor genes; stronger transcription factor binding affinity is associated with lower burst frequency and higher burst size of target genes. Notably, positive regulation primarily enhances the burst frequency and gene-expression variability in target genes, in contrast to negative regulation. In summary, BurstLink deciphers multiple general principles of global transcriptional dynamics, providing novel biological insights into cell fate decisions.", "abstract_zh": "\u8f6c\u5f55\u662f\u4e00\u4e2a\u56fa\u6709\u52a8\u6001\u548c\u968f\u673a\u7684\u8fc7\u7a0b\uff0c\u5e38\u4ee5\u7206\u53d1\u5f62\u5f0f\u53d1\u751f\uff0c\u53d7\u57fa\u56e0\u95f4\u8c03\u63a7\u4e92\u4f5c\u652f\u914d\uff0c\u4ece\u800c\u9a71\u52a8\u7ec6\u80de\u95f4\u5f02\u8d28\u6027\u3002\u7136\u800c\uff0c\u5bf9\u8c03\u63a7\u7f51\u7edc\u5982\u4f55\u5728\u57fa\u56e0\u7ec4\u8303\u56f4\u5185\u5168\u5c40\u5851\u9020\u8f6c\u5f55\u7206\u53d1\u52a8\u529b\u5b66\u7684\u673a\u5236\u6027\u7406\u89e3\u4ecd\u7136\u7f3a\u4e4f\u3002\u5728\u6b64\uff0c\u6211\u4eec\u63d0\u51faBurstLink\uff0c\u4e00\u4e2a\u53ef\u89e3\u91ca\u4e14\u6613\u4e8e\u5904\u7406\u7684\u7edf\u8ba1-\u673a\u5236\u6846\u67b6\uff0c\u80fd\u591f\u4ece\u5355\u7ec6\u80de\u6570\u636e\u4e2d\u540c\u65f6\u63a8\u65ad\u5168\u57fa\u56e0\u7ec4\u8303\u56f4\u5185\u7684\u8026\u5408\u8c03\u63a7\u76f8\u4e92\u4f5c\u7528\u548c\u8f6c\u5f55\u7206\u53d1\u52a8\u529b\u5b66\u3002BurstLink\u5f15\u5165\u91cd\u52a0\u6743\u4e92\u4fe1\u606f\u6765\u91cf\u5316\u8c03\u63a7\u5f3a\u5ea6\u4f5c\u4e3a\u7f51\u7edc\u8fb9\u6743\u91cd\uff0c\u540c\u65f6\u5728\u7edf\u4e00\u7684\u8f6c\u5f55\u7206\u53d1\u673a\u5236\u6a21\u578b\u5185\u8054\u5408\u63a8\u65ad\u6bcf\u4e2a\u57fa\u56e0\u5bf9\u7684\u8c03\u63a7\u65b9\u5411\u6027\u548c\u76f8\u4e92\u4f5c\u7528\u7c7b\u578b\u3002\u5e94\u7528\u4e8e\u5c0f\u9f20\u80da\u80ce\u6210\u7ea4\u7ef4\u7ec6\u80de\u6570\u636e\uff0cBurstLink\u63ed\u793a\u4e86\u51e0\u4e2a\u5173\u4e8e\u8f6c\u5f55\u7206\u53d1\u7684\u5168\u57fa\u56e0\u7ec4\u8c03\u63a7\u673a\u5236\uff1a\u4e0b\u6e38\u9776\u57fa\u56e0\u6bd4\u4e0a\u6e38\u8f6c\u5f55\u56e0\u5b50\u57fa\u56e0\u8868\u73b0\u51fa\u66f4\u9ad8\u7684\u7206\u53d1\u9891\u7387\u548c\u57fa\u56e0\u8868\u8fbe\u53d8\u5f02\u6027\uff1b\u66f4\u5f3a\u7684\u8f6c\u5f55\u56e0\u5b50\u7ed3\u5408\u4eb2\u548c\u529b\u4e0e\u9776\u57fa\u56e0\u66f4\u4f4e\u7684\u7206\u53d1\u9891\u7387\u548c\u66f4\u9ad8\u7684\u7206\u53d1\u5927\u5c0f\u76f8\u5173\u3002\u503c\u5f97\u6ce8\u610f\u7684\u662f\uff0c\u6b63\u5411\u8c03\u63a7\u4e3b\u8981\u63d0\u9ad8\u9776\u57fa\u56e0\u7684\u7206\u53d1\u9891\u7387\u548c\u57fa\u56e0\u8868\u8fbe\u53d8\u5f02\u6027\uff0c\u4e0e\u8d1f\u5411\u8c03\u63a7\u76f8\u53cd\u3002\u603b\u4e4b\uff0cBurstLink\u89e3\u7801\u4e86\u5168\u5c40\u8f6c\u5f55\u52a8\u529b\u5b66\u7684\u591a\u4e2a\u666e\u904d\u539f\u7406\uff0c\u4e3a\u7ec6\u80de\u547d\u8fd0\u51b3\u5b9a\u63d0\u4f9b\u4e86\u65b0\u7684\u751f\u7269\u5b66\u89c1\u89e3\u3002", "authors": ["Zhou Liying", "Luo Songhao", "Huang Zhiwei", "Zhang Zhenquan", "Wang Zihao", "Zhang Jiajun"], "journal": "Mol Syst Biol", "journal_color": "#607D8B", "key_findings": ["\u4e0b\u6e38\u9776\u57fa\u56e0\u6bd4\u4e0a\u6e38\u8f6c\u5f55\u56e0\u5b50\u57fa\u56e0\u8868\u73b0\u51fa\u66f4\u9ad8\u7684\u7206\u53d1\u9891\u7387\u548c\u57fa\u56e0\u8868\u8fbe\u53d8\u5f02\u6027\u3002", "\u8f6c\u5f55\u56e0\u5b50\u7ed3\u5408\u4eb2\u548c\u529b\u8d8a\u5f3a\uff0c\u9776\u57fa\u56e0\u7206\u53d1\u9891\u7387\u8d8a\u4f4e\u3001\u7206\u53d1\u5927\u5c0f\u8d8a\u9ad8\u3002", "\u6b63\u5411\u8c03\u63a7\u4e3b\u8981\u589e\u5f3a\u9776\u57fa\u56e0\u7684\u7206\u53d1\u9891\u7387\u548c\u8868\u8fbe\u53d8\u5f02\u6027\uff0c\u8d1f\u5411\u8c03\u63a7\u5219\u76f8\u53cd\u3002"], "pmid": "42547851", "pub_date": "2026-Aug-03", "title": "Deciphering global transcriptional dynamics coordinated by gene-gene regulatory interactions using single-cell data.", "url": "https://doi.org/10.1038/s44320-026-00235-4", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Mol Syst Biol</span>
+        <span class="pub-date">2026-Aug-03</span>
+        <button class="fav-btn"
+                data-pmid="42547851"
+                onclick="toggleFavorite('42547851', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42547851"
+                onclick="toggleDislike('42547851', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s44320-026-00235-4" target="_blank" rel="noopener noreferrer">Deciphering global transcriptional dynamics coordinated by gene-gene regulatory interactions using single-cell data.</a>
+      </h2>
+
+      <p class="paper-authors">Zhou Liying &middot; Luo Songhao &middot; Huang Zhiwei &middot; Zhang Zhenquan &middot; Wang Zihao &middot; Zhang Jiajun</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42547851', 'zh-42547851')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42547851', 'en-42547851')">中文</button>
+        </div>
+        <div id="en-42547851" class="abstract-text active">Transcription is an inherently dynamic and stochastic process that often occurs in bursts, governed by gene-gene regulatory interactions and thereby driving cell-to-cell heterogeneity. However, a genome-wide, mechanistic understanding of how regulatory networks globally shape transcriptional bursting dynamics remains lacking. Here, we present BurstLink, an interpretable and tractable statistical-mechanistic framework that simultaneously infers coupled regulatory interactions and transcriptional bursting kinetics at the genome-wide scale from single-cell data. BurstLink introduces reweighted mutual information to quantify regulatory strength as network edge weights, while jointly inferring regulatory directionality and interaction type for each gene pair within a unified mechanistic model of transcriptional bursting. Applied to mouse embryonic fibroblasts data, BurstLink reveals several genome-wide regulatory mechanisms on transcriptional bursting: downstream target genes exhibit higher burst frequency and gene-expression variability than upstream transcription factor genes; stronger transcription factor binding affinity is associated with lower burst frequency and higher burst size of target genes. Notably, positive regulation primarily enhances the burst frequency and gene-expression variability in target genes, in contrast to negative regulation. In summary, BurstLink deciphers multiple general principles of global transcriptional dynamics, providing novel biological insights into cell fate decisions.</div>
+        <div id="zh-42547851" class="abstract-text">转录是一个固有动态和随机的过程，常以爆发形式发生，受基因间调控互作支配，从而驱动细胞间异质性。然而，对调控网络如何在基因组范围内全局塑造转录爆发动力学的机制性理解仍然缺乏。在此，我们提出BurstLink，一个可解释且易于处理的统计-机制框架，能够从单细胞数据中同时推断全基因组范围内的耦合调控相互作用和转录爆发动力学。BurstLink引入重加权互信息来量化调控强度作为网络边权重，同时在统一的转录爆发机制模型内联合推断每个基因对的调控方向性和相互作用类型。应用于小鼠胚胎成纤维细胞数据，BurstLink揭示了几个关于转录爆发的全基因组调控机制：下游靶基因比上游转录因子基因表现出更高的爆发频率和基因表达变异性；更强的转录因子结合亲和力与靶基因更低的爆发频率和更高的爆发大小相关。值得注意的是，正向调控主要提高靶基因的爆发频率和基因表达变异性，与负向调控相反。总之，BurstLink解码了全局转录动力学的多个普遍原理，为细胞命运决定提供了新的生物学见解。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>下游靶基因比上游转录因子基因表现出更高的爆发频率和基因表达变异性。</li>
+          
+          <li>转录因子结合亲和力越强，靶基因爆发频率越低、爆发大小越高。</li>
+          
+          <li>正向调控主要增强靶基因的爆发频率和表达变异性，负向调控则相反。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s44320-026-00235-4" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42547503"
+             style="--card-color: #A5D6A7">
+      <script class="paper-data" type="application/json">{"abstract": "Synthetic riboswitches provide protein-independent, modular control of gene expression, yet selecting aptamers that reliably couple ligand binding to regulatory switching remains challenging. Here, we identify and mechanistically characterise G12, a doxycycline-binding aptamer with remarkably high regulatory performance in yeast and human cells. We provide evidence that RNA Capture-SELEX efficiently enriches aptamers with ligand-responsive conformational switching. We compared conventional SELEX and RNA Capture-SELEX using the same starting library followed by NGS analysis and in vivo screening, which led to the identification of G12. G12 binds doxycycline with low-nanomolar affinity and strict discrimination against close derivatives, thus enabling high-dynamic-range riboswitch control of translation in yeast and splicing in human cells. Single-molecule force spectroscopy with optical tweezers revealed that doxycycline stabilises a folding intermediate independent of the closing stem P1, which primarily acts as a scaffold for correct aptamer folding. Mutational analysis and chemical probing identified tertiary contacts between loops L2 and L3 in this intermediate state. Stopped-flow fluorescence spectroscopy further supported a two-step binding mechanism consistent with efficient regulatory switching. Together, these findings deepen our understanding of regulatory aptamer selection and function and expand the synthetic biology toolbox with a high-performance doxycycline-responsive riboswitch.", "abstract_zh": "\u5408\u6210\u6838\u7cd6\u5f00\u5173\u80fd\u591f\u4e0d\u4f9d\u8d56\u86cb\u767d\u8d28\u6a21\u5757\u5316\u5730\u63a7\u5236\u57fa\u56e0\u8868\u8fbe\uff0c\u4f46\u9009\u62e9\u53ef\u53ef\u9760\u8026\u5408\u914d\u4f53\u7ed3\u5408\u4e0e\u8c03\u63a7\u5207\u6362\u7684\u9002\u4f53\u4ecd\u5177\u6311\u6218\u3002\u672c\u7814\u7a76\u9274\u5b9a\u5e76\u673a\u5236\u6027\u5730\u89e3\u6790\u4e86G12\u2014\u2014\u4e00\u79cd\u5728\u9175\u6bcd\u548c\u4eba\u7ec6\u80de\u4e2d\u8868\u73b0\u51fa\u5353\u8d8a\u8c03\u63a7\u6027\u80fd\u7684\u5f3a\u529b\u9709\u7d20\u7ed3\u5408\u9002\u4f53\u3002\u6211\u4eec\u8bc1\u660eRNA\u6355\u83b7-SELEX\u80fd\u591f\u6709\u6548\u5bcc\u96c6\u5177\u6709\u914d\u4f53\u54cd\u5e94\u6784\u8c61\u5207\u6362\u7684\u9002\u4f53\u3002\u5229\u7528\u76f8\u540c\u8d77\u59cb\u6587\u5e93\u6bd4\u8f83\u5e38\u89c4SELEX\u4e0eRNA\u6355\u83b7-SELEX\uff0c\u7ed3\u5408NGS\u5206\u6790\u548c\u4f53\u5185\u7b5b\u9009\uff0c\u6700\u7ec8\u9274\u5b9a\u4e86G12\u3002G12\u4ee5\u4f4e\u7eb3\u6469\u5c14\u4eb2\u548c\u529b\u7ed3\u5408\u5f3a\u529b\u9709\u7d20\uff0c\u5e76\u4e25\u683c\u533a\u5206\u76f8\u8fd1\u884d\u751f\u7269\uff0c\u4ece\u800c\u5728\u9175\u6bcd\u7ffb\u8bd1\u8fc7\u7a0b\u548c\u4eba\u7c7b\u7ec6\u80de\u526a\u63a5\u4e8b\u4ef6\u4e2d\u5b9e\u73b0\u9ad8\u52a8\u6001\u8303\u56f4\u7684\u6838\u7cd6\u5f00\u5173\u63a7\u5236\u3002\u5149\u954a\u5355\u5206\u5b50\u529b\u8c31\u63ed\u793a\u5f3a\u529b\u9709\u7d20\u7a33\u5b9a\u4e86\u4e00\u4e2a\u4e0d\u4f9d\u8d56\u4e8e\u95ed\u5408\u830eP1\u7684\u6298\u53e0\u4e2d\u95f4\u4f53\uff0cP1\u4e3b\u8981\u4f5c\u4e3a\u9002\u4f53\u6b63\u786e\u6298\u53e0\u7684\u652f\u67b6\u3002\u7a81\u53d8\u5206\u6790\u548c\u5316\u5b66\u63a2\u6d4b\u9274\u5b9a\u51fa\u8be5\u4e2d\u95f4\u72b6\u6001\u4e2d\u73afL2\u4e0eL3\u4e4b\u95f4\u7684\u4e09\u7ea7\u63a5\u89e6\u3002\u505c\u6d41\u8367\u5149\u5149\u8c31\u8fdb\u4e00\u6b65\u652f\u6301\u4e86\u4e24\u6b65\u7ed3\u5408\u673a\u5236\uff0c\u8be5\u673a\u5236\u4e0e\u9ad8\u6548\u8c03\u63a7\u5207\u6362\u76f8\u543b\u5408\u3002\u8fd9\u4e9b\u53d1\u73b0\u52a0\u6df1\u4e86\u6211\u4eec\u5bf9\u8c03\u63a7\u9002\u4f53\u7b5b\u9009\u4e0e\u529f\u80fd\u7684\u7406\u89e3\uff0c\u5e76\u4e3a\u5408\u6210\u751f\u7269\u5b66\u5de5\u5177\u7bb1\u589e\u6dfb\u4e86\u4e00\u4e2a\u9ad8\u6027\u80fd\u7684\u5f3a\u529b\u9709\u7d20\u54cd\u5e94\u6838\u7cd6\u5f00\u5173\u3002", "authors": ["Hoetzel J", "Walbrun A", "Sch\u00e4fer M", "Wang T", "J\u00f8rgensen A G", "Becker O", "et al."], "journal": "Nat Commun", "journal_color": "#A5D6A7", "key_findings": ["\u9274\u5b9a\u51fa\u5f3a\u529b\u9709\u7d20\u9002\u4f53G12\uff0c\u5176\u5177\u6709\u7eb3\u6469\u5c14\u4eb2\u548c\u529b\u548c\u9ad8\u914d\u4f53\u533a\u5206\u5ea6\uff0c\u5728\u9175\u6bcd\u7ffb\u8bd1\u548c\u4eba\u7ec6\u80de\u526a\u63a5\u4e2d\u5b9e\u73b0\u9ad8\u52a8\u6001\u8303\u56f4\u8c03\u63a7\u3002", "\u5355\u5206\u5b50\u529b\u8c31\u4e0e\u5316\u5b66\u63a2\u6d4b\u63ed\u793aG12\u901a\u8fc7\u7a33\u5b9a\u72ec\u7acb\u4e8eP1\u7684\u6298\u53e0\u4e2d\u95f4\u4f53\u3001\u5f62\u6210L2-L3\u4e09\u7ea7\u63a5\u89e6\uff0c\u9075\u5faa\u4e24\u6b65\u7ed3\u5408\u673a\u5236\u5b9e\u73b0\u9ad8\u6548\u6784\u8c61\u5207\u6362\u3002", "RNA Capture-SELEX\u80fd\u6709\u6548\u5bcc\u96c6\u914d\u4f53\u54cd\u5e94\u6027\u6784\u8c61\u5207\u6362\u9002\u4f53\uff0c\u4f18\u4e8e\u5e38\u89c4SELEX\uff0c\u4e3a\u9ad8\u6027\u80fd\u6838\u7cd6\u5f00\u5173\u7684\u7b5b\u9009\u63d0\u4f9b\u4e86\u65b0\u7b56\u7565\u3002"], "pmid": "42547503", "pub_date": "2026-Aug-03", "title": "Mechanism underlying the high regulatory performance of the doxycycline riboswitch G12.", "url": "https://doi.org/10.1038/s41467-026-76256-2", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Aug-03</span>
+        <button class="fav-btn"
+                data-pmid="42547503"
+                onclick="toggleFavorite('42547503', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42547503"
+                onclick="toggleDislike('42547503', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-76256-2" target="_blank" rel="noopener noreferrer">Mechanism underlying the high regulatory performance of the doxycycline riboswitch G12.</a>
+      </h2>
+
+      <p class="paper-authors">Hoetzel J &middot; Walbrun A &middot; Schäfer M &middot; Wang T &middot; Jørgensen A G &middot; Becker O &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42547503', 'zh-42547503')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42547503', 'en-42547503')">中文</button>
+        </div>
+        <div id="en-42547503" class="abstract-text active">Synthetic riboswitches provide protein-independent, modular control of gene expression, yet selecting aptamers that reliably couple ligand binding to regulatory switching remains challenging. Here, we identify and mechanistically characterise G12, a doxycycline-binding aptamer with remarkably high regulatory performance in yeast and human cells. We provide evidence that RNA Capture-SELEX efficiently enriches aptamers with ligand-responsive conformational switching. We compared conventional SELEX and RNA Capture-SELEX using the same starting library followed by NGS analysis and in vivo screening, which led to the identification of G12. G12 binds doxycycline with low-nanomolar affinity and strict discrimination against close derivatives, thus enabling high-dynamic-range riboswitch control of translation in yeast and splicing in human cells. Single-molecule force spectroscopy with optical tweezers revealed that doxycycline stabilises a folding intermediate independent of the closing stem P1, which primarily acts as a scaffold for correct aptamer folding. Mutational analysis and chemical probing identified tertiary contacts between loops L2 and L3 in this intermediate state. Stopped-flow fluorescence spectroscopy further supported a two-step binding mechanism consistent with efficient regulatory switching. Together, these findings deepen our understanding of regulatory aptamer selection and function and expand the synthetic biology toolbox with a high-performance doxycycline-responsive riboswitch.</div>
+        <div id="zh-42547503" class="abstract-text">合成核糖开关能够不依赖蛋白质模块化地控制基因表达，但选择可可靠耦合配体结合与调控切换的适体仍具挑战。本研究鉴定并机制性地解析了G12——一种在酵母和人细胞中表现出卓越调控性能的强力霉素结合适体。我们证明RNA捕获-SELEX能够有效富集具有配体响应构象切换的适体。利用相同起始文库比较常规SELEX与RNA捕获-SELEX，结合NGS分析和体内筛选，最终鉴定了G12。G12以低纳摩尔亲和力结合强力霉素，并严格区分相近衍生物，从而在酵母翻译过程和人类细胞剪接事件中实现高动态范围的核糖开关控制。光镊单分子力谱揭示强力霉素稳定了一个不依赖于闭合茎P1的折叠中间体，P1主要作为适体正确折叠的支架。突变分析和化学探测鉴定出该中间状态中环L2与L3之间的三级接触。停流荧光光谱进一步支持了两步结合机制，该机制与高效调控切换相吻合。这些发现加深了我们对调控适体筛选与功能的理解，并为合成生物学工具箱增添了一个高性能的强力霉素响应核糖开关。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>鉴定出强力霉素适体G12，其具有纳摩尔亲和力和高配体区分度，在酵母翻译和人细胞剪接中实现高动态范围调控。</li>
+          
+          <li>单分子力谱与化学探测揭示G12通过稳定独立于P1的折叠中间体、形成L2-L3三级接触，遵循两步结合机制实现高效构象切换。</li>
+          
+          <li>RNA Capture-SELEX能有效富集配体响应性构象切换适体，优于常规SELEX，为高性能核糖开关的筛选提供了新策略。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-76256-2" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Riboswitch</span>
+          
+          <span class="kw-tag">Doxycycline</span>
+          
+          <span class="kw-tag">Aptamers, Nucleotide</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42546066"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Biomolecular condensates create dynamic subcellular compartments that alter systems-level properties of the networks surrounding them. Standard reaction-diffusion models of systems biology cannot define where these compartments emerge nor track how they evolve. One alternative physicochemical model of soluble and condensed states in space and time is the Cahn-Hilliard equation, which specifies a diffuse interface between the two phases. Customized numerical approaches required to solve this equation are absent from computing environments often used for systems biology, however, and the equation\u0027s interfacial energy coefficient lacks empirical constraints. Here, using two complementary numerical strategies, we built stable, self-consistent Cahn-Hilliard solvers in three common systems-biology programming languages. The algorithms simulated the complete time evolution of condensed droplets as they dissolved or persisted, relating critical equilibrium droplet size to the Cahn-Hilliard interfacial energy coefficient. We applied this universal relationship to the chromosomal passenger complex, a multi-protein assembly that reportedly condenses on mitotic chromosomes. The fully constrained Cahn-Hilliard simulations predicted spatiotemporal dewetting and coarsening behaviors that matched experiments in cell types with different interfacial energy coefficients. Together, these results suggest how initially variegated recruitment yields robust localization of the chromosomal passenger complex to the inner centromere by the end of prometaphase. More generally, the Cahn-Hilliard equation tests whether condensate dynamics behave as a simple phase-separated liquid, and its numerical solutions advance generalized modeling of biomolecular systems.", "abstract_zh": "\u751f\u7269\u5206\u5b50\u51dd\u805a\u4f53\u5f62\u6210\u52a8\u6001\u7684\u4e9a\u7ec6\u80de\u533a\u5ba4\uff0c\u6539\u53d8\u5176\u5468\u56f4\u7f51\u7edc\u7684\u7cfb\u7edf\u7ea7\u7279\u6027\u3002\u7cfb\u7edf\u751f\u7269\u5b66\u6807\u51c6\u7684\u53cd\u5e94-\u6269\u6563\u6a21\u578b\u65e0\u6cd5\u754c\u5b9a\u8fd9\u4e9b\u533a\u5ba4\u7684\u4ea7\u751f\uff0c\u4e5f\u4e0d\u80fd\u8ffd\u8e2a\u5176\u6f14\u53d8\u3002\u4e00\u79cd\u63cf\u8ff0\u53ef\u6eb6\u6001\u4e0e\u51dd\u805a\u6001\u65f6\u7a7a\u53d8\u5316\u7684\u7269\u7406\u5316\u5b66\u66ff\u4ee3\u6a21\u578b\u662f Cahn-Hilliard \u65b9\u7a0b\uff0c\u8be5\u65b9\u7a0b\u89c4\u5b9a\u4e86\u4e24\u76f8\u4e4b\u95f4\u5b58\u5728\u4e00\u4e2a\u6269\u6563\u754c\u9762\u3002\u7136\u800c\uff0c\u7cfb\u7edf\u751f\u7269\u5b66\u5e38\u7528\u8ba1\u7b97\u73af\u5883\u4e2d\u7f3a\u4e4f\u6c42\u89e3\u8be5\u65b9\u7a0b\u6240\u9700\u7684\u5b9a\u5236\u6570\u503c\u65b9\u6cd5\uff0c\u4e14\u65b9\u7a0b\u4e2d\u7684\u754c\u9762\u80fd\u7cfb\u6570\u7f3a\u4e4f\u7ecf\u9a8c\u7ea6\u675f\u3002\u5728\u6b64\uff0c\u6211\u4eec\u8fd0\u7528\u4e24\u79cd\u4e92\u8865\u7684\u6570\u503c\u7b56\u7565\uff0c\u5728\u4e09\u79cd\u5e38\u89c1\u7684\u7cfb\u7edf\u751f\u7269\u5b66\u7f16\u7a0b\u8bed\u8a00\u4e2d\u6784\u5efa\u4e86\u7a33\u5b9a\u3001\u81ea\u6d3d\u7684 Cahn-Hilliard \u6c42\u89e3\u5668\u3002\u8fd9\u4e9b\u7b97\u6cd5\u6a21\u62df\u4e86\u51dd\u805a\u6db2\u6ef4\u6eb6\u89e3\u6216\u6301\u7eed\u5b58\u5728\u7684\u5b8c\u6574\u65f6\u95f4\u6f14\u5316\u8fc7\u7a0b\uff0c\u5c06\u4e34\u754c\u5e73\u8861\u6db2\u6ef4\u5c3a\u5bf8\u4e0e Cahn-Hilliard \u754c\u9762\u80fd\u7cfb\u6570\u5173\u8054\u8d77\u6765\u3002\u6211\u4eec\u5c06\u8fd9\u4e00\u666e\u9002\u5173\u7cfb\u5e94\u7528\u4e8e\u67d3\u8272\u4f53\u4e58\u5ba2\u590d\u5408\u4f53\uff08chromosomal passenger complex\uff09\uff0c\u8be5\u591a\u86cb\u767d\u7ec4\u88c5\u4f53\u636e\u62a5\u9053\u5728\u6709\u4e1d\u5206\u88c2\u67d3\u8272\u4f53\u4e0a\u53d1\u751f\u51dd\u805a\u3002\u5b8c\u5168\u7ea6\u675f\u7684 Cahn-Hilliard \u6a21\u62df\u9884\u6d4b\u4e86\u65f6\u7a7a\u53bb\u6da6\u6e7f\u548c\u7c97\u5316\u884c\u4e3a\uff0c\u4e0e\u5177\u6709\u4e0d\u540c\u754c\u9762\u80fd\u7cfb\u6570\u7684\u7ec6\u80de\u7c7b\u578b\u4e2d\u7684\u5b9e\u9a8c\u7ed3\u679c\u76f8\u543b\u5408\u3002\u8fd9\u4e9b\u7ed3\u679c\u5171\u540c\u8868\u660e\uff0c\u6700\u521d\u6591\u9a73\u4e0d\u5747\u7684\u62db\u52df\u5982\u4f55\u5728\u524d\u4e2d\u671f\u7ed3\u675f\u65f6\u4f7f\u67d3\u8272\u4f53\u4e58\u5ba2\u590d\u5408\u4f53\u7a33\u5065\u5730\u5b9a\u4f4d\u4e8e\u5185\u7740\u4e1d\u7c92\u3002\u66f4\u5e7f\u6cdb\u800c\u8a00\uff0cCahn-Hilliard \u65b9\u7a0b\u53ef\u7528\u4e8e\u68c0\u9a8c\u51dd\u805a\u4f53\u52a8\u529b\u5b66\u662f\u5426\u8868\u73b0\u4e3a\u7b80\u5355\u76f8\u5206\u79bb\u6db2\u4f53\uff0c\u5176\u6570\u503c\u89e3\u5219\u63a8\u8fdb\u4e86\u751f\u7269\u5206\u5b50\u7cfb\u7edf\u7684\u5e7f\u4e49\u5efa\u6a21\u3002", "authors": ["Groves Sarah M", "Lu Min-Jhe", "Alvarez-Yela Astrid Catalina", "Gerardo-Ram\u00edrez Monserrat", "Stukenberg P Todd", "Lowengrub John S", "et al."], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": ["\u5728\u4e09\u79cd\u7cfb\u7edf\u751f\u7269\u5b66\u8bed\u8a00\u4e2d\u6784\u5efa\u4e86\u7a33\u5b9a\u81ea\u6d3d\u7684 Cahn-Hilliard \u6c42\u89e3\u5668\u3002", "\u5efa\u7acb\u4e86\u754c\u9762\u80fd\u7cfb\u6570\u4e0e\u4e34\u754c\u5e73\u8861\u6db2\u6ef4\u5c3a\u5bf8\u7684\u5b9a\u91cf\u5173\u7cfb\uff0c\u53ef\u9884\u6d4b\u51dd\u805a\u4f53\u547d\u8fd0\u3002", "\u5bf9\u67d3\u8272\u4f53\u4e58\u5ba2\u590d\u5408\u4f53\u7684\u6a21\u62df\u63ed\u793a\u4e86\u53bb\u6da6\u6e7f\u548c\u7c97\u5316\u884c\u4e3a\uff0c\u9610\u660e\u5176\u5185\u7740\u4e1d\u7c92\u7a33\u5065\u5b9a\u4f4d\u673a\u5236\u3002"], "pmid": "42546066", "pub_date": "2026-Aug", "title": "Cell-specific Cahn-Hilliard models predict condensed fates of the chromosomal passenger complex.", "url": "https://doi.org/10.1371/journal.pcbi.1014568", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Aug</span>
+        <button class="fav-btn"
+                data-pmid="42546066"
+                onclick="toggleFavorite('42546066', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42546066"
+                onclick="toggleDislike('42546066', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014568" target="_blank" rel="noopener noreferrer">Cell-specific Cahn-Hilliard models predict condensed fates of the chromosomal passenger complex.</a>
+      </h2>
+
+      <p class="paper-authors">Groves Sarah M &middot; Lu Min-Jhe &middot; Alvarez-Yela Astrid Catalina &middot; Gerardo-Ramírez Monserrat &middot; Stukenberg P Todd &middot; Lowengrub John S &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42546066', 'zh-42546066')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42546066', 'en-42546066')">中文</button>
+        </div>
+        <div id="en-42546066" class="abstract-text active">Biomolecular condensates create dynamic subcellular compartments that alter systems-level properties of the networks surrounding them. Standard reaction-diffusion models of systems biology cannot define where these compartments emerge nor track how they evolve. One alternative physicochemical model of soluble and condensed states in space and time is the Cahn-Hilliard equation, which specifies a diffuse interface between the two phases. Customized numerical approaches required to solve this equation are absent from computing environments often used for systems biology, however, and the equation's interfacial energy coefficient lacks empirical constraints. Here, using two complementary numerical strategies, we built stable, self-consistent Cahn-Hilliard solvers in three common systems-biology programming languages. The algorithms simulated the complete time evolution of condensed droplets as they dissolved or persisted, relating critical equilibrium droplet size to the Cahn-Hilliard interfacial energy coefficient. We applied this universal relationship to the chromosomal passenger complex, a multi-protein assembly that reportedly condenses on mitotic chromosomes. The fully constrained Cahn-Hilliard simulations predicted spatiotemporal dewetting and coarsening behaviors that matched experiments in cell types with different interfacial energy coefficients. Together, these results suggest how initially variegated recruitment yields robust localization of the chromosomal passenger complex to the inner centromere by the end of prometaphase. More generally, the Cahn-Hilliard equation tests whether condensate dynamics behave as a simple phase-separated liquid, and its numerical solutions advance generalized modeling of biomolecular systems.</div>
+        <div id="zh-42546066" class="abstract-text">生物分子凝聚体形成动态的亚细胞区室，改变其周围网络的系统级特性。系统生物学标准的反应-扩散模型无法界定这些区室的产生，也不能追踪其演变。一种描述可溶态与凝聚态时空变化的物理化学替代模型是 Cahn-Hilliard 方程，该方程规定了两相之间存在一个扩散界面。然而，系统生物学常用计算环境中缺乏求解该方程所需的定制数值方法，且方程中的界面能系数缺乏经验约束。在此，我们运用两种互补的数值策略，在三种常见的系统生物学编程语言中构建了稳定、自洽的 Cahn-Hilliard 求解器。这些算法模拟了凝聚液滴溶解或持续存在的完整时间演化过程，将临界平衡液滴尺寸与 Cahn-Hilliard 界面能系数关联起来。我们将这一普适关系应用于染色体乘客复合体（chromosomal passenger complex），该多蛋白组装体据报道在有丝分裂染色体上发生凝聚。完全约束的 Cahn-Hilliard 模拟预测了时空去润湿和粗化行为，与具有不同界面能系数的细胞类型中的实验结果相吻合。这些结果共同表明，最初斑驳不均的招募如何在前中期结束时使染色体乘客复合体稳健地定位于内着丝粒。更广泛而言，Cahn-Hilliard 方程可用于检验凝聚体动力学是否表现为简单相分离液体，其数值解则推进了生物分子系统的广义建模。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>在三种系统生物学语言中构建了稳定自洽的 Cahn-Hilliard 求解器。</li>
+          
+          <li>建立了界面能系数与临界平衡液滴尺寸的定量关系，可预测凝聚体命运。</li>
+          
+          <li>对染色体乘客复合体的模拟揭示了去润湿和粗化行为，阐明其内着丝粒稳健定位机制。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014568" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Models, Biological</span>
+          
+          <span class="kw-tag">Algorithms</span>
+          
+          <span class="kw-tag">Computer Simulation</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42546042"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Nosocomial transmission of respiratory infections poses a major threat to patient safety, while also affecting healthcare workers\u0027 (HCW) health, generating substantial costs for hospitals. These infections spread through both close-proximity interactions at short distances, and via aerosols that remain suspended in the air, enabling long-range transmission within a room when a susceptible individual is at a distance from an infectious individual. The relative contribution of each transmission route is pathogen-dependent. However, models distinguishing them remain scarce, limiting the design of effective intervention strategies. Here, we propose a novel agent-based stochastic model of respiratory pathogen transmission in a hospital ward that integrates both transmission routes together with contact patterns and individual movements. After informing our model with real close-proximity interaction data collected in two French intensive care units, we simulate a range of combinations of short- and long-range transmission levels to investigate their differences. Selecting parameter values that keep overall ward transmission intensity stable across combinations, the model is used to further evaluate the impact of intervention strategies on incidence risk. We find that the predominance of one route over another has little effect on overall outbreak dynamics, though the impact on individuals varies markedly. Patients are mostly at risk of short-range transmission from HCWs, while HCWs are mostly affected by whichever route is predominant. This directly influences intervention effectiveness. Universal masking emerges as the most effective strategy, reducing both transmission routes. Its stringency can be relaxed with limited loss of effectiveness when combined with ventilation in relevant rooms. Importantly, interventions targeting HCWs, notably ventilation in rooms not accessible to patients, indirectly reduces incidence in patients, with a stronger effect when coupled with relaxed masking interventions. Finally, intervention ranking remains robust across parameter values, as confirmed by a sensitivity analysis. This new model highlights the importance of explicitly considering physical mechanisms of transmission, and the need for interventions that remain effective irrespective of pathogen characteristics and ward organization.", "abstract_zh": "\u547c\u5438\u7cfb\u7edf\u611f\u67d3\u7684\u9662\u5185\u4f20\u64ad\u5bf9\u60a3\u8005\u5b89\u5168\u6784\u6210\u91cd\u5927\u5a01\u80c1\uff0c\u540c\u65f6\u5f71\u54cd\u533b\u62a4\u4eba\u5458\u5065\u5eb7\uff0c\u7ed9\u533b\u9662\u5e26\u6765\u5de8\u5927\u6210\u672c\u3002\u8fd9\u4e9b\u611f\u67d3\u65e2\u901a\u8fc7\u8fd1\u8ddd\u79bb\u63a5\u89e6\u4f20\u64ad\uff0c\u4e5f\u901a\u8fc7\u60ac\u6d6e\u6c14\u6eb6\u80f6\u5b9e\u73b0\u5ba4\u5185\u8fdc\u8ddd\u79bb\u4f20\u64ad\uff0c\u5f53\u6613\u611f\u8005\u4e0e\u611f\u67d3\u8005\u76f8\u8ddd\u8f83\u8fdc\u65f6\u3002\u6bcf\u79cd\u4f20\u64ad\u9014\u5f84\u7684\u76f8\u5bf9\u8d21\u732e\u53d6\u51b3\u4e8e\u75c5\u539f\u4f53\uff0c\u4f46\u533a\u5206\u4e24\u8005\u7684\u6a21\u578b\u7a00\u7f3a\uff0c\u9650\u5236\u4e86\u6709\u6548\u5e72\u9884\u7b56\u7565\u7684\u8bbe\u8ba1\u3002\u672c\u6587\u63d0\u51fa\u4e00\u4e2a\u65b0\u9896\u7684\u57fa\u4e8e\u4e3b\u4f53\u7684\u968f\u673a\u6a21\u578b\uff0c\u6574\u5408\u4e24\u79cd\u4f20\u64ad\u9014\u5f84\u3001\u63a5\u89e6\u6a21\u5f0f\u4e0e\u4e2a\u4eba\u79fb\u52a8\uff0c\u5e76\u5229\u7528\u4e24\u4e2a\u6cd5\u56fd\u91cd\u75c7\u76d1\u62a4\u5ba4\u7684\u771f\u5b9e\u8fd1\u8ddd\u79bb\u4e92\u52a8\u6570\u636e\u5efa\u6a21\u3002\u901a\u8fc7\u6a21\u62df\u77ed\u8ddd\u79bb\u4e0e\u8fdc\u8ddd\u79bb\u4f20\u64ad\u6c34\u5e73\u7684\u591a\u79cd\u7ec4\u5408\uff0c\u5728\u4fdd\u6301\u6574\u4f53\u4f20\u64ad\u5f3a\u5ea6\u7a33\u5b9a\u7684\u53c2\u6570\u4e0b\u8bc4\u4f30\u5e72\u9884\u7b56\u7565\u5bf9\u53d1\u75c5\u98ce\u9669\u7684\u5f71\u54cd\u3002\u7814\u7a76\u53d1\u73b0\uff0c\u4e00\u79cd\u9014\u5f84\u7684\u4e3b\u5bfc\u6027\u5bf9\u6574\u4f53\u75ab\u60c5\u52a8\u6001\u5f71\u54cd\u4e0d\u5927\uff0c\u4f46\u4e2a\u4f53\u5f71\u54cd\u5dee\u5f02\u663e\u8457\uff1a\u60a3\u8005\u4e3b\u8981\u9762\u4e34\u6765\u81ea\u533b\u62a4\u4eba\u5458\u7684\u77ed\u8ddd\u79bb\u4f20\u64ad\u98ce\u9669\uff0c\u800c\u533b\u62a4\u4eba\u5458\u4e3b\u8981\u53d7\u4e3b\u5bfc\u9014\u5f84\u5f71\u54cd\u3002\u666e\u904d\u6234\u53e3\u7f69\u662f\u6700\u6709\u6548\u7684\u7b56\u7565\uff0c\u53ef\u540c\u65f6\u51cf\u5c11\u4e24\u79cd\u4f20\u64ad\u9014\u5f84\uff1b\u7ed3\u5408\u7279\u5b9a\u623f\u95f4\u901a\u98ce\u65f6\uff0c\u53ef\u9002\u5ea6\u653e\u5bbd\u53e3\u7f69\u4e25\u683c\u6027\u800c\u6548\u679c\u635f\u5931\u6709\u9650\u3002\u9488\u5bf9\u533b\u62a4\u4eba\u5458\u7684\u5e72\u9884\uff0c\u5982\u60a3\u8005\u4e0d\u53ef\u8fdb\u5165\u623f\u95f4\u7684\u901a\u98ce\uff0c\u53ef\u95f4\u63a5\u964d\u4f4e\u60a3\u8005\u53d1\u75c5\u7387\uff0c\u4e0e\u5bbd\u677e\u53e3\u7f69\u7b56\u7565\u534f\u540c\u6548\u5e94\u66f4\u5f3a\u3002\u654f\u611f\u6027\u5206\u6790\u8bc1\u5b9e\u5e72\u9884\u6392\u5e8f\u5728\u4e0d\u540c\u53c2\u6570\u503c\u4e0b\u4fdd\u6301\u7a33\u5065\u3002\u8be5\u6a21\u578b\u51f8\u663e\u4e86\u660e\u786e\u8003\u8651\u4f20\u64ad\u7269\u7406\u673a\u5236\u7684\u91cd\u8981\u6027\uff0c\u5e76\u6307\u51fa\u9700\u8981\u4e0d\u53d7\u75c5\u539f\u4f53\u7279\u5f81\u548c\u75c5\u623f\u7ec4\u7ec7\u5f71\u54cd\u7684\u666e\u9002\u5e72\u9884\u63aa\u65bd\u3002", "authors": ["Gaufr\u00e8s Olivier", "Leclerc Quentin J", "Derdevet Julien", "Shirreff George", "Kern\u00e9is Solen", "Opatowski Lulla", "et al."], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": ["\u60a3\u8005\u4e3b\u8981\u627f\u53d7\u6765\u81ea\u533b\u62a4\u4eba\u5458\u7684\u77ed\u8ddd\u79bb\u4f20\u64ad\u98ce\u9669\uff0c\u800c\u533b\u62a4\u4eba\u5458\u98ce\u9669\u53d6\u51b3\u4e8e\u4e3b\u5bfc\u4f20\u64ad\u9014\u5f84\uff0c\u4e0d\u540c\u9014\u5f84\u5bf9\u4e2a\u4f53\u5f71\u54cd\u5dee\u5f02\u663e\u8457\u3002", "\u666e\u904d\u6234\u53e3\u7f69\u662f\u51cf\u5c11\u4e24\u79cd\u4f20\u64ad\u9014\u5f84\u7684\u6700\u6709\u6548\u5355\u4e00\u7b56\u7565\uff0c\u7ed3\u5408\u901a\u98ce\u53ef\u9002\u5ea6\u653e\u5bbd\u53e3\u7f69\u8981\u6c42\u800c\u6548\u679c\u635f\u5931\u6709\u9650\u3002", "\u9488\u5bf9\u533b\u62a4\u4eba\u5458\u7684\u7a7a\u95f4\u901a\u98ce\u7b49\u5e72\u9884\u53ef\u95f4\u63a5\u964d\u4f4e\u60a3\u8005\u53d1\u75c5\u7387\uff0c\u4e0e\u53e3\u7f69\u7b56\u7565\u534f\u540c\u4f5c\u7528\u66f4\u5f3a\uff0c\u4e14\u5e72\u9884\u6548\u679c\u6392\u5e8f\u5bf9\u4e0d\u540c\u53c2\u6570\u7a33\u5065\u3002"], "pmid": "42546042", "pub_date": "2026-Aug-03", "title": "Accounting for the long-distance transmission route: An epidemiological model of airborne disease transmission in hospitals.", "url": "https://doi.org/10.1371/journal.pcbi.1014564", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Aug-03</span>
+        <button class="fav-btn"
+                data-pmid="42546042"
+                onclick="toggleFavorite('42546042', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42546042"
+                onclick="toggleDislike('42546042', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014564" target="_blank" rel="noopener noreferrer">Accounting for the long-distance transmission route: An epidemiological model of airborne disease transmission in hospitals.</a>
+      </h2>
+
+      <p class="paper-authors">Gaufrès Olivier &middot; Leclerc Quentin J &middot; Derdevet Julien &middot; Shirreff George &middot; Kernéis Solen &middot; Opatowski Lulla &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42546042', 'zh-42546042')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42546042', 'en-42546042')">中文</button>
+        </div>
+        <div id="en-42546042" class="abstract-text active">Nosocomial transmission of respiratory infections poses a major threat to patient safety, while also affecting healthcare workers' (HCW) health, generating substantial costs for hospitals. These infections spread through both close-proximity interactions at short distances, and via aerosols that remain suspended in the air, enabling long-range transmission within a room when a susceptible individual is at a distance from an infectious individual. The relative contribution of each transmission route is pathogen-dependent. However, models distinguishing them remain scarce, limiting the design of effective intervention strategies. Here, we propose a novel agent-based stochastic model of respiratory pathogen transmission in a hospital ward that integrates both transmission routes together with contact patterns and individual movements. After informing our model with real close-proximity interaction data collected in two French intensive care units, we simulate a range of combinations of short- and long-range transmission levels to investigate their differences. Selecting parameter values that keep overall ward transmission intensity stable across combinations, the model is used to further evaluate the impact of intervention strategies on incidence risk. We find that the predominance of one route over another has little effect on overall outbreak dynamics, though the impact on individuals varies markedly. Patients are mostly at risk of short-range transmission from HCWs, while HCWs are mostly affected by whichever route is predominant. This directly influences intervention effectiveness. Universal masking emerges as the most effective strategy, reducing both transmission routes. Its stringency can be relaxed with limited loss of effectiveness when combined with ventilation in relevant rooms. Importantly, interventions targeting HCWs, notably ventilation in rooms not accessible to patients, indirectly reduces incidence in patients, with a stronger effect when coupled with relaxed masking interventions. Finally, intervention ranking remains robust across parameter values, as confirmed by a sensitivity analysis. This new model highlights the importance of explicitly considering physical mechanisms of transmission, and the need for interventions that remain effective irrespective of pathogen characteristics and ward organization.</div>
+        <div id="zh-42546042" class="abstract-text">呼吸系统感染的院内传播对患者安全构成重大威胁，同时影响医护人员健康，给医院带来巨大成本。这些感染既通过近距离接触传播，也通过悬浮气溶胶实现室内远距离传播，当易感者与感染者相距较远时。每种传播途径的相对贡献取决于病原体，但区分两者的模型稀缺，限制了有效干预策略的设计。本文提出一个新颖的基于主体的随机模型，整合两种传播途径、接触模式与个人移动，并利用两个法国重症监护室的真实近距离互动数据建模。通过模拟短距离与远距离传播水平的多种组合，在保持整体传播强度稳定的参数下评估干预策略对发病风险的影响。研究发现，一种途径的主导性对整体疫情动态影响不大，但个体影响差异显著：患者主要面临来自医护人员的短距离传播风险，而医护人员主要受主导途径影响。普遍戴口罩是最有效的策略，可同时减少两种传播途径；结合特定房间通风时，可适度放宽口罩严格性而效果损失有限。针对医护人员的干预，如患者不可进入房间的通风，可间接降低患者发病率，与宽松口罩策略协同效应更强。敏感性分析证实干预排序在不同参数值下保持稳健。该模型凸显了明确考虑传播物理机制的重要性，并指出需要不受病原体特征和病房组织影响的普适干预措施。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>患者主要承受来自医护人员的短距离传播风险，而医护人员风险取决于主导传播途径，不同途径对个体影响差异显著。</li>
+          
+          <li>普遍戴口罩是减少两种传播途径的最有效单一策略，结合通风可适度放宽口罩要求而效果损失有限。</li>
+          
+          <li>针对医护人员的空间通风等干预可间接降低患者发病率，与口罩策略协同作用更强，且干预效果排序对不同参数稳健。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014564" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42546041"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "OBJECTIVE: Reentrant arrhythmias are life-threatening cardiac events that are difficult to study due to limited experimental control over the complex circuit dynamics. We present a real-time coupled cardiac system that allows in real-time dynamic manipulation of reentrant pathways in vitro using physiologically relevant simulations. METHODS: We designed a closed-feedback loop system that couples a cultured cardiac monolayer with a two-dimensional computational simulation of cardiac tissue. The simulation, based on GPU-accelerated models (e.g., cellular automata), predicts wave propagation in real-time using the Abubu.js library. Optical mapping captures monolayer activation patterns, and simulation outputs are converted into light-based stimulation via optogenetics, using LEDs and microcontrollers to depolarize cardiac tissue. RESULTS: Our platform is capable of accurately detecting and responding to electrical waves in real-time, enabling interactive modulation of reentrant circuits. The system replaces traditional fixed-delay stimulation protocols with computationally guided interventions, better mimicking physiological conduction dynamics. CONCLUSION: This coupled system provides a novel and responsive method to study reentrant arrhythmias. Its integration of optical stimulation, real-time modeling, and tissue feedback enables the construction of user-defined reentry pathways and dynamic interaction with reentrant circuit behavior. SIGNIFICANCE: By merging computational and biological systems, this work introduces a versatile experimental framework for investigating arrhythmias. Built from inexpensive and accessible components, it lowers technical and financial barriers, increasing accessibility across a broad range of researchers and research environments. The platform may inform future control and anti-arrhythmic strategies and pave the way for personalized cardiac electrophysiology studies.", "abstract_zh": "\u76ee\u7684\uff1a\u6298\u8fd4\u6027\u5fc3\u5f8b\u5931\u5e38\u662f\u5371\u53ca\u751f\u547d\u7684\u5fc3\u810f\u4e8b\u4ef6\uff0c\u7531\u4e8e\u5bf9\u590d\u6742\u73af\u8def\u52a8\u529b\u5b66\u7684\u5b9e\u9a8c\u63a7\u5236\u6709\u9650\u800c\u96be\u4ee5\u7814\u7a76\u3002\u6211\u4eec\u63d0\u51fa\u4e00\u79cd\u5b9e\u65f6\u8026\u5408\u5fc3\u810f\u7cfb\u7edf\uff0c\u53ef\u5229\u7528\u751f\u7406\u76f8\u5173\u7684\u4eff\u771f\u5bf9\u4f53\u5916\u6298\u8fd4\u901a\u8def\u8fdb\u884c\u5b9e\u65f6\u52a8\u6001\u8c03\u63a7\u3002\u65b9\u6cd5\uff1a\u6211\u4eec\u8bbe\u8ba1\u4e86\u4e00\u4e2a\u95ed\u73af\u53cd\u9988\u7cfb\u7edf\uff0c\u5c06\u57f9\u517b\u7684\u5fc3\u808c\u5355\u5c42\u7ec6\u80de\u4e0e\u5fc3\u810f\u7ec4\u7ec7\u7684\u4e8c\u7ef4\u8ba1\u7b97\u4eff\u771f\u8026\u5408\u3002\u8be5\u4eff\u771f\u57fa\u4e8eGPU\u52a0\u901f\u6a21\u578b\uff08\u5982\u7ec6\u80de\u81ea\u52a8\u673a\uff09\uff0c\u4f7f\u7528Abubu.js\u5e93\u5b9e\u65f6\u9884\u6d4b\u6ce2\u4f20\u64ad\u3002\u5149\u5b66\u6807\u6d4b\u6355\u83b7\u5355\u5c42\u7ec6\u80de\u6fc0\u6d3b\u6a21\u5f0f\uff0c\u4eff\u771f\u8f93\u51fa\u901a\u8fc7\u5149\u9057\u4f20\u5b66\u8f6c\u5316\u4e3a\u57fa\u4e8e\u5149\u7684\u523a\u6fc0\uff0c\u4f7f\u7528LED\u548c\u5fae\u63a7\u5236\u5668\u4f7f\u5fc3\u810f\u7ec4\u7ec7\u53bb\u6781\u5316\u3002\u7ed3\u679c\uff1a\u6211\u4eec\u7684\u5e73\u53f0\u80fd\u591f\u51c6\u786e\u68c0\u6d4b\u5e76\u5b9e\u65f6\u54cd\u5e94\u7535\u6ce2\uff0c\u5b9e\u73b0\u6298\u8fd4\u73af\u8def\u7684\u4ea4\u4e92\u5f0f\u8c03\u63a7\u3002\u8be5\u7cfb\u7edf\u7528\u8ba1\u7b97\u5f15\u5bfc\u7684\u5e72\u9884\u53d6\u4ee3\u4e86\u4f20\u7edf\u7684\u56fa\u5b9a\u5ef6\u8fdf\u523a\u6fc0\u65b9\u6848\uff0c\u66f4\u597d\u5730\u6a21\u62df\u4e86\u751f\u7406\u4f20\u5bfc\u52a8\u529b\u5b66\u3002\u7ed3\u8bba\uff1a\u8fd9\u4e00\u8026\u5408\u7cfb\u7edf\u4e3a\u7814\u7a76\u6298\u8fd4\u6027\u5fc3\u5f8b\u5931\u5e38\u63d0\u4f9b\u4e86\u4e00\u79cd\u65b0\u9896\u4e14\u54cd\u5e94\u5f0f\u7684\u65b9\u6cd5\u3002\u5b83\u6574\u5408\u4e86\u5149\u523a\u6fc0\u3001\u5b9e\u65f6\u5efa\u6a21\u548c\u7ec4\u7ec7\u53cd\u9988\uff0c\u80fd\u591f\u6784\u5efa\u7528\u6237\u5b9a\u4e49\u7684\u6298\u8fd4\u901a\u8def\uff0c\u5e76\u4e0e\u6298\u8fd4\u73af\u8def\u884c\u4e3a\u8fdb\u884c\u52a8\u6001\u4ea4\u4e92\u3002\u610f\u4e49\uff1a\u901a\u8fc7\u878d\u5408\u8ba1\u7b97\u7cfb\u7edf\u4e0e\u751f\u7269\u7cfb\u7edf\uff0c\u672c\u5de5\u4f5c\u5f15\u5165\u4e86\u4e00\u4e2a\u591a\u529f\u80fd\u5b9e\u9a8c\u6846\u67b6\u6765\u7814\u7a76\u5fc3\u5f8b\u5931\u5e38\u3002\u8be5\u7cfb\u7edf\u7531\u5ec9\u4ef7\u6613\u5f97\u7684\u7ec4\u4ef6\u642d\u5efa\uff0c\u964d\u4f4e\u4e86\u6280\u672f\u548c\u8d44\u91d1\u95e8\u69db\uff0c\u63d0\u9ad8\u4e86\u5e7f\u5927\u7814\u7a76\u4eba\u5458\u548c\u7814\u7a76\u73af\u5883\u7684\u53ef\u53ca\u6027\u3002\u8be5\u5e73\u53f0\u53ef\u80fd\u4e3a\u672a\u6765\u7684\u63a7\u5236\u548c\u6297\u5fc3\u5f8b\u5931\u5e38\u7b56\u7565\u63d0\u4f9b\u53c2\u8003\uff0c\u5e76\u4e3a\u4e2a\u6027\u5316\u5fc3\u810f\u7535\u751f\u7406\u5b66\u7814\u7a76\u94fa\u5e73\u9053\u8def\u3002", "authors": ["Valibeigi Younes", "Kaboudian Abouzar", "Fenton Flavio", "Bub Gil"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": ["\u5e73\u53f0\u5b9e\u65f6\u68c0\u6d4b\u5e76\u54cd\u5e94\u7535\u6ce2\uff0c\u53ef\u4ea4\u4e92\u8c03\u63a7\u6298\u8fd4\u73af\u8def\u3002", "\u7528\u8ba1\u7b97\u5f15\u5bfc\u7684\u5e72\u9884\u53d6\u4ee3\u56fa\u5b9a\u5ef6\u8fdf\u523a\u6fc0\uff0c\u66f4\u51c6\u786e\u6a21\u62df\u751f\u7406\u4f20\u5bfc\u3002", "\u6574\u5408\u5149\u523a\u6fc0\u3001\u5b9e\u65f6\u5efa\u6a21\u4e0e\u7ec4\u7ec7\u53cd\u9988\uff0c\u53ef\u6784\u5efa\u7528\u6237\u5b9a\u4e49\u7684\u6298\u8fd4\u901a\u8def\u3002"], "pmid": "42546041", "pub_date": "2026-Aug", "title": "Real-time GPU-accelerated coupled cardiac system: Integrating bidirectional interactions between living optogenetic monolayers and computational simulations.", "url": "https://doi.org/10.1371/journal.pcbi.1014590", "week": "2026-W33"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Aug</span>
+        <button class="fav-btn"
+                data-pmid="42546041"
+                onclick="toggleFavorite('42546041', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42546041"
+                onclick="toggleDislike('42546041', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014590" target="_blank" rel="noopener noreferrer">Real-time GPU-accelerated coupled cardiac system: Integrating bidirectional interactions between living optogenetic monolayers and computational simulations.</a>
+      </h2>
+
+      <p class="paper-authors">Valibeigi Younes &middot; Kaboudian Abouzar &middot; Fenton Flavio &middot; Bub Gil</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42546041', 'zh-42546041')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42546041', 'en-42546041')">中文</button>
+        </div>
+        <div id="en-42546041" class="abstract-text active">OBJECTIVE: Reentrant arrhythmias are life-threatening cardiac events that are difficult to study due to limited experimental control over the complex circuit dynamics. We present a real-time coupled cardiac system that allows in real-time dynamic manipulation of reentrant pathways in vitro using physiologically relevant simulations. METHODS: We designed a closed-feedback loop system that couples a cultured cardiac monolayer with a two-dimensional computational simulation of cardiac tissue. The simulation, based on GPU-accelerated models (e.g., cellular automata), predicts wave propagation in real-time using the Abubu.js library. Optical mapping captures monolayer activation patterns, and simulation outputs are converted into light-based stimulation via optogenetics, using LEDs and microcontrollers to depolarize cardiac tissue. RESULTS: Our platform is capable of accurately detecting and responding to electrical waves in real-time, enabling interactive modulation of reentrant circuits. The system replaces traditional fixed-delay stimulation protocols with computationally guided interventions, better mimicking physiological conduction dynamics. CONCLUSION: This coupled system provides a novel and responsive method to study reentrant arrhythmias. Its integration of optical stimulation, real-time modeling, and tissue feedback enables the construction of user-defined reentry pathways and dynamic interaction with reentrant circuit behavior. SIGNIFICANCE: By merging computational and biological systems, this work introduces a versatile experimental framework for investigating arrhythmias. Built from inexpensive and accessible components, it lowers technical and financial barriers, increasing accessibility across a broad range of researchers and research environments. The platform may inform future control and anti-arrhythmic strategies and pave the way for personalized cardiac electrophysiology studies.</div>
+        <div id="zh-42546041" class="abstract-text">目的：折返性心律失常是危及生命的心脏事件，由于对复杂环路动力学的实验控制有限而难以研究。我们提出一种实时耦合心脏系统，可利用生理相关的仿真对体外折返通路进行实时动态调控。方法：我们设计了一个闭环反馈系统，将培养的心肌单层细胞与心脏组织的二维计算仿真耦合。该仿真基于GPU加速模型（如细胞自动机），使用Abubu.js库实时预测波传播。光学标测捕获单层细胞激活模式，仿真输出通过光遗传学转化为基于光的刺激，使用LED和微控制器使心脏组织去极化。结果：我们的平台能够准确检测并实时响应电波，实现折返环路的交互式调控。该系统用计算引导的干预取代了传统的固定延迟刺激方案，更好地模拟了生理传导动力学。结论：这一耦合系统为研究折返性心律失常提供了一种新颖且响应式的方法。它整合了光刺激、实时建模和组织反馈，能够构建用户定义的折返通路，并与折返环路行为进行动态交互。意义：通过融合计算系统与生物系统，本工作引入了一个多功能实验框架来研究心律失常。该系统由廉价易得的组件搭建，降低了技术和资金门槛，提高了广大研究人员和研究环境的可及性。该平台可能为未来的控制和抗心律失常策略提供参考，并为个性化心脏电生理学研究铺平道路。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>平台实时检测并响应电波，可交互调控折返环路。</li>
+          
+          <li>用计算引导的干预取代固定延迟刺激，更准确模拟生理传导。</li>
+          
+          <li>整合光刺激、实时建模与组织反馈，可构建用户定义的折返通路。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014590" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Optogenetics</span>
+          
+          <span class="kw-tag">Computer Simulation</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+  </div>
+  
+
+  <!-- Archive section -->
+<div class="archive-section" id="archive-section">
+  <!-- Archive view toggle: shows archived papers inline in the main grid when active -->
+  <button class="archive-toggle" onclick="toggleArchiveView()" id="archive-toggle-btn">
+    <span id="archive-toggle-label">📦 已归档论文</span> <span class="count" id="archive-count">0</span>
+  </button>
+  <!-- Inline archive view is now controlled by the main grid; no separate grid is used -->
+</div>
+</main>
+
+<footer class="site-footer">
+  <p>数据来源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed E-utilities</a>
+  &nbsp;·&nbsp; 翻译：<a href="https://api.deepseek.com" target="_blank">DeepSeek v4-pro</a>
+  &nbsp;·&nbsp; 自动生成于 2026-08-10 01:04 UTC</p>
+</footer>
+
+<script src="../assets/feedback.js"></script>
+<script>
+  // ── Tab switching ────────────────────────────────────────────
+  function switchTab(btn, showId, hideId) {
+    btn.closest('.abstract-section')
+       .querySelectorAll('.tab-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(showId).classList.add('active');
+    document.getElementById(hideId).classList.remove('active');
+  }
+
+  function getPaperData(card) {
+    const raw = card ? card.querySelector('.paper-data') : null;
+    if (!raw) return { pmid: card?.dataset?.pmid || '', week: '2026-W33' };
+
+    try {
+      return JSON.parse(raw.textContent);
+    } catch {
+      return { pmid: card?.dataset?.pmid || '', week: '2026-W33' };
+    }
+  }
+
+  function trackFeedback(signal, action, paper, metadata) {
+    if (!window.BioDigestFeedback) return;
+    window.BioDigestFeedback.track(signal, action, paper, {
+      sourcePage: 'weekly-report',
+      metadata: metadata || {},
+    });
+  }
+
+  // ── Favorites (localStorage) ─────────────────────────────────
+  const FAV_KEY = 'bio-digest-favorites';
+
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveFavs(favs) {
+    localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+  }
+
+  function toggleFavorite(pmid, btn) {
+    const card = btn.closest('.paper-card');
+    const paper = getPaperData(card);
+    const favs = getFavs();
+    if (favs[pmid]) {
+      delete favs[pmid];
+      btn.classList.remove('favorited');
+      btn.textContent = '☆';
+      btn.title = '收藏';
+      trackFeedback('favorite', 'remove', paper, { current_filter: CURRENT_FILTER });
+    } else {
+      const raw = card.querySelector('.paper-data');
+      if (raw) favs[pmid] = JSON.parse(raw.textContent);
+      btn.classList.add('favorited');
+      btn.textContent = '★';
+      btn.title = '取消收藏';
+      trackFeedback('favorite', 'add', paper, { current_filter: CURRENT_FILTER });
+    }
+    saveFavs(favs);
+    _updateFavCounters();
+    applyPaperVisibility();
+  }
+
+  function _updateFavCounters() {
+    const count = Object.keys(getFavs()).length;
+    ['fav-nav-count', 'fav-filter-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+  }
+
+  function _restoreFavButtons() {
+    const favs = getFavs();
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      if (favs[btn.dataset.pmid]) {
+        btn.classList.add('favorited');
+        btn.textContent = '★';
+        btn.title = '取消收藏';
+      }
+    });
+    _updateFavCounters();
+  }
+
+  // ── Archive / Dislike (localStorage) ─────────────────────────
+  const ARCHIVE_KEY = 'bio-digest-archive';
+  let CURRENT_FILTER = 'all';
+
+  function getArchived() {
+    try { return JSON.parse(localStorage.getItem(ARCHIVE_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveArchived(archived) {
+    localStorage.setItem(ARCHIVE_KEY, JSON.stringify(archived));
+  }
+
+  function getFilterButton(filter) {
+    return document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+  }
+
+  function setActiveFilter(filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    const activeBtn = getFilterButton(filter);
+    if (activeBtn) activeBtn.classList.add('active');
+  }
+
+  function syncArchiveUi() {
+    const count = Object.keys(getArchived()).length;
+    ['archive-nav-count', 'archive-filter-count', 'archive-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+
+    const archiveSection = document.getElementById('archive-section');
+    if (archiveSection) {
+      archiveSection.style.display = count > 0 || CURRENT_FILTER === 'archive' ? '' : 'none';
+    }
+
+    const labelEl = document.getElementById('archive-toggle-label');
+    if (labelEl) {
+      labelEl.textContent = CURRENT_FILTER === 'archive' ? '← 返回主列表' : '📦 已归档论文';
+    }
+
+    const archiveCountEl = document.getElementById('archive-count');
+    if (archiveCountEl) {
+      archiveCountEl.style.display = CURRENT_FILTER === 'archive' ? 'none' : '';
+    }
+  }
+
+  function applyPaperVisibility() {
+    const favs = getFavs();
+    const archived = getArchived();
+    const archiveMode = CURRENT_FILTER === 'archive';
+
+    document.querySelectorAll('.paper-card').forEach(card => {
+      const pmid = card.dataset.pmid;
+      const isArchived = !!archived[pmid];
+      const isFavorite = !!favs[pmid];
+      const restoreBtn = card.querySelector('.restore-btn');
+      let visible = false;
+
+      if (archiveMode) {
+        visible = isArchived;
+      } else if (CURRENT_FILTER === 'all') {
+        visible = !isArchived;
+      } else if (CURRENT_FILTER === 'fav') {
+        visible = !isArchived && isFavorite;
+      } else {
+        visible = !isArchived && card.dataset.family === CURRENT_FILTER;
+      }
+
+      card.style.display = visible ? '' : 'none';
+
+      if (isArchived && archiveMode) {
+        card.classList.remove('archived-hidden');
+        card.classList.add('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = '';
+      } else if (isArchived) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      } else {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      }
+    });
+
+    syncArchiveUi();
+  }
+
+  function toggleDislike(pmid, btn) {
+    const archived = getArchived();
+    const card = document.querySelector(`.paper-card[data-pmid="${pmid}"]`);
+    const paper = getPaperData(card);
+
+    if (archived[pmid]) {
+      delete archived[pmid];
+      btn.classList.remove('disliked');
+      btn.textContent = '✕';
+      btn.title = '不感兴趣';
+
+      if (card) {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        const rb = card.querySelector('.restore-btn');
+        if (rb) rb.remove();
+      }
+
+      saveArchived(archived);
+      trackFeedback('archive', 'remove', paper, { current_filter: CURRENT_FILTER });
+      if (CURRENT_FILTER === 'archive' && Object.keys(archived).length === 0) {
+        CURRENT_FILTER = 'all';
+        setActiveFilter('all');
+      }
+      applyPaperVisibility();
+      return;
+    }
+
+    const raw = btn.closest('.paper-card').querySelector('.paper-data');
+    if (raw) archived[pmid] = JSON.parse(raw.textContent);
+    btn.classList.add('disliked');
+    btn.textContent = '✓';
+    btn.title = '取消归档';
+
+    if (card) {
+      card.classList.add('archived-hidden');
+      if (!card.querySelector('.restore-btn')) {
+        const header = card.querySelector('.card-header');
+        if (header) {
+          const unarchiveBtn = document.createElement('button');
+          unarchiveBtn.className = 'restore-btn';
+          unarchiveBtn.textContent = '↩ 恢复';
+          unarchiveBtn.title = '恢复到主列表';
+          unarchiveBtn.onclick = function() {
+            const dBtn = card.querySelector('.dislike-btn');
+            if (dBtn) toggleDislike(pmid, dBtn);
+          };
+          header.appendChild(unarchiveBtn);
+        }
+      }
+    }
+
+    saveArchived(archived);
+    trackFeedback('archive', 'add', paper, { current_filter: CURRENT_FILTER });
+    syncArchiveUi();
+    window.setTimeout(applyPaperVisibility, 400);
+  }
+
+  function _restoreDislikeButtons() {
+    const archived = getArchived();
+    document.querySelectorAll('.dislike-btn').forEach(btn => {
+      const pmid = btn.dataset.pmid;
+      const card = btn.closest('.paper-card');
+      if (!archived[pmid]) return;
+
+      btn.classList.add('disliked');
+      btn.textContent = '✓';
+      btn.title = '取消归档';
+
+      if (card) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (!card.querySelector('.restore-btn')) {
+          const header = card.querySelector('.card-header');
+          if (header) {
+            const unarchiveBtn = document.createElement('button');
+            unarchiveBtn.className = 'restore-btn';
+            unarchiveBtn.textContent = '↩ 恢复';
+            unarchiveBtn.title = '恢复到主列表';
+            unarchiveBtn.onclick = function() {
+              const dBtn = card.querySelector('.dislike-btn');
+              if (dBtn) toggleDislike(pmid, dBtn);
+            };
+            header.appendChild(unarchiveBtn);
+          }
+        }
+      }
+    });
+    syncArchiveUi();
+  }
+
+  function setFilter(family) {
+    CURRENT_FILTER = family;
+    setActiveFilter(family);
+    applyPaperVisibility();
+  }
+
+  function toggleArchiveView() {
+    setFilter(CURRENT_FILTER === 'archive' ? 'all' : 'archive');
+  }
+
+  // ── Filter ───────────────────────────────────────────────────
+  function filterPapers(family, btn) {
+    setFilter(family);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    _restoreFavButtons();
+    _restoreDislikeButtons();
+    applyPaperVisibility();
+    if (window.BioDigestFeedback) {
+      void window.BioDigestFeedback.flushQueue();
+    }
+  });
+</script>
+</body>
+</html>
