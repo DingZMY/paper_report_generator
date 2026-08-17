@@ -1,0 +1,1043 @@
+{
+  "week": "2026-W34",
+  "generated_at": "2026-08-17T00:37:55.937734Z",
+  "date_range": {
+    "start": "2026/08/10",
+    "end": "2026/08/17"
+  },
+  "total": 23,
+  "papers": [
+    {
+      "pmid": "42603823",
+      "title": "Automated synthetic cell-based screening for designed proteins with emergent functions.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Al Nahas Kareem",
+        "Frohn Béla P",
+        "Šakanović Aleksandra",
+        "Siedler Frank",
+        "Schwille Petra"
+      ],
+      "abstract": "Designing minimal biological systems with emergent functions such as spatiotemporal self-organization is a central goal of bottom-up synthetic biology. While computational optimization and design show promise in accelerating functional protein engineering through Design-Build-Test-Learn cycles, screening libraries for complex functions remains a major challenge. Conventional screens typically lack the spatiotemporal resolution and cell-like confinement required in bottom-up synthetic biology. Here, we present PUREdrop, an automated microfluidic platform that encapsulates and expresses protein libraries in thousands of picoliter-sized synthetic cells per construct. PUREdrop distributes these across predefined wells of a 96-well plate for time-lapse imaging, enabling parallel quantification of expression kinetics and emergent functions. To demonstrate the platform's potential, we first screen computationally re-designed variants of the bacterial cell division protein FtsZ, and identify variants with altered bundling phenotypes and distinct kinetics. We then extend our screening procedure to general protein modulators of FtsZ and identify a combination that anchors filaments to the interface, producing a ring-like phenotype. PUREdrop bridges computational protein engineering and synthetic cell research, elevating the rational engineering of complex biological function to the next level.",
+      "doi": "10.1038/s41467-026-76787-8",
+      "url": "https://doi.org/10.1038/s41467-026-76787-8",
+      "pub_date": "2026-Aug-15",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Protein Engineering",
+        "Synthetic Biology",
+        "Bacterial Proteins",
+        "Cytoskeletal Proteins",
+        "Escherichia coli",
+        "Artificial Cells",
+        "Kinetics",
+        "Microfluidics",
+        "Time-Lapse Imaging",
+        "Automation"
+      ],
+      "abstract_zh": "设计具有涌现功能（如时空自组织）的最小生物系统是自下而上合成生物学的核心目标。尽管计算优化和设计有望通过设计-构建-测试-学习循环加速功能性蛋白工程，但筛选具有复杂功能的文库仍是一项重大挑战。传统筛选通常缺乏自下而上合成生物学所需的时空分辨率和类细胞区隔。在此，我们提出 PUREdrop，一个自动化微流控平台，可在每个构建体的数千个皮升级合成细胞中封装并表达蛋白文库。PUREdrop 将这些合成细胞分配到 96 孔板的预定孔中进行延时成像，从而能够并行定量表达动力学和涌现功能。为展示该平台的潜力，我们首先筛选了细菌细胞分裂蛋白 FtsZ 的计算重设计变体，鉴定出成束表型改变且动力学特异的变体。随后，我们将筛选流程扩展到 FtsZ 的通用蛋白调节因子，并鉴定出一种将丝锚定到界面、产生环状表型的组合。PUREdrop 连接了计算蛋白工程与合成细胞研究，将复杂生物学功能的理性工程提升到新的水平。",
+      "key_findings": [
+        "开发 PUREdrop 平台，在数千个皮升级合成细胞中表达蛋白文库并并行定量表达动力学与涌现功能。",
+        "筛选计算重设计的 FtsZ 变体，鉴定出成束表型改变且动力学不同的变体。",
+        "筛选 FtsZ 调节因子，发现将丝锚定界面产生环状表型的组合，连接计算设计与合成细胞研究。"
+      ],
+      "translated_at": "2026-08-17T00:41:34.523350Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出PUREdrop自动化微流控平台，将合成细胞封装、表达与高通量成像结合，可迁移用于设计蛋白的涌现功能筛选。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:05.583675Z"
+      }
+    },
+    {
+      "pmid": "42603816",
+      "title": "Sub-millivolt voltage imaging reveals gap junction-mediated bioelectric contact inhibition.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Rühl Philipp",
+        "Hussein Rama A",
+        "Reuter Stefanie",
+        "Frahnert Konrad S",
+        "Nair Anagha G",
+        "Mrowka Ralf",
+        "et al."
+      ],
+      "abstract": "Sub-millivolt membrane potential (Vm) dynamics in multicellular non-excitable networks have remained largely inaccessible due to insufficiently sensitive imaging tools. Here, we introduce rEstus2s, a next-generation genetically encoded voltage indicator that overcomes this barrier by enabling high-resolution Vm imaging. Using rEstus2s, we uncover bioelectric contact inhibition (BCI), a biophysical principle in which gap junction coupling passively stabilizes Vm by suppressing electrical volatility. We show that Vm variance scales inversely with network size (1/n), reflecting a transition from stochastic single-cell behavior to collective electrical stability. Ca²⁺-activated oncogenic ion channels, including ANO1 and KCa3.1, drive pronounced electrical volatility in isolated cells, but BCI effectively attenuates this volatility in electrically coupled networks. Disruption of gap junction coupling abolishes BCI and restores high electrical volatility. These findings establish a unifying framework for how multicellular systems maintain electrical homeostasis and reveal gap junction coupling as a key determinant of bioelectric stability in health and disease.",
+      "doi": "10.1038/s41467-026-76758-z",
+      "url": "https://doi.org/10.1038/s41467-026-76758-z",
+      "pub_date": "2026-Aug-15",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Gap Junctions",
+        "Animals",
+        "Membrane Potentials",
+        "Contact Inhibition",
+        "Humans"
+      ],
+      "abstract_zh": "将英文摘要翻译为准确、流畅的中文简体",
+      "key_findings": [
+        "核心发现1：用一句话概括（不超过50字）",
+        "核心发现2：用一句话概括（不超过50字）",
+        "核心发现3：用一句话概括（不超过50字）"
+      ],
+      "translated_at": "2026-08-17T00:42:01.409023Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发亚毫伏级电压指示器rEstus2s，并揭示网络规模依赖的膜电位稳定机制，具有普适方法学与机制洞察价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:15.610129Z"
+      }
+    },
+    {
+      "pmid": "42601798",
+      "title": "Thermodynamically Consistent Modeling of ATP-Driven Cross-Bridge Dynamics in Muscle Contraction.",
+      "journal": "Biophys J",
+      "authors": [
+        "Wang Yiwei",
+        "Liu Chun"
+      ],
+      "abstract": "Muscle contraction is a prototypical multiscale chemomechanical process in which ATP hydrolysis at the molecular level drives force generation and mechanical work at larger scales. A central challenge is to incorporate the free energy supplied by ATP hydrolysis into a mechanical cross-bridge model in a way that is thermodynamically consistent and connects microscopic motor cycling to macroscopic force generation. Here we use the Energetic Variational Approach (EnVarA) to combine Hill's cycle-affinity viewpoint with Huxley's sliding-filament mechanics in a single thermodynamically consistent framework. We formulate a three-state Fokker-Planck-jump description for cross-bridge densities evolving on state-dependent free-energy landscapes, and treat ATP, ADP, and Pi as reacting and diffusing chemical species that share the same free-energy functional as the cross-bridge densities. ATP hydrolysis enters the model through local detailed balance, which biases the transition rates. Filament sliding velocity is incorporated as a convective transport term in the Fokker-Planck dynamics, so mechanical power output is defined directly from the energy balance law. Under chemostatted conditions and a fast-equilibration assumption for the two attached states, the model reduces to a closed two-state molecular motor description; in a further small-diffusion limit, this reduction recovers a Huxley-type transport-reaction equation whose effective attachment and detachment rates are derived from the underlying three-state cycle rather than prescribed phenomenologically, with their strain, ATP, and phosphate dependence fixed by the energy landscapes and local detailed balance. We calibrate the reduced model against cross-bridge-level observables and show that it reproduces key velocity-dependent trends and yields a Hill-like force-velocity relation comparable to established cross-bridge models.",
+      "doi": "10.1016/j.bpj.2026.08.007",
+      "url": "https://doi.org/10.1016/j.bpj.2026.08.007",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "肌肉收缩是一个典型的多尺度化学-机械过程，其中分子层面的ATP水解驱动更大尺度的力产生和机械功。一个核心挑战是如何将ATP水解提供的自由能纳入机械横桥模型，使其热力学一致，并将微观马达循环与宏观力产生联系起来。在此，我们使用能量变分方法（EnVarA）将Hill的循环亲和观点与Huxley的滑动丝力学结合在一个统一的热力学一致框架中。我们对横桥密度在状态依赖的自由能景观上演化建立了一个三态Fokker-Planck-跳跃描述，并将ATP、ADP和Pi视为与横桥密度共享同一自由能泛函的反应-扩散化学物质。ATP水解通过局部细致平衡进入模型，该平衡使跃迁速率产生偏置。肌丝滑动速度作为对流输运项纳入Fokker-Planck动力学，因此机械功率输出可直接由能量平衡定律定义。在化学恒定条件和两个附着态快速平衡假设下，该模型约化为一个闭合的双态分子马达描述；在进一步的小扩散极限下，这一约化恢复出Huxley型输运-反应方程，其有效附着与脱离速率由底层三态循环导出，而非唯象设定，其应变、ATP和磷酸盐依赖性由能量景观和局部细致平衡确定。我们将约化模型对横桥层面可观测量进行校准，并表明它重现了关键的速度依赖性趋势，并给出与已建立的横桥模型相当的Hill型力-速度关系。",
+      "key_findings": [
+        "提出基于EnVarA的热力学一致框架，统一Hill循环亲和与Huxley滑动丝力学。",
+        "从三态循环导出Huxley型输运-反应方程，有效速率由能量景观和细致平衡确定而非唯象设定。",
+        "约化模型校准后重现速度依赖性趋势并给出与经典模型相当的Hill力-速度关系。"
+      ],
+      "translated_at": "2026-08-17T00:42:28.370562Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出基于能量变分和局部细致平衡的热力学一致性横桥模型框架，从ATP水解推导有效速率，具有可迁移方法学意义",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:19.191789Z"
+      }
+    },
+    {
+      "pmid": "42600612",
+      "title": "Polyamines buffer labile iron to suppress ferroptosis.",
+      "journal": "Cell",
+      "authors": [
+        "Sharma Pushkal",
+        "Keys Heather R",
+        "Mansell Ryan P",
+        "Stark Jillian",
+        "Girard Louisa",
+        "Ausler Christalyn",
+        "et al."
+      ],
+      "abstract": "Polyamines are essential and evolutionarily conserved metabolites present at millimolar concentrations in mammalian cells. Cells tightly regulate polyamine homeostasis through complex feedback mechanisms, yet the precise role necessitating this regulation remains unclear. Here, we show that polyamines contribute to endogenous buffering of redox-active iron, providing a molecular link between polyamine metabolism and ferroptosis. Using a genome-wide CRISPR screen, we identified a synthetic lethal dependency between polyamine depletion and the key ferroptosis suppressor, glutathione peroxidase 4 (GPX4). Mechanistically, we show that polyamine deficiency triggers a redistribution of cellular iron, increasing the labile iron pool and upregulating ferritin. To directly visualize this iron buffering in living cells, we developed a genetically encoded fluorescent reporter for redox-active iron. Live-cell analysis revealed a striking inverse correlation between intracellular polyamine levels and redox-active iron at single-cell resolution. These findings reposition polyamines as key regulators of iron homeostasis, with implications for ferroptosis-linked disease states and cellular redox balance.",
+      "doi": "10.1016/j.cell.2026.07.040",
+      "url": "https://doi.org/10.1016/j.cell.2026.07.040",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "多胺是必需且在进化上保守的代谢物，在哺乳动物细胞中以毫摩尔浓度存在。细胞通过复杂的反馈机制严格调控多胺稳态，但需要这种精确调控的作用仍不清楚。本研究表明，多胺参与内源性缓冲氧化还原活性铁，从而在多胺代谢与铁死亡之间建立了分子联系。通过全基因组CRISPR筛选，我们发现多胺耗竭与关键铁死亡抑制因子谷胱甘肽过氧化物酶4（GPX4）之间存在合成致死依赖性。在机制上，我们发现多胺缺乏会引发细胞铁的重新分布，增加不稳定铁池并上调铁蛋白。为了在活细胞中直接可视化这种铁缓冲作用，我们开发了一种基因编码的氧化还原活性铁荧光报告子。活细胞分析显示，在单细胞分辨率下，细胞内多胺水平与氧化还原活性铁之间存在显著负相关。这些发现将多胺重新定位为铁稳态的关键调节因子，对铁死亡相关疾病状态和细胞氧化还原平衡具有重要意义。",
+      "key_findings": [
+        "多胺通过内源性缓冲氧化还原活性铁，将多胺代谢与铁死亡联系起来。",
+        "多胺耗竭与GPX4存在合成致死依赖性，并增加不稳定铁池、上调铁蛋白。",
+        "开发的基因编码荧光报告子揭示单细胞水平多胺与氧化还原活性铁呈负相关。"
+      ],
+      "translated_at": "2026-08-17T00:43:49.768186Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示多胺缓冲铁抑制铁死亡的新机制，并开发基因编码的铁荧光报告子，具可迁移的方法学价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:26.615260Z"
+      }
+    },
+    {
+      "pmid": "42600029",
+      "title": "Embroidered textile sensors for real-time multiaxial force mapping in prosthetics.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Yu Tianhao",
+        "Cornejo Axel González",
+        "Joo Hyeonseo",
+        "Wang Ziheng",
+        "Dai Yumin",
+        "Bolívar-Nieto Edgar",
+        "et al."
+      ],
+      "abstract": "Real-time monitoring of pressure and shear forces at the limb-socket interface is essential for optimizing prosthetic fit, comfort, and skin health. Shear forces, in particular, can aggravate irritation and cause ulceration near bony prominences, making their detection as important as pressure. However, current in-socket sensing systems-typically based on strain gages, piezoresistive films, or optical mechanisms-remain largely limited to normal pressure detection and often rely on socket modifications or rigid multilayered components, constraining seamless integration with the compliant limb-socket interface. Here, we present textile prosthetic sheaths with machine-embroidered sensor arrays that achieve simultaneous, real-time monitoring of normal and shear forces. The system wirelessly streams data for three-dimensional pressure mapping and incorporates an embroidered electroluminescent display for intuitive, on-body visual feedback. Testing with a transtibial prosthetic user demonstrated the ability to capture dynamic pressure and shear distributions during daily activities, with ground reaction and acceleration data providing complementary insights into gait symmetry and limb dynamics. These results establish embroidered textile sensors as a practical route to improving prosthetic fit, comfort, and gait stability and highlight their broader potential in rehabilitation robotics and human-machine interfaces.",
+      "doi": "10.1126/sciadv.aec9270",
+      "url": "https://doi.org/10.1126/sciadv.aec9270",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Textiles",
+        "Humans",
+        "Artificial Limbs",
+        "Pressure",
+        "Prosthesis Design",
+        "Biomechanical Phenomena"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-08-17T00:44:17.006745Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出机器刺绣纺织传感器阵列实现正压力与剪切力同步映射，是具可迁移性的新型柔性传感平台。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:33.513763Z"
+      }
+    },
+    {
+      "pmid": "42600016",
+      "title": "AI-assisted optoelectrokinetic control of active self-propelling micromotors for independent navigation with multimode motions.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Liu Jiaxin",
+        "Zheng Zhiqiang",
+        "Hou Yaozhen",
+        "Shi Qing",
+        "Huang Qiang",
+        "Han Jie",
+        "et al."
+      ],
+      "abstract": "Agile and controllable motion is essential for active micromotors to navigate various microscale scenarios and manipulate the microscopic world, where parallel navigation and independent control are highly desirable. However, most micromotor navigation strategies suffer from limited agility and poor predictability, with motion typically confined to single-micromotor self-propulsion along predetermined trajectories. Herein, we propose an artificial intelligence (AI)-assisted optoelectronic control strategy that involves converting stochastic micromotor self-propulsion into controllable omnidirectional motion by synergistically exploiting multiple electrokinetic mechanisms. This strategy enables independent navigation of individual micromotors while simultaneously supporting parallel manipulation. By spatiotemporally configuring two or more optical patterns, agile motion primitives, such as directional propulsion, passive propulsion, in situ U-turns, and motion pause and restarting, were developed. To improve navigation robustness under coupled electrokinetic effects, a spatial-temporal AI model was developed for accurately predicting micromotor motion to facilitate the optimization of dynamic guidance schemes. These motion primitives are sequentially integrated and automatedly switched along long-term, reconfigurable trajectories, thereby enabling continuous navigation guided by discrete optical patterns. Independent control of active micromotors was demonstrated through the parallel manipulation of multiple Janus micromotors that were navigating intricate networks, in which each micromotor followed individual trajectories and adapted in real time to local terrain variations. This work showcased an agile and predictable navigation strategy for active micromotors that facilitates independent and massively parallel manipulation in intricate terrains, thus opening further possibilities for advanced applications.",
+      "doi": "10.1126/sciadv.aef0741",
+      "url": "https://doi.org/10.1126/sciadv.aef0741",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "灵活可控的运动对于活性微马达在多种微尺度场景中导航和操控微观世界至关重要，其中并行导航与独立控制尤为理想。然而，大多数微马达导航策略灵活性有限、可预测性差，运动通常局限于单个微马达沿预定轨迹的自推进。在此，我们提出一种人工智能（AI）辅助的光电控制策略，通过协同利用多种电动机制，将微马达的随机自推进转化为可控的全向运动。该策略能够实现单个微马达的独立导航，同时支持并行操控。通过时空配置两个或多个光学图案，开发了灵活的运动基元，如定向推进、被动推进、原位掉头以及运动暂停与重启。为提高耦合电动效应下的导航鲁棒性，开发了一种时空AI模型，用于精确预测微马达运动，以促进动态引导方案的优化。这些运动基元沿长程可重构轨迹被顺序整合并自动切换，从而实现在离散光学图案引导下的连续导航。通过对在复杂网络中导航的多个Janus微马达进行并行操控，展示了活性微马达的独立控制；每个微马达均遵循各自的轨迹，并实时适应局部地形变化。这项工作展示了一种灵活且可预测的活性微马达导航策略，能够在复杂地形中实现独立和大规模并行操控，从而为先进应用开辟了更多可能性。",
+      "key_findings": [
+        "提出AI辅助光电控制策略，将微马达随机自推进转化为可控全向运动。",
+        "开发时空AI模型精确预测微马达运动，优化动态引导以提高导航鲁棒性。",
+        "实现多个Janus微马达在复杂网络中独立并行导航与实时地形适应。"
+      ],
+      "translated_at": "2026-08-17T00:44:43.962723Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出AI辅助光电控制策略，将随机自驱动转化为可预测全向运动，并建立时空AI模型实现并行独立导航，方法学新意明显。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:38.740807Z"
+      }
+    },
+    {
+      "pmid": "42600003",
+      "title": "The extreme diversity of retinal amacrine cells has deep evolutionary roots.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Tommasini Dario",
+        "Monavarfeshani Aboozar",
+        "Dinesh Vishruth",
+        "Hahn Joshua",
+        "Tangeman Jared",
+        "Marre Olivier",
+        "et al."
+      ],
+      "abstract": "Amacrine cells (ACs) comprise a heterogeneous class of inhibitory neurons in the vertebrate retina, exhibiting morphological and functional complexity rivaling that of cortical interneurons. Here, we integrate single-cell and single-nucleus transcriptomic atlases from 24 vertebrate species to reconstruct the evolutionary origins of this extreme diversity. We identify 42 orthologous AC types, most of which exhibit a one-to-one correspondence across amniotes and, in many cases, across vertebrates. While core molecular identities are conserved, AC types vary in abundance and gene expression across species, likely reflecting adaptations to distinct visual ecologies. AC diversity scales with that of retinal ganglion cells (RGCs), indicative of coevolution. Last, we suggest that ACs arose from an AC-RGC hybrid precursor, with glycinergic ACs diverging early in vertebrate evolution, followed by a bifurcation between RGCs and GABAergic ACs. Together, these findings establish a unified evolutionary framework for understanding the diversity, development, and function of a class of inhibitory neurons across vertebrates.",
+      "doi": "10.1126/sciadv.aeg3223",
+      "url": "https://doi.org/10.1126/sciadv.aeg3223",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Amacrine Cells",
+        "Animals",
+        "Retinal Ganglion Cells",
+        "Biological Evolution",
+        "Retina",
+        "Vertebrates",
+        "Transcriptome",
+        "Evolution, Molecular",
+        "Humans",
+        "Phylogeny"
+      ],
+      "abstract_zh": "无长突细胞（amacrine cells, ACs）是脊椎动物视网膜中一类异质性的抑制性神经元，其形态和功能复杂性可与皮层中间神经元相媲美。本研究整合了24种脊椎动物的单细胞和单核转录组图谱，以重建这种极端多样性的进化起源。我们识别出42种直系同源AC类型，其中大多数在羊膜动物中表现出一一对应关系，并且在许多情况下贯穿整个脊椎动物。虽然核心分子身份保守，但AC类型在不同物种间的丰度和基因表达存在差异，这很可能反映了对不同视觉生态的适应。AC多样性与视网膜神经节细胞（RGCs）的多样性成比例，表明二者协同进化。最后，我们提出ACs起源于一种AC-RGC杂合前体细胞，甘氨酸能ACs在脊椎动物进化早期分化，随后发生RGCs与GABA能ACs的分叉。综上所述，这些发现为理解脊椎动物中一类抑制性神经元的多样性、发育和功能建立了统一的进化框架。",
+      "key_findings": [
+        "基于24种脊椎动物单细胞/单核转录组图谱，识别出42种直系同源AC类型，多数在羊膜动物和脊椎动物中一一对应。",
+        "AC核心分子身份保守，但丰度和基因表达因种而异，可能反映视觉生态适应；其多样性与RGC多样性成比例，提示协同进化。",
+        "ACs可能起源于AC-RGC杂合前体，甘氨酸能ACs先分化，随后RGCs与GABA能ACs分叉。"
+      ],
+      "translated_at": "2026-08-17T00:45:40.425024Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "整合24物种单细胞数据重建视网膜AC细胞类型进化框架，提出AC-RGC共演化与起源路径，具备可迁移的机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:44.906296Z"
+      }
+    },
+    {
+      "pmid": "42599996",
+      "title": "HSP27 regulates force-coordinated DDR1 condensate disassembly and liquid-to-gel phase transition.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Zhao Di",
+        "Liu Jiayu",
+        "Liu Yueqi",
+        "Liang Zhenhui",
+        "Gui Ke",
+        "Yao Weijuan",
+        "et al."
+      ],
+      "abstract": "Endothelial cell (EC) mechanosensing is essential for vascular homeostasis and atherosclerosis development, though the influence of blood flow patterns on EC signaling is not fully understood. Discoidin domain receptor 1 (DDR1), a tyrosine kinase receptor, acts as a mechanosensor linking shear force to endothelial responses. Atheroprotective laminar shear flow induces rapid, transient DDR1 activation and condensation through liquid-liquid phase separation without harmful effects, while atherogenic shear causes delayed, sustained condensation, leading to Yes-associated protein (YAP) activation and downstream pathological signaling. We show that heat shock protein 27 (HSP27) regulates shear-dependent DDR1 condensation and phase transition. Specifically, the interaction between DDR1 and HSP27, mediated by their respective domains, is crucial for DDR1 condensate disassembly. Atherogenic shear, unlike atheroprotective shear, triggers prolonged DDR1-mediated HSP27 phosphorylation, promoting DDR1 gel transition and activating YAP signaling. The DDR1-HSP27 axis is key in endothelial YAP activation and atherogenesis in vivo. Targeting this pathway may offer therapeutic potential for preventing endothelial dysfunction and atherosclerosis.",
+      "doi": "10.1126/sciadv.aec2282",
+      "url": "https://doi.org/10.1126/sciadv.aec2282",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Discoidin Domain Receptor 1",
+        "Humans",
+        "HSP27 Heat-Shock Proteins",
+        "Phase Transition",
+        "Phosphorylation",
+        "YAP-Signaling Proteins",
+        "Adaptor Proteins, Signal Transducing",
+        "Molecular Chaperones",
+        "Signal Transduction",
+        "Atherosclerosis"
+      ],
+      "abstract_zh": "内皮细胞（EC）的机械感知对血管稳态和动脉粥样硬化发展至关重要，但血流模式对内皮细胞信号传导的影响尚未完全阐明。盘状结构域受体1（DDR1）是一种酪氨酸激酶受体，作为机械感受器将剪切力与内皮反应联系起来。动脉粥样硬化保护性层流剪切力通过液-液相分离诱导DDR1快速、瞬时激活和凝聚，而不产生有害效应；而致动脉粥样硬化剪切力则引起延迟、持续的凝聚，导致Yes相关蛋白（YAP）激活及下游病理信号。我们发现热休克蛋白27（HSP27）调控剪切力依赖的DDR1凝聚和相变。具体而言，DDR1与HSP27通过各自结构域介导的相互作用对DDR1凝聚体解聚至关重要。与动脉粥样硬化保护性剪切力不同，致动脉粥样硬化剪切力触发DDR1介导的HSP27持续磷酸化，促进DDR1凝胶转变并激活YAP信号。DDR1-HSP27轴在体内内皮YAP激活和动脉粥样硬化形成中起关键作用。靶向该通路可能为预防内皮功能障碍和动脉粥样硬化提供治疗潜力。",
+      "key_findings": [
+        "HSP27与DDR1的结构域相互作用对DDR1凝聚体解聚至关重要。",
+        "致动脉粥样硬化剪切力触发DDR1介导的HSP27持续磷酸化，促进DDR1凝胶化并激活YAP信号。",
+        "DDR1-HSP27轴是体内内皮YAP激活和动脉粥样硬化形成的关键，具有治疗靶点潜力。"
+      ],
+      "translated_at": "2026-08-17T00:46:08.026400Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示力调控的凝聚体解体与液-凝胶相变机制，具有可迁移的机械信号与相分离调控概念",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:38:54.166420Z"
+      }
+    },
+    {
+      "pmid": "42599991",
+      "title": "Ligand-tuned extracellular domain dynamics are correlated with signaling states in an adhesion GPCR.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Cechova Kristina",
+        "Bandekar Sumit J",
+        "Kordon Szymon P",
+        "Foroutan Max",
+        "Leon Katherine",
+        "Siffer Gracie",
+        "et al."
+      ],
+      "abstract": "Adhesion G protein-coupled receptors (aGPCRs) transduce signals via engagement of their large extracellular regions (ECRs) with adhesion partners. ADGRG6 (GPR126) is an aGPCR vital for the development of multiple organs and myelination. ECR conformational dynamics of ADGRG6 has been shown to modulate aGPCR signaling and in vivo function. Yet, how adhesion partners regulate ECR conformational dynamics is poorly understood. Here, we studied activation of ADGRG6 using single-molecule FRET (smFRET) and intracellular signaling assays. We reveal that the ADGRG6 ECR dynamically transitions between three conformational states. Covalently locking the ECR in the closed conformation traps the receptor in a low-activity state. Agonist binding physically restricts the ECR to only access states associated with higher activity. This detailed mechanistic insight into ADGRG6 allosteric regulation by ECR dynamics offers avenues for targeted therapeutic development.",
+      "doi": "10.1126/sciadv.aea8715",
+      "url": "https://doi.org/10.1126/sciadv.aea8715",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Receptors, G-Protein-Coupled",
+        "Signal Transduction",
+        "Ligands",
+        "Humans",
+        "Fluorescence Resonance Energy Transfer",
+        "Protein Binding",
+        "Protein Domains",
+        "Allosteric Regulation",
+        "Protein Conformation"
+      ],
+      "abstract_zh": "黏附性G蛋白偶联受体（aGPCR）通过其大胞外区（ECR）与黏附伴侣结合来转导信号。ADGRG6（GPR126）是一种对多种器官发育和髓鞘形成至关重要的aGPCR。研究表明，ADGRG6的ECR构象动态可调控aGPCR信号传导及体内功能。然而，黏附伴侣如何调控ECR构象动态仍知之甚少。本研究利用单分子荧光共振能量转移（smFRET）和胞内信号传导实验研究了ADGRG6的激活。我们发现ADGRG6的ECR在三种构象状态之间动态转换。将ECR共价锁定在闭合构象会使受体处于低活性状态。激动剂结合则在物理上限制ECR仅能进入与较高活性相关的构象状态。这一关于ECR动态调控ADGRG6变构调节的详细机制见解为靶向治疗开发提供了途径。",
+      "key_findings": [
+        "ADGRG6胞外区（ECR）在三种构象状态之间动态转换。",
+        "共价锁定ECR于闭合构象使受体处于低活性状态。",
+        "激动剂结合限制ECR仅进入高活性相关构象状态。"
+      ],
+      "translated_at": "2026-08-17T00:47:01.957834Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "用单分子FRET揭示配体调控aGPCR胞外域构象动力学与信号状态的关联，机制新意较强，可迁移至其他aGPCR。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:01.171156Z"
+      }
+    },
+    {
+      "pmid": "42585336",
+      "title": "Long-term amyloid aggregation kinetic assay and rapid amyloid clustering enabled by programmable microdroplet water extraction.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Cheong Da Yeon",
+        "Roh Seokbeom",
+        "Seong Jung Bae",
+        "Lee Sang Won",
+        "Kang Dain",
+        "Lee Taeha",
+        "et al."
+      ],
+      "abstract": "Amyloids are misfolded protein aggregates linked to neurodegenerative diseases. Their aggregation kinetics are influenced by numerous variables and exhibit autocatalytic and stochastic behavior, prompting the use of microdroplet-based assays to enhance statistical robustness. However, uncontrolled water extraction from microdroplets during incubation alters solute concentration, limits accessible temperature and reaction time ranges, and limits experimental versatility. Here, we introduce a microdroplet handling strategy that enables programmable microdroplet water extraction. Suppressing water extraction enables long-term aggregation kinetic measurements for up to 30 days at 60°C, while promoting water extraction induces amyloid clustering within 1 hour. Using this technique, we investigated aggregation kinetics as a function of droplet size, protein concentration, and incubation time and conducted preliminary studies using microdroplet-derived amyloid clusters (MDACs). These advancements expand the experimental flexibility of droplet-based assays and provide a reproducible in vitro platform for amyloid aggregation and clustering, with potential applications in downstream screening and biological studies.",
+      "doi": "10.1126/sciadv.aeh3040",
+      "url": "https://doi.org/10.1126/sciadv.aeh3040",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Water",
+        "Kinetics",
+        "Amyloid",
+        "Protein Aggregates",
+        "Humans",
+        "Protein Aggregation, Pathological"
+      ],
+      "abstract_zh": "淀粉样蛋白是与神经退行性疾病相关的错误折叠蛋白质聚集体。其聚集动力学受多种变量影响，并表现出自催化和随机行为，促使使用基于微液滴的检测方法以增强统计稳健性。然而，孵育期间微液滴中不受控制的水分提取会改变溶质浓度，限制可及的温度和反应时间范围，并限制实验多样性。在此，我们引入一种微液滴处理策略，能够实现可编程的微液滴水分提取。抑制水分提取可在60°C下进行长达30天的长期聚集动力学测量，而促进水分提取可在1小时内诱导淀粉样蛋白聚集簇形成。利用该技术，我们研究了聚集动力学随液滴尺寸、蛋白质浓度和孵育时间的变化，并使用微液滴衍生的淀粉样蛋白簇（MDACs）进行了初步研究。这些进展扩展了基于液滴检测的实验灵活性，并为淀粉样蛋白聚集和簇形成提供了可重复的体外平台，具有下游筛选和生物学研究的潜在应用。",
+      "key_findings": [
+        "开发了可编程微液滴水分提取策略，实现水分提取的抑制或促进。",
+        "抑制水分提取可在60°C下进行长达30天的淀粉样蛋白聚集动力学测量。",
+        "促进水分提取可在1小时内诱导淀粉样蛋白聚集簇形成，并研究液滴尺寸、蛋白浓度和孵育时间影响。"
+      ],
+      "translated_at": "2026-08-17T00:47:14.371224Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出可编程微滴水提取新策略，显著扩展液滴实验的时间、温度与浓度操控灵活性，具可迁移方法学价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:05.109095Z"
+      }
+    },
+    {
+      "pmid": "42585319",
+      "title": "Reassessing the role of progesterone receptor isoforms PGR-A and PGR-B in female fertility.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Dinh Doan T",
+        "Smith Kirsten M",
+        "McPhee Tim",
+        "Foot Natalie J",
+        "Bersten David C",
+        "White Melissa A",
+        "et al."
+      ],
+      "abstract": "Progesterone is a critical reproductive hormone that acts via progesterone receptor transcriptional regulators. The short PGR-A isoform lacks a 164-amino acid amino-terminal region present in PGR-B that markedly enhances transcriptional activity. Isoform-specific mutants inactivating either PGR-A (PRAKO) or PGR-B (PRBKO) indicated that PGR-A is specifically essential for female fertility. This study revises that interpretation by showing that an inadvertent frameshift mutation in the PRAKO caused ablation of both isoforms, not the intended PGR-A isoform-specific mutation. A true PGR-A-specific mutant generated through CRISPR-Cas9 editing with a complete lack of PGR-A but retained PGR-B expression showed a phenotype indistinguishable from wild type. Thus, while the short PGR-A isoform has distinct function, it is not independently essential for female reproduction in mice, and the physiological role of these highly conserved isoforms must be reconsidered in light of this new information.",
+      "doi": "10.1126/sciadv.adz7757",
+      "url": "https://doi.org/10.1126/sciadv.adz7757",
+      "pub_date": "2026-Aug-14",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Female",
+        "Receptors, Progesterone",
+        "Animals",
+        "Fertility",
+        "Protein Isoforms",
+        "Mice",
+        "CRISPR-Cas Systems",
+        "Mice, Knockout"
+      ],
+      "abstract_zh": "孕酮是一种关键生殖激素，通过孕酮受体转录调节因子发挥作用。短型PGR-A亚型缺少PGR-B中存在的164个氨基酸氨基末端区域，该区域显著增强转录活性。特异性失活PGR-A（PRAKO）或PGR-B（PRBKO）的亚型特异性突变体先前表明，PGR-A对雌性生育力特别必需。本研究修正了这一解释，表明PRAKO中一个意外的移码突变导致两种亚型均被消除，而非预期的PGR-A亚型特异性突变。通过CRISPR-Cas9编辑产生的真正PGR-A特异性突变体完全缺乏PGR-A但保留PGR-B表达，其表型与野生型无区别。因此，尽管短型PGR-A亚型具有独特功能，但它并非小鼠雌性生殖所独立必需，这些高度保守亚型的生理作用须根据这一新信息重新考量。",
+      "key_findings": [
+        "先前PRAKO模型中的意外移码突变同时消除了PGR-A和PGR-B，导致结论错误。",
+        "真正的PGR-A特异性缺失小鼠保留PGR-B，表型与野生型无差异。",
+        "PGR-A亚型虽有独特功能，但并非雌性小鼠生育力独立必需。"
+      ],
+      "translated_at": "2026-08-17T00:47:25.379563Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "纠正了孕酮受体亚型功能的长期误读，揭示先前突变模型缺陷，具有重要机制新意和可迁移的警示价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:09.989282Z"
+      }
+    },
+    {
+      "pmid": "42595755",
+      "title": "Genome-wide CRISPR screening identifies cellular factors controlling nonviral genome editing efficiency.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Saxena Shivani",
+        "Kabra Meha",
+        "Abdeen Amr A",
+        "Tabima Diana M",
+        "Sinha Divya",
+        "Rawding Piper A",
+        "et al."
+      ],
+      "abstract": "To systematically map cellular factors constraining nonviral genome editing, influencing uptake and intracellular trafficking, we develop a genome-wide CRISPR screening platform linking perturbation of 19,114 genes to editing outcomes in human cells. We identify six negative regulators of delivery whose depletion increases editing efficiency by up to six-fold across diverse payloads, loci, and cell types. We test the top two factors, GJB2 and BET1L, in two distinct human models: correction of a pathogenic adenine base mutation in KCNJ13 and introduction of a cytosine base mutation in the GABAA receptor gene. Depletion of either improves base-editing outcomes by 6-fold, potentially through effects on delivery. In a patient-derived model of retinal channelopathy, knockdown of either gene improves lipid nanoparticle base editing efficiency by over 3.5-fold. This enables functional restoration of Kir7.1 ion channels in a subset of edited cells, highlighting cellular barriers as actionable targets to enhance the potency of genetic therapies.",
+      "doi": "10.1038/s41467-026-76350-5",
+      "url": "https://doi.org/10.1038/s41467-026-76350-5",
+      "pub_date": "2026-Aug-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "CRISPR-Cas Systems",
+        "Gene Editing",
+        "Connexin 26",
+        "Connexins",
+        "Potassium Channels, Inwardly Rectifying",
+        "Receptors, GABA-A",
+        "Mutation",
+        "HEK293 Cells",
+        "Genome, Human"
+      ],
+      "abstract_zh": "为了系统性地绘制限制非病毒基因组编辑的细胞因子图谱，并探究其在内化与细胞内运输中的作用，我们开发了一个全基因组 CRISPR 筛选平台，将人类细胞中 19,114 个基因的扰动与编辑结果关联起来。我们鉴定出六个递送负调控因子，其敲低可使编辑效率在多种载荷、位点和细胞类型中提高最多六倍。我们在两种不同的人类模型中测试了排名前两位的因子 GJB2 和 BET1L：纠正 KCNJ13 中的致病性腺嘌呤碱基突变，以及在 GABAA 受体基因中引入胞嘧啶碱基突变。任一因子的敲低均使碱基编辑结果提高 6 倍，可能通过影响递送实现。在患者来源的视网膜通道病模型中，敲低任一基因可将脂质纳米颗粒碱基编辑效率提高超过 3.5 倍。这使得部分编辑细胞中 Kir7.1 离子通道的功能得以恢复，凸显了细胞屏障可作为增强基因治疗效力的可操作靶点。",
+      "key_findings": [
+        "开发全基因组 CRISPR 筛选平台，将 19,114 个基因扰动与非病毒编辑效率关联，鉴定出六个递送负调控因子。",
+        "敲低 GJB2 或 BET1L 可使碱基编辑效率提高 6 倍，并在视网膜通道病模型中提高 LNP 碱基编辑效率超 3.5 倍。",
+        "敲低这些因子恢复了 Kir7.1 离子通道功能，证明细胞屏障是增强基因治疗效力的可操作靶点。"
+      ],
+      "translated_at": "2026-08-17T00:47:35.589432Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发全基因组CRISPR筛选平台将基因扰动与编辑结果关联，鉴定可迁移的细胞摄取屏障靶点，方法具有普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:14.745229Z"
+      }
+    },
+    {
+      "pmid": "42592798",
+      "title": "Nucleation-dependent propagation of Polycomb modifications emerges during the Drosophila maternal to zygotic transition.",
+      "journal": "Elife",
+      "authors": [
+        "Gonzaga-Saavedra Natalie",
+        "Degen Eleanor A",
+        "Soluri Isabella V",
+        "Croslyn Corinne",
+        "Blythe Shelby A"
+      ],
+      "abstract": "During zygotic genome activation in Drosophila, broad domains of Polycomb-modified chromatin are rapidly established across the genome. Here, we investigate the spatial and temporal dynamics by which Polycomb group (PcG) histone modifications, H3K27me3 and H2Aub, emerge during early embryogenesis. Using ChIP-seq and live imaging of CRISPR-engineered GFP-tagged PcG components, we show that PRC2-dependent H3K27me3 accumulates adjacent to a subset of E(z)-bound prospective Polycomb response elements (PREs) beginning in nuclear cycle 14 (NC14), with patterns indicative of nucleation followed by spreading. Surprisingly, PRE-binding factors Pho, Combgap, and GAGA-factor are excluded from interphase nuclei prior to NC10, despite nuclear localization of E(z) throughout early interphases. Loss-of-function studies further demonstrate that GAGA-factor is largely dispensable for PcG domain establishment, whereas the pioneer factor Zelda is required for proper deposition of H3K27me3 and H2Aub at a subset of Polycomb domains. The role of Zelda at Polycomb domains is context-dependent; a subset of targets requires Zelda not for E(z) recruitment, but instead to license an E(z)-loaded PRE to deposit H3K27me3. Our findings support a model where licensing of PcG domains is an initial step in the regulatory processes governing Polycomb-regulated developmental genes.",
+      "doi": "10.7554/eLife.108371",
+      "url": "https://doi.org/10.7554/eLife.108371",
+      "pub_date": "2026-Aug-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Polycomb-Group Proteins",
+        "Drosophila Proteins",
+        "Histones",
+        "Zygote",
+        "Drosophila",
+        "Gene Expression Regulation, Developmental",
+        "Drosophila melanogaster",
+        "Protein Processing, Post-Translational"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示Polycomb修饰在合子基因组激活中的成核-扩散与Zelda许可机制，具有可迁移的表观遗传调控概念新意。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:36.271166Z"
+      }
+    },
+    {
+      "pmid": "42587162",
+      "title": "In vivo genome-wide CRISPR screens of human T cells in solid tumours.",
+      "journal": "Nature",
+      "authors": [
+        "Liu Qi",
+        "Chen Peixin Amy",
+        "Urs Esha",
+        "Zhang Shimin",
+        "Arce Maya M",
+        "Wang Charlotte H",
+        "et al."
+      ],
+      "abstract": "Large-scale CRISPR screening in human T cells holds significant promise for identifying genetic modifications that enhance cellular immunotherapy. Yet, many regulators of T cell performance in solid tumours are not revealed in vitro1,2. In vivo screening in tumour-bearing mice is more physiological but has been limited by low intratumoural T cell recovery. Here we developed an in vivo model that efficiently recovers human T cells from solid tumours, permitting genome-wide CRISPR screens with few mice. Tumour-infiltrating T cells from this model exhibit hallmarks of dysfunction compared with splenic T cells, creating an ideal screening context. We performed two genome-wide CRISPR knockout screens to identify regulators of intratumoural T cell abundance and effector function. The abundance screen revealed the P2RY8-Gα13 GPCR signalling axis as a negative regulator of T cell tumour infiltration. The effector function screen identified GNAS as a key driver of T cell dysfunction in tumours, whose product, Gαs, acts as a convergent node downstream of multiple GPCRs sensing distinct suppressive ligands. Knockout of GNAS rendered T cells resistant to multiple suppressive cues and significantly improved efficacy across diverse solid tumour models in chimeric antigen receptor (CAR) and T cell receptor (TCR) systems. Combinatorial knockout of P2RY8-GNAS further enhanced tumour control, demonstrating that complementary in vivo screens can identify orthogonal targets whose combined editing improves therapeutic potency. This flexible, scalable platform can be adapted for systematic discovery of genetic strategies to improve solid tumour T cell therapies.",
+      "doi": "10.1038/s41586-026-10906-9",
+      "url": "https://doi.org/10.1038/s41586-026-10906-9",
+      "pub_date": "2026-Aug-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-08-17T00:50:01.557537Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了实体瘤内高效回收T细胞的全基因组CRISPR筛选平台，可系统发现增强免疫治疗的遗传靶点，方法具有普适迁移性",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:39.913258Z"
+      }
+    },
+    {
+      "pmid": "42587154",
+      "title": "Glucose-responsive probiotics for glycaemic modulation in mice and monkeys.",
+      "journal": "Nature",
+      "authors": [
+        "Guan Ningzi",
+        "Kong Deqiang",
+        "Gao Xianyun",
+        "Niu Lingxue",
+        "Zhou Yang",
+        "Yu Guiling",
+        "et al."
+      ],
+      "abstract": "Sustained and controlled delivery of glucose-lowering agents using engineered designer cells is recognized as an effective strategy for diabetes therapy1. However, current technologies rely on external signal control or have been programmed into mammalian cells using synthetic gene networks, which pose safety concerns arising from transplantation2,3. Here we developed an engineered oral-deliverable glucose-sensing and functional response probiotic living drug for 'sense-and-respond'-based control of diabetic blood glucose. We created a glucose sensor based on a synthetic gene circuit that incorporates the glucose-responsive transcriptional regulator HexR, coupled with a synthetic promoter. Upon oral administration of the engineered probiotics carrying the sensor, the cells reside temporarily in the intestine and regulate the expression of therapeutic transgenes in response to glucose levels that exceed the normal threshold. We show efficacy from the engineered probiotics for glycaemic control in multiple diabetic mouse and non-human primate models, demonstrating that long-term oral administration drives clear improvements in lipid profiles, while also attenuating development of multiple diabetic complications. Our probiotics-based living drug enables therapeutic dosing in response to real-time blood glucose levels, providing a programmable, orally deliverable sense-and-respond platform for metabolic therapy without transplantation.",
+      "doi": "10.1038/s41586-026-10909-6",
+      "url": "https://doi.org/10.1038/s41586-026-10909-6",
+      "pub_date": "2026-Aug-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "利用工程化设计细胞实现降糖药物的持续、受控递送被认为是糖尿病治疗的有效策略。然而，现有技术依赖外部信号控制，或利用合成基因网络对哺乳动物细胞进行编程，这会带来移植相关安全性问题。本研究开发了一种工程化、可口服递送、具有葡萄糖传感和功能响应能力的益生菌活体药物，用于基于“感知-响应”的糖尿病血糖控制。我们构建了一种基于合成基因回路的葡萄糖传感器，该回路整合了葡萄糖响应性转录调控因子HexR，并与合成启动子偶联。口服携带该传感器的工程益生菌后，细胞会暂时驻留在肠道中，并在葡萄糖水平超过正常阈值时调控治疗性转基因的表达。我们在多种糖尿病小鼠和非人灵长类模型中验证了该工程益生菌控制血糖的效果，证明长期口服可明显改善血脂谱，同时减缓多种糖尿病并发症的发生发展。这种基于益生菌的活体药物能够根据实时血糖水平进行治疗性给药，为无需移植的代谢治疗提供了一种可编程、可口服递送的感知-响应平台。",
+      "key_findings": [
+        "构建了基于HexR与合成启动子的葡萄糖传感基因回路，可响应超阈值血糖。",
+        "口服工程益生菌在肠道暂居并表达治疗性转基因，在糖尿病小鼠和非人灵长类模型中有效控糖。",
+        "长期口服改善血脂谱并减轻多种糖尿病并发症，提供无需移植的口服感知-响应平台。"
+      ],
+      "translated_at": "2026-08-17T00:50:59.241577Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了葡萄糖响应合成基因电路与口服益生菌平台，提供无移植的代谢治疗新方法，具有可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:39:54.757216Z"
+      }
+    },
+    {
+      "pmid": "42585225",
+      "title": "A benchmarking study of feature screening approaches across type 1 diabetes omics studies classification settings.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "VonKaenel Erik D",
+        "Bramer Lisa M",
+        "Flores Javier E",
+        "Metz Thomas O",
+        "Nakayasu Ernesto S",
+        "Webb-Robertson Bobbie-Jo M"
+      ],
+      "abstract": "In recent years, high dimensional omics analyses have become more commonplace for investigating complex biological systems. Typically, these studies attempt to identify key biomolecules associated with a particular biological process. Often, machine learning (ML) is used to identify these biomolecules, typically by learning which biomolecules are highly predictive of a treatment, biological outcome, or phenotype. A major challenge of applying ML to high throughput omics is overcoming noise when sample size is limited and unbalanced with respect to tens of thousands of biomolecules measured. Thus, feature selection (the process of reducing the number of predictors) is both a critical and common step in the ML analysis pipeline. While much attention has been given to embedding and wrapping techniques for feature selection in the omics space, filter-based methods for model-free feature selection have appealing theoretical properties. This manuscript evaluates sure screening, a class of filter-based feature selection methods which provide analytical guarantees for true feature set retention. Here, we cover existing feature screening methods based on the sure screening principal, available software, methods to improve feature screening, and contextualize feature screening in the larger discussion of feature selection for omics data analysis. Additionally, a suite of model-free sure screening approaches is applied and compared for several omics biomedical applications in a ML classification context. We identified BcorSIS as the most effective and computationally efficient screening method across various omics datasets, consistently outperforming others like CSIS and DCSIS in runtime.",
+      "doi": "10.1371/journal.pcbi.1014625",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014625",
+      "pub_date": "2026-Aug",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Diabetes Mellitus, Type 1",
+        "Benchmarking",
+        "Machine Learning",
+        "Computational Biology",
+        "Software",
+        "Genomics",
+        "Classification Algorithms",
+        "Multiomics",
+        "Algorithms"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-08-17T00:52:28.674246Z"
+    },
+    {
+      "pmid": "42581041",
+      "title": "UNCOVERseq enables sensitive and controlled gene editing off-target nomination across CRISPR-Cas modalities and systems.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Kinney Kyle J",
+        "Jia Kun",
+        "Zhang He",
+        "Schmaljohn Ellen",
+        "Osborne Thomas",
+        "Thommandru Bernice",
+        "et al."
+      ],
+      "abstract": "The rapid expansion of CRISPR-Cas gene editing enables new therapeutic strategies but complicates assessment of unintended editing risks due to emerging modalities and unclear analytical standards. We present UNCOVERseq (Unbiased Nomination of CRISPR Off-target Variants using Enhanced RhPCR), an improved in cellulo off-target nomination workflow that sensitively identifies rare off-target events using defined inputs and analytical process controls. Using an inter-method off-target confirmation benchmarking dataset, UNCOVERseq demonstrates high analytical sensitivity (97.6%) and precision (78%), outperforming published nomination methods. We apply UNCOVERseq across 192 guide RNAs and identify six guides spanning a broad specificity range, enabling relative risk assessment across S. pyogenes Cas9, high-fidelity variants, and base editors in hematopoietic stem and progenitor cells. We further show that double-strand break nomination sites retain strong rank-order concordance with single-strand break-mediated base editing. Together, these results establish UNCOVERseq as a robust framework for informed off-target risk assessment in translational gene-editing systems.",
+      "doi": "10.1038/s41467-026-74623-7",
+      "url": "https://doi.org/10.1038/s41467-026-74623-7",
+      "pub_date": "2026-Aug-11",
+      "pub_types": [
+        "journal article",
+        "research support, non-u.s. gov't"
+      ],
+      "keywords": [
+        "CRISPR-Cas Systems",
+        "Gene Editing",
+        "Humans",
+        "RNA, Guide, CRISPR-Cas Systems",
+        "Hematopoietic Stem Cells",
+        "DNA Breaks, Double-Stranded"
+      ],
+      "abstract_zh": "CRISPR-Cas基因编辑的快速扩展带来了新的治疗策略，但由于新模态的出现和分析标准不明确，对非预期编辑风险的评估变得更加复杂。我们提出了UNCOVERseq（利用增强型RhPCR对CRISPR脱靶变异进行无偏提名），这是一种改进的细胞内脱靶提名工作流程，通过明确的输入和分析过程控制灵敏地识别罕见脱靶事件。利用方法间脱靶确认基准数据集，UNCOVERseq表现出97.6%的高分析灵敏度和78%的精确度，优于已发表的提名方法。我们将UNCOVERseq应用于192个向导RNA，鉴定出6个跨越广泛特异性范围的向导，从而能够在造血干/祖细胞中对化脓性链球菌Cas9、高保真变体和碱基编辑器进行相对风险评估。我们进一步表明，双链断裂提名位点与单链断裂介导的碱基编辑之间保持很强的排序一致性。总之，这些结果确立了UNCOVERseq作为转化基因编辑系统中知情脱靶风险评估的稳健框架。",
+      "key_findings": [
+        "UNCOVERseq实现97.6%灵敏度和78%精确度，优于已发表的脱靶提名方法。",
+        "对192个向导RNA鉴定出6个向导，可比较Cas9、高保真变体和碱基编辑器风险。",
+        "双链断裂与单链断裂碱基编辑脱靶位点排序高度一致，确立稳健评估框架。"
+      ],
+      "translated_at": "2026-08-17T00:53:00.073730Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出改进的脱靶提名工作流程UNCOVERseq，具备高灵敏度和精确度，可跨多种CRISPR模式与系统迁移",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:40:27.506389Z"
+      }
+    },
+    {
+      "pmid": "42579744",
+      "title": "CRITERIA: A network decomposition and elementary flux mode translation-based tool for computing equilibria of biochemical systems.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Villejo Exequiel Jun V",
+        "Los Reyes V Aurelio A de",
+        "Hernandez Bryan S"
+      ],
+      "abstract": "Analytically deriving equilibria, which often govern the long-term behavior of biochemical reaction networks, is essential for understanding cellular decision-making and robustness, yet remains computationally challenging for large and complex systems. The COMPILES framework of Hernandez et al. addresses this problem via network decomposition but is limited by a computationally intensive translation step and by its restriction to networks with zero kinetic deficiency. We introduce CRITERIA (Computing paRametrized posITive EquilibRIA), a new framework that overcomes these limitations through two key advances. First, it replaces the translation mechanism of COMPILES with a more efficient graph-theoretic formulation based on the work of Johnston and Burton, which generates a reaction-to-reaction graph from elementary flux modes and identifies directed cycles of the constructed graph via a binary linear program. Second, CRITERIA computes equilibria on a single unified translated network rather than solving subnetworks independently, thereby eliminating interdependencies that previously required extensive symbolic manipulation. Across a benchmark set of 26 biochemical models, CRITERIA achieves consistent and often substantial speed improvements while expanding applicability beyond the restricted class of zero kinetic deficiency systems. We demonstrate the biological utility of the framework by analyzing multistationarity, which underlies cellular decision-making, and absolute concentration robustness, a key mechanism for maintaining stable biochemical outputs, in the EnvZ-OmpR signaling pathway and a large-scale CRISPRi toggle switch, respectively. By improving both scalability and applicability, CRITERIA enables a systematic equilibrium analysis in biochemical networks of realistic size and complexity, providing a practical tool for studying long-term dynamical behavior in systems biology.",
+      "doi": "10.1371/journal.pcbi.1014633",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014633",
+      "pub_date": "2026-Aug",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Models, Biological",
+        "Metabolic Networks and Pathways",
+        "Algorithms",
+        "Computational Biology",
+        "Computer Simulation",
+        "Systems Biology",
+        "Kinetics",
+        "Biochemical Phenomena"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出新框架CRITERIA，改进平衡计算的可扩展性与适用性，属于方法学创新。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:40:31.113735Z"
+      }
+    },
+    {
+      "pmid": "42598860",
+      "title": "CRISPR RNA architecture steers Cas9 catalysis and fidelity via a guide repeat clasp motif.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Chilamkurthy Ramadevi",
+        "Sudhakar Sruthi",
+        "Pater Adrian A",
+        "Bosmeny Michael S",
+        "Stabile Francis",
+        "Katolik Adam",
+        "et al."
+      ],
+      "abstract": "A widely adopted modification of CRISPR-Cas9 is fusion of the naturally occurring two-component dual guide RNA (dgRNA) to create an artificial single guide RNA (sgRNA). Here we find that these guide architectures induce differential catalysis, gene editing, and specificity. Spacer sequence and RNA structural features could not predict guide architecture editing preference across 255 endogenous targets. We used cryo-EM and molecular dynamics to identify a new Cas9 structural motif, the guide repeat clasp (GRC), that checks guide RNA repeat structure and coordinates with R-loop sensing checkpoint mechanisms to help license cleavage. Limited mutagenesis of GRC residues significantly altered Cas9 editing and specificity, supporting a key role in catalysis. To further understand the role of the GRC and guide RNA repeat dynamics, we created guide repeat-truncated sgRNAs, or grtRNAs, which conferred some dgRNA properties onto sgRNA, including generally lower off-target editing for targets with PAM-proximal mismatches. dgRNAs and grtRNAs could be combined with a new high-fidelity Cas9 variant called ZiFY, rationally designed to reduce editing of targets with PAM-distal mismatches, to generate broader mismatched target discrimination. These results uncover a previously unknown mechanism that steers Cas9 catalysis and demonstrate the potential to improve Cas9 fidelity by modulating guide repeat interactions.",
+      "doi": "10.1093/nar/gkag710",
+      "url": "https://doi.org/10.1093/nar/gkag710",
+      "pub_date": "2026-Aug-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "RNA, Guide, CRISPR-Cas Systems",
+        "CRISPR-Cas Systems",
+        "Biocatalysis",
+        "Base Sequence"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现Cas9新结构基序GRC并阐明其调控催化与保真度的机制，进而设计grtRNA和高保真变体，具有可迁移的方法学价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:40:37.347398Z"
+      }
+    },
+    {
+      "pmid": "42578374",
+      "title": "A CRISPR/Cas9-induced blunt-end telomere system in S. pombe reveals RNase H2-dependent RNA primer removal at the terminal Okazaki fragment of lagging telomeres.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Zou Sai",
+        "Ye Tiantian",
+        "Fu Lijuan",
+        "Zhou Jin-Qiu"
+      ],
+      "abstract": "Studying the fine-scale dynamics of telomere replication has been hindered by the heterogeneity of native telomeres and the limitations of existing tools. Here, we report a highly efficient and inducible CRISPR/Cas9-mediated system for generating de novo telomeres with defined blunt ends in S. pombe. This fine setting allows for the precise dissection of post-replicative telomere end structures at near single-nucleotide resolution. Using this system, we show that the replicated leading-strand telomere is blunt-ended, while the lagging-strand counterpart contains an ∼10-nt 3' overhang resulting from RNA primer removal. By analyzing mutants deficient in ribonucleases, we found that the removal of this terminal RNA primer is specifically dependent on RNase H2, but not RNase H1. This RNase H2-dependent mechanism is essential for defining the mature structure of the lagging-strand telomere with authentic telomeric sequences. Our findings reveal a fundamental asymmetry in telomere end processing after replication and establish RNase H2 as the key enzyme responsible for resolving the terminal RNA primer in lagging-strand telomeres. This mechanism, conserved from budding to fission yeast, underscores the critical and evolutionarily ancient role of RNase H2 in defining eukaryotic telomere architecture.",
+      "doi": "10.1093/nar/gkag768",
+      "url": "https://doi.org/10.1093/nar/gkag768",
+      "pub_date": "2026-Aug-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Telomere",
+        "Schizosaccharomyces",
+        "Ribonuclease H",
+        "CRISPR-Cas Systems",
+        "RNA",
+        "DNA Replication",
+        "Schizosaccharomyces pombe Proteins",
+        "DNA"
+      ],
+      "abstract_zh": "端粒复制的精细动态研究一直受限于天然端粒的异质性和现有工具的局限。在此，我们报道了一种高效且可诱导的CRISPR/Cas9介导系统，可在粟酒裂殖酵母中生成具有确定平末端的从头端粒。这一精细体系使得能够以近单核苷酸分辨率精确解析复制后端粒末端结构。利用该系统，我们证明复制后的前导链端粒为平末端，而滞后链端粒则含有一个约10 nt的3'突出端，该突出端源于RNA引物的去除。通过分析核糖核酸酶缺陷突变体，我们发现这一末端RNA引物的去除特异地依赖于RNase H2，而非RNase H1。这一依赖RNase H2的机制对于确定具有真实端粒序列的滞后链端粒成熟结构至关重要。我们的发现揭示了复制后端粒末端加工中的根本性不对称性，并确立RNase H2是负责去除滞后链端粒末端RNA引物的关键酶。这一机制从芽殖酵母到裂殖酵母均保守，凸显了RNase H2在界定真核生物端粒结构中的关键且演化古老的作用。",
+      "key_findings": [
+        "建立CRISPR/Cas9诱导的粟酒裂殖酵母平末端端粒系统，实现近单核苷酸分辨率解析复制后端粒末端结构。",
+        "复制后前导链端粒为平末端，滞后链端粒因RNA引物去除形成约10 nt的3'突出端。",
+        "末端RNA引物去除特异依赖RNase H2而非RNase H1，该保守机制对真核端粒成熟结构至关重要。"
+      ],
+      "translated_at": "2026-08-17T00:57:33.987762Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了可诱导的CRISPR/Cas9平端端粒系统，实现单核苷酸分辨率解析复制后端粒结构，并揭示RNase H2机制，具有方法创新与广泛迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:40:41.602479Z"
+      }
+    },
+    {
+      "pmid": "42578367",
+      "title": "Sam68 stimulates polymerase theta-mediated end-joining by suppressing poison exon inclusion in Polq mRNA.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "van Wezel Marloes D",
+        "Kool Hanneke",
+        "van den Heuvel Diana",
+        "van Schendel Robin",
+        "Barazas Marco",
+        "Luijsterburg Martijn S",
+        "et al."
+      ],
+      "abstract": "Polymerase theta-mediated end-joining (TMEJ) is a stand-alone mutagenic DNA double-strand break (DSB) repair pathway that becomes critical when high-fidelity repair is compromised. Although the enzymatic mechanism of TMEJ has been extensively studied in recent years, its regulation remains poorly understood. Here, we identify and characterize the RNA-binding protein Sam68 (also known as Khdrbs1) as a modulator of TMEJ in mammalian cells. We demonstrate that Sam68 is required for proper expression of Polq, the gene encoding polymerase theta (Polθ), the central factor in TMEJ; loss of Sam68 results in reduced TMEJ at CRISPR-induced DSBs. Mechanistically, Sam68 promotes correct splicing of Polq messenger RNA by suppressing the inclusion of a conserved poison exon (PE) that introduces a premature termination codon in the transcript. This function depends on the RNA-binding domain of Sam68. Genetic deletion of the PE restores Polq expression and rescues TMEJ activity in Sam68-depleted cells. Together, these findings establish alternative splicing as a direct mechanism controlling TMEJ capacity and reveal a conserved regulatory mechanism that tunes mutagenic DSB repair through modulation of Polθ abundance.",
+      "doi": "10.1093/nar/gkag783",
+      "url": "https://doi.org/10.1093/nar/gkag783",
+      "pub_date": "2026-Aug-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "DNA Polymerase theta",
+        "RNA-Binding Proteins",
+        "Exons",
+        "DNA-Directed DNA Polymerase",
+        "Humans",
+        "DNA End-Joining Repair",
+        "DNA-Binding Proteins",
+        "RNA, Messenger",
+        "Adaptor Proteins, Signal Transducing",
+        "Alternative Splicing"
+      ],
+      "abstract_zh": "聚合酶θ介导的末端连接（TMEJ）是一条独立的致突变DNA双链断裂（DSB）修复途径，在高保真修复受损时变得至关重要。尽管近年来TMEJ的酶学机制已被广泛研究，其调控仍知之甚少。在此，我们鉴定并表征RNA结合蛋白Sam68（也称为Khdrbs1）作为哺乳动物细胞中TMEJ的调节因子。我们证明Sam68是Polq（编码聚合酶θ（Polθ）——TMEJ核心因子的基因）正确表达所必需的；Sam68缺失导致CRISPR诱导的DSB处TMEJ减少。机制上，Sam68通过抑制一个保守的毒外显子（PE）的包含来促进Polq信使RNA的正确剪接，该毒外显子在转录本中引入提前终止密码子。该功能依赖于Sam68的RNA结合结构域。遗传删除该PE可恢复Sam68耗竭细胞中Polq表达并挽救TMEJ活性。综上，这些发现确立可变剪接是控制TMEJ能力的直接机制，并揭示了一个通过调节Polθ丰度来调控致突变DSB修复的保守调控机制。",
+      "key_findings": [
+        "Sam68是哺乳动物细胞TMEJ的调节因子，其缺失导致CRISPR诱导DSB处TMEJ减少。",
+        "Sam68通过抑制Polq mRNA中保守毒外显子的包含，促进正确剪接并避免提前终止密码子。",
+        "遗传删除毒外显子可恢复Sam68耗竭细胞的Polq表达和TMEJ活性，表明可变剪接直接调控TMEJ。"
+      ],
+      "translated_at": "2026-08-17T00:57:50.712243Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示可变剪接通过毒外显子调控Polθ丰度进而调控TMEJ，具有可迁移的DNA修复调控机制新意",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:40:46.027467Z"
+      }
+    },
+    {
+      "pmid": "42578365",
+      "title": "Specific cleavage of 5' overhangs of non-target strand by Cas9 activated by target DNA binding.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Lv Shaokang",
+        "Wang Qi",
+        "Gao Shengjie",
+        "Wang Lu",
+        "Zheng Lei"
+      ],
+      "abstract": "The clustered regularly interspaced short palindromic repeats (CRISPR)-Cas9 system has become a powerful genome-editing tool that uses RNA-DNA pairing to cleave target DNA with protospacer adjacent motif (PAM) sequences. While its primary function is well-studied, secondary activities remain poorly understood, causing unintended off-target effects. This study reports for the first time that Cas9 specifically cleaves the 5' overhang of the non-target strand (NTS) in target double-stranded DNA. This specific cleavage requires an additional PAM element at the NTS 5' region, is mediated by Cas9's RuvC domain, and is regulated by the HNH domain. It depends on the exact positioning of the NTS 5' end, but not on the overhang homopolymer sequence or overhang length. Adequate single-guide RNA-DNA complementarity is also essential. This discovery potentially advances our understanding of Cas9's enzymatic versatility to enhance genome-editing precision and efficacy and offers new nucleic acid detection strategies. Based on this cleavage, we developed a sensitive assay for Severe Acute Respiratory Syndrome Coronavirus 2 pseudovirus down to 2.4 copies μL-1, demonstrated extremely high sensitivity in diagnostic applications.",
+      "doi": "10.1093/nar/gkag795",
+      "url": "https://doi.org/10.1093/nar/gkag795",
+      "pub_date": "2026-Aug-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "DNA",
+        "CRISPR-Cas Systems",
+        "DNA Cleavage",
+        "RNA, Guide, CRISPR-Cas Systems",
+        "SARS-CoV-2",
+        "CRISPR-Associated Protein 9",
+        "Humans",
+        "Base Sequence"
+      ],
+      "abstract_zh": "成簇规律间隔短回文重复序列（CRISPR）-Cas9 系统已成为一种强大的基因组编辑工具，利用 RNA-DNA 配对切割具有前间隔序列邻近基序（PAM）序列的靶 DNA。虽然其主要功能已被充分研究，但次级活性仍了解甚少，导致非预期脱靶效应。本研究首次报道 Cas9 能特异性切割靶双链 DNA 中非靶标链（NTS）的 5' 突出端。这种特异性切割需要 NTS 5' 区域存在额外的 PAM 元件，由 Cas9 的 RuvC 结构域介导，并受 HNH 结构域调控。它依赖于 NTS 5' 末端的精确位置，但不依赖于突出端的同聚物序列或突出端长度。充分的单向导 RNA（sgRNA）-DNA 互补性也必不可少。该发现可能推进我们对 Cas9 酶学多功能性的理解，以提高基因组编辑的精确性和效率，并提供新的核酸检测策略。基于这种切割活性，我们开发了一种针对严重急性呼吸综合征冠状病毒 2（SARS-CoV-2）假病毒的灵敏检测方法，检测限低至 2.4 拷贝/微升，在诊断应用中展现出极高的灵敏度。",
+      "key_findings": [
+        "首次发现 Cas9 特异性切割靶 DNA 非靶标链的 5' 突出端。",
+        "该切割需要 NTS 5' 区域额外 PAM，由 RuvC 结构域介导并受 HNH 结构域调控。",
+        "基于该切割开发 SARS-CoV-2 假病毒检测方法，灵敏度达 2.4 拷贝/微升。"
+      ],
+      "translated_at": "2026-08-17T00:58:49.039802Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "首次发现Cas9切割非靶链5'突出端的新活性，并据此开发高灵敏核酸检测方法，具有新方法学能力和可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:41:09.211081Z"
+      }
+    },
+    {
+      "pmid": "42575893",
+      "title": "Nuclear compartmentalization at the G1/S transition plays a key role in DNA replication control.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Oji Asami",
+        "Yusa Kosuke",
+        "Noda Izumi",
+        "Ichinose Takako",
+        "Kondo Yoshiko",
+        "Hiratani Ichiro"
+      ],
+      "abstract": "Upon entry into the G1 phase following mitosis, mammalian chromosomal DNA becomes spatially segregated into A and B compartments, which correspond closely to classic euchromatin and heterochromatin, respectively. The functional significance of this spatial segregation, however, has remained unexplored due to the lack of means to manipulate this level of chromosomal organization. Through a genome-wide loss-of-function CRISPR screen, we identify GINS4, a component of the replicative DNA helicase complex, as a factor essential for segregation of A and B compartments during the G1-to-S phase transition. Using GINS4 depletion experiments, we show that proper A/B compartment organization at the time of S-phase entry plays a key role in efficient DNA synthesis. Furthermore, DNA synthesis with attenuated A/B compartments is associated with defects in replication timing regulation. Our findings uncover a previously unrecognized role for GINS4 in regulating nuclear architecture and underscore the biological significance of nuclear compartmentalization in DNA replication control.",
+      "doi": "10.1038/s41467-026-75264-6",
+      "url": "https://doi.org/10.1038/s41467-026-75264-6",
+      "pub_date": "2026-Aug-10",
+      "pub_types": [
+        "journal article",
+        "research support, non-u.s. gov't"
+      ],
+      "keywords": [
+        "DNA Replication",
+        "S Phase",
+        "Cell Nucleus",
+        "G1 Phase",
+        "Humans",
+        "Chromosomal Proteins, Non-Histone",
+        "Heterochromatin",
+        "Animals",
+        "HeLa Cells",
+        "DNA"
+      ],
+      "abstract_zh": "有丝分裂后进入G1期时，哺乳动物染色体DNA在空间上被分隔为A和B区室，分别与经典常染色质和异染色质密切对应。然而，由于缺乏操控该染色体组织水平的手段，这种空间分隔的功能意义一直未被探索。通过全基因组功能缺失CRISPR筛选，我们鉴定出复制性DNA解旋酶复合物的组分GINS4，是G1期向S期转变过程中A和B区室分离所必需的因子。利用GINS4耗竭实验，我们证明在S期进入时适当的A/B区室组织对高效DNA合成发挥关键作用。此外，A/B区室减弱情况下的DNA合成与复制时序调控缺陷相关。我们的发现揭示了GINS4在调控核结构方面此前未被认识的作用，并强调了核区室化在DNA复制控制中的生物学意义。",
+      "key_findings": [
+        "通过全基因组CRISPR筛选鉴定GINS4为G1/S转变中A/B区室分离必需因子。",
+        "GINS4耗竭实验表明，S期进入时适当的A/B区室组织对高效DNA合成至关重要。",
+        "A/B区室减弱与复制时序调控缺陷相关，揭示核区室化对DNA复制控制的重要性。"
+      ],
+      "translated_at": "2026-08-17T00:59:14.645422Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现GINS4调控核区室化并影响DNA复制时序，机制新意明显且具普适迁移性",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-08-17T00:41:16.069616Z"
+      }
+    }
+  ],
+  "pre_llm_filter_total": 23,
+  "llm_filtered_out": 0,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filter_prompt_version": "v1",
+  "llm_filter_policy_version": "2026-05-06",
+  "llm_filter_evaluation_snapshot_id": null,
+  "llm_filter_policy_config": "configs/filter_policy.json",
+  "llm_filtered_at": "2026-08-17T00:41:17.269755Z",
+  "filtered_out_papers": [],
+  "translated_count": 20
+}
