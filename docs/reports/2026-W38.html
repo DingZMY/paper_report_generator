@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-W38 · 系统/合成生物学文献周报</title>
+  <meta name="description" content="本周系统生物学与合成生物学领域顶刊论文双语摘要汇总">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f0f4f8;
+      --surface:     #ffffff;
+      --surface2:    #f7f9fc;
+      --border:      #e2e8f0;
+      --text:        #1a202c;
+      --text-muted:  #718096;
+      --text-light:  #a0aec0;
+      --accent:      #5a67d8;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow:      0 4px 8px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-lg:   0 12px 20px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.06);
+      --radius:      12px;
+      --radius-sm:   7px;
+      --transition:  0.18s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0d1117;
+        --surface:    #161b22;
+        --surface2:   #1c2130;
+        --border:     #2d3748;
+        --text:       #e2e8f0;
+        --text-muted: #a0aec0;
+        --text-light: #718096;
+        --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+        --shadow:     0 4px 8px rgba(0,0,0,0.5);
+        --shadow-lg:  0 12px 20px rgba(0,0,0,0.6);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+                   "PingFang SC", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .site-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color var(--transition);
+    }
+    .header-nav a:hover { color: var(--text); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.88rem;
+      opacity: 0.82;
+      margin-bottom: 28px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat-num  { display: block; font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { display: block; font-size: 0.75rem; opacity: 0.8; margin-top: 4px; }
+
+    /* ── Filter bar ─────────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      position: sticky;
+      top: 58px;
+      z-index: 190;
+    }
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-label { font-size: 0.8rem; color: var(--text-muted); margin-right: 2px; }
+    .filter-btn {
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Main grid ──────────────────────────────────────────────── */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    .section-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────────── */
+    .paper-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-color, #9e9e9e);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .paper-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* card header row */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .journal-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .pub-date {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    /* title */
+    .paper-title {
+      font-size: 0.93rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .paper-title a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .paper-title a:hover { color: var(--accent); }
+
+    /* authors */
+    .paper-authors {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Abstract tabs ──────────────────────────────────────────── */
+    .abstract-section { flex: 1; }
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .tab-btn {
+      padding: 3px 11px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all var(--transition);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .abstract-text {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      display: none;
+      max-height: 152px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .abstract-text.active { display: block; }
+    .abstract-text::-webkit-scrollbar { width: 3px; }
+    .abstract-text::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    /* ── Key findings ───────────────────────────────────────────── */
+    .key-findings {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+    }
+    .findings-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+    }
+    .key-findings ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .key-findings li {
+      font-size: 0.81rem;
+      line-height: 1.55;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .key-findings li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-color, var(--accent));
+      font-size: 0.68rem;
+      top: 2px;
+    }
+
+    /* ── Card footer ────────────────────────────────────────────── */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .doi-link {
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: gap var(--transition);
+    }
+    .doi-link:hover { gap: 7px; }
+    .keywords-row { display: flex; gap: 4px; flex-wrap: wrap; }
+    .kw-tag {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-light);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Favorite button ─────────────────────────────────────────── */
+    .fav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .fav-btn:hover { color: #f6ad00; border-color: #f6ad00; transform: scale(1.15); }
+    .fav-btn.favorited { color: #f6ad00; border-color: #f6ad00; background: rgba(246,173,0,0.08); }
+
+    /* ── Dislike button ────────────────────────────────────────────── */
+    .dislike-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .dislike-btn:hover { color: #e53e3e; border-color: #e53e3e; transform: scale(1.15); }
+    .dislike-btn.disliked { color: #e53e3e; border-color: #e53e3e; background: rgba(229,62,62,0.08); }
+
+    /* ── Smooth archive animation ──────────────────────────────────────── */
+    .paper-card.archived-hidden {
+      opacity: 0 !important;
+      transform: scale(0.92) !important;
+      animation: archive-out 0.35s ease forwards;
+    }
+    .paper-card.archived-restoring {
+      animation: archive-in 0.35s ease forwards;
+    }
+
+    @keyframes archive-out {
+      to { opacity: 0; transform: scale(0.92); }
+    }
+    @keyframes archive-in {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── Archive section ───────────────────────────────────────────── */
+    .archive-section {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 2px dashed var(--border);
+      display: flex;
+      justify-content: center;
+    }
+    .archive-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .archive-toggle:hover {
+      background: var(--surface2);
+      color: var(--text);
+    }
+    .archive-toggle .count {
+      background: var(--text-light);
+      color: #fff;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+    }
+    /* Archived appearance when visible (archive filter / archive view) */
+    .paper-card.archived-visible {
+      border-style: dashed;
+      border-color: var(--text-light);
+      opacity: 0.75;
+    }
+    .paper-card.archived-visible:hover {
+      opacity: 1;
+    }
+    .archived-badge {
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #e53e3e;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Restore button ──────────────────────────────────────────────── */
+    .restore-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      color: var(--text-muted);
+      transition: all var(--transition);
+      flex-shrink: 0;
+      margin-left: 6px;
+    }
+    .restore-btn:hover {
+      color: #38a169;
+      border-color: #38a169;
+      background: rgba(56,161,105,0.06);
+    }
+
+    /* ── View switch bar ─────────────────────────────────────────────── */
+    .view-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 6px 0 14px;
+    }
+    .view-btn {
+      padding: 5px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .view-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Empty state ────────────────────────────────────────────── */
+    .no-papers {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 22px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .papers-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 16px 14px 48px; }
+      .stats-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">🧬 Bio Digest</a>
+    <nav class="header-nav" style="display:flex;align-items:center;gap:18px;">
+      <a href="../favorites.html" style="display:flex;align-items:center;gap:4px;">
+        ★ 收藏夹&nbsp;(<span id="fav-nav-count">0</span>)
+      </a>
+      <span style="display:flex;align-items:center;gap:4px;color:var(--text-muted);font-size:0.88rem;">
+        📦 已归档&nbsp;(<span id="archive-nav-count">0</span>)
+      </span>
+      <a href="../index.html">← 所有期刊</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">2026-W38</p>
+  <h1>系统 / 合成生物学<br>文献周报</h1>
+  <p class="hero-meta">
+    2026/09/07 &nbsp;~&nbsp; 2026/09/14
+    &nbsp;&nbsp;·&nbsp;&nbsp;生成于 2026-09-14 02:28 UTC
+  </p>
+  <div class="stats-row">
+    <div>
+      <span class="stat-num">23</span>
+      <span class="stat-label">篇论文</span>
+    </div>
+    <div>
+      <span class="stat-num">0</span>
+      <span class="stat-label">已翻译</span>
+    </div>
+    <div>
+      <span class="stat-num">12</span>
+      <span class="stat-label">期刊来源</span>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">筛选：</span>
+    <button class="filter-btn active" data-filter="all" onclick="filterPapers('all', this)">全部 (23)</button>
+    
+    <button class="filter-btn" data-filter="nature" onclick="filterPapers('nature', this)">🌿 Nature 系列 (4)</button>
+    
+    
+    <button class="filter-btn" data-filter="cell" onclick="filterPapers('cell', this)">🔵 Cell 系列 (2)</button>
+    
+    
+    <button class="filter-btn" data-filter="science" onclick="filterPapers('science', this)">🟠 Science 系列 (5)</button>
+    
+    <button class="filter-btn" data-filter="fav" id="fav-filter-btn" onclick="filterPapers('fav', this)">★ 已收藏 (<span id="fav-filter-count">0</span>)</button>
+    <button class="filter-btn" data-filter="archive" id="archive-filter-btn" onclick="filterPapers('archive', this)">✕ 已归档 (<span id="archive-filter-count">0</span>)</button>
+  </div>
+</div>
+
+<main class="main">
+  
+  <div class="papers-grid" id="papers-grid">
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="42727575"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "Taxonomic profiling is fundamental to microbiome research, yet achieving high species-level accuracy remains challenging for complex communities that span bacteria, viruses, eukaryotes, and archaea, and these limitations are exacerbated in low-biomass, host-dominated samples. We introduce Metax, a cross-domain taxonomic profiler that integrates coverage-based probabilistic modeling with an expectation-maximization framework to distinguish true microbial signals from artifacts. Across \u003e600 samples from host-associated, environmental, wastewater, and low-biomass clinical settings, including benchmarks with limited reference representation, Metax improved profiling accuracy, achieving on average 55% higher F1 scores and 45% lower Bray-Curtis dissimilarity than other methods. Moreover, this broad evaluation demonstrated that Metax resolved bacterial and viral signatures of peri-implantitis in oral microbiomes and revealed signals suggestive of reagent-borne contaminants and reference misassemblies in plasma-cell-free DNA. By leveraging genome-wide coverage evidence, Metax enables robust cross-domain profiling across diverse sample types and sequencing depths, including settings where reference databases are highly incomplete.", "abstract_zh": "", "authors": ["Deng Zhi-Luo", "Safaei Nasim", "McHardy Alice Carolyn"], "journal": "Cell", "journal_color": "#0D47A1", "key_findings": [], "pmid": "42727575", "pub_date": "2026-Sep-11", "title": "Metax enables accurate cross-domain taxonomic profiling of metagenomes.", "url": "https://doi.org/10.1016/j.cell.2026.08.024", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42727575"
+                onclick="toggleFavorite('42727575', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42727575"
+                onclick="toggleDislike('42727575', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cell.2026.08.024" target="_blank" rel="noopener noreferrer">Metax enables accurate cross-domain taxonomic profiling of metagenomes.</a>
+      </h2>
+
+      <p class="paper-authors">Deng Zhi-Luo &middot; Safaei Nasim &middot; McHardy Alice Carolyn</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42727575', 'zh-42727575')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42727575', 'en-42727575')">中文</button>
+        </div>
+        <div id="en-42727575" class="abstract-text active">Taxonomic profiling is fundamental to microbiome research, yet achieving high species-level accuracy remains challenging for complex communities that span bacteria, viruses, eukaryotes, and archaea, and these limitations are exacerbated in low-biomass, host-dominated samples. We introduce Metax, a cross-domain taxonomic profiler that integrates coverage-based probabilistic modeling with an expectation-maximization framework to distinguish true microbial signals from artifacts. Across >600 samples from host-associated, environmental, wastewater, and low-biomass clinical settings, including benchmarks with limited reference representation, Metax improved profiling accuracy, achieving on average 55% higher F1 scores and 45% lower Bray-Curtis dissimilarity than other methods. Moreover, this broad evaluation demonstrated that Metax resolved bacterial and viral signatures of peri-implantitis in oral microbiomes and revealed signals suggestive of reagent-borne contaminants and reference misassemblies in plasma-cell-free DNA. By leveraging genome-wide coverage evidence, Metax enables robust cross-domain profiling across diverse sample types and sequencing depths, including settings where reference databases are highly incomplete.</div>
+        <div id="zh-42727575" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cell.2026.08.024" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42726887"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Modeling vector-borne pathogens that circulate among several host and vector species hinges on how the force of infection (FOI) is defined. In an i-host, j-vector susceptible-infectious-recovered modeling framework I compare two common FOI denominators: (i) a weighted form in which vectors bite preferred hosts disproportionately, and (ii) an unweighted form that assumes opportunistic biting. Using identical parameter sets calibrated to primate-Aedes data from K\u00e9dougou (Senegal), the weighted FOI doubles the basic reproduction number (R0) relative to the opportunistic FOI and can shift R0 across the epidemic threshold. It also produces higher long-run prevalence and larger oscillations. Both autonomous formulations undergo a forward transcritical bifurcation at R0\u2009=\u20091. Selecting an ecologically realistic biting assumption is therefore critical for predicting sylvatic-to-urban spillover risk and designing interventions in multi-host systems.", "abstract_zh": "", "authors": ["Althouse Benjamin M"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "42726887", "pub_date": "2026-Sep-11", "title": "Ecological specialization in vectors alters transmission thresholds and endemic dynamics in multi-host, multi-vector systems.", "url": "https://doi.org/10.1371/journal.pcbi.1014754", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42726887"
+                onclick="toggleFavorite('42726887', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42726887"
+                onclick="toggleDislike('42726887', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014754" target="_blank" rel="noopener noreferrer">Ecological specialization in vectors alters transmission thresholds and endemic dynamics in multi-host, multi-vector systems.</a>
+      </h2>
+
+      <p class="paper-authors">Althouse Benjamin M</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42726887', 'zh-42726887')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42726887', 'en-42726887')">中文</button>
+        </div>
+        <div id="en-42726887" class="abstract-text active">Modeling vector-borne pathogens that circulate among several host and vector species hinges on how the force of infection (FOI) is defined. In an i-host, j-vector susceptible-infectious-recovered modeling framework I compare two common FOI denominators: (i) a weighted form in which vectors bite preferred hosts disproportionately, and (ii) an unweighted form that assumes opportunistic biting. Using identical parameter sets calibrated to primate-Aedes data from Kédougou (Senegal), the weighted FOI doubles the basic reproduction number (R0) relative to the opportunistic FOI and can shift R0 across the epidemic threshold. It also produces higher long-run prevalence and larger oscillations. Both autonomous formulations undergo a forward transcritical bifurcation at R0 = 1. Selecting an ecologically realistic biting assumption is therefore critical for predicting sylvatic-to-urban spillover risk and designing interventions in multi-host systems.</div>
+        <div id="zh-42726887" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014754" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42726876"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Accurate metabolic flux analysis requires tracer delivery that preserves physiological metabolism. Current methods may distort metabolism through isoflurane anesthesia, surgical stress, or complex procedures. We demonstrate that isoflurane anesthesia profoundly alters serum and tissue metabolism across multiple pathways. In serum, acylcarnitines and fatty acids were broadly decreased, whereas amino acid metabolites and select nucleotide species were increased. Across multiple organs, isoflurane induced coordinated metabolic remodeling and distinct tissue-specific responses, including glycolytic remodeling in the brain and amino acid accumulation in the pancreas. To address these metabolic disturbances, we established a nonsurgical tail vein catheterization method completed in minutes under brief isoflurane anesthesia that enables multihour tracer infusion in awake, freely moving mice. Using U-13C6-cystine infusion, this method achieved robust cysteine labeling and downstream labeling comparable to jugular infusion while maintaining circulating cystine pools closer to physiological levels. This platform provides a practical approach for in vivo stable isotope tracing under more physiological conditions.", "abstract_zh": "", "authors": ["Kim Yumi", "Caldwell Samantha", "Long Meredith", "Abrahams Dominique", "Baldwin Margi", "DeNicola Gina M"], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": [], "pmid": "42726876", "pub_date": "2026-Sep-11", "title": "A simple, anesthesia-free infusion technique for in vivo metabolic tracing.", "url": "https://doi.org/10.1126/sciadv.aeg1157", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42726876"
+                onclick="toggleFavorite('42726876', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42726876"
+                onclick="toggleDislike('42726876', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aeg1157" target="_blank" rel="noopener noreferrer">A simple, anesthesia-free infusion technique for in vivo metabolic tracing.</a>
+      </h2>
+
+      <p class="paper-authors">Kim Yumi &middot; Caldwell Samantha &middot; Long Meredith &middot; Abrahams Dominique &middot; Baldwin Margi &middot; DeNicola Gina M</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42726876', 'zh-42726876')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42726876', 'en-42726876')">中文</button>
+        </div>
+        <div id="en-42726876" class="abstract-text active">Accurate metabolic flux analysis requires tracer delivery that preserves physiological metabolism. Current methods may distort metabolism through isoflurane anesthesia, surgical stress, or complex procedures. We demonstrate that isoflurane anesthesia profoundly alters serum and tissue metabolism across multiple pathways. In serum, acylcarnitines and fatty acids were broadly decreased, whereas amino acid metabolites and select nucleotide species were increased. Across multiple organs, isoflurane induced coordinated metabolic remodeling and distinct tissue-specific responses, including glycolytic remodeling in the brain and amino acid accumulation in the pancreas. To address these metabolic disturbances, we established a nonsurgical tail vein catheterization method completed in minutes under brief isoflurane anesthesia that enables multihour tracer infusion in awake, freely moving mice. Using U-13C6-cystine infusion, this method achieved robust cysteine labeling and downstream labeling comparable to jugular infusion while maintaining circulating cystine pools closer to physiological levels. This platform provides a practical approach for in vivo stable isotope tracing under more physiological conditions.</div>
+        <div id="zh-42726876" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aeg1157" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Isoflurane</span>
+          
+          <span class="kw-tag">Mice</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42726867"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Molecular organization of the plasma membrane at nano- and micrometer scales is critical for its function in all living cells. This emerges not only from the self-assembly of lipids and proteins but also from active forces originating in the underlying cytoskeletal cortex. These forces drive membrane molecules into nonequilibrium steady-state patterns such as nanoclusters. However, the molecular agents connecting membrane organization with cytoskeletal dynamics and stresses have remained unknown. Here, we show that two classes of ubiquitous ancestral nonmuscle myosins are deployed for the organization of different types of membrane components. Inner leaflet-localized class I myosins link outerleaflet glycosylphosphatidylinositol-anchored molecules to juxta-membrane actin filaments, whereas the more cortically localized Class II myosins operate on transmembrane proteins endowed with actin-binding capacity. Consistent with an active Flory-Huggins theory for phase separation, these observations show that the distinct motor-driven membrane molecules generate spatially segregated mesoscale domains, enriched in nanoclusters derived from different myosin classes. Moreover, chemically reversible posttranslational modifications such as palmitoylation enable concatenation of these domains by enhancing the affinity of the membrane domain constituents for each other. We anticipate that the segregation potential of the adenosine 5\u0027-triphosphate (ATP)-fueled cell membrane is made available for the crucial purpose of modulating information transduction because it can be regulated in space and time during the construction of signaling cascades, underpinning functional plasma membrane organization.", "abstract_zh": "", "authors": ["Sil Parijat", "van Zanten Thomas S", "Jahnavi Sowmya", "Bansal Ajay", "Razmazma Hafez", "Saha Suvrajit", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": [], "pmid": "42726867", "pub_date": "2026-Sep-11", "title": "Diverse ancestral myosin motors generate and segregate distinct types of nanocluster-rich domains at the plasma membrane.", "url": "https://doi.org/10.1126/sciadv.aeb8889", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42726867"
+                onclick="toggleFavorite('42726867', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42726867"
+                onclick="toggleDislike('42726867', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aeb8889" target="_blank" rel="noopener noreferrer">Diverse ancestral myosin motors generate and segregate distinct types of nanocluster-rich domains at the plasma membrane.</a>
+      </h2>
+
+      <p class="paper-authors">Sil Parijat &middot; van Zanten Thomas S &middot; Jahnavi Sowmya &middot; Bansal Ajay &middot; Razmazma Hafez &middot; Saha Suvrajit &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42726867', 'zh-42726867')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42726867', 'en-42726867')">中文</button>
+        </div>
+        <div id="en-42726867" class="abstract-text active">Molecular organization of the plasma membrane at nano- and micrometer scales is critical for its function in all living cells. This emerges not only from the self-assembly of lipids and proteins but also from active forces originating in the underlying cytoskeletal cortex. These forces drive membrane molecules into nonequilibrium steady-state patterns such as nanoclusters. However, the molecular agents connecting membrane organization with cytoskeletal dynamics and stresses have remained unknown. Here, we show that two classes of ubiquitous ancestral nonmuscle myosins are deployed for the organization of different types of membrane components. Inner leaflet-localized class I myosins link outerleaflet glycosylphosphatidylinositol-anchored molecules to juxta-membrane actin filaments, whereas the more cortically localized Class II myosins operate on transmembrane proteins endowed with actin-binding capacity. Consistent with an active Flory-Huggins theory for phase separation, these observations show that the distinct motor-driven membrane molecules generate spatially segregated mesoscale domains, enriched in nanoclusters derived from different myosin classes. Moreover, chemically reversible posttranslational modifications such as palmitoylation enable concatenation of these domains by enhancing the affinity of the membrane domain constituents for each other. We anticipate that the segregation potential of the adenosine 5'-triphosphate (ATP)-fueled cell membrane is made available for the crucial purpose of modulating information transduction because it can be regulated in space and time during the construction of signaling cascades, underpinning functional plasma membrane organization.</div>
+        <div id="zh-42726867" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aeb8889" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Cell Membrane</span>
+          
+          <span class="kw-tag">Myosins</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42725884"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Understanding toxin resistance in insects is key to appreciating niche adaptations but remains challenging due to its often-polygenic basis. A well-known example is the specialized association of Drosophila sechellia with noni fruit (Morinda citrifolia), which is toxic to other insects, including Drosophila simulans and Drosophila melanogaster. The main noni toxin is octanoic acid (OA), but the mechanisms that determine sensitivity or resistance to OA in different species remain unclear. Here, we experimentally evolved D. simulans with increased OA resistance, identifying multiple loci under selection. Cross-referencing these with a genome-wide, OA resistance CRISPR screen in a D. melanogaster cell line highlighted two proteins: Kraken, a putative detoxification enzyme expressed in digestive and renal tissues, and Alkbh7, a mitochondrial protein linked to fatty acid metabolism. Both genes show elevated expression in D. sechellia and OA-resistant D. simulans. In D. melanogaster, kraken mutants are more OA-sensitive, while Alkbh7 overexpression increased OA resistance. Mutation of these genes in D. sechellia reduced OA tolerance. Our identification of genes contributing to OA resistance in laboratory and natural contexts demonstrates how complementary selection approaches can provide insights into complex mechanisms of toxin susceptibility and adaptation. Such methods could have practical applications in the characterization of natural and artificial insecticides.", "abstract_zh": "", "authors": ["Marconcini Michele", "Cruchet Steeve", "Goswami Srishti", "Viswanatha Raghuvir", "Butnaru Matthew", "De Joydeep", "et al."], "journal": "Elife", "journal_color": "#607D8B", "key_findings": [], "pmid": "42725884", "pub_date": "2026-Sep-11", "title": "Intersecting experimental evolution and CRISPR screens to identify novel toxin resistance loci.", "url": "https://doi.org/10.7554/eLife.111773", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42725884"
+                onclick="toggleFavorite('42725884', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42725884"
+                onclick="toggleDislike('42725884', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.111773" target="_blank" rel="noopener noreferrer">Intersecting experimental evolution and CRISPR screens to identify novel toxin resistance loci.</a>
+      </h2>
+
+      <p class="paper-authors">Marconcini Michele &middot; Cruchet Steeve &middot; Goswami Srishti &middot; Viswanatha Raghuvir &middot; Butnaru Matthew &middot; De Joydeep &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42725884', 'zh-42725884')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42725884', 'en-42725884')">中文</button>
+        </div>
+        <div id="en-42725884" class="abstract-text active">Understanding toxin resistance in insects is key to appreciating niche adaptations but remains challenging due to its often-polygenic basis. A well-known example is the specialized association of Drosophila sechellia with noni fruit (Morinda citrifolia), which is toxic to other insects, including Drosophila simulans and Drosophila melanogaster. The main noni toxin is octanoic acid (OA), but the mechanisms that determine sensitivity or resistance to OA in different species remain unclear. Here, we experimentally evolved D. simulans with increased OA resistance, identifying multiple loci under selection. Cross-referencing these with a genome-wide, OA resistance CRISPR screen in a D. melanogaster cell line highlighted two proteins: Kraken, a putative detoxification enzyme expressed in digestive and renal tissues, and Alkbh7, a mitochondrial protein linked to fatty acid metabolism. Both genes show elevated expression in D. sechellia and OA-resistant D. simulans. In D. melanogaster, kraken mutants are more OA-sensitive, while Alkbh7 overexpression increased OA resistance. Mutation of these genes in D. sechellia reduced OA tolerance. Our identification of genes contributing to OA resistance in laboratory and natural contexts demonstrates how complementary selection approaches can provide insights into complex mechanisms of toxin susceptibility and adaptation. Such methods could have practical applications in the characterization of natural and artificial insecticides.</div>
+        <div id="zh-42725884" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.111773" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Caprylates</span>
+          
+          <span class="kw-tag">Drosophila</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42715336"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "The temporal dynamics and stochasticity of gene expression are critical to cell fate decisions, yet integrating snapshot omics data across multiple time points remains a major challenge. Here, we introduce DiffusionOT, a dynamic machine learning framework that infers cellular trajectories from multi-time point single-cell transcriptomics by incorporating stochastic effects. DiffusionOT transforms stochastic differential equations into ordinary differential equations, using optimal transport and neural networks to solve a high-dimensional landscape model. Through an unsupervised learning of the stochastic force in the data, DiffusionOT allows robust inference of the underlying stochastic dynamics of cell-state transitions. The framework includes a stochastic trajectory analysis module for lineage tracing and a gene perturbation module for in silico knockout and overexpression experiments. Benchmarks on simulated and four real-world datasets, including a spatial Stereo-seq dataset, demonstrate DiffusionOT\u0027s accuracy and efficiency in inferring state-transition velocities, cellular trajectories, population growth, gene regulatory networks, and cell-fate landscape.", "abstract_zh": "", "authors": ["Liu Juntan", "Zhou Peijie", "Nie Qing", "Li Chunhe"], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": [], "pmid": "42715336", "pub_date": "2026-Sep-11", "title": "Learning stochastic dynamics and cell-fate landscapes from single-cell snapshots via optimal transport.", "url": "https://doi.org/10.1126/sciadv.aeb4205", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42715336"
+                onclick="toggleFavorite('42715336', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42715336"
+                onclick="toggleDislike('42715336', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aeb4205" target="_blank" rel="noopener noreferrer">Learning stochastic dynamics and cell-fate landscapes from single-cell snapshots via optimal transport.</a>
+      </h2>
+
+      <p class="paper-authors">Liu Juntan &middot; Zhou Peijie &middot; Nie Qing &middot; Li Chunhe</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42715336', 'zh-42715336')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42715336', 'en-42715336')">中文</button>
+        </div>
+        <div id="en-42715336" class="abstract-text active">The temporal dynamics and stochasticity of gene expression are critical to cell fate decisions, yet integrating snapshot omics data across multiple time points remains a major challenge. Here, we introduce DiffusionOT, a dynamic machine learning framework that infers cellular trajectories from multi-time point single-cell transcriptomics by incorporating stochastic effects. DiffusionOT transforms stochastic differential equations into ordinary differential equations, using optimal transport and neural networks to solve a high-dimensional landscape model. Through an unsupervised learning of the stochastic force in the data, DiffusionOT allows robust inference of the underlying stochastic dynamics of cell-state transitions. The framework includes a stochastic trajectory analysis module for lineage tracing and a gene perturbation module for in silico knockout and overexpression experiments. Benchmarks on simulated and four real-world datasets, including a spatial Stereo-seq dataset, demonstrate DiffusionOT's accuracy and efficiency in inferring state-transition velocities, cellular trajectories, population growth, gene regulatory networks, and cell-fate landscape.</div>
+        <div id="zh-42715336" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aeb4205" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Single-Cell Analysis</span>
+          
+          <span class="kw-tag">Stochastic Processes</span>
+          
+          <span class="kw-tag">Gene Regulatory Networks</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42715296"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Hedgehog family morphogens present an interesting paradox: Despite being hydrophobic because of dual-lipid modifications, they form spatial concentration gradients that are highly conserved and essential for many aspects of metazoan development. Using live-cell single-molecule tracking and engineered synthetic signaling ligands, we isolated the distinct contribution of each lipid modification to Hedgehog diffusion and signaling potency. We found that although both lipid modifications enhance signaling potency, they do so through different mechanisms. Palmitate directly promotes receptor engagement, whereas cholesterol topologically confines secreted morphogens on the cell surface, effectively using the lipid membrane as a nonsignaling co-receptor that enriches ligands locally at the cost of restricting long-range diffusion. Our results on the function of cholesterol point to an intrinsic trade-off between signaling potency and gradient formation, with implications for the evolution and mechanism of nonsignaling co-receptors.", "abstract_zh": "", "authors": ["Schlissel Gavin", "Hansen Anders S", "Li Pulin"], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": [], "pmid": "42715296", "pub_date": "2026-Sep-11", "title": "Mechanistic trade-offs between local and long-range signaling activity in natural and synthetic morphogens.", "url": "https://doi.org/10.1126/sciadv.aef4578", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Sep-11</span>
+        <button class="fav-btn"
+                data-pmid="42715296"
+                onclick="toggleFavorite('42715296', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42715296"
+                onclick="toggleDislike('42715296', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aef4578" target="_blank" rel="noopener noreferrer">Mechanistic trade-offs between local and long-range signaling activity in natural and synthetic morphogens.</a>
+      </h2>
+
+      <p class="paper-authors">Schlissel Gavin &middot; Hansen Anders S &middot; Li Pulin</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42715296', 'zh-42715296')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42715296', 'en-42715296')">中文</button>
+        </div>
+        <div id="en-42715296" class="abstract-text active">Hedgehog family morphogens present an interesting paradox: Despite being hydrophobic because of dual-lipid modifications, they form spatial concentration gradients that are highly conserved and essential for many aspects of metazoan development. Using live-cell single-molecule tracking and engineered synthetic signaling ligands, we isolated the distinct contribution of each lipid modification to Hedgehog diffusion and signaling potency. We found that although both lipid modifications enhance signaling potency, they do so through different mechanisms. Palmitate directly promotes receptor engagement, whereas cholesterol topologically confines secreted morphogens on the cell surface, effectively using the lipid membrane as a nonsignaling co-receptor that enriches ligands locally at the cost of restricting long-range diffusion. Our results on the function of cholesterol point to an intrinsic trade-off between signaling potency and gradient formation, with implications for the evolution and mechanism of nonsignaling co-receptors.</div>
+        <div id="zh-42715296" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aef4578" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Signal Transduction</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Hedgehog Proteins</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42722790"
+             style="--card-color: #43A047">
+      <script class="paper-data" type="application/json">{"abstract": "Investigating the neural mechanisms of social group interactions and other naturalistic behaviors in small animals remains limited by current technology. Tethered neural recording systems are incompatible with many of these behaviors, while existing wireless devices for small animals are constrained by weight, bandwidth, recording duration and the lack of closed-loop modulation capabilities. Here we overcome these limitations by developing a Wireless, Interactive, Lightweight Datalogger (WILD) with integrated flexible neural probes, optogenetics, an inertial measurement unit, an ultrasonic microphone and a head-mounted camera. This platform enables simultaneous, long-term recording of neural activity, locomotor variables, vocalizations and eye movements from groups of freely moving mice in both laboratory and outdoor settings. Model-based real-time signal processing detects specific neural events and behavioral motifs to trigger closed-loop neural interventions. By combining multimodal recordings with advanced onboard signal-processing capabilities in a compact device, WILD enables the investigation of neural mechanisms underlying a broad range of natural behaviors in small animals.", "abstract_zh": "", "authors": ["Zhao Zifang", "Chang Hongyu", "Paudel Praveen", "Park Jaehyo", "Liu Can", "Aurelio Maria Q", "et al."], "journal": "Nat Methods", "journal_color": "#43A047", "key_findings": [], "pmid": "42722790", "pub_date": "2026-Sep-10", "title": "A wireless modular platform for neuro-behavioral recording and closed-loop manipulation in small animals.", "url": "https://doi.org/10.1038/s41592-026-03220-9", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #43A047">Nat Methods</span>
+        <span class="pub-date">2026-Sep-10</span>
+        <button class="fav-btn"
+                data-pmid="42722790"
+                onclick="toggleFavorite('42722790', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42722790"
+                onclick="toggleDislike('42722790', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41592-026-03220-9" target="_blank" rel="noopener noreferrer">A wireless modular platform for neuro-behavioral recording and closed-loop manipulation in small animals.</a>
+      </h2>
+
+      <p class="paper-authors">Zhao Zifang &middot; Chang Hongyu &middot; Paudel Praveen &middot; Park Jaehyo &middot; Liu Can &middot; Aurelio Maria Q &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42722790', 'zh-42722790')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42722790', 'en-42722790')">中文</button>
+        </div>
+        <div id="en-42722790" class="abstract-text active">Investigating the neural mechanisms of social group interactions and other naturalistic behaviors in small animals remains limited by current technology. Tethered neural recording systems are incompatible with many of these behaviors, while existing wireless devices for small animals are constrained by weight, bandwidth, recording duration and the lack of closed-loop modulation capabilities. Here we overcome these limitations by developing a Wireless, Interactive, Lightweight Datalogger (WILD) with integrated flexible neural probes, optogenetics, an inertial measurement unit, an ultrasonic microphone and a head-mounted camera. This platform enables simultaneous, long-term recording of neural activity, locomotor variables, vocalizations and eye movements from groups of freely moving mice in both laboratory and outdoor settings. Model-based real-time signal processing detects specific neural events and behavioral motifs to trigger closed-loop neural interventions. By combining multimodal recordings with advanced onboard signal-processing capabilities in a compact device, WILD enables the investigation of neural mechanisms underlying a broad range of natural behaviors in small animals.</div>
+        <div id="zh-42722790" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41592-026-03220-9" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42721222"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Calcium dynamics controls learning and memory, and abnormal calcium dynamics have been implicated in neurodegenerative disorders, such as Alzheimer\u0027s disease (AD). Calcium dynamics are influenced by calcium-induced calcium release (CICR), which is mediated by ryanodine receptors (RyR) located on endoplasmic reticulum (ER) membrane. Calmodulin, one of the most abundant proteins in the brain, inhibits RyR2, expressed in the dendrites of hippocampal CA1 neurons, with several reported consequences: relief of this inhibition is responsible for heart failure, and enhancing calmodulin to RyR binding (Nakamura Y, Yamamoto T, Xu X, Kobayashi S, Tanaka S, Tamitani M, et al. Enhancing calmodulin binding to ryanodine receptor is crucial to limit neuronal cell loss in Alzheimer disease. Sci Rep. 11(1), 2021.) alleviates cell loss and AD-like neuronal hyperexcitability. To investigate the role of calmodulin in aging and AD, we built a sophisticated reaction-diffusion model of a dendritic branch with ER. We showed that relieving calmodulin inhibition of RyR2 increased spatial and temporal spread of calcium transients in the dendrite. This effect was also visible in a model of old age, where disinhibition of half of the RyR2 population increased spatial spread of calcium transients by a factor of 2, and disinhibition of RyR2 combined with increased concentration of calcium buffering molecules increased duration of calcium transients. Lower activation of plasma membrane calcium ATPase (PMCA), which is also activated by calmodulin and inhibited by \u03b2-Amyloid oligomers, and not RyR2 disinhibition, led to an increase in resting intracellular calcium concentration as observed in AD. Overall, our research demonstrates that changes in calmodulin that are associated with AD and aging, by regulation of RyR2 (in old age) and PMCA (in AD), underlie changes in calcium dynamics that might have consequences for learning and memory.", "abstract_zh": "", "authors": ["J\u0119drzejewska-Szmek Joanna", "Blackwell Kim T"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "42721222", "pub_date": "2026-Sep-10", "title": "Calmodulin controls spatial and temporal specificity of calcium-induced calcium release.", "url": "https://doi.org/10.1371/journal.pcbi.1013752", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Sep-10</span>
+        <button class="fav-btn"
+                data-pmid="42721222"
+                onclick="toggleFavorite('42721222', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42721222"
+                onclick="toggleDislike('42721222', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1013752" target="_blank" rel="noopener noreferrer">Calmodulin controls spatial and temporal specificity of calcium-induced calcium release.</a>
+      </h2>
+
+      <p class="paper-authors">Jędrzejewska-Szmek Joanna &middot; Blackwell Kim T</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42721222', 'zh-42721222')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42721222', 'en-42721222')">中文</button>
+        </div>
+        <div id="en-42721222" class="abstract-text active">Calcium dynamics controls learning and memory, and abnormal calcium dynamics have been implicated in neurodegenerative disorders, such as Alzheimer's disease (AD). Calcium dynamics are influenced by calcium-induced calcium release (CICR), which is mediated by ryanodine receptors (RyR) located on endoplasmic reticulum (ER) membrane. Calmodulin, one of the most abundant proteins in the brain, inhibits RyR2, expressed in the dendrites of hippocampal CA1 neurons, with several reported consequences: relief of this inhibition is responsible for heart failure, and enhancing calmodulin to RyR binding (Nakamura Y, Yamamoto T, Xu X, Kobayashi S, Tanaka S, Tamitani M, et al. Enhancing calmodulin binding to ryanodine receptor is crucial to limit neuronal cell loss in Alzheimer disease. Sci Rep. 11(1), 2021.) alleviates cell loss and AD-like neuronal hyperexcitability. To investigate the role of calmodulin in aging and AD, we built a sophisticated reaction-diffusion model of a dendritic branch with ER. We showed that relieving calmodulin inhibition of RyR2 increased spatial and temporal spread of calcium transients in the dendrite. This effect was also visible in a model of old age, where disinhibition of half of the RyR2 population increased spatial spread of calcium transients by a factor of 2, and disinhibition of RyR2 combined with increased concentration of calcium buffering molecules increased duration of calcium transients. Lower activation of plasma membrane calcium ATPase (PMCA), which is also activated by calmodulin and inhibited by β-Amyloid oligomers, and not RyR2 disinhibition, led to an increase in resting intracellular calcium concentration as observed in AD. Overall, our research demonstrates that changes in calmodulin that are associated with AD and aging, by regulation of RyR2 (in old age) and PMCA (in AD), underlie changes in calcium dynamics that might have consequences for learning and memory.</div>
+        <div id="zh-42721222" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1013752" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="42391322"
+             style="--card-color: #E65100">
+      <script class="paper-data" type="application/json">{"abstract": "Ribosomal RNA (rRNA) transcription rates vary during development, and their dysregulation is linked to diseases such as cancer and ribosomopathies. Owing to their high abundance and genomic redundancy, the functional significance of rRNA levels remains unclear. We developed TAPIR (Targeted Activation of Protein Translation), a CRISPR-based approach to elevate rRNA levels by inducing 47S ribosomal DNA transcription. TAPIR increased nucleolar size and enhanced protein synthesis, even in rapidly proliferating cells. In neural stem cells, elevated translation promoted self-renewal and proliferation in vitro and in vivo. Furthermore, TAPIR enabled the modeling and partial rescue of associated disease phenotypes. Our findings reveal that rRNA levels directly regulate translational output and that protein synthesis capacity can act as a key determinant of mammalian stem cell behavior.", "abstract_zh": "", "authors": ["Wiesbeck Maximilian", "Alard Emilie L", "Merino Florencia", "Chowdhury Niti", "Egert Luisa", "Danese Anna", "et al."], "journal": "Science", "journal_color": "#E65100", "key_findings": [], "pmid": "42391322", "pub_date": "2026-Sep-10", "title": "Manipulation of protein translation and stem cell self-renewal by CRISPR activation of rRNA transcription.", "url": "https://doi.org/10.1126/science.aeh1348", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #E65100">Science</span>
+        <span class="pub-date">2026-Sep-10</span>
+        <button class="fav-btn"
+                data-pmid="42391322"
+                onclick="toggleFavorite('42391322', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42391322"
+                onclick="toggleDislike('42391322', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/science.aeh1348" target="_blank" rel="noopener noreferrer">Manipulation of protein translation and stem cell self-renewal by CRISPR activation of rRNA transcription.</a>
+      </h2>
+
+      <p class="paper-authors">Wiesbeck Maximilian &middot; Alard Emilie L &middot; Merino Florencia &middot; Chowdhury Niti &middot; Egert Luisa &middot; Danese Anna &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42391322', 'zh-42391322')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42391322', 'en-42391322')">中文</button>
+        </div>
+        <div id="en-42391322" class="abstract-text active">Ribosomal RNA (rRNA) transcription rates vary during development, and their dysregulation is linked to diseases such as cancer and ribosomopathies. Owing to their high abundance and genomic redundancy, the functional significance of rRNA levels remains unclear. We developed TAPIR (Targeted Activation of Protein Translation), a CRISPR-based approach to elevate rRNA levels by inducing 47S ribosomal DNA transcription. TAPIR increased nucleolar size and enhanced protein synthesis, even in rapidly proliferating cells. In neural stem cells, elevated translation promoted self-renewal and proliferation in vitro and in vivo. Furthermore, TAPIR enabled the modeling and partial rescue of associated disease phenotypes. Our findings reveal that rRNA levels directly regulate translational output and that protein synthesis capacity can act as a key determinant of mammalian stem cell behavior.</div>
+        <div id="zh-42391322" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/science.aeh1348" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Mice</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42717490"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "The voltage-gated potassium channel Kv2.1, encoded by the epileptic encephalopathy-associated gene KCNB1, is a primary driver of delayed-rectifier K+ currents in neurons. These currents contribute to high-frequency firing by preventing depolarization block due to Na+ channel inactivation. Wild-type (WT) channels are localized at the soma, proximal dendrites, and the initial segment of the axon, forming aggregates (clusters) via their C-terminal proximal restriction and clustering domain (PRC). This study investigated the biophysical and functional consequences of two C-terminal truncation mutations (Y529\u2217 and R579\u2217), identified in patients with epileptic encephalopathy, which disrupt this critical clustering domain. The mutations induced a change of Kv2.1 subcellular distribution towards distal dendrites and the axon. Cluster formation was impaired, though not abolished, in neurons expressing mutated subunits together with endogenous WT subunits. Consistent with this clustering deficit, single-molecule imaging revealed altered lateral diffusion of mutated channels. While WT channels remained largely immobile (stabilized), mutated forms exhibited intermittent diffusion punctuated by transient immobilization events. The percentage of stabilized trajectories was lower for mutated channels in the soma, dendrites and distal axons but not in the proximal portion of the axons. The differential diffusive behavior of WT and mutated channels was reproduced by diffusion-capture simulations considering channels with different numbers of PRC domains (i.e. heterotetramers with mutant subunits) and labile scaffolding interactions. Patch-clamp recordings revealed no significant difference in excitability between WT- and mutant-expressing neurons. However, we observed increased firing in both conditions compared to non-transfected neurons. Altogether, our results suggest that 1) mutated subunits form heterotetramers with endogenous WT subunits; 2) several PRC per channel are needed to efficiently immobilize Kv2.1 in large clusters; 3) increasing Kv2.1 channel expression level, independently of clustering, could drive neuronal hyperexcitability.", "abstract_zh": "", "authors": ["Paupiah Anne-Lise", "Ginisty Melvyn", "Gendre Capucine", "Russeau Marion", "Mouktine Imane", "Levi Sabine", "et al."], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": [], "pmid": "42717490", "pub_date": "2026-Sep-09", "title": "Epileptic encephalopathy-related Kv2.1 mutants impair clustering but not neuronal excitability.", "url": "https://doi.org/10.1016/j.bpj.2026.09.009", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Sep-09</span>
+        <button class="fav-btn"
+                data-pmid="42717490"
+                onclick="toggleFavorite('42717490', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42717490"
+                onclick="toggleDislike('42717490', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.09.009" target="_blank" rel="noopener noreferrer">Epileptic encephalopathy-related Kv2.1 mutants impair clustering but not neuronal excitability.</a>
+      </h2>
+
+      <p class="paper-authors">Paupiah Anne-Lise &middot; Ginisty Melvyn &middot; Gendre Capucine &middot; Russeau Marion &middot; Mouktine Imane &middot; Levi Sabine &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42717490', 'zh-42717490')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42717490', 'en-42717490')">中文</button>
+        </div>
+        <div id="en-42717490" class="abstract-text active">The voltage-gated potassium channel Kv2.1, encoded by the epileptic encephalopathy-associated gene KCNB1, is a primary driver of delayed-rectifier K+ currents in neurons. These currents contribute to high-frequency firing by preventing depolarization block due to Na+ channel inactivation. Wild-type (WT) channels are localized at the soma, proximal dendrites, and the initial segment of the axon, forming aggregates (clusters) via their C-terminal proximal restriction and clustering domain (PRC). This study investigated the biophysical and functional consequences of two C-terminal truncation mutations (Y529∗ and R579∗), identified in patients with epileptic encephalopathy, which disrupt this critical clustering domain. The mutations induced a change of Kv2.1 subcellular distribution towards distal dendrites and the axon. Cluster formation was impaired, though not abolished, in neurons expressing mutated subunits together with endogenous WT subunits. Consistent with this clustering deficit, single-molecule imaging revealed altered lateral diffusion of mutated channels. While WT channels remained largely immobile (stabilized), mutated forms exhibited intermittent diffusion punctuated by transient immobilization events. The percentage of stabilized trajectories was lower for mutated channels in the soma, dendrites and distal axons but not in the proximal portion of the axons. The differential diffusive behavior of WT and mutated channels was reproduced by diffusion-capture simulations considering channels with different numbers of PRC domains (i.e. heterotetramers with mutant subunits) and labile scaffolding interactions. Patch-clamp recordings revealed no significant difference in excitability between WT- and mutant-expressing neurons. However, we observed increased firing in both conditions compared to non-transfected neurons. Altogether, our results suggest that 1) mutated subunits form heterotetramers with endogenous WT subunits; 2) several PRC per channel are needed to efficiently immobilize Kv2.1 in large clusters; 3) increasing Kv2.1 channel expression level, independently of clustering, could drive neuronal hyperexcitability.</div>
+        <div id="zh-42717490" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.09.009" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42717095"
+             style="--card-color: #1B5E20">
+      <script class="paper-data" type="application/json">{"abstract": "An animal\u0027s ability to survive and thrive-whether fleeing from danger, eating a meal, or fighting an infection-arises from the collective moment-to-moment activity of many interacting cell types throughout the body. Physiology seeks to elucidate these cellular interactions that span\u00a0organs, cell types\u00a0and timescales, but has been limited by the inability to record this time-varying cellular activity simultaneously throughout the entire body. Here we\u00a0develop\u00a0WHOLISTIC (WHole-Organism Live-Imaging System for recording Tissue and IntraCellular activity), a method to image second-timescale activity of cells across the entire vertebrate body at cellular resolution. WHOLISTIC advances and integrates volumetric fluorescence microscopy, machine learning, and pancellular transgenic expression of calcium sensors1, demonstrated in larval zebrafish, with proof of concept in adult Danionella\u00a0cerebrum. To access information about the molecular and ultrastructural substrates for the measured dynamics, we advanced whole-body expansion microscopy2. At the cellular scale, body-wide screening revealed unexpected responses, including chondrocyte reactions to cold and meningeal responses to ketamine. At the organ scale, WHOLISTIC identified\u00a0rhythmic travelling waves along the renal nephron. At the multi-organ scale, it revealed unknown muscle synergies and muscle-organ interactions. At the whole-organism scale, the method captured brainstem-controlled redistribution of body-wide blood flow. Combining optogenetics with WHOLISTIC enabled all-optical causal dissection of brain-body interactions.\u00a0These advances establish a paradigm for systems biology that bridges cellular and organismal physiology, enabling comprehensive discovery across scales-from fundamental mechanisms to therapeutic targets.", "abstract_zh": "", "authors": ["Ruetten Virginie M S", "Zheng Wei", "Siwanowicz Igor", "Mensh Brett D", "Eddison Mark", "Hu Amy", "et al."], "journal": "Nature", "journal_color": "#1B5E20", "key_findings": [], "pmid": "42717095", "pub_date": "2026-Sep-09", "title": "Imaging cellular activity across all organs reveals body-wide circuits.", "url": "https://doi.org/10.1038/s41586-026-10979-6", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #1B5E20">Nature</span>
+        <span class="pub-date">2026-Sep-09</span>
+        <button class="fav-btn"
+                data-pmid="42717095"
+                onclick="toggleFavorite('42717095', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42717095"
+                onclick="toggleDislike('42717095', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41586-026-10979-6" target="_blank" rel="noopener noreferrer">Imaging cellular activity across all organs reveals body-wide circuits.</a>
+      </h2>
+
+      <p class="paper-authors">Ruetten Virginie M S &middot; Zheng Wei &middot; Siwanowicz Igor &middot; Mensh Brett D &middot; Eddison Mark &middot; Hu Amy &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42717095', 'zh-42717095')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42717095', 'en-42717095')">中文</button>
+        </div>
+        <div id="en-42717095" class="abstract-text active">An animal's ability to survive and thrive-whether fleeing from danger, eating a meal, or fighting an infection-arises from the collective moment-to-moment activity of many interacting cell types throughout the body. Physiology seeks to elucidate these cellular interactions that span organs, cell types and timescales, but has been limited by the inability to record this time-varying cellular activity simultaneously throughout the entire body. Here we develop WHOLISTIC (WHole-Organism Live-Imaging System for recording Tissue and IntraCellular activity), a method to image second-timescale activity of cells across the entire vertebrate body at cellular resolution. WHOLISTIC advances and integrates volumetric fluorescence microscopy, machine learning, and pancellular transgenic expression of calcium sensors1, demonstrated in larval zebrafish, with proof of concept in adult Danionella cerebrum. To access information about the molecular and ultrastructural substrates for the measured dynamics, we advanced whole-body expansion microscopy2. At the cellular scale, body-wide screening revealed unexpected responses, including chondrocyte reactions to cold and meningeal responses to ketamine. At the organ scale, WHOLISTIC identified rhythmic travelling waves along the renal nephron. At the multi-organ scale, it revealed unknown muscle synergies and muscle-organ interactions. At the whole-organism scale, the method captured brainstem-controlled redistribution of body-wide blood flow. Combining optogenetics with WHOLISTIC enabled all-optical causal dissection of brain-body interactions. These advances establish a paradigm for systems biology that bridges cellular and organismal physiology, enabling comprehensive discovery across scales-from fundamental mechanisms to therapeutic targets.</div>
+        <div id="zh-42717095" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41586-026-10979-6" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="42716028"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "Gene regulatory networks (GRNs) govern many cell processes. While multistability and oscillations are common GRN dynamics, they are typically studied and engineered in isolation. Here, we challenge this separation using the AC-DC circuit, a minimal three-gene network that merges the classical toggle switch and repressilator. Using a thermodynamic formalism and Bayesian inference, we show that a single-inducer version of the circuit displays diverse multifunctional dynamics, including coexistence of oscillations and multistability. We explore robustness, classify emergent behaviors, and analyze critical slowing down. Remarkably, the AC-DC circuit can produce more than thirty topologically distinct bifurcation diagrams, results that challenge the classical view that network topology rigidly constrains dynamical outcomes. This flexibility enables synthetic capabilities coupling hysteresis with oscillations, criticality, and reversibility. By uncovering the potential of minimal genetic circuits and outlining design principles for their implementation, this work opens directions for harnessing emergent complexity using the basic building blocks of life. A record of this paper\u0027s transparent peer review process is included in the supplemental information.", "abstract_zh": "", "authors": ["Maretvadakethope Smitha", "Aor I\u00e7vara", "Fischer Matthias M", "Pedrosa \u00c0ngela Pantebre", "Schaerli Yolanda", "Perez-Carrasco Ruben"], "journal": "Cell Syst", "journal_color": "#0D47A1", "key_findings": [], "pmid": "42716028", "pub_date": "2026-Sep-09", "title": "Let there be multifunctionality: Uncovering the dynamical zoo of the AC-DC genetic circuit.", "url": "https://doi.org/10.1016/j.cels.2026.101715", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell Syst</span>
+        <span class="pub-date">2026-Sep-09</span>
+        <button class="fav-btn"
+                data-pmid="42716028"
+                onclick="toggleFavorite('42716028', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42716028"
+                onclick="toggleDislike('42716028', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cels.2026.101715" target="_blank" rel="noopener noreferrer">Let there be multifunctionality: Uncovering the dynamical zoo of the AC-DC genetic circuit.</a>
+      </h2>
+
+      <p class="paper-authors">Maretvadakethope Smitha &middot; Aor Içvara &middot; Fischer Matthias M &middot; Pedrosa Àngela Pantebre &middot; Schaerli Yolanda &middot; Perez-Carrasco Ruben</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42716028', 'zh-42716028')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42716028', 'en-42716028')">中文</button>
+        </div>
+        <div id="en-42716028" class="abstract-text active">Gene regulatory networks (GRNs) govern many cell processes. While multistability and oscillations are common GRN dynamics, they are typically studied and engineered in isolation. Here, we challenge this separation using the AC-DC circuit, a minimal three-gene network that merges the classical toggle switch and repressilator. Using a thermodynamic formalism and Bayesian inference, we show that a single-inducer version of the circuit displays diverse multifunctional dynamics, including coexistence of oscillations and multistability. We explore robustness, classify emergent behaviors, and analyze critical slowing down. Remarkably, the AC-DC circuit can produce more than thirty topologically distinct bifurcation diagrams, results that challenge the classical view that network topology rigidly constrains dynamical outcomes. This flexibility enables synthetic capabilities coupling hysteresis with oscillations, criticality, and reversibility. By uncovering the potential of minimal genetic circuits and outlining design principles for their implementation, this work opens directions for harnessing emergent complexity using the basic building blocks of life. A record of this paper's transparent peer review process is included in the supplemental information.</div>
+        <div id="zh-42716028" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cels.2026.101715" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42715512"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Haptotaxis is an understudied form of directed cell migration in which movements are biased by gradients of immobilized ligands. For example, fibroblasts and other mesenchymal cells sense and respond to gradients of extracellular matrix (ECM) composition, which is relevant during tissue morphogenesis and repair. As a step towards understanding how haptotactic gradients spatially bias cell adhesion, intracellular signal transduction, and cytoskeletal dynamics, we formulated a phase field model of whole-cell migration, in which the occupancy of potential adhesion sites changes stochastically with time. With careful assignment of parameter values, the model predicts significant haptotactic bias for adhesion-site gradient steepness of a few percent across the cell. We then used the model to predict how the cell\u0027s removal of surface-bound ECM ligand (as observed in experiment) and/or the presence of a competing, chemotactic gradient influence(s) haptotactic fidelity. An emergent principle is that gains in directional persistence naturally offset losses of directional bias, at the cost of greater cell-to-cell heterogeneity of the response. In the case of orthogonally oriented gradients, this offset manifests as a remarkable robustness of the multi-cue response.", "abstract_zh": "", "authors": ["Koelbl Joseph M", "Apodaca Hector M", "Haugh Jason M"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "42715512", "pub_date": "2026-Sep-09", "title": "A phase field model with stochastic input simulates cellular gradient sensing, morphodynamics, and fidelity of haptotaxis.", "url": "https://doi.org/10.1371/journal.pcbi.1014726", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Sep-09</span>
+        <button class="fav-btn"
+                data-pmid="42715512"
+                onclick="toggleFavorite('42715512', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42715512"
+                onclick="toggleDislike('42715512', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014726" target="_blank" rel="noopener noreferrer">A phase field model with stochastic input simulates cellular gradient sensing, morphodynamics, and fidelity of haptotaxis.</a>
+      </h2>
+
+      <p class="paper-authors">Koelbl Joseph M &middot; Apodaca Hector M &middot; Haugh Jason M</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42715512', 'zh-42715512')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42715512', 'en-42715512')">中文</button>
+        </div>
+        <div id="en-42715512" class="abstract-text active">Haptotaxis is an understudied form of directed cell migration in which movements are biased by gradients of immobilized ligands. For example, fibroblasts and other mesenchymal cells sense and respond to gradients of extracellular matrix (ECM) composition, which is relevant during tissue morphogenesis and repair. As a step towards understanding how haptotactic gradients spatially bias cell adhesion, intracellular signal transduction, and cytoskeletal dynamics, we formulated a phase field model of whole-cell migration, in which the occupancy of potential adhesion sites changes stochastically with time. With careful assignment of parameter values, the model predicts significant haptotactic bias for adhesion-site gradient steepness of a few percent across the cell. We then used the model to predict how the cell's removal of surface-bound ECM ligand (as observed in experiment) and/or the presence of a competing, chemotactic gradient influence(s) haptotactic fidelity. An emergent principle is that gains in directional persistence naturally offset losses of directional bias, at the cost of greater cell-to-cell heterogeneity of the response. In the case of orthogonally oriented gradients, this offset manifests as a remarkable robustness of the multi-cue response.</div>
+        <div id="zh-42715512" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014726" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42713958"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Almost all cervical cancers are caused by human papillomaviruses (HPVs). In most cases, HPV DNA is integrated into the human genome. We found that tumor-specific, HPV-human DNA junctions are detectable in serum cell-free DNA of a fraction of cervical cancer patients at the time of initial treatment and/or at 6 months following treatment. Retrospective analysis revealed these junctions were more frequently detectable in women in whom the cancer later recurred. We also found that cervical cancers caused by HPV types outside of phylogenetic clade \u03b19 had a higher recurrence frequency than those caused by \u03b19 types in both our study and The Cancer Genome Atlas cervical cancer database, despite the higher prevalence of\u03b19 types, including HPV16, in cervical cancer. Thus, HPV-human DNA junction detection in serum cell-free DNA and HPV type determination in tumor tissue may help predict recurrence risk. Screening serum cell-free DNA for junctions may also offer an unambiguous non-invasive means to monitor absence of recurrence following treatment.", "abstract_zh": "", "authors": ["Van Arsdale Anne R", "Meshcheryakova Olga", "Gallego Sonia", "Maggi Elaine C", "Harmon Bryan", "Kuo Dennis Y S", "et al."], "journal": "Elife", "journal_color": "#607D8B", "key_findings": [], "pmid": "42713958", "pub_date": "2026-Sep-09", "title": "Serum, cell-free, HPV-human DNA junction detection and HPV typing for predicting and monitoring cervical cancer recurrence.", "url": "https://doi.org/10.7554/eLife.105741", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Sep-09</span>
+        <button class="fav-btn"
+                data-pmid="42713958"
+                onclick="toggleFavorite('42713958', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42713958"
+                onclick="toggleDislike('42713958', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.105741" target="_blank" rel="noopener noreferrer">Serum, cell-free, HPV-human DNA junction detection and HPV typing for predicting and monitoring cervical cancer recurrence.</a>
+      </h2>
+
+      <p class="paper-authors">Van Arsdale Anne R &middot; Meshcheryakova Olga &middot; Gallego Sonia &middot; Maggi Elaine C &middot; Harmon Bryan &middot; Kuo Dennis Y S &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42713958', 'zh-42713958')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42713958', 'en-42713958')">中文</button>
+        </div>
+        <div id="en-42713958" class="abstract-text active">Almost all cervical cancers are caused by human papillomaviruses (HPVs). In most cases, HPV DNA is integrated into the human genome. We found that tumor-specific, HPV-human DNA junctions are detectable in serum cell-free DNA of a fraction of cervical cancer patients at the time of initial treatment and/or at 6 months following treatment. Retrospective analysis revealed these junctions were more frequently detectable in women in whom the cancer later recurred. We also found that cervical cancers caused by HPV types outside of phylogenetic clade α9 had a higher recurrence frequency than those caused by α9 types in both our study and The Cancer Genome Atlas cervical cancer database, despite the higher prevalence ofα9 types, including HPV16, in cervical cancer. Thus, HPV-human DNA junction detection in serum cell-free DNA and HPV type determination in tumor tissue may help predict recurrence risk. Screening serum cell-free DNA for junctions may also offer an unambiguous non-invasive means to monitor absence of recurrence following treatment.</div>
+        <div id="zh-42713958" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.105741" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Female</span>
+          
+          <span class="kw-tag">Uterine Cervical Neoplasms</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42711491"
+             style="--card-color: #388E3C">
+      <script class="paper-data" type="application/json">{"abstract": "The DNA damage response (DDR) is a sophisticated network of cellular pathways whose perturbation leads to genome instability and is a key hallmark of oncogenesis. Here, we present data from 32 genome-scale loss-of-function CRISPR interference chemical-genetic screens with inhibitors targeting core constituents of the DDR machinery (PARP, ATR, ATM, DNAPK and WEE1), as both single agents and in combination with poly(ADP-ribose) polymerase inhibitors. These experiments identify \u003e1,000 genes whose perturbation modifies the DDR and provides a rich resource to the DDR community. In addition, this compendium of functional genomics data reveals key principles governing the DDR and highlights a strong chemical-genetic interaction between loss of activity of the peroxiredoxin PRDX1 and all tested DDR inhibitors through a mechanism involving iron availability mediated by an MRGBP-PAX7-IREB2 axis. Our data position PRDX1 as a key suppressor of DNA damage accumulation and potential druggable target in combination with DDR inhibitors.", "abstract_zh": "", "authors": ["O\u0027Loughlin Thomas A", "Arab Abolfazl", "Misiukiewicz Sara", "Montesano Elizabeth", "Yogodzinski Christopher", "Borah Ashir A", "et al."], "journal": "Nat Chem Biol", "journal_color": "#388E3C", "key_findings": [], "pmid": "42711491", "pub_date": "2026-Sep-08", "title": "Chemogenomic maps reveal a PRDX1-dependent iron-damage axis in the DNA damage response.", "url": "https://doi.org/10.1038/s41589-026-02312-z", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #388E3C">Nat Chem Biol</span>
+        <span class="pub-date">2026-Sep-08</span>
+        <button class="fav-btn"
+                data-pmid="42711491"
+                onclick="toggleFavorite('42711491', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42711491"
+                onclick="toggleDislike('42711491', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41589-026-02312-z" target="_blank" rel="noopener noreferrer">Chemogenomic maps reveal a PRDX1-dependent iron-damage axis in the DNA damage response.</a>
+      </h2>
+
+      <p class="paper-authors">O'Loughlin Thomas A &middot; Arab Abolfazl &middot; Misiukiewicz Sara &middot; Montesano Elizabeth &middot; Yogodzinski Christopher &middot; Borah Ashir A &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42711491', 'zh-42711491')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42711491', 'en-42711491')">中文</button>
+        </div>
+        <div id="en-42711491" class="abstract-text active">The DNA damage response (DDR) is a sophisticated network of cellular pathways whose perturbation leads to genome instability and is a key hallmark of oncogenesis. Here, we present data from 32 genome-scale loss-of-function CRISPR interference chemical-genetic screens with inhibitors targeting core constituents of the DDR machinery (PARP, ATR, ATM, DNAPK and WEE1), as both single agents and in combination with poly(ADP-ribose) polymerase inhibitors. These experiments identify >1,000 genes whose perturbation modifies the DDR and provides a rich resource to the DDR community. In addition, this compendium of functional genomics data reveals key principles governing the DDR and highlights a strong chemical-genetic interaction between loss of activity of the peroxiredoxin PRDX1 and all tested DDR inhibitors through a mechanism involving iron availability mediated by an MRGBP-PAX7-IREB2 axis. Our data position PRDX1 as a key suppressor of DNA damage accumulation and potential druggable target in combination with DDR inhibitors.</div>
+        <div id="zh-42711491" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41589-026-02312-z" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="42711351"
+             style="--card-color: #A5D6A7">
+      <script class="paper-data" type="application/json">{"abstract": "A significant challenge in developing meta-biomaterials is the effective decoupling of their intrinsically intertwined mechanical properties (e.g., elastic and shear moduli, Poisson\u0027s ratio, and anisotropy level), morphometric properties (e.g., relative mass density, pore size, and surface-to-volume ratio), and mass-transport properties (e.g., permeability). To address this challenge, we introduce a general framework for decoupling mechanical and morphometric properties in non-stochastic, three-dimensional meta-biomaterials. We first derived explicit geometrical relationships to determine the upper and lower bounds of the input geometrical parameters while ensuring relevance to in vitro biological conditions. Using a high-throughput numerical homogenization method (44,837 simulations) combined with systematic multi-objective optimization, we successfully decoupled Poisson\u0027s ratio and relative mass density from all other properties, with average deviations below ~14%. The optimized meta-biomaterials were additively manufactured at the macro- and microscales using PolyJet 3D printing and two-photon polymerization, respectively, and experimentally validated in terms of effective elastic modulus, Poisson\u0027s ratio, and permeability. The established decoupling framework provides a promising route for advancing tissue engineering and cell mechanobiology studies by enabling independent investigation of the effects of individual scaffold properties on cell behavior.", "abstract_zh": "", "authors": ["Yarali Ebrahim", "Staufer Urs", "Fratila-Apachitei Lidy E", "Al-Sanea Abdulrahman", "Mahdavi Reza", "Zadpoor Amir A", "et al."], "journal": "Nat Commun", "journal_color": "#A5D6A7", "key_findings": [], "pmid": "42711351", "pub_date": "2026-Sep-08", "title": "Decoupling mechanical and morphometric properties in meta-biomaterials.", "url": "https://doi.org/10.1038/s41467-026-77121-y", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #A5D6A7">Nat Commun</span>
+        <span class="pub-date">2026-Sep-08</span>
+        <button class="fav-btn"
+                data-pmid="42711351"
+                onclick="toggleFavorite('42711351', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42711351"
+                onclick="toggleDislike('42711351', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41467-026-77121-y" target="_blank" rel="noopener noreferrer">Decoupling mechanical and morphometric properties in meta-biomaterials.</a>
+      </h2>
+
+      <p class="paper-authors">Yarali Ebrahim &middot; Staufer Urs &middot; Fratila-Apachitei Lidy E &middot; Al-Sanea Abdulrahman &middot; Mahdavi Reza &middot; Zadpoor Amir A &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42711351', 'zh-42711351')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42711351', 'en-42711351')">中文</button>
+        </div>
+        <div id="en-42711351" class="abstract-text active">A significant challenge in developing meta-biomaterials is the effective decoupling of their intrinsically intertwined mechanical properties (e.g., elastic and shear moduli, Poisson's ratio, and anisotropy level), morphometric properties (e.g., relative mass density, pore size, and surface-to-volume ratio), and mass-transport properties (e.g., permeability). To address this challenge, we introduce a general framework for decoupling mechanical and morphometric properties in non-stochastic, three-dimensional meta-biomaterials. We first derived explicit geometrical relationships to determine the upper and lower bounds of the input geometrical parameters while ensuring relevance to in vitro biological conditions. Using a high-throughput numerical homogenization method (44,837 simulations) combined with systematic multi-objective optimization, we successfully decoupled Poisson's ratio and relative mass density from all other properties, with average deviations below ~14%. The optimized meta-biomaterials were additively manufactured at the macro- and microscales using PolyJet 3D printing and two-photon polymerization, respectively, and experimentally validated in terms of effective elastic modulus, Poisson's ratio, and permeability. The established decoupling framework provides a promising route for advancing tissue engineering and cell mechanobiology studies by enabling independent investigation of the effects of individual scaffold properties on cell behavior.</div>
+        <div id="zh-42711351" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41467-026-77121-y" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42709923"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Collective invasion is a key mechanism by which tumors disseminate and metastasize, involving coordinated migration of heterogeneous cell populations. Experimental studies in spheroid-based assays have identified specialized leader and follower cells that work together during this process, but the biophysical rules governing their interaction remain unclear. We present a mechanistic, cell-based computational model using the Cellular Potts framework to investigate how heterotypic adhesion, leader motility, and follower proliferation jointly shape invasion. Leader-follower tumors were simulated across 13 310 parameter sets, and invasion was quantified by invasive and infiltrative areas, finger-like protrusions, solitary defectors, and detached clusters. From these simulations, we identified four distinct invasion phenotypes: non-invasive, bulk collective, single-cell, and multimodal. Multimodal invasion-the coexistence of cohesive strands, solitary cells, and small clusters-emerged as the most prevalent phenotype, particularly under moderate adhesion and high motility. Proliferation increased tumor bulk rather than determining invasion mode, which was governed primarily by adhesion and leader motility. Mapping outcomes across the parameter space revealed sharp transitions between invasion modes, underscoring trade-offs between adhesion and motility in shaping invasion complexity. Our results show that hybrid invasion behaviors, previously considered rare, arise robustly from simple mechanical rules and are favored in a broad region of the parameter space. This framework reconciles binary models of invasion with experimental observations of heterogeneity, providing predictive insights into how modulating adhesion and motility may modify invasive behavior.", "abstract_zh": "", "authors": ["Akeeb Sheriff", "Marcus Adam I", "Jiang Yi"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "42709923", "pub_date": "2026-Sep", "title": "Clusters, fingers, and singles: A mechanical landscape of tumor invasion.", "url": "https://doi.org/10.1371/journal.pcbi.1014747", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Sep</span>
+        <button class="fav-btn"
+                data-pmid="42709923"
+                onclick="toggleFavorite('42709923', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42709923"
+                onclick="toggleDislike('42709923', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014747" target="_blank" rel="noopener noreferrer">Clusters, fingers, and singles: A mechanical landscape of tumor invasion.</a>
+      </h2>
+
+      <p class="paper-authors">Akeeb Sheriff &middot; Marcus Adam I &middot; Jiang Yi</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42709923', 'zh-42709923')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42709923', 'en-42709923')">中文</button>
+        </div>
+        <div id="en-42709923" class="abstract-text active">Collective invasion is a key mechanism by which tumors disseminate and metastasize, involving coordinated migration of heterogeneous cell populations. Experimental studies in spheroid-based assays have identified specialized leader and follower cells that work together during this process, but the biophysical rules governing their interaction remain unclear. We present a mechanistic, cell-based computational model using the Cellular Potts framework to investigate how heterotypic adhesion, leader motility, and follower proliferation jointly shape invasion. Leader-follower tumors were simulated across 13 310 parameter sets, and invasion was quantified by invasive and infiltrative areas, finger-like protrusions, solitary defectors, and detached clusters. From these simulations, we identified four distinct invasion phenotypes: non-invasive, bulk collective, single-cell, and multimodal. Multimodal invasion-the coexistence of cohesive strands, solitary cells, and small clusters-emerged as the most prevalent phenotype, particularly under moderate adhesion and high motility. Proliferation increased tumor bulk rather than determining invasion mode, which was governed primarily by adhesion and leader motility. Mapping outcomes across the parameter space revealed sharp transitions between invasion modes, underscoring trade-offs between adhesion and motility in shaping invasion complexity. Our results show that hybrid invasion behaviors, previously considered rare, arise robustly from simple mechanical rules and are favored in a broad region of the parameter space. This framework reconciles binary models of invasion with experimental observations of heterogeneity, providing predictive insights into how modulating adhesion and motility may modify invasive behavior.</div>
+        <div id="zh-42709923" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014747" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Neoplasm Invasiveness</span>
+          
+          <span class="kw-tag">Cell Movement</span>
+          
+          <span class="kw-tag">Models, Biological</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42709905"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "BACKGROUND: Malaria transmission exhibits significant heterogeneity within communities, with small proportions of individuals experiencing disproportionate mosquito exposure. METHODS: This study addresses critical knowledge gaps in characterising and modelling this heterogeneity. Parameterising Bayesian hierarchical models to field data from Burkina Faso, we compared gamma and lognormal distributions for describing heterogeneity in mosquito biting rates. We then implemented this heterogeneity in an individual-based stochastic modelling platform, OpenMalaria, to assess its impact on transmission dynamics. FINDINGS: The gamma distribution better described the observed field data than the lognormal. This choice has a natural mathematical justification: when individual biting rates follow a gamma distribution and bites occur as a Poisson process, the resulting bite counts follow a negative binomial distribution, which is well-supported empirically for overdispersed count data of this kind. Furthermore, the gamma distribution\u0027s lighter tail produces more moderate saturation and immunity effects compared to lognormal-based models, yielding more realistic transmission dynamics. When heterogeneity is introduced to malaria transmission simulations, both prevalence and incidence levels generally decrease across all age groups. Additionally, heterogeneity shifts disease burden towards younger age cohorts and alters the fundamental relationships between entomological inoculation rate and prevalence/incidence. The integration of appropriate heterogeneity distributions into transmission models substantially improved their ability to reproduce field-observed age-incidence curves. INTERPRETATION: Our findings highlight the importance of accounting for heterogeneous exposure when modelling malaria transmission, particularly in low-transmission and elimination settings where heterogeneity may be more pronounced.", "abstract_zh": "", "authors": ["Kamber Lars", "Cavelan Aur\u00e9lien", "Penny Melissa A", "Chitnis Nakul", "Fairbanks Emma Louise"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "42709905", "pub_date": "2026-Sep-08", "title": "Exploring heterogeneity in mosquito exposure and attraction and its implications for malaria transmission.", "url": "https://doi.org/10.1371/journal.pcbi.1014631", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Sep-08</span>
+        <button class="fav-btn"
+                data-pmid="42709905"
+                onclick="toggleFavorite('42709905', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42709905"
+                onclick="toggleDislike('42709905', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014631" target="_blank" rel="noopener noreferrer">Exploring heterogeneity in mosquito exposure and attraction and its implications for malaria transmission.</a>
+      </h2>
+
+      <p class="paper-authors">Kamber Lars &middot; Cavelan Aurélien &middot; Penny Melissa A &middot; Chitnis Nakul &middot; Fairbanks Emma Louise</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42709905', 'zh-42709905')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42709905', 'en-42709905')">中文</button>
+        </div>
+        <div id="en-42709905" class="abstract-text active">BACKGROUND: Malaria transmission exhibits significant heterogeneity within communities, with small proportions of individuals experiencing disproportionate mosquito exposure. METHODS: This study addresses critical knowledge gaps in characterising and modelling this heterogeneity. Parameterising Bayesian hierarchical models to field data from Burkina Faso, we compared gamma and lognormal distributions for describing heterogeneity in mosquito biting rates. We then implemented this heterogeneity in an individual-based stochastic modelling platform, OpenMalaria, to assess its impact on transmission dynamics. FINDINGS: The gamma distribution better described the observed field data than the lognormal. This choice has a natural mathematical justification: when individual biting rates follow a gamma distribution and bites occur as a Poisson process, the resulting bite counts follow a negative binomial distribution, which is well-supported empirically for overdispersed count data of this kind. Furthermore, the gamma distribution's lighter tail produces more moderate saturation and immunity effects compared to lognormal-based models, yielding more realistic transmission dynamics. When heterogeneity is introduced to malaria transmission simulations, both prevalence and incidence levels generally decrease across all age groups. Additionally, heterogeneity shifts disease burden towards younger age cohorts and alters the fundamental relationships between entomological inoculation rate and prevalence/incidence. The integration of appropriate heterogeneity distributions into transmission models substantially improved their ability to reproduce field-observed age-incidence curves. INTERPRETATION: Our findings highlight the importance of accounting for heterogeneous exposure when modelling malaria transmission, particularly in low-transmission and elimination settings where heterogeneity may be more pronounced.</div>
+        <div id="zh-42709905" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014631" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42708445"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Cell-free protein synthesis (CFPS) systems are a powerful platform with immense potential in fundamental research, biotechnology, and synthetic biology. Conventional prokaryotic CFPS systems, particularly those derived from Escherichia coli, often rely on complex reaction buffers containing up to 35 components, limiting their widespread adoption and systematic optimization. Here, we present an optimized E. coli cell-free protein synthesis (eCFPS) system, which is significantly streamlined for high efficiency. Through systematic screening, we successfully reduced the essential core reaction components from 35 to a core set of 7. The thorough optimization of these seven key components ensured that protein expression levels were not only maintained but even substantially improved. Furthermore, we developed a much simpler procedure for preparing the bacterial cytosolic extracts, a \u0027fast lysate\u0027 protocol that eliminates the traditional time-consuming runoff and dialysis steps, thereby enhancing the overall accessibility and robustness of eCFPS. This optimized and user-friendly eCFPS efficiently synthesizes challenging proteins, including functional, self-assembling vimentin, and active restriction endonuclease BsaI despite its strong cytotoxicity, and serves as a powerful tool that will facilitate diverse applications in basic life science research and beyond.", "abstract_zh": "", "authors": ["Lang Xianshengjie", "Zhang Changbin", "Lin Jingxuan", "Zhang Zhe", "Li Wenfei"], "journal": "Elife", "journal_color": "#607D8B", "key_findings": [], "pmid": "42708445", "pub_date": "2026-Sep-08", "title": "A simplified and highly efficient cell-free protein synthesis system for prokaryotes.", "url": "https://doi.org/10.7554/eLife.109495", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Elife</span>
+        <span class="pub-date">2026-Sep-08</span>
+        <button class="fav-btn"
+                data-pmid="42708445"
+                onclick="toggleFavorite('42708445', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42708445"
+                onclick="toggleDislike('42708445', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.7554/eLife.109495" target="_blank" rel="noopener noreferrer">A simplified and highly efficient cell-free protein synthesis system for prokaryotes.</a>
+      </h2>
+
+      <p class="paper-authors">Lang Xianshengjie &middot; Zhang Changbin &middot; Lin Jingxuan &middot; Zhang Zhe &middot; Li Wenfei</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42708445', 'zh-42708445')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42708445', 'en-42708445')">中文</button>
+        </div>
+        <div id="en-42708445" class="abstract-text active">Cell-free protein synthesis (CFPS) systems are a powerful platform with immense potential in fundamental research, biotechnology, and synthetic biology. Conventional prokaryotic CFPS systems, particularly those derived from Escherichia coli, often rely on complex reaction buffers containing up to 35 components, limiting their widespread adoption and systematic optimization. Here, we present an optimized E. coli cell-free protein synthesis (eCFPS) system, which is significantly streamlined for high efficiency. Through systematic screening, we successfully reduced the essential core reaction components from 35 to a core set of 7. The thorough optimization of these seven key components ensured that protein expression levels were not only maintained but even substantially improved. Furthermore, we developed a much simpler procedure for preparing the bacterial cytosolic extracts, a 'fast lysate' protocol that eliminates the traditional time-consuming runoff and dialysis steps, thereby enhancing the overall accessibility and robustness of eCFPS. This optimized and user-friendly eCFPS efficiently synthesizes challenging proteins, including functional, self-assembling vimentin, and active restriction endonuclease BsaI despite its strong cytotoxicity, and serves as a powerful tool that will facilitate diverse applications in basic life science research and beyond.</div>
+        <div id="zh-42708445" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.7554/eLife.109495" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Escherichia coli</span>
+          
+          <span class="kw-tag">Cell-Free System</span>
+          
+          <span class="kw-tag">Protein Biosynthesis</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42725430"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "CrRNA engineering has emerged as a pivotal strategy for extending CRISPR-Cas13a biosensing. However, structural modulation of the direct repeat (DR) region remains exceptionally challenging due to its intricate architecture and the high energetic barrier of the Cas13a-crRNA interface, which is conventionally viewed as a rigid and immutable scaffold. Here, we demonstrate that the DR region is instead a programmable topological element with unexpected structural plasticity. By systematically engineering the DR through sequence insertion and structural splitting, we identified multiple DR variants that retain robust catalytic activity. Crucially, this topological reconfiguration enables Cas13a activity to be precisely gated by unmodified nucleic acid blockers, a level of regulation unattainable with the wild-type crRNA. Building on this flexible modulation, we developed Dre-CRISPR, a DR-engineered platform that couples target-triggered DR restoration to a self-reinforcing autocatalytic loop. This self-amplifying system provides a 2 \u00d7 106-fold sensitivity enhancement over nonamplified systems. Furthermore, the Dre-CRISPR platform extends the diagnostic scope of Cas13a to a broader spectrum of analytes, ranging from microRNAs to enzymatic activities and heavy metal ions. Our findings redefine the crRNA scaffold as a versatile signaling node and provide a generalizable framework for developing high-sensitivity, self-amplifying CRISPR biosensors through topology-driven guide RNA engineering.", "abstract_zh": "", "authors": ["Ding Wei", "Yang Xiaomin", "Yang Yutong", "Liu Mingxin", "Liu Chenghui", "Wang Jinyi", "et al."], "journal": "Nucleic Acids Res", "journal_color": "#607D8B", "key_findings": [], "pmid": "42725430", "pub_date": "2026-Sep-07", "title": "Repeat region engineering of Cas13a crRNA enables conformational gating-based autocatalytic CRISPR biosensing.", "url": "https://doi.org/10.1093/nar/gkag893", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Nucleic Acids Res</span>
+        <span class="pub-date">2026-Sep-07</span>
+        <button class="fav-btn"
+                data-pmid="42725430"
+                onclick="toggleFavorite('42725430', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42725430"
+                onclick="toggleDislike('42725430', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1093/nar/gkag893" target="_blank" rel="noopener noreferrer">Repeat region engineering of Cas13a crRNA enables conformational gating-based autocatalytic CRISPR biosensing.</a>
+      </h2>
+
+      <p class="paper-authors">Ding Wei &middot; Yang Xiaomin &middot; Yang Yutong &middot; Liu Mingxin &middot; Liu Chenghui &middot; Wang Jinyi &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42725430', 'zh-42725430')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42725430', 'en-42725430')">中文</button>
+        </div>
+        <div id="en-42725430" class="abstract-text active">CrRNA engineering has emerged as a pivotal strategy for extending CRISPR-Cas13a biosensing. However, structural modulation of the direct repeat (DR) region remains exceptionally challenging due to its intricate architecture and the high energetic barrier of the Cas13a-crRNA interface, which is conventionally viewed as a rigid and immutable scaffold. Here, we demonstrate that the DR region is instead a programmable topological element with unexpected structural plasticity. By systematically engineering the DR through sequence insertion and structural splitting, we identified multiple DR variants that retain robust catalytic activity. Crucially, this topological reconfiguration enables Cas13a activity to be precisely gated by unmodified nucleic acid blockers, a level of regulation unattainable with the wild-type crRNA. Building on this flexible modulation, we developed Dre-CRISPR, a DR-engineered platform that couples target-triggered DR restoration to a self-reinforcing autocatalytic loop. This self-amplifying system provides a 2 × 106-fold sensitivity enhancement over nonamplified systems. Furthermore, the Dre-CRISPR platform extends the diagnostic scope of Cas13a to a broader spectrum of analytes, ranging from microRNAs to enzymatic activities and heavy metal ions. Our findings redefine the crRNA scaffold as a versatile signaling node and provide a generalizable framework for developing high-sensitivity, self-amplifying CRISPR biosensors through topology-driven guide RNA engineering.</div>
+        <div id="zh-42725430" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1093/nar/gkag893" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">CRISPR-Associated Proteins</span>
+          
+          <span class="kw-tag">Biosensing Techniques</span>
+          
+          <span class="kw-tag">CRISPR-Cas Systems</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42708411"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Many bacteriophages encode anti-CRISPR (Acr) proteins that inhibit bacterial CRISPR-Cas immune systems. Rapid acr gene expression upon phage entry enables CRISPR-Cas neutralization but can impact phage fitness if unregulated. Therefore, Acr production is often controlled by distinct families of co-encoded anti-CRISPR-associated (Aca) proteins, which are usually helix-turn-helix (HTH) regulators that bind DNA within acr-aca operon promoters. Previously, we demonstrated that the Aca2 family additionally represses Acr production translationally by binding structured RNA motifs within the 5\u0027 untranslated region (UTR) of the\u00a0acr-aca mRNA. Here, through systematic bioinformatic analyses, we provide evidence of structured RNA motifs in the 5\u0027 UTRs of operons encoding members of other Aca families and show that Aca1 also specifically binds its cognate RNA motif. Additionally, many Aca proteins are predicted to regulate not only their own but also adjacent operons with potential anti-defence genes. Indeed, we show that Aca14, newly identified in this study, represses two predicted anti-defence operons. Aca14 is a ribbon-helix-helix domain protein, revealing regulatory diversity beyond the canonical HTH Aca family members. Collectively, our findings expand our understanding of acr regulation in mobile genetic elements and reveal novel mechanisms by which phages fine-tune anti-defence gene expression.", "abstract_zh": "", "authors": ["Feussner Maximilian", "Birkholz Nils", "Lee So Yeon", "Beisel Chase L", "Park Hyun Ho", "Brown Chris M", "et al."], "journal": "Nucleic Acids Res", "journal_color": "#607D8B", "key_findings": [], "pmid": "42708411", "pub_date": "2026-Sep-07", "title": "An expanded realm of anti-CRISPR-associated proteins and regulatory mechanisms.", "url": "https://doi.org/10.1093/nar/gkag862", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Nucleic Acids Res</span>
+        <span class="pub-date">2026-Sep-07</span>
+        <button class="fav-btn"
+                data-pmid="42708411"
+                onclick="toggleFavorite('42708411', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42708411"
+                onclick="toggleDislike('42708411', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1093/nar/gkag862" target="_blank" rel="noopener noreferrer">An expanded realm of anti-CRISPR-associated proteins and regulatory mechanisms.</a>
+      </h2>
+
+      <p class="paper-authors">Feussner Maximilian &middot; Birkholz Nils &middot; Lee So Yeon &middot; Beisel Chase L &middot; Park Hyun Ho &middot; Brown Chris M &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42708411', 'zh-42708411')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42708411', 'en-42708411')">中文</button>
+        </div>
+        <div id="en-42708411" class="abstract-text active">Many bacteriophages encode anti-CRISPR (Acr) proteins that inhibit bacterial CRISPR-Cas immune systems. Rapid acr gene expression upon phage entry enables CRISPR-Cas neutralization but can impact phage fitness if unregulated. Therefore, Acr production is often controlled by distinct families of co-encoded anti-CRISPR-associated (Aca) proteins, which are usually helix-turn-helix (HTH) regulators that bind DNA within acr-aca operon promoters. Previously, we demonstrated that the Aca2 family additionally represses Acr production translationally by binding structured RNA motifs within the 5' untranslated region (UTR) of the acr-aca mRNA. Here, through systematic bioinformatic analyses, we provide evidence of structured RNA motifs in the 5' UTRs of operons encoding members of other Aca families and show that Aca1 also specifically binds its cognate RNA motif. Additionally, many Aca proteins are predicted to regulate not only their own but also adjacent operons with potential anti-defence genes. Indeed, we show that Aca14, newly identified in this study, represses two predicted anti-defence operons. Aca14 is a ribbon-helix-helix domain protein, revealing regulatory diversity beyond the canonical HTH Aca family members. Collectively, our findings expand our understanding of acr regulation in mobile genetic elements and reveal novel mechanisms by which phages fine-tune anti-defence gene expression.</div>
+        <div id="zh-42708411" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1093/nar/gkag862" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">5' Untranslated Regions</span>
+          
+          <span class="kw-tag">Operon</span>
+          
+          <span class="kw-tag">Viral Proteins</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="42708410"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Synthetic biology and metabolic engineering increasingly demand predictable and interoperable gene expression across phylogenetically distant organisms, as the need for portable genetic systems and transferable metabolic pathways continues to grow. However, fundamental differences in promoter architecture and transcriptional logic across kingdoms remain a key bottleneck in developing universal expression platforms. Here, we designed a set of modular hybrid promoters that enable tunable and quantitatively consistent gene expression in both Escherichia coli and Saccharomyces cerevisiae. These promoters integrate bacterial -10/-35 motifs and Shine-Dalgarno sequences with minimal yeast TATA boxes and Kozak sequences to ensure transcriptional and translational compatibility. The promoter set supported weak, moderate, and strong expression with high relative consistency across species. Applied to the biosynthetic pathway for the valuable pigment prodeoxyviolacein, the hybrid promoters enabled coordinated production in both hosts. This work establishes a broadly compatible promoter architecture and provides a foundational toolkit for cross-kingdom, multi-host synthetic biology.", "abstract_zh": "", "authors": ["Son So-Hee", "Moon Soo Young", "An Nan-Yeong", "Lee Ju Young"], "journal": "Nucleic Acids Res", "journal_color": "#607D8B", "key_findings": [], "pmid": "42708410", "pub_date": "2026-Sep-07", "title": "Modular synthetic cross-kingdom promoters enable coordinated expression in Escherichia coli and Saccharomyces cerevisiae.", "url": "https://doi.org/10.1093/nar/gkag868", "week": "2026-W38"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Nucleic Acids Res</span>
+        <span class="pub-date">2026-Sep-07</span>
+        <button class="fav-btn"
+                data-pmid="42708410"
+                onclick="toggleFavorite('42708410', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="42708410"
+                onclick="toggleDislike('42708410', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1093/nar/gkag868" target="_blank" rel="noopener noreferrer">Modular synthetic cross-kingdom promoters enable coordinated expression in Escherichia coli and Saccharomyces cerevisiae.</a>
+      </h2>
+
+      <p class="paper-authors">Son So-Hee &middot; Moon Soo Young &middot; An Nan-Yeong &middot; Lee Ju Young</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-42708410', 'zh-42708410')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-42708410', 'en-42708410')">中文</button>
+        </div>
+        <div id="en-42708410" class="abstract-text active">Synthetic biology and metabolic engineering increasingly demand predictable and interoperable gene expression across phylogenetically distant organisms, as the need for portable genetic systems and transferable metabolic pathways continues to grow. However, fundamental differences in promoter architecture and transcriptional logic across kingdoms remain a key bottleneck in developing universal expression platforms. Here, we designed a set of modular hybrid promoters that enable tunable and quantitatively consistent gene expression in both Escherichia coli and Saccharomyces cerevisiae. These promoters integrate bacterial -10/-35 motifs and Shine-Dalgarno sequences with minimal yeast TATA boxes and Kozak sequences to ensure transcriptional and translational compatibility. The promoter set supported weak, moderate, and strong expression with high relative consistency across species. Applied to the biosynthetic pathway for the valuable pigment prodeoxyviolacein, the hybrid promoters enabled coordinated production in both hosts. This work establishes a broadly compatible promoter architecture and provides a foundational toolkit for cross-kingdom, multi-host synthetic biology.</div>
+        <div id="zh-42708410" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1093/nar/gkag868" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Promoter Regions, Genetic</span>
+          
+          <span class="kw-tag">Saccharomyces cerevisiae</span>
+          
+          <span class="kw-tag">Escherichia coli</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+  </div>
+  
+
+  <!-- Archive section -->
+<div class="archive-section" id="archive-section">
+  <!-- Archive view toggle: shows archived papers inline in the main grid when active -->
+  <button class="archive-toggle" onclick="toggleArchiveView()" id="archive-toggle-btn">
+    <span id="archive-toggle-label">📦 已归档论文</span> <span class="count" id="archive-count">0</span>
+  </button>
+  <!-- Inline archive view is now controlled by the main grid; no separate grid is used -->
+</div>
+</main>
+
+<footer class="site-footer">
+  <p>数据来源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed E-utilities</a>
+  &nbsp;·&nbsp; 翻译：<a href="https://api.deepseek.com" target="_blank">DeepSeek v4-pro</a>
+  &nbsp;·&nbsp; 自动生成于 2026-09-14 02:28 UTC</p>
+</footer>
+
+<script src="../assets/feedback.js"></script>
+<script>
+  // ── Tab switching ────────────────────────────────────────────
+  function switchTab(btn, showId, hideId) {
+    btn.closest('.abstract-section')
+       .querySelectorAll('.tab-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(showId).classList.add('active');
+    document.getElementById(hideId).classList.remove('active');
+  }
+
+  function getPaperData(card) {
+    const raw = card ? card.querySelector('.paper-data') : null;
+    if (!raw) return { pmid: card?.dataset?.pmid || '', week: '2026-W38' };
+
+    try {
+      return JSON.parse(raw.textContent);
+    } catch {
+      return { pmid: card?.dataset?.pmid || '', week: '2026-W38' };
+    }
+  }
+
+  function trackFeedback(signal, action, paper, metadata) {
+    if (!window.BioDigestFeedback) return;
+    window.BioDigestFeedback.track(signal, action, paper, {
+      sourcePage: 'weekly-report',
+      metadata: metadata || {},
+    });
+  }
+
+  // ── Favorites (localStorage) ─────────────────────────────────
+  const FAV_KEY = 'bio-digest-favorites';
+
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveFavs(favs) {
+    localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+  }
+
+  function toggleFavorite(pmid, btn) {
+    const card = btn.closest('.paper-card');
+    const paper = getPaperData(card);
+    const favs = getFavs();
+    if (favs[pmid]) {
+      delete favs[pmid];
+      btn.classList.remove('favorited');
+      btn.textContent = '☆';
+      btn.title = '收藏';
+      trackFeedback('favorite', 'remove', paper, { current_filter: CURRENT_FILTER });
+    } else {
+      const raw = card.querySelector('.paper-data');
+      if (raw) favs[pmid] = JSON.parse(raw.textContent);
+      btn.classList.add('favorited');
+      btn.textContent = '★';
+      btn.title = '取消收藏';
+      trackFeedback('favorite', 'add', paper, { current_filter: CURRENT_FILTER });
+    }
+    saveFavs(favs);
+    _updateFavCounters();
+    applyPaperVisibility();
+  }
+
+  function _updateFavCounters() {
+    const count = Object.keys(getFavs()).length;
+    ['fav-nav-count', 'fav-filter-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+  }
+
+  function _restoreFavButtons() {
+    const favs = getFavs();
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      if (favs[btn.dataset.pmid]) {
+        btn.classList.add('favorited');
+        btn.textContent = '★';
+        btn.title = '取消收藏';
+      }
+    });
+    _updateFavCounters();
+  }
+
+  // ── Archive / Dislike (localStorage) ─────────────────────────
+  const ARCHIVE_KEY = 'bio-digest-archive';
+  let CURRENT_FILTER = 'all';
+
+  function getArchived() {
+    try { return JSON.parse(localStorage.getItem(ARCHIVE_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveArchived(archived) {
+    localStorage.setItem(ARCHIVE_KEY, JSON.stringify(archived));
+  }
+
+  function getFilterButton(filter) {
+    return document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+  }
+
+  function setActiveFilter(filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    const activeBtn = getFilterButton(filter);
+    if (activeBtn) activeBtn.classList.add('active');
+  }
+
+  function syncArchiveUi() {
+    const count = Object.keys(getArchived()).length;
+    ['archive-nav-count', 'archive-filter-count', 'archive-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+
+    const archiveSection = document.getElementById('archive-section');
+    if (archiveSection) {
+      archiveSection.style.display = count > 0 || CURRENT_FILTER === 'archive' ? '' : 'none';
+    }
+
+    const labelEl = document.getElementById('archive-toggle-label');
+    if (labelEl) {
+      labelEl.textContent = CURRENT_FILTER === 'archive' ? '← 返回主列表' : '📦 已归档论文';
+    }
+
+    const archiveCountEl = document.getElementById('archive-count');
+    if (archiveCountEl) {
+      archiveCountEl.style.display = CURRENT_FILTER === 'archive' ? 'none' : '';
+    }
+  }
+
+  function applyPaperVisibility() {
+    const favs = getFavs();
+    const archived = getArchived();
+    const archiveMode = CURRENT_FILTER === 'archive';
+
+    document.querySelectorAll('.paper-card').forEach(card => {
+      const pmid = card.dataset.pmid;
+      const isArchived = !!archived[pmid];
+      const isFavorite = !!favs[pmid];
+      const restoreBtn = card.querySelector('.restore-btn');
+      let visible = false;
+
+      if (archiveMode) {
+        visible = isArchived;
+      } else if (CURRENT_FILTER === 'all') {
+        visible = !isArchived;
+      } else if (CURRENT_FILTER === 'fav') {
+        visible = !isArchived && isFavorite;
+      } else {
+        visible = !isArchived && card.dataset.family === CURRENT_FILTER;
+      }
+
+      card.style.display = visible ? '' : 'none';
+
+      if (isArchived && archiveMode) {
+        card.classList.remove('archived-hidden');
+        card.classList.add('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = '';
+      } else if (isArchived) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      } else {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      }
+    });
+
+    syncArchiveUi();
+  }
+
+  function toggleDislike(pmid, btn) {
+    const archived = getArchived();
+    const card = document.querySelector(`.paper-card[data-pmid="${pmid}"]`);
+    const paper = getPaperData(card);
+
+    if (archived[pmid]) {
+      delete archived[pmid];
+      btn.classList.remove('disliked');
+      btn.textContent = '✕';
+      btn.title = '不感兴趣';
+
+      if (card) {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        const rb = card.querySelector('.restore-btn');
+        if (rb) rb.remove();
+      }
+
+      saveArchived(archived);
+      trackFeedback('archive', 'remove', paper, { current_filter: CURRENT_FILTER });
+      if (CURRENT_FILTER === 'archive' && Object.keys(archived).length === 0) {
+        CURRENT_FILTER = 'all';
+        setActiveFilter('all');
+      }
+      applyPaperVisibility();
+      return;
+    }
+
+    const raw = btn.closest('.paper-card').querySelector('.paper-data');
+    if (raw) archived[pmid] = JSON.parse(raw.textContent);
+    btn.classList.add('disliked');
+    btn.textContent = '✓';
+    btn.title = '取消归档';
+
+    if (card) {
+      card.classList.add('archived-hidden');
+      if (!card.querySelector('.restore-btn')) {
+        const header = card.querySelector('.card-header');
+        if (header) {
+          const unarchiveBtn = document.createElement('button');
+          unarchiveBtn.className = 'restore-btn';
+          unarchiveBtn.textContent = '↩ 恢复';
+          unarchiveBtn.title = '恢复到主列表';
+          unarchiveBtn.onclick = function() {
+            const dBtn = card.querySelector('.dislike-btn');
+            if (dBtn) toggleDislike(pmid, dBtn);
+          };
+          header.appendChild(unarchiveBtn);
+        }
+      }
+    }
+
+    saveArchived(archived);
+    trackFeedback('archive', 'add', paper, { current_filter: CURRENT_FILTER });
+    syncArchiveUi();
+    window.setTimeout(applyPaperVisibility, 400);
+  }
+
+  function _restoreDislikeButtons() {
+    const archived = getArchived();
+    document.querySelectorAll('.dislike-btn').forEach(btn => {
+      const pmid = btn.dataset.pmid;
+      const card = btn.closest('.paper-card');
+      if (!archived[pmid]) return;
+
+      btn.classList.add('disliked');
+      btn.textContent = '✓';
+      btn.title = '取消归档';
+
+      if (card) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (!card.querySelector('.restore-btn')) {
+          const header = card.querySelector('.card-header');
+          if (header) {
+            const unarchiveBtn = document.createElement('button');
+            unarchiveBtn.className = 'restore-btn';
+            unarchiveBtn.textContent = '↩ 恢复';
+            unarchiveBtn.title = '恢复到主列表';
+            unarchiveBtn.onclick = function() {
+              const dBtn = card.querySelector('.dislike-btn');
+              if (dBtn) toggleDislike(pmid, dBtn);
+            };
+            header.appendChild(unarchiveBtn);
+          }
+        }
+      }
+    });
+    syncArchiveUi();
+  }
+
+  function setFilter(family) {
+    CURRENT_FILTER = family;
+    setActiveFilter(family);
+    applyPaperVisibility();
+  }
+
+  function toggleArchiveView() {
+    setFilter(CURRENT_FILTER === 'archive' ? 'all' : 'archive');
+  }
+
+  // ── Filter ───────────────────────────────────────────────────
+  function filterPapers(family, btn) {
+    setFilter(family);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    _restoreFavButtons();
+    _restoreDislikeButtons();
+    applyPaperVisibility();
+    if (window.BioDigestFeedback) {
+      void window.BioDigestFeedback.flushQueue();
+    }
+  });
+</script>
+</body>
+</html>
