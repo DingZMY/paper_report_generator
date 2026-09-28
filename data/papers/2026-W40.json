@@ -1,0 +1,1288 @@
+{
+  "week": "2026-W40",
+  "generated_at": "2026-09-28T02:30:25.664898Z",
+  "date_range": {
+    "start": "2026/09/21",
+    "end": "2026/09/28"
+  },
+  "total": 29,
+  "papers": [
+    {
+      "pmid": "42800828",
+      "title": "Engineering a compact CgCas12n platform for efficient genome and base editing in mammalian cells.",
+      "journal": "Mol Syst Biol",
+      "authors": [
+        "Hou Bowen",
+        "Liu Xinyi",
+        "Fan Jiawen",
+        "Wang Wanjie",
+        "Jin Chuanzhao",
+        "Li Guanglei",
+        "et al."
+      ],
+      "abstract": "Type V CRISPR-Cas12 systems evolved from transposon-encoded TnpB proteins, with type V-U4 nucleases (Cas12n) as evolutionary intermediates linking TnpB to larger type V effectors. Despite their compact size, most Cas12n orthologs, including Corynebacterium glutamicum Cas12n (CgCas12n), exhibit low genome-editing activity in mammalian cells. Here, we engineered CgCas12n using an arginine enrichment strategy, generating a variant with approximately 60-fold enhanced editing efficiency. Concurrently, we optimized the sgRNA scaffold to reduce its size without compromising activity. These improvements were combined to establish an enhanced CgCas12n system (eCgCas12n) that enables efficient mammalian genome editing. We further adapted this system for base editing by constructing a cytosine base editor (eCgCas12n-CBE) that mediates efficient C-to-T conversion. As proof of concept, eCgCas12n-CBE introduced a premature stop codon into the Dmd gene, reducing dystrophin expression and impairing myogenic differentiation. AAV9-mediated delivery of eCgCas12n-CBE into mouse skeletal muscle demonstrated its in vivo editing capability. Collectively, this work establishes a robust engineering strategy to enhance compact Cas12n nucleases and provides an efficient genome- and base-editing platform for functional genetic studies.",
+      "doi": "10.1038/s44320-026-00248-z",
+      "url": "https://doi.org/10.1038/s44320-026-00248-z",
+      "pub_date": "2026-Sep-26",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "V型CRISPR-Cas12系统由转座子编码的TnpB蛋白进化而来，V-U4型核酸酶（Cas12n）是连接TnpB与较大V型效应蛋白的进化中间体。尽管Cas12n具有紧凑的尺寸，但大多数Cas12n直系同源物（包括谷氨酸棒杆菌Cas12n（CgCas12n））在哺乳动物细胞中的基因组编辑活性较低。在此，我们采用精氨酸富集策略对CgCas12n进行工程改造，获得了一个编辑效率提高约60倍的变体。同时，我们优化了sgRNA支架，在不影响活性的前提下减小其尺寸。将这些改进结合起来，建立了增强型CgCas12n系统（eCgCas12n），可实现高效的哺乳动物基因组编辑。我们进一步将该系统改造用于碱基编辑，构建了胞嘧啶碱基编辑器（eCgCas12n-CBE），可介导高效的C-to-T转换。作为概念验证，eCgCas12n-CBE在Dmd基因中引入提前终止密码子，降低了肌营养不良蛋白表达并损害肌源性分化。AAV9介导的eCgCas12n-CBE递送至小鼠骨骼肌展示了其体内编辑能力。总之，该工作建立了一种增强紧凑型Cas12n核酸酶的稳健工程策略，并为功能遗传学研究提供了一个高效的基因组和碱基编辑平台。",
+      "key_findings": [
+        "精氨酸富集策略改造CgCas12n，获得编辑效率提高约60倍的变体。",
+        "优化sgRNA支架减小尺寸且保持活性，构建eCgCas12n高效基因组编辑系统。",
+        "构建eCgCas12n-CBE胞嘧啶碱基编辑器，在Dmd基因实现C-to-T编辑并经AAV9体内递送。"
+      ],
+      "translated_at": "2026-09-28T02:37:14.223326Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了增强紧凑型Cas12n的工程化策略和高效基因组/碱基编辑平台，方法具有可迁移性",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:30:30.995316Z"
+      }
+    },
+    {
+      "pmid": "42789728",
+      "title": "Unlocking fast robotic locomotor propulsion through dynamic spine-leg synergy.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Wang Ruochao",
+        "Zhang Weitao",
+        "Quan Xiaolong",
+        "Du Rongjie",
+        "Bing Zhenshan",
+        "Wang Gang",
+        "et al."
+      ],
+      "abstract": "Quadrupeds in nature achieve agile locomotion through a rhythmic flexing of the spine in coordination with leg movement. This dynamic synergy enhances their speed and stability, reflecting a kind of physical intelligence encoded in their bodies. However, identifying this spine-leg synergy and embodying it in robotics to enhance locomotor propulsion remains challenging. To address this, we developed FLEXOR (fast legged robot with a flexible spine for optimal running), which uses dual-joint coupled spine and elastic legs to capture dynamic spine-leg synergy in rapid propulsion of small-scale quadrupeds. Through simulation and physical experiments of FLEXOR, we identified an optimal dynamic spine-leg synergy that maximizes locomotor capabilities by aligning the ground reaction force (GRF) for effective forward propulsion. Moreover, the dual-joint coupled spine amplifies the actuator torque, thereby increasing both the GRF magnitude and the propulsive output without additional energy input. By harnessing this synergy and its structural advantage, FLEXOR achieves a substantial increase in speed with a reduced cost of transport, outperforming state-of-the-art quadruped robots with flexible spines. Through an extended dynamics framework and robophysical validation, we further demonstrate that the optimal spine-leg synergy generalizes robustly across diverse spine-leg morphologies and physical scales. This work broadens our understanding of the essence of synergistic locomotion in animals and is potentially applicable for the design and control of embodied intelligence-driven robots.",
+      "doi": "10.1126/sciadv.aed5603",
+      "url": "https://doi.org/10.1126/sciadv.aed5603",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Robotics",
+        "Locomotion",
+        "Biomechanical Phenomena",
+        "Spine",
+        "Animals",
+        "Humans"
+      ],
+      "abstract_zh": "自然界的四足动物通过脊柱有节律地弯曲并与腿部运动协调来实现敏捷运动。这种动态协同增强了它们的速度和稳定性，体现了一种编码于其身体中的物理智能。然而，识别这种脊柱-腿协同并将其融入机器人以增强运动推进仍具挑战性。为此，我们开发了 FLEXOR（具有柔性脊柱以实现最佳奔跑的快速腿式机器人），它利用双关节耦合脊柱和弹性腿来捕捉小型四足动物快速推进中的动态脊柱-腿协同。通过 FLEXOR 的仿真与物理实验，我们识别出一种最优的动态脊柱-腿协同，该协同通过调整地面反作用力（GRF）的方向以实现有效向前推进，从而最大化运动能力。此外，双关节耦合脊柱会放大执行器扭矩，从而在不增加能量输入的情况下提高地面反作用力幅值和推进输出。借助这种协同及其结构优势，FLEXOR 实现了速度的大幅提升，同时降低了单位距离运输能耗，优于现有最先进的柔性脊柱四足机器人。通过扩展动力学框架和机器人物理验证，我们进一步证明该最优脊柱-腿协同能够在多样的脊柱-腿形态和物理尺度上稳健泛化。这项工作拓宽了我们对动物协同运动本质的理解，并有望应用于具身智能驱动机器人的设计与控制。",
+      "key_findings": [
+        "开发FLEXOR机器人，利用双关节耦合脊柱和弹性腿捕捉动态脊柱-腿协同。",
+        "发现最优协同通过使地面反作用力对齐有效向前推进以最大化运动能力，且脊柱放大扭矩而不增加能耗。",
+        "FLEXOR实现速度大幅提升并降低运输能耗，最优协同在不同形态与尺度上稳健泛化。"
+      ],
+      "translated_at": "2026-09-28T02:38:44.924886Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出FLEXOR平台与扩展动力学框架，揭示脊柱-腿协同推进机制，可跨形态与尺度泛化，具方法论价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:30:53.404970Z"
+      }
+    },
+    {
+      "pmid": "42789724",
+      "title": "A designed ubiquitin-binding protein selectively enriches and visualizes unanchored ubiquitin.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Shi Shihua",
+        "Bendel Alexandra",
+        "Kempf Georg",
+        "Sanchez Jacint",
+        "Majima Sohei",
+        "Iesmantavicius Vytautas",
+        "et al."
+      ],
+      "abstract": "While protein ubiquitination has been extensively studied, the roles of unanchored ubiquitin and its chains remain less understood, largely due to a lack of specific, high-affinity tools for their enrichment and visualization. To address this, we used high-throughput affinity maturation and computational protein design to engineer novel proteins that selectively bind unanchored ubiquitin. We first enhanced the binding affinity of the zinc finger domain of histone deacetylase 6, a natural unanchored ubiquitin binder, by including its unstructured amino-terminal loop and introducing the V1091L mutation. Using RFdiffusion, we then designed 11 novel ubiquitin-binding proteins (UBiPs), among which UBiP10 showed specificity for unanchored ubiquitin. This protein enriched unanchored ubiquitin from cells and influenza A virions and served as a probe to determine its cellular levels, supporting a relative decrease upon proteasome inhibition. Imaging studies with UBiP10 further revealed a novel unanchored ubiquitin coat around aggresomes, illustrating the potential of UBiP10 as a unique tool to study unanchored ubiquitin in cellular regulation.",
+      "doi": "10.1126/sciadv.aec0818",
+      "url": "https://doi.org/10.1126/sciadv.aec0818",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Ubiquitin",
+        "Humans",
+        "Protein Binding",
+        "Ubiquitination",
+        "Zinc Fingers",
+        "Carrier Proteins",
+        "Histone Deacetylase 6",
+        "Protein Engineering",
+        "Proteasome Endopeptidase Complex"
+      ],
+      "abstract_zh": "尽管蛋白质泛素化已被广泛研究，但未锚定泛素及其链的作用仍了解较少，主要由于缺乏特异性、高亲和力的工具用于其富集与可视化。为解决这一问题，我们采用高通量亲和力成熟和计算蛋白质设计，工程化出选择性结合未锚定泛素的新型蛋白。我们首先通过纳入组蛋白去乙酰化酶6锌指结构域的非结构化氨基端环并引入V1091L突变，增强了其作为天然未锚定泛素结合物的亲和力。随后，利用RFdiffusion设计了11种新型泛素结合蛋白（UBiPs），其中UBiP10对未锚定泛素表现出特异性。该蛋白可从细胞和甲型流感病毒颗粒中富集未锚定泛素，并作为探针测定其细胞水平，支持蛋白酶体抑制后其相对下降。使用UBiP10的成像研究进一步揭示了聚集体周围存在一层新的未锚定泛素包被，表明UBiP10可作为研究未锚定泛素在细胞调控中作用的独特工具。",
+      "key_findings": [
+        "通过亲和力成熟与RFdiffusion设计出特异性结合未锚定泛素的UBiP10。",
+        "UBiP10可从细胞和流感病毒中富集未锚定泛素并检测其水平变化。",
+        "成像发现聚集体周围存在未锚定泛素包被，为细胞调控研究提供新工具。"
+      ],
+      "translated_at": "2026-09-28T02:39:11.857648Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了新型未锚定泛素结合蛋白工具，结合计算设计与亲和成熟，可用于富集和成像，方法具普适性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:30:59.138756Z"
+      }
+    },
+    {
+      "pmid": "42789718",
+      "title": "Multimodal profiling of atherosclerosis: Protocol and pilot data for the AtherOMICS biobank.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Živković Luka",
+        "Batool Roya",
+        "Louma Julian",
+        "Alabarse Paulo Vinicius Gil",
+        "Li Yingle",
+        "Zhang Lanyue",
+        "et al."
+      ],
+      "abstract": "Omics technologies enable deep profiling of human atherosclerosis but have mostly been applied in small studies lacking integration with other data modalities. AtherOMICS is a biobanking project linking multiomic atherosclerotic plaque phenotyping with blood biobanking, in vivo imaging, and clinical data. Here, we present the study protocol and show pilot results that demonstrate technical feasibility. Since August 2022, 246 patients scheduled to undergo carotid or femoral endarterectomy at Ludwig-Maximilians-Universität Klinikum (Munich, Germany), have been enrolled (median age, 73 years; 32% female), with recruitment ongoing. Plaques undergo systematic histological characterization of lipid core, calcification, intraplaque hemorrhage, fibrous cap, macrophages, and smooth muscle cells. Single-nucleus RNA sequencing (n = 17) has confirmed macrophages as the dominant intraplaque cell type, whereas paired plaque and plasma affinity-based proteomics (n = 88) quantified 2841 shared proteins showing low plaque-plasma correlation (median ρ = 0.10). Cross-modality image integration [histology, ex vivo magnetic resonance imaging (MRI), in vivo MRI, and computed tomography angiography] proved feasible. Together, AtherOMICS enables multimodal characterization of human atherosclerosis aiming for the discovery of athero-specific drug targets, molecular signatures of atheroprogression, and noninvasive biomarkers of plaque vulnerability.",
+      "doi": "10.1126/sciadv.aee2639",
+      "url": "https://doi.org/10.1126/sciadv.aee2639",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Female",
+        "Atherosclerosis",
+        "Pilot Projects",
+        "Aged",
+        "Biological Specimen Banks",
+        "Plaque, Atherosclerotic",
+        "Male",
+        "Proteomics",
+        "Biomarkers"
+      ],
+      "abstract_zh": "组学技术...",
+      "key_findings": [
+        "AtherOMICS生物样本库项目已纳入246例颈动脉或股动脉内膜切除术患者，初步证明多组学斑块表型与影像及临床数据整合可行。",
+        "单细胞核RNA测序证实巨噬细胞是斑块内主要细胞类型；配对斑块与血浆蛋白质组学定量2841种共有蛋白，二者相关性低（中位ρ=0.10）。",
+        "组织学、离体/活体MRI与CT血管造影的跨模态图像整合被证明技术上可行。"
+      ],
+      "translated_at": "2026-09-28T02:40:40.332813Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出AtherOMICS生物样本库的多模态整合方案，连接斑块多组学、影像与临床数据，提供可迁移的新研究平台",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:07.065663Z"
+      }
+    },
+    {
+      "pmid": "42789706",
+      "title": "MCA1 mechanosensitive channels enable fast communication of wound signals between lateral roots.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Baudon Angel",
+        "Brodersen Craig R",
+        "Huang Shouguang",
+        "Song Huifang",
+        "Becker Dirk",
+        "Geiger Dietmar",
+        "et al."
+      ],
+      "abstract": "Although plant roots are hidden in soil, they are vulnerable to damage by insect herbivory, such as aerial tissues. However, wound signaling in roots is poorly understood. Here, we examined how damage signals spread locally and over long distances between Arabidopsis lateral roots. Using intracellular membrane potential recordings, calcium imaging, and optogenetics, we show that mechanical injury triggers an immediate local membrane depolarization and cytosolic calcium elevations whose magnitude and duration scale with wound severity. Depolarizations were also detected in neighboring lateral roots within milliseconds, demonstrating the presence of a rapid inter-root signaling pathway. Through mutant analyses, we highlight the roles of glutamate-like receptors and mid1-complementing activity 1 (MCA1) mechanosensitive channels in mediating this long-distance communication. Our results demonstrate that a wound-induced decrease in root cell turgor pressure rapidly spreads across the root network, where neighboring roots decode this signal via MCA1. This work underscores fundamental differences between root and shoot wound responses and uncovers a mechanosensory basis for fast communication between lateral roots.",
+      "doi": "10.1126/sciadv.aef2202",
+      "url": "https://doi.org/10.1126/sciadv.aef2202",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Arabidopsis",
+        "Arabidopsis Proteins",
+        "Plant Roots",
+        "Mechanotransduction, Cellular",
+        "Calcium",
+        "Ion Channels",
+        "Signal Transduction",
+        "Membrane Potentials",
+        "Mutation",
+        "Membrane Proteins"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T02:42:15.497439Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示侧根间通过机械敏感通道和膨压变化快速传递损伤信号的机制，具有概念新意和跨系统启发价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:20.558352Z"
+      }
+    },
+    {
+      "pmid": "42789691",
+      "title": "Biosurfactants direct the evolutionary dynamics of surface-associated microbial systems.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Ruan Chujin",
+        "Xiong Bijing",
+        "Vinod Deepthi P",
+        "Kan Anton",
+        "Wu Jing",
+        "Thakur Madhav P",
+        "et al."
+      ],
+      "abstract": "Surface-associated microbial systems experience spatial constraints that can intensify stochastic lineage loss through genetic drift and alter how natural selection acts on competing lineages. A key feature of these systems is that steep resource gradients typically confine growth to a narrow band of cells located at the biomass periphery. This restricts the effective population size and constrains lineage interactions, thereby accelerating stochastic lineage exclusion. Here, we demonstrate that biosurfactants, which are secreted by many bacteria, can modulate the evolutionary dynamics of these systems by relaxing spatial constraints. Using Stutzerimonas stutzeri as a model bacterium, we used surface-associated growth experiments and individual-based simulations to demonstrate that rhamnolipid-induced reductions in surface friction widen the peripheral band of growing cells, consequently enhancing lineage intermixing. This relaxation of spatial constraints suppresses exclusion by genetic drift, mitigates competitive asymmetries, and increases the persistence of slower-growing variants. Our simulations reveal that reducing surface friction alone is sufficient to cause these effects, establishing a direct mechanistic link between spatial constraints and evolutionary outcomes in microbial systems. Our results demonstrate that biosurfactants not only promote ecological dispersal but also direct evolutionary dynamics by determining the spatial constraints acting on the system. Spatial constraints are therefore important determinants of microbial population dynamics and underappreciated regulators of evolutionary processes.",
+      "doi": "10.1126/sciadv.aeh8127",
+      "url": "https://doi.org/10.1126/sciadv.aeh8127",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Biosurfactants",
+        "Biological Evolution",
+        "Pseudomonas stutzeri",
+        "Glycolipids",
+        "Genetic Drift",
+        "Surface Properties",
+        "Surface-Active Agents",
+        "Evolution, Molecular"
+      ],
+      "abstract_zh": "表面附着微生物系统经历空间约束，这种约束可通过遗传漂变加剧随机谱系丢失，并改变自然选择对竞争谱系的作用方式。这些系统的一个关键特征是陡峭的资源梯度通常将生长限制在生物量外围的一条狭窄细胞带内。这限制了有效种群大小并约束了谱系相互作用，从而加速随机谱系排斥。在此，我们证明许多细菌分泌的生物表面活性剂可通过放宽空间约束来调节这些系统的进化动态。以Stutzerimonas stutzeri为模式细菌，我们通过表面附着生长实验和基于个体的模拟证明，鼠李糖脂诱导的表面摩擦降低会扩大生长细胞的外围带，从而增强谱系混合。这种空间约束的放宽抑制了遗传漂变导致的排斥，缓解了竞争不对称性，并提高了生长较慢变异体的持久性。我们的模拟揭示，仅降低表面摩擦就足以引起这些效应，建立了微生物系统中空间约束与进化结果之间的直接机制联系。我们的结果表明，生物表面活性剂不仅促进生态扩散，还通过决定作用于系统的空间约束来指引进化动态。因此，空间约束是微生物种群动态的重要决定因素，也是被低估的进化过程调控因子。",
+      "key_findings": [
+        "生物表面活性剂通过降低表面摩擦放宽空间约束，扩大生长细胞外围带并增强谱系混合。",
+        "空间约束放宽抑制遗传漂变排斥，缓解竞争不对称，提高慢生长变异体持久性。",
+        "模拟证明仅降低表面摩擦即可产生效应，建立空间约束与进化结果的直接机制联系。"
+      ],
+      "translated_at": "2026-09-28T02:44:28.978609Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示生物表面活性剂通过降低表面摩擦缓解空间约束、调控进化动态，提供可迁移的机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:30.975465Z"
+      }
+    },
+    {
+      "pmid": "42789681",
+      "title": "Integrating zero-inflation correction and transcriptional kinetics for single-cell transcriptomic analysis.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Yang Chengkai",
+        "Liao Yu",
+        "Sheng Ying",
+        "Jiao Feng"
+      ],
+      "abstract": "Single-cell transcriptomic data exhibit pervasive zero inflation, while traditional models either neglect this issue or fail to capture transcriptional burst-driven bimodality, hindering accurate gene regulatory studies. This study developed a zero-inflated telegraph model that integrates technical zero correction with the stochastic gene state-switching dynamics of the classical telegraph model. Systematic validation was conducted using synthetic data, human scRNA-seq data from lupus and breast cancer patients, and mouse embryonic stem cell scRNA-seq data. The model showed superior performance: it accurately fits mRNA distributions (including bimodal patterns), reliably estimates effective transcriptional burst parameters while preventing overfitting, thus enables correction of traditional models' regulatory inference bias. It also outperforms conventional approaches in detecting differentially expressed genes, with notable advantages in small samples, and identifies unique disease-related genes (e.g., LDLR, GZMB for lupus, FAIM2, VDR for breast cancer). This biologically interpretable and robust tool advances single-cell transcriptomic analysis.",
+      "doi": "10.1371/journal.pcbi.1014779",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014779",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "单细胞转录组数据普遍存在零膨胀现象，传统模型要么忽略该问题，要么无法捕捉转录爆发驱动的双峰分布，阻碍了精确的基因调控研究。本研究开发了一种零膨胀电报模型，将技术零校正与经典电报模型的随机基因状态切换动力学相结合。使用合成数据、狼疮和乳腺癌患者的人类scRNA-seq数据以及小鼠胚胎干细胞scRNA-seq数据进行了系统验证。该模型表现出优越性能：能准确拟合mRNA分布（包括双峰模式），可靠估计有效转录爆发参数同时防止过拟合，从而能够校正传统模型的调控推断偏差。在检测差异表达基因方面也优于传统方法，在小样本中优势显著，并识别出独特的疾病相关基因（如狼疮的LDLR、GZMB，乳腺癌的FAIM2、VDR）。这一具有生物学可解释性和稳健性的工具推进了单细胞转录组分析。",
+      "key_findings": [
+        "开发零膨胀电报模型，整合技术零校正与随机基因状态切换动力学。",
+        "模型准确拟合双峰mRNA分布并可靠估计转录爆发参数，防止过拟合。",
+        "在差异表达基因检测中优于传统方法，尤其适用于小样本。",
+        "识别出狼疮和乳腺癌特异的疾病相关基因，如LDLR、GZMB、FAIM2、VDR。"
+      ],
+      "translated_at": "2026-09-28T02:44:37.629595Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出整合零膨胀校正与转录爆发动力学的新计算模型，具有可迁移的方法学价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:35.947630Z"
+      }
+    },
+    {
+      "pmid": "42789325",
+      "title": "Opening the black box toward a modular approach to spike sorting.",
+      "journal": "Elife",
+      "authors": [
+        "Garcia Samuel",
+        "Halcrow Chris",
+        "Windolf Charlie",
+        "McKenzie Zachary M",
+        "Adkisson-Floro Paul",
+        "Mayorquin Heberto Ramon",
+        "et al."
+      ],
+      "abstract": "Spike sorting is an algorithmic process that extracts the activity of individual neurons from extracellular electrophysiology recordings. With the ballooning use of high-density probes, such as Neuropixels, this essential processing step is increasingly becoming time-consuming and computationally expensive. Although many software tools have been proposed to address spike sorting, they are usually constructed and benchmarked as monolithic 'black boxes', making it difficult to factor out the effects of individual algorithmic steps on the final outcome, especially when varying datasets and parameters. To address this issue, we developed a modular and common framework to develop, benchmark, and assemble the key computational steps that are used in state-of-the-art spike sorting algorithms. Relying on fast and efficient ground truth generation of biophysically plausible recordings, we show that we are able to individually benchmark and precisely quantify the performance of different steps in a spike sorting pipeline (i.e. peak detection, feature extraction, clustering, and template matching). We then leverage these results to create a modular, component-based spike sorter that can outperform Kilosort4 on dense and large simulated recordings, and produce similar quantitative results on real data. In addition, we find that the major bottleneck of all modern spike sorting pipelines is in the physical motion of probes, regardless of the drift-correction strategy. The component-based spike sorting framework presented here has the potential to foster community engagement in the field by lowering the barrier to contributions and providing a flexible yet powerful framework to construct end-to-end spike sorting solutions.",
+      "doi": "10.7554/eLife.110588",
+      "url": "https://doi.org/10.7554/eLife.110588",
+      "pub_date": "2026-Sep-25",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Neurons",
+        "Algorithms",
+        "Action Potentials",
+        "Animals",
+        "Software"
+      ],
+      "abstract_zh": "锋电位分选（spike sorting）是一种从细胞外电生理记录中提取单个神经元活动的算法过程。随着 Neuropixels 等高密度探针的使用迅速增长，这一关键处理步骤正变得越来越耗时且计算成本高昂。尽管已有许多软件工具被提出用于锋电位分选，但它们通常被构建和基准测试为整体式“黑箱”，难以分解出各个算法步骤对最终结果的影响，特别是在数据集和参数变化时。为解决这一问题，我们开发了一个模块化通用框架，用于开发、基准测试和组装最先进锋电位分选算法中的关键计算步骤。依靠快速高效地生成生物物理上合理的记录作为金标准，我们证明能够对锋电位分选流程中不同步骤（即峰值检测、特征提取、聚类和模板匹配）逐一进行基准测试并精确量化其性能。随后，我们利用这些结果创建了一个模块化、基于组件的锋电位分选器，该分选器在密集且大规模的模拟记录上可优于 Kilosort4，并在真实数据上产生相似的定量结果。此外，我们发现所有现代锋电位分选流程的主要瓶颈在于探针的物理运动，无论采用何种漂移校正策略。本文提出的基于组件的锋电位分选框架有潜力促进该领域的社区参与，降低贡献门槛，并为构建端到端锋电位分选解决方案提供灵活而强大的框架。",
+      "key_findings": [
+        "开发了模块化通用框架，可单独基准测试锋电位分选各步骤性能。",
+        "基于框架构建的模块化分选器在模拟数据上优于Kilosort4，真实数据效果相近。",
+        "探针物理运动是现代锋电位分选流程的主要瓶颈，与漂移校正策略无关。"
+      ],
+      "translated_at": "2026-09-28T02:45:17.668460Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出模块化spike sorting框架，可单独基准测试各算法步骤，方法学创新明确且可迁移。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:42.831168Z"
+      }
+    },
+    {
+      "pmid": "42784557",
+      "title": "Mechanical polarity links adhesion-regulated protrusions to directional stability in glioblastoma cell migration.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Tagawa Haruna",
+        "Kanematsu Daisuke",
+        "Katsuma Asako",
+        "Inagaki Naoyuki",
+        "Kanemura Yonehiro",
+        "Sakumura Yuichi"
+      ],
+      "abstract": "Glioblastoma invasion critically limits therapeutic outcomes, yet the physical principles that govern directional cell migration remain poorly understood. In particular, the degree to which protrusive forces are aligned or cancel each other, and how this governs migration efficiency, have remained unquantified. Here, we introduce mechanical polarity, a quantitative descriptor that captures the alignment of protrusive and adhesive forces driving migration. By integrating time-lapse imaging of the glioblastoma-derived cells with a coarse-grained biophysical model incorporating catch- and slip-bond kinetics, we analyzed motility on fibronectin- and laminin-coated substrates. In our model, the extracellular matrix (ECM) is treated as an external boundary condition that modulates adhesion dynamics, distinct from intrinsic cellular mechanics. We demonstrate that while protrusive activity remains similar across environments, the fibronectin-fitted model exhibited less stable effective adhesion dynamics that led to poorly coordinated protrusions and significant force cancellation, thereby reducing net displacement. These differences are not fully captured by conventional descriptors of protrusion activity but are reflected in mechanical polarity. Conversely, laminin promotes stable adhesions and the alignment of protrusive forces, a state characterized by high mechanical polarity. Our results support mechanical polarity as a candidate physical descriptor linking molecular adhesion kinetics to cell-scale migration stability. This framework provides a quantitative basis for understanding force coordination in glioblastoma cell motility and offers a physical basis for strategies to suppress invasive behavior.",
+      "doi": "10.1371/journal.pcbi.1014772",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014772",
+      "pub_date": "2026-Sep",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Glioblastoma",
+        "Cell Movement",
+        "Humans",
+        "Cell Adhesion",
+        "Cell Line, Tumor",
+        "Fibronectins",
+        "Models, Biological",
+        "Laminin",
+        "Extracellular Matrix",
+        "Cell Polarity"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T02:46:05.051345Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出机械极性定量描述符并整合成像与粗粒化模型，形成可迁移的细胞力协调分析框架。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:31:55.157869Z"
+      }
+    },
+    {
+      "pmid": "42781854",
+      "title": "Real-time closed-loop feedback system for mouse mesoscale cortical signal and movement control.",
+      "journal": "Elife",
+      "authors": [
+        "Gupta Pankaj Kumar",
+        "Murphy Timothy H"
+      ],
+      "abstract": "Increasingly, experiments designed to provide practical perturbations to circuits or behavior are required for hypothesis testing in various disciplines ranging from motor learning to recovery after injury. We present the implementation and efficacy of an open-source closed-loop neurofeedback (CLNF) and closed-loop movement feedback (CLMF) system. In CLNF, we measure mm-scale cortical mesoscale activity with GCaMP6s and provide graded auditory feedback (within ~63 ms) based on changes in dorsal-cortical activation within regions of interest (ROIs) and with a specified rule. Single or dual ROIs (ROI1, ROI2) on the dorsal cortical map were selected as targets. Both motor and sensory regions supported closed-loop training in male and female mice. Mice modulated activity in rule-specific target cortical ROIs to get increasing rewards over days (repeated-measures ANOVA [RM-ANOVA], p=2.83e-5) and adapted to changes in ROI rules (RM-ANOVA, p=8.3e-10, Table 4 for different rule changes). In CLMF, feedback (within ~67 ms) was based on tracking a specified body movement, and rewards were generated when the behavior reached a threshold. For movement training, the group that received graded auditory feedback performed significantly better (RM-ANOVA, p=9.6e-7) than a control group (RM-ANOVA, p=0.49) within 4 training days. Additionally, mice can learn a change in task rule from left forelimb to right forelimb within a day, after a brief performance drop on day 5. Offline analysis of neural data and behavioral tracking revealed changes in the overall distribution of Ca2+ fluorescence values in CLNF and body-part speed values in CLMF experiments. Increased CLMF performance was accompanied by a decrease in task latency and cortical ΔF/F0 amplitude during the task, indicating lower cortical activation as the task gets more familiar.",
+      "doi": "10.7554/eLife.105070",
+      "url": "https://doi.org/10.7554/eLife.105070",
+      "pub_date": "2026-Sep-24",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Female",
+        "Mice",
+        "Male",
+        "Movement",
+        "Neurofeedback",
+        "Feedback, Sensory",
+        "Cerebral Cortex"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出开源实时闭环神经反馈与运动反馈系统，具备毫秒级反馈和规则适应能力，方法学新颖可迁移",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:32:02.790425Z"
+      }
+    },
+    {
+      "pmid": "42779119",
+      "title": "Red Blood Cell Positional History, Sphericity, and Network Architecture Influence Lingering and Partitioning.",
+      "journal": "Biophys J",
+      "authors": [
+        "Bendaoud Mohammed",
+        "Darras Alexis",
+        "Rashidi Yazdan",
+        "Wagner Christian",
+        "Misbah Chaouqi"
+      ],
+      "abstract": "The transport and distribution of red blood cells (RBCs) through microvascular networks is central to diverse applications in drug delivery, tissue engineering, and the study of pathological mechanisms. Recent findings highlight two critical phenomena: (i) a history-dependent partitioning effect, wherein the RBC partitioning at each bifurcation is influenced by the positional and configurational state inherited from previous bifurcations and (ii) RBC lingering at the bifurcation apex, which strongly affects downstream flow distribution. However, the interplay between network geometry, RBC sphericity (in spherocytosis disease), and these emergent behaviors remains insufficiently explored. Here, we perform two-dimensional Lattice Boltzmann simulations coupled with an immersed boundary model to systematically investigate RBC dynamics in both asymmetric and fully symmetric network designs. Our results show that RBC positional history grows progressively with each bifurcation, leading to increasing deviations from classical partitioning laws regardless of the network's geometric complexity. We further demonstrate that even spherical RBCs can experience substantial lingering due to cumulative apex interactions, challenging the notion that only elongated or pathologically deformed cells are prone to these effects. These findings clarify how RBC deformability and prior apex encounters affect microcirculatory flow.",
+      "doi": "10.1016/j.bpj.2026.09.024",
+      "url": "https://doi.org/10.1016/j.bpj.2026.09.024",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "红细胞（RBC）在微血管网络中的输运与分布对于药物递送、组织工程及病理机制研究等多种应用至关重要。近期研究揭示两个关键现象：（i）历史依赖性分配效应，即红细胞在每个分叉处的分配受其从先前分叉继承的位置和构型状态影响；（ii）红细胞在分叉顶点处的滞留，这会强烈影响下游血流分布。然而，网络几何结构、红细胞球形度（如球形红细胞增多症中）与这些涌现行为之间的相互作用仍未得到充分探索。在此，我们采用二维格子玻尔兹曼模拟结合浸入边界模型，系统研究红细胞在非对称和完全对称网络设计中的动力学。结果表明，红细胞位置历史随每个分叉逐步累积，导致其行为越来越偏离经典分配定律，且与网络几何复杂性无关。我们进一步证明，即使是球形红细胞也会因累积的顶点相互作用而经历显著滞留，这挑战了只有拉长或病理变形细胞才易发生此类效应的观点。这些发现阐明了红细胞变形能力和先前的顶点遭遇如何影响微循环血流。",
+      "key_findings": [
+        "红细胞位置历史随分叉逐步累积，导致行为越来越偏离经典分配定律，且与网络几何复杂性无关。",
+        "即使是球形红细胞也会因累积顶点相互作用而显著滞留，挑战只有拉长或病理变形细胞才易发生该效应的观点。",
+        "研究阐明红细胞变形能力和先前顶点遭遇共同影响微循环血流。"
+      ],
+      "translated_at": "2026-09-28T02:48:52.645696Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "系统揭示红细胞位置历史与球形度对分叉滞留和分配的机制，挑战既有认知，具有可迁移的微循环流动见解。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:32:42.655521Z"
+      }
+    },
+    {
+      "pmid": "42779117",
+      "title": "Truncating the Time-evolving Discrete Chemical Master Equation for Stochastic Biological Networks.",
+      "journal": "Biophys J",
+      "authors": [
+        "Farhat Ali M",
+        "Pang Yiyu",
+        "Manuchehrfar Farid",
+        "Tang Ying",
+        "Liang Jie"
+      ],
+      "abstract": "The discrete Chemical Master Equation (dCME) provides a rigorous framework for modeling stochastic biochemical reaction networks but suffers from an exponentially growing state space, making its direct solution intractable. Traditional truncation methods rely on trial-and-error approaches or finite state projections, often introducing inaccuracies by arbitrarily selecting state space boundaries. In this study, we present a truncation strategy for the exact solution of the time-evolving dCME. We provide a systematic and mathematically grounded framework to truncate the time-evolving dCME by leveraging transient solutions of independent birth-death processes. The theoretically estimated truncation bounds provide a conservative limit on computed errors, eliminating the need for heuristic state space selection. The framework also accounts for both upper and lower truncation boundaries, ensuring a conservative yet computationally efficient truncation strategy. These together enable the a priori determination of truncation points at each time step while maintaining a predefined probability error tolerance level. We apply this approach to diverse biochemical networks, including a single-gene expression model, an activation-inhibition feedback system, a genetic toggle switch, a feedforward genetic loop, and an enzymatic cascade network. The results demonstrate an efficient computation of time-evolving probability landscapes while preserving key stochastic properties such as multimodality. The present approach thus offers a significant advancement in solving the dCME by systematically balancing accuracy and computational efficiency. While previous truncation strategies were developed for the steady state, we introduce a theoretically grounded, time-dependent truncation framework that avoids relying on steady-state limits and instead computes probabilities only for states relevant at each time point.",
+      "doi": "10.1016/j.bpj.2026.09.026",
+      "url": "https://doi.org/10.1016/j.bpj.2026.09.026",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "离散化学主方程（dCME）为随机生化反应网络建模提供了严格框架，但其状态空间呈指数增长，导致直接求解不可行。传统截断方法依赖试错法或有限状态投影，常因任意选取状态空间边界而引入误差。本研究提出一种用于精确求解时变dCME的截断策略。我们通过利用独立生灭过程的瞬态解，建立了一个系统且数学上严格的时变dCME截断框架。理论上估计的截断边界为计算误差提供了保守限制，从而无需启发式选择状态空间。该框架同时考虑上下截断边界，确保保守且在计算上高效的截断策略。这些特性使得能够在每个时间步先验确定截断点，同时维持预定义的概率误差容限。我们将该方法应用于多种生化网络，包括单基因表达模型、激活-抑制反馈系统、遗传拨动开关、前馈遗传环路和酶级联网络。结果表明，该方法能高效计算时变概率景观，并保持多模态等关键随机特性。因此，本方法通过系统性地平衡精度与计算效率，为求解dCME带来了重要进展。以往截断策略针对稳态开发，而我们引入了一个有理论依据的、时间依赖的截断框架，避免依赖稳态极限，仅计算每个时间点相关状态的概率。",
+      "key_findings": [
+        "提出基于独立生灭过程瞬态解的时变dCME截断框架，给出保守误差界限。",
+        "可先验确定各时间步截断点并保持预设概率误差容限，无需启发式选择状态空间。",
+        "在多种生化网络中高效计算时变概率景观，准确保持多模态等关键随机特性。"
+      ],
+      "translated_at": "2026-09-28T02:50:18.351794Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出时间演化dCME的系统截断理论框架，用生灭过程瞬态解先验确定截断边界，避免启发式选择，方法学创新显著。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:32:47.314995Z"
+      }
+    },
+    {
+      "pmid": "42778612",
+      "title": "Targeting ZMYND8 unleashes IL-2 signalling to override T cell exhaustion.",
+      "journal": "Nature",
+      "authors": [
+        "Wang Yan",
+        "Shi Hao",
+        "Chapman Nicole M",
+        "Kc Anil",
+        "Sun Renqiang",
+        "Song Hao",
+        "et al."
+      ],
+      "abstract": "CD8+ T cell exhaustion impedes control of chronic viral infection and cancer. This hypofunctional state is characterized by downregulation of the high-affinity IL-2 receptor (IL-2R) and STAT5 signalling, and differentiation from progenitor exhausted to terminally exhausted T cells rather than cytotoxic effector-like cells1-3. The epigenetic mechanisms and regulatory networks that mediate IL-2R-STAT5 signal attenuation and loss of effector-like cell differentiation remain unknown. Here, using in vivo single-cell CRISPR screens of epigenetic factors and IL-2 signalling regulators, we reveal that the chromatin reader ZMYND8 antagonizes IL-2R-STAT5 signals to restrain effector-like states while promoting terminal exhaustion. ZMYND8 expression was upregulated by chronic antigen stimulation, and targeting ZMYND8 in CD8+ T cells promoted both intermediate exhausted T cells and killer cell lectin-like receptor-expressing exhausted T cells. Accordingly, ZMYND8-deficient CD8+ T cells had markedly improved antiviral and antitumour effects, especially in combination with IL-2 therapy or immune checkpoint blockade. Mechanistically, ZMYND8 bound to the active enhancer regions of the Il2ra gene locus that were co-occupied by histone acetyltransferase p300 and suppressed p300 activity. Co-deletion of p300 reversed increased IL-2R expression and effector-like cell differentiation in ZMYND8-deficient cells, suggesting that ZMYND8 represses p300-mediated transcriptional activation to curtail IL-2R-STAT5 signalling. These findings establish an epigenetic rheostat imposing 'signal 1' (chronic antigen stimulation)-induced suppression of 'signal 3' (IL-2 signalling) to enforce T cell exhaustion, with ZMYND8 deletion unleashing effector-like over terminally exhausted states and enhancing immunotherapeutic efficacy.",
+      "doi": "10.1038/s41586-026-11059-5",
+      "url": "https://doi.org/10.1038/s41586-026-11059-5",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "CD8+ T细胞耗竭阻碍了慢性病毒感染和癌症的控制。这种功能低下状态的特征是高亲和力IL-2受体(IL-2R)和STAT5信号的下调，以及从祖细胞耗竭向终末耗竭T细胞而非细胞毒性效应样细胞的分化。介导IL-2R-STAT5信号衰减和效应样细胞分化丧失的表观遗传机制和调控网络仍不清楚。在此，我们利用体内单细胞CRISPR筛选表观遗传因子和IL-2信号调控因子，揭示了染色质阅读器ZMYND8拮抗IL-2R-STAT5信号以抑制效应样状态，同时促进终末耗竭。ZMYND8表达因慢性抗原刺激而上调，在CD8+ T细胞中靶向ZMYND8可促进中间耗竭T细胞和表达杀伤细胞凝集素样受体的耗竭T细胞。相应地，ZMYND8缺陷的CD8+ T细胞具有显著改善的抗病毒和抗肿瘤效果，尤其是与IL-2疗法或免疫检查点阻断联合使用时。在机制上，ZMYND8结合Il2ra基因位点的活性增强子区域，该区域与组蛋白乙酰转移酶p300共占据，并抑制p300活性。共删除p300可逆转ZMYND8缺陷细胞中IL-2R表达和效应样细胞分化的增加，提示ZMYND8抑制p300介导的转录激活以削弱IL-2R-STAT5信号。这些发现建立了一种表观遗传变阻器，施加由‘信号1’(慢性抗原刺激)诱导的对‘信号3’(IL-2信号)的抑制，从而强制T细胞耗竭，而ZMYND8缺失释放效应样而非终末耗竭状态并增强免疫治疗效力。",
+      "key_findings": [
+        "ZMYND8拮抗IL-2R-STAT5信号，抑制效应样状态并促进T细胞终末耗竭。",
+        "靶向ZMYND8可改善CD8+ T细胞抗病毒和抗肿瘤效果，与IL-2疗法或免疫检查点阻断协同。",
+        "ZMYND8结合Il2ra增强子并抑制p300活性，从而削弱IL-2R表达和STAT5信号。"
+      ],
+      "translated_at": "2026-09-28T02:50:35.255975Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示ZMYND8作为表观遗传rheostat抑制IL-2R-STAT5信号驱动T细胞耗竭的新机制，具有可迁移的调控范式意义",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:01.096112Z"
+      }
+    },
+    {
+      "pmid": "42777717",
+      "title": "CRISPR-associated enzymes are mislocalized to the cytoplasm in iPSC-derived neurons, resulting in KRAB(KOX1)-specific degradation.",
+      "journal": "Cell Syst",
+      "authors": [
+        "Cajka Gregory",
+        "Naseri Nima N",
+        "Liu Matthew H",
+        "Shalem Ophir"
+      ],
+      "abstract": "The use of CRISPR-associated enzymes in induced pluripotent stem cell (iPSC)-derived neurons presents unique challenges compared with dividing cell lines. For example, loss of dCas9-KRAB expression after differentiation has been observed and largely ascribed to transgene silencing. Here, we investigated the expression of CRISPR enzymes in iPSCs and Ngn2-derived neurons. We found that the commonly used dCas9-KRAB(KOX1) displayed a dramatic reduction in protein levels following differentiation, yet nCas9 constructs retained comparable levels. We further found that CRISPR constructs, primarily relying on the SV40 nuclear localization signal (NLS), fail to localize to the nuclei of neurons, despite having robust nuclear levels in iPSCs, leading to KRAB(KOX1)-specific cytoplasmic degradation. By testing other NLSs, we rescued neuronal nuclear localization and protein expression, confirming the contribution of mislocalization to the instability of dCas9-KRAB(KOX1) in neurons. As the lack of nuclear localization can have a profound impact on CRISPR activity, we suggest further investigation across cultured and in vivo postmitotic cell models. A record of this paper's transparent peer review process is included in the supplemental information.",
+      "doi": "10.1016/j.cels.2026.101737",
+      "url": "https://doi.org/10.1016/j.cels.2026.101737",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "与分裂细胞系相比，在诱导多能干细胞（iPSC）衍生神经元中使用CRISPR相关酶面临独特挑战。例如，分化后观察到dCas9-KRAB表达丧失，并在很大程度上归因于转基因沉默。本研究调查了iPSC和Ngn2衍生神经元中CRISPR酶的表达。我们发现，常用的dCas9-KRAB(KOX1)在分化后蛋白水平显著下降，而nCas9构建体保持相当水平。我们进一步发现，主要依赖SV40核定位信号（NLS）的CRISPR构建体尽管在iPSC中具有强劲的细胞核水平，但无法定位到神经元细胞核，导致KRAB(KOX1)特异性胞质降解。通过测试其他NLS，我们恢复了神经元的核定位和蛋白表达，证实错误定位对神经元中dCas9-KRAB(KOX1)不稳定性的贡献。由于缺乏核定位可能对CRISPR活性产生深远影响，我们建议在培养和体内有丝分裂后细胞模型中进一步研究。本文透明同行评审过程记录见补充信息。",
+      "key_findings": [
+        "dCas9-KRAB(KOX1)在iPSC分化神经元后蛋白水平显著下降，而nCas9构建体保持稳定。",
+        "依赖SV40 NLS的CRISPR构建体在神经元中无法进入细胞核，导致KRAB(KOX1)胞质特异性降解。",
+        "更换其他NLS可恢复神经元核定位和蛋白表达，证实错误定位是dCas9-KRAB(KOX1)不稳定的原因。"
+      ],
+      "translated_at": "2026-09-28T02:51:53.697259Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示SV40 NLS在神经元中失效导致dCas9-KRAB降解的普适机制，并给出可迁移的NLS优化方案，对CRISPR工具在终末分化细胞的应用具有方法学价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:15.361826Z"
+      }
+    },
+    {
+      "pmid": "42776575",
+      "title": "Region-specific mechanosensation modulates Drosophila postural control behaviour.",
+      "journal": "Elife",
+      "authors": [
+        "Roseby William",
+        "Menzies Jonathan A C",
+        "Lipscomb Victoria A",
+        "Alonso Claudio R"
+      ],
+      "abstract": "The relation between regional morphological features derived from the bilaterian body plan and the behaviours necessary to extract utility from such structures is not well understood. Here, we use the Drosophila larva to investigate this 'form-function' problem focusing on the mapping of the regional stimuli that trigger an adaptive and evolutionarily conserved behaviour termed self-righting: a postural control system that allows the animal to restore its natural position if turned upside-down. Through the development of new methodologies that allow regionally restricted mechanical stimulation and zonal-specific neuronal optogenetics, we find that multidendritic sensory neuron inhibition in anterior areas (thoracic/anterior abdominal) has a profound effect on self-righting performance, while inhibition of posterior sensory elements (mid and posterior abdomen) produces no effects. To gain insight into how regional neuronal inhibition affects the different subcomponents of the self-righting sequence we applied a deep neural network tracking method which revealed that reduction of neural activity in anterior sensory neurons primarily increases head casting behaviour and that this, in turn, is strongly correlated with abnormally long self-righting times. Furthermore, to explore the mechanistic bases of our behavioural observations, we considered the hypothesis that the Hox genes - well known for their roles in axial developmental patterning - might play a role in the functional specification of multidendritic sensory neurons along the body axis. Molecular expression analysis of FACS-sorted neural populations, fluorescent immunolabelling and neuron-specific knockdown experiments demonstrate that normal sensory neuron expression of the Hox genes Antennapedia and Abdominal-b is necessary for self-righting in the Drosophila larva. Altogether, our work shows that region-specific mechanosensory processes mediated by multidendritic sensory neurons and instructed via Hox gene inputs are essential for self-righting, providing a link between regional structural features and an adaptive and widely evolutionarily conserved postural control behaviour.",
+      "doi": "10.7554/eLife.108505",
+      "url": "https://doi.org/10.7554/eLife.108505",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Mechanotransduction, Cellular",
+        "Larva",
+        "Sensory Receptor Cells",
+        "Drosophila melanogaster",
+        "Optogenetics",
+        "Drosophila Proteins",
+        "Behavior, Animal",
+        "Posture"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T02:52:33.701554Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发区域限制机械刺激、区域光遗传和深度追踪新方法，揭示Hox基因调控感觉神经元功能特化的可迁移机制。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:23.399602Z"
+      }
+    },
+    {
+      "pmid": "42775638",
+      "title": "Machine learning of honey bee olfactory behavior identifies repellent odorants in free-flying bees in the field.",
+      "journal": "Elife",
+      "authors": [
+        "Kowalewski Joel",
+        "Baer-Imhoof Barbara F",
+        "Guda Tom",
+        "Luy Matthew",
+        "DePalma Payton",
+        "Baer Boris",
+        "et al."
+      ],
+      "abstract": "Preventing beneficial insects like honey bees (Apis mellifera) from contacting pesticides on crops using odorants could counter current pollinator declines. However, the discovery of behaviorally aversive odorants is impeded by the complexity of the honey bee olfactory system where >170 olfactory receptors detect volatiles and generate valence. To solve this systems-level challenge, we generated a machine-learning model to predict aversive valence from chemical structure using published olfactory behavior data in honey bees. We refine the predictive model by generating species-level behavioral data for honey bees and Drosophila on an initial set of novel predicted repellents. The improved second computational model was then used to screen a chemical space of >50 million compounds and identify >130 repellent candidates. Behavioral validation using honey bees in the laboratory shows a high predictive success. Additional testing of the top seven candidates using freely foraging honey bees in a field assay confirmed strong repellency, thus predicting a high probability to repel foraging bees from pesticide-treated crops. Machine learning, with iterative testing and modeling, therefore provides a powerful approach for rational discovery of aversive volatiles for control of insects for which limited data is available.",
+      "doi": "10.7554/eLife.104831",
+      "url": "https://doi.org/10.7554/eLife.104831",
+      "pub_date": "2026-Sep-23",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Bees",
+        "Machine Learning",
+        "Odorants",
+        "Insect Repellents",
+        "Smell",
+        "Behavior, Animal",
+        "Predictive Learning Models"
+      ],
+      "abstract_zh": "利用气味剂防止蜜蜂（Apis mellifera）等有益昆虫接触作物上的农药，有望应对当前传粉昆虫的衰退。然而，发现具有行为驱避性的气味剂受到蜜蜂嗅觉系统复杂性的阻碍，蜜蜂有超过170种嗅觉受体检测挥发物并产生效价。为应对这一系统级挑战，我们利用已发表的蜜蜂嗅觉行为数据，构建了一个机器学习模型，从化学结构预测驱避效价。我们通过在蜜蜂和果蝇上获取一组初始新型预测驱避剂的物种水平行为数据，对预测模型进行了优化。改进后的第二个计算模型随后用于筛选超过5000万种化合物的化学空间，并鉴定出超过130种驱避候选物。在实验室中对蜜蜂进行行为验证显示出较高的预测成功率。利用自由觅食蜜蜂在田间试验中对排名前七的候选物进行额外测试，证实了强驱避性，从而预测其有较高概率阻止觅食蜜蜂接触经农药处理的作物。因此，机器学习结合迭代测试与建模，为在可用数据有限的昆虫中理性发现驱避性挥发物提供了有力方法。",
+      "key_findings": [
+        "构建机器学习模型从化学结构预测蜜蜂驱避效价，并通过物种水平行为数据迭代优化。",
+        "模型筛选超5000万种化合物，鉴定130余种驱避候选物，实验室验证预测成功率高。",
+        "田间试验证实前七候选物对自由觅食蜜蜂具强驱避性，可减少其接触农药处理作物。"
+      ],
+      "translated_at": "2026-09-28T02:52:51.031107Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出机器学习迭代预测化学结构-嗅觉效价框架，筛选超大化学空间并跨物种验证，具可迁移方法学价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:37.314001Z"
+      }
+    },
+    {
+      "pmid": "42788361",
+      "title": "DNA damage induces long range changes to duplex structure-a non-protein start to damage detection?",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Fountain Sophie E",
+        "Abdelhamid Mahmoud A S",
+        "Williams David M",
+        "Craggs Timothy D"
+      ],
+      "abstract": "DNA-binding proteins must quickly locate specific sites on DNA to enable replication, repair, and transcription. While sequence-specific recognition is well understood, the physical basis of structure-specific recognition remains unclear, limiting our understanding of DNA damage repair. Proteins must distinguish damaged sites within largely undamaged DNA; however, studying this is challenging due to DNA's dynamic nature. We hypothesized that DNA damage causes changes in DNA structure, signalling protein recruitment. Using confocal single-molecule FRET, we analysed five DNA duplexes containing modifications: ribonucleotide, 8-oxoguanine, an abasic site, a nick, and a gap, which are all involved in the base excision repair pathway. Each construct was measured with nine dye pairs in triplicate to capture changes in bending, twisting, and stretching. An automated analysis pipeline processed 162 measurements, enabling rigorous statistical comparisons. All modifications altered FRET efficiencies compared to undamaged DNA, including the subtlest change: a single oxygen difference (ribo- versus deoxyribonucleotide). Abasic sites, nicks, and gaps had the greatest effects. These findings provide direct evidence that DNA damage affects duplex structure and dynamics beyond the lesion site, suggesting DNA flexibility changes may act as an early signal for repair protein recruitment.",
+      "doi": "10.1093/nar/gkag920",
+      "url": "https://doi.org/10.1093/nar/gkag920",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "DNA Damage",
+        "Fluorescence Resonance Energy Transfer",
+        "DNA",
+        "Nucleic Acid Conformation",
+        "Excision Repair",
+        "DNA-Binding Proteins",
+        "Guanine",
+        "DNA Repair"
+      ],
+      "abstract_zh": "DNA结合蛋白必须快速定位DNA上的特定位点，以实现复制、修复和转录。虽然序列特异性识别已被充分理解，但结构特异性识别的物理基础仍不清楚，限制了我们对DNA损伤修复的理解。蛋白质必须在大体未损伤的DNA中区分损伤位点；然而，由于DNA的动态特性，研究这一点具有挑战性。我们假设DNA损伤会引起DNA结构变化，从而发出蛋白质招募信号。利用共聚焦单分子FRET，我们分析了五种含有修饰的DNA双链体：核糖核苷酸、8-氧代鸟嘌呤、无碱基位点、切口和缺口，这些均参与碱基切除修复途径。每个构建体用九对染料以三次重复测量，以捕捉弯曲、扭转和拉伸的变化。自动化分析流程处理了162次测量，实现了严格的统计比较。与未损伤DNA相比，所有修饰均改变了FRET效率，包括最细微的变化：单个氧原子的差异（核糖核苷酸与脱氧核糖核苷酸）。无碱基位点、切口和缺口的影响最大。这些发现提供了直接证据，表明DNA损伤会影响损伤位点之外的双链结构和动力学，提示DNA柔韧性变化可能作为修复蛋白招募的早期信号。",
+      "key_findings": [
+        "所有五种碱基切除修复相关DNA修饰均改变FRET效率，包括单个氧原子差异。",
+        "无碱基位点、切口和缺口对DNA双链结构影响最为显著。",
+        "DNA损伤影响损伤位点之外的结构与动力学，柔韧性变化可能是修复蛋白招募的早期信号。"
+      ],
+      "translated_at": "2026-09-28T02:53:15.489939Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "用单分子FRET和自动化分析管线揭示DNA损伤导致长程结构变化，具有普适性损伤识别机制意义。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:45.676628Z"
+      }
+    },
+    {
+      "pmid": "42779098",
+      "title": "Abasic site repair in APE1-deficient mouse embryonic stem cells: a matter for the MRN complex and ATM signaling.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Hrovat Alexandra M",
+        "Noreen Faiza",
+        "Schwarz Simon D",
+        "Aksu Ezgi M",
+        "Kuśnierczyk Anna",
+        "Singh Navnit K",
+        "et al."
+      ],
+      "abstract": "The dual role of base excision repair (BER) in resolving DNA base lesions and enabling active DNA demethylation positions BER proteins as central regulators of both genetic and epigenetic integrity. While BER and active demethylation converge at the generation of AP sites, catalyzed by DNA glycosylases such as thymine DNA glycosylase (TDG), the relative contribution of each pathway to AP site formation and the cellular fate of these lesions remain unresolved. Using APE1-deficient mouse embryonic stem cells (mESCs), with inducible TDG depletion, we reveal that TDG activity accounts for a substantial fraction of AP sites in mESCs, establishing a direct link between active DNA demethylation and APE1-mediated BER. We demonstrate that APE1 is essential for mESC differentiation, underscoring its role in processing AP sites generated during epigenetic reprogramming. Through a genome-wide CRISPR/Cas9 screen designed to map the broader functional interactome of APE1, we identified unexpected genetic dependencies that extend beyond DNA repair. We also found that DNA double-strand break repair factors act outside their canonical pathways, cooperating with nucleotide excision repair and translesion synthesis to compensate for the loss of APE1. These findings highlight novel compensatory DNA end-processing mechanisms that safeguard genomic integrity in the absence of APE1, revealing a high level of plasticity of DNA repair in mESCs.",
+      "doi": "10.1093/nar/gkag921",
+      "url": "https://doi.org/10.1093/nar/gkag921",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "DNA-(Apurinic or Apyrimidinic Site) Lyase",
+        "Mice",
+        "Excision Repair",
+        "Mouse Embryonic Stem Cells",
+        "Signal Transduction",
+        "Ataxia Telangiectasia Mutated Proteins",
+        "DNA-Binding Proteins",
+        "Thymine DNA Glycosylase",
+        "DNA Repair"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T02:55:01.595435Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示APE1缺失下DSB修复因子联合NER/TLS补偿的DNA修复可塑性，机制洞察有普适迁移价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:33:57.549828Z"
+      }
+    },
+    {
+      "pmid": "42773138",
+      "title": "Generative AI designs functional thiolation domains for reprogramming non-ribosomal peptide synthetases.",
+      "journal": "Nat Commun",
+      "authors": [
+        "Bülbül Emre F",
+        "Bang Seounggun",
+        "George Kevin",
+        "Bianchi Gabriele",
+        "Raj Prateek",
+        "Chung Seonyong",
+        "et al."
+      ],
+      "abstract": "Large language models and generative protein design promise to accelerate biotechnology, but it remains unclear whether they can engineer dynamic megasynth(et)ases whose activity depends on transient, context-specific domain interfaces. Non-ribosomal peptide synthetases (NRPSs) exemplify this challenge and produce many clinically used therapeutics. Here we integrate pretrained generative models (ESM3, ProteinMPNN and EvoDiff) with design-build-test-learn cycles and data-guided prioritization to generate 76 de novo thiolation (T) domains. We build and test 578 recombinant NRPS variants in vivo spanning minimal, full-length, and hybrid assembly lines. AI-designed T-domains support product formation across architectures, enable catalytically active hybrids at recombined junctions, and increase yields by up to ~3-fold relative to NRPSs carrying the native T-domain. A representative design shows improved soluble expression, refolding, and a 12 °C higher melting temperature, while molecular dynamics simulations indicate preserved global stability but reshaped, state-dependent interdomain contact networks. Together, these results establish generative design as an effective route to context-conditioned engineering and reprogramming of biosynthetic assembly lines.",
+      "doi": "10.1038/s41467-026-77963-6",
+      "url": "https://doi.org/10.1038/s41467-026-77963-6",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Peptide Synthases",
+        "Generative Artificial Intelligence",
+        "Protein Engineering",
+        "Protein Domains",
+        "Large Language Models",
+        "Molecular Dynamics Simulation",
+        "Recombinant Proteins",
+        "Sulfhydryl Compounds",
+        "Escherichia coli"
+      ],
+      "abstract_zh": "大型语言模型和生成式蛋白质设计有望加速生物技术发展，但尚不清楚它们能否工程化改造动态的巨型合成酶（megasynth(et)ases），这类酶的活性依赖于瞬时的、依赖具体环境的域间界面。非核糖体肽合成酶（NRPSs）正是这一挑战的典型代表，并产生许多临床使用的治疗药物。本研究将预训练生成模型（ESM3、ProteinMPNN 和 EvoDiff）与设计-构建-测试-学习循环及数据引导的优先级排序相结合，生成了76个从头设计的硫醇化（T）结构域。我们在体内构建并测试了578个重组NRPS变体，涵盖最小化、全长和杂合组装线。AI设计的T结构域能够在不同架构中支持产物形成，在重组连接处实现具有催化活性的杂合体，并使产量相对于携带天然T结构域的NRPS提高多达约3倍。一个代表性设计表现出改善的可溶性表达、复性能力以及高12°C的解链温度，同时分子动力学模拟表明其整体稳定性得以保持，但依赖状态的域间接触网络发生了重塑。总之，这些结果确立了生成式设计作为对生物合成组装线进行环境条件化工程改造和重编程的有效途径。",
+      "key_findings": [
+        "集成ESM3、ProteinMPNN和EvoDiff生成76个从头T结构域，并构建测试578个NRPS变体。",
+        "AI设计的T结构域支持多种架构产物形成，重组连接处杂合体有催化活性，产量最高提升约3倍。",
+        "代表性设计可溶表达和复性改善，解链温度提高12°C，分子动力学显示域间接触网络重塑但整体稳定。"
+      ],
+      "translated_at": "2026-09-28T02:55:25.724362Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "利用生成式AI与设计-构建-测试-学习循环，系统设计功能性NRPS硫醇化结构域，建立可迁移的装配线重编程新方法。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:34:12.703281Z"
+      }
+    },
+    {
+      "pmid": "42771678",
+      "title": "Communication through autoattractants can enhance and limit collective migration of immune cells.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Versluis David M",
+        "Insall Robert H"
+      ],
+      "abstract": "Many eukaryotic cells produce attractant molecules to which they themselves are also attracted. For example, neutrophils produce leukotriene B4 while swarming. These autoattractants create a secondary signalling layer that coordinates collective cell behaviour. The principles by which autoattractants shape migration, however, remain poorly understood. Here we use a hybrid agent-based computational model to dissect the effects of autoattractants on the collective chemotaxis of immune cells. We find that autoattractant signals strongly enhance cells' responses to primary attractant, but only if the autoattractant is sufficiently short-lived: at longer lifetimes, accumulation degrades the directional information cells can extract. The overall effect of autoattractants therefore depends crucially on the balance between production and efficient removal - whether through cellular uptake, enzymatic breakdown, or inherent chemical instability. Optimal lifetimes exist, determined by cell speed and attractant diffusion, yet remarkably independent of cell density and primary attractant concentration. Autoattractants whose removal is governed by inherent instability rather than direct cellular breakdown coordinate migration less efficiently, but work more robustly across different environments. In the absence of cell-mediated breakdown, the model further reveals a characteristic optimal cell-cell distance: too little communication leaves cells uncoordinated, while excessive signalling drives them into slow-moving aggregates. Strikingly, the conditions that produce the most efficient chemotaxis lie close to those that trigger aggregation, suggesting that many autoattractant systems operate near a critical boundary that can be tuned by evolution either to disperse cells or to bring them together.",
+      "doi": "10.1371/journal.pcbi.1014809",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014809",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T02:56:44.465771Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "构建混合智能体模型，系统揭示autoattractant调控集体迁移的通用原则与临界行为，具有可迁移机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:34:26.743385Z"
+      }
+    },
+    {
+      "pmid": "42771667",
+      "title": "Coordinated P450-UGT detoxification contributes to furanocoumarin tolerance associated with host plant range divergence in Helicoverpa.",
+      "journal": "PLoS Biol",
+      "authors": [
+        "Wang Huidong",
+        "Kong Yajie",
+        "Su Xinyue",
+        "Shi Yu",
+        "Zhang Jianpeng",
+        "Wang Yinjia",
+        "et al."
+      ],
+      "abstract": "Plants and herbivorous insects are engaged in a continuous evolutionary arms race driven by chemical defences and counter-defences. How insects integrate distinct detoxification systems to overcome diverse phytochemicals, and how such mechanisms contribute to host-range divergence, remains poorly understood. Here, we uncover a cooperative cytochrome P450-UDP-glycosyltransferase (UGT) cascade that mediates furanocoumarin tolerance in Helicoverpa armigera. Comparative genomic analyses across Helicoverpa and related noctuid species revealed that the UGT33 family is the most extensively expanded and dynamically diversified UGT lineage in Helicoverpa. Targeted CRISPR-Cas9 knockouts of UGT33 gene clusters in polyphagous H. armigera demonstrated their essential roles in detoxifying the furanocoumarins xanthotoxin and imperatorin. Combined metabolic and functional assays further established a sequential detoxification pathway, in which the cytochrome P450 CYP6AE19 catalyses either the O-dealkylation of xanthotoxin to yield xanthotoxol or the aromatic-carbon hydroxylation of xanthotoxin to form 5-hydroxyxanthotoxin, which are subsequently glycosylated by UGT33 enzymes to form their less-toxic glucosides. In contrast, impaired CYP6AE19-UGT33 coordination in the oligophagous Helicoverpa assulta was associated with reduced xanthotoxin detoxification and high sensitivity to this compound. Together, these findings provide direct evidence for coordinated Phase I-Phase II detoxification of a plant defensive compound in insects and show that functional divergence in this pathway contributes to interspecific differences in plant toxin tolerance, which are associated with contrasting dietary breadth in closely related herbivorous insects.",
+      "doi": "10.1371/journal.pbio.3004013",
+      "url": "https://doi.org/10.1371/journal.pbio.3004013",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "将英文摘要翻译为准确、流畅的中文简体",
+      "key_findings": [
+        "核心发现1...",
+        "核心发现2...",
+        "核心发现3..."
+      ],
+      "translated_at": "2026-09-28T02:57:26.640163Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示昆虫P450-UGT协同Phase I/II解毒新机制，并关联宿主范围演化，具有可迁移的化学生态演化概念新意",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:34:49.277838Z"
+      }
+    },
+    {
+      "pmid": "42770840",
+      "title": "Wound-induced syncytia outpace mononucleate neighbors during Drosophila wound repair.",
+      "journal": "Elife",
+      "authors": [
+        "White James S",
+        "Hua Junmin",
+        "Su Jasmine J",
+        "Tro Kaden J",
+        "Ruark Elizabeth M",
+        "Hutson M Shane",
+        "et al."
+      ],
+      "abstract": "In response to injury, cells proliferate, migrate, and invade to replace missing cells and close wounds. However, the role of other wound-induced cell behaviors is not understood, including the formation of syncytia (multinucleated cells). Here, we use in vivo live imaging to analyze wound-induced syncytia in mitotically competent Drosophila pupae. We find that almost half the epithelial cells near a wound fuse to form large syncytia. When the autophagy gene Atg1 is knocked down, fewer syncytia form, and wounds close more slowly. Further, a computational model of tissue fluidity indicates that cell fusion speeds wound closure time by about one-third. Syncytia use several routes to speed wound repair: they outpace diploid cells at the wound margin to lead the initial resealing of the wound; they reduce the need for intercalation as the tissue reshapes during closure; and they pool resources of their component cells to concentrate them toward the wound margin. In addition to wound healing, these properties of syncytia are likely to contribute to their roles in development and pathology.",
+      "doi": "10.7554/eLife.92593",
+      "url": "https://doi.org/10.7554/eLife.92593",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Giant Cells",
+        "Wound Healing",
+        "Cell Fusion",
+        "Drosophila melanogaster",
+        "Drosophila Proteins",
+        "Pupa",
+        "Epithelial Cells",
+        "Drosophila"
+      ],
+      "abstract_zh": "在损伤后，细胞增殖、迁移和侵入以替代缺失细胞并闭合伤口。然而，其他损伤诱导的细胞行为的作用尚不清楚，包括合胞体（多核细胞）的形成。本研究利用体内活体成像分析具有有丝分裂能力的果蝇蛹中损伤诱导的合胞体。我们发现伤口附近近一半的上皮细胞融合形成大型合胞体。当自噬基因 Atg1 被敲低时，合胞体形成减少，伤口闭合变慢。此外，组织流动性的计算模型表明，细胞融合使伤口闭合时间加快约三分之一。合胞体通过多种途径加速伤口修复：它们在伤口边缘领先于二倍体细胞，主导伤口的初始再封闭；在闭合过程中组织重塑时，它们减少了对细胞插入的需求；它们汇集其组成细胞的资源，将其集中到伤口边缘。除了伤口愈合，合胞体的这些特性可能还对其在发育和病理过程中的作用有所贡献。",
+      "key_findings": [
+        "伤口附近近一半上皮细胞融合形成大型合胞体，Atg1敲低会减少合胞体形成并减慢伤口闭合。",
+        "计算模型表明，细胞融合使伤口闭合时间缩短约三分之一。",
+        "合胞体通过领先伤口边缘、减少细胞插入需求和集中资源来加速修复。"
+      ],
+      "translated_at": "2026-09-28T02:59:23.083695Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示伤口诱导合胞体的新细胞行为及其加速修复机制，活体成像与计算模型结合，具有可迁移概念新意",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:00.617977Z"
+      }
+    },
+    {
+      "pmid": "42770331",
+      "title": "BaCas12a3 represents a new subtype of type V CRISPR effector with collateral activity toward tRNA.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Li Xin",
+        "Wu Chenwei",
+        "Guo Jinshan",
+        "Zheng Ruyi",
+        "Kong Jingwen",
+        "Du Lei",
+        "et al."
+      ],
+      "abstract": "The CRISPR-Cas12 family encompasses diverse RNA-guided nucleases with both DNA- and RNA-targeting subtypes. They can trigger antiviral activities through either direct elimination of invading nucleic acids or activating broad collateral cleavage to induce abortive infection. Here, we report a novel type V CRISPR effector BaCas12a3 that causes growth inhibition through a unique tRNA-cleavage mechanism. Plasmid interference and western blot assays showed that BaCas12a3 induces host growth arrest without DNA damage response, suggestive of the absence of double-strand DNA breaks. Indeed, biochemical characterization of the BaCas12a3-crRNA ribonucleoprotein unraveled that the effector is an RNA-activating nuclease that cleaves the 3' terminal CCA of tRNAs. Cryo-EM structures of BaCas12a3 reveal a conserved bilobed architecture featuring a unique tRNA-loading domain (tRLD) adjacent to the RuvC catalytic center. Structural and mutagenesis analyses show that the tRLD domain, together with a zinc ribbon domain, form a gated substrate groove. Target RNA binding induces conformational changes that open the groove and expose the RuvC active site, enabling specific tRNA 3' end cleavage while preventing other non-specific degradation. Our findings identify the tRLD domain aside the RuvC active site responsible for the tRNA recognition in BaCas12a3, expanding the functional diversity of CRISPR immunity.",
+      "doi": "10.1093/nar/gkag915",
+      "url": "https://doi.org/10.1093/nar/gkag915",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "RNA, Transfer",
+        "CRISPR-Cas Systems",
+        "Models, Molecular",
+        "CRISPR-Associated Proteins",
+        "Bacterial Proteins",
+        "Cryoelectron Microscopy",
+        "Catalytic Domain"
+      ],
+      "abstract_zh": "CRISPR-Cas12家族包含多种RNA引导的核酸酶，具有靶向DNA和RNA的不同亚型。它们可以通过直接清除入侵核酸或激活广泛的旁切活性来诱导流产感染，从而触发抗病毒活性。在此，我们报道了一种新型V型CRISPR效应蛋白BaCas12a3，其通过独特的tRNA切割机制引起生长抑制。质粒干扰和蛋白质印迹实验表明，BaCas12a3诱导宿主生长停滞，而不引发DNA损伤反应，提示不存在双链DNA断裂。确实，BaCas12a3-crRNA核糖核蛋白的生化表征揭示该效应蛋白是一种RNA激活的核酸酶，可切割tRNA的3'末端CCA。BaCas12a3的冷冻电镜结构揭示了一个保守的双叶结构，其特点是在RuvC催化中心附近有一个独特的tRNA装载结构域（tRLD）。结构和突变分析表明，tRLD结构域与锌带结构域共同形成一个门控底物沟槽。靶RNA结合诱导构象变化，打开沟槽并暴露RuvC活性位点，从而实现特异的tRNA 3'末端切割，同时防止其他非特异性降解。我们的发现确定了RuvC活性位点旁的tRLD结构域负责BaCas12a3中的tRNA识别，拓展了CRISPR免疫的功能多样性。",
+      "key_findings": [
+        "报道新型V型CRISPR效应蛋白BaCas12a3，通过独特tRNA切割机制抑制宿主生长，不引发DNA损伤反应。",
+        "BaCas12a3-crRNA复合物是RNA激活的核酸酶，特异性切割tRNA 3'末端CCA。",
+        "冷冻电镜显示tRLD与锌带结构域形成门控沟槽，靶RNA结合打开沟槽暴露RuvC位点，实现tRNA特异性切割。"
+      ],
+      "translated_at": "2026-09-28T02:59:58.679794Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现新型CRISPR效应子BaCas12a3通过独特tRNA切割机制导致生长抑制，揭示tRLD结构域识别tRNA的新机制，具有可迁移的机制洞察",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:07.472581Z"
+      }
+    },
+    {
+      "pmid": "42770326",
+      "title": "pH-dependent allosteric remodeling of a bacterial riboswitch couples alkaline activation to metal sensing.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Palmer Danea",
+        "Chauvier Adrien",
+        "Silva Tomás F D",
+        "Ontiveros Avery",
+        "Bussi Giovanni",
+        "Walter Nils G",
+        "et al."
+      ],
+      "abstract": "The widespread yybP-ykoY riboswitches control bacterial manganese (Mn) homeostasis by activating exporter expression in response to intracellular Mn2+ levels. The Escherichia coli alx riboswitch distinctively couples Mn2+ sensing to cytoplasmic alkalinity, but the mechanism is unknown. We show that pH tunes the alx aptamer's conformational sampling to modulate Mn2+ sensitivity. Single-molecule FRET reveals that Mn2+ stabilizes a docked three-way-junction conformation, and alkaline pH shifts this equilibrium to sensitize metal-dependent folding. Molecular dynamics simulations identify a loop whose low-pH-induced base pairing perturbs the adjacent helix, predicted to allosterically disrupt the Mn2+-binding state. In vivo reporters indicate that both this loop and the Mn2+-binding core are required for optimal pH-dependent translational activation: replacing the core with the non-pH-responsive mntP sequence abolishes activation. These results define how RNA allosterically integrates orthogonal metal and proton cues to enable combinatorial environmental sensing during alkaline stress.",
+      "doi": "10.1093/nar/gkag905",
+      "url": "https://doi.org/10.1093/nar/gkag905",
+      "pub_date": "2026-Sep-22",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Riboswitch",
+        "Hydrogen-Ion Concentration",
+        "Allosteric Regulation",
+        "Escherichia coli",
+        "Manganese",
+        "Nucleic Acid Conformation",
+        "Molecular Dynamics Simulation",
+        "RNA, Bacterial",
+        "Aptamers, Nucleotide",
+        "Fluorescence Resonance Energy Transfer"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T03:02:31.455017Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示RNA变构整合pH与金属信号的普适机制，结合单分子FRET与MD，具方法学启发性",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:15.007584Z"
+      }
+    },
+    {
+      "pmid": "42767220",
+      "title": "G protein diffusion states reveal receptor binding dynamics at single-molecule scale.",
+      "journal": "Cell Chem Biol",
+      "authors": [
+        "Mathiasen Signe",
+        "Meszaros Jozsef",
+        "Webb Chase",
+        "Geggier Peter",
+        "Asher Wesley B",
+        "Lambert Nevin A",
+        "et al."
+      ],
+      "abstract": "G protein-coupled receptors (GPCRs) signal through heterotrimeric G proteins, yet the kinetics of receptor-G protein interactions in cells remain poorly understood. Using single-molecule imaging, we tracked individual Gαi1 proteins diffusing in the plasma membrane, expecting that receptor binding should slow these rapidly diffusing lipid-anchored proteins to match the substantially slower transmembrane GPCRs. Gαi1-Halo showed no detectable slowing upon dopamine D2 receptor activation. In contrast, the nucleotide-decoupled Gαi1 4A-Halo mutant exhibited receptor-dependent slowing with a lifetime of ∼0.8 s. Agonist increased the Gαi1 4A-Halo association rate without affecting the lifetime of the receptor-engaged complex, consistent with the idea that agonist efficacy is reflected in an increased probability of productive G protein engagement. These findings suggest that native GPCR-G protein interactions are not resolved at 15 ms time resolution and establish a diffusion-based approach for studying receptor-G protein kinetics in living cells.",
+      "doi": "10.1016/j.chembiol.2026.08.013",
+      "url": "https://doi.org/10.1016/j.chembiol.2026.08.013",
+      "pub_date": "2026-Sep-21",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "G蛋白偶联受体（GPCRs）通过异源三聚体G蛋白进行信号传导，但细胞内受体-G蛋白相互作用的动力学仍知之甚少。我们利用单分子成像追踪单个Gαi1蛋白在质膜中的扩散，预期受体结合会减慢这些快速扩散的脂质锚定蛋白，使其与显著更慢的跨膜GPCR相匹配。Gαi1-Halo在多巴胺D2受体激活后未检测到可观察的减慢。相比之下，核苷酸解偶联的Gαi1 4A-Halo突变体表现出受体依赖性减慢，寿命约为0.8秒。激动剂增加了Gαi1 4A-Halo的结合速率，但不影响受体结合复合物的寿命，这与激动剂效能体现为增加有效G蛋白接合概率的观点一致。这些发现表明，天然GPCR-G蛋白相互作用在15 ms时间分辨率下无法被分辨，并建立了一种基于扩散的方法，用于在活细胞中研究受体-G蛋白动力学。",
+      "key_findings": [
+        "单分子成像显示天然GPCR-G蛋白互作在15 ms分辨率下无法分辨。",
+        "核苷酸解偶联Gαi1 4A突变体呈现受体依赖扩散减慢，寿命约0.8秒。",
+        "激动剂通过提高有效G蛋白结合概率而非改变复合物寿命来体现效能。"
+      ],
+      "translated_at": "2026-09-28T03:03:59.717744Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "建立基于单分子扩散状态研究活细胞受体-G蛋白动力学的新方法，具有可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:19.459329Z"
+      }
+    },
+    {
+      "pmid": "42766660",
+      "title": "The functional impact of myofiber macroscopic organization and disarray in computational models of the murine heart.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Guastamacchia Carlo",
+        "Piersanti Roberto",
+        "Giardini Francesco",
+        "Coppini Raffaele",
+        "Ferrantini Cecilia",
+        "Dede' Luca",
+        "et al."
+      ],
+      "abstract": "A major challenge in computational models of cardiac electromechanics is the reconstruction of myocardial fiber architecture, as direct in vivo measurements of fiber orientation are not feasible. Consequently, rule-based methods are commonly adopted as surrogates, relying on empirical descriptions of fiber organization combined with patient-specific geometries. This study investigates the respective roles of macroscopic fiber architecture and microscopic fiber disarray in cardiac electromechanical simulations. A high-fidelity biventricular electromechanical model of a murine heart was developed using a high-resolution myocardial fiber field obtained via mesoscopic optical imaging, which serves as a reference ground truth. A spatial smoothing strategy is introduced to decouple macroscopic fiber organization from local disarray, and the resulting responses are also compared with those obtained using a rule-based fiber field. The results show that passive mechanics and electrophysiological activation are only weakly affected by fiber disarray, with global chamber compliance and activation times remaining largely unchanged across different fiber descriptions. In contrast, active mechanics is highly sensitive to fiber architecture. Moderate regularization of the experimentally measured fiber field enhances the ventricular pumping efficiency of the computational model by reducing microscopic disarray while preserving the macroscopic helical organization, whereas excessive smoothing or rule-based fiber reconstructions lead to unphysiologically strong or inefficient contraction. Within this framework, two commonly adopted surrogate strategies to account for fiber disarray are investigated: (i) a reduction of the effective cross-bridge stiffness in the active tension model, and (ii) the introduction of controlled misalignment between active tension and the local fiber direction. While both approaches reproduce global hemodynamic indicators comparable to the reference case, an effective reduction of contractility - despite its phenomenological nature - provides a closer match to the reference strain patterns than the introduction of orthogonal active stress components. Overall, the results highlight the dominant role of macroscopic fiber architecture in active mechanics and reveal important limitations of commonly adopted surrogate approaches for modeling fiber disarray.",
+      "doi": "10.1371/journal.pcbi.1014807",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014807",
+      "pub_date": "2026-Sep",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Mice",
+        "Models, Cardiovascular",
+        "Heart",
+        "Computer Simulation",
+        "Computational Biology",
+        "Myocardial Contraction",
+        "Myofibrils",
+        "Myocardium",
+        "Biomechanical Phenomena"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-09-28T03:05:31.698280Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出解耦宏观纤维走向与局部紊乱的空间平滑策略，并系统评估常用替代建模方法，具有可迁移的方法学价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:26.535151Z"
+      }
+    },
+    {
+      "pmid": "42766637",
+      "title": "Seizure recruitment properties are dependent upon dynamotype: A modeling study.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Karosas Diana M",
+        "Saggio Marisa",
+        "Stacey William C"
+      ],
+      "abstract": "Seizure propagation - how epileptogenic brain tissue recruits less excitable tissue - is poorly understood. Previous studies have used dynamical modeling to study seizure propagation and to create patient-specific whole-brain models of seizure spread. However, these studies focused on seizures of a single dynamotype (onset and offset bifurcation pair). Here, we implement a novel coupling method to investigate seizure propagation in a diverse array of dynamotypes. We utilize the Multiclass Epileptor, a recently proposed model that captures a wide range of seizure dynamotypes in a cortical mass (\"node\"). We consider two nodes: the seizure onset zone (node 1), which bursts autonomously, and the potential propagation zone (node 2), which is not independently epileptogenic but can be recruited by node 1. We examine the impact of intrinsic and coupling factors on the likelihood and speed of recruitment, with particular attention to the onset bifurcation of node 1. We also measure the range of onset behaviors observed in node 2 with respect to the onset behavior of node 1. The model predicted that seizures that display baseline shifts at onset are less likely to spread, and spread more slowly, compared to seizures that do not exhibit baseline shifts at onset. Seizures that present with amplitude scaling at onset were unlikely to propagate. Further, the model predicted the potential for unusual combinations of onset dynamics, such as a baseline shift in node 2 but not node 1. We confirmed the possibility for several of these unusual recruitment behaviors in humans using intracranial electroencephalography data. The results of the study provide a theoretical framework for seizure propagation, establishing a basis for innovations in characterization of patients' seizure networks and identification of the seizure onset zone.",
+      "doi": "10.1371/journal.pcbi.1013975",
+      "url": "https://doi.org/10.1371/journal.pcbi.1013975",
+      "pub_date": "2026-Sep-21",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "癫痫传播——致痫性脑组织如何募集兴奋性较低的组织——目前理解甚少。既往研究已使用动力学建模研究癫痫传播，并建立患者特异性全脑癫痫扩散模型。然而，这些研究仅关注单一动力学类型（起始与终止分岔对）的癫痫发作。在此，我们实现了一种新的耦合方法，以研究多种动力学类型下的癫痫传播。我们采用 Multiclass Epileptor 模型——一种最近提出的、能在皮质团块（“节点”）中捕获广泛癫痫动力学类型的模型。我们考虑两个节点：癫痫发作起始区（节点1），可自主爆发；以及潜在传播区（节点2），其本身无独立致痫性，但可被节点1募集。我们考察内在因素与耦合因素对募集可能性和速度的影响，特别关注节点1的起始分岔。我们还测量了节点2相对于节点1的起始行为范围。模型预测，与起始时无基线偏移的癫痫相比，起始时出现基线偏移的癫痫更不易扩散，且扩散更慢。起始时表现为振幅缩放的癫痫不太可能传播。此外，模型预测可能出现不寻常的起始动力学组合，例如节点2出现基线偏移而节点1没有。我们利用颅内脑电图数据证实了其中几种异常募集行为在人类中的可能性。该研究结果为癫痫传播提供了理论框架，为患者癫痫网络特征描述和癫痫发作起始区识别方面的创新奠定了基础。",
+      "key_findings": [
+        "发作起始出现基线偏移的癫痫比无基线偏移者更不易扩散且扩散更慢。",
+        "发作起始表现为振幅缩放的癫痫不太可能发生传播。",
+        "模型预测并经颅内脑电图证实可出现异常起始动力学组合，如仅节点2出现基线偏移。"
+      ],
+      "translated_at": "2026-09-28T03:06:12.211151Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出新耦合方法研究多种癫痫dynamotype的传播，建立可迁移的理论框架，方法学有创新",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:32.722068Z"
+      }
+    },
+    {
+      "pmid": "42766632",
+      "title": "AlloPool is a deep learning framework that infers protein allostery from molecular dynamics simulations.",
+      "journal": "PLoS Biol",
+      "authors": [
+        "Marfoglia Matthieu",
+        "Pedraza-Joya Miguel A",
+        "Guirardel Lucas",
+        "Chatzi Souleiman Aisima",
+        "Barth Patrick"
+      ],
+      "abstract": "Recent advances in artificial intelligence have transformed protein structure prediction and design. However, protein function is governed not only by static structures but also by the conformational dynamics that allow proteins to access distinct functional states. Predicting these dynamic transitions, central to many biological processes, remains challenging due to the scarcity of high-resolution experimental data, which limits the training of machine-learning models for dynamic and energetic property prediction. Here, we present AlloPool, a graph neural network (GNN)-based framework that interprets molecular dynamics simulations by iteratively pruning residue-residue interactions to uncover minimal, time-resolved interaction networks that govern protein conformational dynamics and structural responses to chemical or mechanical perturbations, collectively known as allostery. By integrating temporal attention with graph aggregation, AlloPool learns evolving interaction graphs from equilibrium and non-equilibrium molecular dynamics simulations, enabling accurate reconstruction of dynamic trajectories and the interaction networks that drive conformational transitions. Validated across diverse dynamic protein systems, including binding domains, mechanosensors, signaling receptors, and enzymes, AlloPool maps allosteric communication pathways, predicts the effects of ligand binding, mechanical forces, and mutations, discovers transient dynamic states and outperforms existing machine-learning approaches in dynamic trajectory reconstruction. This advance provides a general framework for interpreting protein dynamics with broad implications for drug discovery, synthetic biology, and protein engineering.",
+      "doi": "10.1371/journal.pbio.3004002",
+      "url": "https://doi.org/10.1371/journal.pbio.3004002",
+      "pub_date": "2026-Sep",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Molecular Dynamics Simulation",
+        "Allosteric Regulation",
+        "Graph Neural Networks",
+        "Deep Learning",
+        "Protein Conformation",
+        "Proteins",
+        "Protein Binding"
+      ],
+      "abstract_zh": "人工智能的最新进展已经改变了蛋白质结构预测与设计。然而，蛋白质功能不仅由静态结构决定，还受构象动力学的调控，使蛋白质能够进入不同的功能状态。由于高分辨率实验数据稀缺，限制了用于动态和能量性质预测的机器学习模型训练，因此预测这些对许多生物过程至关重要的动态转变仍具挑战性。在此，我们提出AlloPool，一个基于图神经网络（GNN）的框架，通过迭代修剪残基-残基相互作用来解释分子动力学模拟，从而揭示控制蛋白质构象动力学及其对化学或机械扰动结构响应的最简、时间分辨相互作用网络，这些现象统称为别构效应。AlloPool将时间注意力与图聚合相结合，从平衡和非平衡分子动力学模拟中学习演化的相互作用图，从而能够准确重建动态轨迹以及驱动构象转变的相互作用网络。在包括结合结构域、机械感受器、信号受体和酶在内的多种动态蛋白质系统中得到验证，AlloPool能够绘制别构通讯通路，预测配体结合、机械力和突变的影响，发现瞬态动态状态，并在动态轨迹重建方面优于现有机器学习方法。这一进展为解释蛋白质动力学提供了一个通用框架，对药物发现、合成生物学和蛋白质工程具有广泛意义。",
+      "key_findings": [
+        "AlloPool基于GNN迭代修剪残基相互作用，提取驱动蛋白质构象动力学的关键时间分辨网络。",
+        "该框架整合时间注意力与图聚合，可准确重建平衡与非平衡分子动力学轨迹及相互作用网络。",
+        "在多种蛋白系统中验证，AlloPool可绘制别构通路、预测配体/力/突变效应并优于现有方法。"
+      ],
+      "translated_at": "2026-09-28T03:07:31.164256Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出AlloPool新框架，利用GNN从MD模拟推断蛋白质变构网络，具有普适方法学价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-09-28T02:35:49.673107Z"
+      }
+    },
+    {
+      "pmid": "42766593",
+      "title": "Dynamics of jaw kinematics and fundamental frequency suggest vocal tract tuning in the indris' song.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Carugati Filippo",
+        "Friard Olivier",
+        "De Gregorio Chiara",
+        "Valente Daria",
+        "Zanoli Anna",
+        "Ferrario Valeria",
+        "et al."
+      ],
+      "abstract": "The ability to modify the supralaryngeal vocal tract, particularly by adjusting mouth opening, can align formants and harmonics, thereby enhancing vocal intensity. This phenomenon, known as formant tuning, has been described in human singers as well as in various mammalian and avian species. However, little is known about its role in singing primates. In this study, we investigated whether vertical mouth opening in the indri (Indri indri), the only known singing lemur, covaries with the fundamental frequency (fo) of its vocalizations, a parameter directly related to the first formant in this species. We analysed 83 video recordings from 19 wild indris, using a markerless pose estimation model based on DeepLabCut. We extracted frame-by-frame measurements of mouth opening, calculated as the pixel distance between predicted landmarks on the upper and lower lips. These measurements were paired with fo values extracted from corresponding audio tracks. A generalized linear mixed model revealed a significant positive relationship between vertical mouth opening and fo, indicating that vocalizations with higher frequency value are associated with greater jaw openings. These results provide the first direct, quantitative evidence that indris modulate their mouth configuration in coordination with fo, supporting the hypothesis that they can tune formants. This ability likely contributes to increased sound intensity and transmission range, enhancing long-distance communication in dense forest environments. Beyond improving our understanding of vocal production in singing primates, this study combines markerless pose estimation with frame-level acoustic analysis to quantify articulatory dynamics from field recordings, providing a multimodal approach for investigating the relationship between vocal tract configuration and acoustic output in animal communication.",
+      "doi": "10.1371/journal.pcbi.1014781",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014781",
+      "pub_date": "2026-Sep",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Vocalization, Animal",
+        "Jaw",
+        "Biomechanical Phenomena",
+        "Video Recording",
+        "Indriidae",
+        "Mouth",
+        "Male",
+        "Vocal Cords",
+        "Female"
+      ],
+      "abstract_zh": "调节声门上声道的能力，尤其是通过调整张口程度，可以使共振峰与谐波对齐，从而增强发声强度。这种现象被称为共振峰调谐，已在人类歌手以及多种哺乳动物和鸟类中被描述。然而，对其在鸣唱灵长类中的作用知之甚少。在本研究中，我们考察了大狐猴（Indri indri）——唯一已知会鸣唱的狐猴——的垂直张口是否与其发声的基频（fo）协变，基频是与该物种第一共振峰直接相关的参数。我们分析了来自19只野生大狐猴的83段视频录像，使用基于DeepLabCut的无标记姿态估计模型。我们逐帧提取张口测量值，即上下唇预测标志点之间的像素距离。这些测量值与相应音轨中提取的fo值配对。广义线性混合模型显示垂直张口与fo之间存在显著正相关关系，表明频率值较高的发声伴随更大的张口。这些结果提供了第一个直接、定量的证据，表明大狐猴在与fo协调的情况下调节其口部构型，支持它们能够调谐共振峰的假说。这种能力可能有助于提高声音强度和传播范围，增强茂密森林环境中的远距离通讯。除了增进我们对鸣唱灵长类发声产生的理解外，本研究还将无标记姿态估计与帧级声学分析相结合，从野外记录中量化发音动态，为研究动物通讯中声道构型与声学输出之间的关系提供了一种多模态方法。",
+      "key_findings": [
+        "首次提供直接定量证据，证明大狐猴垂直张口与基频显著正相关。",
+        "表明大狐猴能协调口部构型与基频，支持其可调谐共振峰的假说。",
+        "建立无标记姿态估计结合帧级声学分析的多模态方法，可量化野外发音动态。"
+      ],
+      "translated_at": "2026-09-28T03:07:59.205305Z"
+    }
+  ],
+  "pre_llm_filter_total": 29,
+  "llm_filtered_out": 0,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filter_prompt_version": "v1",
+  "llm_filter_policy_version": "2026-05-06",
+  "llm_filter_evaluation_snapshot_id": null,
+  "llm_filter_policy_config": "configs/filter_policy.json",
+  "llm_filtered_at": "2026-09-28T02:36:36.417160Z",
+  "filtered_out_papers": [],
+  "translated_count": 28
+}
