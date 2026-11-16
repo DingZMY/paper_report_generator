@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026-W47 · 系统/合成生物学文献周报</title>
+  <meta name="description" content="本周系统生物学与合成生物学领域顶刊论文双语摘要汇总">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #f0f4f8;
+      --surface:     #ffffff;
+      --surface2:    #f7f9fc;
+      --border:      #e2e8f0;
+      --text:        #1a202c;
+      --text-muted:  #718096;
+      --text-light:  #a0aec0;
+      --accent:      #5a67d8;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+      --shadow:      0 4px 8px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.05);
+      --shadow-lg:   0 12px 20px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.06);
+      --radius:      12px;
+      --radius-sm:   7px;
+      --transition:  0.18s ease;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:         #0d1117;
+        --surface:    #161b22;
+        --surface2:   #1c2130;
+        --border:     #2d3748;
+        --text:       #e2e8f0;
+        --text-muted: #a0aec0;
+        --text-light: #718096;
+        --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+        --shadow:     0 4px 8px rgba(0,0,0,0.5);
+        --shadow-lg:  0 12px 20px rgba(0,0,0,0.6);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+                   "PingFang SC", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 58px;
+    }
+    .site-logo {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color var(--transition);
+    }
+    .header-nav a:hover { color: var(--text); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(1.7rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .hero-meta {
+      font-size: 0.88rem;
+      opacity: 0.82;
+      margin-bottom: 28px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat-num  { display: block; font-size: 2rem; font-weight: 800; line-height: 1; }
+    .stat-label { display: block; font-size: 0.75rem; opacity: 0.8; margin-top: 4px; }
+
+    /* ── Filter bar ─────────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      position: sticky;
+      top: 58px;
+      z-index: 190;
+    }
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-label { font-size: 0.8rem; color: var(--text-muted); margin-right: 2px; }
+    .filter-btn {
+      padding: 4px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Main grid ──────────────────────────────────────────────── */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+    .section-heading {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .papers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────────── */
+    .paper-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--card-color, #9e9e9e);
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .paper-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* card header row */
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .journal-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .pub-date {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      flex-shrink: 0;
+    }
+
+    /* title */
+    .paper-title {
+      font-size: 0.93rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+    .paper-title a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .paper-title a:hover { color: var(--accent); }
+
+    /* authors */
+    .paper-authors {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Abstract tabs ──────────────────────────────────────────── */
+    .abstract-section { flex: 1; }
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .tab-btn {
+      padding: 3px 11px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all var(--transition);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .abstract-text {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      display: none;
+      max-height: 152px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .abstract-text.active { display: block; }
+    .abstract-text::-webkit-scrollbar { width: 3px; }
+    .abstract-text::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 2px;
+    }
+
+    /* ── Key findings ───────────────────────────────────────────── */
+    .key-findings {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+    }
+    .findings-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+    }
+    .key-findings ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .key-findings li {
+      font-size: 0.81rem;
+      line-height: 1.55;
+      color: var(--text);
+      padding-left: 14px;
+      position: relative;
+    }
+    .key-findings li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--card-color, var(--accent));
+      font-size: 0.68rem;
+      top: 2px;
+    }
+
+    /* ── Card footer ────────────────────────────────────────────── */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .doi-link {
+      font-size: 0.79rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      transition: gap var(--transition);
+    }
+    .doi-link:hover { gap: 7px; }
+    .keywords-row { display: flex; gap: 4px; flex-wrap: wrap; }
+    .kw-tag {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--text-light);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Favorite button ─────────────────────────────────────────── */
+    .fav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .fav-btn:hover { color: #f6ad00; border-color: #f6ad00; transform: scale(1.15); }
+    .fav-btn.favorited { color: #f6ad00; border-color: #f6ad00; background: rgba(246,173,0,0.08); }
+
+    /* ── Dislike button ────────────────────────────────────────────── */
+    .dislike-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 3px 7px;
+      color: var(--text-light);
+      transition: color var(--transition), border-color var(--transition),
+                  transform var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+    .dislike-btn:hover { color: #e53e3e; border-color: #e53e3e; transform: scale(1.15); }
+    .dislike-btn.disliked { color: #e53e3e; border-color: #e53e3e; background: rgba(229,62,62,0.08); }
+
+    /* ── Smooth archive animation ──────────────────────────────────────── */
+    .paper-card.archived-hidden {
+      opacity: 0 !important;
+      transform: scale(0.92) !important;
+      animation: archive-out 0.35s ease forwards;
+    }
+    .paper-card.archived-restoring {
+      animation: archive-in 0.35s ease forwards;
+    }
+
+    @keyframes archive-out {
+      to { opacity: 0; transform: scale(0.92); }
+    }
+    @keyframes archive-in {
+      from { opacity: 0; transform: scale(0.92); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── Archive section ───────────────────────────────────────────── */
+    .archive-section {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 2px dashed var(--border);
+      display: flex;
+      justify-content: center;
+    }
+    .archive-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .archive-toggle:hover {
+      background: var(--surface2);
+      color: var(--text);
+    }
+    .archive-toggle .count {
+      background: var(--text-light);
+      color: #fff;
+      padding: 1px 7px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+    }
+    /* Archived appearance when visible (archive filter / archive view) */
+    .paper-card.archived-visible {
+      border-style: dashed;
+      border-color: var(--text-light);
+      opacity: 0.75;
+    }
+    .paper-card.archived-visible:hover {
+      opacity: 1;
+    }
+    .archived-badge {
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #e53e3e;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Restore button ──────────────────────────────────────────────── */
+    .restore-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      color: var(--text-muted);
+      transition: all var(--transition);
+      flex-shrink: 0;
+      margin-left: 6px;
+    }
+    .restore-btn:hover {
+      color: #38a169;
+      border-color: #38a169;
+      background: rgba(56,161,105,0.06);
+    }
+
+    /* ── View switch bar ─────────────────────────────────────────────── */
+    .view-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 6px 0 14px;
+    }
+    .view-btn {
+      padding: 5px 18px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+    .view-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── Empty state ────────────────────────────────────────────── */
+    .no-papers {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 22px 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .site-footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .papers-grid { grid-template-columns: 1fr; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 16px 14px 48px; }
+      .stats-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">🧬 Bio Digest</a>
+    <nav class="header-nav" style="display:flex;align-items:center;gap:18px;">
+      <a href="../favorites.html" style="display:flex;align-items:center;gap:4px;">
+        ★ 收藏夹&nbsp;(<span id="fav-nav-count">0</span>)
+      </a>
+      <span style="display:flex;align-items:center;gap:4px;color:var(--text-muted);font-size:0.88rem;">
+        📦 已归档&nbsp;(<span id="archive-nav-count">0</span>)
+      </span>
+      <a href="../index.html">← 所有期刊</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <p class="hero-label">2026-W47</p>
+  <h1>系统 / 合成生物学<br>文献周报</h1>
+  <p class="hero-meta">
+    2026/11/09 &nbsp;~&nbsp; 2026/11/16
+    &nbsp;&nbsp;·&nbsp;&nbsp;生成于 2026-11-16 04:12 UTC
+  </p>
+  <div class="stats-row">
+    <div>
+      <span class="stat-num">23</span>
+      <span class="stat-label">篇论文</span>
+    </div>
+    <div>
+      <span class="stat-num">19</span>
+      <span class="stat-label">已翻译</span>
+    </div>
+    <div>
+      <span class="stat-num">8</span>
+      <span class="stat-label">期刊来源</span>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">筛选：</span>
+    <button class="filter-btn active" data-filter="all" onclick="filterPapers('all', this)">全部 (23)</button>
+    
+    <button class="filter-btn" data-filter="nature" onclick="filterPapers('nature', this)">🌿 Nature 系列 (3)</button>
+    
+    
+    <button class="filter-btn" data-filter="cell" onclick="filterPapers('cell', this)">🔵 Cell 系列 (5)</button>
+    
+    
+    <button class="filter-btn" data-filter="science" onclick="filterPapers('science', this)">🟠 Science 系列 (5)</button>
+    
+    <button class="filter-btn" data-filter="fav" id="fav-filter-btn" onclick="filterPapers('fav', this)">★ 已收藏 (<span id="fav-filter-count">0</span>)</button>
+    <button class="filter-btn" data-filter="archive" id="archive-filter-btn" onclick="filterPapers('archive', this)">✕ 已归档 (<span id="archive-filter-count">0</span>)</button>
+  </div>
+</div>
+
+<main class="main">
+  
+  <div class="papers-grid" id="papers-grid">
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="43025426"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "Time-resolved, network-wide consequences of cancer metabolic reprogramming remain poorly understood. We built multi-omics-constrained, near-genome-scale kinetic ensembles for isogenic BRCA1 wild-type and BRCA1-mutant ovarian cancer cells. Covering over 2,100 reactions, the ensembles enabled uncertainty-quantified simulations of nutrient, metabolite, and enzyme perturbations. Metabolic control analysis identified 28 enzyme-mediated vulnerabilities; 24 are linked to experimental or approved DrugBank compounds, whereas four lack documented drug associations. Independent DepMap data supported a subset of these candidates. All 28 emerged directly from the mechanistic model structure and multi-omics constraints, with no calibration to known drug targets or cancer-dependency data. Simulations of thymidylate synthase, hexokinase, and triokinase inhibition predicted target- and physiology-specific changes in pathway use, energy metabolism, and a shared ceramide-linked stress response. Mapping predicted enzyme-activity shifts to BRCA1-associated transcription factors suggested regulatory routes underlying differences between the two states. These ensembles provide a reusable framework for time-resolved, mechanistic hypothesis generation across cancers and other diseases. A record of this paper\u0027s transparent peer review process is included in the supplemental information.", "abstract_zh": "\u764c\u75c7\u4ee3\u8c22\u91cd\u7f16\u7a0b\u7684\u65f6\u95f4\u5206\u8fa8\u3001\u5168\u7f51\u7edc\u8303\u56f4\u540e\u679c\u4ecd\u77e5\u4e4b\u751a\u5c11\u3002\u6211\u4eec\u4e3a\u540c\u57fa\u56e0\u578b BRCA1 \u91ce\u751f\u578b\u548c BRCA1 \u7a81\u53d8\u578b\u5375\u5de2\u764c\u7ec6\u80de\u6784\u5efa\u4e86\u591a\u7ec4\u5b66\u7ea6\u675f\u3001\u63a5\u8fd1\u57fa\u56e0\u7ec4\u5c3a\u5ea6\u7684\u52a8\u529b\u5b66\u96c6\u5408\u6a21\u578b\u3002\u8fd9\u4e9b\u96c6\u5408\u6a21\u578b\u8986\u76d6\u8d85\u8fc72100\u4e2a\u53cd\u5e94\uff0c\u80fd\u591f\u5bf9\u8425\u517b\u7269\u3001\u4ee3\u8c22\u7269\u548c\u9176\u6270\u52a8\u8fdb\u884c\u4e0d\u786e\u5b9a\u6027\u91cf\u5316\u6a21\u62df\u3002\u4ee3\u8c22\u63a7\u5236\u5206\u6790\u8bc6\u522b\u51fa28\u4e2a\u9176\u4ecb\u5bfc\u7684\u8106\u5f31\u70b9\uff1b\u5176\u4e2d24\u4e2a\u4e0e\u5b9e\u9a8c\u6027\u6216\u5df2\u83b7\u6279\u7684 DrugBank \u5316\u5408\u7269\u76f8\u5173\uff0c\u800c4\u4e2a\u7f3a\u4e4f\u5df2\u8bb0\u5f55\u836f\u7269\u5173\u8054\u3002\u72ec\u7acb\u7684 DepMap \u6570\u636e\u652f\u6301\u5176\u4e2d\u4e00\u90e8\u5206\u5019\u9009\u8106\u5f31\u70b9\u3002\u6240\u670928\u4e2a\u5747\u76f4\u63a5\u6765\u81ea\u673a\u5236\u6a21\u578b\u7ed3\u6784\u548c\u591a\u7ec4\u5b66\u7ea6\u675f\uff0c\u672a\u5bf9\u5df2\u77e5\u836f\u7269\u9776\u70b9\u6216\u764c\u75c7\u4f9d\u8d56\u6027\u6570\u636e\u8fdb\u884c\u6821\u51c6\u3002\u5bf9\u80f8\u82f7\u9178\u5408\u9176\u3001\u5df1\u7cd6\u6fc0\u9176\u548c\u4e09\u7cd6\u6fc0\u9176\u6291\u5236\u7684\u6a21\u62df\u9884\u6d4b\u4e86\u901a\u8def\u5229\u7528\u3001\u80fd\u91cf\u4ee3\u8c22\u4ee5\u53ca\u5171\u540c\u7684\u795e\u7ecf\u9170\u80fa\u76f8\u5173\u5e94\u6fc0\u53cd\u5e94\u53d1\u751f\u9776\u70b9\u548c\u751f\u7406\u72b6\u6001\u7279\u5f02\u6027\u53d8\u5316\u3002\u5c06\u9884\u6d4b\u7684\u9176\u6d3b\u6027\u53d8\u5316\u6620\u5c04\u5230 BRCA1 \u76f8\u5173\u8f6c\u5f55\u56e0\u5b50\uff0c\u63d0\u793a\u4e86\u4e24\u79cd\u72b6\u6001\u95f4\u5dee\u5f02\u80cc\u540e\u7684\u8c03\u63a7\u9014\u5f84\u3002\u8fd9\u4e9b\u96c6\u5408\u6a21\u578b\u4e3a\u8de8\u764c\u75c7\u548c\u5176\u4ed6\u75be\u75c5\u7684\u65f6\u95f4\u5206\u8fa8\u3001\u673a\u5236\u6027\u5047\u8bbe\u751f\u6210\u63d0\u4f9b\u4e86\u53ef\u91cd\u590d\u4f7f\u7528\u7684\u6846\u67b6\u3002\u8865\u5145\u6750\u6599\u4e2d\u5305\u542b\u672c\u6587\u900f\u660e\u540c\u884c\u8bc4\u5ba1\u8fc7\u7a0b\u7684\u8bb0\u5f55\u3002", "authors": ["Toumpe Ilias", "Masid Maria", "Hatzimanikatis Vassily", "Miskovic Ljubisa"], "journal": "Cell Syst", "journal_color": "#0D47A1", "key_findings": ["\u6784\u5efa\u591a\u7ec4\u5b66\u7ea6\u675f\u7684\u8fd1\u57fa\u56e0\u7ec4\u5c3a\u5ea6\u52a8\u529b\u5b66\u6a21\u578b\uff0c\u8986\u76d62100\u4f59\u53cd\u5e94\uff0c\u7528\u4e8eBRCA1\u91ce\u751f\u4e0e\u7a81\u53d8\u5375\u5de2\u764c\u3002", "\u4ee3\u8c22\u63a7\u5236\u5206\u6790\u8bc6\u522b28\u4e2a\u9176\u4ecb\u5bfc\u8106\u5f31\u70b9\uff0c24\u4e2a\u6709\u5df2\u77e5\u836f\u7269\u5173\u8054\uff0c4\u4e2a\u65e0\u8bb0\u5f55\uff0c\u4e14\u672a\u7ecf\u9776\u70b9\u6821\u51c6\u3002", "\u6a21\u62df\u80f8\u82f7\u9178\u5408\u9176\u7b49\u6291\u5236\u63ed\u793a\u901a\u8def\u5229\u7528\u3001\u80fd\u91cf\u4ee3\u8c22\u548c\u5171\u540c\u795e\u7ecf\u9170\u80fa\u5e94\u6fc0\u54cd\u5e94\u7684\u72b6\u6001\u7279\u5f02\u6027\u53d8\u5316\u3002"], "pmid": "43025426", "pub_date": "2026-Nov-13", "title": "Multi-omics-constrained kinetic models quantify pathway rewiring and predict metabolic vulnerabilities in BRCA1-deficient ovarian cancer.", "url": "https://doi.org/10.1016/j.cels.2026.101781", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell Syst</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43025426"
+                onclick="toggleFavorite('43025426', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43025426"
+                onclick="toggleDislike('43025426', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cels.2026.101781" target="_blank" rel="noopener noreferrer">Multi-omics-constrained kinetic models quantify pathway rewiring and predict metabolic vulnerabilities in BRCA1-deficient ovarian cancer.</a>
+      </h2>
+
+      <p class="paper-authors">Toumpe Ilias &middot; Masid Maria &middot; Hatzimanikatis Vassily &middot; Miskovic Ljubisa</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43025426', 'zh-43025426')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43025426', 'en-43025426')">中文</button>
+        </div>
+        <div id="en-43025426" class="abstract-text active">Time-resolved, network-wide consequences of cancer metabolic reprogramming remain poorly understood. We built multi-omics-constrained, near-genome-scale kinetic ensembles for isogenic BRCA1 wild-type and BRCA1-mutant ovarian cancer cells. Covering over 2,100 reactions, the ensembles enabled uncertainty-quantified simulations of nutrient, metabolite, and enzyme perturbations. Metabolic control analysis identified 28 enzyme-mediated vulnerabilities; 24 are linked to experimental or approved DrugBank compounds, whereas four lack documented drug associations. Independent DepMap data supported a subset of these candidates. All 28 emerged directly from the mechanistic model structure and multi-omics constraints, with no calibration to known drug targets or cancer-dependency data. Simulations of thymidylate synthase, hexokinase, and triokinase inhibition predicted target- and physiology-specific changes in pathway use, energy metabolism, and a shared ceramide-linked stress response. Mapping predicted enzyme-activity shifts to BRCA1-associated transcription factors suggested regulatory routes underlying differences between the two states. These ensembles provide a reusable framework for time-resolved, mechanistic hypothesis generation across cancers and other diseases. A record of this paper's transparent peer review process is included in the supplemental information.</div>
+        <div id="zh-43025426" class="abstract-text">癌症代谢重编程的时间分辨、全网络范围后果仍知之甚少。我们为同基因型 BRCA1 野生型和 BRCA1 突变型卵巢癌细胞构建了多组学约束、接近基因组尺度的动力学集合模型。这些集合模型覆盖超过2100个反应，能够对营养物、代谢物和酶扰动进行不确定性量化模拟。代谢控制分析识别出28个酶介导的脆弱点；其中24个与实验性或已获批的 DrugBank 化合物相关，而4个缺乏已记录药物关联。独立的 DepMap 数据支持其中一部分候选脆弱点。所有28个均直接来自机制模型结构和多组学约束，未对已知药物靶点或癌症依赖性数据进行校准。对胸苷酸合酶、己糖激酶和三糖激酶抑制的模拟预测了通路利用、能量代谢以及共同的神经酰胺相关应激反应发生靶点和生理状态特异性变化。将预测的酶活性变化映射到 BRCA1 相关转录因子，提示了两种状态间差异背后的调控途径。这些集合模型为跨癌症和其他疾病的时间分辨、机制性假设生成提供了可重复使用的框架。补充材料中包含本文透明同行评审过程的记录。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>构建多组学约束的近基因组尺度动力学模型，覆盖2100余反应，用于BRCA1野生与突变卵巢癌。</li>
+          
+          <li>代谢控制分析识别28个酶介导脆弱点，24个有已知药物关联，4个无记录，且未经靶点校准。</li>
+          
+          <li>模拟胸苷酸合酶等抑制揭示通路利用、能量代谢和共同神经酰胺应激响应的状态特异性变化。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cels.2026.101781" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="43024730"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Enhancers are key gene regulatory elements that ensure the precise spatiotemporal execution of developmental gene expression programs. However, recent findings indicate that current approaches to identify enhancers may not capture the full repertoire of active enhancers in mammalian genomes. Here, we combine massively parallel enhancer assays with chromatin structure and transcriptome profiling to functionally annotate enhancers genome-wide in human induced pluripotent stem cells. We find that a substantial fraction (\u223c40%) of accessible chromatin regions with enhancer function lack key features associated with active enhancers, including the active enhancer mark histone H3 lysine-27 acetylation and enhancer-associated RNAs. Perturbation of this class of noncanonical enhancers by CRISPR-mediated epigenome editing or deletion results in decreased levels of target gene expression and, in one instance, loss of pluripotent stem cell characteristics. Collectively, our data demonstrate enhancer activity for a class of gene regulatory elements that had, until now, only been associated with a neutral or inactive status, challenging current models of enhancer function.", "abstract_zh": "\u589e\u5f3a\u5b50\u662f\u5173\u952e\u57fa\u56e0\u8c03\u63a7\u5143\u4ef6\uff0c\u786e\u4fdd\u53d1\u80b2\u57fa\u56e0\u8868\u8fbe\u7a0b\u5e8f\u7684\u7cbe\u786e\u65f6\u7a7a\u6267\u884c\u3002\u7136\u800c\uff0c\u8fd1\u671f\u53d1\u73b0\u8868\u660e\uff0c\u76ee\u524d\u8bc6\u522b\u589e\u5f3a\u5b50\u7684\u65b9\u6cd5\u53ef\u80fd\u65e0\u6cd5\u6355\u83b7\u54fa\u4e73\u52a8\u7269\u57fa\u56e0\u7ec4\u4e2d\u5168\u90e8\u6d3b\u8dc3\u589e\u5f3a\u5b50\u3002\u5728\u6b64\uff0c\u6211\u4eec\u5c06\u5927\u89c4\u6a21\u5e73\u884c\u589e\u5f3a\u5b50\u68c0\u6d4b\u4e0e\u67d3\u8272\u8d28\u7ed3\u6784\u548c\u8f6c\u5f55\u7ec4\u5206\u6790\u76f8\u7ed3\u5408\uff0c\u5728\u4eba\u7c7b\u8bf1\u5bfc\u591a\u80fd\u5e72\u7ec6\u80de\u4e2d\u5bf9\u5168\u57fa\u56e0\u7ec4\u589e\u5f3a\u5b50\u8fdb\u884c\u529f\u80fd\u6ce8\u91ca\u3002\u6211\u4eec\u53d1\u73b0\uff0c\u5177\u6709\u589e\u5f3a\u5b50\u529f\u80fd\u7684\u53ef\u53ca\u67d3\u8272\u8d28\u533a\u57df\u4e2d\u6709\u76f8\u5f53\u5927\u6bd4\u4f8b\uff08\u7ea640%\uff09\u7f3a\u4e4f\u4e0e\u6d3b\u6027\u589e\u5f3a\u5b50\u76f8\u5173\u7684\u5173\u952e\u7279\u5f81\uff0c\u5305\u62ec\u6d3b\u6027\u589e\u5f3a\u5b50\u6807\u8bb0\u7ec4\u86cb\u767dH3\u7b2c27\u4f4d\u8d56\u6c28\u9178\u4e59\u9170\u5316\uff08H3K27ac\uff09\u548c\u589e\u5f3a\u5b50\u76f8\u5173RNA\uff08eRNA\uff09\u3002\u901a\u8fc7CRISPR\u4ecb\u5bfc\u7684\u8868\u89c2\u57fa\u56e0\u7ec4\u7f16\u8f91\u6216\u5220\u9664\u5e72\u6270\u8fd9\u7c7b\u975e\u7ecf\u5178\u589e\u5f3a\u5b50\uff0c\u5bfc\u81f4\u9776\u57fa\u56e0\u8868\u8fbe\u6c34\u5e73\u4e0b\u964d\uff0c\u5e76\u4e14\u5728\u4e00\u4e2a\u5b9e\u4f8b\u4e2d\u5bfc\u81f4\u591a\u80fd\u5e72\u7ec6\u80de\u7279\u6027\u4e27\u5931\u3002\u603b\u4e4b\uff0c\u6211\u4eec\u7684\u6570\u636e\u8bc1\u660e\u4e86\u4e00\u7c7b\u57fa\u56e0\u8c03\u63a7\u5143\u4ef6\u5177\u6709\u589e\u5f3a\u5b50\u6d3b\u6027\uff0c\u800c\u8fd9\u7c7b\u5143\u4ef6\u81f3\u4eca\u4ec5\u88ab\u8ba4\u4e3a\u4e0e\u4e2d\u6027\u6216\u975e\u6d3b\u6027\u72b6\u6001\u76f8\u5173\uff0c\u6311\u6218\u4e86\u5f53\u524d\u589e\u5f3a\u5b50\u529f\u80fd\u6a21\u578b\u3002", "authors": ["Cao Yang", "Dovgusha Oleksandr", "Ebrahimi Ayyub", "Cruz Carmela Rieline V", "Bevan Stephen", "Widmer Lukas", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["\u7ea640%\u5177\u6709\u589e\u5f3a\u5b50\u529f\u80fd\u7684\u53ef\u53ca\u67d3\u8272\u8d28\u533a\u57df\u7f3a\u4e4fH3K27ac\u548ceRNA\u7b49\u6d3b\u6027\u589e\u5f3a\u5b50\u7279\u5f81\u3002", "CRISPR\u4ecb\u5bfc\u7684\u8868\u89c2\u57fa\u56e0\u7ec4\u7f16\u8f91\u6216\u5220\u9664\u975e\u7ecf\u5178\u589e\u5f3a\u5b50\u4f1a\u964d\u4f4e\u9776\u57fa\u56e0\u8868\u8fbe\uff0c\u751a\u81f3\u5bfc\u81f4\u591a\u80fd\u6027\u4e27\u5931\u3002", "\u8bc1\u660e\u4e00\u7c7b\u66fe\u88ab\u89c6\u4e3a\u4e2d\u6027\u6216\u975e\u6d3b\u6027\u7684\u8c03\u63a7\u5143\u4ef6\u5177\u6709\u589e\u5f3a\u5b50\u6d3b\u6027\uff0c\u6311\u6218\u73b0\u6709\u589e\u5f3a\u5b50\u529f\u80fd\u6a21\u578b\u3002"], "pmid": "43024730", "pub_date": "2026-Nov-13", "title": "Noncanonical enhancers control gene expression and cell fate in human pluripotent stem cells.", "url": "https://doi.org/10.1126/sciadv.adz3328", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43024730"
+                onclick="toggleFavorite('43024730', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43024730"
+                onclick="toggleDislike('43024730', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.adz3328" target="_blank" rel="noopener noreferrer">Noncanonical enhancers control gene expression and cell fate in human pluripotent stem cells.</a>
+      </h2>
+
+      <p class="paper-authors">Cao Yang &middot; Dovgusha Oleksandr &middot; Ebrahimi Ayyub &middot; Cruz Carmela Rieline V &middot; Bevan Stephen &middot; Widmer Lukas &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43024730', 'zh-43024730')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43024730', 'en-43024730')">中文</button>
+        </div>
+        <div id="en-43024730" class="abstract-text active">Enhancers are key gene regulatory elements that ensure the precise spatiotemporal execution of developmental gene expression programs. However, recent findings indicate that current approaches to identify enhancers may not capture the full repertoire of active enhancers in mammalian genomes. Here, we combine massively parallel enhancer assays with chromatin structure and transcriptome profiling to functionally annotate enhancers genome-wide in human induced pluripotent stem cells. We find that a substantial fraction (∼40%) of accessible chromatin regions with enhancer function lack key features associated with active enhancers, including the active enhancer mark histone H3 lysine-27 acetylation and enhancer-associated RNAs. Perturbation of this class of noncanonical enhancers by CRISPR-mediated epigenome editing or deletion results in decreased levels of target gene expression and, in one instance, loss of pluripotent stem cell characteristics. Collectively, our data demonstrate enhancer activity for a class of gene regulatory elements that had, until now, only been associated with a neutral or inactive status, challenging current models of enhancer function.</div>
+        <div id="zh-43024730" class="abstract-text">增强子是关键基因调控元件，确保发育基因表达程序的精确时空执行。然而，近期发现表明，目前识别增强子的方法可能无法捕获哺乳动物基因组中全部活跃增强子。在此，我们将大规模平行增强子检测与染色质结构和转录组分析相结合，在人类诱导多能干细胞中对全基因组增强子进行功能注释。我们发现，具有增强子功能的可及染色质区域中有相当大比例（约40%）缺乏与活性增强子相关的关键特征，包括活性增强子标记组蛋白H3第27位赖氨酸乙酰化（H3K27ac）和增强子相关RNA（eRNA）。通过CRISPR介导的表观基因组编辑或删除干扰这类非经典增强子，导致靶基因表达水平下降，并且在一个实例中导致多能干细胞特性丧失。总之，我们的数据证明了一类基因调控元件具有增强子活性，而这类元件至今仅被认为与中性或非活性状态相关，挑战了当前增强子功能模型。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>约40%具有增强子功能的可及染色质区域缺乏H3K27ac和eRNA等活性增强子特征。</li>
+          
+          <li>CRISPR介导的表观基因组编辑或删除非经典增强子会降低靶基因表达，甚至导致多能性丧失。</li>
+          
+          <li>证明一类曾被视为中性或非活性的调控元件具有增强子活性，挑战现有增强子功能模型。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.adz3328" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Enhancer Elements, Genetic</span>
+          
+          <span class="kw-tag">Pluripotent Stem Cells</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="43024722"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Many systems of interest exhibit nested emergent layers with their own rules and regularities, and our knowledge about them seems naturally organized around these levels. How do such hierarchical structures arise, and why should observers track these hierarchies so closely? This paper proposes symmetry as an answer to both questions. By combining principles from information theory, group theory, and statistical mechanics, it is shown that dynamical processes that are equivariant with respect to a symmetry group give rise to multiple emergent macroscopic levels arranged according to the algebraic structure of the symmetry. The same symmetries shape the Bayesian beliefs of an observer with only partial access to the system, yielding a matching hierarchy of \"abstract\" beliefs that can be updated autonomously at different levels of resolution. These ideas are illustrated in Hopfield networks, where familiar macroscopic quantities emerge from known symmetries, and in Boolean models of gene regulation, where symmetries are instead found from the dynamics. The computational advantages provided by symmetry are showcased in Ehrenfest diffusion and epidemic modeling, where abstract beliefs enable Bayesian inference over exponentially large state spaces. These results identify symmetry as a sufficient mechanism for hierarchical emergence and-at the same time-for the capacity of abstract beliefs to mirror the systems they track, making feasible inferential problems that would otherwise be intractable.", "abstract_zh": "", "authors": ["Rosas Fernando E"], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": [], "pmid": "43024722", "pub_date": "2026-Nov-13", "title": "Symmetry as a common origin of hierarchical emergence and abstraction.", "url": "https://doi.org/10.1126/sciadv.aeh0773", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43024722"
+                onclick="toggleFavorite('43024722', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43024722"
+                onclick="toggleDislike('43024722', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aeh0773" target="_blank" rel="noopener noreferrer">Symmetry as a common origin of hierarchical emergence and abstraction.</a>
+      </h2>
+
+      <p class="paper-authors">Rosas Fernando E</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43024722', 'zh-43024722')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43024722', 'en-43024722')">中文</button>
+        </div>
+        <div id="en-43024722" class="abstract-text active">Many systems of interest exhibit nested emergent layers with their own rules and regularities, and our knowledge about them seems naturally organized around these levels. How do such hierarchical structures arise, and why should observers track these hierarchies so closely? This paper proposes symmetry as an answer to both questions. By combining principles from information theory, group theory, and statistical mechanics, it is shown that dynamical processes that are equivariant with respect to a symmetry group give rise to multiple emergent macroscopic levels arranged according to the algebraic structure of the symmetry. The same symmetries shape the Bayesian beliefs of an observer with only partial access to the system, yielding a matching hierarchy of "abstract" beliefs that can be updated autonomously at different levels of resolution. These ideas are illustrated in Hopfield networks, where familiar macroscopic quantities emerge from known symmetries, and in Boolean models of gene regulation, where symmetries are instead found from the dynamics. The computational advantages provided by symmetry are showcased in Ehrenfest diffusion and epidemic modeling, where abstract beliefs enable Bayesian inference over exponentially large state spaces. These results identify symmetry as a sufficient mechanism for hierarchical emergence and-at the same time-for the capacity of abstract beliefs to mirror the systems they track, making feasible inferential problems that would otherwise be intractable.</div>
+        <div id="zh-43024722" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aeh0773" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="43024719"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Chromosomal instability (CIN) is an established driver of aneuploidy and cell death. Here, we investigate the role of apoptosis as a barrier against CIN-driven aneuploidy in B lymphocytes. We found that impairment of their spindle assembly checkpoint via deletion of Mitotic Arrest Deficient 2-Like 1 or mutation of Monopolar Spindle 1 kinase curtails B cell survival. A CRISPR screen identified intermediates of mitochondrial apoptosis as critical, which we confirmed in vivo by overexpression of a B cell-restricted BCL2 transgene, outperforming loss of P53. Notably, cell death inhibition by BCL2 was insufficient to cause aneuploidy-driven B cell transformation, while loss of P53 strongly synergized with tumors featuring stochastic aneuploidies. In contrast, high cell death rates rapidly select for specific karyotypes, facilitating aneuploid tumor cell survival in E\u03bc-Myc transgenic mice. Hence, cell death inhibition fails to allow CIN-driven aneuploidies to prevail. In contrast, BCL2-regulated apoptosis selects viable aneuploid tumor karyotypes in the presence of oncogenic MYC, a notion with implications for the clinical use of BCL2-targeting therapies.", "abstract_zh": "...", "authors": ["Weiss Johannes G", "Petermann Paul Y", "Rigato Irene", "Lohm\u00fcller Michael", "Honold Felix", "Schapfl Marina", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["...", "...", "..."], "pmid": "43024719", "pub_date": "2026-Nov-13", "title": "Aneuploidy impairs B cell development but accelerates their MYC-driven transformation.", "url": "https://doi.org/10.1126/sciadv.aef2143", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43024719"
+                onclick="toggleFavorite('43024719', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43024719"
+                onclick="toggleDislike('43024719', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aef2143" target="_blank" rel="noopener noreferrer">Aneuploidy impairs B cell development but accelerates their MYC-driven transformation.</a>
+      </h2>
+
+      <p class="paper-authors">Weiss Johannes G &middot; Petermann Paul Y &middot; Rigato Irene &middot; Lohmüller Michael &middot; Honold Felix &middot; Schapfl Marina &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43024719', 'zh-43024719')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43024719', 'en-43024719')">中文</button>
+        </div>
+        <div id="en-43024719" class="abstract-text active">Chromosomal instability (CIN) is an established driver of aneuploidy and cell death. Here, we investigate the role of apoptosis as a barrier against CIN-driven aneuploidy in B lymphocytes. We found that impairment of their spindle assembly checkpoint via deletion of Mitotic Arrest Deficient 2-Like 1 or mutation of Monopolar Spindle 1 kinase curtails B cell survival. A CRISPR screen identified intermediates of mitochondrial apoptosis as critical, which we confirmed in vivo by overexpression of a B cell-restricted BCL2 transgene, outperforming loss of P53. Notably, cell death inhibition by BCL2 was insufficient to cause aneuploidy-driven B cell transformation, while loss of P53 strongly synergized with tumors featuring stochastic aneuploidies. In contrast, high cell death rates rapidly select for specific karyotypes, facilitating aneuploid tumor cell survival in Eμ-Myc transgenic mice. Hence, cell death inhibition fails to allow CIN-driven aneuploidies to prevail. In contrast, BCL2-regulated apoptosis selects viable aneuploid tumor karyotypes in the presence of oncogenic MYC, a notion with implications for the clinical use of BCL2-targeting therapies.</div>
+        <div id="zh-43024719" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aef2143" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Aneuploidy</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Cell Transformation, Neoplastic</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="43024697"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "How semigamy generates haploids during double fertilization has remained elusive for more than six decades. Here, we identify Gamete Expressed 1 (GEX1) as the gene underlying semigamy and show that it mediates dual-origin haploid induction in cotton. A naturally occurring mutation in GEX1 disrupts normal nuclear membrane fusion during fertilization, resulting in delayed or incomplete karyogamy. Cytological analyses reveal that delayed karyogamy allows the closely apposed but unfused gametic nuclei to undergo independent mitotic divisions, giving rise to maternal haploids, paternal haploids, and chimeric progeny. CRISPR-Cas9-mediated disruption of GEX1 reproduced the characteristic defects in nuclear fusion and enabled both maternal and paternal haploid induction within a single generation. Together, our findings uncover a genetically tractable mechanism underlying semigamy that links nuclear membrane fusion dynamics to haploid formation and establish a versatile strategy for rapidly generating doubled haploids from both parental genomes to accelerate crop breeding.", "abstract_zh": "\u534a\u914d\u751f\u6b96\u5982\u4f55\u5728\u53cc\u53d7\u7cbe\u8fc7\u7a0b\u4e2d\u4ea7\u751f\u5355\u500d\u4f53\uff0c\u516d\u5341\u591a\u5e74\u6765\u4e00\u76f4\u672a\u89e3\u3002\u672c\u7814\u7a76\u9274\u5b9a\u51fa\u914d\u5b50\u8868\u8fbe\u57fa\u56e01\uff08GEX1\uff09\u662f\u534a\u914d\u751f\u6b96\u7684\u9057\u4f20\u57fa\u7840\uff0c\u5e76\u8bc1\u660e\u5176\u5728\u68c9\u82b1\u4e2d\u4ecb\u5bfc\u53cc\u4eb2\u6765\u6e90\u7684\u5355\u500d\u4f53\u8bf1\u5bfc\u3002GEX1 \u4e2d\u7684\u4e00\u4e2a\u5929\u7136\u7a81\u53d8\u7834\u574f\u4e86\u53d7\u7cbe\u8fc7\u7a0b\u4e2d\u7684\u6b63\u5e38\u6838\u819c\u878d\u5408\uff0c\u5bfc\u81f4\u6838\u914d\u5ef6\u8fdf\u6216\u4e0d\u5b8c\u5168\u3002\u7ec6\u80de\u5b66\u5206\u6790\u8868\u660e\uff0c\u5ef6\u8fdf\u7684\u6838\u914d\u4f7f\u7d27\u5bc6\u5e76\u5217\u4f46\u672a\u878d\u5408\u7684\u914d\u5b50\u6838\u80fd\u591f\u8fdb\u884c\u72ec\u7acb\u7684\u6709\u4e1d\u5206\u88c2\uff0c\u4ece\u800c\u4ea7\u751f\u6bcd\u672c\u5355\u500d\u4f53\u3001\u7236\u672c\u5355\u500d\u4f53\u548c\u5d4c\u5408\u540e\u4ee3\u3002CRISPR-Cas9 \u4ecb\u5bfc\u7684 GEX1 \u6572\u9664\u91cd\u73b0\u4e86\u6838\u878d\u5408\u7684\u7279\u5f81\u6027\u7f3a\u9677\uff0c\u5e76\u5728\u5355\u4e2a\u4e16\u4ee3\u5185\u5b9e\u73b0\u4e86\u6bcd\u672c\u548c\u7236\u672c\u5355\u500d\u4f53\u8bf1\u5bfc\u3002\u7efc\u4e0a\uff0c\u672c\u7814\u7a76\u63ed\u793a\u4e86\u4e00\u4e2a\u9057\u4f20\u4e0a\u53ef\u64cd\u4f5c\u7684\u534a\u914d\u751f\u6b96\u673a\u5236\uff0c\u5c06\u6838\u819c\u878d\u5408\u52a8\u6001\u4e0e\u5355\u500d\u4f53\u5f62\u6210\u8054\u7cfb\u8d77\u6765\uff0c\u5e76\u5efa\u7acb\u4e86\u4e00\u79cd\u4ece\u53cc\u4eb2\u57fa\u56e0\u7ec4\u5feb\u901f\u4ea7\u751f\u52a0\u500d\u5355\u500d\u4f53\u7684\u901a\u7528\u7b56\u7565\uff0c\u4ee5\u52a0\u901f\u4f5c\u7269\u80b2\u79cd\u3002", "authors": ["Li Tengyu", "Pan Jingwen", "Li Yan", "Yao Jinbo", "Fang Shengtao", "Cao Zongpeng", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["\u9274\u5b9a GEX1 \u4e3a\u534a\u914d\u751f\u6b96\u57fa\u56e0\uff0c\u5929\u7136\u7a81\u53d8\u7834\u574f\u6838\u819c\u878d\u5408\u5bfc\u81f4\u6838\u914d\u5ef6\u8fdf\u6216\u4e0d\u5b8c\u5168\u3002", "\u5ef6\u8fdf\u6838\u914d\u4f7f\u672a\u878d\u5408\u914d\u5b50\u6838\u72ec\u7acb\u6709\u4e1d\u5206\u88c2\uff0c\u4ea7\u751f\u6bcd\u672c\u3001\u7236\u672c\u5355\u500d\u4f53\u53ca\u5d4c\u5408\u540e\u4ee3\u3002", "CRISPR-Cas9 \u6572\u9664 GEX1 \u91cd\u73b0\u6838\u878d\u5408\u7f3a\u9677\uff0c\u5355\u4e16\u4ee3\u5b9e\u73b0\u53cc\u4eb2\u5355\u500d\u4f53\u8bf1\u5bfc\u3002"], "pmid": "43024697", "pub_date": "2026-Nov-13", "title": "GEX1-mediated semigamy induces both maternal and paternal haploids in cotton.", "url": "https://doi.org/10.1126/sciadv.aei1433", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43024697"
+                onclick="toggleFavorite('43024697', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43024697"
+                onclick="toggleDislike('43024697', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aei1433" target="_blank" rel="noopener noreferrer">GEX1-mediated semigamy induces both maternal and paternal haploids in cotton.</a>
+      </h2>
+
+      <p class="paper-authors">Li Tengyu &middot; Pan Jingwen &middot; Li Yan &middot; Yao Jinbo &middot; Fang Shengtao &middot; Cao Zongpeng &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43024697', 'zh-43024697')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43024697', 'en-43024697')">中文</button>
+        </div>
+        <div id="en-43024697" class="abstract-text active">How semigamy generates haploids during double fertilization has remained elusive for more than six decades. Here, we identify Gamete Expressed 1 (GEX1) as the gene underlying semigamy and show that it mediates dual-origin haploid induction in cotton. A naturally occurring mutation in GEX1 disrupts normal nuclear membrane fusion during fertilization, resulting in delayed or incomplete karyogamy. Cytological analyses reveal that delayed karyogamy allows the closely apposed but unfused gametic nuclei to undergo independent mitotic divisions, giving rise to maternal haploids, paternal haploids, and chimeric progeny. CRISPR-Cas9-mediated disruption of GEX1 reproduced the characteristic defects in nuclear fusion and enabled both maternal and paternal haploid induction within a single generation. Together, our findings uncover a genetically tractable mechanism underlying semigamy that links nuclear membrane fusion dynamics to haploid formation and establish a versatile strategy for rapidly generating doubled haploids from both parental genomes to accelerate crop breeding.</div>
+        <div id="zh-43024697" class="abstract-text">半配生殖如何在双受精过程中产生单倍体，六十多年来一直未解。本研究鉴定出配子表达基因1（GEX1）是半配生殖的遗传基础，并证明其在棉花中介导双亲来源的单倍体诱导。GEX1 中的一个天然突变破坏了受精过程中的正常核膜融合，导致核配延迟或不完全。细胞学分析表明，延迟的核配使紧密并列但未融合的配子核能够进行独立的有丝分裂，从而产生母本单倍体、父本单倍体和嵌合后代。CRISPR-Cas9 介导的 GEX1 敲除重现了核融合的特征性缺陷，并在单个世代内实现了母本和父本单倍体诱导。综上，本研究揭示了一个遗传上可操作的半配生殖机制，将核膜融合动态与单倍体形成联系起来，并建立了一种从双亲基因组快速产生加倍单倍体的通用策略，以加速作物育种。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>鉴定 GEX1 为半配生殖基因，天然突变破坏核膜融合导致核配延迟或不完全。</li>
+          
+          <li>延迟核配使未融合配子核独立有丝分裂，产生母本、父本单倍体及嵌合后代。</li>
+          
+          <li>CRISPR-Cas9 敲除 GEX1 重现核融合缺陷，单世代实现双亲单倍体诱导。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aei1433" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Haploidy</span>
+          
+          <span class="kw-tag">Gossypium</span>
+          
+          <span class="kw-tag">Plant Proteins</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="science"
+             data-pmid="43013649"
+             style="--card-color: #F57C00">
+      <script class="paper-data" type="application/json">{"abstract": "Non-AUG translation contributes to proteome diversity, but its regulatory principles remain unclear. Here, we show that a GCC-rich upstream extension, termed the NAT1 motif, acts as a potent enhancer of near-cognate initiation in mammals. Cell-free and reporter assays revealed that eIF1 and 5MP act as conserved inhibitors of non-AUG initiation across mammals and plants, while the NAT1 motif enables enhanced initiation within this fidelity framework. Mutational analysis identified -6 and\u00a0-7 positions within the GCC repeat as key determinants of motif activity. Genome-wide analyses uncovered evolutionary depletion of NAT1-type non-AUG codons in human 5\u0027UTRs, suggesting purifying selection against excessive initiation. Nevertheless, more than a hundred retained sites are associated with genes involved in cell proliferation and migration, suggesting that regulated non-AUG initiation may contribute to disease-relevant translational programs. The motif\u0027s enrichment within GCC repeats further suggests a mechanistic link to repeat-associated non-AUG translation.", "abstract_zh": "...", "authors": ["Furukawa Haruyuki", "Banerjee Abhineet", "Tidu Antonin", "Bardiya Nirmala", "Ishiguro Susumu", "Singh Chingakham Ranjit", "et al."], "journal": "Sci Adv", "journal_color": "#F57C00", "key_findings": ["...", "...", "..."], "pmid": "43013649", "pub_date": "2026-Nov-13", "title": "Evolutionarily reinforced GC-rich motif enables non-AUG translation in mammals under eIF1/5MP-mediated fidelity control.", "url": "https://doi.org/10.1126/sciadv.aek4290", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #F57C00">Sci Adv</span>
+        <span class="pub-date">2026-Nov-13</span>
+        <button class="fav-btn"
+                data-pmid="43013649"
+                onclick="toggleFavorite('43013649', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43013649"
+                onclick="toggleDislike('43013649', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1126/sciadv.aek4290" target="_blank" rel="noopener noreferrer">Evolutionarily reinforced GC-rich motif enables non-AUG translation in mammals under eIF1/5MP-mediated fidelity control.</a>
+      </h2>
+
+      <p class="paper-authors">Furukawa Haruyuki &middot; Banerjee Abhineet &middot; Tidu Antonin &middot; Bardiya Nirmala &middot; Ishiguro Susumu &middot; Singh Chingakham Ranjit &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43013649', 'zh-43013649')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43013649', 'en-43013649')">中文</button>
+        </div>
+        <div id="en-43013649" class="abstract-text active">Non-AUG translation contributes to proteome diversity, but its regulatory principles remain unclear. Here, we show that a GCC-rich upstream extension, termed the NAT1 motif, acts as a potent enhancer of near-cognate initiation in mammals. Cell-free and reporter assays revealed that eIF1 and 5MP act as conserved inhibitors of non-AUG initiation across mammals and plants, while the NAT1 motif enables enhanced initiation within this fidelity framework. Mutational analysis identified -6 and -7 positions within the GCC repeat as key determinants of motif activity. Genome-wide analyses uncovered evolutionary depletion of NAT1-type non-AUG codons in human 5'UTRs, suggesting purifying selection against excessive initiation. Nevertheless, more than a hundred retained sites are associated with genes involved in cell proliferation and migration, suggesting that regulated non-AUG initiation may contribute to disease-relevant translational programs. The motif's enrichment within GCC repeats further suggests a mechanistic link to repeat-associated non-AUG translation.</div>
+        <div id="zh-43013649" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1126/sciadv.aek4290" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Eukaryotic Initiation Factor-1</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43021549"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Macromolecular self-assembly is a fundamental process in living and engineered systems, producing molecular machines like the ribosome or highly symmetric viral capsids. Thanks to sources like the Protein Data Bank (PDB) and AlphaFold3, the final target complexes are often known, but these static structures do not provide information on the self-assembly process directly. Computational models provide critical tools to study these essential pathways of self-assembly, but substantial coarse graining of assembly subunits is necessary to achieve computational tractability of these relatively slow processes while retaining multi-valency. While local interactions overcome the often-prohibitive enumeration of all possible assembly intermediates, they must ensure global structural constraints are met. We here demonstrate ioNERDSS, a user-friendly Python package that transforms 3D atomic protein structures into coarse-grained (CG) models for immediate simulation with the stochastic reaction-diffusion NERDSS software, converting static structures into time-resolved assembly trajectories. With ioNERDSS, each protein chain is defined by a rigid subunit with discrete interfaces and explicit orientational constraints that enforce a structured assembly. Repeated subunits (such as in viral capsids) are regularized to preserve the target topology across distinct stochastic assembly pathways, supporting assembly of structures with thousands of subunits. We initialize pairwise binding affinities using ML prediction tools, and our default CG models are all constrained by thermodynamic reversibility to reach an equilibrium steady-state. The binding rates and subunit abundances necessary to perform simulations are initialized at default values but represent key variables that users should tune to test hypotheses on assembly pathways or to optimize models to experimental datasets. Benchmarking on over 50,000 PDB structures shows the majority of CG models will stochastically assemble into target structures. The ioNERDSS Python library links with open-source tools to facilitate fast and user-friendly structure validation and analysis of thermodynamic, kinetic, and nonequilibrium drivers of macromolecular self-assembly.", "abstract_zh": "\u5927\u5206\u5b50\u81ea\u7ec4\u88c5\u662f\u751f\u547d\u7cfb\u7edf\u548c\u5de5\u7a0b\u7cfb\u7edf\u4e2d\u7684\u57fa\u672c\u8fc7\u7a0b\uff0c\u53ef\u4ea7\u751f\u6838\u7cd6\u4f53\u6216\u9ad8\u5ea6\u5bf9\u79f0\u7684\u75c5\u6bd2\u8863\u58f3\u7b49\u5206\u5b50\u673a\u5668\u3002\u501f\u52a9\u86cb\u767d\u8d28\u6570\u636e\u94f6\u884c\uff08PDB\uff09\u548c AlphaFold3 \u7b49\u6765\u6e90\uff0c\u6700\u7ec8\u76ee\u6807\u590d\u5408\u7269\u901a\u5e38\u662f\u5df2\u77e5\u7684\uff0c\u4f46\u8fd9\u4e9b\u9759\u6001\u7ed3\u6784\u5e76\u4e0d\u80fd\u76f4\u63a5\u63d0\u4f9b\u81ea\u7ec4\u88c5\u8fc7\u7a0b\u7684\u4fe1\u606f\u3002\u8ba1\u7b97\u6a21\u578b\u4e3a\u7814\u7a76\u8fd9\u4e9b\u5173\u952e\u7684\u81ea\u7ec4\u88c5\u9014\u5f84\u63d0\u4f9b\u4e86\u91cd\u8981\u5de5\u5177\uff0c\u4f46\u9700\u8981\u5bf9\u7ec4\u88c5\u4e9a\u57fa\u8fdb\u884c\u5927\u91cf\u7c97\u7c92\u5316\uff0c\u624d\u80fd\u5728\u4fdd\u6301\u591a\u4ef7\u6027\u7684\u540c\u65f6\uff0c\u4f7f\u8fd9\u4e9b\u76f8\u5bf9\u7f13\u6162\u7684\u8fc7\u7a0b\u5728\u8ba1\u7b97\u4e0a\u53ef\u5904\u7406\u3002\u5c40\u90e8\u76f8\u4e92\u4f5c\u7528\u867d\u7136\u907f\u514d\u4e86\u901a\u5e38\u96be\u4ee5\u5b9e\u73b0\u7684\u5bf9\u6240\u6709\u53ef\u80fd\u7ec4\u88c5\u4e2d\u95f4\u4f53\u7684\u679a\u4e3e\uff0c\u4f46\u5fc5\u987b\u786e\u4fdd\u6ee1\u8db3\u5168\u5c40\u7ed3\u6784\u7ea6\u675f\u3002\u6211\u4eec\u5728\u6b64\u5c55\u793a\u4e86 ioNERDSS\uff0c\u4e00\u4e2a\u7528\u6237\u53cb\u597d\u7684 Python \u5305\uff0c\u5b83\u5c06\u4e09\u7ef4\u539f\u5b50\u86cb\u767d\u8d28\u7ed3\u6784\u8f6c\u6362\u4e3a\u7c97\u7c92\u5316\uff08CG\uff09\u6a21\u578b\uff0c\u4ee5\u4fbf\u7528\u968f\u673a\u53cd\u5e94-\u6269\u6563\u8f6f\u4ef6 NERDSS \u7acb\u5373\u8fdb\u884c\u6a21\u62df\uff0c\u4ece\u800c\u5c06\u9759\u6001\u7ed3\u6784\u8f6c\u5316\u4e3a\u65f6\u95f4\u5206\u8fa8\u7684\u7ec4\u88c5\u8f68\u8ff9\u3002\u5229\u7528 ioNERDSS\uff0c\u6bcf\u6761\u86cb\u767d\u8d28\u94fe\u88ab\u5b9a\u4e49\u4e3a\u4e00\u4e2a\u521a\u6027\u4e9a\u57fa\uff0c\u5177\u6709\u79bb\u6563\u754c\u9762\u548c\u660e\u786e\u7684\u53d6\u5411\u7ea6\u675f\uff0c\u4ee5\u5f3a\u5236\u5b9e\u73b0\u6709\u5e8f\u7ec4\u88c5\u3002\u91cd\u590d\u4e9a\u57fa\uff08\u5982\u75c5\u6bd2\u8863\u58f3\u4e2d\u7684\u4e9a\u57fa\uff09\u7ecf\u8fc7\u6b63\u5219\u5316\uff0c\u4ee5\u5728\u4e0d\u540c\u7684\u968f\u673a\u7ec4\u88c5\u9014\u5f84\u4e2d\u4fdd\u6301\u76ee\u6807\u62d3\u6251\uff0c\u652f\u6301\u5305\u542b\u6570\u5343\u4e2a\u4e9a\u57fa\u7684\u7ed3\u6784\u7ec4\u88c5\u3002\u6211\u4eec\u4f7f\u7528\u673a\u5668\u5b66\u4e60\u9884\u6d4b\u5de5\u5177\u521d\u59cb\u5316\u6210\u5bf9\u7ed3\u5408\u4eb2\u548c\u529b\uff0c\u9ed8\u8ba4\u7684 CG \u6a21\u578b\u5747\u53d7\u70ed\u529b\u5b66\u53ef\u9006\u6027\u7ea6\u675f\uff0c\u4ee5\u5230\u8fbe\u5e73\u8861\u7a33\u6001\u3002\u6267\u884c\u6a21\u62df\u6240\u9700\u7684\u7ed3\u5408\u901f\u7387\u548c\u4e9a\u57fa\u4e30\u5ea6\u4ee5\u9ed8\u8ba4\u503c\u521d\u59cb\u5316\uff0c\u4f46\u5b83\u4eec\u662f\u7528\u6237\u5e94\u8c03\u8282\u7684\u5173\u952e\u53d8\u91cf\uff0c\u4ee5\u68c0\u9a8c\u7ec4\u88c5\u9014\u5f84\u5047\u8bf4\u6216\u6839\u636e\u5b9e\u9a8c\u6570\u636e\u96c6\u4f18\u5316\u6a21\u578b\u3002\u5bf9\u8d85\u8fc7 50,000 \u4e2a PDB \u7ed3\u6784\u7684\u57fa\u51c6\u6d4b\u8bd5\u8868\u660e\uff0c\u5927\u591a\u6570 CG \u6a21\u578b\u80fd\u591f\u968f\u673a\u7ec4\u88c5\u6210\u76ee\u6807\u7ed3\u6784\u3002ioNERDSS Python \u5e93\u4e0e\u5f00\u6e90\u5de5\u5177\u8fde\u63a5\uff0c\u4fbf\u4e8e\u5feb\u901f\u3001\u7528\u6237\u53cb\u597d\u5730\u8fdb\u884c\u7ed3\u6784\u9a8c\u8bc1\uff0c\u5e76\u5206\u6790\u5927\u5206\u5b50\u81ea\u7ec4\u88c5\u7684\u70ed\u529b\u5b66\u3001\u52a8\u529b\u5b66\u548c\u975e\u5e73\u8861\u9a71\u52a8\u56e0\u7d20\u3002", "authors": ["Ying Yue Moon", "Sang Mankun", "Au Gabriel", "Chhibber Smriti", "Du Yufeng", "Fischer Jonathan A", "et al."], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u5f00\u53d1ioNERDSS\uff0c\u5c06\u9759\u6001\u539f\u5b50\u7ed3\u6784\u81ea\u52a8\u8f6c\u5316\u4e3a\u53ef\u6a21\u62df\u7684\u7c97\u7c92\u5316\u6a21\u578b\uff0c\u5b9e\u73b0\u65f6\u95f4\u5206\u8fa8\u81ea\u7ec4\u88c5\u8f68\u8ff9\u3002", "\u5229\u7528\u79bb\u6563\u754c\u9762\u3001\u53d6\u5411\u7ea6\u675f\u548c\u4e9a\u57fa\u6b63\u5219\u5316\uff0c\u5728\u968f\u673a\u7ec4\u88c5\u4e2d\u4fdd\u6301\u76ee\u6807\u62d3\u6251\uff0c\u652f\u6301\u6570\u5343\u4e9a\u57fa\u590d\u5408\u7269\u3002", "\u57fa\u51c6\u6d4b\u8bd5\u8d855\u4e07\u4e2aPDB\u7ed3\u6784\uff0c\u591a\u6570CG\u6a21\u578b\u80fd\u7ec4\u88c5\u6210\u76ee\u6807\u7ed3\u6784\uff0c\u5e76\u53ef\u5206\u6790\u70ed\u529b\u5b66\u548c\u52a8\u529b\u5b66\u9a71\u52a8\u56e0\u7d20\u3002"], "pmid": "43021549", "pub_date": "2026-Nov-12", "title": "Transforming macromolecular structures into simulations of self-assembly with ioNERDSS.", "url": "https://doi.org/10.1016/j.bpj.2026.11.011", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Nov-12</span>
+        <button class="fav-btn"
+                data-pmid="43021549"
+                onclick="toggleFavorite('43021549', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43021549"
+                onclick="toggleDislike('43021549', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.011" target="_blank" rel="noopener noreferrer">Transforming macromolecular structures into simulations of self-assembly with ioNERDSS.</a>
+      </h2>
+
+      <p class="paper-authors">Ying Yue Moon &middot; Sang Mankun &middot; Au Gabriel &middot; Chhibber Smriti &middot; Du Yufeng &middot; Fischer Jonathan A &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43021549', 'zh-43021549')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43021549', 'en-43021549')">中文</button>
+        </div>
+        <div id="en-43021549" class="abstract-text active">Macromolecular self-assembly is a fundamental process in living and engineered systems, producing molecular machines like the ribosome or highly symmetric viral capsids. Thanks to sources like the Protein Data Bank (PDB) and AlphaFold3, the final target complexes are often known, but these static structures do not provide information on the self-assembly process directly. Computational models provide critical tools to study these essential pathways of self-assembly, but substantial coarse graining of assembly subunits is necessary to achieve computational tractability of these relatively slow processes while retaining multi-valency. While local interactions overcome the often-prohibitive enumeration of all possible assembly intermediates, they must ensure global structural constraints are met. We here demonstrate ioNERDSS, a user-friendly Python package that transforms 3D atomic protein structures into coarse-grained (CG) models for immediate simulation with the stochastic reaction-diffusion NERDSS software, converting static structures into time-resolved assembly trajectories. With ioNERDSS, each protein chain is defined by a rigid subunit with discrete interfaces and explicit orientational constraints that enforce a structured assembly. Repeated subunits (such as in viral capsids) are regularized to preserve the target topology across distinct stochastic assembly pathways, supporting assembly of structures with thousands of subunits. We initialize pairwise binding affinities using ML prediction tools, and our default CG models are all constrained by thermodynamic reversibility to reach an equilibrium steady-state. The binding rates and subunit abundances necessary to perform simulations are initialized at default values but represent key variables that users should tune to test hypotheses on assembly pathways or to optimize models to experimental datasets. Benchmarking on over 50,000 PDB structures shows the majority of CG models will stochastically assemble into target structures. The ioNERDSS Python library links with open-source tools to facilitate fast and user-friendly structure validation and analysis of thermodynamic, kinetic, and nonequilibrium drivers of macromolecular self-assembly.</div>
+        <div id="zh-43021549" class="abstract-text">大分子自组装是生命系统和工程系统中的基本过程，可产生核糖体或高度对称的病毒衣壳等分子机器。借助蛋白质数据银行（PDB）和 AlphaFold3 等来源，最终目标复合物通常是已知的，但这些静态结构并不能直接提供自组装过程的信息。计算模型为研究这些关键的自组装途径提供了重要工具，但需要对组装亚基进行大量粗粒化，才能在保持多价性的同时，使这些相对缓慢的过程在计算上可处理。局部相互作用虽然避免了通常难以实现的对所有可能组装中间体的枚举，但必须确保满足全局结构约束。我们在此展示了 ioNERDSS，一个用户友好的 Python 包，它将三维原子蛋白质结构转换为粗粒化（CG）模型，以便用随机反应-扩散软件 NERDSS 立即进行模拟，从而将静态结构转化为时间分辨的组装轨迹。利用 ioNERDSS，每条蛋白质链被定义为一个刚性亚基，具有离散界面和明确的取向约束，以强制实现有序组装。重复亚基（如病毒衣壳中的亚基）经过正则化，以在不同的随机组装途径中保持目标拓扑，支持包含数千个亚基的结构组装。我们使用机器学习预测工具初始化成对结合亲和力，默认的 CG 模型均受热力学可逆性约束，以到达平衡稳态。执行模拟所需的结合速率和亚基丰度以默认值初始化，但它们是用户应调节的关键变量，以检验组装途径假说或根据实验数据集优化模型。对超过 50,000 个 PDB 结构的基准测试表明，大多数 CG 模型能够随机组装成目标结构。ioNERDSS Python 库与开源工具连接，便于快速、用户友好地进行结构验证，并分析大分子自组装的热力学、动力学和非平衡驱动因素。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>开发ioNERDSS，将静态原子结构自动转化为可模拟的粗粒化模型，实现时间分辨自组装轨迹。</li>
+          
+          <li>利用离散界面、取向约束和亚基正则化，在随机组装中保持目标拓扑，支持数千亚基复合物。</li>
+          
+          <li>基准测试超5万个PDB结构，多数CG模型能组装成目标结构，并可分析热力学和动力学驱动因素。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.011" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="43020031"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "Human basal ganglia (BG) neurons and inhibitory interneurons originate in the ganglionic eminences (GEs), transient structures in the ventral prenatal brain. This study delineates the specification and maturation of GEs and GE-derived neurons using single-nucleus methyl-3C sequencing (snm3C-seq), spatial transcriptomics, and single-molecule chromatin + RNA imaging, and we found heterogeneous temporal progression across GE subregions. Spiny projection neurons (SPNs), the principal cells of the BG, acquire distinct subtypes through synchronized 3D-epigenomic remodeling, in contrast to the asynchronous maturation of other neuron types. Oligodendrocyte differentiation involves a transient short-range chromatin state during infancy, showing that the short-range and long-range chromatin conformations previously linked to terminal glial and neuronal fates can also be transient. The temporal cortex matured epigenomically faster than other cortical regions during this period. Lastly, SPNs were enriched in genetic risk for neuropsychiatric disease. Our study extends findings on unique 3D-epigenomic dynamics during human brain development.", "abstract_zh": "", "authors": ["Heffel Matthew G", "Xu Heng", "Pastor-Alonso Oier", "Li Xinzhe", "Baig Mohammad S", "Ghoor Rayyan Irfan", "et al."], "journal": "Cell", "journal_color": "#0D47A1", "key_findings": [], "pmid": "43020031", "pub_date": "2026-Nov-12", "title": "A single-cell and spatial 3D multi-omic atlas of developing human basal ganglia.", "url": "https://doi.org/10.1016/j.cell.2026.10.008", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell</span>
+        <span class="pub-date">2026-Nov-12</span>
+        <button class="fav-btn"
+                data-pmid="43020031"
+                onclick="toggleFavorite('43020031', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43020031"
+                onclick="toggleDislike('43020031', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.008" target="_blank" rel="noopener noreferrer">A single-cell and spatial 3D multi-omic atlas of developing human basal ganglia.</a>
+      </h2>
+
+      <p class="paper-authors">Heffel Matthew G &middot; Xu Heng &middot; Pastor-Alonso Oier &middot; Li Xinzhe &middot; Baig Mohammad S &middot; Ghoor Rayyan Irfan &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43020031', 'zh-43020031')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43020031', 'en-43020031')">中文</button>
+        </div>
+        <div id="en-43020031" class="abstract-text active">Human basal ganglia (BG) neurons and inhibitory interneurons originate in the ganglionic eminences (GEs), transient structures in the ventral prenatal brain. This study delineates the specification and maturation of GEs and GE-derived neurons using single-nucleus methyl-3C sequencing (snm3C-seq), spatial transcriptomics, and single-molecule chromatin + RNA imaging, and we found heterogeneous temporal progression across GE subregions. Spiny projection neurons (SPNs), the principal cells of the BG, acquire distinct subtypes through synchronized 3D-epigenomic remodeling, in contrast to the asynchronous maturation of other neuron types. Oligodendrocyte differentiation involves a transient short-range chromatin state during infancy, showing that the short-range and long-range chromatin conformations previously linked to terminal glial and neuronal fates can also be transient. The temporal cortex matured epigenomically faster than other cortical regions during this period. Lastly, SPNs were enriched in genetic risk for neuropsychiatric disease. Our study extends findings on unique 3D-epigenomic dynamics during human brain development.</div>
+        <div id="zh-43020031" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.008" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Basal Ganglia</span>
+          
+          <span class="kw-tag">Ganglionic Eminence</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="43020027"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "Mammalian brain cell identity is shaped by intrinsic factors and external context. We present a spatially resolved transcriptomic and gene regulatory atlas of cell types across all subcortical regions in a primate, the common marmoset. Dense sampling and cross-species integration revealed spatially precise neuronal assemblies, including ones in complex midbrain and diencephalic structures. Chromatin accessibility and transcriptional identity are spatially tuned within and across subcortical structures; spatial gradients within hippocampal subfields are orchestrated by graded transcription factors acting through graded enhancers. The primate-expanded thalamic \u03b3-aminobutyric acid (GABAergic) population shares transcriptional and regulatory syntax with conserved midbrain populations, reflecting an evolutionary adaptation compared with rodents. Similar regional expression across cell types can arise by distinct regulatory architectures, as observed in telencephalic astrocytes and neurons. Conversely, distant cell types can share regulatory programs despite divergent identities: striatal GABAergic spiny projection neurons and telencephalic glutamatergic neurons share a postsynaptic regulatory program despite divergent lineages, regions, and neurotransmitter identities.", "abstract_zh": "...", "authors": ["Dan Shu", "Turner Meghan A", "DeBerardine Michael", "Caceres Lakme", "Nieto-Caballero Victor E", "Schembri Jessica", "et al."], "journal": "Cell", "journal_color": "#0D47A1", "key_findings": ["...", "...", "..."], "pmid": "43020027", "pub_date": "2026-Nov-12", "title": "Spatial and regulatory organization of cell identity across the primate subcortex.", "url": "https://doi.org/10.1016/j.cell.2026.10.007", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell</span>
+        <span class="pub-date">2026-Nov-12</span>
+        <button class="fav-btn"
+                data-pmid="43020027"
+                onclick="toggleFavorite('43020027', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43020027"
+                onclick="toggleDislike('43020027', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.007" target="_blank" rel="noopener noreferrer">Spatial and regulatory organization of cell identity across the primate subcortex.</a>
+      </h2>
+
+      <p class="paper-authors">Dan Shu &middot; Turner Meghan A &middot; DeBerardine Michael &middot; Caceres Lakme &middot; Nieto-Caballero Victor E &middot; Schembri Jessica &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43020027', 'zh-43020027')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43020027', 'en-43020027')">中文</button>
+        </div>
+        <div id="en-43020027" class="abstract-text active">Mammalian brain cell identity is shaped by intrinsic factors and external context. We present a spatially resolved transcriptomic and gene regulatory atlas of cell types across all subcortical regions in a primate, the common marmoset. Dense sampling and cross-species integration revealed spatially precise neuronal assemblies, including ones in complex midbrain and diencephalic structures. Chromatin accessibility and transcriptional identity are spatially tuned within and across subcortical structures; spatial gradients within hippocampal subfields are orchestrated by graded transcription factors acting through graded enhancers. The primate-expanded thalamic γ-aminobutyric acid (GABAergic) population shares transcriptional and regulatory syntax with conserved midbrain populations, reflecting an evolutionary adaptation compared with rodents. Similar regional expression across cell types can arise by distinct regulatory architectures, as observed in telencephalic astrocytes and neurons. Conversely, distant cell types can share regulatory programs despite divergent identities: striatal GABAergic spiny projection neurons and telencephalic glutamatergic neurons share a postsynaptic regulatory program despite divergent lineages, regions, and neurotransmitter identities.</div>
+        <div id="zh-43020027" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.007" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Neurons</span>
+          
+          <span class="kw-tag">Callithrix</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="43020019"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "The basal ganglia (BG) are conserved brain regions essential for motor control, learning, emotion, and cognition and are implicated in neurological and psychiatric disease, yet a unified cross-species taxonomy of BG cell types is lacking. We present a multiomic consensus atlas of 1.8 million nuclei from humans, macaques, and marmosets spanning eight BG structures, integrating gene expression, open chromatin, and spatial profiling. Alignment across species and to mouse and human whole-brain atlases identifies 61 homologous cell types conserved over 76 million years. Dorsal-ventral spatial identity is more conserved than D1/D2 receptor or striosome/matrix identity, and striatum (STR) D2 SMYD2-HTR7 spiny projection neurons have distinct molecular, electrophysiological, and morphological features. Cis-regulatory analysis reveals conserved sequence grammars that encode cell identity and inform viral targeting, and cell-type-resolved mapping localizes psychiatric and neurodegenerative risk to specific BG cell populations. This work provides a foundational resource for BG evolution, function, and disease.", "abstract_zh": "\u5c06\u82f1\u6587\u6458\u8981\u7ffb\u8bd1\u4e3a\u51c6\u786e\u3001\u6d41\u7545\u7684\u4e2d\u6587\u7b80\u4f53", "authors": ["Johansen Nelson J", "Fu Yuanyuan", "Schmitz Matthew", "Dubuc Alma", "Kempynck Niklas", "Wirthlin Morgan", "et al."], "journal": "Cell", "journal_color": "#0D47A1", "key_findings": ["\u6838\u5fc3\u53d1\u73b01...", "\u6838\u5fc3\u53d1\u73b02...", "\u6838\u5fc3\u53d1\u73b03..."], "pmid": "43020019", "pub_date": "2026-Nov-12", "title": "Cross-species multiomic atlas of the primate basal ganglia.", "url": "https://doi.org/10.1016/j.cell.2026.10.012", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell</span>
+        <span class="pub-date">2026-Nov-12</span>
+        <button class="fav-btn"
+                data-pmid="43020019"
+                onclick="toggleFavorite('43020019', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43020019"
+                onclick="toggleDislike('43020019', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.012" target="_blank" rel="noopener noreferrer">Cross-species multiomic atlas of the primate basal ganglia.</a>
+      </h2>
+
+      <p class="paper-authors">Johansen Nelson J &middot; Fu Yuanyuan &middot; Schmitz Matthew &middot; Dubuc Alma &middot; Kempynck Niklas &middot; Wirthlin Morgan &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43020019', 'zh-43020019')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43020019', 'en-43020019')">中文</button>
+        </div>
+        <div id="en-43020019" class="abstract-text active">The basal ganglia (BG) are conserved brain regions essential for motor control, learning, emotion, and cognition and are implicated in neurological and psychiatric disease, yet a unified cross-species taxonomy of BG cell types is lacking. We present a multiomic consensus atlas of 1.8 million nuclei from humans, macaques, and marmosets spanning eight BG structures, integrating gene expression, open chromatin, and spatial profiling. Alignment across species and to mouse and human whole-brain atlases identifies 61 homologous cell types conserved over 76 million years. Dorsal-ventral spatial identity is more conserved than D1/D2 receptor or striosome/matrix identity, and striatum (STR) D2 SMYD2-HTR7 spiny projection neurons have distinct molecular, electrophysiological, and morphological features. Cis-regulatory analysis reveals conserved sequence grammars that encode cell identity and inform viral targeting, and cell-type-resolved mapping localizes psychiatric and neurodegenerative risk to specific BG cell populations. This work provides a foundational resource for BG evolution, function, and disease.</div>
+        <div id="zh-43020019" class="abstract-text">将英文摘要翻译为准确、流畅的中文简体</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>核心发现1...</li>
+          
+          <li>核心发现2...</li>
+          
+          <li>核心发现3...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.012" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Basal Ganglia</span>
+          
+          <span class="kw-tag">Humans</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="cell"
+             data-pmid="43020016"
+             style="--card-color: #0D47A1">
+      <script class="paper-data" type="application/json">{"abstract": "In this issue of Cell, two single-cell multiomic atlases jointly profile transcription and histone modifications across different regions of the adult human brain, revealing cell-type-specific regulatory landscapes, developmental epigenetic memory, and improved interpretation of neurological variants. These studies establish a framework for understanding human brain cell identity, evolution, and pathology.", "abstract_zh": "\u5728\u672c\u671f\u300a\u7ec6\u80de\u300b\u4e2d\uff0c\u4e24\u9879\u5355\u7ec6\u80de\u591a\u7ec4\u5b66\u56fe\u8c31\u8054\u5408\u63cf\u7ed8\u4e86\u6210\u4eba\u5927\u8111\u4e0d\u540c\u533a\u57df\u7684\u8f6c\u5f55\u548c\u7ec4\u86cb\u767d\u4fee\u9970\uff0c\u63ed\u793a\u4e86\u7ec6\u80de\u7c7b\u578b\u7279\u5f02\u7684\u8c03\u63a7\u666f\u89c2\u3001\u53d1\u80b2\u8868\u89c2\u9057\u4f20\u8bb0\u5fc6\uff0c\u5e76\u6539\u8fdb\u4e86\u5bf9\u795e\u7ecf\u7cfb\u7edf\u76f8\u5173\u53d8\u5f02\u7684\u89e3\u8bfb\u3002\u8fd9\u4e9b\u7814\u7a76\u4e3a\u7406\u89e3\u4eba\u7c7b\u8111\u7ec6\u80de\u8eab\u4efd\u3001\u8fdb\u5316\u548c\u75c5\u7406\u5960\u5b9a\u4e86\u6846\u67b6\u3002", "authors": ["Zaghi Mattia", "Dang Yonglong", "Castelo-Branco Gon\u00e7alo"], "journal": "Cell", "journal_color": "#0D47A1", "key_findings": ["\u4e24\u9879\u5355\u7ec6\u80de\u591a\u7ec4\u5b66\u56fe\u8c31\u8054\u5408\u5206\u6790\u6210\u4eba\u5927\u8111\u4e0d\u540c\u533a\u57df\u7684\u8f6c\u5f55\u4e0e\u7ec4\u86cb\u767d\u4fee\u9970", "\u63ed\u793a\u7ec6\u80de\u7c7b\u578b\u7279\u5f02\u7684\u8c03\u63a7\u666f\u89c2\u548c\u53d1\u80b2\u8868\u89c2\u9057\u4f20\u8bb0\u5fc6", "\u6539\u8fdb\u795e\u7ecf\u7cfb\u7edf\u76f8\u5173\u53d8\u5f02\u7684\u89e3\u8bfb\uff0c\u5efa\u7acb\u7406\u89e3\u8111\u7ec6\u80de\u8eab\u4efd\u3001\u8fdb\u5316\u4e0e\u75c5\u7406\u7684\u6846\u67b6"], "pmid": "43020016", "pub_date": "2026-Nov-12", "title": "Stepping (hi)stones: Charting a single-cell multiomic path toward understanding the human brain.", "url": "https://doi.org/10.1016/j.cell.2026.10.020", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #0D47A1">Cell</span>
+        <span class="pub-date">2026-Nov-12</span>
+        <button class="fav-btn"
+                data-pmid="43020016"
+                onclick="toggleFavorite('43020016', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43020016"
+                onclick="toggleDislike('43020016', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.020" target="_blank" rel="noopener noreferrer">Stepping (hi)stones: Charting a single-cell multiomic path toward understanding the human brain.</a>
+      </h2>
+
+      <p class="paper-authors">Zaghi Mattia &middot; Dang Yonglong &middot; Castelo-Branco Gonçalo</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43020016', 'zh-43020016')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43020016', 'en-43020016')">中文</button>
+        </div>
+        <div id="en-43020016" class="abstract-text active">In this issue of Cell, two single-cell multiomic atlases jointly profile transcription and histone modifications across different regions of the adult human brain, revealing cell-type-specific regulatory landscapes, developmental epigenetic memory, and improved interpretation of neurological variants. These studies establish a framework for understanding human brain cell identity, evolution, and pathology.</div>
+        <div id="zh-43020016" class="abstract-text">在本期《细胞》中，两项单细胞多组学图谱联合描绘了成人大脑不同区域的转录和组蛋白修饰，揭示了细胞类型特异的调控景观、发育表观遗传记忆，并改进了对神经系统相关变异的解读。这些研究为理解人类脑细胞身份、进化和病理奠定了框架。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>两项单细胞多组学图谱联合分析成人大脑不同区域的转录与组蛋白修饰</li>
+          
+          <li>揭示细胞类型特异的调控景观和发育表观遗传记忆</li>
+          
+          <li>改进神经系统相关变异的解读，建立理解脑细胞身份、进化与病理的框架</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.cell.2026.10.020" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Humans</span>
+          
+          <span class="kw-tag">Brain</span>
+          
+          <span class="kw-tag">Multiomics</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="43015472"
+             style="--card-color: #1B5E20">
+      <script class="paper-data" type="application/json">{"abstract": "Breast cancer, the most diagnosed cancer among women, is stratified by gene expression patterns into luminal and basal-like subtypes, and the latter is associated with worse prognosis1-3. Recent advances in single-cell technologies have underscored the presence of intratumour heterogeneity, which poses substantial challenges in cancer treatment and achieving long-term disease-free survival4-7. Here we extensively profile epigenetic heterogeneity in a cohort of treatment-naive human luminal tumours, which were obtained directly after surgical resection. By applying a single-cell epigenetic approach based on cytometry by time-of-flight, we identify a recurrent subpopulation of basal-like cells in luminal tumours with a conserved epigenetic signature across patients. These basal-like cells, also identified by deconvolution of whole-genome DNA methylation patterns, are characterized by high expression of aggressive oncogenic traits and downregulation of hormone receptor signalling. Direct comparison of single-cell proteomic and genomic profiling of monomethylation and trimethylation of histone\u20093 on lysine\u20094 revealed that these marks are key features associated with loss of luminal identity. Finally, we highlight the potential of concomitant single-molecule profiling of histone modifications on cell-free nucleosomes in blood as an epigenetic liquid biopsy approach for early diagnosis of breast cancer. Moreover, the epigenetic basal signature measured in blood is linked to prognosis, which enables the identification of patients at increased risk for disease relapse.", "abstract_zh": "...", "authors": ["Furth Noa", "Riemenschneider Christina", "Arieli Yishai", "Avni Matan", "Povolotski Michael-Yakov", "Yung Hadas", "et al."], "journal": "Nature", "journal_color": "#1B5E20", "key_findings": ["...", "...", "..."], "pmid": "43015472", "pub_date": "2026-Nov-11", "title": "Epigenetic heterogeneity in breast tumours informs diagnosis and prognosis.", "url": "https://doi.org/10.1038/s41586-026-11230-y", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #1B5E20">Nature</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43015472"
+                onclick="toggleFavorite('43015472', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43015472"
+                onclick="toggleDislike('43015472', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41586-026-11230-y" target="_blank" rel="noopener noreferrer">Epigenetic heterogeneity in breast tumours informs diagnosis and prognosis.</a>
+      </h2>
+
+      <p class="paper-authors">Furth Noa &middot; Riemenschneider Christina &middot; Arieli Yishai &middot; Avni Matan &middot; Povolotski Michael-Yakov &middot; Yung Hadas &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43015472', 'zh-43015472')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43015472', 'en-43015472')">中文</button>
+        </div>
+        <div id="en-43015472" class="abstract-text active">Breast cancer, the most diagnosed cancer among women, is stratified by gene expression patterns into luminal and basal-like subtypes, and the latter is associated with worse prognosis1-3. Recent advances in single-cell technologies have underscored the presence of intratumour heterogeneity, which poses substantial challenges in cancer treatment and achieving long-term disease-free survival4-7. Here we extensively profile epigenetic heterogeneity in a cohort of treatment-naive human luminal tumours, which were obtained directly after surgical resection. By applying a single-cell epigenetic approach based on cytometry by time-of-flight, we identify a recurrent subpopulation of basal-like cells in luminal tumours with a conserved epigenetic signature across patients. These basal-like cells, also identified by deconvolution of whole-genome DNA methylation patterns, are characterized by high expression of aggressive oncogenic traits and downregulation of hormone receptor signalling. Direct comparison of single-cell proteomic and genomic profiling of monomethylation and trimethylation of histone 3 on lysine 4 revealed that these marks are key features associated with loss of luminal identity. Finally, we highlight the potential of concomitant single-molecule profiling of histone modifications on cell-free nucleosomes in blood as an epigenetic liquid biopsy approach for early diagnosis of breast cancer. Moreover, the epigenetic basal signature measured in blood is linked to prognosis, which enables the identification of patients at increased risk for disease relapse.</div>
+        <div id="zh-43015472" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41586-026-11230-y" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="43015470"
+             style="--card-color: #1B5E20">
+      <script class="paper-data" type="application/json">{"abstract": "Eukaryotic genomes are exposed to numerous sources of DNA damage that impede replication. Only a decade ago, repriming by the primase-polymerase PRIMPOL was identified as a pathway that enables cells to tolerate DNA damage1-4. However, the molecular mechanism that underlies repriming remains poorly understood, and it is unclear how PRIMPOL is precisely targeted to stalled forks, where along single-stranded\u00a0DNA PRIMPOL binds and how PRIMPOL is regulated to minimize error-prone DNA synthesis. Here, to dissect the molecular basis of repriming, we perform real-time single-molecule imaging in nuclear extracts that recapitulate genome maintenance. We directly visualize how stalled forks restart through repriming. We show that PRIMPOL is recruited to stalled forks through an interaction with the replicative helicase CDC45-MCM2-7-GINS (CMG). This facilitates primer handover from PRIMPOL to the high-fidelity polymerase \u03b5, minimizing mutagenic DNA synthesis. At near-physiological concentrations, PRIMPOL reprimes leading strands in a CMG-dependent manner and polymerase \u03b5 extends those primers. This primary mode of repriming does not require DNA damage checkpoint signalling. PRIMPOL overexpression and checkpoint activation promote a secondary mode of repriming, whereby PRIMPOL restarts DNA synthesis far from CMG and polymerase \u03b4 extends those primers. Our data reveal a simple yet effective mechanism that directs PRIMPOL\u0027s activity to stalled forks awaiting restart, and suggest a strategy to inhibit the repriming pathway.", "abstract_zh": "...", "authors": ["Park Jinho", "Lynch Luke D", "Blanco-Romero Elena", "Masdemont-Maestro Roberto", "M\u00e9ndez Juan", "Chistol Gheorghe"], "journal": "Nature", "journal_color": "#1B5E20", "key_findings": ["...", "...", "..."], "pmid": "43015470", "pub_date": "2026-Nov-11", "title": "The molecular basis of replication fork restart via repriming by PRIMPOL.", "url": "https://doi.org/10.1038/s41586-026-11276-y", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #1B5E20">Nature</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43015470"
+                onclick="toggleFavorite('43015470', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43015470"
+                onclick="toggleDislike('43015470', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41586-026-11276-y" target="_blank" rel="noopener noreferrer">The molecular basis of replication fork restart via repriming by PRIMPOL.</a>
+      </h2>
+
+      <p class="paper-authors">Park Jinho &middot; Lynch Luke D &middot; Blanco-Romero Elena &middot; Masdemont-Maestro Roberto &middot; Méndez Juan &middot; Chistol Gheorghe</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43015470', 'zh-43015470')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43015470', 'en-43015470')">中文</button>
+        </div>
+        <div id="en-43015470" class="abstract-text active">Eukaryotic genomes are exposed to numerous sources of DNA damage that impede replication. Only a decade ago, repriming by the primase-polymerase PRIMPOL was identified as a pathway that enables cells to tolerate DNA damage1-4. However, the molecular mechanism that underlies repriming remains poorly understood, and it is unclear how PRIMPOL is precisely targeted to stalled forks, where along single-stranded DNA PRIMPOL binds and how PRIMPOL is regulated to minimize error-prone DNA synthesis. Here, to dissect the molecular basis of repriming, we perform real-time single-molecule imaging in nuclear extracts that recapitulate genome maintenance. We directly visualize how stalled forks restart through repriming. We show that PRIMPOL is recruited to stalled forks through an interaction with the replicative helicase CDC45-MCM2-7-GINS (CMG). This facilitates primer handover from PRIMPOL to the high-fidelity polymerase ε, minimizing mutagenic DNA synthesis. At near-physiological concentrations, PRIMPOL reprimes leading strands in a CMG-dependent manner and polymerase ε extends those primers. This primary mode of repriming does not require DNA damage checkpoint signalling. PRIMPOL overexpression and checkpoint activation promote a secondary mode of repriming, whereby PRIMPOL restarts DNA synthesis far from CMG and polymerase δ extends those primers. Our data reveal a simple yet effective mechanism that directs PRIMPOL's activity to stalled forks awaiting restart, and suggest a strategy to inhibit the repriming pathway.</div>
+        <div id="zh-43015470" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41586-026-11276-y" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="nature"
+             data-pmid="43015465"
+             style="--card-color: #1B5E20">
+      <script class="paper-data" type="application/json">{"abstract": "Immunoglobulin A (IgA) is the most abundant antibody isotype produced by mammals, and has a specialized role in mucosal homeostasis1. IgA is constantly secreted into the intestinal lumen and binds to commensal microorganisms to regulate their colonization and function2,3, with unclear implications for health. IgA deficiency is common in humans, but difficult to study, because of its complex aetiology and comorbidities4-8. Here we use genetically and environmentally controlled mice to show that various models of IgA deficiency result in increased susceptibility to several models of endogenous colorectal cancer. Cellular and molecular analyses revealed that, in the absence of IgA, colonic epithelial cells induce antibacterial factors and accelerate cell cycling in response to the microbiota. Oral treatment with IgA was sufficient to reduce steady-state proliferation and protect mice from tumours; however, this function was due to the structure of the antibody rather than to binding specificity. In a reductionist culture system, IgA directly suppressed epithelial growth. Co-immunoprecipitation mass spectrometry and targeted CRISPR screening identified DMBT1 as an IgA-binding epithelial surface protein that is required for IgA-mediated suppression of proliferation. Together, IgA and DMBT1 tune the normal cycling of absorptive colonocyte progenitors. In IgA-knockout mice, deleting the transmembrane and cytoplasmic signalling portions of DMBT1 was sufficient to reverse both the increased epithelial cell proliferation and the increased tumour susceptibility seen in these mice. These experiments establish a homeostatic function for IgA in tempering physiological epithelial responses to the microbiota to maintain mucosal health.", "abstract_zh": "\u514d\u75ab\u7403\u86cb\u767dA\uff08IgA\uff09\u662f\u54fa\u4e73\u52a8\u7269\u4ea7\u751f\u7684\u6700\u4e30\u5bcc\u7684\u6297\u4f53\u540c\u79cd\u578b\uff0c\u5728\u9ecf\u819c\u7a33\u6001\u4e2d\u5177\u6709\u4e13\u95e8\u4f5c\u7528\u3002IgA\u6301\u7eed\u5206\u6ccc\u5230\u80a0\u8154\u4e2d\uff0c\u5e76\u4e0e\u5171\u751f\u5fae\u751f\u7269\u7ed3\u5408\u4ee5\u8c03\u8282\u5176\u5b9a\u690d\u548c\u529f\u80fd\uff0c\u4f46\u5176\u5bf9\u5065\u5eb7\u7684\u5f71\u54cd\u5c1a\u4e0d\u6e05\u695a\u3002IgA\u7f3a\u4e4f\u5728\u4eba\u7c7b\u4e2d\u5f88\u5e38\u89c1\uff0c\u4f46\u7531\u4e8e\u5176\u590d\u6742\u7684\u75c5\u56e0\u548c\u5408\u5e76\u75c7\u800c\u96be\u4ee5\u7814\u7a76\u3002\u5728\u8fd9\u91cc\uff0c\u6211\u4eec\u4f7f\u7528\u9057\u4f20\u548c\u73af\u5883\u63a7\u5236\u7684\u5c0f\u9f20\u8868\u660e\uff0c\u591a\u79cdIgA\u7f3a\u4e4f\u6a21\u578b\u5bfc\u81f4\u5bf9\u5185\u6e90\u6027\u7ed3\u76f4\u80a0\u764c\u7684\u6613\u611f\u6027\u589e\u52a0\u3002\u7ec6\u80de\u548c\u5206\u5b50\u5206\u6790\u63ed\u793a\uff0c\u5728\u7f3a\u4e4fIgA\u7684\u60c5\u51b5\u4e0b\uff0c\u7ed3\u80a0\u4e0a\u76ae\u7ec6\u80de\u4f1a\u8bf1\u5bfc\u6297\u83cc\u56e0\u5b50\u5e76\u52a0\u901f\u7ec6\u80de\u5468\u671f\uff0c\u4ee5\u54cd\u5e94\u5fae\u751f\u7269\u7fa4\u3002\u53e3\u670dIgA\u8db3\u4ee5\u964d\u4f4e\u7a33\u6001\u589e\u6b96\u5e76\u4fdd\u62a4\u5c0f\u9f20\u514d\u53d7\u80bf\u7624\u4fb5\u5bb3\uff1b\u7136\u800c\uff0c\u8be5\u529f\u80fd\u6e90\u4e8e\u6297\u4f53\u7684\u7ed3\u6784\u800c\u975e\u7ed3\u5408\u7279\u5f02\u6027\u3002\u5728\u7b80\u5316\u57f9\u517b\u7cfb\u7edf\u4e2d\uff0cIgA\u76f4\u63a5\u6291\u5236\u4e0a\u76ae\u751f\u957f\u3002\u514d\u75ab\u5171\u6c89\u6dc0\u8d28\u8c31\u548c\u9776\u5411CRISPR\u7b5b\u9009\u9274\u5b9a\u51faDMBT1\u662f\u4e00\u79cd\u4e0eIgA\u7ed3\u5408\u7684\u4e0a\u76ae\u8868\u9762\u86cb\u767d\uff0c\u662fIgA\u4ecb\u5bfc\u7684\u589e\u6b96\u6291\u5236\u6240\u5fc5\u9700\u7684\u3002\u603b\u4e4b\uff0cIgA\u548cDMBT1\u8c03\u8282\u5438\u6536\u6027\u7ed3\u80a0\u7ec6\u80de\u7956\u7ec6\u80de\u7684\u6b63\u5e38\u5468\u671f\u3002\u5728IgA\u6572\u9664\u5c0f\u9f20\u4e2d\uff0c\u5220\u9664DMBT1\u7684\u8de8\u819c\u548c\u80de\u8d28\u4fe1\u53f7\u4f20\u5bfc\u90e8\u5206\u8db3\u4ee5\u9006\u8f6c\u8fd9\u4e9b\u5c0f\u9f20\u4e2d\u4e0a\u76ae\u7ec6\u80de\u589e\u6b96\u589e\u52a0\u548c\u80bf\u7624\u6613\u611f\u6027\u589e\u52a0\u3002\u8fd9\u4e9b\u5b9e\u9a8c\u786e\u7acb\u4e86IgA\u5728\u7f13\u548c\u4e0a\u76ae\u5bf9\u5fae\u751f\u7269\u7fa4\u7684\u751f\u7406\u53cd\u5e94\u4ee5\u7ef4\u6301\u9ecf\u819c\u5065\u5eb7\u65b9\u9762\u7684\u7a33\u6001\u529f\u80fd\u3002", "authors": ["Donaldson Gregory P", "Lima Dos Reis Gabriella", "Saad Marwa", "Wichmann Christopher", "Mamede Izabela", "Chen Guo", "et al."], "journal": "Nature", "journal_color": "#1B5E20", "key_findings": ["IgA\u7f3a\u4e4f\u589e\u52a0\u5c0f\u9f20\u5bf9\u5185\u6e90\u6027\u7ed3\u76f4\u80a0\u764c\u7684\u6613\u611f\u6027\u3002", "IgA\u901a\u8fc7\u6297\u4f53\u7ed3\u6784\u76f4\u63a5\u6291\u5236\u7ed3\u80a0\u4e0a\u76ae\u589e\u6b96\uff0c\u4e0d\u4f9d\u8d56\u6297\u539f\u7ed3\u5408\u7279\u5f02\u6027\u3002", "DMBT1\u662fIgA\u7ed3\u5408\u7684\u4e0a\u76ae\u8868\u9762\u86cb\u767d\uff0c\u5220\u9664\u5176\u4fe1\u53f7\u57df\u53ef\u9006\u8f6cIgA\u7f3a\u5931\u5c0f\u9f20\u7684\u8fc7\u5ea6\u589e\u6b96\u548c\u80bf\u7624\u6613\u611f\u3002"], "pmid": "43015465", "pub_date": "2026-Nov-11", "title": "Suppression of epithelial proliferation and tumorigenesis by IgA.", "url": "https://doi.org/10.1038/s41586-026-11264-2", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #1B5E20">Nature</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43015465"
+                onclick="toggleFavorite('43015465', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43015465"
+                onclick="toggleDislike('43015465', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1038/s41586-026-11264-2" target="_blank" rel="noopener noreferrer">Suppression of epithelial proliferation and tumorigenesis by IgA.</a>
+      </h2>
+
+      <p class="paper-authors">Donaldson Gregory P &middot; Lima Dos Reis Gabriella &middot; Saad Marwa &middot; Wichmann Christopher &middot; Mamede Izabela &middot; Chen Guo &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43015465', 'zh-43015465')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43015465', 'en-43015465')">中文</button>
+        </div>
+        <div id="en-43015465" class="abstract-text active">Immunoglobulin A (IgA) is the most abundant antibody isotype produced by mammals, and has a specialized role in mucosal homeostasis1. IgA is constantly secreted into the intestinal lumen and binds to commensal microorganisms to regulate their colonization and function2,3, with unclear implications for health. IgA deficiency is common in humans, but difficult to study, because of its complex aetiology and comorbidities4-8. Here we use genetically and environmentally controlled mice to show that various models of IgA deficiency result in increased susceptibility to several models of endogenous colorectal cancer. Cellular and molecular analyses revealed that, in the absence of IgA, colonic epithelial cells induce antibacterial factors and accelerate cell cycling in response to the microbiota. Oral treatment with IgA was sufficient to reduce steady-state proliferation and protect mice from tumours; however, this function was due to the structure of the antibody rather than to binding specificity. In a reductionist culture system, IgA directly suppressed epithelial growth. Co-immunoprecipitation mass spectrometry and targeted CRISPR screening identified DMBT1 as an IgA-binding epithelial surface protein that is required for IgA-mediated suppression of proliferation. Together, IgA and DMBT1 tune the normal cycling of absorptive colonocyte progenitors. In IgA-knockout mice, deleting the transmembrane and cytoplasmic signalling portions of DMBT1 was sufficient to reverse both the increased epithelial cell proliferation and the increased tumour susceptibility seen in these mice. These experiments establish a homeostatic function for IgA in tempering physiological epithelial responses to the microbiota to maintain mucosal health.</div>
+        <div id="zh-43015465" class="abstract-text">免疫球蛋白A（IgA）是哺乳动物产生的最丰富的抗体同种型，在黏膜稳态中具有专门作用。IgA持续分泌到肠腔中，并与共生微生物结合以调节其定植和功能，但其对健康的影响尚不清楚。IgA缺乏在人类中很常见，但由于其复杂的病因和合并症而难以研究。在这里，我们使用遗传和环境控制的小鼠表明，多种IgA缺乏模型导致对内源性结直肠癌的易感性增加。细胞和分子分析揭示，在缺乏IgA的情况下，结肠上皮细胞会诱导抗菌因子并加速细胞周期，以响应微生物群。口服IgA足以降低稳态增殖并保护小鼠免受肿瘤侵害；然而，该功能源于抗体的结构而非结合特异性。在简化培养系统中，IgA直接抑制上皮生长。免疫共沉淀质谱和靶向CRISPR筛选鉴定出DMBT1是一种与IgA结合的上皮表面蛋白，是IgA介导的增殖抑制所必需的。总之，IgA和DMBT1调节吸收性结肠细胞祖细胞的正常周期。在IgA敲除小鼠中，删除DMBT1的跨膜和胞质信号传导部分足以逆转这些小鼠中上皮细胞增殖增加和肿瘤易感性增加。这些实验确立了IgA在缓和上皮对微生物群的生理反应以维持黏膜健康方面的稳态功能。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>IgA缺乏增加小鼠对内源性结直肠癌的易感性。</li>
+          
+          <li>IgA通过抗体结构直接抑制结肠上皮增殖，不依赖抗原结合特异性。</li>
+          
+          <li>DMBT1是IgA结合的上皮表面蛋白，删除其信号域可逆转IgA缺失小鼠的过度增殖和肿瘤易感。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1038/s41586-026-11264-2" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43014306"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Mucociliary clearance (MCC) is a primary defense mechanism of the respiratory system, driven by the coordinated beating of motile cilia and the nonlinear viscoelastic properties of airway mucus within the airway surface liquid (ASL). Impairment of ciliary function, such as in HYDIN-related primary ciliary dyskinesia (PCD), severely compromises mucus transport and leads to chronic respiratory disease. In this study, we developed a three-dimensional, experimentally informed computational model of a representative human nasal ASL segment to quantify MCC efficiency under healthy and HYDIN conditions. Ciliary beat patterns were obtained from high-speed video microscopy of cultured nasal epithelial cells and converted into continuous analytical waveforms for numerical implementation. Mucus rheological properties were characterized from the same samples using differential dynamic microscopy: storage and loss moduli were measured, and the shear-rate-dependent viscosity was estimated from the resulting complex viscosity via the Cox-Merz approximation; both were fitted with multimode viscoelastic constitutive models. These experimentally derived kinematic and rheological inputs were integrated into the governing equations of ASL flow to resolve the spatiotemporal velocity field and net mucus transport. The simulations show that healthy cilia generate strong streamwise flow and coherent mucus transport, whereas HYDIN cilia exhibit reduced beat amplitude and impaired recovery-stroke bending, resulting in substantially lower streamwise velocity and an approximately 13-fold reduction in mean ASL transport velocity. Cross-condition simulations indicate that this reduction is predominantly driven by altered ciliary kinematics, while differences in mucus rheology have a comparatively smaller effect. This study provides one of the first fully three-dimensional, experimentally informed computational comparisons of healthy and HYDIN-related MCC. The proposed framework provides a physiologically informed platform for investigating mucociliary dysfunction and may support future studies of inhaled particle transport and drug delivery following incorporation of appropriate particle transport, deposition, and drug-mucus interaction physics.", "abstract_zh": "...", "authors": ["Sedaghat Mohammadhadi", "Anagnostopoulou Pinelopi", "Nawroth Janna C", "M\u00fcller Loretta", "Ling Feng", "Pukaluk Anna", "et al."], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["...", "...", "..."], "pmid": "43014306", "pub_date": "2026-Nov-11", "title": "Multilayer hydrodynamic modeling of the airway surface liquid reveals impaired transport in HYDIN-related primary ciliary dyskinesia.", "url": "https://doi.org/10.1016/j.bpj.2026.10.017", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43014306"
+                onclick="toggleFavorite('43014306', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43014306"
+                onclick="toggleDislike('43014306', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.10.017" target="_blank" rel="noopener noreferrer">Multilayer hydrodynamic modeling of the airway surface liquid reveals impaired transport in HYDIN-related primary ciliary dyskinesia.</a>
+      </h2>
+
+      <p class="paper-authors">Sedaghat Mohammadhadi &middot; Anagnostopoulou Pinelopi &middot; Nawroth Janna C &middot; Müller Loretta &middot; Ling Feng &middot; Pukaluk Anna &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43014306', 'zh-43014306')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43014306', 'en-43014306')">中文</button>
+        </div>
+        <div id="en-43014306" class="abstract-text active">Mucociliary clearance (MCC) is a primary defense mechanism of the respiratory system, driven by the coordinated beating of motile cilia and the nonlinear viscoelastic properties of airway mucus within the airway surface liquid (ASL). Impairment of ciliary function, such as in HYDIN-related primary ciliary dyskinesia (PCD), severely compromises mucus transport and leads to chronic respiratory disease. In this study, we developed a three-dimensional, experimentally informed computational model of a representative human nasal ASL segment to quantify MCC efficiency under healthy and HYDIN conditions. Ciliary beat patterns were obtained from high-speed video microscopy of cultured nasal epithelial cells and converted into continuous analytical waveforms for numerical implementation. Mucus rheological properties were characterized from the same samples using differential dynamic microscopy: storage and loss moduli were measured, and the shear-rate-dependent viscosity was estimated from the resulting complex viscosity via the Cox-Merz approximation; both were fitted with multimode viscoelastic constitutive models. These experimentally derived kinematic and rheological inputs were integrated into the governing equations of ASL flow to resolve the spatiotemporal velocity field and net mucus transport. The simulations show that healthy cilia generate strong streamwise flow and coherent mucus transport, whereas HYDIN cilia exhibit reduced beat amplitude and impaired recovery-stroke bending, resulting in substantially lower streamwise velocity and an approximately 13-fold reduction in mean ASL transport velocity. Cross-condition simulations indicate that this reduction is predominantly driven by altered ciliary kinematics, while differences in mucus rheology have a comparatively smaller effect. This study provides one of the first fully three-dimensional, experimentally informed computational comparisons of healthy and HYDIN-related MCC. The proposed framework provides a physiologically informed platform for investigating mucociliary dysfunction and may support future studies of inhaled particle transport and drug delivery following incorporation of appropriate particle transport, deposition, and drug-mucus interaction physics.</div>
+        <div id="zh-43014306" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.10.017" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43013695"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Single-cell RNA sequencing (scRNA-seq) has established that gene expression is driven by stochastic transcriptional bursting. However, inferring burst dynamics from static scRNA-seq snapshots is fundamentally constrained by parameter unidentifiability and model topology mismatch. Here, we propose PhysInfer, an unsupervised framework that integrates a physics-constrained neural network with adaptive model selection and parameter decoupling. A physics-informed loss function, combining stationary-distribution likelihood with zero-count anchoring, reparameterizes the optimization from unidentifiable microscopic rates to an interpretable macroscopic burst-quantity representation of burst size and burst frequency, thereby providing an interpretable parameterization for assessing practical recoverability in static data. Validation on synthetic data with known ground-truth parameters confirms high inference accuracy in low-to-medium activation regimes and shows that recovery of BS and productive BF becomes increasingly condition-dependent as the ON-state probability approaches saturation; under different recovery criteria, the condition-specific upper Pon limit for simultaneously recovering BS and productive BF varies with cell number and capture efficiency. Applied to a mouse embryonic fibroblast (MEF) dataset, PhysInfer reconstructs a transcriptional dynamic manifold across the 2,137-gene secondary BIC analysis set, showing cross-gene variation in fitted burst frequency and burst size. A model-specific stationary likelihood combined with zero-count anchoring improves robustness to zero-heavy observations. The adaptive topology module further identifies a distinct subset of genes with stable support for an effective sequential 3-state representation, revealing distributional structure beyond that captured by standard 2-state fitting. PhysInfer thus provides a robust, topology-adaptive, and interpretable solution for characterizing transcriptional kinetic patterns from static single-cell transcriptomic snapshots.", "abstract_zh": "", "authors": ["Zeng Xiaodong", "Zhang Jingwen", "Li Shan", "Wang Haohua"], "journal": "PLoS Comput Biol", "journal_color": "#607D8B", "key_findings": [], "pmid": "43013695", "pub_date": "2026-Nov-11", "title": "PhysInfer: A physics-constrained neural network for adaptive inference of transcriptional bursting from single-cell RNA-seq.", "url": "https://doi.org/10.1371/journal.pcbi.1014904", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Comput Biol</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43013695"
+                onclick="toggleFavorite('43013695', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43013695"
+                onclick="toggleDislike('43013695', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014904" target="_blank" rel="noopener noreferrer">PhysInfer: A physics-constrained neural network for adaptive inference of transcriptional bursting from single-cell RNA-seq.</a>
+      </h2>
+
+      <p class="paper-authors">Zeng Xiaodong &middot; Zhang Jingwen &middot; Li Shan &middot; Wang Haohua</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43013695', 'zh-43013695')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43013695', 'en-43013695')">中文</button>
+        </div>
+        <div id="en-43013695" class="abstract-text active">Single-cell RNA sequencing (scRNA-seq) has established that gene expression is driven by stochastic transcriptional bursting. However, inferring burst dynamics from static scRNA-seq snapshots is fundamentally constrained by parameter unidentifiability and model topology mismatch. Here, we propose PhysInfer, an unsupervised framework that integrates a physics-constrained neural network with adaptive model selection and parameter decoupling. A physics-informed loss function, combining stationary-distribution likelihood with zero-count anchoring, reparameterizes the optimization from unidentifiable microscopic rates to an interpretable macroscopic burst-quantity representation of burst size and burst frequency, thereby providing an interpretable parameterization for assessing practical recoverability in static data. Validation on synthetic data with known ground-truth parameters confirms high inference accuracy in low-to-medium activation regimes and shows that recovery of BS and productive BF becomes increasingly condition-dependent as the ON-state probability approaches saturation; under different recovery criteria, the condition-specific upper Pon limit for simultaneously recovering BS and productive BF varies with cell number and capture efficiency. Applied to a mouse embryonic fibroblast (MEF) dataset, PhysInfer reconstructs a transcriptional dynamic manifold across the 2,137-gene secondary BIC analysis set, showing cross-gene variation in fitted burst frequency and burst size. A model-specific stationary likelihood combined with zero-count anchoring improves robustness to zero-heavy observations. The adaptive topology module further identifies a distinct subset of genes with stable support for an effective sequential 3-state representation, revealing distributional structure beyond that captured by standard 2-state fitting. PhysInfer thus provides a robust, topology-adaptive, and interpretable solution for characterizing transcriptional kinetic patterns from static single-cell transcriptomic snapshots.</div>
+        <div id="zh-43013695" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pcbi.1014904" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43013686"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Pigs and chickens are not only the most important livestock species for global food production but also serve as key model organisms in various research disciplines. The pig is widely used in translational research due to its anatomical and physiological similarity to humans, providing valuable insights into immunology, metabolism, and disease mechanisms. In contrast, the chicken has become an essential model for studies related to poultry health, animal welfare, and developmental biology. Its externally developing embryo offers exceptional accessibility for experimental manipulation. Recent advances in genome editing technologies, particularly CRISPR/Cas9, have further expanded the potential of these species for functional genomic studies, although the efficient delivery of such tools remains a major challenge. Here, we overcome this delivery limitation by using virus-like particles (VLPs). We evaluated VLPs as delivery vehicles for genome engineering tools in porcine and avian cultures, two key livestock species at the human-animal interface. VLP-mediated delivery enabled efficient Cre recombination and high CRISPR/Cas9 editing rates in porcine cells, organoids, and oocytes, particularly when multiplexed. In chickens, VLPs supported robust Cre recombination and Cas9-mediated editing in cell culture, tracheal organ cultures, and in ovo. Reporter VLPs and dCas9 VLPs further demonstrated the versatility of this platform across porcine and avian systems. Together, these findings establish VLPs as an efficient and time-saving strategy for gene editing in livestock cultures across in vitro, ex vivo and in ovo systems, with potential future applications for animal health, agricultural productivity, and translational One Health research.", "abstract_zh": "...", "authors": ["Pauli Theresa M", "von Heyl Theresa", "Rieblinger Beate", "Schleibinger Sabrina Teresa", "Liang Wei", "Schmauser Antonia", "et al."], "journal": "PLoS Biol", "journal_color": "#607D8B", "key_findings": ["...", "...", "..."], "pmid": "43013686", "pub_date": "2026-Nov-11", "title": "Virus-like particles enable highly efficient gene editing across porcine and avian in vitro, ex vivo, and in ovo models.", "url": "https://doi.org/10.1371/journal.pbio.3004105", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Biol</span>
+        <span class="pub-date">2026-Nov-11</span>
+        <button class="fav-btn"
+                data-pmid="43013686"
+                onclick="toggleFavorite('43013686', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43013686"
+                onclick="toggleDislike('43013686', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pbio.3004105" target="_blank" rel="noopener noreferrer">Virus-like particles enable highly efficient gene editing across porcine and avian in vitro, ex vivo, and in ovo models.</a>
+      </h2>
+
+      <p class="paper-authors">Pauli Theresa M &middot; von Heyl Theresa &middot; Rieblinger Beate &middot; Schleibinger Sabrina Teresa &middot; Liang Wei &middot; Schmauser Antonia &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43013686', 'zh-43013686')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43013686', 'en-43013686')">中文</button>
+        </div>
+        <div id="en-43013686" class="abstract-text active">Pigs and chickens are not only the most important livestock species for global food production but also serve as key model organisms in various research disciplines. The pig is widely used in translational research due to its anatomical and physiological similarity to humans, providing valuable insights into immunology, metabolism, and disease mechanisms. In contrast, the chicken has become an essential model for studies related to poultry health, animal welfare, and developmental biology. Its externally developing embryo offers exceptional accessibility for experimental manipulation. Recent advances in genome editing technologies, particularly CRISPR/Cas9, have further expanded the potential of these species for functional genomic studies, although the efficient delivery of such tools remains a major challenge. Here, we overcome this delivery limitation by using virus-like particles (VLPs). We evaluated VLPs as delivery vehicles for genome engineering tools in porcine and avian cultures, two key livestock species at the human-animal interface. VLP-mediated delivery enabled efficient Cre recombination and high CRISPR/Cas9 editing rates in porcine cells, organoids, and oocytes, particularly when multiplexed. In chickens, VLPs supported robust Cre recombination and Cas9-mediated editing in cell culture, tracheal organ cultures, and in ovo. Reporter VLPs and dCas9 VLPs further demonstrated the versatility of this platform across porcine and avian systems. Together, these findings establish VLPs as an efficient and time-saving strategy for gene editing in livestock cultures across in vitro, ex vivo and in ovo systems, with potential future applications for animal health, agricultural productivity, and translational One Health research.</div>
+        <div id="zh-43013686" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pbio.3004105" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43010679"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Cells moving on one-dimensional lanes exhibit a large variety of coexisting morphodynamic states. MDA-MB-231 cells can show steady or oscillating length while moving, or they can be stationary with steady or oscillating length. Some moving cells exhibit only oscillations of the back protrusion, and some oscillating protrusions at the front and back. The latter state has not been reproduced by any biophysical model, yet. We present a biophysical model for one-dimensional cell motion, which reproduces the variety of motion characteristics observed in experiments. It describes the motion of the body, the front and the back protrusion of a cell, and is based on the force balances at the protrusions edges, protrusion interaction by membrane tension, and the noisy clutch of retrograde flow friction. Integrin signaling controls drag and friction coefficients. Oscillatory morphodynamics arise from stick-slip transitions of the clutch mechanism. Additionally, our model formulates the idea that integrin in nascent adhesions activates Rac, which increases the F-actin network extension rate. This amplification of the polymerization rate at the front protrusion gives rise to moving states with two oscillating protrusions. The increase of the polymerization rate accelerates retrograde flow, making disengagement of the clutch at the front more likely. Therefore, repeated pulling of the back protrusion more significantly affects the motion of the front protrusion. Front oscillations are thus induced by back oscillations as a result of mechanical protrusion interaction. The refined model reproduces all morphodynamic states of one-dimensional cell motion observed in our experiments on MDA-MB-231 cells.", "abstract_zh": "\u5728\u4e00\u7ef4\u6cf3\u9053\u4e0a\u8fd0\u52a8\u7684\u7ec6\u80de\u8868\u73b0\u51fa\u591a\u79cd\u5171\u5b58\u7684\u5f62\u6001\u52a8\u529b\u5b66\u72b6\u6001\u3002MDA-MB-231 \u7ec6\u80de\u5728\u8fd0\u52a8\u65f6\u53ef\u8868\u73b0\u51fa\u7a33\u5b9a\u6216\u632f\u8361\u7684\u957f\u5ea6\uff0c\u4e5f\u53ef\u9759\u6b62\u5e76\u5177\u6709\u7a33\u5b9a\u6216\u632f\u8361\u7684\u957f\u5ea6\u3002\u4e00\u4e9b\u8fd0\u52a8\u7ec6\u80de\u4ec5\u8868\u73b0\u51fa\u540e\u90e8\u7a81\u8d77\u7684\u632f\u8361\uff0c\u4e00\u4e9b\u5219\u5728\u524d\u90e8\u548c\u540e\u90e8\u5747\u51fa\u73b0\u7a81\u8d77\u632f\u8361\u3002\u540e\u4e00\u79cd\u72b6\u6001\u5c1a\u672a\u88ab\u4efb\u4f55\u751f\u7269\u7269\u7406\u6a21\u578b\u590d\u73b0\u3002\u6211\u4eec\u63d0\u51fa\u4e86\u4e00\u4e2a\u4e00\u7ef4\u7ec6\u80de\u8fd0\u52a8\u7684\u751f\u7269\u7269\u7406\u6a21\u578b\uff0c\u53ef\u590d\u73b0\u5b9e\u9a8c\u4e2d\u89c2\u5bdf\u5230\u7684\u591a\u79cd\u8fd0\u52a8\u7279\u5f81\u3002\u8be5\u6a21\u578b\u63cf\u8ff0\u7ec6\u80de\u4f53\u3001\u524d\u90e8\u548c\u540e\u90e8\u7a81\u8d77\u7684\u8fd0\u52a8\uff0c\u57fa\u4e8e\u7a81\u8d77\u8fb9\u7f18\u5904\u7684\u529b\u5e73\u8861\u3001\u819c\u5f20\u529b\u4ecb\u5bfc\u7684\u7a81\u8d77\u76f8\u4e92\u4f5c\u7528\u4ee5\u53ca\u9006\u884c\u6d41\u52a8\u6469\u64e6\u7684\u566a\u58f0\u79bb\u5408\u5668\u3002\u6574\u5408\u7d20\u4fe1\u53f7\u4f20\u5bfc\u63a7\u5236\u62d6\u66f3\u548c\u6469\u64e6\u7cfb\u6570\u3002\u632f\u8361\u5f62\u6001\u52a8\u529b\u5b66\u6e90\u4e8e\u79bb\u5408\u5668\u673a\u5236\u7684\u7c98\u6ed1\u8f6c\u53d8\u3002\u6b64\u5916\uff0c\u6211\u4eec\u7684\u6a21\u578b\u63d0\u51fa\uff0c\u65b0\u751f\u9ecf\u9644\u4e2d\u7684\u6574\u5408\u7d20\u6fc0\u6d3b Rac\uff0c\u4ece\u800c\u589e\u52a0 F-\u808c\u52a8\u86cb\u767d\u7f51\u7edc\u5ef6\u4f38\u901f\u7387\u3002\u524d\u90e8\u7a81\u8d77\u805a\u5408\u901f\u7387\u7684\u8fd9\u79cd\u653e\u5927\u4ea7\u751f\u4e86\u5177\u6709\u4e24\u4e2a\u632f\u8361\u7a81\u8d77\u7684\u8fd0\u52a8\u72b6\u6001\u3002\u805a\u5408\u901f\u7387\u7684\u589e\u52a0\u52a0\u5feb\u9006\u884c\u6d41\u52a8\uff0c\u4f7f\u524d\u90e8\u79bb\u5408\u5668\u7684\u8131\u79bb\u66f4\u53ef\u80fd\u53d1\u751f\u3002\u56e0\u6b64\uff0c\u540e\u90e8\u7a81\u8d77\u7684\u53cd\u590d\u7275\u62c9\u66f4\u663e\u8457\u5730\u5f71\u54cd\u524d\u90e8\u7a81\u8d77\u7684\u8fd0\u52a8\u3002\u524d\u90e8\u632f\u8361\u56e0\u6b64\u7531\u540e\u90e8\u632f\u8361\u901a\u8fc7\u7a81\u8d77\u95f4\u7684\u673a\u68b0\u76f8\u4e92\u4f5c\u7528\u8bf1\u5bfc\u3002\u8be5\u7cbe\u5316\u6a21\u578b\u590d\u73b0\u4e86\u6211\u4eec\u5728 MDA-MB-231 \u7ec6\u80de\u5b9e\u9a8c\u4e2d\u89c2\u5bdf\u5230\u7684\u4e00\u7ef4\u7ec6\u80de\u8fd0\u52a8\u7684\u6240\u6709\u5f62\u6001\u52a8\u529b\u5b66\u72b6\u6001\u3002", "authors": ["Eberhard Rainer Marcel", "R\u00e4dler Joachim Oskar", "Falcke Martin"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u5f00\u53d1\u4e00\u7ef4\u7ec6\u80de\u8fd0\u52a8\u751f\u7269\u7269\u7406\u6a21\u578b\uff0c\u53ef\u590d\u73b0MDA-MB-231\u7ec6\u80de\u591a\u79cd\u5f62\u6001\u52a8\u529b\u5b66\u72b6\u6001\u3002", "\u6a21\u578b\u63d0\u51fa\u65b0\u751f\u9ecf\u9644\u4e2d\u6574\u5408\u7d20\u6fc0\u6d3bRac\u3001\u589e\u52a0F-\u808c\u52a8\u86cb\u767d\u7f51\u7edc\u5ef6\u4f38\uff0c\u5f62\u6210\u6b63\u53cd\u9988\uff0c\u4ea7\u751f\u524d\u540e\u53cc\u632f\u8361\u3002", "\u540e\u90e8\u7a81\u8d77\u632f\u8361\u901a\u8fc7\u673a\u68b0\u76f8\u4e92\u4f5c\u7528\u8bf1\u5bfc\u524d\u90e8\u632f\u8361\uff0c\u5e76\u589e\u52a0\u524d\u90e8\u79bb\u5408\u5668\u8131\u79bb\u6982\u7387\u3002"], "pmid": "43010679", "pub_date": "2026-Nov-10", "title": "Front protrusion oscillations indicate positive feedback from protrusion to F-actin network extension in MDA-MB-231 cells, a modeling study.", "url": "https://doi.org/10.1016/j.bpj.2026.11.007", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Nov-10</span>
+        <button class="fav-btn"
+                data-pmid="43010679"
+                onclick="toggleFavorite('43010679', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43010679"
+                onclick="toggleDislike('43010679', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.007" target="_blank" rel="noopener noreferrer">Front protrusion oscillations indicate positive feedback from protrusion to F-actin network extension in MDA-MB-231 cells, a modeling study.</a>
+      </h2>
+
+      <p class="paper-authors">Eberhard Rainer Marcel &middot; Rädler Joachim Oskar &middot; Falcke Martin</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43010679', 'zh-43010679')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43010679', 'en-43010679')">中文</button>
+        </div>
+        <div id="en-43010679" class="abstract-text active">Cells moving on one-dimensional lanes exhibit a large variety of coexisting morphodynamic states. MDA-MB-231 cells can show steady or oscillating length while moving, or they can be stationary with steady or oscillating length. Some moving cells exhibit only oscillations of the back protrusion, and some oscillating protrusions at the front and back. The latter state has not been reproduced by any biophysical model, yet. We present a biophysical model for one-dimensional cell motion, which reproduces the variety of motion characteristics observed in experiments. It describes the motion of the body, the front and the back protrusion of a cell, and is based on the force balances at the protrusions edges, protrusion interaction by membrane tension, and the noisy clutch of retrograde flow friction. Integrin signaling controls drag and friction coefficients. Oscillatory morphodynamics arise from stick-slip transitions of the clutch mechanism. Additionally, our model formulates the idea that integrin in nascent adhesions activates Rac, which increases the F-actin network extension rate. This amplification of the polymerization rate at the front protrusion gives rise to moving states with two oscillating protrusions. The increase of the polymerization rate accelerates retrograde flow, making disengagement of the clutch at the front more likely. Therefore, repeated pulling of the back protrusion more significantly affects the motion of the front protrusion. Front oscillations are thus induced by back oscillations as a result of mechanical protrusion interaction. The refined model reproduces all morphodynamic states of one-dimensional cell motion observed in our experiments on MDA-MB-231 cells.</div>
+        <div id="zh-43010679" class="abstract-text">在一维泳道上运动的细胞表现出多种共存的形态动力学状态。MDA-MB-231 细胞在运动时可表现出稳定或振荡的长度，也可静止并具有稳定或振荡的长度。一些运动细胞仅表现出后部突起的振荡，一些则在前部和后部均出现突起振荡。后一种状态尚未被任何生物物理模型复现。我们提出了一个一维细胞运动的生物物理模型，可复现实验中观察到的多种运动特征。该模型描述细胞体、前部和后部突起的运动，基于突起边缘处的力平衡、膜张力介导的突起相互作用以及逆行流动摩擦的噪声离合器。整合素信号传导控制拖曳和摩擦系数。振荡形态动力学源于离合器机制的粘滑转变。此外，我们的模型提出，新生黏附中的整合素激活 Rac，从而增加 F-肌动蛋白网络延伸速率。前部突起聚合速率的这种放大产生了具有两个振荡突起的运动状态。聚合速率的增加加快逆行流动，使前部离合器的脱离更可能发生。因此，后部突起的反复牵拉更显著地影响前部突起的运动。前部振荡因此由后部振荡通过突起间的机械相互作用诱导。该精化模型复现了我们在 MDA-MB-231 细胞实验中观察到的一维细胞运动的所有形态动力学状态。</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>开发一维细胞运动生物物理模型，可复现MDA-MB-231细胞多种形态动力学状态。</li>
+          
+          <li>模型提出新生黏附中整合素激活Rac、增加F-肌动蛋白网络延伸，形成正反馈，产生前后双振荡。</li>
+          
+          <li>后部突起振荡通过机械相互作用诱导前部振荡，并增加前部离合器脱离概率。</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.007" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43007941"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "The origin of paired fins was a major event in early vertebrate history that fueled the adaptive radiation of the gnathostome clade. Evidence for the conservation of ancient regulatory systems between paired and median fins supports a model in which appendage-patterning mechanisms first evolved in the midline and were later redeployed to a new embryonic context, the flank. However, while paired fins and limbs are asymmetric along the dorsoventral (DV) axis, the equivalent axis does not exist in median fins, which are symmetric across the midline, raising questions of how DV patterning evolved. Here, we combine genetic tools in zebrafish with comparative expression analyses in representative ray-finned and cartilaginous fishes to show that a subset of limb DV patterning genes are expressed during median fin development. Using genetic lineage tracing of the canonical limb dorsalizing factor lmx1bb, we further demonstrate that, although lmx1bb-derived cells occupy distinct spatial domains across fin types, a subset of this lineage is fated to differentiate into fin ray osteoblasts in both paired and median fins. To test the potential conservation of regulatory modules across fin types, we generated a series of deletion mutants for two known lmx1b mouse limb enhancers, LARM1 and LARM2, that we show are partially conserved upstream of zebrafish lmx1bb. These experiments revealed that LARM function is essential for dorsoventral patterning of the paired pectoral and pelvic fins of zebrafish but is dispensable for formation of the unpaired dorsal and anal fins. Collectively, these data support the conservation of an ancient LARM-Lmx1b dorsal determination system in the paired fins of osteichthyans, challenge models proposing simple co-option of a pre-existing median fin gene regulatory network and suggest that the acquisition of this regulatory module may have been a key early step in the evolution of the paired fin DV patterning axis.", "abstract_zh": "...", "authors": ["Dale Rebecca E", "Berger Silke", "Alaei Sara", "Davis Marcus C", "Tulenko Frank J", "Currie Peter D"], "journal": "PLoS Biol", "journal_color": "#607D8B", "key_findings": ["...", "...", "..."], "pmid": "43007941", "pub_date": "2026-Nov", "title": "Vertebrate paired fins are specified by an ancient dorso-ventral patterning system.", "url": "https://doi.org/10.1371/journal.pbio.3004062", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">PLoS Biol</span>
+        <span class="pub-date">2026-Nov</span>
+        <button class="fav-btn"
+                data-pmid="43007941"
+                onclick="toggleFavorite('43007941', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43007941"
+                onclick="toggleDislike('43007941', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1371/journal.pbio.3004062" target="_blank" rel="noopener noreferrer">Vertebrate paired fins are specified by an ancient dorso-ventral patterning system.</a>
+      </h2>
+
+      <p class="paper-authors">Dale Rebecca E &middot; Berger Silke &middot; Alaei Sara &middot; Davis Marcus C &middot; Tulenko Frank J &middot; Currie Peter D</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43007941', 'zh-43007941')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43007941', 'en-43007941')">中文</button>
+        </div>
+        <div id="en-43007941" class="abstract-text active">The origin of paired fins was a major event in early vertebrate history that fueled the adaptive radiation of the gnathostome clade. Evidence for the conservation of ancient regulatory systems between paired and median fins supports a model in which appendage-patterning mechanisms first evolved in the midline and were later redeployed to a new embryonic context, the flank. However, while paired fins and limbs are asymmetric along the dorsoventral (DV) axis, the equivalent axis does not exist in median fins, which are symmetric across the midline, raising questions of how DV patterning evolved. Here, we combine genetic tools in zebrafish with comparative expression analyses in representative ray-finned and cartilaginous fishes to show that a subset of limb DV patterning genes are expressed during median fin development. Using genetic lineage tracing of the canonical limb dorsalizing factor lmx1bb, we further demonstrate that, although lmx1bb-derived cells occupy distinct spatial domains across fin types, a subset of this lineage is fated to differentiate into fin ray osteoblasts in both paired and median fins. To test the potential conservation of regulatory modules across fin types, we generated a series of deletion mutants for two known lmx1b mouse limb enhancers, LARM1 and LARM2, that we show are partially conserved upstream of zebrafish lmx1bb. These experiments revealed that LARM function is essential for dorsoventral patterning of the paired pectoral and pelvic fins of zebrafish but is dispensable for formation of the unpaired dorsal and anal fins. Collectively, these data support the conservation of an ancient LARM-Lmx1b dorsal determination system in the paired fins of osteichthyans, challenge models proposing simple co-option of a pre-existing median fin gene regulatory network and suggest that the acquisition of this regulatory module may have been a key early step in the evolution of the paired fin DV patterning axis.</div>
+        <div id="zh-43007941" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1371/journal.pbio.3004062" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Animals</span>
+          
+          <span class="kw-tag">Animal Fins</span>
+          
+          <span class="kw-tag">Body Patterning</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43006240"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "As an alternative to historical enzyme isolation, metagenomic databases (e.g. MGnify) provide information on vast unculturable microbial diversity, including extreme environments, and constitute an enormous source of functional proteins. Conservative mining of these data by close sequence homology alone tends to identify merely different versions of known enzymes. Here we present a discovery strategy for meganucleases based on wider capture of less homologous enzymes in metagenomic databases, and incorporating metadata with their homology. We use cell-free expression to bypass host incompatibility and the need for purification, along with deep sequencing for experimental assessment of substrate specificity and cleavage pattern, thereby circumventing classical gel-based profiling. Specifically, we discovered the temperature-stable (\u003e55\u00b0C), intron-encoded LAGLIDADG meganuclease I-MG11 that recognizes a GC-rich 17 base pair sequence to generate 4-nt palindromic 3\u0027-overhangs-the first monomeric meganuclease to produce such overhangs. Co-folding models of I-MG11 bound to DNA provide a structural context for enzyme-DNA interactions, highlighting differences from other monomeric LAGLIDADG meganucleases (e.g. I-SceI) shaped by InDels (insertion-deletions) in the DNA-binding region that may cause specificity changes. Our strategy streamlines general\u00a0bona fide identification and annotation of meganucleases, while the unique properties of I-MG11 expand the toolbox of molecular genome engineering.", "abstract_zh": "", "authors": ["Dorrazehi Gol Mohammad", "Penner Matthew", "Athanasiou Christina", "Boursinhac Lise", "Mobarec Juan Carlos", "Webster Carl I", "et al."], "journal": "Nucleic Acids Res", "journal_color": "#607D8B", "key_findings": [], "pmid": "43006240", "pub_date": "2026-Nov-10", "title": "Cell-free expression and NGS-powered substrate profiling reveal a thermostable metagenomic meganuclease from an extreme environment with novel specificity.", "url": "https://doi.org/10.1093/nar/gkag992", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Nucleic Acids Res</span>
+        <span class="pub-date">2026-Nov-10</span>
+        <button class="fav-btn"
+                data-pmid="43006240"
+                onclick="toggleFavorite('43006240', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43006240"
+                onclick="toggleDislike('43006240', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1093/nar/gkag992" target="_blank" rel="noopener noreferrer">Cell-free expression and NGS-powered substrate profiling reveal a thermostable metagenomic meganuclease from an extreme environment with novel specificity.</a>
+      </h2>
+
+      <p class="paper-authors">Dorrazehi Gol Mohammad &middot; Penner Matthew &middot; Athanasiou Christina &middot; Boursinhac Lise &middot; Mobarec Juan Carlos &middot; Webster Carl I &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43006240', 'zh-43006240')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43006240', 'en-43006240')">中文</button>
+        </div>
+        <div id="en-43006240" class="abstract-text active">As an alternative to historical enzyme isolation, metagenomic databases (e.g. MGnify) provide information on vast unculturable microbial diversity, including extreme environments, and constitute an enormous source of functional proteins. Conservative mining of these data by close sequence homology alone tends to identify merely different versions of known enzymes. Here we present a discovery strategy for meganucleases based on wider capture of less homologous enzymes in metagenomic databases, and incorporating metadata with their homology. We use cell-free expression to bypass host incompatibility and the need for purification, along with deep sequencing for experimental assessment of substrate specificity and cleavage pattern, thereby circumventing classical gel-based profiling. Specifically, we discovered the temperature-stable (>55°C), intron-encoded LAGLIDADG meganuclease I-MG11 that recognizes a GC-rich 17 base pair sequence to generate 4-nt palindromic 3'-overhangs-the first monomeric meganuclease to produce such overhangs. Co-folding models of I-MG11 bound to DNA provide a structural context for enzyme-DNA interactions, highlighting differences from other monomeric LAGLIDADG meganucleases (e.g. I-SceI) shaped by InDels (insertion-deletions) in the DNA-binding region that may cause specificity changes. Our strategy streamlines general bona fide identification and annotation of meganucleases, while the unique properties of I-MG11 expand the toolbox of molecular genome engineering.</div>
+        <div id="zh-43006240" class="abstract-text">（翻译处理中…）</div>
+      </div>
+
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1093/nar/gkag992" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">DNA</span>
+          
+          <span class="kw-tag">Enzyme Stability</span>
+          
+          <span class="kw-tag">High-Throughput Nucleotide Sequencing</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43006236"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Archaea and bacteria acquire resistance to viruses by integrating fragments of foreign DNA at the beginning of a CRISPR locus. In the archaeon Pyrococcus furiosus, histones bind the leader to promote specific integration at the first CRISPR repeat. However, it remains unknown whether archaeal CRISPR leaders contain conserved DNA sequence motifs required for integration. Here, we analyze 542 archaeal CRISPR leaders found across Thermococcales and Methanococcales. We identify 36 motifs found up to 500 bps upstream of archaeal CRISPR loci. Scrambling or truncating novel motifs or histone binding sites found 100-400 bps upstream of the P. furiosus CRISPR modestly decreases integration efficiency. However, mutation of motif T2, which overlaps with the proximal histone site and is adjacent to the CRISPR, ablates both histone-mediated and histone-independent integration. Mutations tiled across T2 reveal that a pyrimidine at position -3 of the leader is required for histone-independent integration, and basepairs -4 to -19 are required for histone-mediated integration. T2 is found in most Thermococcales, and a similar sequence is found in most Methanococcales leaders, suggesting this motif may be a broadly conserved element that facilitates CRISPR adaptive immunity across taxonomic orders. These data shed light on the sequence requirements for histone-mediated DNA integration.", "abstract_zh": "...", "authors": ["Patel Pranami", "Treat Ariana R", "Gonzalez Reyaz", "Rajaraman Sucheta", "Cruga Briana N", "Chinea Elizabeth B", "et al."], "journal": "Nucleic Acids Res", "journal_color": "#607D8B", "key_findings": ["\u6838\u5fc3\u53d1\u73b01\uff1a...", "\u6838\u5fc3\u53d1\u73b02\uff1a...", "\u6838\u5fc3\u53d1\u73b03\uff1a..."], "pmid": "43006236", "pub_date": "2026-Nov-10", "title": "Archaeal histones coordinate conserved DNA sequence motifs to promote CRISPR adaptive immunity.", "url": "https://doi.org/10.1093/nar/gkag1172", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Nucleic Acids Res</span>
+        <span class="pub-date">2026-Nov-10</span>
+        <button class="fav-btn"
+                data-pmid="43006236"
+                onclick="toggleFavorite('43006236', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43006236"
+                onclick="toggleDislike('43006236', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1093/nar/gkag1172" target="_blank" rel="noopener noreferrer">Archaeal histones coordinate conserved DNA sequence motifs to promote CRISPR adaptive immunity.</a>
+      </h2>
+
+      <p class="paper-authors">Patel Pranami &middot; Treat Ariana R &middot; Gonzalez Reyaz &middot; Rajaraman Sucheta &middot; Cruga Briana N &middot; Chinea Elizabeth B &middot; et al.</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43006236', 'zh-43006236')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43006236', 'en-43006236')">中文</button>
+        </div>
+        <div id="en-43006236" class="abstract-text active">Archaea and bacteria acquire resistance to viruses by integrating fragments of foreign DNA at the beginning of a CRISPR locus. In the archaeon Pyrococcus furiosus, histones bind the leader to promote specific integration at the first CRISPR repeat. However, it remains unknown whether archaeal CRISPR leaders contain conserved DNA sequence motifs required for integration. Here, we analyze 542 archaeal CRISPR leaders found across Thermococcales and Methanococcales. We identify 36 motifs found up to 500 bps upstream of archaeal CRISPR loci. Scrambling or truncating novel motifs or histone binding sites found 100-400 bps upstream of the P. furiosus CRISPR modestly decreases integration efficiency. However, mutation of motif T2, which overlaps with the proximal histone site and is adjacent to the CRISPR, ablates both histone-mediated and histone-independent integration. Mutations tiled across T2 reveal that a pyrimidine at position -3 of the leader is required for histone-independent integration, and basepairs -4 to -19 are required for histone-mediated integration. T2 is found in most Thermococcales, and a similar sequence is found in most Methanococcales leaders, suggesting this motif may be a broadly conserved element that facilitates CRISPR adaptive immunity across taxonomic orders. These data shed light on the sequence requirements for histone-mediated DNA integration.</div>
+        <div id="zh-43006236" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>核心发现1：...</li>
+          
+          <li>核心发现2：...</li>
+          
+          <li>核心发现3：...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1093/nar/gkag1172" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+        <div class="keywords-row">
+          
+          <span class="kw-tag">Histones</span>
+          
+          <span class="kw-tag">Nucleotide Motifs</span>
+          
+          <span class="kw-tag">Conserved Sequence</span>
+          
+        </div>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43004695"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Many disease-causing mutations in the Cystic Fibrosis Transmembrane Conductance Regulator (CFTR), a key chloride channel, lead to cystic fibrosis by disrupting the regulation and stability of its different open and closed substates. These transitions generate rapid current fluctuations observed in patch-clamp measurements, known as flicker noise, which can reveal information about chloride flow and state dynamics in the wild type and different mutants. Using time-frequency analysis with spectrograms applied to single-channel recordings, we found that the power of higher-frequency components (10-1000 Hz) was greater during the open state than during the closed state. Frequency analysis showed 1f\u03b1 noise in the fully open state (\u03b1 = 0.5) and a flat power spectral density (PSD) in the closed state (\u03b1 = 0). Using several pore mutants as representations of the three open states (S1, S2, and F), we found that the S2 frequency signature was similar to the fully open state (\u03b1 = 0.5), whereas S1 behaved more similarly to the closed state (\u03b1 = 0) in terms of flicker noise. A mutant affecting the nucleotide-binding domain (NBD) did not show changes in \u03b1. These frequency signatures were not altered by changes in electrochemical forces in the WT and may be linked to conformational changes and differences in the energy landscape and trapping of Chloride ions in energy wells during the permeation process. Using the Hurst exponent, derived from spectral analysis, we showed that S1 exhibited memoryless dynamics (H \u2248 0.5), while S2 and F showed persistent behavior (H \u003e 0.5), indicating that memory structure depends on the substate. These experimental findings were reproduced using a transistor-based model that incorporates flicker noise and maps electrophysiological variables (\u03c4o, \u03c4c, Po, \u03b1) to circuit parameters. This allows linking functional CFTR states (C0, C1, C2, S1, S2, F) to electronic components, enabling fast, variant-specific simulations.", "abstract_zh": "...", "authors": ["Marin Eduardo Martinez", "Cui Guiying", "Eckford Andrew W", "McCarty Nael A", "Hunt William D"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["\u6838\u5fc3\u53d1\u73b01\uff1a\u5c06\u82f1\u6587\u6458\u8981\u7ffb\u8bd1\u4e3a\u51c6\u786e\u3001\u6d41\u7545\u7684\u4e2d\u6587\u7b80\u4f53", "\u6838\u5fc3\u53d1\u73b02\uff1a\u7528\u4e00\u53e5\u8bdd\u6982\u62ec\uff08\u4e0d\u8d85\u8fc750\u5b57\uff09", "\u6838\u5fc3\u53d1\u73b03\uff1a\u7528\u4e00\u53e5\u8bdd\u6982\u62ec\uff08\u4e0d\u8d85\u8fc750\u5b57\uff09"], "pmid": "43004695", "pub_date": "2026-Nov-10", "title": "Effects of Pore Mutations on 1/f Flicker Noise Reveal Differences in CFTR Substates.", "url": "https://doi.org/10.1016/j.bpj.2026.11.008", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Nov-10</span>
+        <button class="fav-btn"
+                data-pmid="43004695"
+                onclick="toggleFavorite('43004695', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43004695"
+                onclick="toggleDislike('43004695', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.008" target="_blank" rel="noopener noreferrer">Effects of Pore Mutations on 1/f Flicker Noise Reveal Differences in CFTR Substates.</a>
+      </h2>
+
+      <p class="paper-authors">Marin Eduardo Martinez &middot; Cui Guiying &middot; Eckford Andrew W &middot; McCarty Nael A &middot; Hunt William D</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43004695', 'zh-43004695')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43004695', 'en-43004695')">中文</button>
+        </div>
+        <div id="en-43004695" class="abstract-text active">Many disease-causing mutations in the Cystic Fibrosis Transmembrane Conductance Regulator (CFTR), a key chloride channel, lead to cystic fibrosis by disrupting the regulation and stability of its different open and closed substates. These transitions generate rapid current fluctuations observed in patch-clamp measurements, known as flicker noise, which can reveal information about chloride flow and state dynamics in the wild type and different mutants. Using time-frequency analysis with spectrograms applied to single-channel recordings, we found that the power of higher-frequency components (10-1000 Hz) was greater during the open state than during the closed state. Frequency analysis showed 1fα noise in the fully open state (α = 0.5) and a flat power spectral density (PSD) in the closed state (α = 0). Using several pore mutants as representations of the three open states (S1, S2, and F), we found that the S2 frequency signature was similar to the fully open state (α = 0.5), whereas S1 behaved more similarly to the closed state (α = 0) in terms of flicker noise. A mutant affecting the nucleotide-binding domain (NBD) did not show changes in α. These frequency signatures were not altered by changes in electrochemical forces in the WT and may be linked to conformational changes and differences in the energy landscape and trapping of Chloride ions in energy wells during the permeation process. Using the Hurst exponent, derived from spectral analysis, we showed that S1 exhibited memoryless dynamics (H ≈ 0.5), while S2 and F showed persistent behavior (H > 0.5), indicating that memory structure depends on the substate. These experimental findings were reproduced using a transistor-based model that incorporates flicker noise and maps electrophysiological variables (τo, τc, Po, α) to circuit parameters. This allows linking functional CFTR states (C0, C1, C2, S1, S2, F) to electronic components, enabling fast, variant-specific simulations.</div>
+        <div id="zh-43004695" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>核心发现1：将英文摘要翻译为准确、流畅的中文简体</li>
+          
+          <li>核心发现2：用一句话概括（不超过50字）</li>
+          
+          <li>核心发现3：用一句话概括（不超过50字）</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.008" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+    <article class="paper-card"
+             data-family="other"
+             data-pmid="43004696"
+             style="--card-color: #607D8B">
+      <script class="paper-data" type="application/json">{"abstract": "Understanding muscle tissue is key not only for advancing our knowledge of human biophysical function, but also for describing pathological states, improving treatment and providing insights for drug development. While using excised tissue is an excellent way to study muscular function, human tissue donation remains severely restricted, forcing reliance on non-human models. The past decade has seen a rise in 3D in-vitro models of human skeletal muscle. However, many current experimental approaches struggle with the high variability of primary cells or the limited translational relevance of murine lines. Furthermore, state-of-the-art functional analysis typically focuses on peak force, which overlooks critical kinetic information. In this study, we present a systematic approach to generate functional engineered skeletal muscle tissues (ESMs), measure their contraction force dynamics, and model these dynamics to extract the effects of standard pharmacological modulators. Within 14 days, ESMs based on the human immortalized LHCN-M2 cell line mature into aligned, multinucleated myofibers expressing key sarcomeric markers and exhibiting robust excitation-contraction coupling. To decode these dynamics, we introduce a novel mathematical model based on stretched exponential functions. This framework accurately captures heterogeneous contraction and relaxation phases across diverse phenotypes using only six interpretable parameters. We validated the platform\u0027s sensitivity using a library of pharmacological modulators. Our kinetic modeling revealed distinct parameter fingerprints for different drug classes, highlighting specific changes in contraction kinetics that peak force alone could not detect. Additionally, proteomic profiling confirmed the presence of necessary drug targets and established the maturation state of the tissue. Together, this study provides a scalable, high-fidelity human platform for high-content screening of contractile kinetics and muscle biophysics.", "abstract_zh": "...", "authors": ["Luber Mattias", "Schmelz Bruno", "Lenz Christof", "Betz Timo"], "journal": "Biophys J", "journal_color": "#607D8B", "key_findings": ["...", "...", "..."], "pmid": "43004696", "pub_date": "2026-Nov-09", "title": "Stretched Exponential Modeling Reveals Drug-Specific Kinetics in Human Engineered Skeletal Muscle.", "url": "https://doi.org/10.1016/j.bpj.2026.11.006", "week": "2026-W47"}</script>
+
+      <div class="card-header">
+        <span class="journal-badge" style="background: #607D8B">Biophys J</span>
+        <span class="pub-date">2026-Nov-09</span>
+        <button class="fav-btn"
+                data-pmid="43004696"
+                onclick="toggleFavorite('43004696', this)"
+                title="收藏">☆</button>
+        <button class="dislike-btn"
+                data-pmid="43004696"
+                onclick="toggleDislike('43004696', this)"
+                title="不感兴趣">✕</button>
+      </div>
+
+      <h2 class="paper-title">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.006" target="_blank" rel="noopener noreferrer">Stretched Exponential Modeling Reveals Drug-Specific Kinetics in Human Engineered Skeletal Muscle.</a>
+      </h2>
+
+      <p class="paper-authors">Luber Mattias &middot; Schmelz Bruno &middot; Lenz Christof &middot; Betz Timo</p>
+
+      <div class="abstract-section">
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this, 'en-43004696', 'zh-43004696')">EN</button>
+          <button class="tab-btn"        onclick="switchTab(this, 'zh-43004696', 'en-43004696')">中文</button>
+        </div>
+        <div id="en-43004696" class="abstract-text active">Understanding muscle tissue is key not only for advancing our knowledge of human biophysical function, but also for describing pathological states, improving treatment and providing insights for drug development. While using excised tissue is an excellent way to study muscular function, human tissue donation remains severely restricted, forcing reliance on non-human models. The past decade has seen a rise in 3D in-vitro models of human skeletal muscle. However, many current experimental approaches struggle with the high variability of primary cells or the limited translational relevance of murine lines. Furthermore, state-of-the-art functional analysis typically focuses on peak force, which overlooks critical kinetic information. In this study, we present a systematic approach to generate functional engineered skeletal muscle tissues (ESMs), measure their contraction force dynamics, and model these dynamics to extract the effects of standard pharmacological modulators. Within 14 days, ESMs based on the human immortalized LHCN-M2 cell line mature into aligned, multinucleated myofibers expressing key sarcomeric markers and exhibiting robust excitation-contraction coupling. To decode these dynamics, we introduce a novel mathematical model based on stretched exponential functions. This framework accurately captures heterogeneous contraction and relaxation phases across diverse phenotypes using only six interpretable parameters. We validated the platform's sensitivity using a library of pharmacological modulators. Our kinetic modeling revealed distinct parameter fingerprints for different drug classes, highlighting specific changes in contraction kinetics that peak force alone could not detect. Additionally, proteomic profiling confirmed the presence of necessary drug targets and established the maturation state of the tissue. Together, this study provides a scalable, high-fidelity human platform for high-content screening of contractile kinetics and muscle biophysics.</div>
+        <div id="zh-43004696" class="abstract-text">...</div>
+      </div>
+
+      
+      <div class="key-findings">
+        <p class="findings-title">核心发现</p>
+        <ul>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+          <li>...</li>
+          
+        </ul>
+      </div>
+      
+
+      <div class="card-footer">
+        <a href="https://doi.org/10.1016/j.bpj.2026.11.006" target="_blank" rel="noopener noreferrer" class="doi-link">查看原文 →</a>
+        
+      </div>
+
+    </article>
+    
+  </div>
+  
+
+  <!-- Archive section -->
+<div class="archive-section" id="archive-section">
+  <!-- Archive view toggle: shows archived papers inline in the main grid when active -->
+  <button class="archive-toggle" onclick="toggleArchiveView()" id="archive-toggle-btn">
+    <span id="archive-toggle-label">📦 已归档论文</span> <span class="count" id="archive-count">0</span>
+  </button>
+  <!-- Inline archive view is now controlled by the main grid; no separate grid is used -->
+</div>
+</main>
+
+<footer class="site-footer">
+  <p>数据来源：<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed E-utilities</a>
+  &nbsp;·&nbsp; 翻译：<a href="https://api.deepseek.com" target="_blank">DeepSeek v4-pro</a>
+  &nbsp;·&nbsp; 自动生成于 2026-11-16 04:12 UTC</p>
+</footer>
+
+<script src="../assets/feedback.js"></script>
+<script>
+  // ── Tab switching ────────────────────────────────────────────
+  function switchTab(btn, showId, hideId) {
+    btn.closest('.abstract-section')
+       .querySelectorAll('.tab-btn')
+       .forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(showId).classList.add('active');
+    document.getElementById(hideId).classList.remove('active');
+  }
+
+  function getPaperData(card) {
+    const raw = card ? card.querySelector('.paper-data') : null;
+    if (!raw) return { pmid: card?.dataset?.pmid || '', week: '2026-W47' };
+
+    try {
+      return JSON.parse(raw.textContent);
+    } catch {
+      return { pmid: card?.dataset?.pmid || '', week: '2026-W47' };
+    }
+  }
+
+  function trackFeedback(signal, action, paper, metadata) {
+    if (!window.BioDigestFeedback) return;
+    window.BioDigestFeedback.track(signal, action, paper, {
+      sourcePage: 'weekly-report',
+      metadata: metadata || {},
+    });
+  }
+
+  // ── Favorites (localStorage) ─────────────────────────────────
+  const FAV_KEY = 'bio-digest-favorites';
+
+  function getFavs() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveFavs(favs) {
+    localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+  }
+
+  function toggleFavorite(pmid, btn) {
+    const card = btn.closest('.paper-card');
+    const paper = getPaperData(card);
+    const favs = getFavs();
+    if (favs[pmid]) {
+      delete favs[pmid];
+      btn.classList.remove('favorited');
+      btn.textContent = '☆';
+      btn.title = '收藏';
+      trackFeedback('favorite', 'remove', paper, { current_filter: CURRENT_FILTER });
+    } else {
+      const raw = card.querySelector('.paper-data');
+      if (raw) favs[pmid] = JSON.parse(raw.textContent);
+      btn.classList.add('favorited');
+      btn.textContent = '★';
+      btn.title = '取消收藏';
+      trackFeedback('favorite', 'add', paper, { current_filter: CURRENT_FILTER });
+    }
+    saveFavs(favs);
+    _updateFavCounters();
+    applyPaperVisibility();
+  }
+
+  function _updateFavCounters() {
+    const count = Object.keys(getFavs()).length;
+    ['fav-nav-count', 'fav-filter-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+  }
+
+  function _restoreFavButtons() {
+    const favs = getFavs();
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      if (favs[btn.dataset.pmid]) {
+        btn.classList.add('favorited');
+        btn.textContent = '★';
+        btn.title = '取消收藏';
+      }
+    });
+    _updateFavCounters();
+  }
+
+  // ── Archive / Dislike (localStorage) ─────────────────────────
+  const ARCHIVE_KEY = 'bio-digest-archive';
+  let CURRENT_FILTER = 'all';
+
+  function getArchived() {
+    try { return JSON.parse(localStorage.getItem(ARCHIVE_KEY) || '{}'); }
+    catch { return {}; }
+  }
+  function saveArchived(archived) {
+    localStorage.setItem(ARCHIVE_KEY, JSON.stringify(archived));
+  }
+
+  function getFilterButton(filter) {
+    return document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+  }
+
+  function setActiveFilter(filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    const activeBtn = getFilterButton(filter);
+    if (activeBtn) activeBtn.classList.add('active');
+  }
+
+  function syncArchiveUi() {
+    const count = Object.keys(getArchived()).length;
+    ['archive-nav-count', 'archive-filter-count', 'archive-count'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    });
+
+    const archiveSection = document.getElementById('archive-section');
+    if (archiveSection) {
+      archiveSection.style.display = count > 0 || CURRENT_FILTER === 'archive' ? '' : 'none';
+    }
+
+    const labelEl = document.getElementById('archive-toggle-label');
+    if (labelEl) {
+      labelEl.textContent = CURRENT_FILTER === 'archive' ? '← 返回主列表' : '📦 已归档论文';
+    }
+
+    const archiveCountEl = document.getElementById('archive-count');
+    if (archiveCountEl) {
+      archiveCountEl.style.display = CURRENT_FILTER === 'archive' ? 'none' : '';
+    }
+  }
+
+  function applyPaperVisibility() {
+    const favs = getFavs();
+    const archived = getArchived();
+    const archiveMode = CURRENT_FILTER === 'archive';
+
+    document.querySelectorAll('.paper-card').forEach(card => {
+      const pmid = card.dataset.pmid;
+      const isArchived = !!archived[pmid];
+      const isFavorite = !!favs[pmid];
+      const restoreBtn = card.querySelector('.restore-btn');
+      let visible = false;
+
+      if (archiveMode) {
+        visible = isArchived;
+      } else if (CURRENT_FILTER === 'all') {
+        visible = !isArchived;
+      } else if (CURRENT_FILTER === 'fav') {
+        visible = !isArchived && isFavorite;
+      } else {
+        visible = !isArchived && card.dataset.family === CURRENT_FILTER;
+      }
+
+      card.style.display = visible ? '' : 'none';
+
+      if (isArchived && archiveMode) {
+        card.classList.remove('archived-hidden');
+        card.classList.add('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = '';
+      } else if (isArchived) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      } else {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (restoreBtn) restoreBtn.style.display = 'none';
+      }
+    });
+
+    syncArchiveUi();
+  }
+
+  function toggleDislike(pmid, btn) {
+    const archived = getArchived();
+    const card = document.querySelector(`.paper-card[data-pmid="${pmid}"]`);
+    const paper = getPaperData(card);
+
+    if (archived[pmid]) {
+      delete archived[pmid];
+      btn.classList.remove('disliked');
+      btn.textContent = '✕';
+      btn.title = '不感兴趣';
+
+      if (card) {
+        card.classList.remove('archived-hidden');
+        card.classList.remove('archived-visible');
+        const rb = card.querySelector('.restore-btn');
+        if (rb) rb.remove();
+      }
+
+      saveArchived(archived);
+      trackFeedback('archive', 'remove', paper, { current_filter: CURRENT_FILTER });
+      if (CURRENT_FILTER === 'archive' && Object.keys(archived).length === 0) {
+        CURRENT_FILTER = 'all';
+        setActiveFilter('all');
+      }
+      applyPaperVisibility();
+      return;
+    }
+
+    const raw = btn.closest('.paper-card').querySelector('.paper-data');
+    if (raw) archived[pmid] = JSON.parse(raw.textContent);
+    btn.classList.add('disliked');
+    btn.textContent = '✓';
+    btn.title = '取消归档';
+
+    if (card) {
+      card.classList.add('archived-hidden');
+      if (!card.querySelector('.restore-btn')) {
+        const header = card.querySelector('.card-header');
+        if (header) {
+          const unarchiveBtn = document.createElement('button');
+          unarchiveBtn.className = 'restore-btn';
+          unarchiveBtn.textContent = '↩ 恢复';
+          unarchiveBtn.title = '恢复到主列表';
+          unarchiveBtn.onclick = function() {
+            const dBtn = card.querySelector('.dislike-btn');
+            if (dBtn) toggleDislike(pmid, dBtn);
+          };
+          header.appendChild(unarchiveBtn);
+        }
+      }
+    }
+
+    saveArchived(archived);
+    trackFeedback('archive', 'add', paper, { current_filter: CURRENT_FILTER });
+    syncArchiveUi();
+    window.setTimeout(applyPaperVisibility, 400);
+  }
+
+  function _restoreDislikeButtons() {
+    const archived = getArchived();
+    document.querySelectorAll('.dislike-btn').forEach(btn => {
+      const pmid = btn.dataset.pmid;
+      const card = btn.closest('.paper-card');
+      if (!archived[pmid]) return;
+
+      btn.classList.add('disliked');
+      btn.textContent = '✓';
+      btn.title = '取消归档';
+
+      if (card) {
+        card.classList.add('archived-hidden');
+        card.classList.remove('archived-visible');
+        if (!card.querySelector('.restore-btn')) {
+          const header = card.querySelector('.card-header');
+          if (header) {
+            const unarchiveBtn = document.createElement('button');
+            unarchiveBtn.className = 'restore-btn';
+            unarchiveBtn.textContent = '↩ 恢复';
+            unarchiveBtn.title = '恢复到主列表';
+            unarchiveBtn.onclick = function() {
+              const dBtn = card.querySelector('.dislike-btn');
+              if (dBtn) toggleDislike(pmid, dBtn);
+            };
+            header.appendChild(unarchiveBtn);
+          }
+        }
+      }
+    });
+    syncArchiveUi();
+  }
+
+  function setFilter(family) {
+    CURRENT_FILTER = family;
+    setActiveFilter(family);
+    applyPaperVisibility();
+  }
+
+  function toggleArchiveView() {
+    setFilter(CURRENT_FILTER === 'archive' ? 'all' : 'archive');
+  }
+
+  // ── Filter ───────────────────────────────────────────────────
+  function filterPapers(family, btn) {
+    setFilter(family);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    _restoreFavButtons();
+    _restoreDislikeButtons();
+    applyPaperVisibility();
+    if (window.BioDigestFeedback) {
+      void window.BioDigestFeedback.flushQueue();
+    }
+  });
+</script>
+</body>
+</html>
