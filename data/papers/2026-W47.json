@@ -1,0 +1,973 @@
+{
+  "week": "2026-W47",
+  "generated_at": "2026-11-16T03:45:04.481187Z",
+  "date_range": {
+    "start": "2026/11/09",
+    "end": "2026/11/16"
+  },
+  "total": 23,
+  "papers": [
+    {
+      "pmid": "43025426",
+      "title": "Multi-omics-constrained kinetic models quantify pathway rewiring and predict metabolic vulnerabilities in BRCA1-deficient ovarian cancer.",
+      "journal": "Cell Syst",
+      "authors": [
+        "Toumpe Ilias",
+        "Masid Maria",
+        "Hatzimanikatis Vassily",
+        "Miskovic Ljubisa"
+      ],
+      "abstract": "Time-resolved, network-wide consequences of cancer metabolic reprogramming remain poorly understood. We built multi-omics-constrained, near-genome-scale kinetic ensembles for isogenic BRCA1 wild-type and BRCA1-mutant ovarian cancer cells. Covering over 2,100 reactions, the ensembles enabled uncertainty-quantified simulations of nutrient, metabolite, and enzyme perturbations. Metabolic control analysis identified 28 enzyme-mediated vulnerabilities; 24 are linked to experimental or approved DrugBank compounds, whereas four lack documented drug associations. Independent DepMap data supported a subset of these candidates. All 28 emerged directly from the mechanistic model structure and multi-omics constraints, with no calibration to known drug targets or cancer-dependency data. Simulations of thymidylate synthase, hexokinase, and triokinase inhibition predicted target- and physiology-specific changes in pathway use, energy metabolism, and a shared ceramide-linked stress response. Mapping predicted enzyme-activity shifts to BRCA1-associated transcription factors suggested regulatory routes underlying differences between the two states. These ensembles provide a reusable framework for time-resolved, mechanistic hypothesis generation across cancers and other diseases. A record of this paper's transparent peer review process is included in the supplemental information.",
+      "doi": "10.1016/j.cels.2026.101781",
+      "url": "https://doi.org/10.1016/j.cels.2026.101781",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "癌症代谢重编程的时间分辨、全网络范围后果仍知之甚少。我们为同基因型 BRCA1 野生型和 BRCA1 突变型卵巢癌细胞构建了多组学约束、接近基因组尺度的动力学集合模型。这些集合模型覆盖超过2100个反应，能够对营养物、代谢物和酶扰动进行不确定性量化模拟。代谢控制分析识别出28个酶介导的脆弱点；其中24个与实验性或已获批的 DrugBank 化合物相关，而4个缺乏已记录药物关联。独立的 DepMap 数据支持其中一部分候选脆弱点。所有28个均直接来自机制模型结构和多组学约束，未对已知药物靶点或癌症依赖性数据进行校准。对胸苷酸合酶、己糖激酶和三糖激酶抑制的模拟预测了通路利用、能量代谢以及共同的神经酰胺相关应激反应发生靶点和生理状态特异性变化。将预测的酶活性变化映射到 BRCA1 相关转录因子，提示了两种状态间差异背后的调控途径。这些集合模型为跨癌症和其他疾病的时间分辨、机制性假设生成提供了可重复使用的框架。补充材料中包含本文透明同行评审过程的记录。",
+      "key_findings": [
+        "构建多组学约束的近基因组尺度动力学模型，覆盖2100余反应，用于BRCA1野生与突变卵巢癌。",
+        "代谢控制分析识别28个酶介导脆弱点，24个有已知药物关联，4个无记录，且未经靶点校准。",
+        "模拟胸苷酸合酶等抑制揭示通路利用、能量代谢和共同神经酰胺应激响应的状态特异性变化。"
+      ],
+      "translated_at": "2026-11-16T03:51:55.886390Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出多组学约束的近基因组尺度动力学集成建模框架，可迁移用于癌症等疾病的机制假设生成与代谢脆弱性预测。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:45:10.874759Z"
+      }
+    },
+    {
+      "pmid": "43024730",
+      "title": "Noncanonical enhancers control gene expression and cell fate in human pluripotent stem cells.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Cao Yang",
+        "Dovgusha Oleksandr",
+        "Ebrahimi Ayyub",
+        "Cruz Carmela Rieline V",
+        "Bevan Stephen",
+        "Widmer Lukas",
+        "et al."
+      ],
+      "abstract": "Enhancers are key gene regulatory elements that ensure the precise spatiotemporal execution of developmental gene expression programs. However, recent findings indicate that current approaches to identify enhancers may not capture the full repertoire of active enhancers in mammalian genomes. Here, we combine massively parallel enhancer assays with chromatin structure and transcriptome profiling to functionally annotate enhancers genome-wide in human induced pluripotent stem cells. We find that a substantial fraction (∼40%) of accessible chromatin regions with enhancer function lack key features associated with active enhancers, including the active enhancer mark histone H3 lysine-27 acetylation and enhancer-associated RNAs. Perturbation of this class of noncanonical enhancers by CRISPR-mediated epigenome editing or deletion results in decreased levels of target gene expression and, in one instance, loss of pluripotent stem cell characteristics. Collectively, our data demonstrate enhancer activity for a class of gene regulatory elements that had, until now, only been associated with a neutral or inactive status, challenging current models of enhancer function.",
+      "doi": "10.1126/sciadv.adz3328",
+      "url": "https://doi.org/10.1126/sciadv.adz3328",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Enhancer Elements, Genetic",
+        "Pluripotent Stem Cells",
+        "Epigenome Editing",
+        "Gene Expression Regulation",
+        "Histones",
+        "Chromatin",
+        "Cell Differentiation",
+        "Acetylation",
+        "Induced Pluripotent Stem Cells"
+      ],
+      "abstract_zh": "增强子是关键基因调控元件，确保发育基因表达程序的精确时空执行。然而，近期发现表明，目前识别增强子的方法可能无法捕获哺乳动物基因组中全部活跃增强子。在此，我们将大规模平行增强子检测与染色质结构和转录组分析相结合，在人类诱导多能干细胞中对全基因组增强子进行功能注释。我们发现，具有增强子功能的可及染色质区域中有相当大比例（约40%）缺乏与活性增强子相关的关键特征，包括活性增强子标记组蛋白H3第27位赖氨酸乙酰化（H3K27ac）和增强子相关RNA（eRNA）。通过CRISPR介导的表观基因组编辑或删除干扰这类非经典增强子，导致靶基因表达水平下降，并且在一个实例中导致多能干细胞特性丧失。总之，我们的数据证明了一类基因调控元件具有增强子活性，而这类元件至今仅被认为与中性或非活性状态相关，挑战了当前增强子功能模型。",
+      "key_findings": [
+        "约40%具有增强子功能的可及染色质区域缺乏H3K27ac和eRNA等活性增强子特征。",
+        "CRISPR介导的表观基因组编辑或删除非经典增强子会降低靶基因表达，甚至导致多能性丧失。",
+        "证明一类曾被视为中性或非活性的调控元件具有增强子活性，挑战现有增强子功能模型。"
+      ],
+      "translated_at": "2026-11-16T03:52:20.343636Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现并验证一类缺乏经典活性标记的非经典增强子，挑战现有增强子功能模型，具有可迁移的调控机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:45:20.471757Z"
+      }
+    },
+    {
+      "pmid": "43024722",
+      "title": "Symmetry as a common origin of hierarchical emergence and abstraction.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Rosas Fernando E"
+      ],
+      "abstract": "Many systems of interest exhibit nested emergent layers with their own rules and regularities, and our knowledge about them seems naturally organized around these levels. How do such hierarchical structures arise, and why should observers track these hierarchies so closely? This paper proposes symmetry as an answer to both questions. By combining principles from information theory, group theory, and statistical mechanics, it is shown that dynamical processes that are equivariant with respect to a symmetry group give rise to multiple emergent macroscopic levels arranged according to the algebraic structure of the symmetry. The same symmetries shape the Bayesian beliefs of an observer with only partial access to the system, yielding a matching hierarchy of \"abstract\" beliefs that can be updated autonomously at different levels of resolution. These ideas are illustrated in Hopfield networks, where familiar macroscopic quantities emerge from known symmetries, and in Boolean models of gene regulation, where symmetries are instead found from the dynamics. The computational advantages provided by symmetry are showcased in Ehrenfest diffusion and epidemic modeling, where abstract beliefs enable Bayesian inference over exponentially large state spaces. These results identify symmetry as a sufficient mechanism for hierarchical emergence and-at the same time-for the capacity of abstract beliefs to mirror the systems they track, making feasible inferential problems that would otherwise be intractable.",
+      "doi": "10.1126/sciadv.aeh0773",
+      "url": "https://doi.org/10.1126/sciadv.aeh0773",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出以对称性统一解释层级涌现与抽象信念的新理论框架，兼具普适机制和方法学价值",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:45:25.119683Z"
+      }
+    },
+    {
+      "pmid": "43024719",
+      "title": "Aneuploidy impairs B cell development but accelerates their MYC-driven transformation.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Weiss Johannes G",
+        "Petermann Paul Y",
+        "Rigato Irene",
+        "Lohmüller Michael",
+        "Honold Felix",
+        "Schapfl Marina",
+        "et al."
+      ],
+      "abstract": "Chromosomal instability (CIN) is an established driver of aneuploidy and cell death. Here, we investigate the role of apoptosis as a barrier against CIN-driven aneuploidy in B lymphocytes. We found that impairment of their spindle assembly checkpoint via deletion of Mitotic Arrest Deficient 2-Like 1 or mutation of Monopolar Spindle 1 kinase curtails B cell survival. A CRISPR screen identified intermediates of mitochondrial apoptosis as critical, which we confirmed in vivo by overexpression of a B cell-restricted BCL2 transgene, outperforming loss of P53. Notably, cell death inhibition by BCL2 was insufficient to cause aneuploidy-driven B cell transformation, while loss of P53 strongly synergized with tumors featuring stochastic aneuploidies. In contrast, high cell death rates rapidly select for specific karyotypes, facilitating aneuploid tumor cell survival in Eμ-Myc transgenic mice. Hence, cell death inhibition fails to allow CIN-driven aneuploidies to prevail. In contrast, BCL2-regulated apoptosis selects viable aneuploid tumor karyotypes in the presence of oncogenic MYC, a notion with implications for the clinical use of BCL2-targeting therapies.",
+      "doi": "10.1126/sciadv.aef2143",
+      "url": "https://doi.org/10.1126/sciadv.aef2143",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Aneuploidy",
+        "Animals",
+        "Cell Transformation, Neoplastic",
+        "B-Lymphocytes",
+        "Apoptosis",
+        "Mice",
+        "Proto-Oncogene Proteins c-myc",
+        "Proto-Oncogene Proteins c-bcl-2",
+        "Tumor Suppressor Protein p53",
+        "Mice, Transgenic"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T03:54:56.738705Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示BCL2凋亡在CIN非整倍体背景下选择可存活肿瘤核型的机制，具有可迁移的演化与治疗洞察",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:45:36.032150Z"
+      }
+    },
+    {
+      "pmid": "43024697",
+      "title": "GEX1-mediated semigamy induces both maternal and paternal haploids in cotton.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Li Tengyu",
+        "Pan Jingwen",
+        "Li Yan",
+        "Yao Jinbo",
+        "Fang Shengtao",
+        "Cao Zongpeng",
+        "et al."
+      ],
+      "abstract": "How semigamy generates haploids during double fertilization has remained elusive for more than six decades. Here, we identify Gamete Expressed 1 (GEX1) as the gene underlying semigamy and show that it mediates dual-origin haploid induction in cotton. A naturally occurring mutation in GEX1 disrupts normal nuclear membrane fusion during fertilization, resulting in delayed or incomplete karyogamy. Cytological analyses reveal that delayed karyogamy allows the closely apposed but unfused gametic nuclei to undergo independent mitotic divisions, giving rise to maternal haploids, paternal haploids, and chimeric progeny. CRISPR-Cas9-mediated disruption of GEX1 reproduced the characteristic defects in nuclear fusion and enabled both maternal and paternal haploid induction within a single generation. Together, our findings uncover a genetically tractable mechanism underlying semigamy that links nuclear membrane fusion dynamics to haploid formation and establish a versatile strategy for rapidly generating doubled haploids from both parental genomes to accelerate crop breeding.",
+      "doi": "10.1126/sciadv.aei1433",
+      "url": "https://doi.org/10.1126/sciadv.aei1433",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Haploidy",
+        "Gossypium",
+        "Plant Proteins",
+        "CRISPR-Cas Systems",
+        "Mutation",
+        "Fertilization"
+      ],
+      "abstract_zh": "半配生殖如何在双受精过程中产生单倍体，六十多年来一直未解。本研究鉴定出配子表达基因1（GEX1）是半配生殖的遗传基础，并证明其在棉花中介导双亲来源的单倍体诱导。GEX1 中的一个天然突变破坏了受精过程中的正常核膜融合，导致核配延迟或不完全。细胞学分析表明，延迟的核配使紧密并列但未融合的配子核能够进行独立的有丝分裂，从而产生母本单倍体、父本单倍体和嵌合后代。CRISPR-Cas9 介导的 GEX1 敲除重现了核融合的特征性缺陷，并在单个世代内实现了母本和父本单倍体诱导。综上，本研究揭示了一个遗传上可操作的半配生殖机制，将核膜融合动态与单倍体形成联系起来，并建立了一种从双亲基因组快速产生加倍单倍体的通用策略，以加速作物育种。",
+      "key_findings": [
+        "鉴定 GEX1 为半配生殖基因，天然突变破坏核膜融合导致核配延迟或不完全。",
+        "延迟核配使未融合配子核独立有丝分裂，产生母本、父本单倍体及嵌合后代。",
+        "CRISPR-Cas9 敲除 GEX1 重现核融合缺陷，单世代实现双亲单倍体诱导。"
+      ],
+      "translated_at": "2026-11-16T03:55:29.717577Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示semigamy分子机制并建立双亲单倍体诱导新策略，兼具机制洞察与可迁移育种方法价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:46:07.650546Z"
+      }
+    },
+    {
+      "pmid": "43013649",
+      "title": "Evolutionarily reinforced GC-rich motif enables non-AUG translation in mammals under eIF1/5MP-mediated fidelity control.",
+      "journal": "Sci Adv",
+      "authors": [
+        "Furukawa Haruyuki",
+        "Banerjee Abhineet",
+        "Tidu Antonin",
+        "Bardiya Nirmala",
+        "Ishiguro Susumu",
+        "Singh Chingakham Ranjit",
+        "et al."
+      ],
+      "abstract": "Non-AUG translation contributes to proteome diversity, but its regulatory principles remain unclear. Here, we show that a GCC-rich upstream extension, termed the NAT1 motif, acts as a potent enhancer of near-cognate initiation in mammals. Cell-free and reporter assays revealed that eIF1 and 5MP act as conserved inhibitors of non-AUG initiation across mammals and plants, while the NAT1 motif enables enhanced initiation within this fidelity framework. Mutational analysis identified -6 and -7 positions within the GCC repeat as key determinants of motif activity. Genome-wide analyses uncovered evolutionary depletion of NAT1-type non-AUG codons in human 5'UTRs, suggesting purifying selection against excessive initiation. Nevertheless, more than a hundred retained sites are associated with genes involved in cell proliferation and migration, suggesting that regulated non-AUG initiation may contribute to disease-relevant translational programs. The motif's enrichment within GCC repeats further suggests a mechanistic link to repeat-associated non-AUG translation.",
+      "doi": "10.1126/sciadv.aek4290",
+      "url": "https://doi.org/10.1126/sciadv.aek4290",
+      "pub_date": "2026-Nov-13",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Animals",
+        "Eukaryotic Initiation Factor-1",
+        "Evolution, Molecular",
+        "Protein Biosynthesis",
+        "5' Untranslated Regions",
+        "Nucleotide Motifs",
+        "Codon, Initiator",
+        "Mammals"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T03:56:03.899309Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "发现并解析增强非AUG起始的保守GC-rich motif及其进化选择，具有普适翻译调控机制新意",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:46:14.751505Z"
+      }
+    },
+    {
+      "pmid": "43021549",
+      "title": "Transforming macromolecular structures into simulations of self-assembly with ioNERDSS.",
+      "journal": "Biophys J",
+      "authors": [
+        "Ying Yue Moon",
+        "Sang Mankun",
+        "Au Gabriel",
+        "Chhibber Smriti",
+        "Du Yufeng",
+        "Fischer Jonathan A",
+        "et al."
+      ],
+      "abstract": "Macromolecular self-assembly is a fundamental process in living and engineered systems, producing molecular machines like the ribosome or highly symmetric viral capsids. Thanks to sources like the Protein Data Bank (PDB) and AlphaFold3, the final target complexes are often known, but these static structures do not provide information on the self-assembly process directly. Computational models provide critical tools to study these essential pathways of self-assembly, but substantial coarse graining of assembly subunits is necessary to achieve computational tractability of these relatively slow processes while retaining multi-valency. While local interactions overcome the often-prohibitive enumeration of all possible assembly intermediates, they must ensure global structural constraints are met. We here demonstrate ioNERDSS, a user-friendly Python package that transforms 3D atomic protein structures into coarse-grained (CG) models for immediate simulation with the stochastic reaction-diffusion NERDSS software, converting static structures into time-resolved assembly trajectories. With ioNERDSS, each protein chain is defined by a rigid subunit with discrete interfaces and explicit orientational constraints that enforce a structured assembly. Repeated subunits (such as in viral capsids) are regularized to preserve the target topology across distinct stochastic assembly pathways, supporting assembly of structures with thousands of subunits. We initialize pairwise binding affinities using ML prediction tools, and our default CG models are all constrained by thermodynamic reversibility to reach an equilibrium steady-state. The binding rates and subunit abundances necessary to perform simulations are initialized at default values but represent key variables that users should tune to test hypotheses on assembly pathways or to optimize models to experimental datasets. Benchmarking on over 50,000 PDB structures shows the majority of CG models will stochastically assemble into target structures. The ioNERDSS Python library links with open-source tools to facilitate fast and user-friendly structure validation and analysis of thermodynamic, kinetic, and nonequilibrium drivers of macromolecular self-assembly.",
+      "doi": "10.1016/j.bpj.2026.11.011",
+      "url": "https://doi.org/10.1016/j.bpj.2026.11.011",
+      "pub_date": "2026-Nov-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "大分子自组装是生命系统和工程系统中的基本过程，可产生核糖体或高度对称的病毒衣壳等分子机器。借助蛋白质数据银行（PDB）和 AlphaFold3 等来源，最终目标复合物通常是已知的，但这些静态结构并不能直接提供自组装过程的信息。计算模型为研究这些关键的自组装途径提供了重要工具，但需要对组装亚基进行大量粗粒化，才能在保持多价性的同时，使这些相对缓慢的过程在计算上可处理。局部相互作用虽然避免了通常难以实现的对所有可能组装中间体的枚举，但必须确保满足全局结构约束。我们在此展示了 ioNERDSS，一个用户友好的 Python 包，它将三维原子蛋白质结构转换为粗粒化（CG）模型，以便用随机反应-扩散软件 NERDSS 立即进行模拟，从而将静态结构转化为时间分辨的组装轨迹。利用 ioNERDSS，每条蛋白质链被定义为一个刚性亚基，具有离散界面和明确的取向约束，以强制实现有序组装。重复亚基（如病毒衣壳中的亚基）经过正则化，以在不同的随机组装途径中保持目标拓扑，支持包含数千个亚基的结构组装。我们使用机器学习预测工具初始化成对结合亲和力，默认的 CG 模型均受热力学可逆性约束，以到达平衡稳态。执行模拟所需的结合速率和亚基丰度以默认值初始化，但它们是用户应调节的关键变量，以检验组装途径假说或根据实验数据集优化模型。对超过 50,000 个 PDB 结构的基准测试表明，大多数 CG 模型能够随机组装成目标结构。ioNERDSS Python 库与开源工具连接，便于快速、用户友好地进行结构验证，并分析大分子自组装的热力学、动力学和非平衡驱动因素。",
+      "key_findings": [
+        "开发ioNERDSS，将静态原子结构自动转化为可模拟的粗粒化模型，实现时间分辨自组装轨迹。",
+        "利用离散界面、取向约束和亚基正则化，在随机组装中保持目标拓扑，支持数千亚基复合物。",
+        "基准测试超5万个PDB结构，多数CG模型能组装成目标结构，并可分析热力学和动力学驱动因素。"
+      ],
+      "translated_at": "2026-11-16T03:56:36.248108Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "开发了将原子结构自动转为粗粒化自组装模拟的新工具ioNERDSS，具备可迁移的方法学能力与大规模基准验证。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:46:18.968417Z"
+      }
+    },
+    {
+      "pmid": "43020031",
+      "title": "A single-cell and spatial 3D multi-omic atlas of developing human basal ganglia.",
+      "journal": "Cell",
+      "authors": [
+        "Heffel Matthew G",
+        "Xu Heng",
+        "Pastor-Alonso Oier",
+        "Li Xinzhe",
+        "Baig Mohammad S",
+        "Ghoor Rayyan Irfan",
+        "et al."
+      ],
+      "abstract": "Human basal ganglia (BG) neurons and inhibitory interneurons originate in the ganglionic eminences (GEs), transient structures in the ventral prenatal brain. This study delineates the specification and maturation of GEs and GE-derived neurons using single-nucleus methyl-3C sequencing (snm3C-seq), spatial transcriptomics, and single-molecule chromatin + RNA imaging, and we found heterogeneous temporal progression across GE subregions. Spiny projection neurons (SPNs), the principal cells of the BG, acquire distinct subtypes through synchronized 3D-epigenomic remodeling, in contrast to the asynchronous maturation of other neuron types. Oligodendrocyte differentiation involves a transient short-range chromatin state during infancy, showing that the short-range and long-range chromatin conformations previously linked to terminal glial and neuronal fates can also be transient. The temporal cortex matured epigenomically faster than other cortical regions during this period. Lastly, SPNs were enriched in genetic risk for neuropsychiatric disease. Our study extends findings on unique 3D-epigenomic dynamics during human brain development.",
+      "doi": "10.1016/j.cell.2026.10.008",
+      "url": "https://doi.org/10.1016/j.cell.2026.10.008",
+      "pub_date": "2026-Nov-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Basal Ganglia",
+        "Ganglionic Eminence",
+        "Neurons",
+        "Single-Cell Analysis",
+        "Chromatin",
+        "Multiomics",
+        "Neurodevelopment",
+        "Female",
+        "Spatial Transcriptomics"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null
+    },
+    {
+      "pmid": "43020027",
+      "title": "Spatial and regulatory organization of cell identity across the primate subcortex.",
+      "journal": "Cell",
+      "authors": [
+        "Dan Shu",
+        "Turner Meghan A",
+        "DeBerardine Michael",
+        "Caceres Lakme",
+        "Nieto-Caballero Victor E",
+        "Schembri Jessica",
+        "et al."
+      ],
+      "abstract": "Mammalian brain cell identity is shaped by intrinsic factors and external context. We present a spatially resolved transcriptomic and gene regulatory atlas of cell types across all subcortical regions in a primate, the common marmoset. Dense sampling and cross-species integration revealed spatially precise neuronal assemblies, including ones in complex midbrain and diencephalic structures. Chromatin accessibility and transcriptional identity are spatially tuned within and across subcortical structures; spatial gradients within hippocampal subfields are orchestrated by graded transcription factors acting through graded enhancers. The primate-expanded thalamic γ-aminobutyric acid (GABAergic) population shares transcriptional and regulatory syntax with conserved midbrain populations, reflecting an evolutionary adaptation compared with rodents. Similar regional expression across cell types can arise by distinct regulatory architectures, as observed in telencephalic astrocytes and neurons. Conversely, distant cell types can share regulatory programs despite divergent identities: striatal GABAergic spiny projection neurons and telencephalic glutamatergic neurons share a postsynaptic regulatory program despite divergent lineages, regions, and neurotransmitter identities.",
+      "doi": "10.1016/j.cell.2026.10.007",
+      "url": "https://doi.org/10.1016/j.cell.2026.10.007",
+      "pub_date": "2026-Nov-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Neurons",
+        "Callithrix",
+        "GABAergic Neurons",
+        "Transcriptome",
+        "gamma-Aminobutyric Acid",
+        "Hippocampus",
+        "Gene Regulatory Networks",
+        "Astrocytes",
+        "Male"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T03:58:37.879201Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "通过空间多组学揭示灵长类皮层下细胞身份的空间调控逻辑，提出分级增强子与跨谱系共享调控程序等可迁移机制。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:47:46.641815Z"
+      }
+    },
+    {
+      "pmid": "43020019",
+      "title": "Cross-species multiomic atlas of the primate basal ganglia.",
+      "journal": "Cell",
+      "authors": [
+        "Johansen Nelson J",
+        "Fu Yuanyuan",
+        "Schmitz Matthew",
+        "Dubuc Alma",
+        "Kempynck Niklas",
+        "Wirthlin Morgan",
+        "et al."
+      ],
+      "abstract": "The basal ganglia (BG) are conserved brain regions essential for motor control, learning, emotion, and cognition and are implicated in neurological and psychiatric disease, yet a unified cross-species taxonomy of BG cell types is lacking. We present a multiomic consensus atlas of 1.8 million nuclei from humans, macaques, and marmosets spanning eight BG structures, integrating gene expression, open chromatin, and spatial profiling. Alignment across species and to mouse and human whole-brain atlases identifies 61 homologous cell types conserved over 76 million years. Dorsal-ventral spatial identity is more conserved than D1/D2 receptor or striosome/matrix identity, and striatum (STR) D2 SMYD2-HTR7 spiny projection neurons have distinct molecular, electrophysiological, and morphological features. Cis-regulatory analysis reveals conserved sequence grammars that encode cell identity and inform viral targeting, and cell-type-resolved mapping localizes psychiatric and neurodegenerative risk to specific BG cell populations. This work provides a foundational resource for BG evolution, function, and disease.",
+      "doi": "10.1016/j.cell.2026.10.012",
+      "url": "https://doi.org/10.1016/j.cell.2026.10.012",
+      "pub_date": "2026-Nov-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Basal Ganglia",
+        "Humans",
+        "Multiomics",
+        "Neurons",
+        "Mice",
+        "Primates",
+        "Medium Spiny Neurons",
+        "Callithrix",
+        "Species Specificity"
+      ],
+      "abstract_zh": "将英文摘要翻译为准确、流畅的中文简体",
+      "key_findings": [
+        "核心发现1...",
+        "核心发现2...",
+        "核心发现3..."
+      ],
+      "translated_at": "2026-11-16T04:00:14.034142Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "跨物种多组学共识图谱与顺式调控语法，提供可迁移的细胞分类和靶向框架，非局部应用。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:47:57.558159Z"
+      }
+    },
+    {
+      "pmid": "43020016",
+      "title": "Stepping (hi)stones: Charting a single-cell multiomic path toward understanding the human brain.",
+      "journal": "Cell",
+      "authors": [
+        "Zaghi Mattia",
+        "Dang Yonglong",
+        "Castelo-Branco Gonçalo"
+      ],
+      "abstract": "In this issue of Cell, two single-cell multiomic atlases jointly profile transcription and histone modifications across different regions of the adult human brain, revealing cell-type-specific regulatory landscapes, developmental epigenetic memory, and improved interpretation of neurological variants. These studies establish a framework for understanding human brain cell identity, evolution, and pathology.",
+      "doi": "10.1016/j.cell.2026.10.020",
+      "url": "https://doi.org/10.1016/j.cell.2026.10.020",
+      "pub_date": "2026-Nov-12",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Humans",
+        "Brain",
+        "Multiomics",
+        "Single-Cell Analysis",
+        "Epigenesis, Genetic",
+        "Single-Cell Gene Expression Analysis",
+        "Animals",
+        "Histones"
+      ],
+      "abstract_zh": "在本期《细胞》中，两项单细胞多组学图谱联合描绘了成人大脑不同区域的转录和组蛋白修饰，揭示了细胞类型特异的调控景观、发育表观遗传记忆，并改进了对神经系统相关变异的解读。这些研究为理解人类脑细胞身份、进化和病理奠定了框架。",
+      "key_findings": [
+        "两项单细胞多组学图谱联合分析成人大脑不同区域的转录与组蛋白修饰",
+        "揭示细胞类型特异的调控景观和发育表观遗传记忆",
+        "改进神经系统相关变异的解读，建立理解脑细胞身份、进化与病理的框架"
+      ],
+      "translated_at": "2026-11-16T04:00:26.030657Z"
+    },
+    {
+      "pmid": "43015472",
+      "title": "Epigenetic heterogeneity in breast tumours informs diagnosis and prognosis.",
+      "journal": "Nature",
+      "authors": [
+        "Furth Noa",
+        "Riemenschneider Christina",
+        "Arieli Yishai",
+        "Avni Matan",
+        "Povolotski Michael-Yakov",
+        "Yung Hadas",
+        "et al."
+      ],
+      "abstract": "Breast cancer, the most diagnosed cancer among women, is stratified by gene expression patterns into luminal and basal-like subtypes, and the latter is associated with worse prognosis1-3. Recent advances in single-cell technologies have underscored the presence of intratumour heterogeneity, which poses substantial challenges in cancer treatment and achieving long-term disease-free survival4-7. Here we extensively profile epigenetic heterogeneity in a cohort of treatment-naive human luminal tumours, which were obtained directly after surgical resection. By applying a single-cell epigenetic approach based on cytometry by time-of-flight, we identify a recurrent subpopulation of basal-like cells in luminal tumours with a conserved epigenetic signature across patients. These basal-like cells, also identified by deconvolution of whole-genome DNA methylation patterns, are characterized by high expression of aggressive oncogenic traits and downregulation of hormone receptor signalling. Direct comparison of single-cell proteomic and genomic profiling of monomethylation and trimethylation of histone 3 on lysine 4 revealed that these marks are key features associated with loss of luminal identity. Finally, we highlight the potential of concomitant single-molecule profiling of histone modifications on cell-free nucleosomes in blood as an epigenetic liquid biopsy approach for early diagnosis of breast cancer. Moreover, the epigenetic basal signature measured in blood is linked to prognosis, which enables the identification of patients at increased risk for disease relapse.",
+      "doi": "10.1038/s41586-026-11230-y",
+      "url": "https://doi.org/10.1038/s41586-026-11230-y",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:00:58.052119Z"
+    },
+    {
+      "pmid": "43015470",
+      "title": "The molecular basis of replication fork restart via repriming by PRIMPOL.",
+      "journal": "Nature",
+      "authors": [
+        "Park Jinho",
+        "Lynch Luke D",
+        "Blanco-Romero Elena",
+        "Masdemont-Maestro Roberto",
+        "Méndez Juan",
+        "Chistol Gheorghe"
+      ],
+      "abstract": "Eukaryotic genomes are exposed to numerous sources of DNA damage that impede replication. Only a decade ago, repriming by the primase-polymerase PRIMPOL was identified as a pathway that enables cells to tolerate DNA damage1-4. However, the molecular mechanism that underlies repriming remains poorly understood, and it is unclear how PRIMPOL is precisely targeted to stalled forks, where along single-stranded DNA PRIMPOL binds and how PRIMPOL is regulated to minimize error-prone DNA synthesis. Here, to dissect the molecular basis of repriming, we perform real-time single-molecule imaging in nuclear extracts that recapitulate genome maintenance. We directly visualize how stalled forks restart through repriming. We show that PRIMPOL is recruited to stalled forks through an interaction with the replicative helicase CDC45-MCM2-7-GINS (CMG). This facilitates primer handover from PRIMPOL to the high-fidelity polymerase ε, minimizing mutagenic DNA synthesis. At near-physiological concentrations, PRIMPOL reprimes leading strands in a CMG-dependent manner and polymerase ε extends those primers. This primary mode of repriming does not require DNA damage checkpoint signalling. PRIMPOL overexpression and checkpoint activation promote a secondary mode of repriming, whereby PRIMPOL restarts DNA synthesis far from CMG and polymerase δ extends those primers. Our data reveal a simple yet effective mechanism that directs PRIMPOL's activity to stalled forks awaiting restart, and suggest a strategy to inhibit the repriming pathway.",
+      "doi": "10.1038/s41586-026-11276-y",
+      "url": "https://doi.org/10.1038/s41586-026-11276-y",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:01:56.887432Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "用实时单分子成像揭示PRIMPOL复制叉重引发机制，提出CMG依赖的引物交接模型，具可迁移机制洞察。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:49:14.683450Z"
+      }
+    },
+    {
+      "pmid": "43015465",
+      "title": "Suppression of epithelial proliferation and tumorigenesis by IgA.",
+      "journal": "Nature",
+      "authors": [
+        "Donaldson Gregory P",
+        "Lima Dos Reis Gabriella",
+        "Saad Marwa",
+        "Wichmann Christopher",
+        "Mamede Izabela",
+        "Chen Guo",
+        "et al."
+      ],
+      "abstract": "Immunoglobulin A (IgA) is the most abundant antibody isotype produced by mammals, and has a specialized role in mucosal homeostasis1. IgA is constantly secreted into the intestinal lumen and binds to commensal microorganisms to regulate their colonization and function2,3, with unclear implications for health. IgA deficiency is common in humans, but difficult to study, because of its complex aetiology and comorbidities4-8. Here we use genetically and environmentally controlled mice to show that various models of IgA deficiency result in increased susceptibility to several models of endogenous colorectal cancer. Cellular and molecular analyses revealed that, in the absence of IgA, colonic epithelial cells induce antibacterial factors and accelerate cell cycling in response to the microbiota. Oral treatment with IgA was sufficient to reduce steady-state proliferation and protect mice from tumours; however, this function was due to the structure of the antibody rather than to binding specificity. In a reductionist culture system, IgA directly suppressed epithelial growth. Co-immunoprecipitation mass spectrometry and targeted CRISPR screening identified DMBT1 as an IgA-binding epithelial surface protein that is required for IgA-mediated suppression of proliferation. Together, IgA and DMBT1 tune the normal cycling of absorptive colonocyte progenitors. In IgA-knockout mice, deleting the transmembrane and cytoplasmic signalling portions of DMBT1 was sufficient to reverse both the increased epithelial cell proliferation and the increased tumour susceptibility seen in these mice. These experiments establish a homeostatic function for IgA in tempering physiological epithelial responses to the microbiota to maintain mucosal health.",
+      "doi": "10.1038/s41586-026-11264-2",
+      "url": "https://doi.org/10.1038/s41586-026-11264-2",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "免疫球蛋白A（IgA）是哺乳动物产生的最丰富的抗体同种型，在黏膜稳态中具有专门作用。IgA持续分泌到肠腔中，并与共生微生物结合以调节其定植和功能，但其对健康的影响尚不清楚。IgA缺乏在人类中很常见，但由于其复杂的病因和合并症而难以研究。在这里，我们使用遗传和环境控制的小鼠表明，多种IgA缺乏模型导致对内源性结直肠癌的易感性增加。细胞和分子分析揭示，在缺乏IgA的情况下，结肠上皮细胞会诱导抗菌因子并加速细胞周期，以响应微生物群。口服IgA足以降低稳态增殖并保护小鼠免受肿瘤侵害；然而，该功能源于抗体的结构而非结合特异性。在简化培养系统中，IgA直接抑制上皮生长。免疫共沉淀质谱和靶向CRISPR筛选鉴定出DMBT1是一种与IgA结合的上皮表面蛋白，是IgA介导的增殖抑制所必需的。总之，IgA和DMBT1调节吸收性结肠细胞祖细胞的正常周期。在IgA敲除小鼠中，删除DMBT1的跨膜和胞质信号传导部分足以逆转这些小鼠中上皮细胞增殖增加和肿瘤易感性增加。这些实验确立了IgA在缓和上皮对微生物群的生理反应以维持黏膜健康方面的稳态功能。",
+      "key_findings": [
+        "IgA缺乏增加小鼠对内源性结直肠癌的易感性。",
+        "IgA通过抗体结构直接抑制结肠上皮增殖，不依赖抗原结合特异性。",
+        "DMBT1是IgA结合的上皮表面蛋白，删除其信号域可逆转IgA缺失小鼠的过度增殖和肿瘤易感。"
+      ],
+      "translated_at": "2026-11-16T04:02:14.624374Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示IgA通过结构而非抗原特异性结合DMBT1抑制结肠上皮增殖的全新稳态机制，具有明显机制新意和可迁移概念价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:49:21.560677Z"
+      }
+    },
+    {
+      "pmid": "43014306",
+      "title": "Multilayer hydrodynamic modeling of the airway surface liquid reveals impaired transport in HYDIN-related primary ciliary dyskinesia.",
+      "journal": "Biophys J",
+      "authors": [
+        "Sedaghat Mohammadhadi",
+        "Anagnostopoulou Pinelopi",
+        "Nawroth Janna C",
+        "Müller Loretta",
+        "Ling Feng",
+        "Pukaluk Anna",
+        "et al."
+      ],
+      "abstract": "Mucociliary clearance (MCC) is a primary defense mechanism of the respiratory system, driven by the coordinated beating of motile cilia and the nonlinear viscoelastic properties of airway mucus within the airway surface liquid (ASL). Impairment of ciliary function, such as in HYDIN-related primary ciliary dyskinesia (PCD), severely compromises mucus transport and leads to chronic respiratory disease. In this study, we developed a three-dimensional, experimentally informed computational model of a representative human nasal ASL segment to quantify MCC efficiency under healthy and HYDIN conditions. Ciliary beat patterns were obtained from high-speed video microscopy of cultured nasal epithelial cells and converted into continuous analytical waveforms for numerical implementation. Mucus rheological properties were characterized from the same samples using differential dynamic microscopy: storage and loss moduli were measured, and the shear-rate-dependent viscosity was estimated from the resulting complex viscosity via the Cox-Merz approximation; both were fitted with multimode viscoelastic constitutive models. These experimentally derived kinematic and rheological inputs were integrated into the governing equations of ASL flow to resolve the spatiotemporal velocity field and net mucus transport. The simulations show that healthy cilia generate strong streamwise flow and coherent mucus transport, whereas HYDIN cilia exhibit reduced beat amplitude and impaired recovery-stroke bending, resulting in substantially lower streamwise velocity and an approximately 13-fold reduction in mean ASL transport velocity. Cross-condition simulations indicate that this reduction is predominantly driven by altered ciliary kinematics, while differences in mucus rheology have a comparatively smaller effect. This study provides one of the first fully three-dimensional, experimentally informed computational comparisons of healthy and HYDIN-related MCC. The proposed framework provides a physiologically informed platform for investigating mucociliary dysfunction and may support future studies of inhaled particle transport and drug delivery following incorporation of appropriate particle transport, deposition, and drug-mucus interaction physics.",
+      "doi": "10.1016/j.bpj.2026.10.017",
+      "url": "https://doi.org/10.1016/j.bpj.2026.10.017",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:02:46.411245Z"
+    },
+    {
+      "pmid": "43013695",
+      "title": "PhysInfer: A physics-constrained neural network for adaptive inference of transcriptional bursting from single-cell RNA-seq.",
+      "journal": "PLoS Comput Biol",
+      "authors": [
+        "Zeng Xiaodong",
+        "Zhang Jingwen",
+        "Li Shan",
+        "Wang Haohua"
+      ],
+      "abstract": "Single-cell RNA sequencing (scRNA-seq) has established that gene expression is driven by stochastic transcriptional bursting. However, inferring burst dynamics from static scRNA-seq snapshots is fundamentally constrained by parameter unidentifiability and model topology mismatch. Here, we propose PhysInfer, an unsupervised framework that integrates a physics-constrained neural network with adaptive model selection and parameter decoupling. A physics-informed loss function, combining stationary-distribution likelihood with zero-count anchoring, reparameterizes the optimization from unidentifiable microscopic rates to an interpretable macroscopic burst-quantity representation of burst size and burst frequency, thereby providing an interpretable parameterization for assessing practical recoverability in static data. Validation on synthetic data with known ground-truth parameters confirms high inference accuracy in low-to-medium activation regimes and shows that recovery of BS and productive BF becomes increasingly condition-dependent as the ON-state probability approaches saturation; under different recovery criteria, the condition-specific upper Pon limit for simultaneously recovering BS and productive BF varies with cell number and capture efficiency. Applied to a mouse embryonic fibroblast (MEF) dataset, PhysInfer reconstructs a transcriptional dynamic manifold across the 2,137-gene secondary BIC analysis set, showing cross-gene variation in fitted burst frequency and burst size. A model-specific stationary likelihood combined with zero-count anchoring improves robustness to zero-heavy observations. The adaptive topology module further identifies a distinct subset of genes with stable support for an effective sequential 3-state representation, revealing distributional structure beyond that captured by standard 2-state fitting. PhysInfer thus provides a robust, topology-adaptive, and interpretable solution for characterizing transcriptional kinetic patterns from static single-cell transcriptomic snapshots.",
+      "doi": "10.1371/journal.pcbi.1014904",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014904",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出物理约束神经网络与自适应模型选择的新框架，改进了静态scRNA-seq转录爆发动力学推断的可识别性与可解释性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:49:56.957254Z"
+      }
+    },
+    {
+      "pmid": "43013686",
+      "title": "Virus-like particles enable highly efficient gene editing across porcine and avian in vitro, ex vivo, and in ovo models.",
+      "journal": "PLoS Biol",
+      "authors": [
+        "Pauli Theresa M",
+        "von Heyl Theresa",
+        "Rieblinger Beate",
+        "Schleibinger Sabrina Teresa",
+        "Liang Wei",
+        "Schmauser Antonia",
+        "et al."
+      ],
+      "abstract": "Pigs and chickens are not only the most important livestock species for global food production but also serve as key model organisms in various research disciplines. The pig is widely used in translational research due to its anatomical and physiological similarity to humans, providing valuable insights into immunology, metabolism, and disease mechanisms. In contrast, the chicken has become an essential model for studies related to poultry health, animal welfare, and developmental biology. Its externally developing embryo offers exceptional accessibility for experimental manipulation. Recent advances in genome editing technologies, particularly CRISPR/Cas9, have further expanded the potential of these species for functional genomic studies, although the efficient delivery of such tools remains a major challenge. Here, we overcome this delivery limitation by using virus-like particles (VLPs). We evaluated VLPs as delivery vehicles for genome engineering tools in porcine and avian cultures, two key livestock species at the human-animal interface. VLP-mediated delivery enabled efficient Cre recombination and high CRISPR/Cas9 editing rates in porcine cells, organoids, and oocytes, particularly when multiplexed. In chickens, VLPs supported robust Cre recombination and Cas9-mediated editing in cell culture, tracheal organ cultures, and in ovo. Reporter VLPs and dCas9 VLPs further demonstrated the versatility of this platform across porcine and avian systems. Together, these findings establish VLPs as an efficient and time-saving strategy for gene editing in livestock cultures across in vitro, ex vivo and in ovo systems, with potential future applications for animal health, agricultural productivity, and translational One Health research.",
+      "doi": "10.1371/journal.pbio.3004105",
+      "url": "https://doi.org/10.1371/journal.pbio.3004105",
+      "pub_date": "2026-Nov-11",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:05:22.272548Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "建立并验证病毒样颗粒递送CRISPR/Cas9与Cre的跨物种基因编辑平台，具有方法学可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:50:01.976243Z"
+      }
+    },
+    {
+      "pmid": "43010679",
+      "title": "Front protrusion oscillations indicate positive feedback from protrusion to F-actin network extension in MDA-MB-231 cells, a modeling study.",
+      "journal": "Biophys J",
+      "authors": [
+        "Eberhard Rainer Marcel",
+        "Rädler Joachim Oskar",
+        "Falcke Martin"
+      ],
+      "abstract": "Cells moving on one-dimensional lanes exhibit a large variety of coexisting morphodynamic states. MDA-MB-231 cells can show steady or oscillating length while moving, or they can be stationary with steady or oscillating length. Some moving cells exhibit only oscillations of the back protrusion, and some oscillating protrusions at the front and back. The latter state has not been reproduced by any biophysical model, yet. We present a biophysical model for one-dimensional cell motion, which reproduces the variety of motion characteristics observed in experiments. It describes the motion of the body, the front and the back protrusion of a cell, and is based on the force balances at the protrusions edges, protrusion interaction by membrane tension, and the noisy clutch of retrograde flow friction. Integrin signaling controls drag and friction coefficients. Oscillatory morphodynamics arise from stick-slip transitions of the clutch mechanism. Additionally, our model formulates the idea that integrin in nascent adhesions activates Rac, which increases the F-actin network extension rate. This amplification of the polymerization rate at the front protrusion gives rise to moving states with two oscillating protrusions. The increase of the polymerization rate accelerates retrograde flow, making disengagement of the clutch at the front more likely. Therefore, repeated pulling of the back protrusion more significantly affects the motion of the front protrusion. Front oscillations are thus induced by back oscillations as a result of mechanical protrusion interaction. The refined model reproduces all morphodynamic states of one-dimensional cell motion observed in our experiments on MDA-MB-231 cells.",
+      "doi": "10.1016/j.bpj.2026.11.007",
+      "url": "https://doi.org/10.1016/j.bpj.2026.11.007",
+      "pub_date": "2026-Nov-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "在一维泳道上运动的细胞表现出多种共存的形态动力学状态。MDA-MB-231 细胞在运动时可表现出稳定或振荡的长度，也可静止并具有稳定或振荡的长度。一些运动细胞仅表现出后部突起的振荡，一些则在前部和后部均出现突起振荡。后一种状态尚未被任何生物物理模型复现。我们提出了一个一维细胞运动的生物物理模型，可复现实验中观察到的多种运动特征。该模型描述细胞体、前部和后部突起的运动，基于突起边缘处的力平衡、膜张力介导的突起相互作用以及逆行流动摩擦的噪声离合器。整合素信号传导控制拖曳和摩擦系数。振荡形态动力学源于离合器机制的粘滑转变。此外，我们的模型提出，新生黏附中的整合素激活 Rac，从而增加 F-肌动蛋白网络延伸速率。前部突起聚合速率的这种放大产生了具有两个振荡突起的运动状态。聚合速率的增加加快逆行流动，使前部离合器的脱离更可能发生。因此，后部突起的反复牵拉更显著地影响前部突起的运动。前部振荡因此由后部振荡通过突起间的机械相互作用诱导。该精化模型复现了我们在 MDA-MB-231 细胞实验中观察到的一维细胞运动的所有形态动力学状态。",
+      "key_findings": [
+        "开发一维细胞运动生物物理模型，可复现MDA-MB-231细胞多种形态动力学状态。",
+        "模型提出新生黏附中整合素激活Rac、增加F-肌动蛋白网络延伸，形成正反馈，产生前后双振荡。",
+        "后部突起振荡通过机械相互作用诱导前部振荡，并增加前部离合器脱离概率。"
+      ],
+      "translated_at": "2026-11-16T04:06:25.516162Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "framework",
+        "reason": "提出新的一维细胞运动生物物理模型，引入突起-肌动蛋白正反馈与黏着-滑动机制，解释多种形态动力学状态，具可迁移建模价值。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:50:07.302619Z"
+      }
+    },
+    {
+      "pmid": "43007941",
+      "title": "Vertebrate paired fins are specified by an ancient dorso-ventral patterning system.",
+      "journal": "PLoS Biol",
+      "authors": [
+        "Dale Rebecca E",
+        "Berger Silke",
+        "Alaei Sara",
+        "Davis Marcus C",
+        "Tulenko Frank J",
+        "Currie Peter D"
+      ],
+      "abstract": "The origin of paired fins was a major event in early vertebrate history that fueled the adaptive radiation of the gnathostome clade. Evidence for the conservation of ancient regulatory systems between paired and median fins supports a model in which appendage-patterning mechanisms first evolved in the midline and were later redeployed to a new embryonic context, the flank. However, while paired fins and limbs are asymmetric along the dorsoventral (DV) axis, the equivalent axis does not exist in median fins, which are symmetric across the midline, raising questions of how DV patterning evolved. Here, we combine genetic tools in zebrafish with comparative expression analyses in representative ray-finned and cartilaginous fishes to show that a subset of limb DV patterning genes are expressed during median fin development. Using genetic lineage tracing of the canonical limb dorsalizing factor lmx1bb, we further demonstrate that, although lmx1bb-derived cells occupy distinct spatial domains across fin types, a subset of this lineage is fated to differentiate into fin ray osteoblasts in both paired and median fins. To test the potential conservation of regulatory modules across fin types, we generated a series of deletion mutants for two known lmx1b mouse limb enhancers, LARM1 and LARM2, that we show are partially conserved upstream of zebrafish lmx1bb. These experiments revealed that LARM function is essential for dorsoventral patterning of the paired pectoral and pelvic fins of zebrafish but is dispensable for formation of the unpaired dorsal and anal fins. Collectively, these data support the conservation of an ancient LARM-Lmx1b dorsal determination system in the paired fins of osteichthyans, challenge models proposing simple co-option of a pre-existing median fin gene regulatory network and suggest that the acquisition of this regulatory module may have been a key early step in the evolution of the paired fin DV patterning axis.",
+      "doi": "10.1371/journal.pbio.3004062",
+      "url": "https://doi.org/10.1371/journal.pbio.3004062",
+      "pub_date": "2026-Nov",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Animals",
+        "Animal Fins",
+        "Body Patterning",
+        "Zebrafish",
+        "Gene Expression Regulation, Developmental",
+        "Zebrafish Proteins",
+        "Transcription Factors",
+        "Extremities",
+        "LIM-Homeodomain Proteins",
+        "Biological Evolution"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:07:52.789594Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示成对鳍背腹轴由古老LARM-Lmx1b调控系统决定，挑战简单共择模型，具有演化发育机制新意。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:50:12.787412Z"
+      }
+    },
+    {
+      "pmid": "43006240",
+      "title": "Cell-free expression and NGS-powered substrate profiling reveal a thermostable metagenomic meganuclease from an extreme environment with novel specificity.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Dorrazehi Gol Mohammad",
+        "Penner Matthew",
+        "Athanasiou Christina",
+        "Boursinhac Lise",
+        "Mobarec Juan Carlos",
+        "Webster Carl I",
+        "et al."
+      ],
+      "abstract": "As an alternative to historical enzyme isolation, metagenomic databases (e.g. MGnify) provide information on vast unculturable microbial diversity, including extreme environments, and constitute an enormous source of functional proteins. Conservative mining of these data by close sequence homology alone tends to identify merely different versions of known enzymes. Here we present a discovery strategy for meganucleases based on wider capture of less homologous enzymes in metagenomic databases, and incorporating metadata with their homology. We use cell-free expression to bypass host incompatibility and the need for purification, along with deep sequencing for experimental assessment of substrate specificity and cleavage pattern, thereby circumventing classical gel-based profiling. Specifically, we discovered the temperature-stable (>55°C), intron-encoded LAGLIDADG meganuclease I-MG11 that recognizes a GC-rich 17 base pair sequence to generate 4-nt palindromic 3'-overhangs-the first monomeric meganuclease to produce such overhangs. Co-folding models of I-MG11 bound to DNA provide a structural context for enzyme-DNA interactions, highlighting differences from other monomeric LAGLIDADG meganucleases (e.g. I-SceI) shaped by InDels (insertion-deletions) in the DNA-binding region that may cause specificity changes. Our strategy streamlines general bona fide identification and annotation of meganucleases, while the unique properties of I-MG11 expand the toolbox of molecular genome engineering.",
+      "doi": "10.1093/nar/gkag992",
+      "url": "https://doi.org/10.1093/nar/gkag992",
+      "pub_date": "2026-Nov-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "DNA",
+        "Enzyme Stability",
+        "High-Throughput Nucleotide Sequencing",
+        "Metagenomics",
+        "Models, Molecular",
+        "Substrate Specificity",
+        "Temperature"
+      ],
+      "abstract_zh": null,
+      "key_findings": null,
+      "translated_at": null,
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出宏基因组挖掘+无细胞表达+NGS底物谱分析的新发现策略，可迁移用于meganuclease鉴定与表征",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:50:21.692640Z"
+      }
+    },
+    {
+      "pmid": "43006236",
+      "title": "Archaeal histones coordinate conserved DNA sequence motifs to promote CRISPR adaptive immunity.",
+      "journal": "Nucleic Acids Res",
+      "authors": [
+        "Patel Pranami",
+        "Treat Ariana R",
+        "Gonzalez Reyaz",
+        "Rajaraman Sucheta",
+        "Cruga Briana N",
+        "Chinea Elizabeth B",
+        "et al."
+      ],
+      "abstract": "Archaea and bacteria acquire resistance to viruses by integrating fragments of foreign DNA at the beginning of a CRISPR locus. In the archaeon Pyrococcus furiosus, histones bind the leader to promote specific integration at the first CRISPR repeat. However, it remains unknown whether archaeal CRISPR leaders contain conserved DNA sequence motifs required for integration. Here, we analyze 542 archaeal CRISPR leaders found across Thermococcales and Methanococcales. We identify 36 motifs found up to 500 bps upstream of archaeal CRISPR loci. Scrambling or truncating novel motifs or histone binding sites found 100-400 bps upstream of the P. furiosus CRISPR modestly decreases integration efficiency. However, mutation of motif T2, which overlaps with the proximal histone site and is adjacent to the CRISPR, ablates both histone-mediated and histone-independent integration. Mutations tiled across T2 reveal that a pyrimidine at position -3 of the leader is required for histone-independent integration, and basepairs -4 to -19 are required for histone-mediated integration. T2 is found in most Thermococcales, and a similar sequence is found in most Methanococcales leaders, suggesting this motif may be a broadly conserved element that facilitates CRISPR adaptive immunity across taxonomic orders. These data shed light on the sequence requirements for histone-mediated DNA integration.",
+      "doi": "10.1093/nar/gkag1172",
+      "url": "https://doi.org/10.1093/nar/gkag1172",
+      "pub_date": "2026-Nov-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [
+        "Histones",
+        "Nucleotide Motifs",
+        "Conserved Sequence",
+        "Clustered Regularly Interspaced Short Palindromic Repeats",
+        "DNA, Archaeal",
+        "Pyrococcus furiosus",
+        "Base Sequence",
+        "Mutation",
+        "Binding Sites",
+        "Archaeal Proteins"
+      ],
+      "abstract_zh": "...",
+      "key_findings": [
+        "核心发现1：...",
+        "核心发现2：...",
+        "核心发现3：..."
+      ],
+      "translated_at": "2026-11-16T04:10:17.161197Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "mechanism_case",
+        "reason": "揭示古菌CRISPR leader中保守T2 motif对组蛋白介导与非组蛋白介导整合的关键作用，具有跨分类的机制与演化启发性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:50:28.213395Z"
+      }
+    },
+    {
+      "pmid": "43004695",
+      "title": "Effects of Pore Mutations on 1/f Flicker Noise Reveal Differences in CFTR Substates.",
+      "journal": "Biophys J",
+      "authors": [
+        "Marin Eduardo Martinez",
+        "Cui Guiying",
+        "Eckford Andrew W",
+        "McCarty Nael A",
+        "Hunt William D"
+      ],
+      "abstract": "Many disease-causing mutations in the Cystic Fibrosis Transmembrane Conductance Regulator (CFTR), a key chloride channel, lead to cystic fibrosis by disrupting the regulation and stability of its different open and closed substates. These transitions generate rapid current fluctuations observed in patch-clamp measurements, known as flicker noise, which can reveal information about chloride flow and state dynamics in the wild type and different mutants. Using time-frequency analysis with spectrograms applied to single-channel recordings, we found that the power of higher-frequency components (10-1000 Hz) was greater during the open state than during the closed state. Frequency analysis showed 1fα noise in the fully open state (α = 0.5) and a flat power spectral density (PSD) in the closed state (α = 0). Using several pore mutants as representations of the three open states (S1, S2, and F), we found that the S2 frequency signature was similar to the fully open state (α = 0.5), whereas S1 behaved more similarly to the closed state (α = 0) in terms of flicker noise. A mutant affecting the nucleotide-binding domain (NBD) did not show changes in α. These frequency signatures were not altered by changes in electrochemical forces in the WT and may be linked to conformational changes and differences in the energy landscape and trapping of Chloride ions in energy wells during the permeation process. Using the Hurst exponent, derived from spectral analysis, we showed that S1 exhibited memoryless dynamics (H ≈ 0.5), while S2 and F showed persistent behavior (H > 0.5), indicating that memory structure depends on the substate. These experimental findings were reproduced using a transistor-based model that incorporates flicker noise and maps electrophysiological variables (τo, τc, Po, α) to circuit parameters. This allows linking functional CFTR states (C0, C1, C2, S1, S2, F) to electronic components, enabling fast, variant-specific simulations.",
+      "doi": "10.1016/j.bpj.2026.11.008",
+      "url": "https://doi.org/10.1016/j.bpj.2026.11.008",
+      "pub_date": "2026-Nov-10",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "核心发现1：将英文摘要翻译为准确、流畅的中文简体",
+        "核心发现2：用一句话概括（不超过50字）",
+        "核心发现3：用一句话概括（不超过50字）"
+      ],
+      "translated_at": "2026-11-16T04:11:14.398715Z"
+    },
+    {
+      "pmid": "43004696",
+      "title": "Stretched Exponential Modeling Reveals Drug-Specific Kinetics in Human Engineered Skeletal Muscle.",
+      "journal": "Biophys J",
+      "authors": [
+        "Luber Mattias",
+        "Schmelz Bruno",
+        "Lenz Christof",
+        "Betz Timo"
+      ],
+      "abstract": "Understanding muscle tissue is key not only for advancing our knowledge of human biophysical function, but also for describing pathological states, improving treatment and providing insights for drug development. While using excised tissue is an excellent way to study muscular function, human tissue donation remains severely restricted, forcing reliance on non-human models. The past decade has seen a rise in 3D in-vitro models of human skeletal muscle. However, many current experimental approaches struggle with the high variability of primary cells or the limited translational relevance of murine lines. Furthermore, state-of-the-art functional analysis typically focuses on peak force, which overlooks critical kinetic information. In this study, we present a systematic approach to generate functional engineered skeletal muscle tissues (ESMs), measure their contraction force dynamics, and model these dynamics to extract the effects of standard pharmacological modulators. Within 14 days, ESMs based on the human immortalized LHCN-M2 cell line mature into aligned, multinucleated myofibers expressing key sarcomeric markers and exhibiting robust excitation-contraction coupling. To decode these dynamics, we introduce a novel mathematical model based on stretched exponential functions. This framework accurately captures heterogeneous contraction and relaxation phases across diverse phenotypes using only six interpretable parameters. We validated the platform's sensitivity using a library of pharmacological modulators. Our kinetic modeling revealed distinct parameter fingerprints for different drug classes, highlighting specific changes in contraction kinetics that peak force alone could not detect. Additionally, proteomic profiling confirmed the presence of necessary drug targets and established the maturation state of the tissue. Together, this study provides a scalable, high-fidelity human platform for high-content screening of contractile kinetics and muscle biophysics.",
+      "doi": "10.1016/j.bpj.2026.11.006",
+      "url": "https://doi.org/10.1016/j.bpj.2026.11.006",
+      "pub_date": "2026-Nov-09",
+      "pub_types": [
+        "journal article"
+      ],
+      "keywords": [],
+      "abstract_zh": "...",
+      "key_findings": [
+        "...",
+        "...",
+        "..."
+      ],
+      "translated_at": "2026-11-16T04:12:11.586322Z",
+      "llm_filter": {
+        "decision": "keep",
+        "bucket": "method",
+        "reason": "提出拉伸指数模型与人体工程骨骼肌平台，可高通量提取药物特异收缩动力学，方法具备可迁移性。",
+        "model": "deepseek-v4-pro",
+        "prompt_version": "v1",
+        "policy_version": "2026-05-06",
+        "evaluation_snapshot_id": null,
+        "filtered_at": "2026-11-16T03:51:22.878468Z"
+      }
+    }
+  ],
+  "pre_llm_filter_total": 27,
+  "llm_filtered_out": 4,
+  "llm_filter_model": "deepseek-v4-pro",
+  "llm_filter_prompt_version": "v1",
+  "llm_filter_policy_version": "2026-05-06",
+  "llm_filter_evaluation_snapshot_id": null,
+  "llm_filter_policy_config": "configs/filter_policy.json",
+  "llm_filtered_at": "2026-11-16T03:51:24.078641Z",
+  "filtered_out_papers": [
+    {
+      "pmid": "43024710",
+      "title": "Single-nucleus multiomic profiling uncovers epigenetic dysregulation driving hippocampal vulnerability in Alzheimer's disease.",
+      "journal": "Sci Adv",
+      "bucket": "application_case",
+      "reason": "利用现成单核多组学工具解析AD海马特定细胞类型表观遗传变化，主要价值在疾病机制，缺乏新方法或普适框架。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "43024699",
+      "title": "Tellurium-assisted rapid synthesis of violet phosphorus via solid-phase thermal transformation.",
+      "journal": "Sci Adv",
+      "bucket": "other",
+      "reason": "论文属于材料化学领域，研究磷同素异形体的合成与生长机制，不符合系统生物学、合成生物学或理论生物学方法论精选范围。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "43020030",
+      "title": "Disruption of cell-type-specific molecular programs of striatal spiny projection neurons in autism.",
+      "journal": "Cell",
+      "bucket": "application_case",
+      "reason": "研究聚焦自闭症特定脑区细胞类型，虽有多组学整合，但方法为现有工具应用，缺乏新的方法学能力或可迁移框架。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    },
+    {
+      "pmid": "43004867",
+      "title": "Midbrain somatostatin-expressing cells control pain-suppression during defensive states.",
+      "journal": "Elife",
+      "bucket": "mechanism_case",
+      "reason": "具体神经环路机制发现，使用常规光遗传与电生理组合，方法学与概念可迁移性有限。",
+      "prompt_version": "v1",
+      "policy_version": "2026-05-06"
+    }
+  ],
+  "translated_count": 19
+}
